@@ -1,4 +1,4 @@
-# The UI Component 
+# Astra: The UI Component 
 
 This repository contains a collection of reusable UI components built with Next.js and documented using Storybook.
 
