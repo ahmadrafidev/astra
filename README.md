@@ -4,8 +4,8 @@ This repository contains a collection of reusable UI components built with Next.
 
 ## Tech Stack
 
-    1. Next.js: A React framework that enables several extra features, including server-side rendering and generating static websites.
-    2. Storybook: An open-source tool for developing UI components in isolation for React and many other libraries. It makes building stunning UIs organized and efficient.
+1. Next.js: A React framework that enables several extra features, including server-side rendering and generating static websites.
+2. Storybook: An open-source tool for developing UI components in isolation for React and many other libraries. It makes building stunning UIs organized and efficient.
 
 ## Getting Started
 
@@ -45,6 +45,16 @@ Before you begin, ensure you have met the following requirements:
 ## Deployment
 
 Peacefully shipping in the area: [Building UI Website](https://building-ui.vercel.app/)
+
+## Inspiration
+
+1. [Material UI](https://mui.com/)
+2. [Material Components](https://m3.material.io/components)
+3. [Shadcn](https://ui.shadcn.com/)
+4. [Druids by Datadog](https://druids.datadoghq.com/components)
+5. [Polaris by Shopify](https://polaris.shopify.com/)
+6. [Fluent 2 by MSFT](https://fluent2.microsoft.design/components/web/react)
+7. [Geist by Vercel](https://vercel.com/geist/introduction)
 
 ## Contact
 
