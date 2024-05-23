@@ -1,6 +1,12 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 
-const AlertDialog = ({ open, onClose, children }) => {
+interface AlertDialogProps {
+    children: ReactNode; 
+    open: boolean;
+    onClose: () => void;
+}
+
+const AlertDialog: React.FC<AlertDialogProps> = ({ open, onClose, children }) => {
     if (!open) return null;
 
     return (

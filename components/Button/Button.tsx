@@ -1,4 +1,9 @@
-import React from 'react';
+import React, { ReactNode, ButtonHTMLAttributes } from 'react';
+
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+  children: ReactNode;
+  variant?: 'default' | 'destructive' | 'outline' | 'secondary' | 'ghost' | 'link'; // Added type for variant
+}
 
 const buttonStyles = {
   default: "button button-default",
@@ -9,7 +14,7 @@ const buttonStyles = {
   link: "button button-link",
 };
 
-const Button = ({ variant = 'default', children, ...props }) => {
+const Button: React.FC<ButtonProps>  = ({ variant = 'default', children, ...props }) => {
   const className = buttonStyles[variant] || buttonStyles.default;
 
   return (

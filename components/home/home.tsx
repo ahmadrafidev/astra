@@ -127,7 +127,7 @@ export function HomeComponent() {
   )
 }
 
-function AccessibilityIcon(props) {
+function AccessibilityIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -151,7 +151,7 @@ function AccessibilityIcon(props) {
 }
 
 
-function AlignCenterHorizontalIcon(props) {
+function AlignCenterHorizontalIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -175,7 +175,7 @@ function AlignCenterHorizontalIcon(props) {
 }
 
 
-function BoltIcon(props) {
+function BoltIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -196,7 +196,7 @@ function BoltIcon(props) {
 }
 
 
-function CodeIcon(props) {
+function CodeIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -217,7 +217,7 @@ function CodeIcon(props) {
 }
 
 
-function LayersIcon(props) {
+function LayersIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -239,7 +239,7 @@ function LayersIcon(props) {
 }
 
 
-function MountainIcon(props) {
+function MountainIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -259,7 +259,7 @@ function MountainIcon(props) {
 }
 
 
-function PaletteIcon(props) {
+function PaletteIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -283,7 +283,7 @@ function PaletteIcon(props) {
 }
 
 
-function PuzzleIcon(props) {
+function PuzzleIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -303,7 +303,7 @@ function PuzzleIcon(props) {
 }
 
 
-function WandIcon(props) {
+function WandIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}

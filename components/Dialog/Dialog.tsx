@@ -1,6 +1,12 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 
-const Dialog = ({ open, onClose, children }) => {
+interface DialogProps {
+    children: ReactNode;
+    open: boolean; 
+    onClose: () => void; 
+}
+
+const Dialog: React.FC<DialogProps>  = ({ open, onClose, children }) => {
     if (!open) return null;
 
     return (
