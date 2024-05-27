@@ -44,7 +44,7 @@ Before you begin, ensure you have met the following requirements:
 
 ## Deployment
 
-Peacefully shipping in the area: [Building UI Website](https://building-ui.vercel.app/)
+Peacefully shipping in the area: [Astra UI](https://astra-ui.vercel.app/)
 
 ## Inspiration
 
