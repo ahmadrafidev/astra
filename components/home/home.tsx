@@ -9,7 +9,7 @@ export function HomeComponent() {
       <header className="px-4 lg:px-6 h-14 flex items-center bg-gray-50 dark:bg-gray-500">
         <Link className="flex items-center justify-center" href="#">
           <MountainIcon className="h-6 w-6" />
-          <span className="sr-only">Acme Design System</span>
+          <span className="sr-only">Astra UI</span>
         </Link>
         <nav className="ml-auto flex gap-4 sm:gap-6">
           <Link className="text-sm font-medium hover:underline underline-offset-4" href="/documentation">
@@ -67,7 +67,7 @@ export function HomeComponent() {
                     <div className="bg-gray-100 rounded-md flex items-center justify-center aspect-square w-12 dark:bg-gray-800">
                       <PaletteIcon className="w-6 h-6 text-gray-500 dark:text-gray-400" />
                     </div>
-                    <h3 className="text-lg font-semibold">Extensive Palette</h3>
+                    <h3 className="text-lg font-semibold">Accessible</h3>
                     <p className="text-gray-500 dark:text-gray-400 text-sm">
                       A rich color palette with accessible contrast ratios.
                     </p>
