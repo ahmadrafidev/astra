@@ -5,8 +5,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Astra: The UI",
-  description: "UI components for every platform",
+  title: "Astra UI",
+  description: "The building blocks of the web",
 };
 
 export default function RootLayout({

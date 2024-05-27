@@ -29,7 +29,7 @@ const componentsList = [
 const Layout: React.FC<LayoutProps> = ({ children }) => {
     return (
         <div className="flex">
-            <aside className="w-64 bg-gray-200 h-screen p-4">
+            <aside className="w-64 bg-gray-100 dark:bg-gray-900 h-screen p-4">
             <h2 className="text-xl font-bold mb-4">Components</h2>
             <ul>
                 {componentsList.map((component) => (
@@ -41,7 +41,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                 ))}
             </ul>
             </aside>
-            <main className="flex-1 p-4">
+            <main className="flex-1 p-4 bg-white dark:bg-black">
                 {children}
             </main>
         </div>

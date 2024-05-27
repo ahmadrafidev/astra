@@ -6,19 +6,19 @@ import Image from 'next/image';
 export function HomeComponent() {
   return (
     <div className="flex flex-col min-h-[100dvh]">
-      <header className="px-4 lg:px-6 h-14 flex items-center bg-gray-50 dark:bg-gray-500">
+      <header className="px-4 lg:px-6 h-14 flex items-center bg-gray-50 dark:bg-gray-800">
         <Link className="flex items-center justify-center" href="#">
           <MountainIcon className="h-6 w-6" />
           <span className="sr-only">Astra UI</span>
         </Link>
         <nav className="ml-auto flex gap-4 sm:gap-6">
           <Link className="text-sm font-medium hover:underline underline-offset-4" href="/documentation">
-            <div className="inline-block rounded-lg bg-gray-100 px-3 py-1 text-sm dark:bg-gray-800">
+            <div className="inline-block rounded-lg bg-gray-100 px-3 py-1 text-sm dark:bg-gray-600">
               Documentation
             </div>
           </Link>
           <Link className="text-sm font-medium hover:underline underline-offset-4" href="/contact">
-              <div className="inline-block rounded-lg bg-gray-100 px-3 py-1 text-sm dark:bg-gray-800">
+              <div className="inline-block rounded-lg bg-gray-100 px-3 py-1 text-sm dark:bg-gray-600">
                 Contact
               </div>
           </Link>
@@ -30,17 +30,16 @@ export function HomeComponent() {
             <div className="flex flex-col items-center space-y-4 text-center">
               <div className="space-y-2">
                 <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
-                  Astra: A digital vault for UI component
+                  Astra UI: A digital vault for UI component
                 </h1>
-                <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400">
-                  Astra is a comprehensive toolkit for building beautiful, consistent, and scalable user
-                  interfaces. 
+                <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-200">
+                  Astra UI is a simple, comprehensive component for building beautiful, consistent, and scalable user interfaces.
                 </p>
               </div>
               <div className="space-x-4">
                 <Link
                   className="inline-flex h-9 items-center justify-center rounded-md bg-gray-900 px-4 py-2 text-sm font-medium text-gray-50 shadow transition-colors hover:bg-gray-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/90 dark:focus-visible:ring-gray-300"
-                  href="#"
+                  href="/documentation"
                 >
                   Get Started
                 </Link>
@@ -48,7 +47,7 @@ export function HomeComponent() {
             </div>
           </div>
         </section>
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800">
+        <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-600">
           <div className="container px-4 md:px-6 mx-auto">
             <div className="grid items-center gap-6 lg:grid-cols-2 lg:gap-12">
               <div className="flex flex-col justify-center space-y-4">
@@ -56,7 +55,7 @@ export function HomeComponent() {
                   <div className="inline-block rounded-lg bg-gray-200 px-3 py-1 text-sm dark:bg-gray-800">
                     Key Principles
                   </div>
-                  <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Astra: The UI</h2>
+                  <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Astra UI</h2>
                   <p className="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
                     Astra provides a comprehensive set of meticulously-crafted components, icons, and
                     utilities to streamline your design and development workflow.
@@ -112,7 +111,7 @@ export function HomeComponent() {
           </div>
         </section>
       </main>
-      <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
+      <footer className="flex flex-col sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t bg-gray-50 dark:bg-gray-800">
         <p className="text-xs text-gray-500 dark:text-gray-400">© 2024 Astra. All rights reserved.</p>
         <nav className="sm:ml-auto flex gap-4 sm:gap-6">
           <Link className="text-xs hover:underline underline-offset-4" href="#">
