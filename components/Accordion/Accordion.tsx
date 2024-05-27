@@ -1,3 +1,4 @@
+// components/Accordion/Accordion.tsx
 import React, { ReactNode } from 'react';
 
 interface AccordionProps {
