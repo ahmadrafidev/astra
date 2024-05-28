@@ -1,5 +1,6 @@
 // components/Avatar/Avatar.tsx
 import React from 'react';
+import Image from 'next/image';
 
 export interface AvatarProps {
     src: string;
@@ -10,7 +11,7 @@ export interface AvatarProps {
 
 const Avatar: React.FC<AvatarProps> = ({ src, alt = 'Avatar', size = 40, className = '' }) => {
 return (
-        <img
+        <Image
             src={src}
             alt={alt}
             className={`inline-block rounded-full ${className}`}
