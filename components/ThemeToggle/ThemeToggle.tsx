@@ -22,7 +22,7 @@ const ThemeToggle: React.FC = () => {
 
     return (
         <button onClick={toggleTheme} className="rounded-md">
-            {theme === 'light' ? <SunIcon className="h-6 w-6 text-yellow-500" /> : <MoonIcon className="h-6 w-6 text-gray-200" />}
+            {theme === 'light' ? < MoonIcon className="h-6 w-6 text-gray-400" /> :  <SunIcon className="h-6 w-6 text-yellow-300" />}
         </button>
     );
 };
