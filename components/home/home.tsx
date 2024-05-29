@@ -2,30 +2,32 @@ import Link from "next/link"
 import { AvatarImage, AvatarFallback, Avatar } from "@/components/ui/avatar"
 import { Card } from "@/components/ui/card"
 import Image from 'next/image';
+import ThemeToggle from '../ThemeToggle/ThemeToggle';
 
 export function HomeComponent() {
   return (
     <div className="flex flex-col min-h-[100dvh]">
-      <header className="px-4 lg:px-6 h-14 flex items-center bg-gray-50 dark:bg-gray-800">
+      <header className="px-4 lg:px-6 h-14 flex items-center bg-gray-50 dark:bg-gray-400">
         <Link className="flex items-center justify-center" href="#">
           <MountainIcon className="h-6 w-6" />
           <span className="sr-only">Astra UI</span>
         </Link>
         <nav className="ml-auto flex gap-4 sm:gap-6">
           <Link className="text-sm font-medium hover:underline underline-offset-4" href="/documentation">
-            <div className="inline-block rounded-lg bg-gray-100 px-3 py-1 text-sm dark:bg-gray-600">
+            <div className="inline-block rounded-lg bg-gray-100 px-3 py-1 text-sm dark:bg-gray-500">
               Documentation
             </div>
           </Link>
           <Link className="text-sm font-medium hover:underline underline-offset-4" href="/contact">
-              <div className="inline-block rounded-lg bg-gray-100 px-3 py-1 text-sm dark:bg-gray-600">
+              <div className="inline-block rounded-lg bg-gray-100 px-3 py-1 text-sm dark:bg-gray-500">
                 Contact
               </div>
           </Link>
+          <ThemeToggle />
         </nav>
       </header>
       <main className="flex-1">
-        <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-gray-50 dark:bg-gray-500">
+        <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-gray-50 dark:bg-gray-400">
           <div className="container px-4 md:px-6 mx-auto">
             <div className="flex flex-col items-center space-y-4 text-center">
               <div className="space-y-2">
@@ -52,7 +54,7 @@ export function HomeComponent() {
             <div className="grid items-center gap-6 lg:grid-cols-2 lg:gap-12">
               <div className="flex flex-col justify-center space-y-4">
                 <div className="space-y-2">
-                  <div className="inline-block rounded-lg bg-gray-200 px-3 py-1 text-sm dark:bg-gray-800">
+                  <div className="inline-block rounded-lg bg-gray-200 px-3 py-1 text-sm dark:bg-gray-500">
                     Key Principles
                   </div>
                   <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Astra UI</h2>
@@ -63,7 +65,7 @@ export function HomeComponent() {
                 </div>
                 <div className="grid grid-cols-2 gap-6">
                   <div className="flex flex-col items-start gap-2">
-                    <div className="bg-gray-100 rounded-md flex items-center justify-center aspect-square w-12 dark:bg-gray-800">
+                    <div className="bg-gray-100 rounded-md flex items-center justify-center aspect-square w-12 dark:bg-gray-500">
                       <PaletteIcon className="w-6 h-6 text-gray-500 dark:text-gray-400" />
                     </div>
                     <h3 className="text-lg font-semibold">Accessible</h3>
@@ -72,7 +74,7 @@ export function HomeComponent() {
                     </p>
                   </div>
                   <div className="flex flex-col items-start gap-2">
-                    <div className="bg-gray-100 rounded-md flex items-center justify-center aspect-square w-12 dark:bg-gray-800">
+                    <div className="bg-gray-100 rounded-md flex items-center justify-center aspect-square w-12 dark:bg-gray-500">
                       <PuzzleIcon className="w-6 h-6 text-gray-500 dark:text-gray-400" />
                     </div>
                     <h3 className="text-lg font-semibold">Modular Components</h3>
@@ -81,7 +83,7 @@ export function HomeComponent() {
                     </p>
                   </div>
                   <div className="flex flex-col items-start gap-2">
-                    <div className="bg-gray-100 rounded-md flex items-center justify-center aspect-square w-12 dark:bg-gray-800">
+                    <div className="bg-gray-100 rounded-md flex items-center justify-center aspect-square w-12 dark:bg-gray-500">
                       <AlignCenterHorizontalIcon className="w-6 h-6 text-gray-500 dark:text-gray-400" />
                     </div>
                     <h3 className="text-lg font-semibold">Flexible Theming</h3>
@@ -90,7 +92,7 @@ export function HomeComponent() {
                     </p>
                   </div>
                   <div className="flex flex-col items-start gap-2">
-                    <div className="bg-gray-100 rounded-md flex items-center justify-center aspect-square w-12 dark:bg-gray-800">
+                    <div className="bg-gray-100 rounded-md flex items-center justify-center aspect-square w-12 dark:bg-gray-500">
                       <WandIcon className="w-6 h-6 text-gray-500 dark:text-gray-400" />
                     </div>
                     <h3 className="text-lg font-semibold">Design Tokens</h3>
@@ -102,16 +104,16 @@ export function HomeComponent() {
               </div>
               <Image
                 alt="Features"
-                className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full"
+                className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full justify-center items-center"
                 height="310"
-                src="/placeholder.svg"
+                src="/astra.svg"
                 width="550"
               />
             </div>
           </div>
         </section>
       </main>
-      <footer className="flex flex-col sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t bg-gray-50 dark:bg-gray-800">
+      <footer className="flex flex-col sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t bg-gray-50 dark:bg-gray-500">
         <p className="text-xs text-gray-500 dark:text-gray-400">© 2024 Astra. All rights reserved.</p>
         <nav className="sm:ml-auto flex gap-4 sm:gap-6">
           <Link className="text-xs hover:underline underline-offset-4" href="#">

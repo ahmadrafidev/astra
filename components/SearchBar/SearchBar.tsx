@@ -1,4 +1,6 @@
 // components/SearchBar/SearchBar.tsx
+'use client'
+
 import React, { useState } from 'react';
 
 export interface SearchBarProps {
@@ -9,7 +11,9 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
     const [query, setQuery] = useState('');
 
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setQuery(e.target.value);
+        const value = e.target.value;
+        setQuery(value);
+        onSearch(value);
     };
 
     const handleSearch = () => {
@@ -17,18 +21,16 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
     };
 
     return (
-    <div>
-        <input
-        type="text"
-        value={query}
-        onChange={handleInputChange}
-        placeholder="Search..."
-        className="border p-2"
-        />
-        <button onClick={handleSearch} className="ml-2 p-2 bg-blue-500 text-white">
-        Search
-        </button>
-    </div>
+        <>
+            <input
+                
+                type="text"
+                value={query}
+                onChange={handleInputChange}
+                placeholder="Search Components"
+                className="border p-2 rounded-lg"
+                />
+        </>
     );
 };
 
