@@ -55,6 +55,7 @@ Peacefully shipping in the area: [Astra UI](https://astra-ui.vercel.app/)
 5. [Polaris by Shopify](https://polaris.shopify.com/)
 6. [Fluent 2 by MSFT](https://fluent2.microsoft.design/components/web/react)
 7. [Geist by Vercel](https://vercel.com/geist/introduction)
+8. [Ariakit](https://ariakit.org/)
 
 ## Contact
 
