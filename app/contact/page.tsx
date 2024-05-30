@@ -11,7 +11,7 @@ export default function ContactPage() {
                     href="https://x.com/ahmadrafiwirana"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gray-700 dark:text-gray-100 hover:underline text-xl lg:text-2xl"
+                    className="text-gray-900 dark:text-gray-50 hover:underline text-xl lg:text-2xl"
                 >
                     Find me on X (fka Twitter)
                 </a>

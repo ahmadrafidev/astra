@@ -61,7 +61,7 @@ export function HomeComponent() {
                   </div>
                   <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Astra UI</h2>
                   <p className="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                    Astra provides a comprehensive set of meticulously-crafted components, icons, and
+                    Astra provides a comprehensive set of meticulously-crafted components and
                     utilities to streamline your design and development workflow.
                   </p>
                 </div>
