@@ -70,36 +70,36 @@ export function HomeComponent() {
                     <div className="bg-gray-100 rounded-md flex items-center justify-center aspect-square w-12 dark:bg-gray-500">
                       <PaletteIcon className="w-6 h-6 text-gray-500 dark:text-gray-400" />
                     </div>
-                    <h3 className="text-lg font-semibold">Accessible</h3>
+                    <h3 className="text-lg font-semibold">Consistent</h3>
                     <p className="text-gray-500 dark:text-gray-400 text-sm">
-                      A rich color palette with accessible contrast ratios.
+                      A cohesive design language maintained through design tokens and clear guidelines.
                     </p>
                   </div>
                   <div className="flex flex-col items-start gap-2">
                     <div className="bg-gray-100 rounded-md flex items-center justify-center aspect-square w-12 dark:bg-gray-500">
                       <PuzzleIcon className="w-6 h-6 text-gray-500 dark:text-gray-400" />
                     </div>
-                    <h3 className="text-lg font-semibold">Modular Components</h3>
+                    <h3 className="text-lg font-semibold">Reusable</h3>
                     <p className="text-gray-500 dark:text-gray-400 text-sm">
-                      Highly customizable and composable UI building blocks.
+                      Modular components that are easy to reuse in different contexts.
                     </p>
                   </div>
                   <div className="flex flex-col items-start gap-2">
                     <div className="bg-gray-100 rounded-md flex items-center justify-center aspect-square w-12 dark:bg-gray-500">
                       <AlignCenterHorizontalIcon className="w-6 h-6 text-gray-500 dark:text-gray-400" />
                     </div>
-                    <h3 className="text-lg font-semibold">Flexible Theming</h3>
+                    <h3 className="text-lg font-semibold">Accessible</h3>
                     <p className="text-gray-500 dark:text-gray-400 text-sm">
-                      Easily customize the design system to match your brand.
+                      Components designed with accessibility in mind, ensuring inclusivity.
                     </p>
                   </div>
                   <div className="flex flex-col items-start gap-2">
                     <div className="bg-gray-100 rounded-md flex items-center justify-center aspect-square w-12 dark:bg-gray-500">
                       <WandIcon className="w-6 h-6 text-gray-500 dark:text-gray-400" />
                     </div>
-                    <h3 className="text-lg font-semibold">Design Tokens</h3>
+                    <h3 className="text-lg font-semibold">Customizable</h3>
                     <p className="text-gray-500 dark:text-gray-400 text-sm">
-                      Consistent, scalable, and maintainable design foundations.
+                      Easily customizable components to match different branding and design needs.
                     </p>
                   </div>
                 </div>
