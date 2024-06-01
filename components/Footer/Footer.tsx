@@ -8,28 +8,28 @@ const Footer: React.FC = () => {
         <p>&copy; {new Date().getFullYear()} My Website. All rights reserved.</p>
         <div className="mt-4">
             <a
-            href="https://twitter.com/your_twitter_handle"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mx-2 text-blue-500 hover:underline"
+                href="https://twitter.com/your_twitter_handle"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mx-2 text-blue-500 hover:underline"
             >
-            Twitter
+                Twitter
             </a>
             <a
-            href="https://facebook.com/your_facebook_handle"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mx-2 text-blue-500 hover:underline"
+                href="https://facebook.com/your_facebook_handle"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mx-2 text-blue-500 hover:underline"
             >
             Facebook
             </a>
             <a
-            href="https://instagram.com/your_instagram_handle"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mx-2 text-blue-500 hover:underline"
+                href="https://instagram.com/your_instagram_handle"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mx-2 text-blue-500 hover:underline"
             >
-            Instagram
+                Instagram
             </a>
         </div>
         </div>

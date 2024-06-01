@@ -8,6 +8,7 @@ import SearchBar from '../SearchBar/SearchBar';
 import Header from '../Header/Header';
 
 import { componentsList, foundationList } from '../../utils/constants/route';
+import Image from 'next/image';
 
 interface LayoutProps {
     children: React.ReactNode;
@@ -54,6 +55,17 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                     {children}
                 </main>
             </div>
+            <footer className="flex flex-col sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t bg-gray-50 dark:bg-gray-500 border-gray-200 dark:border-gray-500">
+                <p className="text-xs text-gray-500 dark:text-gray-400">© 2024 Astra UI</p>
+                <nav className="sm:ml-auto flex gap-4 sm:gap-6">
+                <Link href="https://x.com/ahmadrafiwirana" passHref>
+                    <Image src="/twitter.png" alt="X Icon" width={20} height={20} />
+                </Link>
+                <Link href="https://github.com/ahmadrafidev/astra" passHref>
+                    <Image src="/github.png" alt="GitHub Icon" width={20} height={20} />
+                </Link>
+                </nav>
+            </footer>
         </>
     ); 
 };

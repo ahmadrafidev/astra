@@ -89,7 +89,7 @@ export function HomeComponent() {
           </div>
         </section>
       </main>
-      <footer className="flex flex-col sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t bg-gray-50 dark:bg-gray-500">
+      <footer className="flex flex-col sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t bg-gray-50 dark:bg-gray-500 border-gray-200 dark:border-gray-500">
         <p className="text-xs text-gray-500 dark:text-gray-400">© 2024 Astra UI</p>
         <nav className="sm:ml-auto flex gap-4 sm:gap-6">
           <Link href="https://x.com/ahmadrafiwirana" passHref>
