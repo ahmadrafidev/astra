@@ -6,7 +6,7 @@ export default function ContactPage() {
     return (
         <>
             <Header />
-            <div className="flex items-center justify-center h-screen bg-gray-50 dark:bg-gray-400">
+            <div className="flex items-center justify-center h-screen bg-gray-50 dark:bg-gray-800">
                 <a
                     href="https://x.com/ahmadrafiwirana"
                     target="_blank"
