@@ -10,11 +10,11 @@ export function HomeComponent() {
     <div className="flex flex-col min-h-[100dvh]">
       <Header />
       <main className="flex-1">
-        <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-gray-50 dark:bg-gray-400">
+        <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-gray-50 dark:bg-gray-800">
           <div className="container px-4 md:px-6 mx-auto">
             <div className="flex flex-col items-center space-y-4 text-center">
               <div className="space-y-2">
-                <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
+                <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none text-gray-900 dark:text-gray-50">
                   Astra UI: A digital vault for UI component
                 </h1>
                 <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-200">
@@ -32,7 +32,7 @@ export function HomeComponent() {
             </div>
           </div>
         </section>
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-600">
+        <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-900">
           <div className="container px-4 md:px-6 mx-auto">
             <div className="grid items-center gap-6 lg:grid-cols-2 lg:gap-12">
               <div className="flex flex-col justify-center space-y-4">
@@ -40,7 +40,7 @@ export function HomeComponent() {
                   <div className="inline-block rounded-lg bg-gray-200 px-3 py-1 text-sm dark:bg-gray-500">
                     Key Principles
                   </div>
-                  <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Astra UI</h2>
+                  <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-gray-900 dark:text-gray-50">Astra UI</h2>
                   <p className="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
                     Astra provides a comprehensive set of meticulously-crafted components and
                     utilities to streamline your design and development workflow.
@@ -51,7 +51,7 @@ export function HomeComponent() {
                     <div className="bg-gray-100 rounded-md flex items-center justify-center aspect-square w-12 dark:bg-gray-500">
                       <PaletteIcon className="w-6 h-6 text-gray-500 dark:text-gray-400" />
                     </div>
-                    <h3 className="text-lg font-semibold">Consistent</h3>
+                    <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-50">Consistent</h3>
                     <p className="text-gray-500 dark:text-gray-400 text-sm">
                       A cohesive design language maintained through design tokens and clear guidelines.
                     </p>
@@ -60,7 +60,7 @@ export function HomeComponent() {
                     <div className="bg-gray-100 rounded-md flex items-center justify-center aspect-square w-12 dark:bg-gray-500">
                       <PuzzleIcon className="w-6 h-6 text-gray-500 dark:text-gray-400" />
                     </div>
-                    <h3 className="text-lg font-semibold">Reusable</h3>
+                    <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-50">Reusable</h3>
                     <p className="text-gray-500 dark:text-gray-400 text-sm">
                       Modular components that are easy to reuse in different contexts.
                     </p>
@@ -69,7 +69,7 @@ export function HomeComponent() {
                     <div className="bg-gray-100 rounded-md flex items-center justify-center aspect-square w-12 dark:bg-gray-500">
                       <AlignCenterHorizontalIcon className="w-6 h-6 text-gray-500 dark:text-gray-400" />
                     </div>
-                    <h3 className="text-lg font-semibold">Accessible</h3>
+                    <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-50">Accessible</h3>
                     <p className="text-gray-500 dark:text-gray-400 text-sm">
                       Components designed with accessibility in mind, ensuring inclusivity.
                     </p>
@@ -78,7 +78,7 @@ export function HomeComponent() {
                     <div className="bg-gray-100 rounded-md flex items-center justify-center aspect-square w-12 dark:bg-gray-500">
                       <WandIcon className="w-6 h-6 text-gray-500 dark:text-gray-400" />
                     </div>
-                    <h3 className="text-lg font-semibold">Customizable</h3>
+                    <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-50">Customizable</h3>
                     <p className="text-gray-500 dark:text-gray-400 text-sm">
                       Easily customizable components to match different branding and design needs.
                     </p>
@@ -89,14 +89,14 @@ export function HomeComponent() {
           </div>
         </section>
       </main>
-      <footer className="flex flex-col sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t bg-gray-50 dark:bg-gray-500 border-gray-200 dark:border-gray-500">
-        <p className="text-xs text-gray-500 dark:text-gray-400">© 2024 Astra UI</p>
+      <footer className="flex flex-col sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t bg-gray-50 dark:bg-gray-800 border-gray-200 dark:border-gray-900">
+        <p className="text-xs text-gray-500 dark:text-gray-50">© 2024 Astra UI</p>
         <nav className="sm:ml-auto flex gap-4 sm:gap-6">
           <Link href="https://x.com/ahmadrafiwirana" passHref>
-            <Image src="/twitter.png" alt="X Icon" width={20} height={20} />
+            <Image src="/twitter.png" alt="X Icon" width={25} height={25} />
           </Link>
           <Link href="https://github.com/ahmadrafidev/astra" passHref>
-            <Image src="/github.png" alt="GitHub Icon" width={20} height={20} />
+            <Image src="/github.png" alt="GitHub Icon" width={25} height={25} />
           </Link>
         </nav>
       </footer>

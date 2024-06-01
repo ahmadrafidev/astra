@@ -7,22 +7,25 @@ import { foundationList, componentsList } from '../../utils/constants/route';
 const Page: React.FC = () => {
     return (
         <Layout>
-            <h1 className="text-2xl md:text-3xl font-medium mb-4">Astra UI Documentation</h1>
-            <p className="mb-8 text-sm md:text-base text-gray-700 dark:text-gray-300">
-                Welcome to the Astra UI documentation. This comprehensive guide provides everything you need to build beautiful, consistent, and accessible user interfaces using Astra UI components. Here, you will find detailed explanations, usage examples, and customization options for each component in the library. Whether you are a beginner or an experienced developer, Astra UI aims to streamline your development process and enhance your productivity.
+            <h1 className="text-2xl md:text-3xl font-medium mb-4 text-gray-900 dark:text-white">Astra UI Documentation</h1>
+            <p className="mb-8 text-sm md:text-base text-gray-800 dark:text-white  leading-loose">
+                Welcome to the Astra UI documentation. This comprehensive guide provides everything you need to build beautiful, consistent, and accessible user interfaces using Astra UI components. 
+                Here, you will find detailed explanations, usage examples, and customization options for each component in the library. 
+                Whether you are a beginner or an experienced developer, Astra UI aims to streamline your development process and enhance your productivity.
             </p>
             <div className="mb-8">
-                <h2 className="text-xl md:text-2xl font-medium mb-4">Foundation</h2>
-                <p className="mb-4 text-md text-gray-700 dark:text-gray-300">
-                    The foundation section covers the core principles and philosophy behind Astra UI. It provides insights into the purpose, goals, and guiding principles that shape the development of this UI library.
+                <h2 className="text-xl md:text-2xl font-medium mb-4 text-gray-900 dark:text-white">Foundation</h2>
+                <p className="mb-4 text-md text-gray-800 dark:text-white  leading-loose">
+                    The foundation section covers the core principles and philosophy behind Astra UI. 
+                    It provides insights into the purpose, goals, and guiding principles that shape the development of this UI library.
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {foundationList.map((item) => (
                         <div key={item.name} className="border p-4 rounded-lg hover:shadow-lg transition-shadow">
-                            <Link href={item.path} className="text-blue-500 hover:underline">
+                            <Link href={item.path} className="text-gray-900 dark:text-gray-50">
                                 {item.name}
                             </Link>
-                            <p className="text-sm text-gray-600 mt-2">
+                            <p className="text-sm text-gray-900 dark:text-gray-100 mt-2 leading-loose">
                                 {item.name === 'About' && 'Learn more about Astra UI, its purpose, and the principles that guide its design and development.'}
                                 {item.name === 'Philosophy' && 'Discover the core philosophy behind Astra UI and how it aims to make development easier and more accessible.'}
                             </p>
@@ -31,17 +34,17 @@ const Page: React.FC = () => {
                 </div>
             </div>
             <div>
-                <h2 className="text-xl md:text-2xl font-medium mb-4">Components</h2>
-                <p className="mb-4 text-md text-gray-700 dark:text-gray-300">
+                <h2 className="text-xl md:text-2xl font-medium mb-4 text-gray-900 dark:text-white">Components</h2>
+                <p className="mb-4 text-md text-gray-800 dark:text-white leading-loose">
                     The components section provides a detailed overview of each UI component available in Astra UI. From buttons to modals, each component is designed to be customizable, accessible, and easy to integrate into your projects. Explore the documentation for each component to learn about its features, usage, and customization options.
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {componentsList.map((item) => (
                         <div key={item.name} className="border p-4 rounded-lg hover:shadow-lg transition-shadow">
-                            <Link href={item.path} className="text-blue-500 hover:underline">
+                            <Link href={item.path} className="text-gray-900 dark:text-gray-50">
                                 {item.name}
                             </Link>
-                            <p className="text-sm text-gray-600 mt-2">
+                            <p className="text-sm text-gray-900 dark:text-gray-100 mt-2 leading-loose">
                                 {item.name === 'Accordion' && 'A collapsible section of content, useful for FAQs and more.'}
                                 {item.name === 'Alert' && 'Displays important messages in a prominent way to attract user attention.'}
                                 {item.name === 'AlertDialog' && 'A dialog that requires user acknowledgment before they can proceed.'}

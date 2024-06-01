@@ -28,7 +28,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         <>
             <Header />
             <div className="flex flex-col md:flex-row">
-                <aside className="w-full md:w-64 bg-gray-50 dark:bg-gray-400 h-screen md:h-auto p-5">
+                <aside className="w-full md:w-64 bg-gray-50 dark:bg-gray-800 h-screen md:h-auto p-5">
                     <SearchBar onSearch={handleSearch} />
                     <h2 className="text-lg lg:text-xl font-medium mb-4 my-2 lg:my-4 text-black dark:text-white">Foundations</h2>
                     <ul>
@@ -51,12 +51,12 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                         ))}
                     </ul>
                 </aside>
-                <main className="flex-1 p-4 bg-gray-50 dark:bg-gray-400 overflow-y-auto h-screen md:h-auto">
+                <main className="flex-1 p-4 bg-gray-50 dark:bg-gray-800 overflow-y-auto h-screen md:h-auto">
                     {children}
                 </main>
             </div>
-            <footer className="flex flex-col sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t bg-gray-50 dark:bg-gray-500 border-gray-200 dark:border-gray-500">
-                <p className="text-xs text-gray-500 dark:text-gray-400">© 2024 Astra UI</p>
+            <footer className="flex flex-col sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t bg-gray-50 dark:bg-gray-800 border-gray-200 dark:border-gray-800">
+                <p className="text-xs text-gray-900 dark:text-gray-200">© 2024 Astra UI</p>
                 <nav className="sm:ml-auto flex gap-4 sm:gap-6">
                 <Link href="https://x.com/ahmadrafiwirana" passHref>
                     <Image src="/twitter.png" alt="X Icon" width={20} height={20} />
