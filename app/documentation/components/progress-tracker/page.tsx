@@ -7,7 +7,7 @@ import Layout from '../../../../components/Layout/Layout';
 const ProgressTrackerPage: React.FC = () => {
     return (
         <Layout>
-            <h1 className="text-xl md:text-2xl font-medium mb-4">ProgressTracker Component</h1>
+            <h1 className="text-xl md:text-2xl font-medium mb-4 text-gray-900 dark:text-gray-50">ProgressTracker Component</h1>
         </Layout>
     );
 };

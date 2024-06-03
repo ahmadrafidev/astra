@@ -22,11 +22,11 @@ const Page: React.FC = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {foundationList.map((item) => (
                         <div key={item.name} className="border p-4 rounded-lg hover:shadow-lg transition-shadow">
-                            <Link href={item.path} className="text-gray-900 dark:text-gray-50">
+                            <Link href={item.path} className="text-gray-900 dark:text-gray-50 text-lg md:text-xl">
                                 {item.name}
                             </Link>
                             <Link href={item.path}>
-                                <p className="text-sm text-gray-900 dark:text-gray-100 mt-2 leading-loose">
+                                <p className="text-sm font-normal text-gray-900 dark:text-gray-100 mt-2 leading-loose">
                                     {item.name === 'About' && 'Learn more about Astra UI, its purpose, and the principles that guide its design and development.'}
                                     {item.name === 'Philosophy' && 'Discover the core philosophy behind Astra UI and how it aims to make development easier and more accessible.'}
                                 </p>

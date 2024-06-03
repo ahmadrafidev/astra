@@ -7,11 +7,11 @@ import Layout from '../../../../components/Layout/Layout';
 const PhilosophyPage: React.FC = () => {
     return (
         <Layout>
-            <div className="inline-block rounded-lg bg-gray-200 px-3 py-1 text-sm dark:bg-gray-300 mb-2">
+            <div className="inline-block rounded-lg bg-gray-200 px-3 py-1 text-sm dark:bg-gray-300 mb-2 ">
                 Foundation
             </div>
-            <h1 className="text-lg md:text-2xl font-medium mb-4">Astra UI Philosophy</h1>
-            <div className="leading-relaxed space-y-4">
+            <h1 className="text-lg md:text-2xl font-medium mb-4 text-gray-900 dark:text-gray-50">Astra UI Philosophy</h1>
+            <div className="leading-relaxed space-y-4 text-gray-900 dark:text-gray-50">
                 <p className="text-sm md:text-base">
                     Astra UI is driven by a set of core principles aimed at making web development more consistent, efficient, and accessible. The philosophy of Astra UI revolves around the following key tenets:
                 </p>

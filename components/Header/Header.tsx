@@ -10,15 +10,20 @@ const Header = () => {
             </svg>
             <span className="sr-only">Astra UI</span>
             </Link>
-            <nav className="ml-auto flex gap-4 sm:gap-6">
+                <nav className="ml-auto flex gap-4 sm:gap-6">
             <Link className="text-sm font-medium hover:underline underline-offset-4" href="/documentation">
                 <div className="inline-block rounded-lg bg-gray-200 px-3 py-1 text-sm dark:bg-gray-300 text-gray-900">
-                    Documentation
+                    Docs
+                </div>
+            </Link>
+            <Link className="text-sm font-medium hover:underline underline-offset-4" href="/documentation/components/accordion">
+                <div className="inline-block rounded-lg bg-gray-200 px-3 py-1 text-sm dark:bg-gray-300 text-gray-900">
+                    Components
                 </div>
             </Link>
             <Link className="text-sm font-medium hover:underline underline-offset-4" href="/contact">
                 <div className="inline-block rounded-lg bg-gray-200 px-3 py-1 text-sm dark:bg-gray-300 text-gray-900">
-                Contact
+                    Connect!
                 </div>
             </Link>
             <ThemeToggle />

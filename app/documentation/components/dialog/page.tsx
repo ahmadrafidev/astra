@@ -7,7 +7,7 @@ import Layout from '../../../../components/Layout/Layout';
 const DialogPage: React.FC = () => {
     return (
         <Layout>
-            <h1 className="text-xl md:text-2xl font-medium mb-4">Dialog Component</h1>
+            <h1 className="text-xl md:text-2xl font-medium mb-4 text-gray-900 dark:text-gray-50">Dialog Component</h1>
         </Layout>
     );
 };
