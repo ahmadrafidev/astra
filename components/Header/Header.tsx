@@ -12,12 +12,12 @@ const Header = () => {
             </Link>
             <nav className="ml-auto flex gap-4 sm:gap-6">
             <Link className="text-sm font-medium hover:underline underline-offset-4" href="/documentation">
-                <div className="inline-block rounded-lg bg-gray-200 px-3 py-1 text-sm dark:bg-gray-300">
-                Documentation
+                <div className="inline-block rounded-lg bg-gray-200 px-3 py-1 text-sm dark:bg-gray-300 text-gray-900">
+                    Documentation
                 </div>
             </Link>
             <Link className="text-sm font-medium hover:underline underline-offset-4" href="/contact">
-                <div className="inline-block rounded-lg bg-gray-200 px-3 py-1 text-sm dark:bg-gray-300">
+                <div className="inline-block rounded-lg bg-gray-200 px-3 py-1 text-sm dark:bg-gray-300 text-gray-900">
                 Contact
                 </div>
             </Link>
