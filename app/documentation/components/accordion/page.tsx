@@ -8,7 +8,7 @@ import Accordion from '../../../../components/Accordion/Accordion';
 const AccordionPage: React.FC = () => {
     return (
         <Layout>
-            <div className="inline-block rounded-lg bg-gray-200 px-3 py-1 text-sm dark:bg-gray-300 mb-2">
+            <div className="inline-block rounded-lg bg-gray-200 px-3 py-1 text-sm dark:bg-gray-300 mb-2 text-gray-900">
                 Components
             </div>
             <h1 className="text-xl md:text-2xl font-medium mb-4 text-gray-900 dark:text-gray-50">Accordion Component</h1>

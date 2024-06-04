@@ -7,7 +7,7 @@ import Layout from '../../../../components/Layout/Layout';
 const AboutPage: React.FC = () => {
     return (
         <Layout>
-            <div className="inline-block rounded-lg bg-gray-200 px-3 py-1 text-sm dark:bg-gray-300 mb-2">
+            <div className="inline-block rounded-lg bg-gray-200 px-3 py-1 text-sm dark:bg-gray-300 mb-2 text-gray-900">
                 Foundation
             </div>
             <h1 className="text-lg md:text-2xl font-medium mb-3 text-gray-900 dark:text-gray-50">About Astra UI</h1>

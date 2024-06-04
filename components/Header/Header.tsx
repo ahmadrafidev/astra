@@ -20,7 +20,7 @@ const Header = () => {
                         Components
                     </div>
                 </Link>
-                <Link className="text-sm font-medium hover:underline underline-offset-4" href="/contact">
+                <Link className="text-sm font-medium hover:underline underline-offset-4" href="/connect">
                     <div className="inline-block rounded-lg bg-gray-200 px-3 py-1 text-sm dark:bg-gray-300 text-gray-900">
                         Connect!
                     </div>
