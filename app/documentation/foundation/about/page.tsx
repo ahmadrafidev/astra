@@ -3,13 +3,12 @@
 
 import React from 'react';
 import Layout from '../../../../components/Layout/Layout';
+import Badge from '../../../../components/Badge/Badge';
 
 const AboutPage: React.FC = () => {
     return (
         <Layout>
-            <div className="inline-block rounded-lg bg-gray-200 px-3 py-1 text-sm dark:bg-gray-300 mb-2 text-gray-900">
-                Foundation
-            </div>
+            <Badge text="Foundation" />
             <h1 className="text-lg md:text-2xl font-medium mb-3 text-gray-900 dark:text-gray-50">About Astra UI</h1>
             <p className="text-sm md:text-base mb-4 leading-relaxed text-gray-900 dark:text-gray-50">
                 Astra UI is a personal project and learning resource focused on developing reusable, accessible, and customizable React components that can serve as the building blocks for modern web applications. It is designed with developers in mind, offering a comprehensive suite of components that are easy to integrate and extend in any project.

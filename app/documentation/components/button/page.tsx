@@ -4,10 +4,12 @@
 import React from 'react';
 import Layout from '../../../../components/Layout/Layout';
 import Button from '../../../../components/Button/Button';
+import Badge from '../../../../components/Badge/Badge';
 
 const ButtonPage: React.FC = () => {
     return (
         <Layout>
+            <Badge text="Component" />
             <h1 className="text-2xl font-bold mb-4 text-gray-900 dark:text-gray-50">Button Component</h1>
                 <div className="mb-4">
                     <Button onClick={() => alert('Button clicked!')} variant="default">Default Button</Button>
@@ -29,6 +31,7 @@ const ButtonPage: React.FC = () => {
                 </div>
                 <pre className="bg-gray-100 p-4 rounded">
                     {`import Button from '../../components/Button/Button';
+import Badge from '../../../../components/Badge/Badge';
 
                 const ButtonPage: React.FC = () => (
                 <Button onClick={() => alert('Button clicked!')} variant="default">Default Button</Button>

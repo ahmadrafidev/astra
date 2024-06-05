@@ -4,13 +4,12 @@
 import React from 'react';
 import Layout from '../../../../components/Layout/Layout';
 import Accordion from '../../../../components/Accordion/Accordion';
+import Badge from '../../../../components/Badge/Badge';
 
 const AccordionPage: React.FC = () => {
     return (
         <Layout>
-            <div className="inline-block rounded-lg bg-gray-200 px-3 py-1 text-sm dark:bg-gray-300 mb-2 text-gray-900">
-                Components
-            </div>
+            <Badge text="Component" />
             <h1 className="text-xl md:text-2xl font-medium mb-4 text-gray-900 dark:text-gray-50">Accordion Component</h1>
         </Layout>
     );

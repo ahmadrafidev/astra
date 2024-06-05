@@ -3,13 +3,12 @@
 
 import React from 'react';
 import Layout from '../../../../components/Layout/Layout';
+import Badge from '../../../../components/Badge/Badge';
 
 const PhilosophyPage: React.FC = () => {
     return (
         <Layout>
-            <div className="inline-block rounded-lg bg-gray-200 px-3 py-1 text-sm dark:bg-gray-300 mb-2 text-gray-900">
-                Foundation
-            </div>
+            <Badge text="Foundation" />
             <h1 className="text-lg md:text-2xl font-medium mb-4 text-gray-900 dark:text-gray-50">Astra UI Philosophy</h1>
             <div className="leading-relaxed space-y-4 text-gray-900 dark:text-gray-50">
                 <p className="text-sm md:text-base">
