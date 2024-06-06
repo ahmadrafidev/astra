@@ -6,7 +6,8 @@ export interface BadgeProps {
     count?: number;     
     maxCount?: number; 
     className?: string;
-    color?: string;     
+    color?: string;
+    darkColor?: string;   
     textColor?: string; 
 }
 
