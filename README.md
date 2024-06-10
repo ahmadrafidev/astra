@@ -56,6 +56,7 @@ Peacefully shipping in the area: [Astra UI](https://astra-ui.vercel.app/)
 6. [Fluent 2 by MSFT](https://fluent2.microsoft.design/components/web/react)
 7. [Geist by Vercel](https://vercel.com/geist/introduction)
 8. [Ariakit](https://ariakit.org/)
+9. [Gestalt](https://gestalt.pinterest.systems/home)
 
 ## Contact
 
