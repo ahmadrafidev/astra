@@ -10,9 +10,9 @@ const Header = () => {
             </svg>
             </Link>
             <nav className="ml-auto flex gap-2 sm:gap-4">
-                <Link className="text-sm font-medium hover:underline underline-offset-4" href="/overview">
+                <Link className="text-sm font-medium hover:underline underline-offset-4" href="/about">
                     <div className="inline-block rounded-lg text-gray-900 hover:bg-gray-200 px-3 py-1 text-sm hover:dark:bg-gray-500 dark:text-white">
-                        Overview
+                        About
                     </div>
                 </Link>
                 <Link className="text-sm font-medium hover:underline underline-offset-4" href="/foundations/about">
