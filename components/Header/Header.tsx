@@ -25,11 +25,6 @@ const Header = () => {
                         Components
                     </div>
                 </Link>
-                <Link className="text-sm font-medium hover:underline underline-offset-4" href="/connect">
-                    <div className="inline-block rounded-lg hover:bg-gray-200 px-3 py-1 text-sm hover:dark:bg-gray-500 text-gray-900 dark:text-white">
-                        Connect!
-                    </div>
-                </Link>
                 <ThemeToggle />
             </nav>
         </header>
