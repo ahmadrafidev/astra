@@ -7,7 +7,7 @@ import Link from 'next/link';
 import SearchBar from '../SearchBar/SearchBar';
 import Header from '../Header/Header';
 
-import { componentsList, foundationList } from '../../utils/constants/route';
+import { componentsList, foundationList, aboutList } from '../../utils/constants/route';
 import Image from 'next/image';
 
 interface LayoutProps {
@@ -30,6 +30,15 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             <div className="flex flex-col md:flex-row">
                 <aside className="w-full md:w-64 bg-gray-50 dark:bg-gray-800 h-screen md:h-auto p-5">
                     <SearchBar onSearch={handleSearch} />
+                    <ul className="my-2 lg:my-4">
+                        {aboutList.map((about) => (
+                            <li key={about.name}>
+                                <Link href={about.path} className="text-lg lg:text-xl font-medium mb-4 my-2 lg:my-4 text-black dark:text-white">
+                                    {about.name}
+                                </Link>
+                            </li>
+                        ))}
+                    </ul>
                     <h2 className="text-lg lg:text-xl font-medium mb-4 my-2 lg:my-4 text-black dark:text-white">Foundations</h2>
                     <ul>
                         {foundationList.map((foundation) => (

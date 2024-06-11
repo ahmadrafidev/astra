@@ -10,18 +10,23 @@ const Header = () => {
             </svg>
             </Link>
             <nav className="ml-auto flex gap-2 sm:gap-4">
-                <Link className="text-sm font-medium hover:underline underline-offset-4" href="/documentation">
-                    <div className="inline-block rounded-lg bg-gray-200 px-3 py-1 text-sm dark:bg-gray-300 text-gray-900">
-                        Docs
+                <Link className="text-sm font-medium hover:underline underline-offset-4" href="/overview">
+                    <div className="inline-block rounded-lg text-gray-900 hover:bg-gray-200 px-3 py-1 text-sm hover:dark:bg-gray-500 dark:text-white">
+                        Overview
                     </div>
                 </Link>
-                <Link className="text-sm font-medium hover:underline underline-offset-4" href="/documentation/components/accordion">
-                    <div className="inline-block rounded-lg bg-gray-200 px-3 py-1 text-sm dark:bg-gray-300 text-gray-900">
+                <Link className="text-sm font-medium hover:underline underline-offset-4" href="/foundations/about">
+                    <div className="inline-block rounded-lg text-gray-900 hover:bg-gray-200 px-3 py-1 text-sm hover:dark:bg-gray-500 dark:text-white">
+                        Foundations
+                    </div>
+                </Link>
+                <Link className="text-sm font-medium hover:underline underline-offset-4" href="/components/accordion">
+                    <div className="inline-block rounded-lg hover:bg-gray-200 px-3 py-1 text-sm hover:dark:bg-gray-500 text-gray-900 dark:text-white">
                         Components
                     </div>
                 </Link>
                 <Link className="text-sm font-medium hover:underline underline-offset-4" href="/connect">
-                    <div className="inline-block rounded-lg bg-gray-200 px-3 py-1 text-sm dark:bg-gray-300 text-gray-900">
+                    <div className="inline-block rounded-lg hover:bg-gray-200 px-3 py-1 text-sm hover:dark:bg-gray-500 text-gray-900 dark:text-white">
                         Connect!
                     </div>
                 </Link>

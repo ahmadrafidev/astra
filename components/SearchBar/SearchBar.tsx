@@ -30,7 +30,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
                 type="text"
                 value={query}
                 onChange={handleInputChange}
-                placeholder="Quick Search"
+                placeholder="Search Astra"
                 className="border p-2 rounded-lg pl-10"
                 />
         </div>

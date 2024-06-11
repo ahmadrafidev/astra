@@ -48,6 +48,8 @@ Peacefully shipping in the area: [Astra UI](https://astra-ui.vercel.app/)
 
 ## Inspiration
 
+### Design System
+
 1. [Material UI](https://mui.com/)
 2. [Material Components](https://m3.material.io/components)
 3. [Shadcn](https://ui.shadcn.com/)
@@ -57,6 +59,13 @@ Peacefully shipping in the area: [Astra UI](https://astra-ui.vercel.app/)
 7. [Geist by Vercel](https://vercel.com/geist/introduction)
 8. [Ariakit](https://ariakit.org/)
 9. [Gestalt](https://gestalt.pinterest.systems/home)
+
+### iOS
+
+[Design at Apple](https://developer.apple.com/design/)
+
+### Android
+[Design for Android](https://developer.android.com/design/ui)
 
 ## Contact
 
