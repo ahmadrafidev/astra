@@ -16,6 +16,7 @@ interface LayoutProps {
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
     const [filteredComponents, setFilteredComponents] = useState(componentsList);
+    const [selectedCategory, setSelectedCategory] = useState<string>('about');
 
     const handleSearch = (query: string) => {
         const filtered = componentsList.filter(component =>

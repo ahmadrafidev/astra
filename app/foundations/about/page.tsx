@@ -9,15 +9,15 @@ const FoundationAboutPage: React.FC = () => {
     return (
         <Layout>
             <Badge text="Foundations"/>
-            <h1 className="text-lg md:text-2xl font-medium mb-3 text-gray-900 dark:text-gray-50">About Astra UI</h1>
+            <h1 className="text-2xl md:text-4xl font-medium mb-3 text-gray-900 dark:text-gray-50">About Astra UI</h1>
             <p className="text-sm md:text-base mb-4 leading-relaxed text-gray-900 dark:text-gray-50">
                 Astra UI is a personal project and learning resource focused on developing reusable, accessible, and customizable React components that can serve as the building blocks for modern web applications. It is designed with developers in mind, offering a comprehensive suite of components that are easy to integrate and extend in any project.
             </p>
-            <h2 className="text-xl md:text-2xl font-medium mb-4 text-gray-900 dark:text-gray-50">Purpose of Astra UI</h2>
+            <h2 className="text-xl md:text-2xl font-medium mb-4 text-gray-900 dark:text-gray-50">Purposes</h2>
             <p className="text-sm md:text-base mb-4 leading-relaxed text-gray-900 dark:text-gray-50">
                 The main purpose of Astra UI is to provide a space where I can explore and refine the process of creating high-quality React components. This project serves as both a portfolio of my work and a resource for other developers who are looking to understand and implement similar components in their own projects.
             </p>
-            <h2 className="text-xl md:text-2xl font-medium mb-4 text-gray-900 dark:text-gray-50">Principles Behind Astra UI</h2>
+            <h2 className="text-xl md:text-2xl font-medium mb-4 text-gray-900 dark:text-gray-50">Principles</h2>
             <ul className="list-disc pl-6 mb-4 leading-relaxed text-gray-900 dark:text-gray-50">
                 <li className="text-sm md:text-base mb-2">
                     <strong>Consistent:</strong> Ensure that all components adhere to a unified design language, providing a cohesive and professional look and feel across applications.

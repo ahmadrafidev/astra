@@ -9,7 +9,7 @@ const FoundationPhilosophyPage: React.FC = () => {
     return (
         <Layout>
             <Badge text="Foundations" />
-            <h1 className="text-lg md:text-2xl font-medium mb-4 text-gray-900 dark:text-gray-50">Astra UI Philosophy</h1>
+            <h1 className="text-xl md:text-3xl font-medium mb-4 text-gray-900 dark:text-gray-50">Philosophy</h1>
             <div className="leading-relaxed space-y-4 text-gray-900 dark:text-gray-50">
                 <p className="text-sm md:text-base">
                     Astra UI is driven by a set of core principles aimed at making web development more consistent, efficient, and accessible. The philosophy of Astra UI revolves around the following key tenets:
