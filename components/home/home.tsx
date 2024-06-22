@@ -42,8 +42,7 @@ export function HomeComponent() {
                   </div>
                   <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-gray-900 dark:text-gray-50">Astra UI</h2>
                   <p className="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-200">
-                    Astra provides a comprehensive set of meticulously-crafted components and
-                    utilities to streamline your design and development workflow.
+                    Astra UI provides a complete set of components and utilities carefully crafted to simplify the design and development flow.
                   </p>
                 </div>
                 <div className="grid grid-cols-2 gap-6">
@@ -53,7 +52,7 @@ export function HomeComponent() {
                     </div>
                     <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-50">Consistent</h3>
                     <p className="text-gray-500 dark:text-gray-300 text-sm">
-                      A cohesive design language maintained through design tokens and clear guidelines.
+                      A unified design language across web, iOS, and Android, ensured by clear guidelines.
                     </p>
                   </div>
                   <div className="flex flex-col items-start gap-2">
@@ -62,7 +61,7 @@ export function HomeComponent() {
                     </div>
                     <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-50">Reusable</h3>
                     <p className="text-gray-500 dark:text-gray-300 text-sm">
-                      Modular components that are easy to reuse in different contexts.
+                      Modular components that can be easily reused in various contexts, including web, iOS, and Android UI.
                     </p>
                   </div>
                   <div className="flex flex-col items-start gap-2">
@@ -71,7 +70,7 @@ export function HomeComponent() {
                     </div>
                     <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-50">Accessible</h3>
                     <p className="text-gray-500 dark:text-gray-300 text-sm">
-                      Components designed with accessibility in mind, ensuring inclusivity.
+                      Components designed with accessibility at the forefront, ensuring inclusivity for all users
                     </p>
                   </div>
                   <div className="flex flex-col items-start gap-2">
@@ -80,7 +79,7 @@ export function HomeComponent() {
                     </div>
                     <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-50">Customizable</h3>
                     <p className="text-gray-500 dark:text-gray-300 text-sm">
-                      Easily customizable components to match different branding and design needs.
+                      Easily adaptable components to fit diverse branding and design needs.
                     </p>
                   </div>
                 </div>
