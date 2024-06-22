@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Astra UI",
-  description: "The building blocks of the web",
+  description: "The building blocks of modern UI",
 };
 
 export default function RootLayout({
