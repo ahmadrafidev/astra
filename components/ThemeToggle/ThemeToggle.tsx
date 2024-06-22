@@ -1,4 +1,3 @@
-// components/ThemeToggle/ThemeToggle.tsx
 "use client";
 
 import React, { useEffect, useState } from 'react';
@@ -22,7 +21,7 @@ const ThemeToggle: React.FC = () => {
 
     return (
         <button onClick={toggleTheme} className="rounded-md">
-            {theme === 'light' ? < MoonIcon className="h-6 w-6 text-gray-400" /> :  <SunIcon className="h-6 w-6 text-yellow-300" />}
+            {theme === 'light' ? < MoonIcon className="h-5 w-5 text-gray-600" /> :  <SunIcon className="h-6 w-6 text-yellow-200" />}
         </button>
     );
 };

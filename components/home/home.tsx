@@ -15,7 +15,7 @@ export function HomeComponent() {
             <div className="flex flex-col items-center space-y-4 text-center">
               <div className="space-y-2">
                 <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none text-gray-900 dark:text-gray-50">
-                  Astra UI: A digital vault for UI component
+                  Astra UI: The building blocks of modern UI
                 </h1>
                 <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-200">
                   Astra UI is a simple, comprehensive component for building beautiful, consistent, and scalable user interfaces.
@@ -37,11 +37,11 @@ export function HomeComponent() {
             <div className="grid items-center gap-6 lg:grid-cols-2 lg:gap-12">
               <div className="flex flex-col justify-center space-y-4">
                 <div className="space-y-2">
-                  <div className="inline-block rounded-lg bg-gray-200 px-3 py-1 text-sm dark:bg-gray-500 text-gray-900">
+                  <div className="inline-block rounded-lg bg-gray-200 px-3 py-1 text-sm dark:bg-gray-300 text-gray-900">
                     Key Principles
                   </div>
                   <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-gray-900 dark:text-gray-50">Astra UI</h2>
-                  <p className="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+                  <p className="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-200">
                     Astra provides a comprehensive set of meticulously-crafted components and
                     utilities to streamline your design and development workflow.
                   </p>
@@ -49,37 +49,37 @@ export function HomeComponent() {
                 <div className="grid grid-cols-2 gap-6">
                   <div className="flex flex-col items-start gap-2">
                     <div className="bg-gray-100 rounded-md flex items-center justify-center aspect-square w-12 dark:bg-gray-500">
-                      <PaletteIcon className="w-6 h-6 text-gray-500 dark:text-gray-400" />
+                      <PaletteIcon className="w-6 h-6 text-gray-500 dark:text-gray-300" />
                     </div>
                     <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-50">Consistent</h3>
-                    <p className="text-gray-500 dark:text-gray-400 text-sm">
+                    <p className="text-gray-500 dark:text-gray-300 text-sm">
                       A cohesive design language maintained through design tokens and clear guidelines.
                     </p>
                   </div>
                   <div className="flex flex-col items-start gap-2">
                     <div className="bg-gray-100 rounded-md flex items-center justify-center aspect-square w-12 dark:bg-gray-500">
-                      <PuzzleIcon className="w-6 h-6 text-gray-500 dark:text-gray-400" />
+                      <PuzzleIcon className="w-6 h-6 text-gray-500 dark:text-gray-300" />
                     </div>
                     <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-50">Reusable</h3>
-                    <p className="text-gray-500 dark:text-gray-400 text-sm">
+                    <p className="text-gray-500 dark:text-gray-300 text-sm">
                       Modular components that are easy to reuse in different contexts.
                     </p>
                   </div>
                   <div className="flex flex-col items-start gap-2">
                     <div className="bg-gray-100 rounded-md flex items-center justify-center aspect-square w-12 dark:bg-gray-500">
-                      <AlignCenterHorizontalIcon className="w-6 h-6 text-gray-500 dark:text-gray-400" />
+                      <AlignCenterHorizontalIcon className="w-6 h-6 text-gray-500 dark:text-gray-300" />
                     </div>
                     <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-50">Accessible</h3>
-                    <p className="text-gray-500 dark:text-gray-400 text-sm">
+                    <p className="text-gray-500 dark:text-gray-300 text-sm">
                       Components designed with accessibility in mind, ensuring inclusivity.
                     </p>
                   </div>
                   <div className="flex flex-col items-start gap-2">
                     <div className="bg-gray-100 rounded-md flex items-center justify-center aspect-square w-12 dark:bg-gray-500">
-                      <WandIcon className="w-6 h-6 text-gray-500 dark:text-gray-400" />
+                      <WandIcon className="w-6 h-6 text-gray-500 dark:text-gray-300" />
                     </div>
                     <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-50">Customizable</h3>
-                    <p className="text-gray-500 dark:text-gray-400 text-sm">
+                    <p className="text-gray-500 dark:text-gray-300 text-sm">
                       Easily customizable components to match different branding and design needs.
                     </p>
                   </div>
