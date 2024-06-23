@@ -1,11 +1,10 @@
-// pages/documentation/index.tsx
-
 import React from 'react';
 import Link from 'next/link';
 
 import Layout from '../../components/Layout/Layout';
-import { foundationList, componentsList } from '../../utils/constants/route';
 import { Tabs, Tab } from '../../components/Tabs/Tabs';
+
+import { foundationList, componentsList } from '../../utils/constants/route';
 
 const AboutAstraPage: React.FC = () => {
 
@@ -26,96 +25,32 @@ const AboutAstraPage: React.FC = () => {
                 Whether you are a beginner or an experienced developer, Astra UI aims to streamline your development process and enhance your productivity.
             </p>
             <div className="mb-8">
-                <h2 className="text-xl md:text-2xl font-medium mb-4 text-gray-900 dark:text-white">Foundation</h2>
-                <p className="mb-4 text-md text-gray-800 dark:text-white  leading-loose">
-                    The foundation section covers the core principles and philosophy behind Astra UI. 
-                    It provides insights into the purpose, goals, and guiding principles that shape the development of this UI library.
+                <h2 className="text-xl md:text-2xl font-medium mb-4 text-gray-900 dark:text-gray-50">Purposes</h2>
+                <p className="text-sm md:text-base mb-4 leading-relaxed text-gray-900 dark:text-gray-50">
+                    The main purpose of Astra UI is to provide a space where I can explore and refine the process of creating high-quality React components. This project serves as both a portfolio of my work and a resource for other developers who are looking to understand and implement similar components in their own projects.
                 </p>
-                <Tabs>
-                    <Tab label="Alphabetical">
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                            {sortedFoundationList.map((item) => (
-                                <div key={item.name} className="border p-4 rounded-lg hover:shadow-lg transition-shadow">
-                                    <Link href={item.path} className="text-gray-900 dark:text-gray-50 text-lg md:text-xl">
-                                        {item.name}
-                                    </Link>
-                                    <Link href={item.path}>
-                                        <p className="text-sm font-normal text-gray-900 dark:text-gray-100 mt-2 leading-loose">
-                                            {item.name === 'A11y' && 'Explore the accessibility standards that Astra UI adheres to, ensuring inclusivity for all users.'}
-                                            {item.name === 'About' && 'Learn more about Astra UI, its purpose, and the principles that guide its design and development.'}
-                                            {item.name === 'Brand expression' && 'Learn how Astra UI maintains brand consistency across various components and designs.'}
-                                            {item.name === 'Color' && 'Explore the color palette used in Astra UI, including primary, secondary, and neutral colors.'}
-                                            {item.name === 'Content standards' && 'Understand the content standards that guide the creation and presentation of information within Astra UI.'}
-                                            {item.name === 'Philosophy' && 'Discover the core philosophy behind Astra UI and how it aims to make development easier and more accessible.'}
-                                            {item.name === 'Typography' && 'Understand the typographic styles and standards used in Astra UI to ensure readability and accessibility.'}
-                                        </p>
-                                    </Link>
-                                </div>
-                            ))}
-                        </div>
-                    </Tab>
-                    <Tab label="Categorical">
-                        <div> {/* Categorical view content will go here */} </div>
-                    </Tab>
-                </Tabs>
-            </div>
-            <div>
-                <h2 className="text-xl md:text-2xl font-medium mb-4 text-gray-900 dark:text-white">Components</h2>
-                <p className="mb-4 text-md text-gray-800 dark:text-white leading-loose">
-                    The components section provides a detailed overview of each UI component available in Astra UI. From buttons to modals, each component is designed to be customizable, accessible, and easy to integrate into your projects. Explore the documentation for each component to learn about its features, usage, and customization options.
-                </p>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {sortedComponentList.map((item) => (
-                        <div key={item.name} className="border p-4 rounded-lg hover:shadow-lg transition-shadow">
-                            <Link href={item.path} className="text-gray-900 dark:text-gray-50">
-                                {item.name}
-                            </Link>
-                            <Link href={item.path}>
-                                <p className="text-sm text-gray-900 dark:text-gray-100 mt-2 leading-loose">
-                                    {item.name === 'Accordion' && 'A collapsible section of content, useful for FAQs and more.'}
-                                    {item.name === 'Alert' && 'Displays important messages in a prominent way to attract user attention.'}
-                                    {item.name === 'AlertDialog' && 'A dialog that requires user acknowledgment before they can proceed.'}
-                                    {item.name === 'Avatar' && 'Displays user profile images or icons.'}
-                                    {item.name === 'Badge' && 'Small count and labeling component to signify status or counts.'}
-                                    {item.name === 'Breadcrumbs' && 'Navigational aid to show the user’s current location in a hierarchy.'}
-                                    {item.name === 'Button' && 'Triggers actions or events, such as submitting a form or saving data.'}
-                                    {item.name === 'Card' && 'Container for grouping related information.'}
-                                    {item.name === 'Carousel' && 'Displays a series of content in a slideshow format.'}
-                                    {item.name === 'Checkbox' && 'Allows the user to select one or more options from a set.'}
-                                    {item.name === 'Collapse' && 'Hides and shows content in a toggled manner.'}
-                                    {item.name === 'Dialog' && 'A window overlaid on either the primary window or another dialog window.'}
-                                    {item.name === 'Dropdown' && 'A list of options that appears when the user interacts with a button.'}
-                                    {item.name === 'Error' && 'Displays error messages in a consistent manner.'}
-                                    {item.name === 'Footer' && 'The bottom section of a webpage, often containing links and information.'}
-                                    {item.name === 'Header' && 'The top section of a webpage, often containing navigation links and branding.'}
-                                    {item.name === 'Input' && 'A field for user input, such as text, numbers, or passwords.'}
-                                    {item.name === 'List' && 'Displays a list of items in an ordered or unordered format.'}
-                                    {item.name === 'Modal' && 'A dialog box/popup window that is displayed on top of the current page.'}
-                                    {item.name === 'Navbar' && 'A navigation bar for providing links to different sections of the site.'}
-                                    {item.name === 'Notification' && 'Informs users about important updates or changes.'}
-                                    {item.name === 'ProgressBar' && 'Visual representation of the progress of a task.'}
-                                    {item.name === 'ProgressTracker' && 'Shows steps and progress through a multi-step process.'}
-                                    {item.name === 'RadioButton' && 'Allows the user to select one option from a set.'}
-                                    {item.name === 'Rating' && 'Allows users to provide ratings, typically with stars.'}
-                                    {item.name === 'SearchBar' && 'Enables users to search through content.'}
-                                    {item.name === 'Select' && 'A dropdown menu for selecting options.'}
-                                    {item.name === 'SkeletonLoader' && 'Placeholder content while the actual content is loading.'}
-                                    {item.name === 'Slider' && 'A control for selecting a value from a range.'}
-                                    {item.name === 'Snackbar' && 'Brief messages that appear at the bottom of the screen.'}
-                                    {item.name === 'Spinner' && 'Indicates loading or ongoing process.'}
-                                    {item.name === 'StatusDot' && 'Indicates status with colored dots.'}
-                                    {item.name === 'Stepper' && 'Indicates progress through a sequence of logical and numbered steps.'}
-                                    {item.name === 'Snippet' && 'Displays code snippets with syntax highlighting.'}
-                                    {item.name === 'Switch' && 'Toggle switches for binary options.'}
-                                    {item.name === 'Tabs' && 'Navigational elements to switch between different views or sections.'}
-                                    {item.name === 'TextArea' && 'A multi-line input field for longer text.'}
-                                    {item.name === 'Toggle' && 'A switch that allows the user to toggle between two states.'}
-                                    {item.name === 'Tooltip' && 'Displays additional information when hovering over an element.'}
-                                </p>
-                            </Link>
-                            
-                        </div>
-                    ))}
+                <h2 className="text-xl md:text-2xl font-medium mb-4 text-gray-900 dark:text-gray-50">Principles</h2>
+                <ul className="list-disc pl-6 mb-4 leading-relaxed text-gray-900 dark:text-gray-50">
+                    <li className="text-sm md:text-base mb-2">
+                        <strong>Consistent:</strong> Ensure that all components adhere to a unified design language, providing a cohesive and professional look and feel across applications.
+                    </li>
+                    <li className="text-sm md:text-base mb-2">
+                        <strong>Reusable:</strong> Develop components that can be easily reused across different projects, reducing the need for redundant code and promoting efficient development practices.
+                    </li>
+                    <li className="text-sm md:text-base mb-2">
+                        <strong>Accessible:</strong> Prioritize accessibility in all components to ensure that they can be used by a wide range of users, including those with disabilities.
+                    </li>
+                    <li className="text-sm md:text-base mb-2">
+                        <strong>Customizable:</strong> Provide options for customization to allow developers to adapt components to their specific needs and branding guidelines.
+                    </li>
+                </ul>
+                <div className="flex flex-col ">
+                    <p className="text-sm md:text-base mb-4 leading-relaxed text-gray-900 dark:text-gray-50">
+                        Astra UI aims to be a versatile toolset for developers, enabling them to create beautiful, functional, and accessible web applications with ease. Whether you are building a simple website or a complex web application, Astra UI provides the foundational components you need to get started quickly and efficiently.
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="size-5 inline-block ml-2">
+                            <path d="M15.98 1.804a1 1 0 0 0-1.96 0l-.24 1.192a1 1 0 0 1-.784.785l-1.192.238a1 1 0 0 0 0 1.962l1.192.238a1 1 0 0 1 .785.785l.238 1.192a1 1 0 0 0 1.962 0l.238-1.192a1 1 0 0 1 .785-.785l1.192-.238a1 1 0 0 0 0-1.962l-1.192-.238a1 1 0 0 1-.785-.785l-.238-1.192ZM6.949 5.684a1 1 0 0 0-1.898 0l-.683 2.051a1 1 0 0 1-.633.633l-2.051.683a1 1 0 0 0 0 1.898l2.051.684a1 1 0 0 1 .633.632l.683 2.051a1 1 0 0 0 1.898 0l.683-2.051a1 1 0 0 1 .633-.633l2.051-.683a1 1 0 0 0 0-1.898l-2.051-.683a1 1 0 0 1-.633-.633L6.95 5.684ZM13.949 13.684a1 1 0 0 0-1.898 0l-.184.551a1 1 0 0 1-.632.633l-.551.183a1 1 0 0 0 0 1.898l.551.183a1 1 0 0 1 .633.633l.183.551a1 1 0 0 0 1.898 0l.184-.551a1 1 0 0 1 .632-.633l.551-.183a1 1 0 0 0 0-1.898l-.551-.184a1 1 0 0 1-.633-.632l-.183-.551Z" />
+                        </svg>
+                    </p>
                 </div>
             </div>
         </Layout>

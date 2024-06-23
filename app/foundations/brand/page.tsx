@@ -6,7 +6,7 @@ import React from 'react';
 import Layout from '../../../components/Layout/Layout';
 import Badge from '../../../components/Badge/Badge';
 
-const FoundationBrandPage: React.FC = () => {
+const AstraBrandPage: React.FC = () => {
     return (
         <Layout>
             <Badge text="Foundations" />
@@ -15,4 +15,4 @@ const FoundationBrandPage: React.FC = () => {
     );
 };
 
-export default FoundationBrandPage;
+export default AstraBrandPage;

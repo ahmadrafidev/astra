@@ -3,12 +3,11 @@ export const aboutList = [
 ];
 
 export const foundationList = [
-    { name: 'About', path: '/foundations/about' },
-    { name: 'Philosophy', path: '/foundations/philosophy' },
     { name: 'A11y', path: '/foundations/accessibility' },
-    { name: 'Content standards', path: '/foundations/content' },
     { name: 'Brand expression', path: '/foundations/brand' },
     { name: 'Color', path: '/foundations/color' },
+    { name: 'Content standards', path: '/foundations/content' },
+    { name: 'Philosophy', path: '/foundations/philosophy' },
     { name: 'Typography', path: '/foundations/typography' },
 ];
 

@@ -5,7 +5,7 @@ import React from 'react';
 import Layout from '../../../components/Layout/Layout';
 import Badge from '../../../components/Badge/Badge';
 
-const FoundationPhilosophyPage: React.FC = () => {
+const AstraPhilosophyPage: React.FC = () => {
     return (
         <Layout>
             <Badge text="Foundations" />
@@ -35,4 +35,4 @@ const FoundationPhilosophyPage: React.FC = () => {
     );
 };
 
-export default FoundationPhilosophyPage;
+export default AstraPhilosophyPage;

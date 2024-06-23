@@ -15,12 +15,12 @@ const Header = () => {
                         About
                     </div>
                 </Link>
-                <Link className="text-sm font-medium hover:underline underline-offset-4" href="/foundations/about">
+                <Link className="text-sm font-medium hover:underline underline-offset-4" href="/foundations">
                     <div className="inline-block rounded-lg text-gray-900 hover:bg-gray-200 px-3 py-1 text-sm hover:dark:bg-gray-500 dark:text-white">
                         Foundations
                     </div>
                 </Link>
-                <Link className="text-sm font-medium hover:underline underline-offset-4" href="/components/accordion">
+                <Link className="text-sm font-medium hover:underline underline-offset-4" href="/components">
                     <div className="inline-block rounded-lg hover:bg-gray-200 px-3 py-1 text-sm hover:dark:bg-gray-500 text-gray-900 dark:text-white">
                         Components
                     </div>
