@@ -17,11 +17,11 @@ const Sidebar: React.FC = () => {
         const filteredComponents = componentsList.filter(component =>
             component.name.toLowerCase().includes(lowerCaseQuery)
         );
-        console.log('Filtered Components:', filteredComponents);
+
         const filteredFoundations = foundationList.filter(foundation =>
             foundation.name.toLowerCase().includes(lowerCaseQuery)
         );
-        console.log('Filtered Components:', filteredFoundations);
+        
         setFilteredComponents(filteredComponents);
         setFilteredFoundations(filteredFoundations);
     };
