@@ -16,28 +16,19 @@ interface LayoutProps {
     children: React.ReactNode;
 }
 
-const Layout: React.FC<LayoutProps> = ({ children }) => {
-    const [filteredComponents, setFilteredComponents] = useState(componentsList);
-
-    const handleSearch = (query: string) => {
-        const filtered = componentsList.filter(component =>
-            component.name.toLowerCase().includes(query.toLowerCase())
-        );
-        setFilteredComponents(filtered);
-    };
-
+const Layout: React.FC = ({ children }) => {
     return (
-        <>
+        <div className="flex flex-col min-h-screen">
             <Header />
-            <div className="flex flex-col md:flex-row">
+            <div className="flex flex-1">
                 <Sidebar />
-                <main className="flex-1 p-4 bg-gray-50 dark:bg-gray-800 overflow-y-auto h-screen md:h-auto">
+                <main className="flex-1 p-4 bg-gray-50 dark:bg-gray-800">
                     {children}
                 </main>
             </div>
             <Footer />
-        </>
-    ); 
+        </div>
+    );
 };
 
 export default Layout;

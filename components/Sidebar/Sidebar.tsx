@@ -27,7 +27,7 @@ const Sidebar: React.FC = () => {
     };
 
     return (
-        <aside className="w-full md:w-64 bg-gray-50 dark:bg-gray-800 h-screen md:h-auto p-5">
+        <aside className="w-full md:w-64 bg-gray-50 dark:bg-gray-800 h-auto p-5">
             <SearchBar onSearch={handleSearch} />
             <ul className="my-2 lg:my-4">
                 {aboutList.map((about) => (
