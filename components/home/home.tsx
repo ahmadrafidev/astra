@@ -92,10 +92,10 @@ export function HomeComponent() {
         <p className="text-xs text-gray-500 dark:text-gray-50">© 2024 Astra UI</p>
         <nav className="sm:ml-auto flex gap-4 sm:gap-6">
           <Link href="https://x.com/ahmadrafiwirana" passHref>
-            <Image src="/twitter.png" alt="X Icon" width={25} height={25} />
+            <Image src="/icons/twitter.png" alt="X Icon" width={25} height={25} />
           </Link>
           <Link href="https://github.com/ahmadrafidev/astra" passHref>
-            <Image src="/github.png" alt="GitHub Icon" width={25} height={25} />
+            <Image src="/icons/github.png" alt="GitHub Icon" width={25} height={25} />
           </Link>
         </nav>
       </footer>
