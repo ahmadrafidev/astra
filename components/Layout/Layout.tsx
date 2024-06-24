@@ -34,13 +34,13 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                     <ul className="my-2 lg:my-4">
                         {aboutList.map((about) => (
                             <li key={about.name}>
-                                <Link href={about.path} className="text-lg lg:text-xl font-medium mb-4 my-2 lg:my-4 text-black dark:text-white">
+                                <Link href={about.path} className="text-base lg:text-lg font-medium mb-4 my-2 lg:my-4 text-black dark:text-white">
                                     {about.name}
                                 </Link>
                             </li>
                         ))}
                     </ul>
-                    <h2 className="text-lg lg:text-xl font-medium mb-4 my-2 lg:my-4 text-black dark:text-white">Foundations</h2>
+                    <h2 className="text-base lg:text-lg font-medium mb-4 my-2 lg:my-4 text-black dark:text-white">Foundations</h2>
                     <ul>
                         {foundationList.map((foundation) => (
                             <li key={foundation.name} className="mb-2">
@@ -50,7 +50,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                             </li>
                         ))}
                     </ul>
-                    <h2 className="text-lg lg:text-xl font-medium mb-4 my-2 lg:my-4 text-black dark:text-white">Components</h2>
+                    <h2 className="text-base lg:text-lg font-medium mb-4 my-2 lg:my-4 text-black dark:text-white">Components</h2>
                     <ul>
                         {componentsList.map((component) => (
                             <li key={component.name} className="mb-2">

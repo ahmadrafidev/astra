@@ -19,18 +19,13 @@ const AboutAstraPage: React.FC = () => {
     return (
         <Layout>
             <h1 className="text-2xl md:text-4xl font-medium mb-4 text-gray-900 dark:text-white">Astra UI Overview</h1>
-            <p className="mb-8 text-sm md:text-base text-gray-800 dark:text-white  leading-loose">
-                Welcome to Astra UI. This comprehensive guide provides everything you need to build beautiful, consistent, and accessible user interfaces using Astra UI components. 
-                Here, you will find detailed explanations, usage examples, and customization options for each component in the library. 
-                Whether you are a beginner or an experienced developer, Astra UI aims to streamline your development process and enhance your productivity.
-            </p>
             <div className="mb-8">
                 <h2 className="text-xl md:text-2xl font-medium mb-4 text-gray-900 dark:text-gray-50">Purposes</h2>
                 <p className="text-sm md:text-base mb-4 leading-relaxed text-gray-900 dark:text-gray-50">
                     The main purpose of Astra UI is to provide a space where I can explore and refine the process of creating high-quality React components. This project serves as both a portfolio of my work and a resource for other developers who are looking to understand and implement similar components in their own projects.
                 </p>
                 <h2 className="text-xl md:text-2xl font-medium mb-4 text-gray-900 dark:text-gray-50">Principles</h2>
-                <ul className="list-disc pl-6 mb-4 leading-relaxed text-gray-900 dark:text-gray-50">
+                <ul className="list-disc pl-6 mb-4 text-gray-900 dark:text-gray-50">
                     <li className="text-sm md:text-base mb-2">
                         <strong>Consistent:</strong> Ensure that all components adhere to a unified design language, providing a cohesive and professional look and feel across applications.
                     </li>

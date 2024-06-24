@@ -25,7 +25,7 @@ const Tabs: React.FC<TabsProps> = ({ children }) => {
                         key={index}
                         className={`py-1 px-4 rounded-lg ${
                             index === activeTab
-                                ? 'bg-white text-black shadow text-base md:text-lg font-medium'
+                                ? 'bg-white text-black shadow text-base md:text-lg font-normal'
                                 : 'text-gray-600 hover:bg-white hover:text-black'
                         }`}
                         onClick={() => setActiveTab(index)}

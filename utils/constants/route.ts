@@ -7,7 +7,9 @@ export const foundationList = [
     { name: 'Brand expression', path: '/foundations/brand' },
     { name: 'Color', path: '/foundations/color' },
     { name: 'Content standards', path: '/foundations/content' },
+    { name: 'Data visualization', path: '/foundations/data-visualization' },
     { name: 'Philosophy', path: '/foundations/philosophy' },
+    { name: 'Screen sizes', path: '/foundations/screen-sizes' },
     { name: 'Typography', path: '/foundations/typography' },
 ];
 
@@ -42,6 +44,7 @@ export const componentsList = [
     { name: 'SkeletonLoader', path: '/components/skeleton-loader' },
     { name: 'Slider', path: '/components/slider' },
     { name: 'Snackbar', path: '/components/snackbar' },
+    { name: 'Snippet', path: '/components/snippet' },
     { name: 'Spinner', path: '/components/spinner' },
     { name: 'StatusDot', path: '/components/status-dot' },
     { name: 'Stepper', path: '/components/stepper' },
