@@ -1,7 +1,9 @@
 import Link from "next/link"
+import Image from 'next/image';
+
 import { AvatarImage, AvatarFallback, Avatar } from "@/components/ui/avatar"
 import { Card } from "@/components/ui/card"
-import Image from 'next/image';
+
 import ThemeToggle from '../ThemeToggle/ThemeToggle';
 import Header from '../Header/Header';
 

@@ -17,10 +17,6 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
         onSearch(value);
     };
 
-    const handleSearch = () => {
-    onSearch(query);
-    };
-
     return (
         <div className="relative">
             <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -31,8 +27,9 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
                 value={query}
                 onChange={handleInputChange}
                 placeholder="Search Astra"
-                className="border p-2 rounded-lg pl-10"
-                />
+                aria-label="Search Astra"
+                className="border p-2 rounded-lg pl-10 w-full"
+            />
         </div>
     );
 };

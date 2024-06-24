@@ -48,7 +48,6 @@ export const componentsList = [
     { name: 'Spinner', path: '/components/spinner' },
     { name: 'StatusDot', path: '/components/status-dot' },
     { name: 'Stepper', path: '/components/stepper' },
-    { name: 'Snippet', path: '/components/snippet' },
     { name: 'Switch', path: '/components/switch' },
     { name: 'Tabs', path: '/components/tabs' },
     { name: 'TextArea', path: '/components/text-area' },
