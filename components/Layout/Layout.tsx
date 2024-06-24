@@ -1,22 +1,17 @@
-// components/Layout.tsx
+// components/Layout/Layout.tsx
 'use client'
 
-import React, { useState } from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
+import React from 'react';
 
-import SearchBar from '../SearchBar/SearchBar';
 import Header from '../Header/Header';
-import Sidebar from '../Sidebar/Sidebar';
 import Footer from '../Footer/Footer';
-
-import { componentsList, foundationList, aboutList } from '../../utils/constants/route';
+import Sidebar from '../Sidebar/Sidebar';
 
 interface LayoutProps {
     children: React.ReactNode;
 }
 
-const Layout: React.FC = ({ children }) => {
+const Layout: React.FC<LayoutProps> = ({ children }) => {
     return (
         <div className="flex flex-col min-h-screen">
             <Header />

@@ -1,21 +1,13 @@
 import React from 'react';
 import Link from 'next/link';
 
-import Layout from '../../components/Layout/Layout';
 import { Tabs, Tab } from '../../components/Tabs/Tabs';
+import Layout from '../../components/Layout/Layout';
 
 import { foundationList, componentsList } from '../../utils/constants/route';
 
+
 const AboutAstraPage: React.FC = () => {
-
-    const sortedFoundationList = [...foundationList].sort((a, b) =>
-        a.name.localeCompare(b.name)
-    );
-
-    const sortedComponentList = [...componentsList].sort((a, b) =>
-        a.name.localeCompare(b.name)
-    );
-    
     return (
         <Layout>
             <h1 className="text-2xl md:text-4xl font-medium mb-4 text-gray-900 dark:text-white">Astra UI Overview</h1>
