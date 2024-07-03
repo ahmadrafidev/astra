@@ -7,7 +7,7 @@ import Layout from '../../components/Layout/Layout';
 import Badge from '../../components/Badge/Badge';
 import { Tabs, Tab } from '../../components/Tabs/Tabs';
 
-import { componentsList } from '../../utils/constants/route';
+import { componentsList, categorizedComponentsList } from '../../utils/constants/route';
 
 const AstraComponentPage: React.FC = () => {
 
@@ -18,7 +18,7 @@ const AstraComponentPage: React.FC = () => {
     return (
         <Layout>
             <Badge text="Components"/>
-            <h1 className="text-2xl md:text-4xl font-medium mb-3 text-gray-900 dark:text-gray-50">Astra UI Components</h1>
+            <h1 className="text-2xl md:text-4xl font-medium mb-3 text-gray-900 dark:text-gray-50">Components</h1>
             <div className="mb-8">
                 <p className="mb-4 text-md text-gray-800 dark:text-white leading-loose">
                     The components section offers a comprehensive overview of every UI component in Astra UI. 
@@ -81,7 +81,23 @@ const AstraComponentPage: React.FC = () => {
                         </div>
                     </Tab>
                     <Tab label="Categorical">
-                        <div> Soon </div>
+                        {Object.entries(categorizedComponentsList).map(([category, components]) => (
+                            <div key={category}>
+                                <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-gray-50 capitalize">{category.replace(/([A-Z])/g, ' $1')}</h3>
+                                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-4">
+                                    {components.map((item) => (
+                                        <div key={item.name} className="border p-4 rounded-lg hover:shadow-lg transition-shadow">
+                                            <Link href={item.path} className="text-gray-900 dark:text-gray-50">
+                                                {item.name}
+                                            </Link>
+                                            <p className="text-sm text-gray-900 dark:text-gray-100 mt-2 leading-loose">
+                                                {item.description}
+                                            </p>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        ))}
                     </Tab>
                 </Tabs>
             </div>
