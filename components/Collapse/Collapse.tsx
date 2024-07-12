@@ -22,4 +22,5 @@ const Collapse: React.FC<CollapseProps> = ({ title, children }) => {
     );
 };
 
+Collapse.displayName = "Collapse";
 export default Collapse;

@@ -20,4 +20,5 @@ const StatusDot: React.FC<StatusDotProps> = ({ status }) => {
     );
 };
 
+StatusDot.displayName = "StatusDot";
 export default StatusDot;

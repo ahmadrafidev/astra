@@ -16,4 +16,5 @@ const Switch: React.FC<SwitchProps> = ({ checked, onChange, className = '' }) =>
     );
 };
 
+Switch.displayName = "Switch";
 export default Switch;

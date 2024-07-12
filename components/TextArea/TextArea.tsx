@@ -19,4 +19,5 @@ const TextArea: React.FC<TextAreaProps> = ({ value, onChange, placeholder, class
     );
 };
 
+TextArea.displayName = "TextArea";
 export default TextArea;

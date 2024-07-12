@@ -15,4 +15,5 @@ const SkeletonLoader: React.FC<SkeletonLoaderProps> = ({ width = '100%', height 
     );
 };
 
+SkeletonLoader.displayName = "SkeletonLoader";
 export default SkeletonLoader;

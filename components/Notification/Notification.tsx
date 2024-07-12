@@ -24,4 +24,5 @@ const Notification: React.FC<NotificationProps> = ({ message, type, onClose, cla
     );
 };
 
+Notification.displayName = "Notification";
 export default Notification;

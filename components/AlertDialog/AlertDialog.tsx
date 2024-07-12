@@ -18,4 +18,5 @@ const AlertDialog: React.FC<AlertDialogProps> = ({ open, onClose, children }) =>
     );
 };
 
+AlertDialog.displayName = "AlertDialog";
 export default AlertDialog;

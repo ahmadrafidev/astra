@@ -18,4 +18,5 @@ const Dialog: React.FC<DialogProps>  = ({ open, onClose, children }) => {
     );
 };
 
+Dialog.displayName = "Dialog";
 export default Dialog;

@@ -18,4 +18,5 @@ const Alert: React.FC<AlertProps> = ({ type, message, children }) => {
     );
 };
 
+Alert.displayName = "Alert";
 export default Alert;

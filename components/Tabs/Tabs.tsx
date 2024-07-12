@@ -58,4 +58,5 @@ const Tabs: React.FC<TabsProps> = ({ children }) => {
     );
 };
 
+Tabs.displayName = "Tabs";
 export { Tab, Tabs };

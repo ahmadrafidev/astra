@@ -19,4 +19,5 @@ const ProgressBar: React.FC<ProgressBarProps> = ({ progress, className = '' }) =
     );
 };
 
+ProgressBar.displayName = "ProgressBar";
 export default ProgressBar;

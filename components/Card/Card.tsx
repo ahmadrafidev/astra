@@ -14,4 +14,5 @@ const Card: React.FC<CardProps> = ({ title, children }) => {
     );
 };
 
+Card.displayName = "Card";
 export default Card;

@@ -34,4 +34,5 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
     );
 };
 
+SearchBar.displayName = "SearchBar";
 export default SearchBar;

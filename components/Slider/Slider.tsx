@@ -24,4 +24,5 @@ const Slider: React.FC<SliderProps> = ({ value, min, max, step = 1, onChange, cl
     );
 };
 
+Slider.displayName = "Slider";
 export default Slider;

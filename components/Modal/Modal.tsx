@@ -21,4 +21,5 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children, className = ''
     );
 };
 
+Modal.displayName = "Modal";
 export default Modal;

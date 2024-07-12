@@ -13,4 +13,5 @@ const Accordion: React.FC<AccordionProps> = ({ children }) => {
     );
 };
 
+Accordion.displayName = "Accordion";
 export default Accordion;

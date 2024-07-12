@@ -21,4 +21,5 @@ const Input: React.FC<InputProps> = ({ type = 'text', value, onChange, placehold
     );
 };
 
+Input.displayName = "Input";
 export default Input;

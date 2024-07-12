@@ -14,4 +14,5 @@ const Toggle: React.FC<ToggleProps> = ({children}) => {
     );
 };
 
+Toggle.displayName = "Toggle";
 export default Toggle;

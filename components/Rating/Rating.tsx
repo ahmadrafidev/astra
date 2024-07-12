@@ -29,4 +29,5 @@ const Rating: React.FC<RatingProps> = ({ maxRating, onRate }) => {
     );
 };
 
+Rating.displayName = "Rating";
 export default Rating;

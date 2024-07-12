@@ -24,4 +24,5 @@ const Error: React.FC<ErrorProps> = ({ message, onRetry }) => {
     );
 };
 
+Error.displayName = "Error";
 export default Error;

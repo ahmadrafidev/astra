@@ -19,4 +19,5 @@ const RadioButton: React.FC<RadioButtonProps> = ({ checked, onChange, label, nam
     );
 };
 
+RadioButton.displayName = "RadioButton";
 export default RadioButton;

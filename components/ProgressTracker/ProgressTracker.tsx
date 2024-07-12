@@ -26,4 +26,5 @@ const ProgressTracker: React.FC<ProgressTrackerProps> = ({ steps, currentStep })
     );
 };
 
+ProgressTracker.displayName = "ProgressTracker";
 export default ProgressTracker;

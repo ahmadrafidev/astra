@@ -17,4 +17,5 @@ const Checkbox: React.FC<CheckboxProps> = ({ checked, onChange, label, className
     );
 };
 
+Checkbox.displayName = "Checkbox";
 export default Checkbox;

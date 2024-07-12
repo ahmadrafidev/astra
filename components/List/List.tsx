@@ -22,4 +22,5 @@ const List: React.FC<ListProps> = ({ items, className = '' }) => (
     </ul>
 );
 
+List.displayName = "List";
 export { List, ListItem };

@@ -20,4 +20,5 @@ const Select: React.FC<SelectProps> = ({ value, onChange, options, className = '
     );
 };
 
+Select.displayName = "Select";
 export default Select;

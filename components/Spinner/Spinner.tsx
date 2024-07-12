@@ -17,4 +17,5 @@ const Spinner: React.FC<SpinnerProps> = ({ size = 24, className = '' }) => {
     );
 };
 
+Spinner.displayName = "Spinner";
 export default Spinner;

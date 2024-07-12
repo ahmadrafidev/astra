@@ -19,4 +19,5 @@ const Snippet: React.FC<SnippetProps> = ({ language, code }) => {
     );
 };
 
+Snippet.displayName = "Snippet";
 export default Snippet;

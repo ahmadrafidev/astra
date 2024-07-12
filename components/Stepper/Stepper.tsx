@@ -26,4 +26,5 @@ const Stepper: React.FC<StepperProps> = ({ steps, currentStep }) => {
     );
 };
 
+Stepper.displayName = "Stepper";
 export default Stepper;

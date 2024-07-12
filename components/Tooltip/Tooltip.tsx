@@ -24,4 +24,5 @@ const Tooltip: React.FC<TooltipProps> = ({ children, text }) => {
     );
 };
 
+Tooltip.displayName = "Tooltip";
 export default Tooltip;

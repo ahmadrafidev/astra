@@ -26,4 +26,5 @@ const Button: React.FC<ButtonProps>  = ({ variant = 'default', children, ...prop
   );
 };
 
+Button.displayName = "Button";
 export default Button;

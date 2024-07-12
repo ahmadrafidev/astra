@@ -29,4 +29,5 @@ const Snackbar: React.FC<SnackbarProps> = ({ message, open, duration = 3000, onC
     );
 };
 
+Snackbar.displayName = "Snackbar";
 export default Snackbar;

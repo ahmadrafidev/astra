@@ -61,4 +61,5 @@ const Dropdown: React.FC<DropdownProps> = ({ options, onSelect }) => {
   );
 };
 
+Dropdown.displayName = "Dropdown";
 export default Dropdown;
