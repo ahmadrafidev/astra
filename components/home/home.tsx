@@ -6,6 +6,7 @@ import { Card } from "@/components/ui/card"
 
 import ThemeToggle from '../ThemeToggle/ThemeToggle';
 import Header from '../Header/Header';
+import Footer from '../Footer/Footer';
 
 export function HomeComponent() {
   return (
@@ -90,17 +91,7 @@ export function HomeComponent() {
           </div>
         </section>
       </main>
-      <footer className="flex flex-col sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t bg-gray-50 dark:bg-gray-800 border-gray-200 dark:border-gray-900">
-        <p className="text-xs text-gray-500 dark:text-gray-50">© 2024 Astra UI</p>
-        <nav className="sm:ml-auto flex gap-4 sm:gap-6">
-          <Link href="https://x.com/ahmadrafiwirana" passHref>
-            <Image src="/icons/twitter.png" alt="X Icon" width={25} height={25} />
-          </Link>
-          <Link href="https://github.com/ahmadrafidev/astra" passHref>
-            <Image src="/icons/github.png" alt="GitHub Icon" width={25} height={25} />
-          </Link>
-        </nav>
-      </footer>
+      <Footer />
     </div>
   )
 }

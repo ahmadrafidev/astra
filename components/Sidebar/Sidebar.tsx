@@ -61,7 +61,7 @@ const Sidebar: React.FC = () => {
                         ))}
                     </ul>
                 </Tab>
-                <Tab icon="/icons/apple.png">
+                <Tab icon="/icons/apple.webp">
                     <ul>
                         {filteredComponents.map((component) => (
                             <li key={component.name} className="mb-2">
@@ -72,7 +72,7 @@ const Sidebar: React.FC = () => {
                         ))}
                     </ul>
                 </Tab>
-                <Tab icon="/icons/android.png">
+                <Tab icon="/icons/android.webp">
                     <ul>
                         {filteredComponents.map((component) => (
                             <li key={component.name} className="mb-2">
