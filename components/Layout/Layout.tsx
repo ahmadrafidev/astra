@@ -30,7 +30,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         <div className="flex flex-col min-h-screen">
             <Header setActiveSection={setActiveSection} />
             <div className="flex flex-1">
-                <Sidebar activeSection={activeSection} />
+                <Sidebar />
                 <main className="flex-1 p-4 bg-gray-50 dark:bg-gray-800">
                     {children}
                 </main>

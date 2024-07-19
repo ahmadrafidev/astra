@@ -3,18 +3,14 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+import { useMemoizedPathname } from '../../hooks/useMemoizedPathname.jsx'; 
 
 import SearchBar from '../SearchBar/SearchBar';
 import { Tabs, Tab } from '../Tabs/Tabs';
 import { componentsList, foundationList, aboutList } from '../../utils/constants/route';
 
-
-interface SidebarProps {
-    activeSection: string;
-}
-
-const Sidebar: React.FC<SidebarProps> = ({ activeSection }) => {
-    
+const Sidebar: React.FC = () => {
+    const pathname = useMemoizedPathname();
     const [filteredComponents, setFilteredComponents] = useState(componentsList);
     const [filteredFoundations, setFilteredFoundations] = useState(foundationList);
 
@@ -35,8 +31,7 @@ const Sidebar: React.FC<SidebarProps> = ({ activeSection }) => {
     return (
         <aside className="w-full md:w-64 bg-gray-50 dark:bg-gray-800 h-auto p-5">
             <SearchBar onSearch={handleSearch} />
-
-            {activeSection === 'about' && (
+            {pathname.startsWith('/about') && (
                 <>
                     <h2 className="text-base lg:text-lg font-medium mb-4 my-2 lg:my-4 text-black dark:text-white">About Astra UI</h2>
                     <ul className="my-2 lg:my-4">
@@ -50,8 +45,7 @@ const Sidebar: React.FC<SidebarProps> = ({ activeSection }) => {
                     </ul>
                 </>
             )}
-
-            {activeSection === 'foundations' && (
+            {pathname.startsWith('/foundations') && (
                 <>
                     <h2 className="text-base lg:text-lg font-medium mb-4 my-2 lg:my-4 text-black dark:text-white">Foundations</h2>
                     <ul>
@@ -65,8 +59,7 @@ const Sidebar: React.FC<SidebarProps> = ({ activeSection }) => {
                     </ul>
                 </>
             )}
-
-            {activeSection === 'components' && (
+            {pathname.startsWith('/components') && (
                 <>
                     <h2 className="text-base lg:text-lg font-medium mb-4 my-2 lg:my-4 text-black dark:text-white">Components</h2>
                     <Tabs>
