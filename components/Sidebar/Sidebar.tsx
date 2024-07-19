@@ -29,10 +29,11 @@ const Sidebar: React.FC = () => {
     return (
         <aside className="w-full md:w-64 bg-gray-50 dark:bg-gray-800 h-auto p-5">
             <SearchBar onSearch={handleSearch} />
+            <h2 className="text-base lg:text-lg font-medium mb-4 my-2 lg:my-4 text-black dark:text-white">About Astra UI</h2>
             <ul className="my-2 lg:my-4">
                 {aboutList.map((about) => (
                     <li key={about.name}>
-                        <Link href={about.path} className="text-base lg:text-lg font-medium mb-4 my-2 lg:my-4 text-black dark:text-white">
+                        <Link href={about.path} className="text-sm lg:text-base font-sans font-light text-black dark:text-white">
                             {about.name}
                         </Link>
                     </li>

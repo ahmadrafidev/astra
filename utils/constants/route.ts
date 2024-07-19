@@ -1,5 +1,5 @@
 export const aboutList = [
-    { name: 'About Astra UI', path: '/about' },
+    { name: 'Overview', path: '/about' },
 ];
 
 export const foundationList = [
