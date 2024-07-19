@@ -31,7 +31,7 @@ export const foundationList = [
     { 
         name: 'Screen sizes', 
         path: '/foundations/screen-sizes',
-        description: 'Learn about the responsive design principles and screen size guidelines in Astra UI for web, Android, and iOS.' 
+        description: 'Learn about the responsive design principles and screen size guidelines in Astra UI for Web, Android, and iOS.' 
     },
     { 
         name: 'Typography', 

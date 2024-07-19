@@ -26,7 +26,7 @@ const Header: React.FC<HeaderProps> = ({ setActiveSection }) => {
     }, []);
 
     return (
-        <header className={`sticky top-0 px-4 lg:px-6 h-14 flex items-center transition-all duration-300 ${isScrolled ? 'bg-gray-50 dark:bg-gray-800 bg-transparent backdrop-blur-sm shadow' : 'bg-gray-50 dark:bg-gray-800'}`}>
+        <header className={`sticky top-0 px-4 lg:px-6 h-14 flex items-center transition-all duration-300 shadow-sm ${isScrolled ? 'bg-gray-50 dark:bg-gray-800 bg-transparent backdrop-blur-sm shadow' : 'bg-gray-50 dark:bg-gray-800'}`}>
             <Link className="flex items-center justify-center" href="/">
                 <div className="flex flex-row align-center gap-1 justify-start">
                     <p className="text-gray-900 text-2xl md:text-3xl font-semibold font-sans dark:text-white">
