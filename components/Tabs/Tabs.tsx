@@ -38,7 +38,7 @@ const Tabs: React.FC<TabsProps> = ({ children }) => {
                         aria-controls={`tabpanel-${index}`}
                         id={`tab-${index}`}
                         tabIndex={index === activeTab ? 0 : -1}
-                        className={`py-1 px-4 rounded-lg ${
+                        className={`py-1 px-4 rounded-lg flex items-center ${
                             index === activeTab
                                 ? 'bg-white text-black shadow text-base md:text-lg font-normal'
                                 : 'text-gray-600 hover:bg-white hover:text-black'
@@ -47,7 +47,7 @@ const Tabs: React.FC<TabsProps> = ({ children }) => {
                         onKeyDown={(e) => handleKeyDown(e, index)}
                     >
                         {tab.props.icon && <Image src={tab.props.icon} alt={tab.props.label || 'Tab icon'} width={20} height={20} />}
-                        {tab.props.label && !tab.props.icon && <span className="align-middle justify-center">{tab.props.label}</span>}
+                        {tab.props.label && !tab.props.icon && <span className="align-middle justify-center text-base md:text-lg">{tab.props.label}</span>}
                     </button>
                 ))}
             </div>
