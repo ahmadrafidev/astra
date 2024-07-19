@@ -5,7 +5,11 @@ import { useEffect, useState } from 'react';
 
 import ThemeToggle from '../ThemeToggle/ThemeToggle';
 
-const Header = () => {
+interface HeaderProps {
+    setActiveSection: (section: string) => void;
+}
+
+const Header: React.FC<HeaderProps> = ({ setActiveSection }) => {
     const [isScrolled, setIsScrolled] = useState(false);
 
     useEffect(() => {
@@ -34,17 +38,17 @@ const Header = () => {
                 </div>
             </Link>
             <nav className="ml-auto flex gap-2 sm:gap-4">
-                <Link className="text-sm font-medium hover:underline underline-offset-4" href="/about">
+                <Link className="text-sm font-medium hover:underline underline-offset-4" href="/about" onClick={() => setActiveSection('about')}>
                     <div className="inline-block rounded-lg text-gray-900 hover:bg-gray-200 px-3 py-1 text-sm hover:dark:bg-gray-500 dark:text-white">
                         About
                     </div>
                 </Link>
-                <Link className="text-sm font-medium hover:underline underline-offset-4" href="/foundations">
+                <Link className="text-sm font-medium hover:underline underline-offset-4" href="/foundations" onClick={() => setActiveSection('foundations')}>
                     <div className="inline-block rounded-lg text-gray-900 hover:bg-gray-200 px-3 py-1 text-sm hover:dark:bg-gray-500 dark:text-white">
                         Foundations
                     </div>
                 </Link>
-                <Link className="text-sm font-medium hover:underline underline-offset-4" href="/components">
+                <Link className="text-sm font-medium hover:underline underline-offset-4" href="/components" onClick={() => setActiveSection('components')}>
                     <div className="inline-block rounded-lg hover:bg-gray-200 px-3 py-1 text-sm hover:dark:bg-gray-500 text-gray-900 dark:text-white">
                         Components
                     </div>

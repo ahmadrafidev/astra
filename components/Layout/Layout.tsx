@@ -1,7 +1,8 @@
 // components/Layout/Layout.tsx
 'use client'
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
@@ -12,11 +13,24 @@ interface LayoutProps {
 }
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
+    const [activeSection, setActiveSection] = useState('about'); 
+    const pathname = usePathname();
+
+    useEffect(() => {
+        if (pathname.startsWith('/foundations')) {
+            setActiveSection('foundations');
+        } else if (pathname.startsWith('/components')) {
+            setActiveSection('components');
+        } else {
+            setActiveSection('about');
+        }
+    }, [pathname]);
+
     return (
         <div className="flex flex-col min-h-screen">
-            <Header />
+            <Header setActiveSection={setActiveSection} />
             <div className="flex flex-1">
-                <Sidebar />
+                <Sidebar activeSection={activeSection} />
                 <main className="flex-1 p-4 bg-gray-50 dark:bg-gray-800">
                     {children}
                 </main>
@@ -26,4 +40,5 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     );
 };
 
+Layout.displayName = "Layout";
 export default Layout;
