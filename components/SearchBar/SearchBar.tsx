@@ -26,9 +26,9 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
                 type="text"
                 value={query}
                 onChange={handleInputChange}
-                placeholder="Search Astra"
-                aria-label="Search Astra"
-                className="border p-2 rounded-lg pl-10 w-full"
+                placeholder="Search AstraUI"
+                aria-label="Search AstraUI"
+                className="border p-2 rounded-lg pl-10 w-full text-gray-800 dark:text-white bg-white dark:bg-gray-800"
             />
         </div>
     );
