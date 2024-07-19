@@ -1,6 +1,6 @@
-# Astra: The UI Component 
+# Astra: The Building Blocks of Modern UI
 
-This repository contains a collection of reusable UI components built with Next.js and documented using Storybook.
+Astra UI is a simple and comprehensive component library designed for building beautiful, consistent, and scalable user interfaces. Built for design engineers, Astra UI offers a versatile component toolkit that simplifies the development process across multiple platforms.
 
 ## Tech Stack
 
@@ -12,8 +12,9 @@ This repository contains a collection of reusable UI components built with Next.
 ### Prerequisites
 
 Before you begin, ensure you have met the following requirements:
-    1. Node.js and npm installed on your machine.
-    2. Basic understanding of React and JavaScript/TypeScript.
+
+1. Node.js 
+2. Basic understanding of React and JavaScript/TypeScript.
 
 ## Installation
 
@@ -44,7 +45,7 @@ Before you begin, ensure you have met the following requirements:
 
 ## Deployment
 
-Peacefully shipping in the area: [Astra UI](https://astra-ui.vercel.app/)
+Peacefully shipping in the area: [Astra UI](https://www.astraui.design/)
 
 ## Inspiration
 
