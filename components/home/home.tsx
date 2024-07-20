@@ -30,13 +30,23 @@ export function HomeComponent() {
                   AstraUI is a simple, comprehensive component for building beautiful, consistent, and scalable user interfaces.
                 </p>
               </div>
-              <div role="button" className="space-x-4">
-                <Link
-                  className="inline-flex h-10 items-center justify-center rounded-lg bg-gray-900 px-4 py-2 text-sm font-medium text-gray-50 shadow transition-colors hover:bg-gray-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/90 dark:focus-visible:ring-gray-300"
-                  href="/about"
-                >
-                  Get Started
-                </Link>
+              <div className="flex flex-row gap-6 p-4">
+                <div role="button" className="space-x-4">
+                  <Link
+                    className="inline-flex h-10 items-center justify-center rounded-lg bg-gray-900 dark:bg-white dark:border-gray-300 px-4 py-2 text-sm font-medium text-gray-50 dark:text-gray-900 shadow transition-all duration-200 hover:bg-gray-800 hover:ring-2 hover:ring-gray-300 dark:hover:ring-gray-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-300 disabled:pointer-events-none disabled:opacity-50"
+                    href="/components"
+                  >
+                    Browse Components
+                  </Link>
+                </div>
+                <div role="button" className="space-x-4">
+                  <Link
+                    className="inline-flex h-10 items-center justify-center rounded-lg border border-gray-300 dark:border-none bg-white dark:bg-gray-900 px-4 py-2 text-sm font-medium text-gray-900 dark:text-gray-50 shadow transition-all duration-200 hover:bg-gray-50 hover:ring-2 hover:ring-gray-400 dark:hover:ring-gray-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-300 disabled:pointer-events-none disabled:opacity-50"
+                    href="/about"
+                  >
+                    Get Started
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
