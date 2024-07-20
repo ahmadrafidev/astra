@@ -8,7 +8,7 @@ import Image from 'next/image';
 const Footer: React.FC = () => {
     return (
         <footer className="flex flex-col sm:flex-row py-6 w-full items-center px-4 md:px-6 border-t bg-gray-50 dark:bg-gray-800 border-gray-200 dark:border-gray-800">
-            <p className="text-xs text-gray-900 dark:text-gray-200">© 2024 Astra UI</p>
+            <p className="text-xs text-gray-900 dark:text-gray-200">© 2024 AstraUI</p>
             <nav className="sm:ml-auto flex gap-4 sm:gap-6">
                 <Link href="https://x.com/rafiwiranaa" passHref>
                     <Image src="/icons/twitter.webp" alt="X Icon" width={20} height={20} />

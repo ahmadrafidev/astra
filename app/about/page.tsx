@@ -12,37 +12,39 @@ const AboutAstraPage: React.FC = () => {
         <Layout>
             <Badge text="About" />
             <h1 className="text-2xl md:text-4xl font-medium mb-4 text-gray-900 dark:text-white">Overview</h1>
-            <div className="mb-8">
-                <section>
+            <div className="mb-8 text-justify">
+                <section className="mb-4">
                     <h2 className="text-xl md:text-2xl font-medium mb-4 text-gray-900 dark:text-gray-50">Purposes</h2>
-                    <p className="text-sm md:text-base mb-2 leading-relaxed text-gray-900 dark:text-gray-50">
-                        The main purpose of Astra UI is to provide a space where I can explore and refine the process of creating high-quality React components. This project serves as both a portfolio of my work and a resource for other developers who are looking to understand and implement similar components in their own projects.
+                    <p className="text-base md:text-lg text-gray-900 dark:text-gray-50 font-sans leading-4">
+                        AstraUI is designed to provide a platform for developers to explore and perfect the creation of high-quality React components. 
+                        It serves as both a showcase of work and a resource for developers looking to implement similar components, fostering learning and innovation in UI development.
                     </p>
                 </section>
-                <section className="mb-4 text-gray-900 dark:text-gray-50">
-                    <h2 className="text-xl md:text-2xl font-medium mb-4 text-gray-900 dark:text-gray-50">Principles</h2>
-                    <h3 className="text-sm md:text-base mb-2">
+                <section className="mb-4 text-gray-900 dark:text-gray-50 font-sans">
+                    <h2 className="text-xl md:text-2xl font-medium mb-4 text-gray-900 dark:text-gray-50">Design Principles</h2>
+                    <h3 className="text-base md:text-lg mb-2">
                         <span className="font-semibold">Consistent</span>
                         <p>Ensure that all components adhere to a unified design language, providing a cohesive and professional look and feel across applications.</p>
                     </h3>
-                    <h3 className="text-sm md:text-base mb-2">
+                    <h3 className="text-base md:text-lg mb-2">
                         <span className="font-semibold">Reusable</span>
-                        <p>Develop components that can be easily reused across different projects, reducing the need for redundant code and promoting efficient development practices.</p>
+                        <p>Components are designed for easy reuse across projects, promoting efficiency and reducing redundant code.</p>
                     </h3>
-                    <h3 className="text-sm md:text-base mb-2">
+                    <h3 className="text-base md:text-lg mb-2">
                         <span className="font-semibold">Accessible</span>
-                        <p>Prioritize accessibility in all components to ensure that they can be used by a wide range of users, including those with disabilities.</p>
+                        <p>Built on top of <a href="https://react-spectrum.adobe.com/react-aria/" className="text-blue-500">React Aria</a>, AstraUI prioritizes accessibility, ensuring all users can interact seamlessly.</p>
                     </h3>
-                    <h3 className="text-sm md:text-base mb-2">
+                    <h3 className="text-base md:text-lg mb-2">
                         <span className="font-semibold">Customizable</span>
-                        <p>Provide options for customization to allow developers to adapt components to their specific needs and branding guidelines.</p>
+                        <p>Components are easily adaptable to specific needs and branding guidelines.</p>
                     </h3>
                 </section>
                 <section className="flex flex-col">
                     <h2 className="text-xl md:text-2xl font-medium mb-2 text-gray-900 dark:text-gray-50">Why AstraUI?</h2>
-                    <p className="text-sm md:text-base mb-4 leading-relaxed text-gray-900 dark:text-gray-50">
-                        Astra UI aims to be a versatile toolset for developers, enabling them to create beautiful, functional, and accessible web applications with ease. 
-                        Whether you are building a simple website or a complex web application, Astra UI provides the foundational components you need to get started quickly and efficiently.
+                    <p className="text-base md:text-lg mb-4 text-gray-900 dark:text-gray-50 font-sans leading-4">
+                        AstraUI is a versatile toolkit that empowers developers to create beautiful, functional, and inclusive web applications effortlessly.
+                        Whether you are building a simple website or a complex web application, AstraUI provides the foundational components you need to get started quickly and efficiently, 
+                        with advanced accessibility features from React Aria ensuring inclusivity for all users.
                     </p>
                 </section>
             </div>

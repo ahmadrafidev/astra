@@ -1,6 +1,6 @@
-# Astra: The Building Blocks of Modern UI
+# AstraUI: The Building Blocks of Modern UI
 
-Astra UI is a simple and comprehensive component library designed for building beautiful, consistent, and scalable user interfaces. Built for design engineers, Astra UI offers a versatile component toolkit that simplifies the development process across multiple platforms.
+AstraUI is a simple and comprehensive component library designed for building beautiful, consistent, and scalable user interfaces. Built for design engineers, AstraUI offers a versatile component toolkit that simplifies the development process across multiple platforms.
 
 ## Tech Stack
 
@@ -45,7 +45,7 @@ Before you begin, ensure you have met the following requirements:
 
 ## Deployment
 
-Peacefully shipping in the area: [Astra UI](https://www.astraui.design/)
+Peacefully shipping in the area: [AstraUI](https://www.astraui.design/)
 
 ## Inspiration
 

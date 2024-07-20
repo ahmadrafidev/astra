@@ -24,10 +24,10 @@ export function HomeComponent() {
             <div className="flex flex-col items-center space-y-4 text-center">
               <div className="space-y-2">
                 <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none text-gray-900 dark:text-gray-50">
-                  Astra UI: The building blocks of modern UI
+                  AstraUI: The building blocks of modern UI
                 </h1>
                 <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-200">
-                  Astra UI is a simple, comprehensive component for building beautiful, consistent, and scalable user interfaces.
+                  AstraUI is a simple, comprehensive component for building beautiful, consistent, and scalable user interfaces.
                 </p>
               </div>
               <div className="space-x-4">
@@ -49,9 +49,9 @@ export function HomeComponent() {
                   <div className="inline-block rounded-lg bg-gray-200 px-3 py-1 text-sm dark:bg-gray-300 text-gray-900">
                     Key Principles
                   </div>
-                  <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-gray-900 dark:text-gray-50">Astra UI</h2>
+                  <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-gray-900 dark:text-gray-50">AstraUI</h2>
                   <p className="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-200">
-                    Astra UI provides a complete set of components and utilities carefully crafted to simplify the design and development flow.
+                    AstraUI provides a complete set of components and utilities carefully crafted to simplify the design and development flow.
                   </p>
                 </div>
                 <div className="grid grid-cols-2 gap-6">

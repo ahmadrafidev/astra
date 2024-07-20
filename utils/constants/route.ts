@@ -6,37 +6,37 @@ export const foundationList = [
     { 
         name: 'Accessibility', 
         path: '/foundations/accessibility',
-        description: 'Explore the accessibility standards that Astra UI adheres to, ensuring inclusivity for all users.' 
+        description: 'Explore the accessibility standards that AstraUI adheres to, ensuring inclusivity for all users.' 
     },
     { 
         name: 'Brand expression', 
         path: '/foundations/brand',
-        description: 'Learn how Astra UI maintains brand consistency across various components and designs.' 
+        description: 'Learn how AstraUI maintains brand consistency across various components and designs.' 
     },
     { 
         name: 'Color', 
         path: '/foundations/color',
-        description: 'Explore the color palette used in Astra UI, including primary, secondary, and neutral colors.' 
+        description: 'Explore the color palette used in AstraUI, including primary, secondary, and neutral colors.' 
     },
     { 
         name: 'Content standards', 
         path: '/foundations/content',
-        description: 'Understand the content standards that guide the creation and presentation of information within Astra UI.' 
+        description: 'Understand the content standards that guide the creation and presentation of information within AstraUI.' 
     },
     { 
         name: 'Data visualization', 
         path: '/foundations/data-visualization',
-        description: 'Explore the data visualization techniques and standards used in Astra UI.' 
+        description: 'Explore the data visualization techniques and standards used in AstraUI.' 
     },
     { 
         name: 'Screen sizes', 
         path: '/foundations/screen-sizes',
-        description: 'Learn about the responsive design principles and screen size guidelines in Astra UI for Web, Android, and iOS.' 
+        description: 'Learn about the responsive design principles and screen size guidelines in AstraUI for Web, Android, and iOS.' 
     },
     { 
         name: 'Typography', 
         path: '/foundations/typography',
-        description: 'Understand the typographic styles and standards used in Astra UI to ensure readability and accessibility.' 
+        description: 'Understand the typographic styles and standards used in AstraUI to ensure readability and accessibility.' 
     },
 ];
 

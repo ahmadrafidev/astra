@@ -21,7 +21,7 @@ const AstraComponentPage: React.FC = () => {
             <h1 className="text-2xl md:text-4xl font-medium mb-3 text-gray-900 dark:text-gray-50">Components</h1>
             <div className="mb-8">
                 <p className="mb-4 text-md text-gray-800 dark:text-white leading-loose">
-                    The components section offers a comprehensive overview of every UI component in Astra UI. 
+                    The components section offers a comprehensive overview of every UI component in AstraUI. 
                     Each component is designed to be customizable, accessible, and easy to integrate into projects across web, Android, and iOS ecosystems. 
                     Explore the documentation for detailed information on features, usage, and customization options.
                 </p>

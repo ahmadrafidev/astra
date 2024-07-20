@@ -33,7 +33,7 @@ const Sidebar: React.FC = () => {
             <SearchBar onSearch={handleSearch} />
             {pathname.startsWith('/about') && (
                 <>
-                    <h2 className="text-base lg:text-lg font-medium mb-4 my-2 lg:my-4 text-black dark:text-white">About Astra UI</h2>
+                    <h2 className="text-base lg:text-lg font-medium mb-4 my-2 lg:my-4 text-black dark:text-white">About AstraUI</h2>
                     <ul className="my-2 lg:my-4">
                         {aboutList.map((about) => (
                             <li key={about.name}>

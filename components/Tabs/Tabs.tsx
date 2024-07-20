@@ -51,7 +51,7 @@ const Tabs: React.FC<TabsProps> = ({ children }) => {
                     </button>
                 ))}
             </div>
-            <div className="p-4 w-full" id={`tabpanel-${activeTab}`} aria-labelledby={`tab-${activeTab}`} role="tabpanel">
+            <div className="p-2 w-full" id={`tabpanel-${activeTab}`} aria-labelledby={`tab-${activeTab}`} role="tabpanel">
                 {children[activeTab]}
             </div>
         </div>
