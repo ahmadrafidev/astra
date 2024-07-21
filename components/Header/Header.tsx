@@ -26,7 +26,7 @@ const Header: React.FC<HeaderProps> = ({ setActiveSection }) => {
     }, []);
 
     return (
-        <header className={`sticky top-0 px-4 lg:px-6 h-14 flex items-center transition-all duration-300 shadow-sm ${isScrolled ? 'bg-transparent backdrop-blur-sm shadow' : 'bg-gray-50 dark:bg-gray-900'}`}>
+        <header className={`sticky top-0 px-4 lg:px-6 h-14 flex items-center transition-all duration-300 shadow-sm ${isScrolled ? 'bg-transparent backdrop-blur-sm shadow' : 'bg-gray-50 dark:bg-black'}`}>
             <Link className="flex items-center justify-center" href="/">
                 <div className="flex flex-row align-center gap-1 justify-start">
                     <p className="text-gray-900 text-2xl md:text-3xl font-semibold font-sans dark:text-white">
@@ -37,7 +37,7 @@ const Header: React.FC<HeaderProps> = ({ setActiveSection }) => {
                     </svg>
                 </div>
             </Link>
-            <nav className="ml-auto flex gap-2 sm:gap-4">
+            <nav className="ml-auto flex gap-2 sm:gap-4 items-center">
                 <Link className="text-sm font-medium hover:underline underline-offset-4" href="/about" onClick={() => setActiveSection('about')}>
                     <div className="inline-block rounded-lg text-gray-900 hover:bg-gray-200 px-3 py-1 text-sm hover:dark:bg-gray-500 dark:text-white">
                         About

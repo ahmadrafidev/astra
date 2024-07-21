@@ -18,8 +18,8 @@ export function HomeComponent() {
   return (
     <div className="flex flex-col min-h-[100dvh]">
       <Header setActiveSection={setActiveSection}/>
-      <main className="flex-1">
-        <section className="min-h-screen overflow-hidden w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-gray-50 dark:bg-gray-900">
+      <main className="flex-1 bg-gray-50 dark:bg-black">
+        <section className="min-h-screen overflow-hidden w-full py-12 md:py-24 lg:py-32 xl:py-48">
           <div className="container px-4 md:px-6 mx-auto">
             <div className="flex flex-col items-center space-y-4 text-center">
               <div className="space-y-2">
@@ -41,7 +41,7 @@ export function HomeComponent() {
                 </div>
                 <div role="button" className="space-x-4">
                   <Link
-                    className="inline-flex h-10 items-center justify-center rounded-lg border border-gray-300 dark:border-none bg-white dark:bg-black px-4 py-2 text-sm font-medium text-gray-900 dark:text-gray-50 shadow transition-all duration-200 hover:bg-gray-50 hover:ring hover:ring-gray-400 dark:hover:ring-gray-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-300 disabled:pointer-events-none disabled:opacity-50"
+                    className="inline-flex h-10 items-center justify-center rounded-lg border border-gray-300 dark:border-none bg-white dark:bg-gray-800 px-4 py-2 text-sm font-medium text-gray-900 dark:text-gray-50 shadow transition-all duration-200 hover:bg-gray-50 hover:ring hover:ring-gray-400 dark:hover:ring-gray-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-300 disabled:pointer-events-none disabled:opacity-50"
                     href="/about"
                   >
                     Get Started
@@ -51,7 +51,7 @@ export function HomeComponent() {
             </div>
           </div>
         </section>
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-900">
+        <section className="w-full py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6 mx-auto">
             <div className="grid items-center gap-6 lg:grid-cols-2 lg:gap-12">
               <div className="flex flex-col justify-center space-y-4">
