@@ -1,11 +1,17 @@
 import React from 'react';
 import Link from 'next/link';
+import type { Metadata } from "next";
 
 import { Tabs, Tab } from '../../components/Tabs/Tabs';
 import Layout from '../../components/Layout/Layout';
 import Badge from '../../components/Badge/Badge';
 
 import { foundationList, componentsList } from '../../utils/constants/route';
+
+export const metadata: Metadata = {
+    title: "Overview - AstraUI",
+    description: "The building blocks of modern UI",
+};
 
 const AboutAstraPage: React.FC = () => {
     return (

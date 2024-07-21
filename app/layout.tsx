@@ -8,8 +8,11 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "AstraUI",
-  description: "The building blocks of modern UI",
+  title: {
+    default: 'AstraUI',
+    template: '%s - AstraUI',
+  },
+  description: 'The building blocks of modern UI',
 };
 
 export default function RootLayout({

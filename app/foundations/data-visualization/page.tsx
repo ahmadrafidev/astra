@@ -1,9 +1,16 @@
-'use client';
-
+// pages/foundations/data-visualization.tsx
 import React from 'react';
+import { Metadata } from 'next';
 
 import Layout from '../../../components/Layout/Layout';
 import Badge from '../../../components/Badge/Badge';
+
+export async function generateMetadata(): Promise<Metadata> {
+    return {
+        title: 'Data Visualization',
+        description: 'Explore the data visualization techniques and standards used in AstraUI.',
+    };
+}
 
 const AstraDataVisualizationPage: React.FC = () => {
     return (

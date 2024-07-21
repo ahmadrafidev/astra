@@ -1,13 +1,17 @@
-'use client';
-
 import React from 'react';
 import Link from 'next/link';
+import type { Metadata } from "next";
 
 import Layout from '../../components/Layout/Layout';
 import Badge from '../../components/Badge/Badge';
 import { Tabs, Tab } from '../../components/Tabs/Tabs';
 
 import { componentsList, categorizedComponentsList } from '../../utils/constants/route';
+
+export const metadata: Metadata = {
+    title: "Component - AstraUI",
+    description: "The building blocks of modern UI",
+};
 
 const AstraComponentPage: React.FC = () => {
 

@@ -19,7 +19,7 @@ export const foundationList = [
         description: 'Explore the color palette used in AstraUI, including primary, secondary, and neutral colors.' 
     },
     { 
-        name: 'Content standards', 
+        name: 'Content standard', 
         path: '/foundations/content',
         description: 'Understand the content standards that guide the creation and presentation of information within AstraUI.' 
     },

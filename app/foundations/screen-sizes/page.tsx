@@ -1,9 +1,16 @@
-'use client';
-
+// pages/foundations/screen-sizes.tsx
 import React from 'react';
+import { Metadata } from 'next';
 
 import Layout from '../../../components/Layout/Layout';
 import Badge from '../../../components/Badge/Badge';
+
+export async function generateMetadata(): Promise<Metadata> {
+    return {
+        title: 'Screen Sizes',
+        description: 'Learn about the responsive design principles and screen size guidelines in AstraUI for Web, Android, and iOS.',
+    };
+}
 
 const AstraScreenSizesPage: React.FC = () => {
     return (
