@@ -19,7 +19,7 @@ export function HomeComponent() {
     <div className="flex flex-col min-h-[100dvh]">
       <Header setActiveSection={setActiveSection}/>
       <main className="flex-1">
-        <section className="min-h-screen overflow-hidden w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-gray-50 dark:bg-gray-800">
+        <section className="min-h-screen overflow-hidden w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-gray-50 dark:bg-gray-900">
           <div className="container px-4 md:px-6 mx-auto">
             <div className="flex flex-col items-center space-y-4 text-center">
               <div className="space-y-2">
@@ -33,7 +33,7 @@ export function HomeComponent() {
               <div className="flex flex-row gap-6 p-4">
                 <div role="button" className="space-x-4">
                   <Link
-                    className="inline-flex h-10 items-center justify-center rounded-lg bg-gray-900 dark:bg-white dark:border-gray-300 px-4 py-2 text-sm font-medium text-gray-50 dark:text-gray-900 shadow transition-all duration-200 hover:bg-gray-800 hover:ring-2 hover:ring-gray-300 dark:hover:ring-gray-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-300 disabled:pointer-events-none disabled:opacity-50"
+                    className="inline-flex h-10 items-center justify-center rounded-lg bg-gray-900 dark:bg-white dark:border-gray-300 px-4 py-2 text-sm font-medium text-gray-50 dark:text-gray-900 shadow transition-all duration-200 hover:bg-gray-800 hover:ring hover:ring-gray-400 dark:hover:ring-gray-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-300 disabled:pointer-events-none disabled:opacity-50"
                     href="/components"
                   >
                     Browse Components
@@ -41,7 +41,7 @@ export function HomeComponent() {
                 </div>
                 <div role="button" className="space-x-4">
                   <Link
-                    className="inline-flex h-10 items-center justify-center rounded-lg border border-gray-300 dark:border-none bg-white dark:bg-gray-900 px-4 py-2 text-sm font-medium text-gray-900 dark:text-gray-50 shadow transition-all duration-200 hover:bg-gray-50 hover:ring-2 hover:ring-gray-400 dark:hover:ring-gray-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-300 disabled:pointer-events-none disabled:opacity-50"
+                    className="inline-flex h-10 items-center justify-center rounded-lg border border-gray-300 dark:border-none bg-white dark:bg-black px-4 py-2 text-sm font-medium text-gray-900 dark:text-gray-50 shadow transition-all duration-200 hover:bg-gray-50 hover:ring hover:ring-gray-400 dark:hover:ring-gray-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-300 disabled:pointer-events-none disabled:opacity-50"
                     href="/about"
                   >
                     Get Started

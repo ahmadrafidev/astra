@@ -29,7 +29,7 @@ const Sidebar: React.FC = () => {
     };
 
     return (
-        <aside className="w-full md:w-64 bg-gray-50 dark:bg-gray-800 h-auto p-5">
+        <aside className="w-full md:w-64 bg-gray-50 dark:bg-gray-900 h-auto p-5">
             <SearchBar onSearch={handleSearch} />
             {pathname.startsWith('/about') && (
                 <>

@@ -31,7 +31,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             <Header setActiveSection={setActiveSection} />
             <div className="flex flex-1">
                 <Sidebar />
-                <main className="flex-1 p-4 bg-gray-50 dark:bg-gray-800">
+                <main className="flex-1 p-4 bg-gray-50 dark:bg-gray-900">
                     {children}
                 </main>
             </div>
