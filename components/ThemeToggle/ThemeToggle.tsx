@@ -76,4 +76,5 @@ const ThemeToggle: React.FC = () => {
     );
 };
 
+ThemeToggle.displayName = "ThemeToggle";
 export default ThemeToggle;
