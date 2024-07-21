@@ -9,7 +9,7 @@ import { Tabs, Tab } from '../../components/Tabs/Tabs';
 import { componentsList, categorizedComponentsList } from '../../utils/constants/route';
 
 export const metadata: Metadata = {
-    title: "Component - AstraUI",
+    title: "Component",
     description: "The building blocks of modern UI",
 };
 

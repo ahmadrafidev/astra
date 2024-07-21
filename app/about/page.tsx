@@ -9,7 +9,7 @@ import Badge from '../../components/Badge/Badge';
 import { foundationList, componentsList } from '../../utils/constants/route';
 
 export const metadata: Metadata = {
-    title: "Overview - AstraUI",
+    title: "Overview",
     description: "The building blocks of modern UI",
 };
 
