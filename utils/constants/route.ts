@@ -46,6 +46,7 @@ export const componentsList = [
     { name: 'Alert', path: '/components/alert' },
     { name: 'AlertDialog', path: '/components/alert-dialog' },
     { name: 'Avatar', path: '/components/avatar' },
+    { name: 'AvatarGroup', path: '/components/avatar-group' },
     { name: 'Badge', path: '/components/badge' },
     { name: 'Breadcrumbs', path: '/components/breadcrumbs' },
     { name: 'Button', path: '/components/button' },
@@ -103,6 +104,7 @@ export const categorizedComponentsList = {
     ],
     imagesAndIcons: [
         { name: 'Avatar', path: '/components/avatar', description: 'Displays user profile images or icons.' },
+        { name: 'AvatarGroup', path: '/components/avatar-group', description: 'Displays list of avatar' },
         { name: 'Badge', path: '/components/badge', description: 'Small count and labeling component to signify status or counts.' },
     ],
     feedbackIndicators: [

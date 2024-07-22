@@ -1,10 +1,13 @@
-// pages/documentation/components/accordion.tsx
-'use client';
-
 import React from 'react';
+import type { Metadata } from "next";
 
 import Layout from '../../../components/Layout/Layout';
 import Badge from '../../../components/Badge/Badge';
+
+export const metadata: Metadata = {
+    title: "Accordion",
+    description: "",
+};
 
 const AccordionPage: React.FC = () => {
     return (
