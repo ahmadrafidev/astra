@@ -12,7 +12,7 @@ const ButtonPage: React.FC = () => {
     return (
         <Layout>
             <Badge text="Components" />
-            <h1 className="text-2xl font-bold mb-4 text-gray-900 dark:text-gray-50">Button Component</h1>
+            <h1 className="text-2xl font-bold mb-4 text-gray-900 dark:text-gray-50">Button</h1>
                 <div className="mb-4">
                     <Button onClick={() => alert('Button clicked!')} variant="default">Default Button</Button>
                 </div>
