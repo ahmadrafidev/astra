@@ -19,14 +19,14 @@ export function HomeComponent() {
     <div className="flex flex-col min-h-[100dvh]">
       <Header setActiveSection={setActiveSection}/>
       <main className="flex-1 bg-gray-50 dark:bg-black">
-        <section className="min-h-screen overflow-hidden w-full py-12 md:py-24 lg:py-32 xl:py-48">
+        <section className="min-h-screen overflow-hidden w-full py-12 md:py-24">
           <div className="container px-4 md:px-6 mx-auto">
             <div className="flex flex-col items-center space-y-4 text-center">
               <div className="space-y-2">
-                <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none text-gray-900 dark:text-gray-50">
+                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold tracking-tighter  text-gray-900 dark:text-gray-50">
                   Building Blocks of Modern UI
                 </h1>
-                <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-200">
+                <p className="mx-auto max-w-[700px] text-gray-500 text-xl md:text-2xl dark:text-gray-200">
                   AstraUI is a simple, comprehensive component for building beautiful, consistent, and scalable user interfaces.
                 </p>
               </div>
@@ -51,7 +51,7 @@ export function HomeComponent() {
             </div>
           </div>
         </section>
-        <section className="w-full py-12 md:py-24 lg:py-32">
+        <section className="w-full py-12 md:py-24">
           <div className="container px-4 md:px-6 mx-auto">
             <div className="grid items-center gap-6 lg:grid-cols-2 lg:gap-12">
               <div className="flex flex-col justify-center space-y-4">
