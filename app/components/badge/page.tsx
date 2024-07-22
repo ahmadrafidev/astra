@@ -18,7 +18,7 @@ const badgesTypes = [
     { label: 'Brand', color: 'bg-blue-700', darkColor: 'bg-blue-400', textColor: 'text-white' },
 ];
 
-const sizes = ['small', 'medium', 'large'];
+const sizes: ('small' | 'medium' | 'large')[] = ['small', 'medium', 'large'];
 
 const BadgePage: React.FC = () => {
 
