@@ -28,7 +28,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
                 onChange={handleInputChange}
                 placeholder="Search AstraUI"
                 aria-label="Search AstraUI"
-                className="border p-2 rounded-lg pl-10 w-full text-gray-800 dark:text-white bg-white dark:bg-gray-800"
+                className="border dark:border-none p-2 rounded-lg pl-10 w-full text-gray-800 dark:text-gray-300 bg-white dark:bg-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-400 dark:focus:ring-gray-700"
             />
         </div>
     );

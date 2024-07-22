@@ -1,4 +1,3 @@
-// components/Badge/Badge.tsx
 import React from 'react';
 
 export interface BadgeProps {
@@ -8,7 +7,9 @@ export interface BadgeProps {
     className?: string;
     color?: string;
     darkColor?: string;   
-    textColor?: string; 
+    textColor?: string;
+    darkTextColor?: string;
+    size?: 'small' | 'medium' | 'large';
 }
 
 const Badge: React.FC<BadgeProps> = ({
@@ -17,11 +18,20 @@ const Badge: React.FC<BadgeProps> = ({
     maxCount = 99,
     className = '',
     color = 'bg-gray-200', 
-    darkColor = 'bg-gray-300',
-    textColor = 'text-gray-900' 
+    darkColor = 'bg-gray-700',
+    textColor = 'text-gray-900',
+    darkTextColor = 'text-gray-100',
+    size = 'medium' 
 }) => {
+
+    const sizeClasses = {
+        small: 'px-2 py-0.5 text-xs rounded-lg',
+        medium: 'px-3 py-1 text-sm rounded-lg',
+        large: 'px-4 py-1 text-base rounded-lg'
+    };
+
     return (
-        <span className={`inline-block px-3 py-1 text-sm font-normal rounded-lg mb-2 ${color} dark:${darkColor} ${textColor} ${className}`}>
+        <span className={`inline-block rounded-lg mb-2 ${color} dark:${darkColor} ${textColor} dark:${darkTextColor} ${sizeClasses[size]} ${className}`}>
             {text || (count !== undefined && (count > maxCount ? `${maxCount}+` : count))}
         </span>
     );
