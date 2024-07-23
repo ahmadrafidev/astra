@@ -66,8 +66,6 @@ Peacefully shipping in the area: [AstraUI](https://www.astraui.design/)
 [Design at Apple](https://developer.apple.com/design/)
 
 ### Android
+
 [Design for Android](https://developer.android.com/design/ui)
-
-## Contact
-
-X: @ahmadrafiwirana
+[Material Design](https://m3.material.io/)
