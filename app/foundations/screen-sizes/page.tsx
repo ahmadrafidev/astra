@@ -17,7 +17,7 @@ const AstraScreenSizesPage: React.FC = () => {
     return (
         <Layout>
             <Badge text="Foundations" />
-            <h1 className="text-2xl md:text-4xl font-medium mb-4 text-gray-900 dark:text-gray-50">Screen Sizes</h1>
+            <h1 className="text-2xl md:text-4xl font-medium mb-4 text-gray-900 dark:text-gray-50">Screen sizes</h1>
             <div className="mb-8">
                 <section>
                     <h2 className="text-xl md:text-2xl font-medium mb-4 text-gray-900 dark:text-gray-50">Web</h2>

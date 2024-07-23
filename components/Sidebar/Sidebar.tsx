@@ -50,7 +50,7 @@ const Sidebar: React.FC = () => {
                     <h2 className="text-base lg:text-lg font-medium mb-4 my-2 lg:my-4 text-black dark:text-white">Foundations</h2>
                     <ul>
                         {filteredFoundations.map((foundation) => (
-                            <li key={foundation.name} className="mb-2">
+                            <li key={foundation.name} className="my-4">
                                 <Link href={foundation.path} className="text-sm lg:text-base font-sans font-light text-black dark:text-white">
                                     {foundation.name}
                                 </Link>
@@ -66,7 +66,7 @@ const Sidebar: React.FC = () => {
                         <Tab label="Web">
                             <ul>
                                 {filteredComponents.map((component) => (
-                                    <li key={component.name} className="mb-2">
+                                    <li key={component.name} className="my-4">
                                         <Link href={component.path} className="text-sm lg:text-base font-sans font-light text-black dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
                                             {component.name}
                                         </Link>
@@ -77,7 +77,7 @@ const Sidebar: React.FC = () => {
                         <Tab icon="/icons/apple.webp">
                             <ul>
                                 {filteredComponents.map((component) => (
-                                    <li key={component.name} className="mb-2">
+                                    <li key={component.name} className="my-4">
                                         <Link href={component.path} className="text-sm lg:text-base font-sans font-light text-black dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
                                             {component.name}
                                         </Link>
@@ -88,7 +88,7 @@ const Sidebar: React.FC = () => {
                         <Tab icon="/icons/android.webp">
                             <ul>
                                 {filteredComponents.map((component) => (
-                                    <li key={component.name} className="mb-2">
+                                    <li key={component.name} className="my-4">
                                         <Link href={component.path} className="text-sm lg:text-base font-sans font-light text-black dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
                                             {component.name}
                                         </Link>
