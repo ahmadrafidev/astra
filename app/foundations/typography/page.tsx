@@ -1,4 +1,4 @@
-// pages/foundations/typography.tsx
+// app/foundations/typography/page.tsx
 import React from 'react';
 import { Metadata } from 'next';
 
@@ -16,7 +16,16 @@ const AstraTypographyPage: React.FC = () => {
     return (
         <Layout>
             <Badge text="Foundations" />
-            <h1 className="text-2xl md:text-4xl font-medium mb-4 text-gray-900 dark:text-gray-50">Typography</h1>
+            <main>
+                <section className="mb-3 md:mb-4">
+                    <h1 className="text-2xl md:text-4xl font-medium mb-4 text-gray-900 dark:text-gray-50">Typography</h1>
+                    <p className="mb-4 text-gray-700 dark:text-gray-300 text-justify">
+                        AstraUI&apos;s choice of typography improves readability and reflects the brand&apos;s visual identity. 
+                        By defining scale, hierarchy, and typographic style,
+                        AstraUI creates a cohesive and visually appealing experience across digital materials.   
+                    </p>
+                </section>
+            </main>   
         </Layout>
     );
 };

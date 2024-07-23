@@ -1,4 +1,4 @@
-// pages/foundations/data-visualization.tsx
+// app/foundations/data-visualization/page.tsx
 import React from 'react';
 import { Metadata } from 'next';
 
@@ -16,10 +16,9 @@ const AstraDataVisualizationPage: React.FC = () => {
     return (
         <Layout>
             <Badge text="Foundations" />
-            <h1 className="text-2xl md:text-4xl font-medium mb-4 text-gray-900 dark:text-gray-50">Data Visualization</h1>
             <main>
                 <section className="mb-3 md:mb-4">
-                    <h2 className="text-2xl md:text-3xl font-medium mb-2 md:mb-3 text-gray-900 dark:text-gray-50">Overview</h2>
+                    <h1 className="text-2xl md:text-4xl font-medium mb-4 text-gray-900 dark:text-gray-50">Data Visualization</h1>
                     <p className="mb-4 text-gray-700 dark:text-gray-300 text-justify">
                         Data visualization involves the graphical representation of data to improve understanding and decision-making. 
                         Effective data visualizations are accurate, purposeful, and responsive, ensuring they convey information clearly across different devices and contexts. 
