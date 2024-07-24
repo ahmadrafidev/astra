@@ -3,14 +3,17 @@
 
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
+import { Bars3Icon } from '@heroicons/react/24/outline';
 
 import ThemeToggle from '../ThemeToggle/ThemeToggle';
 
 interface HeaderProps {
     setActiveSection: (section: string) => void;
+    toggleSidebar?: () => void; 
+    isSidebarOpen?: boolean;
 }
 
-const Header: React.FC<HeaderProps> = ({ setActiveSection }) => {
+const Header: React.FC<HeaderProps> = ({ setActiveSection, toggleSidebar, isSidebarOpen }) => {
     const [isScrolled, setIsScrolled] = useState(false);
 
     useEffect(() => {
@@ -24,10 +27,16 @@ const Header: React.FC<HeaderProps> = ({ setActiveSection }) => {
             window.removeEventListener('scroll', handleScroll);
         };
     }, []);
+    
 
     return (
         <header className={`sticky top-0 px-4 lg:px-6 h-14 flex items-center transition-all duration-300 shadow-sm ${isScrolled ? 'bg-transparent backdrop-blur-sm shadow' : 'bg-gray-50 dark:bg-black'}`}>
-            <Link className="flex items-center justify-center" href="/">
+            {!isSidebarOpen && toggleSidebar && (
+                <button className="md:hidden p-2 focus:outline-none" onClick={toggleSidebar}>
+                    <Bars3Icon className="h-6 w-6 text-black dark:text-white" />
+                </button>
+            )}
+            <Link className="flex items-center justify-center ml-2" href="/">
                 <div className="flex flex-row align-center gap-1 justify-start">
                     <p className="text-gray-900 text-2xl md:text-3xl font-semibold font-sans dark:text-white">
                         AstraUI

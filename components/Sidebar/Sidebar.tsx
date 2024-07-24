@@ -3,19 +3,23 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { Bars3Icon, XMarkIcon, ArrowLeftIcon } from '@heroicons/react/24/outline';
+import { ArrowLeftIcon } from '@heroicons/react/24/outline';
 
-import { useMemoizedPathname } from '../../hooks/useMemoizedPathname.jsx'; 
+import { useMemoizedPathname } from '../../hooks/useMemoizedPathname.jsx';
 
 import SearchBar from '../SearchBar/SearchBar';
 import { Tabs, Tab } from '../Tabs/Tabs';
 import { componentsList, foundationList, aboutList } from '../../utils/constants/route';
 
-const Sidebar: React.FC = () => {
+interface SidebarProps {
+    isSidebarOpen: boolean;
+    closeSidebar: () => void;
+}
+
+const Sidebar: React.FC<SidebarProps> = ({ isSidebarOpen, closeSidebar }) => {
     const pathname = useMemoizedPathname();
     const [filteredComponents, setFilteredComponents] = useState(componentsList);
     const [filteredFoundations, setFilteredFoundations] = useState(foundationList);
-    const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
     const handleSearch = (query: string) => {
         const lowerCaseQuery = query.toLowerCase();
@@ -26,101 +30,88 @@ const Sidebar: React.FC = () => {
         const filteredFoundations = foundationList.filter(foundation =>
             foundation.name.toLowerCase().includes(lowerCaseQuery)
         );
-        
+
         setFilteredComponents(filteredComponents);
         setFilteredFoundations(filteredFoundations);
     };
-    
-    const openSidebar = () => {
-        setIsSidebarOpen(!isSidebarOpen);
-    };
-
-    const closeSidebar = () => {
-        setIsSidebarOpen(false);
-    };
 
     return (
-        <div className="flex" >
-            <button className="bg-gray-50 dark:bg-black md:hidden p-2 focus:outline-none" onClick={openSidebar}>
-                <Bars3Icon className="h-6 w-6 text-black dark:text-white" />
-            </button>
-            <aside className={`fixed md:static bg-gray-50 dark:bg-black h-full md:h-auto z-50 transform ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'} md:translate-x-0 transition-transform duration-300 ease-in-out md:w-64 w-64 p-5`}>
-                <div className="flex items-center justify-end md:hidden mb-3">
-                    <button className="p-2 focus:outline-none" onClick={closeSidebar}>
-                        <ArrowLeftIcon className="h-6 w-6 text-black dark:text-white" />
-                    </button>
-                </div>
-                <SearchBar onSearch={handleSearch} />
-                {pathname.startsWith('/about') && (
-                    <>
-                        <h2 className="text-base lg:text-lg font-medium mb-4 my-2 lg:my-4 text-black dark:text-white">About AstraUI</h2>
-                        <ul className="my-2 lg:my-4">
-                            {aboutList.map((about) => (
-                                <li key={about.name} onClick={closeSidebar}>
-                                    <Link href={about.path} className="text-sm lg:text-base font-sans font-normal text-black dark:text-white">
-                                        {about.name}
-                                    </Link>
-                                </li>
-                            ))}
-                        </ul>
-                    </>
-                )}
-                {pathname.startsWith('/foundations') && (
-                    <>
-                        <h2 className="text-base lg:text-lg font-medium mb-4 my-2 lg:my-4 text-black dark:text-white">Foundations</h2>
-                        <ul>
-                            {filteredFoundations.map((foundation) => (
-                                <li key={foundation.name} className="my-4" onClick={closeSidebar}>
-                                    <Link href={foundation.path} className="text-sm lg:text-base font-sans font-normal text-black dark:text-white">
-                                        {foundation.name}
-                                    </Link>
-                                </li>
-                            ))}
-                        </ul>
-                    </>
-                )}
-                {pathname.startsWith('/components') && (
-                    <>
-                        <h2 className="text-base lg:text-lg font-medium mb-4 my-2 lg:my-4 text-black dark:text-white">Components</h2>
-                        <Tabs>
-                            <Tab label="Web">
-                                <ul>
-                                    {filteredComponents.map((component) => (
-                                        <li key={component.name} className="my-4" onClick={closeSidebar}>
-                                            <Link href={component.path} className="text-sm lg:text-base font-sans font-normal text-black dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
-                                                {component.name}
-                                            </Link>
-                                        </li>
-                                    ))}
-                                </ul>
-                            </Tab>
-                            <Tab icon="/icons/apple.webp">
-                                <ul>
-                                    {filteredComponents.map((component) => (
-                                        <li key={component.name} className="my-4" onClick={closeSidebar}>
-                                            <Link href={component.path} className="text-sm lg:text-base font-sans font-light text-black dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
-                                                {component.name}
-                                            </Link>
-                                        </li>
-                                    ))}
-                                </ul>
-                            </Tab>
-                            <Tab icon="/icons/android.webp">
-                                <ul>
-                                    {filteredComponents.map((component) => (
-                                        <li key={component.name} className="my-4" onClick={closeSidebar}>
-                                            <Link href={component.path} className="text-sm lg:text-base font-sans font-light text-black dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
-                                                {component.name}
-                                            </Link>
-                                        </li>
-                                    ))}
-                                </ul>
-                            </Tab>
-                        </Tabs>
-                    </>
-                )}
-            </aside>
-        </div>
+        <aside className={`fixed md:static bg-gray-50 dark:bg-black h-full md:h-auto z-50 transform ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'} md:translate-x-0 transition-transform duration-300 ease-in-out md:w-64 w-64 p-5`}>
+            <div className="flex items-center justify-end md:hidden mb-3">
+                <button className="p-2 focus:outline-none" onClick={closeSidebar}>
+                    <ArrowLeftIcon className="h-6 w-6 text-black dark:text-white" />
+                </button>
+            </div>
+            <SearchBar onSearch={handleSearch} />
+            {pathname.startsWith('/about') && (
+                <>
+                    <h2 className="text-base lg:text-lg font-medium mb-4 my-2 lg:my-4 text-black dark:text-white">About AstraUI</h2>
+                    <ul className="my-2 lg:my-4">
+                        {aboutList.map((about) => (
+                            <li key={about.name} onClick={closeSidebar}>
+                                <Link href={about.path} className="text-sm lg:text-base font-sans font-normal text-black dark:text-white">
+                                    {about.name}
+                                </Link>
+                            </li>
+                        ))}
+                    </ul>
+                </>
+            )}
+            {pathname.startsWith('/foundations') && (
+                <>
+                    <h2 className="text-base lg:text-lg font-medium mb-4 my-2 lg:my-4 text-black dark:text-white">Foundations</h2>
+                    <ul>
+                        {filteredFoundations.map((foundation) => (
+                            <li key={foundation.name} className="my-4" onClick={closeSidebar}>
+                                <Link href={foundation.path} className="text-sm lg:text-base font-sans font-normal text-black dark:text-white">
+                                    {foundation.name}
+                                </Link>
+                            </li>
+                        ))}
+                    </ul>
+                </>
+            )}
+            {pathname.startsWith('/components') && (
+                <>
+                    <h2 className="text-base lg:text-lg font-medium mb-4 my-2 lg:my-4 text-black dark:text-white">Components</h2>
+                    <Tabs>
+                        <Tab label="Web">
+                            <ul>
+                                {filteredComponents.map((component) => (
+                                    <li key={component.name} className="my-4" onClick={closeSidebar}>
+                                        <Link href={component.path} className="text-sm lg:text-base font-sans font-normal text-black dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                            {component.name}
+                                        </Link>
+                                    </li>
+                                ))}
+                            </ul>
+                        </Tab>
+                        <Tab icon="/icons/apple.webp">
+                            <ul>
+                                {filteredComponents.map((component) => (
+                                    <li key={component.name} className="my-4" onClick={closeSidebar}>
+                                        <Link href={component.path} className="text-sm lg:text-base font-sans font-light text-black dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                            {component.name}
+                                        </Link>
+                                    </li>
+                                ))}
+                            </ul>
+                        </Tab>
+                        <Tab icon="/icons/android.webp">
+                            <ul>
+                                {filteredComponents.map((component) => (
+                                    <li key={component.name} className="my-4" onClick={closeSidebar}>
+                                        <Link href={component.path} className="text-sm lg:text-base font-sans font-light text-black dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                            {component.name}
+                                        </Link>
+                                    </li>
+                                ))}
+                            </ul>
+                        </Tab>
+                    </Tabs>
+                </>
+            )}
+        </aside>
     );
 };
 

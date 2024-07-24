@@ -13,7 +13,8 @@ interface LayoutProps {
 }
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
-    const [activeSection, setActiveSection] = useState('about'); 
+    const [activeSection, setActiveSection] = useState('about');
+    const [isSidebarOpen, setIsSidebarOpen] = useState(false);
     const pathname = usePathname();
 
     useEffect(() => {
@@ -26,11 +27,15 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         }
     }, [pathname]);
 
+    const toggleSidebar = () => {
+        setIsSidebarOpen(!isSidebarOpen);
+    };
+
     return (
         <div className="flex flex-col min-h-screen">
-            <Header setActiveSection={setActiveSection} />
+            <Header setActiveSection={setActiveSection} toggleSidebar={toggleSidebar} isSidebarOpen={isSidebarOpen}/>
             <div className="flex flex-1">
-                <Sidebar />
+                <Sidebar isSidebarOpen={isSidebarOpen} closeSidebar={toggleSidebar} />
                 <main className="flex-1 p-4 bg-gray-50 dark:bg-black">
                     {children}
                 </main>
