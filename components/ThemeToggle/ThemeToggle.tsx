@@ -41,11 +41,11 @@ const ThemeToggle: React.FC = () => {
 
     return (
         <div className="relative inline-block text-left">
-            <button onClick={() => setDropdownOpen(!dropdownOpen)} className="rounded-md p-2">
+            <button onClick={() => setDropdownOpen(!dropdownOpen)} className="rounded-full p-2 items-center hover:bg-gray-200 dark:hover:bg-white transition">
                 {theme === 'light' ? (
                     <SunIcon className="h-6 w-6 text-yellow-500" />
                 ) : theme === 'dark' ? (
-                    <MoonIcon className="h-5 w-5 text-gray-500" />
+                    <MoonIcon className="h-5 w-5 text-gray-400" />
                 ) : (
                     <ComputerDesktopIcon className="h-5 w-5 text-gray-600 dark:text-gray-100" />
                 )}
