@@ -35,6 +35,8 @@ const Sidebar: React.FC<SidebarProps> = ({ isSidebarOpen, closeSidebar }) => {
         setFilteredFoundations(filteredFoundations);
     };
 
+    const isActive = (path: string) => pathname === path;
+
     return (
         <aside className={`fixed md:static bg-gray-50 dark:bg-black h-full md:h-auto z-50 transform ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'} md:translate-x-0 transition-transform duration-300 ease-in-out md:w-64 w-64 p-5`}>
             <div className="flex items-center justify-end md:hidden mb-3">
@@ -45,11 +47,11 @@ const Sidebar: React.FC<SidebarProps> = ({ isSidebarOpen, closeSidebar }) => {
             <SearchBar onSearch={handleSearch} />
             {pathname.startsWith('/about') && (
                 <>
-                    <h2 className="text-base lg:text-lg font-medium mb-4 my-2 lg:my-4 text-black dark:text-white">About AstraUI</h2>
+                    <h2 className="text-base md:text-lg lg:text-xl font-medium mb-4 my-2 lg:my-4 text-black dark:text-white">About AstraUI</h2>
                     <ul className="my-2 lg:my-4">
                         {aboutList.map((about) => (
                             <li key={about.name} onClick={closeSidebar}>
-                                <Link href={about.path} className="text-sm lg:text-base font-sans font-normal text-black dark:text-white">
+                                <Link href={about.path} className={`block rounded-xl px-2 py-3 text-sm lg:text-base font-sans font-normal text-black dark:text-white ${isActive(about.path) ? 'bg-black text-white dark:bg-gray-50 dark:text-black ' : 'hover:bg-gray-200 focus:bg-gray-300 dark:hover:bg-gray-600 dark:focus:bg-gray-600'}`} >
                                     {about.name}
                                 </Link>
                             </li>
@@ -59,11 +61,11 @@ const Sidebar: React.FC<SidebarProps> = ({ isSidebarOpen, closeSidebar }) => {
             )}
             {pathname.startsWith('/foundations') && (
                 <>
-                    <h2 className="text-base lg:text-lg font-medium mb-4 my-2 lg:my-4 text-black dark:text-white">Foundations</h2>
+                    <h2 className="text-base md:text-lg lg:text-xl font-medium mb-4 my-3 lg:my-4 text-black dark:text-white">Foundations</h2>
                     <ul>
                         {filteredFoundations.map((foundation) => (
-                            <li key={foundation.name} className="my-4" onClick={closeSidebar}>
-                                <Link href={foundation.path} className="text-sm lg:text-base font-sans font-normal text-black dark:text-white">
+                            <li key={foundation.name} onClick={closeSidebar}>
+                                <Link href={foundation.path} className={`block rounded-xl px-2 py-3 text-sm lg:text-base font-sans font-normal text-black dark:text-white ${isActive(foundation.path) ? 'bg-black text-white dark:bg-gray-50 dark:text-black ' : 'hover:bg-gray-200 focus:bg-gray-300 dark:hover:bg-gray-600 dark:focus:bg-gray-600'}`}>
                                     {foundation.name}
                                 </Link>
                             </li>
@@ -73,13 +75,13 @@ const Sidebar: React.FC<SidebarProps> = ({ isSidebarOpen, closeSidebar }) => {
             )}
             {pathname.startsWith('/components') && (
                 <>
-                    <h2 className="text-base lg:text-lg font-medium mb-4 my-2 lg:my-4 text-black dark:text-white">Components</h2>
+                    <h2 className="text-base md:text-lg lg:text-xl font-medium mb-4 my-2 lg:my-4 text-black dark:text-white">Components</h2>
                     <Tabs>
                         <Tab label="Web">
                             <ul>
                                 {filteredComponents.map((component) => (
-                                    <li key={component.name} className="my-4" onClick={closeSidebar}>
-                                        <Link href={component.path} className="text-sm lg:text-base font-sans font-normal text-black dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                    <li key={component.name} onClick={closeSidebar}>
+                                        <Link href={component.path} className={`block rounded-xl px-2 py-3 text-sm lg:text-base font-sans font-normal text-black dark:text-white ${isActive(component.path) ? 'bg-black text-white dark:bg-gray-50 dark:text-black ' : 'hover:bg-gray-200 focus:bg-gray-300 dark:hover:bg-gray-600 dark:focus:bg-gray-600'}`}>
                                             {component.name}
                                         </Link>
                                     </li>
@@ -89,8 +91,8 @@ const Sidebar: React.FC<SidebarProps> = ({ isSidebarOpen, closeSidebar }) => {
                         <Tab icon="/icons/apple.webp">
                             <ul>
                                 {filteredComponents.map((component) => (
-                                    <li key={component.name} className="my-4" onClick={closeSidebar}>
-                                        <Link href={component.path} className="text-sm lg:text-base font-sans font-light text-black dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                    <li key={component.name} onClick={closeSidebar}>
+                                        <Link href={component.path} className={`block rounded-xl px-2 py-3 text-sm lg:text-base font-sans font-normal text-black dark:text-white ${isActive(component.path) ? 'bg-black text-white dark:bg-gray-50 dark:text-black ' : 'hover:bg-gray-200 focus:bg-gray-300 dark:hover:bg-gray-600 dark:focus:bg-gray-600'}`}>
                                             {component.name}
                                         </Link>
                                     </li>
@@ -100,8 +102,8 @@ const Sidebar: React.FC<SidebarProps> = ({ isSidebarOpen, closeSidebar }) => {
                         <Tab icon="/icons/android.webp">
                             <ul>
                                 {filteredComponents.map((component) => (
-                                    <li key={component.name} className="my-4" onClick={closeSidebar}>
-                                        <Link href={component.path} className="text-sm lg:text-base font-sans font-light text-black dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                    <li key={component.name} onClick={closeSidebar}>
+                                        <Link href={component.path} className={`block rounded-xl px-2 py-3 text-sm lg:text-base font-sans font-normal text-black dark:text-white ${isActive(component.path) ? 'bg-black text-white dark:bg-gray-50 dark:text-black ' : 'hover:bg-gray-200 focus:bg-gray-300 dark:hover:bg-gray-600 dark:focus:bg-gray-600'}`}>
                                             {component.name}
                                         </Link>
                                     </li>

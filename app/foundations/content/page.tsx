@@ -1,4 +1,4 @@
-// pages/foundations/content.tsx
+// app/foundations/content/page.tsx
 import React from 'react';
 import { Metadata } from 'next';
 

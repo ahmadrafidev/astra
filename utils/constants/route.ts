@@ -29,6 +29,11 @@ export const foundationList = [
         description: 'Explore the data visualization techniques and standards used in AstraUI.' 
     },
     { 
+        name: 'Motion', 
+        path: '/foundations/motion',
+        description: 'Discover the motion guidelines and principles in AstraUI to create fluid and responsive animations.' 
+    },
+    { 
         name: 'Screen sizes', 
         path: '/foundations/screen-sizes',
         description: 'Learn about the responsive design principles and screen size guidelines in AstraUI for Web, Android, and iOS.' 
@@ -39,6 +44,7 @@ export const foundationList = [
         description: 'Understand the typographic styles and standards used in AstraUI to ensure readability and accessibility.' 
     },
 ];
+
 
 
 export const componentsList = [
