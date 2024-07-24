@@ -37,7 +37,7 @@ const Sidebar: React.FC = () => {
                     <ul className="my-2 lg:my-4">
                         {aboutList.map((about) => (
                             <li key={about.name}>
-                                <Link href={about.path} className="text-sm lg:text-base font-sans font-light text-black dark:text-white">
+                                <Link href={about.path} className="text-sm lg:text-base font-sans font-normal text-black dark:text-white">
                                     {about.name}
                                 </Link>
                             </li>
@@ -51,7 +51,7 @@ const Sidebar: React.FC = () => {
                     <ul>
                         {filteredFoundations.map((foundation) => (
                             <li key={foundation.name} className="my-4">
-                                <Link href={foundation.path} className="text-sm lg:text-base font-sans font-light text-black dark:text-white">
+                                <Link href={foundation.path} className="text-sm lg:text-base font-sans font-normal text-black dark:text-white">
                                     {foundation.name}
                                 </Link>
                             </li>
@@ -67,7 +67,7 @@ const Sidebar: React.FC = () => {
                             <ul>
                                 {filteredComponents.map((component) => (
                                     <li key={component.name} className="my-4">
-                                        <Link href={component.path} className="text-sm lg:text-base font-sans font-light text-black dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                        <Link href={component.path} className="text-sm lg:text-base font-sans font-normal text-black dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
                                             {component.name}
                                         </Link>
                                     </li>
