@@ -19,7 +19,7 @@ const AstraColorPage: React.FC = () => {
             <main>
                 <section className="mb-3 md:mb-4">
                     <h1 className="text-2xl md:text-4xl font-medium mb-4 text-gray-900 dark:text-gray-50">Color</h1>
-                    <p className="mb-4 text-gray-700 dark:text-gray-300 text-justify">
+                    <p className="mb-4 text-gray-900 dark:text-gray-50 text-justify font-normal">
                         AstraUI&apos;s color palette is designed to enhance user experience and maintain visual consistency. 
                         By adhering to contrast standards, AstraUI ensures accessibility and conveys emotions effectively through color.
                     </p>

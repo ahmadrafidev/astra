@@ -19,7 +19,7 @@ const AstraTypographyPage: React.FC = () => {
             <main>
                 <section className="mb-3 md:mb-4">
                     <h1 className="text-2xl md:text-4xl font-medium mb-4 text-gray-900 dark:text-gray-50">Typography</h1>
-                    <p className="mb-4 text-gray-700 dark:text-gray-300 text-justify">
+                    <p className="mb-4 text-gray-700 dark:text-gray-300 text-justify font-normal">
                         AstraUI&apos;s choice of typography improves readability and reflects the brand&apos;s visual identity. 
                         By defining scale, hierarchy, and typographic style,
                         AstraUI creates a cohesive and visually appealing experience across digital materials.   

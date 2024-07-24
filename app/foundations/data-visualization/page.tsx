@@ -19,14 +19,14 @@ const AstraDataVisualizationPage: React.FC = () => {
             <main>
                 <section className="mb-3 md:mb-4">
                     <h1 className="text-2xl md:text-4xl font-medium mb-4 text-gray-900 dark:text-gray-50">Data Visualization</h1>
-                    <p className="mb-4 text-gray-700 dark:text-gray-300 text-justify">
+                    <p className="mb-4 text-gray-900 dark:text-gray-50 text-justify font-normal">
                         Data visualization involves the graphical representation of data to improve understanding and decision-making. 
                         Effective data visualizations are accurate, purposeful, and responsive, ensuring they convey information clearly across different devices and contexts. 
                         They are used to monitor, analyze, explore, and report data, making complex information more accessible and actionable.
                     </p>
                 </section>
                 <section className="mb-3 md:mb-4"> 
-                    <h2 className="text-2xl md:text-3xl mb-2 md:mb-3 font-medium text-gray-900 dark:text-gray-50">Principles</h2>
+                    <h2 className="text-xl md:text-2xl mb-2 md:mb-3 font-medium text-gray-900 dark:text-gray-50">Principles</h2>
                     <ul className="text-gray-900 dark:text-gray-50 space-y-3 md:space-y-4">
                         <li>
                             <h3 className="text-lg font-medium">Clarity and Simplicity</h3>
@@ -47,7 +47,7 @@ const AstraDataVisualizationPage: React.FC = () => {
                     </ul>
                 </section>
                 <section>
-                    <h2 className="text-2xl md:text-3xl font-medium mb-4 text-gray-900 dark:text-gray-50">Use Cases</h2>
+                    <h2 className="text-xl md:text-2xl font-medium mb-4 text-gray-900 dark:text-gray-50">Use Cases</h2>
                     <ul className="text-gray-900 dark:text-gray-50 space-y-3 md:space-y-4">
                         <li>
                             <h3 className="text-lg font-medium">
