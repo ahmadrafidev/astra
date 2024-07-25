@@ -51,7 +51,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isSidebarOpen, closeSidebar }) => {
                     <ul className="my-2 lg:my-4">
                         {aboutList.map((about) => (
                             <li key={about.name} onClick={closeSidebar}>
-                                <Link href={about.path} className={`block rounded-xl px-2 py-3 text-sm lg:text-base font-sans font-normal text-black dark:text-white ${isActive(about.path) ? 'bg-black text-white dark:bg-gray-50 dark:text-black ' : 'hover:bg-gray-200 focus:bg-gray-300 dark:hover:bg-gray-600 dark:focus:bg-gray-600'}`} >
+                                <Link href={about.path} className={`block rounded-xl px-2 py-3 text-sm lg:text-base font-sans font-normal ${isActive(about.path) ? 'bg-black text-white dark:bg-gray-50 dark:text-black' : 'hover:bg-gray-200 focus:bg-gray-300 dark:hover:bg-gray-600 dark:focus:bg-gray-600 text-black dark:text-white'}`} >
                                     {about.name}
                                 </Link>
                             </li>
@@ -65,7 +65,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isSidebarOpen, closeSidebar }) => {
                     <ul>
                         {filteredFoundations.map((foundation) => (
                             <li key={foundation.name} onClick={closeSidebar}>
-                                <Link href={foundation.path} className={`block rounded-xl px-2 py-3 text-sm lg:text-base font-sans font-normal text-black dark:text-white ${isActive(foundation.path) ? 'bg-black text-white dark:bg-gray-50 dark:text-black ' : 'hover:bg-gray-200 focus:bg-gray-300 dark:hover:bg-gray-600 dark:focus:bg-gray-600'}`}>
+                                <Link href={foundation.path} className={`block rounded-xl px-2 py-3 text-sm lg:text-base font-sans font-normal ${isActive(foundation.path) ? 'bg-black text-white dark:bg-gray-50 dark:text-black ' : 'hover:bg-gray-200 focus:bg-gray-300 dark:hover:bg-gray-600 dark:focus:bg-gray-600 text-black dark:text-white'}`}>
                                     {foundation.name}
                                 </Link>
                             </li>
@@ -81,7 +81,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isSidebarOpen, closeSidebar }) => {
                             <ul>
                                 {filteredComponents.map((component) => (
                                     <li key={component.name} onClick={closeSidebar}>
-                                        <Link href={component.path} className={`block rounded-xl px-2 py-3 text-sm lg:text-base font-sans font-normal text-black dark:text-white ${isActive(component.path) ? 'bg-black text-white dark:bg-gray-50 dark:text-black ' : 'hover:bg-gray-200 focus:bg-gray-300 dark:hover:bg-gray-600 dark:focus:bg-gray-600'}`}>
+                                        <Link href={component.path} className={`block rounded-xl px-2 py-3 text-sm lg:text-base font-sans font-normal ${isActive(component.path) ? 'bg-black text-white dark:bg-gray-50 dark:text-black ' : 'hover:bg-gray-200 focus:bg-gray-300 dark:hover:bg-gray-600 dark:focus:bg-gray-600 text-black dark:text-white'}`}>
                                             {component.name}
                                         </Link>
                                     </li>
@@ -92,7 +92,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isSidebarOpen, closeSidebar }) => {
                             <ul>
                                 {filteredComponents.map((component) => (
                                     <li key={component.name} onClick={closeSidebar}>
-                                        <Link href={component.path} className={`block rounded-xl px-2 py-3 text-sm lg:text-base font-sans font-normal text-black dark:text-white ${isActive(component.path) ? 'bg-black text-white dark:bg-gray-50 dark:text-black ' : 'hover:bg-gray-200 focus:bg-gray-300 dark:hover:bg-gray-600 dark:focus:bg-gray-600'}`}>
+                                        <Link href={component.path} className={`block rounded-xl px-2 py-3 text-sm lg:text-base font-sans font-normal ${isActive(component.path) ? 'bg-black text-white dark:bg-gray-50 dark:text-black ' : 'hover:bg-gray-200 focus:bg-gray-300 dark:hover:bg-gray-600 dark:focus:bg-gray-600 text-black dark:text-white'}`}>
                                             {component.name}
                                         </Link>
                                     </li>
@@ -103,7 +103,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isSidebarOpen, closeSidebar }) => {
                             <ul>
                                 {filteredComponents.map((component) => (
                                     <li key={component.name} onClick={closeSidebar}>
-                                        <Link href={component.path} className={`block rounded-xl px-2 py-3 text-sm lg:text-base font-sans font-normal text-black dark:text-white ${isActive(component.path) ? 'bg-black text-white dark:bg-gray-50 dark:text-black ' : 'hover:bg-gray-200 focus:bg-gray-300 dark:hover:bg-gray-600 dark:focus:bg-gray-600'}`}>
+                                        <Link href={component.path} className={`block rounded-xl px-2 py-3 text-sm lg:text-base font-sans font-normal ${isActive(component.path) ? 'bg-black text-white dark:bg-gray-50 dark:text-black ' : 'hover:bg-gray-200 focus:bg-gray-300 dark:hover:bg-gray-600 dark:focus:bg-gray-600 text-black dark:text-white'}`}>
                                             {component.name}
                                         </Link>
                                     </li>

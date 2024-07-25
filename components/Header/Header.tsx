@@ -31,7 +31,7 @@ const Header: React.FC<HeaderProps> = ({ setActiveSection, toggleSidebar, isSide
     
 
     return (
-        <header className={`sticky top-0 px-4 md:px-12 h-14 flex items-center transition-all duration-300 shadow-sm ${isScrolled ? 'bg-transparent backdrop-blur-sm shadow' : 'bg-gray-50 dark:bg-black'}`}>
+        <header className={`sticky top-0 px-4 md:px-12 h-14 flex items-center transition-all duration-300 ${isScrolled ? 'bg-transparent backdrop-blur-sm' : 'bg-gray-50 dark:bg-black'}`}>
             {!isSidebarOpen && toggleSidebar && (
                 <button className="md:hidden p-2 focus:outline-none" onClick={toggleSidebar}>
                     <Bars3Icon className="h-6 w-6 text-black dark:text-white" />

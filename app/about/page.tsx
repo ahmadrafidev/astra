@@ -60,4 +60,5 @@ const AboutAstraPage: React.FC = () => {
     );
 };
 
+AboutAstraPage.displayName = "AboutAstraPage";
 export default AboutAstraPage;
