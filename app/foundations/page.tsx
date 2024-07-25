@@ -23,7 +23,7 @@ const AstraFoundationPage: React.FC = () => {
             <Badge text="Foundations"/>
             <h1 className="text-2xl md:text-4xl font-medium mb-3 text-gray-900 dark:text-gray-50">Foundations</h1>
             <div className="mb-8">
-                <p className="mb-4 text-md text-gray-800 dark:text-white leading-loose">
+                <p className="mb-4 text-md text-gray-800 dark:text-white leading-loose text-justify">
                     The Foundation section defines the essential principles and philosophy of the AstraUI design system. 
                     It offers a comprehensive understanding of the core values, objectives, and guidelines that 
                     inform and inspire every component, ensuring consistency, usability, and aesthetic coherence across all user interfaces.
