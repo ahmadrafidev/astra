@@ -2,6 +2,7 @@
 'use client'
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { Bars3Icon } from '@heroicons/react/24/outline';
 
@@ -30,7 +31,7 @@ const Header: React.FC<HeaderProps> = ({ setActiveSection, toggleSidebar, isSide
     
 
     return (
-        <header className={`sticky top-0 px-4 lg:px-6 h-14 flex items-center transition-all duration-300 shadow-sm ${isScrolled ? 'bg-transparent backdrop-blur-sm shadow' : 'bg-gray-50 dark:bg-black'}`}>
+        <header className={`sticky top-0 px-4 md:px-12 h-14 flex items-center transition-all duration-300 shadow-sm ${isScrolled ? 'bg-transparent backdrop-blur-sm shadow' : 'bg-gray-50 dark:bg-black'}`}>
             {!isSidebarOpen && toggleSidebar && (
                 <button className="md:hidden p-2 focus:outline-none" onClick={toggleSidebar}>
                     <Bars3Icon className="h-6 w-6 text-black dark:text-white" />
@@ -46,21 +47,26 @@ const Header: React.FC<HeaderProps> = ({ setActiveSection, toggleSidebar, isSide
                     </svg>
                 </div>
             </Link>
-            <nav className="ml-auto flex gap-2 sm:gap-4 items-center">
-                <Link className="text-sm font-medium hover:underline underline-offset-4" href="/about" onClick={() => setActiveSection('about')}>
+            <nav className="ml-auto flex gap-2 sm:gap-3 items-center">
+                <Link className="text-sm font-medium" href="/about" onClick={() => setActiveSection('about')}>
                     <div className="inline-block rounded-lg text-gray-900 hover:bg-gray-200 px-3 py-1 text-sm hover:dark:bg-gray-500 dark:text-white">
                         About
                     </div>
                 </Link>
-                <Link className="text-sm font-medium hover:underline underline-offset-4" href="/foundations" onClick={() => setActiveSection('foundations')}>
+                <Link className="text-sm font-medium" href="/foundations" onClick={() => setActiveSection('foundations')}>
                     <div className="inline-block rounded-lg text-gray-900 hover:bg-gray-200 px-3 py-1 text-sm hover:dark:bg-gray-500 dark:text-white">
                         Foundations
                     </div>
                 </Link>
-                <Link className="text-sm font-medium hover:underline underline-offset-4" href="/components" onClick={() => setActiveSection('components')}>
+                <Link className="text-sm font-medium" href="/components" onClick={() => setActiveSection('components')}>
                     <div className="inline-block rounded-lg hover:bg-gray-200 px-3 py-1 text-sm hover:dark:bg-gray-500 text-gray-900 dark:text-white">
                         Components
                     </div>
+                </Link>
+                <div className="hidden md:block h-6 border-l border-gray-300 dark:border-gray-600 mx-2"></div> 
+                <Link href="https://github.com/ahmadrafidev/astra" passHref>
+                    <Image quality={100} src="/icons/github-light.webp" alt="GitHub Light Icon" width={20} height={20} className="block dark:hidden"/>
+                    <Image quality={100} src="/icons/github-dark.webp" alt="GitHub Dark Icon" width={20} height={20} className="hidden dark:block bg-white rounded-full"/>
                 </Link>
                 <ThemeToggle />
             </nav>

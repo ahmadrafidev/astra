@@ -19,7 +19,7 @@ export function HomeComponent() {
     <div className="flex flex-col min-h-[100dvh]">
       <Header setActiveSection={setActiveSection}/>
       <main className="flex-1 bg-gray-50 dark:bg-black">
-        <section className="min-h-screen overflow-hidden w-full py-12 md:py-24">
+        <section className="min-h-screen overflow-hidden w-full pt-12 md:pt-24">
           <div className="container px-4 md:px-6 mx-auto">
             <div className="flex flex-col items-center space-y-4 text-center">
               <div className="space-y-2">
@@ -51,7 +51,7 @@ export function HomeComponent() {
             </div>
           </div>
         </section>
-        <section className="w-full py-12 md:py-24">
+        <section className="w-full pb-12 md:pb-24">
           <div className="container px-4 md:px-6 mx-auto">
             <div className="grid items-center gap-6 lg:grid-cols-2 lg:gap-12">
               <div className="flex flex-col justify-center space-y-4">
