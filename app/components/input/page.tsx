@@ -1,18 +1,17 @@
-// pages/documentation/components/input.tsx
-'use client';
-
+// app/components/input/page.tsx
 import React from 'react';
+import dynamic from 'next/dynamic';
+import type { Metadata } from 'next';
 
-import Layout from '../../../components/Layout/Layout';
-import Badge from '../../../components/Badge/Badge';
+export const metadata: Metadata = {
+    title: "Input",
+    description: "A field for user input, such as text, numbers, or passwords.",
+};
+
+const InputPageClient = dynamic(() => import('../../../components/Input/InputPageClient'), { ssr: false });
 
 const InputPage: React.FC = () => {
-    return (
-        <Layout>
-            <Badge text="Components" />
-            <h1 className="text-xl md:text-2xl font-medium mb-4 text-gray-900 dark:text-gray-50">Input</h1>
-        </Layout>
-    );
+    return <InputPageClient />;
 };
 
 export default InputPage;
