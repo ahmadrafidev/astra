@@ -154,4 +154,5 @@ const BadgePage: React.FC = () => {
     );
 };
 
+BadgePage.displayName = "BadgePage";
 export default BadgePage;

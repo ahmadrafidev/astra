@@ -1,47 +1,61 @@
 // pages/documentation/button.tsx
-'use client';
-
 import React from 'react';
+import type { Metadata } from "next";
 
 import Layout from '../../../components/Layout/Layout';
 import Badge from '../../../components/Badge/Badge';
-import Button from '../../../components/Button/Button'
+import Button from '../../../components/Button/Button';
 
+export const metadata: Metadata = {
+    title: "Button",
+    description: "Buttons are interactive elements that trigger actions or events when clicked.",
+};
 
 const ButtonPage: React.FC = () => {
     return (
         <Layout>
             <Badge text="Components" />
-            <h1 className="text-2xl font-bold mb-4 text-gray-900 dark:text-gray-50">Button</h1>
-                <div className="mb-4">
-                    <Button onClick={() => alert('Button clicked!')} variant="default">Default Button</Button>
+            {/* Header Content */}
+            <section className="mb-5">
+                <div className="flex flex-col">
+                    <h1 className="text-2xl md:text-3xl font-semibold font-sans text-gray-900 dark:text-gray-50 mb-3 md:mb-4">Button</h1>
+                    <p className="text-sm md:text-base font-normal font-sans text-gray-900 dark:text-gray-50">
+                        Buttons are interactive elements that trigger actions or events when clicked. Below are various button styles with different use cases.
+                    </p>
                 </div>
-                <div className="mb-4">
-                    <Button onClick={() => alert('Destructive Button clicked!')} variant="destructive">Destructive Button</Button>
+            </section>
+            {/* Button Variants Section */}
+            <section className="mb-5">
+                <h2 className="text-2xl md:text-3xl font-semibold font-sans text-gray-900 dark:text-gray-50 mb-5">Variants</h2>
+                <div className="space-y-4">
+                    <div>
+                        <Button variant="default">Default Button</Button>
+                    </div>
+                    <div>
+                        <Button variant="destructive">Destructive Button</Button>
+                    </div>
+                    <div>
+                        <Button variant="outline">Outline Button</Button>
+                    </div>
+                    <div>
+                        <Button variant="secondary">Secondary Button</Button>
+                    </div>
+                    <div>
+                        <Button variant="ghost">Ghost Button</Button>
+                    </div>
+                    <div>
+                        <Button variant="link">Link Button</Button>
+                    </div>
                 </div>
-                <div className="mb-4">
-                    <Button onClick={() => alert('Outline Button clicked!')} variant="outline">Outline Button</Button>
-                </div>
-                <div className="mb-4">
-                    <Button onClick={() => alert('Secondary Button clicked!')} variant="secondary">Secondary Button</Button>
-                </div>
-                <div className="mb-4">
-                    <Button onClick={() => alert('Ghost Button clicked!')} variant="ghost">Ghost Button</Button>
-                </div>
-                <div className="mb-4">
-                    <Button onClick={() => alert('Link Button clicked!')} variant="link">Link Button</Button>
-                </div>
-                <pre className="bg-gray-100 p-4 rounded">
-                    {`import Button from '../../components/Button/Button';
-import Badge from '../../../../components/Badge/Badge';
-import Button from '../../../components/Button/Button';
-
-                const ButtonPage: React.FC = () => (
-                <Button onClick={() => alert('Button clicked!')} variant="default">Default Button</Button>
-                );
-                    export default ButtonPage;
-                    `}
-                </pre>
+            </section>
+            {/* Props Section */}
+            <section>
+                <h2 className="text-2xl md:text-3xl font-semibold font-sans text-gray-900 dark:text-gray-50 mb-5">Props</h2>
+            </section>
+            {/* Best Practices Section */}
+            <section>
+                <h2 className="text-2xl md:text-3xl font-semibold font-sans text-gray-900 dark:text-gray-50 mb-5">Best Practices</h2>
+            </section>
         </Layout>
     );
 };

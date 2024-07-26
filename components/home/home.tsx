@@ -23,10 +23,10 @@ export function HomeComponent() {
           <div className="container px-4 md:px-6 mx-auto">
             <div className="flex flex-col items-center space-y-4 text-center">
               <div className="space-y-2">
-                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold tracking-tighter  text-gray-900 dark:text-gray-50">
+                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-medium tracking-tighter  text-gray-900 dark:text-gray-50">
                   Building Blocks of Modern UI
                 </h1>
-                <p className="mx-auto max-w-[700px] text-gray-500 text-xl md:text-2xl dark:text-gray-200">
+                <p className="mx-auto max-w-[700px] text-gray-600 dark:text-gray-100 text-xl md:text-2xl  font-normal">
                   AstraUI is a simple, comprehensive component for building beautiful, consistent, and scalable user interfaces.
                 </p>
               </div>
