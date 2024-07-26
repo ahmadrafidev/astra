@@ -112,4 +112,5 @@ const AstraComponentPage: React.FC = () => {
     );
 };
 
+AstraComponentPage.displayName="AstraComponentPage";
 export default AstraComponentPage;

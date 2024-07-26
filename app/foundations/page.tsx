@@ -47,4 +47,5 @@ const AstraFoundationPage: React.FC = () => {
     );
 };
 
+AstraFoundationPage.displayName="AstraFoundationPage";
 export default AstraFoundationPage;

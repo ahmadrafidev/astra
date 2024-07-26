@@ -60,4 +60,5 @@ const ButtonPage: React.FC = () => {
     );
 };
 
+ButtonPage.displayName="ButtonPage"
 export default ButtonPage;
