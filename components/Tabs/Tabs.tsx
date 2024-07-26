@@ -12,11 +12,12 @@ interface TabProps {
 
 interface TabsProps {
     children: React.ReactElement<TabProps>[];
+    className?: string;
 }
 
 const Tab: React.FC<TabProps> = ({ children }) => <div role="tabpanel">{children}</div>;
 
-const Tabs: React.FC<TabsProps> = ({ children }) => {
+const Tabs: React.FC<TabsProps> = ({ children, className }) => {
     const [activeTab, setActiveTab] = useState(0);
 
     const handleKeyDown = (event: React.KeyboardEvent, index: number) => {
@@ -28,7 +29,7 @@ const Tabs: React.FC<TabsProps> = ({ children }) => {
     };
 
     return (
-        <div className="flex flex-col items-center" role="tablist">
+        <div className={`flex flex-col items-center ${className}`} role="tablist">
             <div className="flex space-x-2 bg-gray-200 p-1 rounded-lg">
                 {children.map((tab, index) => (
                     <button

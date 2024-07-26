@@ -44,6 +44,7 @@ const AstraComponentPage: React.FC = () => {
                                                 {item.name === 'Alert' && 'Displays important messages in a prominent way to attract user attention.'}
                                                 {item.name === 'AlertDialog' && 'A dialog that requires user acknowledgment before they can proceed.'}
                                                 {item.name === 'Avatar' && 'Displays user profile images or icons.'}
+                                                {item.name === 'AvatarGroup' && 'Displays list of avatar.'}
                                                 {item.name === 'Badge' && 'Small count and labeling component to signify status or counts.'}
                                                 {item.name === 'Breadcrumbs' && 'Navigational aid to show the user’s current location in a hierarchy.'}
                                                 {item.name === 'Button' && 'Triggers actions or events, such as submitting a form or saving data.'}
