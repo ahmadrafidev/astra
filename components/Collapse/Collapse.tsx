@@ -4,9 +4,10 @@ import React, { useState } from 'react';
 export interface CollapseProps {
     title: string;
     children: React.ReactNode;
+    className?: string;
 }
 
-const Collapse: React.FC<CollapseProps> = ({ title, children }) => {
+const Collapse: React.FC<CollapseProps> = ({ title, children, className }) => {
     const [isOpen, setIsOpen] = useState(false);
 
     return (

@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 
-interface CarouselProps {
+export interface CarouselProps {
     images: string[];
+    className?: string;
 }
 
-const Carousel: React.FC<CarouselProps> = ({ images }) => {
+const Carousel: React.FC<CarouselProps> = ({ images, className }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
 
     const handlePrev = () => {

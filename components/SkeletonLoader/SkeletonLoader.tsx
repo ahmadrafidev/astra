@@ -1,6 +1,6 @@
 import React from 'react';
 
-interface SkeletonLoaderProps {
+export interface SkeletonLoaderProps {
     width?: string;
     height?: string;
     className?: string;

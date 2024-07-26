@@ -1,11 +1,12 @@
 // components/Accordion/Accordion.tsx
 import React, { ReactNode } from 'react';
 
-interface AccordionProps {
+export interface AccordionProps {
     children: ReactNode; 
+    className?: string;
 }
 
-const Accordion: React.FC<AccordionProps> = ({ children }) => {
+const Accordion: React.FC<AccordionProps> = ({ children, className }) => {
     return (
         <div className="accordion">
             {children}

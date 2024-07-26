@@ -1,11 +1,12 @@
 import React from 'react';
 import Link from 'next/link';
 
-interface BreadcrumbsProps {
+export interface BreadcrumbsProps {
+    className?: string;
     items: { name: string; path: string }[];
 }
 
-const Breadcrumbs: React.FC<BreadcrumbsProps> = ({ items }) => {
+const Breadcrumbs: React.FC<BreadcrumbsProps> = ({ items, className }) => {
     return (
         <nav className="flex text-gray-700 dark:text-gray-200" aria-label="Breadcrumb">
             {items.map((item, index) => (

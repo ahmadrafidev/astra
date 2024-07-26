@@ -1,10 +1,11 @@
 import React, { ReactNode, useState } from 'react';
 
-interface ToggleProps {
+export interface ToggleProps {
     children?: ReactNode; 
+    className?: string;
 }
 
-const Toggle: React.FC<ToggleProps> = ({children}) => {
+const Toggle: React.FC<ToggleProps> = ({ children, className }) => {
     const [on, setOn] = useState(false);
 
     return (

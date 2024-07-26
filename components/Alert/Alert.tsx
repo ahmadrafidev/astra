@@ -1,16 +1,17 @@
 import React, { ReactNode } from 'react';
 
-interface AlertProps {
+export interface AlertProps {
     children: ReactNode; 
     type: String;
     message: String;
+    className?: string;
 }
 
 const alertTypes = {
     info: "info",
 };
 
-const Alert: React.FC<AlertProps> = ({ type, message, children }) => {
+const Alert: React.FC<AlertProps> = ({ type, message, children, className }) => {
     return (
         <div className={`alert alert-${type}`}>
             {message}

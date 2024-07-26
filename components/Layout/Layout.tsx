@@ -8,11 +8,12 @@ import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import Sidebar from '../Sidebar/Sidebar';
 
-interface LayoutProps {
+export interface LayoutProps {
     children: React.ReactNode;
+    className?: string;
 }
 
-const Layout: React.FC<LayoutProps> = ({ children }) => {
+const Layout: React.FC<LayoutProps> = ({ children, className}) => {
     const [activeSection, setActiveSection] = useState('about');
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
     const pathname = usePathname();

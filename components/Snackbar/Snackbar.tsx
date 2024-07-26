@@ -1,13 +1,14 @@
 import React, { useEffect } from 'react';
 
-interface SnackbarProps {
+export interface SnackbarProps {
     message: string;
     open: boolean;
     duration?: number; 
     onClose: () => void;
+    className?: string;
 }
 
-const Snackbar: React.FC<SnackbarProps> = ({ message, open, duration = 3000, onClose }) => {
+const Snackbar: React.FC<SnackbarProps> = ({ message, open, duration = 3000, onClose, className }) => {
     useEffect(() => {
         if (open) {
             const timer = setTimeout(() => {

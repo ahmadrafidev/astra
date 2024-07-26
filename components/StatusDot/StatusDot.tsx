@@ -4,6 +4,7 @@ import React from 'react';
 
 export interface StatusDotProps {
     status: 'online' | 'offline' | 'busy';
+    className?: string;
 }
 
 const statusColors = {
@@ -12,7 +13,7 @@ const statusColors = {
     busy: 'bg-yellow-500',
 };
 
-const StatusDot: React.FC<StatusDotProps> = ({ status }) => {
+const StatusDot: React.FC<StatusDotProps> = ({ status, className }) => {
     return (
         <span
             className={`inline-block w-3 h-3 rounded-full ${statusColors[status]}`}

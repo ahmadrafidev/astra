@@ -3,14 +3,15 @@ import React from 'react';
 
 export interface ListItemProps {
     children: React.ReactNode;
+    className?: string;
 }
 
-interface ListProps {
+export interface ListProps {
     items: React.ReactNode[];
     className?: string;
 }
 
-const ListItem: React.FC<ListItemProps> = ({ children }) => (
+const ListItem: React.FC<ListItemProps> = ({ children, className }) => (
     <li className="border-b p-2">{children}</li>
 );
 

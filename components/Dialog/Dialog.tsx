@@ -1,12 +1,13 @@
 import React, { ReactNode } from 'react';
 
-interface DialogProps {
+export interface DialogProps {
     children: ReactNode;
     open: boolean; 
     onClose: () => void; 
+    className?: string;
 }
 
-const Dialog: React.FC<DialogProps>  = ({ open, onClose, children }) => {
+const Dialog: React.FC<DialogProps>  = ({ open, onClose, children, className }) => {
     if (!open) return null;
 
     return (

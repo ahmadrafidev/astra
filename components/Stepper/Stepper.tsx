@@ -4,9 +4,10 @@ import React from 'react';
 export interface StepperProps {
     steps: string[];
     currentStep: number;
+    className?: string;
 }
 
-const Stepper: React.FC<StepperProps> = ({ steps, currentStep }) => {
+const Stepper: React.FC<StepperProps> = ({ steps, currentStep, className }) => {
     return (
         <div className="flex items-center">
             {steps.map((step, index) => (

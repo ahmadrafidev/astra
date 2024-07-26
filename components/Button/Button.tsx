@@ -2,9 +2,10 @@
 'use client';
 import React, { ReactNode, ButtonHTMLAttributes } from 'react';
 
-interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
   variant?: 'default' | 'destructive' | 'outline' | 'secondary' | 'ghost' | 'link'; 
+  className?: string;
 }
 
 const buttonStyles = {
@@ -16,11 +17,11 @@ const buttonStyles = {
   link: "px-4 py-2 border-none text-base cursor-pointer transition-colors duration-300 bg-none text-blue-500 underline hover:no-underline",
 };
 
-const Button: React.FC<ButtonProps> = ({ variant = 'default', children, ...props }) => {
-  const className = buttonStyles[variant] || buttonStyles.default;
+const Button: React.FC<ButtonProps> = ({ variant = 'default', children, className = '',  ...props }) => {
+  const combinedClassName = `${buttonStyles[variant] || buttonStyles.default} ${className}`;
 
   return (
-    <button className={className} {...props}>
+    <button className={combinedClassName} {...props}>
       {children}
     </button>
   );

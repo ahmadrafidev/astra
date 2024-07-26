@@ -4,9 +4,10 @@ import React from 'react';
 export interface ProgressTrackerProps {
     steps: string[];
     currentStep: number;
+    className?: string;
 }
 
-const ProgressTracker: React.FC<ProgressTrackerProps> = ({ steps, currentStep }) => {
+const ProgressTracker: React.FC<ProgressTrackerProps> = ({ steps, currentStep, className }) => {
     return (
         <div className="flex items-center">
             {steps.map((step, index) => (

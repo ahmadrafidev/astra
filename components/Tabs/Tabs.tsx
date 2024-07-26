@@ -4,18 +4,19 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 
-interface TabProps {
+export interface TabProps {
     label?: string;
     icon?: string;
     children: React.ReactNode;
+    className?: string;
 }
 
-interface TabsProps {
+export interface TabsProps {
     children: React.ReactElement<TabProps>[];
     className?: string;
 }
 
-const Tab: React.FC<TabProps> = ({ children }) => <div role="tabpanel">{children}</div>;
+const Tab: React.FC<TabProps> = ({ children, className, ...props }) => <div role="tabpanel">{children}</div>;
 
 const Tabs: React.FC<TabsProps> = ({ children, className }) => {
     const [activeTab, setActiveTab] = useState(0);

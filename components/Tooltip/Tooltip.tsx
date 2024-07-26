@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 
-interface TooltipProps {
+export interface TooltipProps {
     children: React.ReactNode;
     text: string;
+    className?: string;
 }
 
-const Tooltip: React.FC<TooltipProps> = ({ children, text }) => {
+const Tooltip: React.FC<TooltipProps> = ({ children, text, className }) => {
     const [visible, setVisible] = useState(false);
 
     return (

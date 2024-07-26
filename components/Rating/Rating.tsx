@@ -4,9 +4,10 @@ import React, { useState } from 'react';
 export interface RatingProps {
     maxRating: number;
     onRate: (rating: number) => void;
+    className?: string;
 }
 
-const Rating: React.FC<RatingProps> = ({ maxRating, onRate }) => {
+const Rating: React.FC<RatingProps> = ({ maxRating, onRate, className }) => {
     const [rating, setRating] = useState(0);
 
     const handleRating = (rate: number) => {

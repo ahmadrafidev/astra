@@ -8,13 +8,14 @@ import { Bars3Icon } from '@heroicons/react/24/outline';
 
 import ThemeToggle from '../ThemeToggle/ThemeToggle';
 
-interface HeaderProps {
+export interface HeaderProps {
     setActiveSection: (section: string) => void;
     toggleSidebar?: () => void; 
     isSidebarOpen?: boolean;
+    className?: string;
 }
 
-const Header: React.FC<HeaderProps> = ({ setActiveSection, toggleSidebar, isSidebarOpen }) => {
+const Header: React.FC<HeaderProps> = ({ setActiveSection, toggleSidebar, isSidebarOpen, className }) => {
     const [isScrolled, setIsScrolled] = useState(false);
 
     useEffect(() => {

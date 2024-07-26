@@ -1,12 +1,13 @@
 import React, { ReactNode } from 'react';
 
-interface AlertDialogProps {
+export interface AlertDialogProps {
     children: ReactNode; 
     open: boolean;
     onClose: () => void;
+    className?: string;
 }
 
-const AlertDialog: React.FC<AlertDialogProps> = ({ open, onClose, children }) => {
+const AlertDialog: React.FC<AlertDialogProps> = ({ open, onClose, children, className }) => {
     if (!open) return null;
 
     return (

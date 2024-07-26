@@ -6,9 +6,10 @@ import { MagnifyingGlassIcon } from '@heroicons/react/24/outline';
 
 export interface SearchBarProps {
     onSearch: (query: string) => void;
+    className?: string;
 }
 
-const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
+const SearchBar: React.FC<SearchBarProps> = ({ onSearch, className }) => {
     const [query, setQuery] = useState('');
 
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {

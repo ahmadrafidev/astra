@@ -4,9 +4,10 @@ import React, { useState } from 'react';
 export interface DropdownProps {
   options: string[];
   onSelect: (option: string) => void;
+  className?: string;
 }
 
-const Dropdown: React.FC<DropdownProps> = ({ options, onSelect }) => {
+const Dropdown: React.FC<DropdownProps> = ({ options, onSelect, className }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState<string | null>(null);
 

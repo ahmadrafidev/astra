@@ -11,12 +11,13 @@ import SearchBar from '../SearchBar/SearchBar';
 import { Tabs, Tab } from '../Tabs/Tabs';
 import { componentsList, foundationList, aboutList } from '../../utils/constants/route';
 
-interface SidebarProps {
+export interface SidebarProps {
     isSidebarOpen: boolean;
     closeSidebar: () => void;
+    className?: string;
 }
 
-const Sidebar: React.FC<SidebarProps> = ({ isSidebarOpen, closeSidebar }) => {
+const Sidebar: React.FC<SidebarProps> = ({ isSidebarOpen, closeSidebar, className }) => {
     const pathname = useMemoizedPathname();
     const [filteredComponents, setFilteredComponents] = useState(componentsList);
     const [filteredFoundations, setFilteredFoundations] = useState(foundationList);
