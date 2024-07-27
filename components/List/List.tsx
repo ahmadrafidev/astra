@@ -1,4 +1,3 @@
-// components/List/List.tsx
 import React from 'react';
 
 export interface ListItemProps {
@@ -12,11 +11,13 @@ export interface ListProps {
 }
 
 const ListItem: React.FC<ListItemProps> = ({ children, className }) => (
-    <li className="border-b p-2">{children}</li>
+    <li className={`border-b p-2 ${className}`} role="listitem">
+        {children}
+    </li>
 );
 
 const List: React.FC<ListProps> = ({ items, className = '' }) => (
-    <ul className={`list-none p-0 ${className}`}>
+    <ul className={`list-none p-0 ${className}`} role="list">
         {items.map((item, index) => (
             <ListItem key={index}>{item}</ListItem>
         ))}

@@ -1,18 +1,18 @@
 // pages/documentation/components/dialog.tsx
-'use client';
-
 import React from 'react';
+import dynamic from 'next/dynamic';
+import type { Metadata } from 'next';
 
-import Layout from '../../../components/Layout/Layout';
-import Badge from '../../../components/Badge/Badge';
-
-const DialogPage: React.FC = () => {
-    return (
-        <Layout>
-            <Badge text="Components" />
-            <h1 className="text-xl md:text-2xl font-medium mb-4 text-gray-900 dark:text-gray-50">Dialog</h1>
-        </Layout>
-    );
+export const metadata: Metadata = {
+    title: "Dialog",
+    description: "A component for displaying modal dialogs.",
 };
 
+const DialogPageClient = dynamic(() => import('../../../components/Dialog/DialogPageClient'), { ssr: false });
+
+const DialogPage: React.FC = () => {
+    return <DialogPageClient />;
+};
+
+DialogPage.displayName="DialogPage"
 export default DialogPage;

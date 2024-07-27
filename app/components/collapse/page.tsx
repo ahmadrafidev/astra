@@ -1,18 +1,18 @@
-// pages/documentation/components/collapse.tsx
-'use client';
-
+// app/components/collapse/page.tsx
 import React from 'react';
+import dynamic from 'next/dynamic';
+import type { Metadata } from 'next';
 
-import Layout from '../../../components/Layout/Layout';
-import Badge from '../../../components/Badge/Badge';
-
-const CollapsePage: React.FC = () => {
-    return (
-        <Layout>
-            <Badge text="Components" />
-            <h1 className="text-xl md:text-2xl font-medium mb-4 text-gray-900 dark:text-gray-50">Collapse</h1>
-        </Layout>
-    );
+export const metadata: Metadata = {
+    title: "Collapse",
+    description: "A component for displaying collapsible sections.",
 };
 
+const CollapsePageClient = dynamic(() => import('../../../components/Collapse/CollapsePageClient'), { ssr: false });
+
+const CollapsePage: React.FC = () => {
+    return <CollapsePageClient />;
+};
+
+CollapsePage.displayName="CollapsePage"
 export default CollapsePage;

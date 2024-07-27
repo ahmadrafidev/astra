@@ -1,18 +1,18 @@
 // pages/documentation/components/list.tsx
-'use client';
-
 import React from 'react';
+import dynamic from 'next/dynamic';
+import type { Metadata } from 'next';
 
-import Layout from '../../../components/Layout/Layout';
-import Badge from '../../../components/Badge/Badge';
-
-const ListPage: React.FC = () => {
-    return (
-        <Layout>
-            <Badge text="Components" />
-            <h1 className="text-xl md:text-2xl font-medium mb-4 text-gray-900 dark:text-gray-50">List</h1>
-        </Layout>
-    );
+export const metadata: Metadata = {
+    title: "List",
+    description: "A component for displaying a list of items.",
 };
 
+const ListPageClient = dynamic(() => import('../../../components/List/ListPageClient'), { ssr: false });
+
+const ListPage: React.FC = () => {
+    return <ListPageClient />;
+};
+
+ListPage.displayName="ListPage"
 export default ListPage;
