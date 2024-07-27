@@ -25,7 +25,6 @@ const BadgePage: React.FC = () => {
     return (
         <Layout>
             <Badge text="Components" />
-
             {/* Header Content */}
             <section className="mb-5">
                 <div className="flex flex-col">
