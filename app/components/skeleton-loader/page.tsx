@@ -1,18 +1,17 @@
-// pages/documentation/components/skeleton-loader.tsx
-'use client';
-
+// app/components/skeleton-loader/page.tsx
 import React from 'react';
+import dynamic from 'next/dynamic';
+import type { Metadata } from 'next';
 
-import Layout from '../../../components/Layout/Layout';
-import Badge from '../../../components/Badge/Badge';
+export const metadata: Metadata = {
+    title: "SkeletonLoader",
+    description: "Skeleton loaders provide a visual indication of loading content.",
+};
+
+const SkeletonLoaderPageClient = dynamic(() => import('../../../components/SkeletonLoader/SkeletonLoaderPageClient'), { ssr: false });
 
 const SkeletonLoaderPage: React.FC = () => {
-    return (
-        <Layout>
-            <Badge text="Components" />
-            <h1 className="text-xl md:text-2xl font-medium mb-4 text-gray-900 dark:text-gray-50">SkeletonLoader</h1>
-        </Layout>
-    );
+    return <SkeletonLoaderPageClient />;
 };
 
 export default SkeletonLoaderPage;

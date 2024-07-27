@@ -1,18 +1,18 @@
-// pages/documentation/components/select.tsx
-'use client';
-
+// app/components/select/page.tsx
 import React from 'react';
+import dynamic from 'next/dynamic';
+import type { Metadata } from 'next';
 
-import Layout from '../../../components/Layout/Layout';
-import Badge from '../../../components/Badge/Badge';
-
-const SelectPage: React.FC = () => {
-    return (
-        <Layout>
-            <Badge text="Components" />
-            <h1 className="text-xl md:text-2xl font-medium mb-4 text-gray-900 dark:text-gray-50">Select</h1>
-        </Layout>
-    );
+export const metadata: Metadata = {
+    title: "Select",
+    description: "Select components allow users to choose from a list of options.",
 };
 
+const SelectPageClient = dynamic(() => import('../../../components/Select/SelectPageClient'), { ssr: false });
+
+const SelectPage: React.FC = () => {
+    return <SelectPageClient />;
+};
+
+SelectPage.displayName="SelectPage"
 export default SelectPage;

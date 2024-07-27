@@ -1,3 +1,4 @@
+// components/SkeletonLoader/SkeletonLoader.tsx
 import React from 'react';
 
 export interface SkeletonLoaderProps {
@@ -11,6 +12,8 @@ const SkeletonLoader: React.FC<SkeletonLoaderProps> = ({ width = '100%', height 
         <div
             className={`bg-gray-300 dark:bg-gray-700 animate-pulse rounded ${className}`}
             style={{ width, height }}
+            role="status"
+            aria-label="Loading"
         />
     );
 };

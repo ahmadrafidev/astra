@@ -26,7 +26,7 @@ const AlertPage: React.FC = () => {
             </section>
             {/* Alert Variants Section */}
             <section className="mb-5">
-                <h2 className="text-2xl md:text-3xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Variants</h2>
+                <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Variants</h2>
                 <div className="space-y-4">
                     <Alert type="info" message="This is an info alert.">
                         <p>Additional information can go here.</p>
@@ -44,7 +44,7 @@ const AlertPage: React.FC = () => {
             </section>
             {/* Props Section */}
             <section>
-                <h2 className="text-2xl md:text-3xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Props</h2>
+                <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Props</h2>
                 <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg shadow">
                     <table className="min-w-full table-auto">
                         <thead>
@@ -86,7 +86,7 @@ const AlertPage: React.FC = () => {
             </section>
             {/* Best Practices Section */}
             <section>
-                <h2 className="text-2xl md:text-3xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Best Practices</h2>
+                <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Best Practices</h2>
                 <div className="space-y-4">
                     <p className="text-gray-700 dark:text-gray-300">Use alerts to convey important information to users in a prominent manner.</p>
                     <p className="text-gray-700 dark:text-gray-300">Choose the appropriate alert type to match the importance and context of the message.</p>

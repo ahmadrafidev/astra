@@ -35,10 +35,9 @@ const BadgePage: React.FC = () => {
                     </p>
                 </div>
             </section>
-
             {/* Badge Table Section */}
             <section className="mb-5">
-                <h2 className="text-2xl md:text-3xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Variants</h2>
+                <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Variants</h2>
                 <div className="bg-white dark:bg-gray-900 rounded-lg shadow p-5">
                     <div className="overflow-x-auto">
                         <table className="min-w-full">
@@ -72,11 +71,10 @@ const BadgePage: React.FC = () => {
                     </div>
                 </div>
             </section>
-
             {/* Props Table Section */}
             <section>
                 <div className="flex flex-col mb-4">
-                    <h2 className="text-2xl md:text-3xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Props</h2>
+                    <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Props</h2>
                     <div className="bg-white dark:bg-gray-800 rounded-lg shadow p-5">
                         <table className="min-w-full">
                             <thead>
@@ -141,15 +139,12 @@ const BadgePage: React.FC = () => {
                     </div>
                 </div>
             </section>
-
-
              {/* Best Practices Section */}
             <section>
                 <div className="flex flex-col mb-4">
-                    <h2 className="text-2xl md:text-3xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Best Practices</h2>
+                    <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Best Practices</h2>
                 </div>
             </section>
-            
         </Layout>
     );
 };

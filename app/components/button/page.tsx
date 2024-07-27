@@ -18,7 +18,7 @@ const ButtonPage: React.FC = () => {
             {/* Header Content */}
             <section className="mb-5">
                 <div className="flex flex-col">
-                    <h1 className="text-2xl md:text-3xl font-semibold font-sans text-gray-900 dark:text-gray-50 mb-3 md:mb-4">Button</h1>
+                    <h1 className="text-2xl md:text-3xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-3 md:mb-4">Button</h1>
                     <p className="text-sm md:text-base font-normal font-sans text-gray-900 dark:text-gray-50">
                         Buttons are interactive elements that trigger actions or events when clicked. Below are various button styles with different use cases.
                     </p>
@@ -26,7 +26,7 @@ const ButtonPage: React.FC = () => {
             </section>
             {/* Button Variants Section */}
             <section className="mb-5">
-                <h2 className="text-2xl md:text-3xl font-semibold font-sans text-gray-900 dark:text-gray-50 mb-5">Variants</h2>
+                <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Variants</h2>
                 <div className="space-y-4">
                     <div>
                         <Button variant="default">Default Button</Button>
@@ -50,11 +50,11 @@ const ButtonPage: React.FC = () => {
             </section>
             {/* Props Section */}
             <section>
-                <h2 className="text-2xl md:text-3xl font-semibold font-sans text-gray-900 dark:text-gray-50 mb-5">Props</h2>
+                <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Props</h2>
             </section>
             {/* Best Practices Section */}
             <section>
-                <h2 className="text-2xl md:text-3xl font-semibold font-sans text-gray-900 dark:text-gray-50 mb-5">Best Practices</h2>
+                <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Best Practices</h2>
             </section>
         </Layout>
     );

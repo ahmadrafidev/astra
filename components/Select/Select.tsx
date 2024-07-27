@@ -10,11 +10,16 @@ export interface SelectProps {
 
 const Select: React.FC<SelectProps> = ({ value, onChange, options, className = '' }) => {
     return (
-        <select value={value} onChange={onChange} className={`px-4 py-2 border rounded ${className}`}>
+        <select
+            value={value}
+            onChange={onChange}
+            className={`px-4 py-2 border rounded ${className}`}
+            aria-label="Select option"
+        >
             {options.map((option) => (
-            <option key={option.value} value={option.value}>
-                {option.label}
-            </option>
+                <option key={option.value} value={option.value}>
+                    {option.label}
+                </option>
             ))}
         </select>
     );

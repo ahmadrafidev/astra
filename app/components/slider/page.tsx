@@ -1,18 +1,18 @@
-// pages/documentation/components/slider.tsx
-'use client';
-
+// app/components/slider/page.tsx
 import React from 'react';
+import dynamic from 'next/dynamic';
+import type { Metadata } from 'next';
 
-import Layout from '../../../components/Layout/Layout';
-import Badge from '../../../components/Badge/Badge';
-
-const SliderPage: React.FC = () => {
-    return (
-        <Layout>
-            <Badge text="Components" />
-            <h1 className="text-xl md:text-2xl font-medium mb-4 text-gray-900 dark:text-gray-50">Slider</h1>
-        </Layout>
-    );
+export const metadata: Metadata = {
+    title: "Slider",
+    description: "Sliders allow users to select a value from a continuous or discrete range.",
 };
 
+const SliderPageClient = dynamic(() => import('../../../components/Slider/SliderPageClient'), { ssr: false });
+
+const SliderPage: React.FC = () => {
+    return <SliderPageClient />;
+};
+
+SliderPage.displayName="SliderPage"
 export default SliderPage;

@@ -12,7 +12,7 @@ const StatusDotPageClient: React.FC = () => {
     return (
         <Layout>
             <Badge text="Components" />
-            <h1 className="text-xl md:text-2xl font-medium mb-4 text-gray-900 dark:text-gray-50">Status Dot</h1>
+            <h1 className="text-2xl md:text-3xl font-medium mb-4 text-gray-900 dark:text-gray-50">Status Dot</h1>
             <div className="space-y-6">
                 <div className="flex items-center space-x-2">
                     <StatusDot status="online" />
@@ -29,7 +29,7 @@ const StatusDotPageClient: React.FC = () => {
             </div>
             {/* Props Section */}
             <section className="mb-10">
-                <h2 className="text-2xl md:text-3xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Props</h2>
+                <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Props</h2>
                 <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg shadow">
                     <table className="min-w-full table-auto">
                         <thead>
@@ -59,7 +59,7 @@ const StatusDotPageClient: React.FC = () => {
             </section>
             {/* Best Practices Section */}
             <section>
-                <h2 className="text-2xl md:text-3xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Best Practices</h2>
+                <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Best Practices</h2>
                 <div className="space-y-4">
                     <p className="text-gray-700 dark:text-gray-300">Use status dots to indicate the current status of an item or user.</p>
                     <p className="text-gray-700 dark:text-gray-300">Ensure each status is visually distinguishable and has a clear meaning.</p>

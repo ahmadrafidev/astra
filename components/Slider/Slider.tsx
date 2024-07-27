@@ -20,6 +20,10 @@ const Slider: React.FC<SliderProps> = ({ value, min, max, step = 1, onChange, cl
             step={step}
             onChange={onChange}
             className={`slider ${className}`}
+            aria-valuenow={value}
+            aria-valuemin={min}
+            aria-valuemax={max}
+            role="slider"
         />
     );
 };

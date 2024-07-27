@@ -10,13 +10,13 @@ const TogglePageClient: React.FC = () => {
     return (
         <Layout>
             <Badge text="Components" />
-            <h1 className="text-xl md:text-2xl font-medium mb-4 text-gray-900 dark:text-gray-50">Toggle</h1>
+            <h1 className="text-2xl md:text-3xl font-medium mb-4 text-gray-900 dark:text-gray-50">Toggle</h1>
             <div className="space-y-6">
                 <Toggle ariaLabel="Toggle switch" className="max-w-md" />
             </div>
             {/* Props Section */}
             <section className="mb-10">
-                <h2 className="text-2xl md:text-3xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Props</h2>
+                <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Props</h2>
                 <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg shadow">
                     <table className="min-w-full table-auto">
                         <thead>
@@ -52,7 +52,7 @@ const TogglePageClient: React.FC = () => {
             </section>
             {/* Best Practices Section */}
             <section>
-                <h2 className="text-2xl md:text-3xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Best Practices</h2>
+                <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Best Practices</h2>
                 <div className="space-y-4">
                     <p className="text-gray-700 dark:text-gray-300">Use toggle buttons to switch between two states.</p>
                     <p className="text-gray-700 dark:text-gray-300">Ensure the button clearly indicates its current state.</p>

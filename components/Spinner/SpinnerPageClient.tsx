@@ -12,7 +12,7 @@ const SpinnerPageClient: React.FC = () => {
     return (
         <Layout>
             <Badge text="Components" />
-            <h1 className="text-xl md:text-2xl font-medium mb-4 text-gray-900 dark:text-gray-50">Spinner</h1>
+            <h1 className="text-2xl md:text-3xl font-medium mb-4 text-gray-900 dark:text-gray-50">Spinner</h1>
             <div className="space-y-6">
                 <Spinner size={24} className="text-blue-500" />
                 <Spinner size={32} className="text-red-500" />
@@ -20,7 +20,7 @@ const SpinnerPageClient: React.FC = () => {
             </div>
             {/* Props Section */}
             <section className="mb-10">
-                <h2 className="text-2xl md:text-3xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Props</h2>
+                <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Props</h2>
                 <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg shadow">
                     <table className="min-w-full table-auto">
                         <thead>
@@ -50,7 +50,7 @@ const SpinnerPageClient: React.FC = () => {
             </section>
             {/* Best Practices Section */}
             <section>
-                <h2 className="text-2xl md:text-3xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Best Practices</h2>
+                <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Best Practices</h2>
                 <div className="space-y-4">
                     <p className="text-gray-700 dark:text-gray-300">Use spinners to indicate loading or ongoing processes.</p>
                     <p className="text-gray-700 dark:text-gray-300">Ensure the spinner is clearly visible and distinguishable.</p>

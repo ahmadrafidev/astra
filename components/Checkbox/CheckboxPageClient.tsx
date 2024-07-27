@@ -1,30 +1,32 @@
-// components/Switch/SwitchPageClient.tsx
+// components/Checkbox/CheckboxPageClient.tsx
 'use client';
 
 import React, { useState } from 'react';
+
 import Layout from '../Layout/Layout';
 import Badge from '../Badge/Badge';
-import Switch from './Switch';
 
-const SwitchPageClient: React.FC = () => {
-    const [checked, setChecked] = useState(false);
+import Checkbox from './Checkbox';
+
+const CheckboxPageClient: React.FC = () => {
+    const [isChecked, setIsChecked] = useState(false);
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setChecked(e.target.checked);
+        setIsChecked(e.target.checked);
     };
 
     return (
         <Layout>
             <Badge text="Components" />
-            <h1 className="text-2xl md:text-3xl font-medium mb-4 text-gray-900 dark:text-gray-50">Switch</h1>
-            <div className="space-y-6">
-                <Switch 
-                    checked={checked} 
-                    onChange={handleChange} 
-                    ariaLabel="Toggle switch"
-                    className="max-w-md"
-                />
-            </div>
+            <h1 className="text-2xl md:text-3xl font-medium mb-4 text-gray-900 dark:text-gray-50">Checkbox</h1>
+            <Checkbox 
+                checked={isChecked} 
+                onChange={handleChange} 
+                label="Check me!" 
+                className="my-4"
+            />
+            <p className="mt-4 text-gray-900 dark:text-gray-50">Checkbox is {isChecked ? 'checked' : 'unchecked'}</p>
+
             {/* Props Section */}
             <section className="mb-10">
                 <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Props</h2>
@@ -42,43 +44,45 @@ const SwitchPageClient: React.FC = () => {
                             <tr>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">checked</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">boolean</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">-</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Whether the switch is checked.</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">false</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Indicates whether the checkbox is checked.</td>
                             </tr>
                             <tr>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">onChange</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">{'(e: React.ChangeEvent<HTMLInputElement>) => void'}</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">React.ChangeEventHandler&lt;HTMLInputElement&gt;</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">-</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Function to call when the switch value changes.</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Function to call when the checkbox state changes.</td>
+                            </tr>
+                            <tr>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">label</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">string</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">-</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Label text to display next to the checkbox.</td>
                             </tr>
                             <tr>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">className</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">string</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">-</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Additional classes for styling the switch.</td>
-                            </tr>
-                            <tr>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">ariaLabel</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">string</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">-</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Accessible label for the switch.</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Additional classes for styling.</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
             </section>
+
             {/* Best Practices Section */}
             <section>
                 <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Best Practices</h2>
                 <div className="space-y-4">
-                    <p className="text-gray-700 dark:text-gray-300">Use switches to toggle between two states.</p>
-                    <p className="text-gray-700 dark:text-gray-300">Ensure the switch clearly indicates its current state.</p>
-                    <p className="text-gray-700 dark:text-gray-300">Provide feedback to users when the state changes.</p>
+                    <p className="text-gray-700 dark:text-gray-300">Ensure the checkbox label is clear and concise.</p>
+                    <p className="text-gray-700 dark:text-gray-300">Provide adequate space between checkboxes for easier touch interaction.</p>
+                    <p className="text-gray-700 dark:text-gray-300">Use checkboxes for binary options where users can select multiple choices.</p>
+                    <p className="text-gray-700 dark:text-gray-300">Make sure checkboxes are easily accessible and usable via keyboard and screen readers.</p>
                 </div>
             </section>
         </Layout>
     );
 };
 
-SwitchPageClient.displayName = "SwitchPageClient";
-export default SwitchPageClient;
+CheckboxPageClient.displayName = "CheckboxPageClient";
+export default CheckboxPageClient;

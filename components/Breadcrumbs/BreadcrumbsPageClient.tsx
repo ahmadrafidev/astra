@@ -17,11 +17,11 @@ const BreadcrumbsPageClient: React.FC = () => {
     return (
         <Layout>
             <Badge text="Components" />
-            <h1 className="text-xl md:text-2xl font-medium mb-4 text-gray-900 dark:text-gray-50">Breadcrumbs</h1>
+            <h1 className="text-2xl md:text-3xl font-medium mb-4 text-gray-900 dark:text-gray-50">Breadcrumbs</h1>
             <Breadcrumbs items={items} className="mb-6" />
             {/* Props Section */}
             <section className="my-4">
-                <h2 className="text-2xl md:text-3xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Props</h2>
+                <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Props</h2>
                 <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg shadow">
                     <table className="min-w-full table-auto">
                         <thead>
@@ -51,7 +51,7 @@ const BreadcrumbsPageClient: React.FC = () => {
             </section>
             {/* Best Practices Section */}
             <section className="my-4">
-                <h2 className="text-2xl md:text-3xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Best Practices</h2>
+                <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Best Practices</h2>
                 <div className="space-y-4">
                     <p className="text-gray-700 dark:text-gray-300">Use breadcrumbs to provide users with a navigational aid that indicates their current location in the application.</p>
                     <p className="text-gray-700 dark:text-gray-300">Ensure that breadcrumb items are ordered correctly from highest to lowest hierarchy.</p>

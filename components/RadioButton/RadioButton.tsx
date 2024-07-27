@@ -1,4 +1,3 @@
-// components/RadioButton/RadioButton.tsx
 import React from 'react';
 
 export interface RadioButtonProps {
@@ -11,11 +10,13 @@ export interface RadioButtonProps {
 }
 
 const RadioButton: React.FC<RadioButtonProps> = ({ checked, onChange, label, name, value, className = '' }) => {
+    const id = `${name}-${value}`;
+
     return (
-        <label className="flex items-center ${className}">
-            <input type="radio" name={name} value={value} checked={checked} onChange={onChange} className="mr-2" />
-            {label}
-        </label>
+        <div className={`flex items-center ${className}`}>
+            <input type="radio" id={id} name={name} value={value} checked={checked} onChange={onChange} className="mr-2" />
+            {label && <label htmlFor={id}>{label}</label>}
+        </div>
     );
 };
 

@@ -1,4 +1,3 @@
-// components/Checkbox/Checkbox.tsx
 import React from 'react';
 
 export interface CheckboxProps {
@@ -10,8 +9,15 @@ export interface CheckboxProps {
 
 const Checkbox: React.FC<CheckboxProps> = ({ checked, onChange, label, className = '', ...props }) => {
     return (
-        <label className="flex items-center ${className}">
-            <input type="checkbox" checked={checked} onChange={onChange} className="mr-2" />
+        <label className={`flex items-center ${className}`}>
+            <input 
+                type="checkbox" 
+                checked={checked} 
+                onChange={onChange} 
+                className="mr-2" 
+                aria-checked={checked}
+                {...props}
+            />
             {label}
         </label>
     );

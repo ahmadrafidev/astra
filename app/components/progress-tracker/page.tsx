@@ -1,18 +1,18 @@
-// pages/documentation/components/progresstracker.tsx
-'use client';
-
+// app/components/progress-tracker/page.tsx
 import React from 'react';
+import dynamic from 'next/dynamic';
+import type { Metadata } from 'next';
 
-import Layout from '../../../components/Layout/Layout';
-import Badge from '../../../components/Badge/Badge';
-
-const ProgressTrackerPage: React.FC = () => {
-    return (
-        <Layout>
-            <Badge text="Components" />
-            <h1 className="text-xl md:text-2xl font-medium mb-4 text-gray-900 dark:text-gray-50">ProgressTracker</h1>
-        </Layout>
-    );
+export const metadata: Metadata = {
+    title: "ProgressTracker",
+    description: "A component for tracking progress through a series of steps.",
 };
 
+const ProgressTrackerPageClient = dynamic(() => import('../../../components/ProgressTracker/ProgressTrackerPageClient'), { ssr: false });
+
+const ProgressTrackerPage: React.FC = () => {
+    return <ProgressTrackerPageClient />;
+};
+
+ProgressTrackerPage.displayName="ProgressTrackerPage"
 export default ProgressTrackerPage;

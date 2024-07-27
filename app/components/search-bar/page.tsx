@@ -1,18 +1,18 @@
 // pages/documentation/components/search-bar.tsx
-'use client';
-
 import React from 'react';
+import dynamic from 'next/dynamic';
+import type { Metadata } from 'next';
 
-import Layout from '../../../components/Layout/Layout';
-import Badge from '../../../components/Badge/Badge';
-
-const SearchBarPage: React.FC = () => {
-    return (
-        <Layout>
-            <Badge text="Components" />
-            <h1 className="text-xl md:text-2xl font-medium mb-4 text-gray-900 dark:text-gray-50">SearchBar</h1>
-        </Layout>
-    );
+export const metadata: Metadata = {
+    title: "SearchBar",
+    description: "A component for providing search functionality.",
 };
 
+const SearchBarPageClient = dynamic(() => import('../../../components/SearchBar/SearchBarPageClient'), { ssr: false });
+
+const SearchBarPage: React.FC = () => {
+    return <SearchBarPageClient />;
+};
+
+SearchBarPage.displayName="SearchBarPage"
 export default SearchBarPage;

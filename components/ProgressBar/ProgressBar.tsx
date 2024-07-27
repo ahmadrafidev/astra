@@ -1,4 +1,3 @@
-// components/ProgressBar/ProgressBar.tsx
 import React from 'react';
 
 export interface ProgressBarProps {
@@ -8,12 +7,12 @@ export interface ProgressBarProps {
 
 const ProgressBar: React.FC<ProgressBarProps> = ({ progress, className = '' }) => {
     return (
-        <div className={`w-full bg-gray-200 rounded ${className}`}>
+        <div className={`w-full bg-gray-200 rounded ${className}`} role="progressbar" aria-valuenow={progress} aria-valuemin={0} aria-valuemax={100}>
             <div
-            className="bg-blue-500 text-xs leading-none py-1 text-center text-white rounded"
-            style={{ width: `${progress}%` }}
+                className="bg-blue-500 text-xs leading-none py-1 text-center text-white rounded"
+                style={{ width: `${progress}%` }}
             >
-            {progress}%
+                {progress}%
             </div>
         </div>
     );

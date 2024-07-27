@@ -1,18 +1,18 @@
 // pages/documentation/components/radiobutton.tsx
-'use client';
-
 import React from 'react';
+import dynamic from 'next/dynamic';
+import type { Metadata } from 'next';
 
-import Layout from '../../../components/Layout/Layout';
-import Badge from '../../../components/Badge/Badge';
-
-const RadioButtonPage: React.FC = () => {
-    return (
-        <Layout>
-            <Badge text="Components" />
-            <h1 className="text-xl md:text-2xl font-medium mb-4 text-gray-900 dark:text-gray-50">RadioButton</h1>
-        </Layout>
-    );
+export const metadata: Metadata = {
+    title: "RadioButton",
+    description: "A component for selecting one option from a set of radio buttons.",
 };
 
+const RadioButtonPageClient = dynamic(() => import('../../../components/RadioButton/RadioButtonPageClient'), { ssr: false });
+
+const RadioButtonPage: React.FC = () => {
+    return <RadioButtonPageClient />;
+};
+
+RadioButtonPage.displayName="RadioButtonPage"
 export default RadioButtonPage;

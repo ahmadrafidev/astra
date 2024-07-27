@@ -1,4 +1,3 @@
-// components/Notification/Notification.tsx
 import React from 'react';
 
 export interface NotificationProps {
@@ -17,7 +16,7 @@ const notificationStyles = {
 
 const Notification: React.FC<NotificationProps> = ({ message, type, onClose, className = '' }) => {
     return (
-        <div className={`p-4 rounded ${notificationStyles[type]} ${className}`}>
+        <div className={`p-4 rounded ${notificationStyles[type]} ${className}`} role="alert" aria-live="assertive">
             <span>{message}</span>
             <button onClick={onClose} className="ml-4">X</button>
         </div>

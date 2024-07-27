@@ -1,18 +1,18 @@
 // pages/documentation/components/rating.tsx
-'use client';
-
 import React from 'react';
+import dynamic from 'next/dynamic';
+import type { Metadata } from 'next';
 
-import Layout from '../../../components/Layout/Layout';
-import Badge from '../../../components/Badge/Badge';
-
-const RatingPage: React.FC = () => {
-    return (
-        <Layout>
-            <Badge text="Components" />
-            <h1 className="text-xl md:text-2xl font-medium mb-4 text-gray-900 dark:text-gray-50">Rating</h1>
-        </Layout>
-    );
+export const metadata: Metadata = {
+    title: "Rating",
+    description: "A component for rating items.",
 };
 
+const RatingPageClient = dynamic(() => import('../../../components/Rating/RatingPageClient'), { ssr: false });
+
+const RatingPage: React.FC = () => {
+    return <RatingPageClient />;
+};
+
+RatingPage.displayName="RatingPage"
 export default RatingPage;
