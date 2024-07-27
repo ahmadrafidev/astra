@@ -1,21 +1,19 @@
+// app/components/avatar/page.tsx
 import React from 'react';
-import type { Metadata } from "next";
-
-import Layout from '../../../components/Layout/Layout';
-import Badge from '../../../components/Badge/Badge';
+import dynamic from 'next/dynamic';
+import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
     title: "Avatar",
-    description: "",
+    description: "Avatars are used to display user profile images or icons.",
 };
+
+const AvatarPageClient = dynamic(() => import('../../../components/Avatar/AvatarPageClient'), { ssr: false });
 
 const AvatarPage: React.FC = () => {
-    return (
-        <Layout>
-            <Badge text="Components" />
-            <h1 className="text-xl md:text-2xl font-medium mb-4 text-gray-900 dark:text-gray-50">Avatar</h1>
-        </Layout>
-    );
+    return <AvatarPageClient />;
 };
 
+AvatarPage.displayName="AvatarPage"
 export default AvatarPage;
+

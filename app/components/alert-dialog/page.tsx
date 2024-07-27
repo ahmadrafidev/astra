@@ -1,21 +1,18 @@
+// app/components/alert-dialog/page.tsx
 import React from 'react';
-import type { Metadata } from "next";
-
-import Layout from '../../../components/Layout/Layout';
-import Badge from '../../../components/Badge/Badge';
+import dynamic from 'next/dynamic';
+import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
     title: "AlertDialog",
-    description: "",
+    description: "Alert dialogs are used to prompt the user for a decision or action.",
 };
+
+const AlertDialogPageClient = dynamic(() => import('../../../components/AlertDialog/AlertDialogClient'), { ssr: false });
 
 const AlertDialogPage: React.FC = () => {
-    return (
-        <Layout>
-            <Badge text="Components" />
-            <h1 className="text-xl md:text-2xl font-medium mb-4 text-gray-900 dark:text-gray-50">Alert Dialog </h1>
-        </Layout>
-    );
+    return <AlertDialogPageClient />;
 };
 
+AlertDialogPage.displayName="AlertDialogPage";
 export default AlertDialogPage;

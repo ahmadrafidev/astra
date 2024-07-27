@@ -10,12 +10,13 @@ export interface AvatarProps {
 }
 
 const Avatar: React.FC<AvatarProps> = ({ src, alt = 'Avatar', size = 40, className = '' }) => {
-return (
+    return (
         <Image
             src={src}
             alt={alt}
+            width={size}
+            height={size}
             className={`inline-block rounded-full ${className}`}
-            style={{ width: size, height: size }}
         />
     );
 };

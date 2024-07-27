@@ -1,21 +1,18 @@
+// app/components/avatargroup/page.tsx
 import React from 'react';
-import type { Metadata } from "next";
-
-import Layout from '../../../components/Layout/Layout';
-import Badge from '../../../components/Badge/Badge';
+import dynamic from 'next/dynamic';
+import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
     title: "AvatarGroup",
-    description: "",
+    description: "Avatar groups are used to display a collection of user profile images or icons in a compact form.",
 };
+
+const AvatarGroupPageClient = dynamic(() => import('../../../components/AvatarGroup/AvatarGroupPageClient'), { ssr: false });
 
 const AvatarGroupPage: React.FC = () => {
-    return (
-        <Layout>
-            <Badge text="Components" />
-            <h1 className="text-xl md:text-2xl font-medium mb-4 text-gray-900 dark:text-gray-50">AvatarGroup</h1>
-        </Layout>
-    );
+    return <AvatarGroupPageClient />;
 };
 
+AvatarGroupPage.displayName="AvatarGroupPage";
 export default AvatarGroupPage;
