@@ -6,8 +6,6 @@ import { Tabs, Tab } from '../../components/Tabs/Tabs';
 import Layout from '../../components/Layout/Layout';
 import Badge from '../../components/Badge/Badge';
 
-import { foundationList, componentsList } from '../../utils/constants/route';
-
 export const metadata: Metadata = {
     title: "Overview",
     description: "Explore the core principles and components of AstraUI, designed to facilitate the creation of accessible, consistent, and reusable user interfaces.",
