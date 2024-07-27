@@ -93,6 +93,7 @@ export const componentsList = [
 export const categorizedComponentsList = {
     actions: [
         { name: 'Button', path: '/components/button', description: 'Triggers actions or events, such as submitting a form or saving data.' },
+        { name: 'IconButton', path: '/components/icon-button', description: 'A button that displays an icon, typically used for actions.' },
     ],
     layout: [
         { name: 'Card', path: '/components/card', description: 'Container for grouping related information.' },
@@ -120,23 +121,24 @@ export const categorizedComponentsList = {
     ],
     imagesAndIcons: [
         { name: 'Avatar', path: '/components/avatar', description: 'Displays user profile images or icons.' },
-        { name: 'Avatar Group', path: '/components/avatar-group', description: 'Displays list of avatars.' },
+        { name: 'AvatarGroup', path: '/components/avatar-group', description: 'Displays list of avatars.' },
         { name: 'Badge', path: '/components/badge', description: 'Small count and labeling component to signify status or counts.' },
         { name: 'StatusDot', path: '/components/status-dot', description: 'Indicates status with colored dots.' },
     ],
     feedbackIndicators: [
         { name: 'Alert', path: '/components/alert', description: 'Displays important messages in a prominent way to attract user attention.' },
-        { name: 'Alert Dialog', path: '/components/alert-dialog', description: 'A dialog that requires user acknowledgment before they can proceed.' },
+        { name: 'AlertDialog', path: '/components/alert-dialog', description: 'A dialog that requires user acknowledgment before they can proceed.' },
         { name: 'Notification', path: '/components/notification', description: 'Informs users about important updates or changes.' },
         { name: 'ProgressBar', path: '/components/progress-bar', description: 'Visual representation of the progress of a task.' },
         { name: 'Spinner', path: '/components/spinner', description: 'Indicates loading or ongoing process.' },
         { name: 'SkeletonLoader', path: '/components/skeleton-loader', description: 'Placeholder content while the actual content is loading.' },
         { name: 'Snackbar', path: '/components/snackbar', description: 'Brief messages that appear at the bottom of the screen.' },
-        { name: 'Error Message', path: '/components/error', description: 'Displays error messages in a consistent manner.' },
+        { name: 'ErrorMessage', path: '/components/error', description: 'Displays error messages in a consistent manner.' },
     ],
     navigation: [
         { name: 'Breadcrumbs', path: '/components/breadcrumbs', description: 'Navigational aid to show the user’s current location in a hierarchy.' },
         { name: 'Tabs', path: '/components/tabs', description: 'Navigational elements to switch between different views or sections.' },
+        { name: 'Pagination', path: '/components/pagination', description: 'Controls to navigate through paginated content.' },
     ],
     overlays: [
         { name: 'Dialog', path: '/components/dialog', description: 'A window overlaid on either the primary window or another dialog window.' },
