@@ -1,3 +1,4 @@
+// components/Tooltip/Tooltip.tsx
 import React, { useState } from 'react';
 
 export interface TooltipProps {
@@ -10,17 +11,17 @@ const Tooltip: React.FC<TooltipProps> = ({ children, text, className }) => {
     const [visible, setVisible] = useState(false);
 
     return (
-        <div 
-            className="relative flex items-center"
+        <div
+            className={`relative flex items-center ${className}`}
             onMouseEnter={() => setVisible(true)}
             onMouseLeave={() => setVisible(false)}
         >
             {children}
             {visible && (
-            <div className="absolute bottom-full mb-2 w-max bg-gray-700 text-white text-sm rounded py-1 px-2">
-                {text}
-            </div>
-        )}
+                <div className="absolute bottom-full mb-2 w-max bg-gray-700 text-white text-sm rounded py-1 px-2">
+                    {text}
+                </div>
+            )}
         </div>
     );
 };

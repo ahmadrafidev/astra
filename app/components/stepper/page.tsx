@@ -1,18 +1,18 @@
-// pages/documentation/components/stepper.tsx
-'use client';
-
+// app/components/stepper/page.tsx
 import React from 'react';
+import dynamic from 'next/dynamic';
+import type { Metadata } from 'next';
 
-import Layout from '../../../components/Layout/Layout';
-import Badge from '../../../components/Badge/Badge';
-
-const StepperPage: React.FC = () => {
-    return (
-        <Layout>
-            <Badge text="Components" />
-            <h1 className="text-xl md:text-2xl font-medium mb-4 text-gray-900 dark:text-gray-50">Stepper</h1>
-        </Layout>
-    );
+export const metadata: Metadata = {
+    title: "Stepper",
+    description: "Steppers guide users through a series of steps in a sequential manner.",
 };
 
+const StepperPageClient = dynamic(() => import('../../../components/Stepper/StepperPageClient'), { ssr: false });
+
+const StepperPage: React.FC = () => {
+    return <StepperPageClient />;
+};
+
+StepperPage.displayName="StepperPage";
 export default StepperPage;

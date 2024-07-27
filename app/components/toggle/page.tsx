@@ -1,18 +1,18 @@
-// pages/documentation/components/toggle.tsx
-'use client';
-
+// app/components/toggle/page.tsx
 import React from 'react';
+import dynamic from 'next/dynamic';
+import type { Metadata } from 'next';
 
-import Layout from '../../../components/Layout/Layout';
-import Badge from '../../../components/Badge/Badge';
-
-const TogglePage: React.FC = () => {
-    return (
-        <Layout>
-            <Badge text="Components" />
-            <h1 className="text-xl md:text-2xl font-medium mb-4 text-gray-900 dark:text-gray-50">Toggle</h1>
-        </Layout>
-    );
+export const metadata: Metadata = {
+    title: "Toggle",
+    description: "Toggle buttons are used to switch between two states.",
 };
 
+const TogglePageClient = dynamic(() => import('../../../components/Toggle/TogglePageClient'), { ssr: false });
+
+const TogglePage: React.FC = () => {
+    return <TogglePageClient />;
+};
+
+TogglePage.displayName="TogglePage";
 export default TogglePage;

@@ -1,18 +1,18 @@
-// pages/documentation/components/status-dot.tsx
-'use client';
-
+// app/components/status-dot/page.tsx
 import React from 'react';
+import dynamic from 'next/dynamic';
+import type { Metadata } from 'next';
 
-import Layout from '../../../components/Layout/Layout';
-import Badge from '../../../components/Badge/Badge';
-
-const SkeletonLoaderPage: React.FC = () => {
-    return (
-        <Layout>
-            <Badge text="Components" />
-            <h1 className="text-xl md:text-2xl font-medium mb-4 text-gray-900 dark:text-gray-50">Status Dot</h1>
-        </Layout>
-    );
+export const metadata: Metadata = {
+    title: "Status Dot",
+    description: "Status dots are used to indicate the current status of an item or user.",
 };
 
-export default SkeletonLoaderPage;
+const StatusDotPageClient = dynamic(() => import('../../../components/StatusDot/StatusDotPageClient'), { ssr: false });
+
+const StatusDotPage: React.FC = () => {
+    return <StatusDotPageClient />;
+};
+
+StatusDotPage.displayName="StatusDotPage"
+export default StatusDotPage;

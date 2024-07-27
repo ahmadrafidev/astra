@@ -1,18 +1,18 @@
-// pages/documentation/components/spinner.tsx
-'use client';
-
+// app/components/spinner/page.tsx
 import React from 'react';
+import dynamic from 'next/dynamic';
+import type { Metadata } from 'next';
 
-import Layout from '../../../components/Layout/Layout';
-import Badge from '../../../components/Badge/Badge';
-
-const SpinnerPage: React.FC = () => {
-    return (
-        <Layout>
-            <Badge text="Components" />
-            <h1 className="text-xl md:text-2xl font-medium mb-4 text-gray-900 dark:text-gray-50">Spinner</h1>
-        </Layout>
-    );
+export const metadata: Metadata = {
+    title: "Spinner",
+    description: "Spinners indicate loading or ongoing processes.",
 };
 
+const SpinnerPageClient = dynamic(() => import('../../../components/Spinner/SpinnerPageClient'), { ssr: false });
+
+const SpinnerPage: React.FC = () => {
+    return <SpinnerPageClient />;
+};
+
+SpinnerPage.displayName="SpinnerPage";
 export default SpinnerPage;

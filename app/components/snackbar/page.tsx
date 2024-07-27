@@ -1,18 +1,18 @@
-// pages/documentation/components/snackbar.tsx
-'use client';
-
+// app/components/snackbar/page.tsx
 import React from 'react';
+import dynamic from 'next/dynamic';
+import type { Metadata } from 'next';
 
-import Layout from '../../../components/Layout/Layout';
-import Badge from '../../../components/Badge/Badge';
-
-const SnackbarPage: React.FC = () => {
-    return (
-        <Layout>
-            <Badge text="Components" />
-            <h1 className="text-xl md:text-2xl font-medium mb-4 text-gray-900 dark:text-gray-50">Snackbar</h1>
-        </Layout>
-    );
+export const metadata: Metadata = {
+    title: "Snackbar",
+    description: "Snackbars provide brief messages about app processes at the bottom of the screen.",
 };
 
+const SnackbarPageClient = dynamic(() => import('../../../components/Snackbar/SnackbarPageClient'), { ssr: false });
+
+const SnackbarPage: React.FC = () => {
+    return <SnackbarPageClient />;
+};
+
+SnackbarPage.displayName="SnackbarPage"
 export default SnackbarPage;

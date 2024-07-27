@@ -1,18 +1,18 @@
-// pages/documentation/components/switch.tsx
-'use client';
-
+// app/components/switch/page.tsx
 import React from 'react';
+import dynamic from 'next/dynamic';
+import type { Metadata } from 'next';
 
-import Layout from '../../../components/Layout/Layout';
-import Badge from '../../../components/Badge/Badge';
-
-const SwitchPage: React.FC = () => {
-    return (
-        <Layout>
-            <Badge text="Components" />
-            <h1 className="text-xl md:text-2xl font-medium mb-4 text-gray-900 dark:text-gray-50">Switch</h1>
-        </Layout>
-    );
+export const metadata: Metadata = {
+    title: "Switch",
+    description: "Switch components are used to toggle between two states.",
 };
 
+const SwitchPageClient = dynamic(() => import('../../../components/Switch/SwitchPageClient'), { ssr: false });
+
+const SwitchPage: React.FC = () => {
+    return <SwitchPageClient />;
+};
+
+SwitchPage.displayName="SwitchPage";
 export default SwitchPage;

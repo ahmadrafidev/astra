@@ -1,18 +1,18 @@
-// pages/documentation/components/tooltip.tsx
-'use client';
-
+// app/components/tooltip/page.tsx
 import React from 'react';
+import dynamic from 'next/dynamic';
+import type { Metadata } from 'next';
 
-import Layout from '../../../components/Layout/Layout';
-import Badge from '../../../components/Badge/Badge';
-
-const TooltipPage: React.FC = () => {
-    return (
-        <Layout>
-            <Badge text="Components" />
-            <h1 className="text-xl md:text-2xl font-medium mb-4 text-gray-900 dark:text-gray-50">Tooltip</h1>
-        </Layout>
-    );
+export const metadata: Metadata = {
+    title: "Tooltip",
+    description: "Tooltips are used to provide additional information when hovering over an element.",
 };
 
+const TooltipPageClient = dynamic(() => import('../../../components/Tooltip/TooltipPageClient'), { ssr: false });
+
+const TooltipPage: React.FC = () => {
+    return <TooltipPageClient />;
+};
+
+TooltipPage.displayName="TooltipPage"
 export default TooltipPage;

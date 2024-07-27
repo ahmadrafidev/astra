@@ -29,7 +29,7 @@ const BadgePage: React.FC = () => {
             {/* Header Content */}
             <section className="mb-5">
                 <div className="flex flex-col">
-                    <h1 className="text-2xl md:text-3xl font-semibold font-sans text-gray-900 dark:text-gray-50 mb-3 md:mb-4">Badge</h1>
+                    <h1 className="text-2xl md:text-3xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-3 md:mb-4">Badge</h1>
                     <p className="ext-sm md:text-base font-normal font-sans text-gray-900 dark:text-gray-50">
                         Badges are concise labels that quickly convey brief information, status indicators, or important warnings for immediate recognition.
                     </p>
@@ -38,7 +38,7 @@ const BadgePage: React.FC = () => {
 
             {/* Badge Table Section */}
             <section className="mb-5">
-                <h2 className="text-2xl md:text-3xl font-semibold font-sans text-gray-900 dark:text-gray-50 mb-5">Variants</h2>
+                <h2 className="text-2xl md:text-3xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Variants</h2>
                 <div className="bg-white dark:bg-gray-900 rounded-lg shadow p-5">
                     <div className="overflow-x-auto">
                         <table className="min-w-full">
@@ -76,7 +76,7 @@ const BadgePage: React.FC = () => {
             {/* Props Table Section */}
             <section>
                 <div className="flex flex-col mb-4">
-                    <h2 className="text-2xl md:text-3xl font-semibold font-sans text-gray-900 dark:text-gray-50 mb-5">Props</h2>
+                    <h2 className="text-2xl md:text-3xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Props</h2>
                     <div className="bg-white dark:bg-gray-800 rounded-lg shadow p-5">
                         <table className="min-w-full">
                             <thead>
@@ -146,7 +146,7 @@ const BadgePage: React.FC = () => {
              {/* Best Practices Section */}
             <section>
                 <div className="flex flex-col mb-4">
-                    <h2 className="text-2xl md:text-3xl font-semibold font-sans text-gray-900 dark:text-gray-50 mb-5">Best Practices</h2>
+                    <h2 className="text-2xl md:text-3xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Best Practices</h2>
                 </div>
             </section>
             

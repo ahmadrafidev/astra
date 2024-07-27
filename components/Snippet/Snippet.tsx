@@ -1,5 +1,4 @@
-'use client';
-
+// components/Snippet/Snippet.tsx
 import React from 'react';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { darcula } from 'react-syntax-highlighter/dist/cjs/styles/prism';
@@ -12,9 +11,9 @@ export interface SnippetProps {
 
 const Snippet: React.FC<SnippetProps> = ({ language, code, className }) => {
     return (
-        <div className="rounded-lg border bg-gray-50 p-4 dark:bg-gray-800">
+        <div className={`rounded-lg border bg-gray-50 p-4 dark:bg-gray-800 ${className}`} role="region" aria-label={`Code snippet in ${language}`}>
             <SyntaxHighlighter language={language} style={darcula}>
-            {code}
+                {code}
             </SyntaxHighlighter>
         </div>
     );

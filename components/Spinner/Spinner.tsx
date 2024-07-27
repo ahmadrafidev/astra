@@ -9,10 +9,12 @@ export interface SpinnerProps {
 const Spinner: React.FC<SpinnerProps> = ({ size = 24, className = '' }) => {
     return (
         <div
-            className={`spinner-border animate-spin inline-block w-${size} h-${size} border-4 rounded-full ${className}`}
+            className={`inline-block border-4 border-t-transparent border-gray-400 rounded-full ${className}`}
+            style={{ width: size, height: size }}
             role="status"
+            aria-label="Loading"
         >
-            <span className="visually-hidden">Loading...</span>
+            <span className="sr-only">Loading...</span>
         </div>
     );
 };

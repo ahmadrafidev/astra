@@ -1,3 +1,4 @@
+// components/Snackbar/Snackbar.tsx
 import React, { useEffect } from 'react';
 
 export interface SnackbarProps {
@@ -12,7 +13,7 @@ const Snackbar: React.FC<SnackbarProps> = ({ message, open, duration = 3000, onC
     useEffect(() => {
         if (open) {
             const timer = setTimeout(() => {
-            onClose();
+                onClose();
             }, duration);
             return () => clearTimeout(timer);
         }
@@ -21,9 +22,11 @@ const Snackbar: React.FC<SnackbarProps> = ({ message, open, duration = 3000, onC
     return (
         <div
             className={`fixed bottom-4 left-1/2 transform -translate-x-1/2 px-4 py-2 bg-gray-800 text-white rounded shadow-md transition-transform ${
-            open ? 'translate-y-0 opacity-100' : 'translate-y-full opacity-0'
-            }`}
+                open ? 'translate-y-0 opacity-100' : 'translate-y-full opacity-0'
+            } ${className}`}
             style={{ transitionDuration: '300ms' }}
+            role="status"
+            aria-live="polite"
         >
             {message}
         </div>

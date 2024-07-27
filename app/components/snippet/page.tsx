@@ -1,18 +1,18 @@
-// pages/documentation/components/snippet.tsx
-'use client';
-
+// app/components/snippet/page.tsx
 import React from 'react';
+import dynamic from 'next/dynamic';
+import type { Metadata } from 'next';
 
-import Layout from '../../../components/Layout/Layout';
-import Badge from '../../../components/Badge/Badge';
-
-const SnippetPage: React.FC = () => {
-    return (
-        <Layout>
-            <Badge text="Components" />
-            <h1 className="text-xl md:text-2xl font-medium mb-4 text-gray-900 dark:text-gray-50">Snippet</h1>
-        </Layout>
-    );
+export const metadata: Metadata = {
+    title: "Snippet",
+    description: "Snippets display code examples with syntax highlighting.",
 };
 
+const SnippetPageClient = dynamic(() => import('../../../components/Snippet/SnippetPageClient'), { ssr: false });
+
+const SnippetPage: React.FC = () => {
+    return <SnippetPageClient />;
+};
+
+SnippetPage.displayName="SnippetPage";
 export default SnippetPage;
