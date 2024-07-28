@@ -1,18 +1,18 @@
-// pages/documentation/components/carousel.tsx
-'use client';
-
 import React from 'react';
 
-import Layout from '../../../components/Layout/Layout';
-import Badge from '../../../components/Badge/Badge';
+import dynamic from 'next/dynamic';
+import type { Metadata } from 'next';
 
-const CarouselPage: React.FC = () => {
-    return (
-        <Layout>
-            <Badge text="Components" />
-            <h1 className="text-xl md:text-2xl font-medium mb-4 text-gray-900 dark:text-gray-50">Carousel</h1>
-        </Layout>
-    );
+export const metadata: Metadata = {
+    title: "Carousel",
+    description: "Carousel component for displaying a series of images or content in a slideshow format.",
 };
 
+const CarouselPageClient = dynamic(() => import('../../../components/Carousel/CarouselPageClient'), { ssr: false });
+
+const CarouselPage: React.FC = () => {
+    return <CarouselPageClient />;
+};
+
+CarouselPage.displayName = "CarouselPage"
 export default CarouselPage;

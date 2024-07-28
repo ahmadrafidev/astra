@@ -1,18 +1,18 @@
-// pages/documentation/components/card.tsx
-'use client';
-
 import React from 'react';
 
-import Layout from '../../../components/Layout/Layout';
-import Badge from '../../../components/Badge/Badge';
+import dynamic from 'next/dynamic';
+import type { Metadata } from 'next';
 
-const CardPage: React.FC = () => {
-    return (
-        <Layout>
-            <Badge text="Components" />
-            <h1 className="text-xl md:text-2xl font-medium mb-4 text-gray-900 dark:text-gray-50">Card</h1>
-        </Layout>
-    );
+export const metadata: Metadata = {
+    title: 'Card',
+    description: 'The Card component is a versatile container for displaying content in a structured and visually appealing way.',
 };
 
+const CardPageClient = dynamic(() => import('../../../components/Card/CardPageClient'), { ssr: false });
+
+const CardPage: React.FC = () => {
+    return <CardPageClient />;
+};
+
+CardPage.displayName = "CardPage"
 export default CardPage;
