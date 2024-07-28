@@ -30,16 +30,16 @@ const AstraFoundationPage: React.FC = () => {
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
                     {sortedFoundationList.map((item) => (
-                        <div key={item.name} className="border p-4 rounded-lg hover:shadow-lg transition-shadow">
-                            <Link href={item.path} className="text-gray-900 dark:text-gray-50 text-lg md:text-xl">
-                                {item.name}
-                            </Link>
-                            <Link href={item.path}>
+                        <Link key={item.name} href={item.path} className="block border p-4 rounded-lg transition-all duration-300 hover:shadow-lg hover:bg-gray-100 dark:hover:bg-gray-800 dark:border-gray-700">
+                            <div>
+                                <h2 className="text-gray-900 dark:text-gray-50 text-lg md:text-xl">
+                                    {item.name}
+                                </h2>
                                 <p className="text-sm font-normal text-gray-900 dark:text-gray-100 mt-2 leading-loose">
                                     {item.description}
                                 </p>
-                            </Link>
-                        </div>
+                            </div>
+                        </Link>
                     ))}
                 </div>
             </div>
