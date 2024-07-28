@@ -90,4 +90,5 @@ const AstraBrandPage: React.FC = () => {
     );
 };
 
+AstraBrandPage.displayName = "AstraBrandPage"
 export default AstraBrandPage;
