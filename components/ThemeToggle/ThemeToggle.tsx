@@ -41,7 +41,11 @@ const ThemeToggle: React.FC = () => {
 
     return (
         <div className="relative inline-block text-left">
-            <button onClick={() => setDropdownOpen(!dropdownOpen)} className="rounded-full p-2 items-center hover:bg-gray-200 dark:hover:bg-white transition">
+            <button 
+                onClick={() => setDropdownOpen(!dropdownOpen)} 
+                className="rounded-full p-2 items-center hover:bg-gray-200 dark:hover:bg-white transition"
+                aria-label="Toggle theme menu"
+            >
                 {theme === 'light' ? (
                     <SunIcon className="h-6 w-6 text-yellow-500" />
                 ) : theme === 'dark' ? (
@@ -55,18 +59,21 @@ const ThemeToggle: React.FC = () => {
                     <button
                         onClick={() => handleThemeChange('light')}
                         className="block w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-900"
+                        aria-label="Switch to light theme"
                     >
                         Light
                     </button>
                     <button
                         onClick={() => handleThemeChange('dark')}
                         className="block w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-900"
+                        aria-label="Switch to dark theme"
                     >
                         Dark
                     </button>
                     <button
                         onClick={() => handleThemeChange('system')}
                         className="block w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-900"
+                        aria-label="Use system theme"
                     >
                         System
                     </button>
