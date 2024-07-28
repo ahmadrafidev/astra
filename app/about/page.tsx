@@ -37,7 +37,9 @@ const AboutAstraPage: React.FC = () => {
                         </li>
                         <li>
                             <h3 className="text-lg font-medium">Accessible</h3>
-                            <p className="text-base font-sans font-normal">Built on top of <a href="https://react-spectrum.adobe.com/react-aria/" className="text-blue-800 dark:text-blue-400">React Aria</a>, AstraUI prioritizes accessibility, ensuring all users can interact seamlessly.</p>
+                            <p className="text-base font-sans font-normal">
+                                Built on top of <a href="https://react-spectrum.adobe.com/react-aria/" className="text-blue-800 dark:text-blue-400 underline hover:no-underline focus:no-underline">React Aria</a>, AstraUI prioritizes accessibility, ensuring all users can interact seamlessly.
+                            </p>
                         </li>
                         <li>
                             <h3 className="text-lg font-medium">Customizable</h3>
