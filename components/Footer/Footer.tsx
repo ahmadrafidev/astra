@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
                 Engineered with passion by <Link href="https://x.com/rafiwiranaa" passHref className="underline">Rafi</Link>.
             </p>
             <p className="text-xs md:text-sm font-normal text-gray-600 dark:text-gray-300">
-                © 2024 AstraUI.
+                © 2024 AstraUI
             </p>
         </footer>
     );

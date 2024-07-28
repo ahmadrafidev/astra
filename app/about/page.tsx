@@ -18,7 +18,7 @@ const AboutAstraPage: React.FC = () => {
             <h1 className="text-2xl md:text-4xl font-medium mb-4 text-gray-900 dark:text-white">Overview</h1>
             <div className="mb-8 text-justify">
                 <section className="mb-3 md:mb-4">
-                    <h2 className="text-xl md:text-2xl font-medium mb-4 text-gray-900 dark:text-gray-50">Purposes</h2>
+                    <h2 className="text-xl md:text-2xl font-medium mb-4 text-gray-900 dark:text-gray-50">Purpose</h2>
                     <p className="text-sm md:text-base text-gray-900 dark:text-gray-50 leading-5 text-justify">
                         AstraUI is designed to provide a platform for developers to explore and perfect the creation of high-quality React components. 
                         It serves as both a showcase of work and a resource for developers looking to implement similar components, fostering learning and innovation in UI development.
