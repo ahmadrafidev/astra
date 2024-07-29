@@ -3,12 +3,14 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { ArrowLeftIcon } from '@heroicons/react/24/outline';
 
 import { useMemoizedPathname } from '../../hooks/useMemoizedPathname.jsx';
 
 import SearchBar from '../SearchBar/SearchBar';
 import { Tabs, Tab } from '../Tabs/Tabs';
+import ThemeToggle from '../ThemeToggle/ThemeToggle';
 
 import { componentsList, foundationList, aboutList } from '../../utils/constants/route';
 
@@ -40,14 +42,27 @@ const Sidebar: React.FC<SidebarProps> = ({ isSidebarOpen, closeSidebar, classNam
     const isActive = (path: string) => pathname === path;
 
     return (
-        <aside className={`fixed md:static bg-gray-50 dark:bg-black h-full md:h-auto z-50 transform ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'} md:translate-x-0 transition-transform duration-300 ease-in-out md:w-64 w-64 p-5`}>
-            <div className="flex items-center justify-end md:hidden mb-3">
+        <aside className={`fixed md:static bg-gray-50 dark:bg-black h-full md:h-auto z-40 transform ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'} md:translate-x-0 transition-transform duration-300 ease-in-out md:w-64 w-64 p-5 `}>
+            <div className="flex items-center justify-end md:hidden mb-2">
                 <button className="p-2 focus:outline-none" onClick={closeSidebar}>
                     <ArrowLeftIcon className="h-6 w-6 text-black dark:text-white" />
                 </button>
             </div>
-            <div className="w-full">
-                <SearchBar onSearch={handleSearch} />
+            <div className="flex flex-col justify-around md:hidden mb-4">
+                <Link className="block rounded-lg text-gray-900 hover:bg-gray-200 px-3 py-2 text-sm hover:dark:bg-gray-700 dark:text-white" href="/about" onClick={closeSidebar} aria-label="About">
+                    About   
+                </Link>
+                <Link className="block rounded-lg text-gray-900 hover:bg-gray-200 px-3 py-2 text-sm hover:dark:bg-gray-700 dark:text-white" href="/foundations" onClick={closeSidebar} aria-label="Foundation">
+                    Foundations
+                </Link>
+                <Link className="block rounded-lg hover:bg-gray-200 px-3 py-2 text-sm hover:dark:bg-gray-700 text-gray-900 dark:text-white" href="/components" onClick={closeSidebar} aria-label="Components">
+                    Components
+                </Link>
+            </div>
+            <div className="w-full overflow-y-auto">
+                <div className="hidden md:block">
+                    <SearchBar onSearch={handleSearch} />
+                </div>
                 {pathname.startsWith('/about') && (
                     <>
                         <h2 className="text-base md:text-lg lg:text-xl font-medium my-2 lg:my-4 text-black dark:text-white px-2">About AstraUI</h2>

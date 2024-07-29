@@ -8,6 +8,9 @@ import { useEffect, useState } from 'react';
 import { Bars3Icon } from '@heroicons/react/24/outline';
 
 import ThemeToggle from '../ThemeToggle/ThemeToggle';
+import SearchBar from '../SearchBar/SearchBar';
+
+import { componentsList, foundationList } from '../../utils/constants/route';
 
 export interface HeaderProps {
     setActiveSection: (section: string) => void;
@@ -17,6 +20,7 @@ export interface HeaderProps {
 }
 
 const Header: React.FC<HeaderProps> = ({ setActiveSection, toggleSidebar, isSidebarOpen, className }) => {
+
     const [isScrolled, setIsScrolled] = useState(false);
 
     useEffect(() => {
@@ -33,7 +37,7 @@ const Header: React.FC<HeaderProps> = ({ setActiveSection, toggleSidebar, isSide
     
 
     return (
-        <header className={`sticky top-0 px-4 md:px-12 h-14 flex items-center transition-all duration-300 ${isScrolled ? 'bg-transparent backdrop-blur-sm' : 'bg-gray-50 dark:bg-black'}`} aria-label="Main Navigation">
+        <header className={`sticky top-0 px-6 md:px-16 h-14 py-4 md:py-8 flex items-center transition-all duration-300 z-50 ${isScrolled ? 'bg-transparent backdrop-blur-sm' : 'bg-gray-50 dark:bg-black'}`} aria-label="Main Navigation">
             {!isSidebarOpen && toggleSidebar && (
                 <button className="md:hidden p-2 focus:outline-none" onClick={toggleSidebar} aria-label="Toggle Sidebar">
                     <Bars3Icon className="h-6 w-6 text-black dark:text-white" />
@@ -50,17 +54,17 @@ const Header: React.FC<HeaderProps> = ({ setActiveSection, toggleSidebar, isSide
                 </div>
             </Link>
             <nav className="ml-auto flex gap-2 sm:gap-3 items-center" aria-label="Primary Navigation">
-                <Link className="text-sm font-medium" href="/about" onClick={() => setActiveSection('about')} aria-label="About">
+                <Link className="hidden md:inline-block text-sm font-medium" href="/about" onClick={() => setActiveSection('about')} aria-label="About">
                     <div className="inline-block rounded-lg text-gray-900 hover:bg-gray-200 px-3 py-1 text-sm hover:dark:bg-gray-500 dark:text-white">
                         About
                     </div>
                 </Link>
-                <Link className="text-sm font-medium" href="/foundations" onClick={() => setActiveSection('foundations')} aria-label="Foundation">
+                <Link className="hidden md:inline-block text-sm font-medium" href="/foundations" onClick={() => setActiveSection('foundations')} aria-label="Foundation">
                     <div className="inline-block rounded-lg text-gray-900 hover:bg-gray-200 px-3 py-1 text-sm hover:dark:bg-gray-500 dark:text-white">
                         Foundations
                     </div>
                 </Link>
-                <Link className="text-sm font-medium" href="/components" onClick={() => setActiveSection('components')} aria-label="Components">
+                <Link className="hidden md:inline-block text-sm font-medium" href="/components" onClick={() => setActiveSection('components')} aria-label="Components">
                     <div className="inline-block rounded-lg hover:bg-gray-200 px-3 py-1 text-sm hover:dark:bg-gray-500 text-gray-900 dark:text-white">
                         Components
                     </div>
