@@ -15,23 +15,23 @@ import PaletteIcon from '../Icons/PaletteIcon';
 import PuzzleIcon from '../Icons/PuzzleIcon';
 import AlignCenterHorizontalIcon from '../Icons/AlignCenterHorizontalIcon';
 import WandIcon from '../Icons/WandIcon';
+import Badge from '../Badge/Badge';
 
-export function HomeComponent() {
-
+export function HomePage() {
   const [activeSection, setActiveSection] = useState('about');
 
   return (
     <div className="flex flex-col min-h-[100dvh]">
-      <Header setActiveSection={setActiveSection}/>
+      <Header setActiveSection={setActiveSection} />
       <main className="flex-1 bg-gray-50 dark:bg-black">
-        <section className="min-h-screen overflow-hidden w-full pt-12 md:pt-24">
+        <section className="flex flex-col justify-around min-h-screen overflow-hidden w-full mt-8 md:mt-14">
           <div className="container px-4 md:px-6 mx-auto">
-            <div className="flex flex-col items-center space-y-4 text-center">
-              <div className="space-y-2">
-                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-medium tracking-tighter  text-gray-900 dark:text-gray-50">
+            <div className="flex flex-col items-center space-y-6 md:space-y-8 text-center">
+              <div className="space-y-6 md:space-y-8">
+                <h1 className="text-4xl md:text-6xl lg:text-7xl font-medium tracking-tighter text-gray-900 dark:text-gray-50">
                   Building Blocks of Modern UI
                 </h1>
-                <p className="mx-auto max-w-[700px] text-gray-600 dark:text-gray-100 text-xl md:text-2xl  font-normal">
+                <p className="mx-auto max-w-[600px] text-gray-600 dark:text-gray-100 text-lg md:text-xl font-normal">
                   AstraUI is a simple, comprehensive component for building beautiful, consistent, and scalable user interfaces.
                 </p>
               </div>
@@ -55,16 +55,22 @@ export function HomeComponent() {
               </div>
             </div>
           </div>
+          <div className="container mx-auto">
+            <div className="flex flex-row justify-center items-baseline gap-x-2 text-center space-y-4">
+              <h2 className="text-xl md:text-3xl font-semibold font-sans text-gray-900 dark:text-gray-50">Inside AstraUI.</h2>
+              <p className="text-lg md:text-xl text-gray-600 dark:text-gray-100">
+                Everything you need to build great user interface on many platforms.
+              </p>
+            </div>
+          </div>
         </section>
-        <section className="w-full pb-12 md:pb-24 px-4 md:px-12">
+        <section className="flex flex-col justify-around min-h-screen w-full px-4 md:px-12">
           <div className="container px-4 md:px-6 mx-auto">
             <div className="grid items-center gap-6 lg:grid-cols-2 lg:gap-12">
               <div className="flex flex-col justify-center space-y-4">
                 <div className="space-y-2">
-                  <div className="inline-block rounded-lg bg-gray-200 px-3 py-1 text-sm dark:bg-gray-300 text-gray-900">
-                    Key Principles
-                  </div>
-                  <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-gray-900 dark:text-gray-50">AstraUI</h2>
+                  <Badge text="Key Principles" />
+                  <h2 className="text-2xl md:text-5xl font-bold tracking-tighter text-gray-900 dark:text-gray-50">AstraUI</h2>
                   <p className="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-200">
                     AstraUI provides a complete set of components and utilities carefully crafted to simplify the design and development flow.
                   </p>
@@ -98,10 +104,11 @@ export function HomeComponent() {
       </main>
       <Footer />
     </div>
-  )
+  );
 }
 
-HomeComponent.displayName = "HomeComponent"
+HomePage.displayName = "HomePage";
+
 
 interface IconCardProps {
   Icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
@@ -118,4 +125,3 @@ const IconCard: React.FC<IconCardProps> = ({ Icon, title, description }) => (
     <p className="text-gray-500 dark:text-gray-300 text-sm">{description}</p>
   </div>
 );
-
