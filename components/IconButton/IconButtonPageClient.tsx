@@ -2,11 +2,12 @@
 'use client';
 
 import React from 'react';
-import IconButton from './IconButton';
+import * as RadixIcons from '@radix-ui/react-icons';
+
 import Layout from '../Layout/Layout';
 import Badge from '../Badge/Badge';
 
-import * as RadixIcons from '@radix-ui/react-icons';
+import IconButton from './IconButton';
 
 const icons = [
     { icon: 'TrashIcon', label: 'Delete', ariaLabel: 'Delete' },

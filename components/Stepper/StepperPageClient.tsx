@@ -2,8 +2,10 @@
 'use client';
 
 import React, { useState } from 'react';
+
 import Layout from '../Layout/Layout';
 import Badge from '../Badge/Badge';
+
 import Stepper from './Stepper';
 
 const StepperPageClient: React.FC = () => {

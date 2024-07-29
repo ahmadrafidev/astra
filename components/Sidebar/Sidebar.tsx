@@ -9,6 +9,7 @@ import { useMemoizedPathname } from '../../hooks/useMemoizedPathname.jsx';
 
 import SearchBar from '../SearchBar/SearchBar';
 import { Tabs, Tab } from '../Tabs/Tabs';
+
 import { componentsList, foundationList, aboutList } from '../../utils/constants/route';
 
 export interface SidebarProps {

@@ -1,8 +1,10 @@
 'use client';
 
 import React from 'react';
+
 import Layout from '../Layout/Layout';
 import Badge from '../Badge/Badge';
+
 import { List } from './List';
 
 const ListPageClient: React.FC = () => {

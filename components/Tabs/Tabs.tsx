@@ -61,4 +61,5 @@ const Tabs: React.FC<TabsProps> = ({ children, className }) => {
 };
 
 Tabs.displayName = "Tabs";
+Tab.displayName = "Tab";
 export { Tab, Tabs };

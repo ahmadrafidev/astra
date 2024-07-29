@@ -26,7 +26,6 @@ const CheckboxPageClient: React.FC = () => {
                 className="my-4"
             />
             <p className="mt-4 text-gray-900 dark:text-gray-50">Checkbox is {isChecked ? 'checked' : 'unchecked'}</p>
-
             {/* Props Section */}
             <section className="mb-10">
                 <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Props</h2>
@@ -69,7 +68,6 @@ const CheckboxPageClient: React.FC = () => {
                     </table>
                 </div>
             </section>
-
             {/* Best Practices Section */}
             <section>
                 <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Best Practices</h2>

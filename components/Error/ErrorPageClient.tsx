@@ -64,7 +64,6 @@ const ErrorPageClient: React.FC = () => {
                     </table>
                 </div>
             </section>
-
             {/* Best Practices Section */}
             <section>
                 <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Best Practices</h2>

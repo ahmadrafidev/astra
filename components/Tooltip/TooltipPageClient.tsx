@@ -2,6 +2,7 @@
 'use client';
 
 import React from 'react';
+
 import Layout from '../Layout/Layout';
 import Badge from '../Badge/Badge';
 import Tooltip from './Tooltip';

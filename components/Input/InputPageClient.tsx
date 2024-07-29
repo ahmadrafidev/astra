@@ -6,6 +6,7 @@ import { InformationCircleIcon } from '@heroicons/react/24/outline';
 
 import Layout from '../Layout/Layout';
 import Badge from '../Badge/Badge';
+
 import Input from './Input';
 
 const InputPageClient: React.FC = () => {

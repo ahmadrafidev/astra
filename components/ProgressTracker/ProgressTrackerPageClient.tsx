@@ -31,7 +31,6 @@ const ProgressTrackerPageClient: React.FC = () => {
                     Next
                 </button>
             </div>
-
             {/* Props Section */}
             <section className="mb-10">
                 <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Props</h2>
@@ -68,7 +67,6 @@ const ProgressTrackerPageClient: React.FC = () => {
                     </table>
                 </div>
             </section>
-
             {/* Best Practices Section */}
             <section>
                 <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Best Practices</h2>

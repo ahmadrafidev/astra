@@ -2,6 +2,7 @@
 'use client';
 
 import React, { useState } from 'react';
+
 import Layout from '../Layout/Layout';
 import Badge from '../Badge/Badge';
 

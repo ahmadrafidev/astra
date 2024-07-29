@@ -1,5 +1,6 @@
 // components/Button/Button.tsx
 'use client';
+
 import React, { ReactNode, ButtonHTMLAttributes } from 'react';
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {

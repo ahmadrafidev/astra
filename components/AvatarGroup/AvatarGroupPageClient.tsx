@@ -5,6 +5,7 @@ import React from 'react';
 
 import Layout from '../Layout/Layout';
 import Badge from '../Badge/Badge';
+
 import AvatarGroup from './AvatarGroup';
 
 const AvatarGroupPageClient: React.FC = () => {
