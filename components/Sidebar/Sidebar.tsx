@@ -42,7 +42,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isSidebarOpen, closeSidebar, classNam
     const isActive = (path: string) => pathname === path;
 
     return (
-        <aside id="sidebar" aria-label="Main Sidebar" className={`fixed md:static bg-gray-50 dark:bg-black h-full md:h-auto z-40 transform ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'} md:translate-x-0 transition-transform duration-300 ease-in-out md:w-64 w-64 p-5 `}>
+        <aside id="sidebar" aria-label="Main Sidebar" role="complementary" className={`fixed md:static bg-gray-50 dark:bg-black h-full md:h-auto z-40 transform ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'} md:translate-x-0 transition-transform duration-300 ease-in-out md:w-64 w-64 p-5 `}>
             <div className="flex items-center justify-end md:hidden mb-2">
                 <button className="p-2 focus:outline-none" onClick={closeSidebar}>
                     <ArrowLeftIcon className="h-6 w-6 text-black dark:text-white" />
@@ -66,7 +66,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isSidebarOpen, closeSidebar, classNam
                 {pathname.startsWith('/about') && (
                     <>
                         <h2 id="sidebar-heading" className="text-base md:text-lg lg:text-xl font-medium my-2 lg:my-4 text-black dark:text-white px-2">About AstraUI</h2>
-                        <ul className="my-2 lg:my-4">
+                        <ul className="my-2 lg:my-4" role="navigation">
                             {aboutList.map((about) => (
                                 <li key={about.name} onClick={closeSidebar}>
                                     <Link href={about.path} className={`block rounded-xl px-2 py-3 text-sm lg:text-base font-sans font-normal ${isActive(about.path) ? 'bg-black text-white dark:bg-gray-50 dark:text-black' : 'hover:bg-gray-200 focus:bg-gray-300 dark:hover:bg-gray-700 dark:focus:bg-gray-600 text-black dark:text-white'}`} >
@@ -80,7 +80,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isSidebarOpen, closeSidebar, classNam
                 {pathname.startsWith('/foundations') && (
                     <>
                         <h2 id="sidebar-heading" className="text-base md:text-lg lg:text-xl font-medium my-3 lg:my-4 text-black dark:text-white px-2">Foundations</h2>
-                        <ul>
+                        <ul role="navigation">
                             {filteredFoundations.map((foundation) => (
                                 <li key={foundation.name} onClick={closeSidebar}>
                                     <Link href={foundation.path} className={`block rounded-xl px-2 py-2.5 text-sm lg:text-base font-sans font-normal ${isActive(foundation.path) ? 'bg-black text-white dark:bg-gray-50 dark:text-black ' : 'hover:bg-gray-200 focus:bg-gray-300 dark:hover:bg-gray-700 dark:focus:bg-gray-600 text-black dark:text-white'}`}>
@@ -92,7 +92,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isSidebarOpen, closeSidebar, classNam
                     </>
                 )}
                 {pathname.startsWith('/components') && (
-                    <div className="my-3 md:my-4">
+                    <div className="my-3 md:my-4" role="navigation">
                         <Tabs>
                             <Tab label="Web">
                                 <h2 id="sidebar-heading" className="text-base md:text-lg lg:text-xl font-medium my-2 md:my-3 text-black dark:text-white px-2">Web</h2>
