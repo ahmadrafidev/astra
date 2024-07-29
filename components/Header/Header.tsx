@@ -33,13 +33,13 @@ const Header: React.FC<HeaderProps> = ({ setActiveSection, toggleSidebar, isSide
     
 
     return (
-        <header className={`sticky top-0 px-4 md:px-12 h-14 flex items-center transition-all duration-300 ${isScrolled ? 'bg-transparent backdrop-blur-sm' : 'bg-gray-50 dark:bg-black'}`}>
+        <header className={`sticky top-0 px-4 md:px-12 h-14 flex items-center transition-all duration-300 ${isScrolled ? 'bg-transparent backdrop-blur-sm' : 'bg-gray-50 dark:bg-black'}`} aria-label="Main Navigation">
             {!isSidebarOpen && toggleSidebar && (
-                <button className="md:hidden p-2 focus:outline-none" onClick={toggleSidebar}>
+                <button className="md:hidden p-2 focus:outline-none" onClick={toggleSidebar} aria-label="Toggle Sidebar">
                     <Bars3Icon className="h-6 w-6 text-black dark:text-white" />
                 </button>
             )}
-            <Link className="flex items-center justify-center ml-2" href="/">
+            <Link className="flex items-center justify-center ml-2" href="/" aria-label="Home">
                 <div className="flex flex-row align-center gap-1 justify-start">
                     <p className="text-gray-900 text-2xl md:text-3xl font-semibold font-sans dark:text-white">
                         AstraUI
@@ -49,24 +49,24 @@ const Header: React.FC<HeaderProps> = ({ setActiveSection, toggleSidebar, isSide
                     </svg>
                 </div>
             </Link>
-            <nav className="ml-auto flex gap-2 sm:gap-3 items-center">
-                <Link className="text-sm font-medium" href="/about" onClick={() => setActiveSection('about')}>
+            <nav className="ml-auto flex gap-2 sm:gap-3 items-center" aria-label="Primary Navigation">
+                <Link className="text-sm font-medium" href="/about" onClick={() => setActiveSection('about')} aria-label="About">
                     <div className="inline-block rounded-lg text-gray-900 hover:bg-gray-200 px-3 py-1 text-sm hover:dark:bg-gray-500 dark:text-white">
                         About
                     </div>
                 </Link>
-                <Link className="text-sm font-medium" href="/foundations" onClick={() => setActiveSection('foundations')}>
+                <Link className="text-sm font-medium" href="/foundations" onClick={() => setActiveSection('foundations')} aria-label="Foundation">
                     <div className="inline-block rounded-lg text-gray-900 hover:bg-gray-200 px-3 py-1 text-sm hover:dark:bg-gray-500 dark:text-white">
                         Foundations
                     </div>
                 </Link>
-                <Link className="text-sm font-medium" href="/components" onClick={() => setActiveSection('components')}>
+                <Link className="text-sm font-medium" href="/components" onClick={() => setActiveSection('components')} aria-label="Components">
                     <div className="inline-block rounded-lg hover:bg-gray-200 px-3 py-1 text-sm hover:dark:bg-gray-500 text-gray-900 dark:text-white">
                         Components
                     </div>
                 </Link>
                 <div className="hidden md:block h-6 border-l border-gray-300 dark:border-gray-600 mx-2"></div> 
-                <Link href="https://github.com/ahmadrafidev/astra" passHref>
+                <Link href="https://github.com/ahmadrafidev/astra" passHref aria-label="Github Image">
                     <Image quality={100} src="/icons/github-light.webp" alt="GitHub Light Icon" width={20} height={20} className="block dark:hidden"/>
                     <Image quality={100} src="/icons/github-dark.webp" alt="GitHub Dark Icon" width={20} height={20} className="hidden dark:block bg-white rounded-full"/>
                 </Link>
