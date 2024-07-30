@@ -2,6 +2,8 @@
   "name": "astra-ui",
   "version": "1.0.0",
   "private": true,
+  "author": "Ahmad Rafi Wirana <me@ahmadrafi.dev> (https://ahmadrafi.dev/)",
+  "license": "MIT",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
