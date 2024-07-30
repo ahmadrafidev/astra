@@ -16,7 +16,7 @@ const DropdownPageClient: React.FC = () => {
     return (
         <Layout>
             <Badge text="Components" />
-            <h1 className="text-2xl md:text-3xl font-medium mb-4 text-gray-900 dark:text-gray-50">Dropdown</h1>
+            <h1 className="text-2xl md:text-4xl font-medium mb-4 text-gray-900 dark:text-gray-50">Dropdown</h1>
             <Dropdown 
                 options={['Option 1', 'Option 2', 'Option 3']} 
                 onSelect={handleSelect} 

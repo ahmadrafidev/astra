@@ -22,10 +22,10 @@ const AlphabeticalList: React.FC = () => {
                     className="block border p-4 rounded-lg transition-all duration-300 hover:shadow-lg hover:bg-gray-100 dark:hover:bg-gray-800 dark:border-gray-700"
                 >
                     <div>
-                        <h2 className="text-gray-900 dark:text-gray-50 text-lg md:text-xl">
+                        <h2 className="text-gray-900 dark:text-white text-lg md:text-xl font-normal">
                             {item.name}
                         </h2>
-                        <p className="text-sm text-gray-900 dark:text-gray-100 mt-2 leading-loose">
+                        <p className="text-sm text-gray-700 dark:text-gray-100 mt-2 leading-loose font-normal">
                             {item.description}
                         </p>
                     </div>

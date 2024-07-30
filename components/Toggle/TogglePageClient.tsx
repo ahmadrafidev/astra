@@ -11,7 +11,7 @@ const TogglePageClient: React.FC = () => {
     return (
         <Layout>
             <Badge text="Components" />
-            <h1 className="text-2xl md:text-3xl font-medium mb-4 text-gray-900 dark:text-gray-50">Toggle</h1>
+            <h1 className="text-2xl md:text-4xl font-medium mb-4 text-gray-900 dark:text-gray-50">Toggle</h1>
             <div className="space-y-6">
                 <Toggle ariaLabel="Toggle switch" className="max-w-md" />
             </div>

@@ -20,7 +20,7 @@ const NavigationBarPage: React.FC = () => {
             {/* Header Content */}
             <section className="mb-5">
                 <div className="flex flex-col">
-                    <h1 className="text-2xl md:text-3xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-3 md:mb-4">Navigation Bar</h1>
+                    <h1 className="text-2xl md:text-4xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-3 md:mb-4">Navigation Bar</h1>
                     <p className="ext-sm md:text-base font-normal font-sans text-gray-900 dark:text-gray-50">
                         The Navigation Bar component is a customizable navigation solution for your application. It supports a variety of links, branding, and right-side content like a theme toggle.
                     </p>

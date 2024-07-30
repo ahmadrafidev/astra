@@ -26,7 +26,7 @@ const AccordionPage: React.FC = () => {
             </section>
             {/* Accordion Variants Section */}
             <section className="mb-5">
-                <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Variants</h2>
+                <h2 className="text-lg md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Variants</h2>
                 <div className="space-y-4">
                     <Accordion className="max-w-md mx-auto">
                         <AccordionItem title="Section 1">

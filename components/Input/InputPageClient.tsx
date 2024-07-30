@@ -15,7 +15,7 @@ const InputPageClient: React.FC = () => {
     return (
         <Layout>
             <Badge text="Components" />
-            <h1 className="text-xl md:text-2xl font-medium mb-4 text-gray-900 dark:text-gray-50">Input</h1>
+            <h1 className="text-2xl md:text-4xl font-medium mb-4 text-gray-900 dark:text-gray-50">Input</h1>
             <div className="space-y-6">
                 <Input
                     type="email"

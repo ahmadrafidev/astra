@@ -9,7 +9,7 @@ const CategoricalList: React.FC = () => {
         <>
             {Object.entries(categorizedComponentsList).map(([category, components]) => (
                 <div key={category} className="mt-6">
-                    <h3 className="text-base md:text-lg lg:text-xl font-medium mb-2 text-gray-900 dark:text-gray-50 capitalize">
+                    <h3 className="text-lg md:text-xl lg:text-2xl font-medium mb-2 text-gray-900 dark:text-gray-50 capitalize">
                         {category.replace(/([A-Z])/g, ' $1')}
                     </h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-4">
@@ -20,10 +20,10 @@ const CategoricalList: React.FC = () => {
                                 className="block border p-4 rounded-lg transition-all duration-300 hover:shadow-lg hover:bg-gray-100 dark:hover:bg-gray-800 dark:border-gray-700"
                             >
                                 <div>
-                                    <h2 className="text-gray-900 dark:text-gray-50 text-lg md:text-xl">
+                                    <h2 className="text-gray-900 dark:text-white text-lg md:text-xl font-normal">
                                         {item.name}
                                     </h2>
-                                    <p className="text-sm text-gray-900 dark:text-gray-100 mt-2 leading-loose">
+                                    <p className="text-sm text-gray-700 dark:text-gray-100 mt-2 leading-loose font-normal">
                                         {item.description}
                                     </p>
                                 </div>

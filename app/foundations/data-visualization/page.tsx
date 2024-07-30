@@ -46,34 +46,28 @@ const AstraDataVisualizationPage: React.FC = () => {
                         </li>
                     </ul>
                 </section>
-                <section>
+                <section className="mb-3 md:mb-4">
                     <h2 className="text-xl md:text-2xl font-medium mb-4 text-gray-900 dark:text-gray-50">Use Cases</h2>
                     <ul className="text-gray-900 dark:text-gray-50 space-y-3 md:space-y-4">
                         <li>
-                            <h3 className="text-lg font-medium">
-                                Monitoring
-                            </h3>
-                            
+                            <h3 className="text-lg font-medium">Monitoring</h3>
+                            <p className="text-base font-sans font-normal">Track key metrics and performance indicators in real-time to make informed decisions and take immediate action.</p>
                         </li>
                         <li>
-                            <h3 className="text-lg font-medium">
-                                Analysis
-                            </h3>   
+                            <h3 className="text-lg font-medium">Analysis</h3>
+                            <p className="text-base font-sans font-normal">Examine data to identify patterns, trends, and insights that can drive strategic initiatives and improvements.</p>
                         </li>
                         <li>
-                            <h3 className="text-lg font-medium">
-                                Exploration
-                            </h3>  
+                            <h3 className="text-lg font-medium">Exploration</h3>
+                            <p className="text-base font-sans font-normal">Dive deep into data sets to uncover hidden relationships and generate new hypotheses for further investigation.</p>
                         </li>
                         <li>
-                            <h3 className="text-lg font-medium">
-                                Optimization
-                            </h3> 
+                            <h3 className="text-lg font-medium">Optimization</h3>
+                            <p className="text-base font-sans font-normal">Optimize processes and operations by visualizing data to identify inefficiencies and areas for enhancement.</p>
                         </li>
                         <li>
-                            <h3 className="text-lg font-medium">
-                                Reporting
-                            </h3>
+                            <h3 className="text-lg font-medium">Reporting</h3>
+                            <p className="text-base font-sans font-normal">Communicate findings and results through clear, concise, and impactful visual reports that drive stakeholder engagement.</p>
                         </li>
                     </ul>
                 </section>
@@ -82,4 +76,5 @@ const AstraDataVisualizationPage: React.FC = () => {
     );
 };
 
+AstraDataVisualizationPage.displayName = "AstraDataVisualizationPage"
 export default AstraDataVisualizationPage;

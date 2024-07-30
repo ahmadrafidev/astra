@@ -12,7 +12,7 @@ const CollapsePageClient: React.FC = () => {
     return (
         <Layout>
             <Badge text="Components" />
-            <h1 className="text-2xl md:text-3xl font-medium mb-4 text-gray-900 dark:text-gray-50">Collapse</h1>
+            <h1 className="text-2xl md:text-4xl font-medium mb-4 text-gray-900 dark:text-gray-50">Collapse</h1>
             <Collapse title="Collapse Section 1">
                 <p className="text-gray-700 dark:text-gray-300">
                     This is the content for the first collapse section. It can include any other components or HTML elements.

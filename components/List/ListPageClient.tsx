@@ -13,7 +13,7 @@ const ListPageClient: React.FC = () => {
     return (
         <Layout>
             <Badge text="Components" />
-            <h1 className="text-xl md:text-2xl font-medium mb-4 text-gray-900 dark:text-gray-50">List</h1>
+            <h1 className="text-2xl md:text-4xl font-medium mb-4 text-gray-900 dark:text-gray-50">List</h1>
             <List items={items} />
             <section className="mb-10">
                 <h2 className="text-2xl md:text-3xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Props</h2>

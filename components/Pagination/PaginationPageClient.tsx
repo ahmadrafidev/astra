@@ -20,7 +20,7 @@ const PaginationPageClient: React.FC = () => {
     return (
         <Layout>
             <Badge text="Components" />
-            <h1 className="text-2xl md:text-3xl font-medium mb-4 text-gray-900 dark:text-gray-50">Pagination</h1>
+            <h1 className="text-2xl md:text-4xl font-medium mb-4 text-gray-900 dark:text-gray-50">Pagination</h1>
             <p className="text-sm md:text-base font-normal font-sans text-gray-900 dark:text-gray-50">
                 Pagination allows users to navigate through large sets of data in a structured manner.
             </p>

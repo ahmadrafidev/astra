@@ -19,7 +19,7 @@ const BreadcrumbsPageClient: React.FC = () => {
     return (
         <Layout>
             <Badge text="Components" />
-            <h1 className="text-2xl md:text-3xl font-medium mb-4 text-gray-900 dark:text-gray-50">Breadcrumbs</h1>
+            <h1 className="text-2xl md:text-4xl font-medium mb-4 text-gray-900 dark:text-gray-50">Breadcrumbs</h1>
             <Breadcrumbs items={items} className="mb-6" />
             {/* Props Section */}
             <section className="my-4">

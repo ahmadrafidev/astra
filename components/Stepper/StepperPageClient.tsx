@@ -15,7 +15,7 @@ const StepperPageClient: React.FC = () => {
     return (
         <Layout>
             <Badge text="Components" />
-            <h1 className="text-2xl md:text-3xl font-medium mb-4 text-gray-900 dark:text-gray-50">Stepper</h1>
+            <h1 className="text-2xl md:text-4xl font-medium mb-4 text-gray-900 dark:text-gray-50">Stepper</h1>
             <Stepper steps={steps} currentStep={currentStep} className="mb-6" />
             {/* Props Section */}
             <section className="mb-10">

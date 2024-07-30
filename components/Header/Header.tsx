@@ -45,7 +45,7 @@ const Header: React.FC<HeaderProps> = ({ setActiveSection, toggleSidebar, isSide
             )}
             <Link className="flex items-center justify-center ml-2" href="/" aria-label="Home">
                 <div className="flex flex-row align-center gap-1 justify-start">
-                    <p className="text-gray-900 text-2xl md:text-3xl font-semibold font-sans dark:text-white">
+                    <p className="text-gray-900 dark:text-white text-2xl md:text-4xl font-semibold font-sans ">
                         AstraUI
                     </p>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="h-6 w-6 text-gray-900 dark:text-gray-50">

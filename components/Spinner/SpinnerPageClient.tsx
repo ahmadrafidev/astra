@@ -12,7 +12,7 @@ const SpinnerPageClient: React.FC = () => {
     return (
         <Layout>
             <Badge text="Components" />
-            <h1 className="text-2xl md:text-3xl font-medium mb-4 text-gray-900 dark:text-gray-50">Spinner</h1>
+            <h1 className="text-2xl md:text-4xl font-medium mb-4 text-gray-900 dark:text-gray-50">Spinner</h1>
             <div className="space-y-6">
                 <Spinner size={24} className="text-blue-500" />
                 <Spinner size={32} className="text-red-500" />

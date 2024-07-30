@@ -23,3 +23,5 @@ export default function NotFound() {
         </main>
     );
 }
+
+NotFound.displayName = "NotFound"
