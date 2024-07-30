@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 const AboutAstraPage: React.FC = () => {
     return (
         <Layout>
-            <Badge text="About" />
+            <Badge ariaLabel="About Title Badge" text="About" />
             <h1 className="text-2xl md:text-4xl font-medium mb-4 text-gray-900 dark:text-white">Overview</h1>
             <div className="mb-8 text-justify">
                 <section className="mb-3 md:mb-4">

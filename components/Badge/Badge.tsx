@@ -10,6 +10,7 @@ export interface BadgeProps {
     textColor?: string;
     darkTextColor?: string;
     size?: 'small' | 'medium' | 'large';
+    ariaLabel?: string;
 }
 
 const Badge: React.FC<BadgeProps> = ({
@@ -21,7 +22,8 @@ const Badge: React.FC<BadgeProps> = ({
     darkColor = 'bg-gray-700',
     textColor = 'text-gray-900',
     darkTextColor = 'text-gray-100',
-    size = 'medium' 
+    size = 'medium',
+    ariaLabel
 }) => {
 
     const sizeClasses = {
@@ -31,7 +33,7 @@ const Badge: React.FC<BadgeProps> = ({
     };
 
     return (
-        <span className={`inline-block rounded-lg mb-2 ${color} dark:${darkColor} ${textColor} dark:${darkTextColor} ${sizeClasses[size]} ${className}`}>
+        <span aria-label={ariaLabel} className={`inline-block rounded-lg mb-2 ${color} dark:${darkColor} ${textColor} dark:${darkTextColor} ${sizeClasses[size]} ${className}`}>
             {text || (count !== undefined && (count > maxCount ? `${maxCount}+` : count))}
         </span>
     );

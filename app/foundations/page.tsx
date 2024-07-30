@@ -20,7 +20,7 @@ const AstraFoundationPage: React.FC = () => {
 
     return (
         <Layout>
-            <Badge text="Foundations"/>
+            <Badge ariaLabel="Foundations Title Badge" text="Foundations"/>
             <h1 className="text-2xl md:text-4xl font-medium mb-3 text-gray-900 dark:text-gray-50">Foundations</h1>
             <div className="mb-8">
                 <p className="mb-4 text-md text-gray-800 dark:text-white leading-loose text-justify">

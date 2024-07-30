@@ -1,4 +1,10 @@
 import Link from 'next/link';
+import type { Metadata } from "next";
+
+export const metadata = {
+    title: "Page Not Found - AstraUI",
+    description: "The page you are looking for doesn't exist or has been moved.",
+};
 
 export default function NotFound() {
     return (

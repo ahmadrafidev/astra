@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 const AstraComponentPage: React.FC = () => {
     return (
         <Layout>
-            <Badge text="Components" />
+            <Badge ariaLabel="Components Title Badge" text="Components" />
             <h1 className="text-2xl md:text-4xl font-medium mb-3 text-gray-900 dark:text-gray-50">Components</h1>
             <div className="mb-8">
                 <p className="mb-4 text-md text-gray-800 dark:text-white leading-loose text-justify">
