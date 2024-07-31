@@ -6,42 +6,42 @@ export const foundationList = [
     { 
         name: 'Accessibility', 
         path: '/foundations/accessibility',
-        description: 'Explore the accessibility standards that AstraUI adheres to, ensuring inclusivity for all users.' 
+        description: 'Learn into our strategies for inclusive access and usability for everyone.' 
     },
     { 
-        name: 'Brand expression', 
+        name: 'Brand Expression', 
         path: '/foundations/brand',
-        description: 'Learn how AstraUI maintains brand consistency across various components and designs.' 
+        description: 'Discover how we ensure a consistent brand identity across all designs.' 
     },
     { 
         name: 'Color', 
         path: '/foundations/color',
-        description: 'Explore the color palette used in AstraUI, including primary, secondary, and neutral colors.' 
+        description: 'Explore our color palette and learn how to create a harmonious look.' 
     },
     { 
-        name: 'Content standard', 
+        name: 'Content Standard', 
         path: '/foundations/content',
-        description: 'Understand the content standards that guide the creation and presentation of information within AstraUI.' 
+        description: 'Uncover our guidelines for creating clear and engaging content.' 
     },
     { 
-        name: 'Data visualization', 
+        name: 'Data Visualization', 
         path: '/foundations/data-visualization',
-        description: 'Explore the data visualization techniques and standards used in AstraUI.' 
+        description: 'Explore techniques for presenting data in a clear and impactful way.' 
     },
     { 
         name: 'Motion', 
         path: '/foundations/motion',
-        description: 'Discover the motion guidelines and principles in AstraUI to create fluid and responsive animations.' 
+        description: 'Understand principles for creating smooth and responsive animations.' 
     },
     { 
-        name: 'Screen sizes', 
+        name: 'Screen Sizes', 
         path: '/foundations/screen-sizes',
-        description: 'Learn about the responsive design principles and screen size guidelines in AstraUI for Web, Android, and iOS.' 
+        description: 'See how we design responsive interfaces for all devices.'
     },
     { 
         name: 'Typography', 
         path: '/foundations/typography',
-        description: 'Understand the typographic styles and standards used in AstraUI to ensure readability and accessibility.' 
+        description: 'Discover typography styles that enhance readability and accessibility.' 
     },
 ];
 
