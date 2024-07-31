@@ -19,19 +19,19 @@ const AstraComponentPage: React.FC = () => {
             <Badge ariaLabel="Components Title Badge" text="Components" />
             <h1 className="text-2xl md:text-4xl font-medium mb-3 text-gray-900 dark:text-gray-50">Components</h1>
             <div className="mb-8">
-                <p className="mb-4 text-md text-gray-800 dark:text-white leading-loose text-justify">
-                    The components section offers a comprehensive overview of every UI component in AstraUI.
-                    Each component is designed to be customizable, accessible, and easy to integrate into projects across web, Android, and iOS ecosystems.
-                    Explore the documentation for detailed information on features, usage, and customization options.
+                <p className="text-sm md:text-base mb-4 text-gray-700 dark:text-gray-50 leading-loose text-justify">
+                    The Components section provides an in-depth look at each UI component in AstraUI. 
+                    Designed for customization, accessibility, and seamless use, these components are ready to enhance your projects across web, Android, and iOS platforms. 
+                    Explore the documentation for detailed insights on features, usage, and customization options.
                 </p>
-                <div className="my-8">
+                <div className="my-2 md:my-4">
                     <Tabs>
-                    <Tab label="Alphabetical">
-                        <AlphabeticalList />
-                    </Tab>
-                    <Tab label="Categorical">
-                        <CategoricalList />
-                    </Tab>
+                        <Tab label="Alphabetical">
+                            <AlphabeticalList />
+                        </Tab>
+                        <Tab label="Categorical">
+                            <CategoricalList />
+                        </Tab>
                     </Tabs>
                 </div>
             </div>

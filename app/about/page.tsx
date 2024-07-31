@@ -8,7 +8,7 @@ import Badge from '../../components/Badge/Badge';
 
 export const metadata: Metadata = {
     title: "Overview",
-    description: "Explore the core principles and components of AstraUI, designed to facilitate the creation of accessible, consistent, and reusable user interfaces.",
+    description: "The core principles of AstraUI, designed to facilitate the creation of accessible, consistent, and reusable user interfaces.",
 };
 
 const AboutAstraPage: React.FC = () => {
@@ -17,14 +17,14 @@ const AboutAstraPage: React.FC = () => {
             <Badge ariaLabel="About Title Badge" text="About" />
             <h1 className="text-2xl md:text-4xl font-medium mb-4 text-gray-900 dark:text-white">Overview</h1>
             <div className="mb-8 text-justify">
-                <section className="mb-3 md:mb-4">
+                <div className="mb-3 md:mb-4">
                     <h2 className="text-xl md:text-2xl font-medium text-gray-900 dark:text-gray-50 mb-1">Purpose</h2>
-                    <p className="text-sm md:text-base font-sans text-gray-700 dark:text-gray-50 text-justify">
+                    <p className="text-sm md:text-base font-sans text-gray-700 dark:text-gray-50 text-justify leading-relaxed">
                         AstraUI aims to simplifies User Interface development by providing a unified component library that works seamlessly across web, iOS, and Android platforms. 
                         This empowers developers and designers to create consistent, accessible, and reusable components, driving innovation and excellence in User Interface design.
                     </p>
-                </section>
-                <section className="mb-3 md:mb-4">
+                </div>
+                <div className="mb-3 md:mb-4">
                     <h2 className="text-xl md:text-2xl font-medium mb-4 text-gray-900 dark:text-gray-50">Design Principles</h2>
                     <ul className="space-y-3 md:space-y-5">
                         <li>
@@ -63,15 +63,15 @@ const AboutAstraPage: React.FC = () => {
                             </p>
                         </li>
                     </ul>
-                </section>
-                <section className="flex flex-col">
+                </div>
+                <div className="flex flex-col">
                     <h2 className="text-xl md:text-2xl font-medium mb-1 text-gray-900 dark:text-gray-50">Why AstraUI?</h2>
                     <p className="text-sm md:text-base mb-4 text-gray-700 dark:text-gray-50 font-sans leading-5 text-justify">
                         AstraUI is your ultimate toolkit for creating beautiful, functional, and inclusive applications across web, iOS, and Android. 
                         Whether you&apos;re building a simple website or a complex app, AstraUI provides the foundational components you need to get started quickly and efficiently.
                         Experience seamless integration and consistent design across all platforms with AstraUI.
                     </p>
-                </section>
+                </div>
             </div>
         </Layout>
     );

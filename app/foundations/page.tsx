@@ -9,7 +9,7 @@ import { foundationList } from '../../utils/constants/route';
 
 export const metadata: Metadata = {
     title: "Foundation",
-    description: "The building blocks of modern UI",
+    description: "The fundamental principles and philosophy of the AstraUI design system.",
 };
 
 const AstraFoundationPage: React.FC = () => {
@@ -23,7 +23,7 @@ const AstraFoundationPage: React.FC = () => {
             <Badge ariaLabel="Foundations Title Badge" text="Foundations"/>
             <h1 className="text-2xl md:text-4xl font-medium mb-3 text-gray-900 dark:text-gray-50">Foundations</h1>
             <div className="mb-8">
-                <p className="text-sm md:text-base mb-4 text-md text-gray-700 dark:text-gray-50 leading-loose text-justify">
+                <p className="text-sm md:text-base mb-4 text-gray-700 dark:text-gray-50 leading-loose text-justify">
                     The Foundation section outlines the fundamental principles and philosophy of the AstraUI design system. 
                     It provides a comprehensive understanding of the core values, objectives, and guidelines that guide and inspire every component. 
                     This ensures consistency, usability, and aesthetic coherence across all user interfaces, facilitating a seamless and engaging user experience.
