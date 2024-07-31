@@ -55,17 +55,17 @@ const Header: React.FC<HeaderProps> = ({ setActiveSection, toggleSidebar, isSide
             </Link>
             <nav className="ml-auto flex gap-2 sm:gap-3 items-center" aria-label="Primary Navigation">
                 <Link className="hidden md:inline-block text-sm font-medium" href="/about" onClick={() => setActiveSection('about')} aria-label="About">
-                    <div className="inline-block rounded-lg text-gray-900 hover:bg-gray-200 px-3 py-1 text-sm hover:dark:bg-gray-500 dark:text-white">
+                    <div className="inline-block rounded-lg text-gray-900 hover:bg-gray-200 px-3 py-1 text-sm hover:dark:bg-gray-600 dark:text-white">
                         About
                     </div>
                 </Link>
                 <Link className="hidden md:inline-block text-sm font-medium" href="/foundations" onClick={() => setActiveSection('foundations')} aria-label="Foundation">
-                    <div className="inline-block rounded-lg text-gray-900 hover:bg-gray-200 px-3 py-1 text-sm hover:dark:bg-gray-500 dark:text-white">
+                    <div className="inline-block rounded-lg text-gray-900 hover:bg-gray-200 px-3 py-1 text-sm hover:dark:bg-gray-600 dark:text-white">
                         Foundations
                     </div>
                 </Link>
                 <Link className="hidden md:inline-block text-sm font-medium" href="/components" onClick={() => setActiveSection('components')} aria-label="Components">
-                    <div className="inline-block rounded-lg hover:bg-gray-200 px-3 py-1 text-sm hover:dark:bg-gray-500 text-gray-900 dark:text-white">
+                    <div className="inline-block rounded-lg hover:bg-gray-200 px-3 py-1 text-sm text-gray-900 hover:dark:bg-gray-600 dark:text-white">
                         Components
                     </div>
                 </Link>

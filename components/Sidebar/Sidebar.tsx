@@ -59,7 +59,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isSidebarOpen, closeSidebar, classNam
                     Components
                 </Link>
             </div>
-            <div className="w-full overflow-y-auto">
+            <div className="w-full">
                 <div className="hidden md:block">
                     <SearchBar onSearch={handleSearch} />
                 </div>
