@@ -13,6 +13,10 @@ export const metadata: Metadata = {
     template: '%s - AstraUI',
   },
   description: 'The building blocks of modern UI',
+  robots: {
+    index: true, 
+    follow: true,
+  },
 };
 
 export default function RootLayout({
