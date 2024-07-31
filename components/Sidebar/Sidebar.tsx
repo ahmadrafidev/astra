@@ -44,7 +44,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isSidebarOpen, closeSidebar, classNam
     return (
         <aside id="sidebar" aria-label="Main Sidebar" className={`fixed md:static bg-gray-50 dark:bg-black h-full md:h-auto z-40 transform ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'} md:translate-x-0 transition-transform duration-300 ease-in-out md:w-64 w-64 p-5`}>
             <div className="flex items-center justify-end md:hidden mb-2">
-                <button className="p-2 focus:outline-none" onClick={closeSidebar}>
+                <button className="p-2 focus:outline-none" onClick={closeSidebar} aria-label="Close Sidebar Toggle">
                     <ArrowLeftIcon className="h-6 w-6 text-black dark:text-white" />
                 </button>
             </div>
