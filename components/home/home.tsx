@@ -28,7 +28,7 @@ export function HomePage() {
           <div className="container px-4 md:px-6 mx-auto">
             <div className="flex flex-col items-center space-y-6 md:space-y-8 text-center">
               <div className="space-y-6 md:space-y-8">
-                <h1 className="text-4xl md:text-6xl lg:text-7xl font-medium tracking-tighter text-gray-900 dark:text-gray-50">
+                <h1 className="text-4xl md:text-6xl lg:text-7xl font-semibold tracking-tighter text-gray-900 dark:text-gray-50">
                   Building Blocks of Modern UI
                 </h1>
                 <p className="mx-auto max-w-[600px] text-gray-600 dark:text-gray-100 text-lg md:text-xl font-normal">
