@@ -18,7 +18,7 @@ const AstraDataVisualizationPage: React.FC = () => {
             <Badge text="Foundations" />
             <main>
                 <section className="mb-3 md:mb-4">
-                    <h1 className="text-2xl md:text-4xl font-medium mb-4 text-gray-900 dark:text-gray-50">Data Visualization</h1>
+                    <h1 className="text-2xl md:text-3xl font-medium mb-4 text-gray-900 dark:text-gray-50">Data Visualization</h1>
                     <p className="mb-4 text-gray-900 dark:text-gray-50 text-justify font-normal">
                         Data visualization involves the graphical representation of data to improve understanding and decision-making. 
                         Effective data visualizations are accurate, purposeful, and responsive, ensuring they convey information clearly across different devices and contexts. 

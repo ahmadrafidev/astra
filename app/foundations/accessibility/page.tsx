@@ -17,7 +17,7 @@ const AstraA11yPage: React.FC = () => {
             <Badge text="Foundations" />
             <main>
                 <section className="mb-3 md:mb-4">
-                    <h1 className="text-2xl md:text-4xl font-medium mb-4 text-gray-900 dark:text-gray-50">Accessibility (A11y)</h1>
+                    <h1 className="text-2xl md:text-3xl font-medium mb-4 text-gray-900 dark:text-gray-50">Accessibility (A11y)</h1>
                     <p className="mb-4 text-gray-900 dark:text-gray-50 text-justify font-normal">
                         AstraUI is committed to creating an inclusive experience for all users, including people with disabilities. 
                         Therefore, AstraUI follows accessibility standards in all its components and interfaces to ensure usability for everyone, 

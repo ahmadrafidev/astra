@@ -19,7 +19,7 @@ const AstraContentStandardPage: React.FC = () => {
             <Badge text="Foundations" />
             <main>
                 <section className="mb-3 md:mb-4">
-                    <h1 className="text-2xl md:text-4xl font-medium mb-4 text-gray-900 dark:text-gray-50">Content Standard</h1>
+                    <h1 className="text-2xl md:text-3xl font-medium mb-4 text-gray-900 dark:text-gray-50">Content Standard</h1>
                     <p className="mb-4 text-gray-900 dark:text-gray-50 text-justify font-normal">
                         AstraUI emphasizes clarity, consistency, and conciseness in all written content. 
                         By following established guidelines for tone, voice, and style, 

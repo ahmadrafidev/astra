@@ -18,7 +18,7 @@ const AstraMotionPage: React.FC = () => {
             <Badge text="Foundations" />
             <main>
                 <section className="mb-3 md:mb-4">
-                    <h1 className="text-2xl md:text-4xl font-medium mb-4 text-gray-900 dark:text-gray-50">Motion</h1>
+                    <h1 className="text-2xl md:text-3xl font-medium mb-4 text-gray-900 dark:text-gray-50">Motion</h1>
                     <p className="mb-4 text-gray-900 dark:text-gray-50 text-justify font-normal">
                         Motion is a critical aspect of modern UI design, bringing interfaces to life and enhancing user experience. At AstraUI, we believe that well-crafted motion can make digital experiences feel more intuitive, engaging, and delightful.
                     </p>

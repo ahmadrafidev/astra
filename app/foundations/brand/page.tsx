@@ -19,7 +19,7 @@ const AstraBrandPage: React.FC = () => {
             <Badge text="Foundations" />
             <main>
                 <section className="mb-3 md:mb-4">
-                    <h1 className="text-2xl md:text-4xl font-medium mb-4 text-gray-900 dark:text-gray-50">Brand Expression</h1>
+                    <h1 className="text-2xl md:text-3xl font-medium mb-4 text-gray-900 dark:text-gray-50">Brand Expression</h1>
                     <p className="mb-4 text-gray-900 dark:text-gray-50 text-justify font-normal">
                         AstraUI captures the brand's identity through consistent visuals, messaging, and tone.
                         This coherence across all touchpoints strengthens brand recognition and creates a memorable and engaging user experience.
