@@ -13,41 +13,15 @@ export interface TabProps {
 }
 
 export interface TabsProps {
+    theme?: string;
     children: React.ReactElement<TabProps>[];
     className?: string;
 }
 
 const Tab: React.FC<TabProps> = ({ children, className, ...props }) => <div role="tabpanel">{children}</div>;
 
-const Tabs: React.FC<TabsProps> = ({ children, className }) => {
+const Tabs: React.FC<TabsProps> = ({ theme, children, className }) => {
     const [activeTab, setActiveTab] = useState(0);
-    const [theme, setTheme] = useState('light');
-
-    useEffect(() => {
-        const savedTheme = localStorage.getItem('theme') || 'system';
-        setTheme(savedTheme);
-
-        const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-        const handleChange = () => {
-            if (savedTheme === 'system') {
-                setTheme(mediaQuery.matches ? 'dark' : 'light');
-            }
-        };
-
-        if (savedTheme === 'system') {
-            setTheme(mediaQuery.matches ? 'dark' : 'light');
-        }
-
-        mediaQuery.addEventListener('change', handleChange);
-        return () => mediaQuery.removeEventListener('change', handleChange);
-    }, []);
-
-    useEffect(() => {
-        const savedTheme = localStorage.getItem('theme') || 'system';
-        if (savedTheme !== 'system') {
-            setTheme(savedTheme);
-        }
-    }, [theme]);
 
     const handleKeyDown = (event: React.KeyboardEvent, index: number) => {
         if (event.key === 'ArrowRight') {
@@ -68,7 +42,7 @@ const Tabs: React.FC<TabsProps> = ({ children, className }) => {
                         aria-controls={`tabpanel-${index}`}
                         id={`tab-${index}`}
                         tabIndex={index === activeTab ? 0 : -1}
-                        className={`py-1 px-4 rounded-lg flex items-center ${
+                        className={`py-1 px-4 rounded-lg flex items-center content-center ${
                             index === activeTab
                                 ? 'bg-white dark:bg-gray-900 text-black dark:text-white shadow-lg text-base md:text-lg font-normal'
                                 : 'text-gray-700 dark:text-gray-50 hover:bg-white dark:hover:bg-gray-900 hover:text-black dark:hover:text-white'

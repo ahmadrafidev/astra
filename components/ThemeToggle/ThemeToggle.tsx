@@ -1,11 +1,23 @@
-"use client";
+// components/ThemeToggle/ThemeToggle.tsx
+'use client'
 
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { SunIcon, MoonIcon, ComputerDesktopIcon } from '@heroicons/react/24/solid';
 
 const ThemeToggle: React.FC = () => {
     const [theme, setTheme] = useState('system');
     const [dropdownOpen, setDropdownOpen] = useState(false);
+
+    const applyTheme = useCallback((theme: string) => {
+        if (theme === 'system') {
+            const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            document.documentElement.classList.toggle('dark', systemTheme === 'dark');
+            dispatchThemeChangeEvent(systemTheme);
+        } else {
+            document.documentElement.classList.toggle('dark', theme === 'dark');
+            dispatchThemeChangeEvent(theme);
+        }
+    }, []);
 
     useEffect(() => {
         const savedTheme = localStorage.getItem('theme') || 'system';
@@ -21,15 +33,11 @@ const ThemeToggle: React.FC = () => {
 
         mediaQuery.addEventListener('change', handleChange);
         return () => mediaQuery.removeEventListener('change', handleChange);
-    }, [theme]);
+    }, [applyTheme, theme]);
 
-    const applyTheme = (theme: string) => {
-        if (theme === 'system') {
-            const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-            document.documentElement.classList.toggle('dark', systemTheme === 'dark');
-        } else {
-            document.documentElement.classList.toggle('dark', theme === 'dark');
-        }
+    const dispatchThemeChangeEvent = (theme: string) => {
+        const event = new CustomEvent('themeChange', { detail: theme });
+        window.dispatchEvent(event);
     };
 
     const handleThemeChange = (newTheme: string) => {
@@ -51,7 +59,7 @@ const ThemeToggle: React.FC = () => {
                 ) : theme === 'dark' ? (
                     <MoonIcon className="h-5 w-5 text-gray-400" />
                 ) : (
-                    <ComputerDesktopIcon className="h-6 w-6 text-gray-600 dark:text-gray-400" />
+                    <ComputerDesktopIcon className="h-6 w-5 text-gray-600 dark:text-gray-400" />
                 )}
             </button>
             {dropdownOpen && (

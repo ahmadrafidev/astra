@@ -1,9 +1,8 @@
 // components/Sidebar/Sidebar.tsx
 'use client'
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import { ArrowLeftIcon } from '@heroicons/react/24/outline';
 
 import { useMemoizedPathname } from '../../hooks/useMemoizedPathname.jsx';
@@ -24,6 +23,37 @@ const Sidebar: React.FC<SidebarProps> = ({ isSidebarOpen, closeSidebar, classNam
     const pathname = useMemoizedPathname();
     const [filteredComponents, setFilteredComponents] = useState(componentsList);
     const [filteredFoundations, setFilteredFoundations] = useState(foundationList);
+    const [theme, setTheme] = useState('light');
+
+    useEffect(() => {
+        const savedTheme = localStorage.getItem('theme') || 'system';
+        setTheme(savedTheme);
+
+        const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+        const handleChange = () => {
+            if (savedTheme === 'system') {
+                setTheme(mediaQuery.matches ? 'dark' : 'light');
+            }
+        };
+
+        if (savedTheme === 'system') {
+            setTheme(mediaQuery.matches ? 'dark' : 'light');
+        }
+
+        mediaQuery.addEventListener('change', handleChange);
+
+        const handleThemeChange = (event: Event) => {
+            const customEvent = event as CustomEvent;
+            setTheme(customEvent.detail);
+        };
+
+        window.addEventListener('themeChange', handleThemeChange);
+
+        return () => {
+            mediaQuery.removeEventListener('change', handleChange);
+            window.removeEventListener('themeChange', handleThemeChange);
+        };
+    }, []);
 
     const handleSearch = (query: string) => {
         const lowerCaseQuery = query.toLowerCase();
@@ -93,7 +123,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isSidebarOpen, closeSidebar, classNam
                 )}
                 {pathname.startsWith('/components') && (
                     <div className="my-3 md:my-4">
-                        <Tabs>
+                        <Tabs theme={theme}>
                             <Tab label="Web">
                                 <h2 id="sidebar-heading-web" className="text-base md:text-lg lg:text-xl font-medium my-2 md:my-3 text-black dark:text-white px-2">Web</h2>
                                 <ul aria-labelledby="sidebar-heading-web">

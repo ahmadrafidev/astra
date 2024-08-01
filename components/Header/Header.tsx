@@ -53,7 +53,7 @@ const Header: React.FC<HeaderProps> = ({ setActiveSection, toggleSidebar, isSide
                     </svg>
                 </div>
             </Link>
-            <nav className="ml-auto flex gap-2 sm:gap-3 items-center" aria-label="Primary Navigation">
+            <nav className="ml-auto gap-2 sm:gap-3 flex items-center" aria-label="Primary Navigation">
                 <Link className="hidden md:inline-block text-sm font-medium" href="/about" onClick={() => setActiveSection('about')} aria-label="About">
                     <div className="inline-block rounded-lg text-gray-900 hover:bg-gray-200 px-3 py-1 text-sm hover:dark:bg-gray-600 dark:text-white">
                         About
