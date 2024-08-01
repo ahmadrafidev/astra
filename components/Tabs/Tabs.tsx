@@ -31,7 +31,7 @@ const Tabs: React.FC<TabsProps> = ({ children, className }) => {
 
     return (
         <div className={`flex flex-col items-center ${className}`} role="tablist">
-            <div className="flex space-x-2 bg-gray-200 p-1 rounded-lg">
+            <div className="flex space-x-2 bg-gray-200 dark:bg-gray-700 p-1 rounded-lg">
                 {children.map((tab, index) => (
                     <button
                         key={index}
@@ -42,8 +42,8 @@ const Tabs: React.FC<TabsProps> = ({ children, className }) => {
                         tabIndex={index === activeTab ? 0 : -1}
                         className={`py-1 px-4 rounded-lg flex items-center ${
                             index === activeTab
-                                ? 'bg-white text-black shadow text-base md:text-lg font-normal'
-                                : 'text-gray-600 hover:bg-white hover:text-black'
+                                ? 'bg-white dark:bg-gray-900 text-black dark:text-white shadow-lg text-base md:text-lg font-normal'
+                                : 'text-gray-700 dark:text-gray-50 hover:bg-white dark:hover:bg-gray-900 hover:text-black dark:hover:text-white'
                         }`}
                         onClick={() => setActiveTab(index)}
                         onKeyDown={(e) => handleKeyDown(e, index)}
