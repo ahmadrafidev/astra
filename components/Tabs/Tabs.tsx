@@ -1,12 +1,13 @@
 // components/Tabs/Tabs.tsx
 'use client'
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 
 export interface TabProps {
     label?: string;
-    icon?: string;
+    iconLight?: string;
+    iconDark?: string;
     children: React.ReactNode;
     className?: string;
 }
@@ -20,6 +21,33 @@ const Tab: React.FC<TabProps> = ({ children, className, ...props }) => <div role
 
 const Tabs: React.FC<TabsProps> = ({ children, className }) => {
     const [activeTab, setActiveTab] = useState(0);
+    const [theme, setTheme] = useState('light');
+
+    useEffect(() => {
+        const savedTheme = localStorage.getItem('theme') || 'system';
+        setTheme(savedTheme);
+
+        const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+        const handleChange = () => {
+            if (savedTheme === 'system') {
+                setTheme(mediaQuery.matches ? 'dark' : 'light');
+            }
+        };
+
+        if (savedTheme === 'system') {
+            setTheme(mediaQuery.matches ? 'dark' : 'light');
+        }
+
+        mediaQuery.addEventListener('change', handleChange);
+        return () => mediaQuery.removeEventListener('change', handleChange);
+    }, []);
+
+    useEffect(() => {
+        const savedTheme = localStorage.getItem('theme') || 'system';
+        if (savedTheme !== 'system') {
+            setTheme(savedTheme);
+        }
+    }, [theme]);
 
     const handleKeyDown = (event: React.KeyboardEvent, index: number) => {
         if (event.key === 'ArrowRight') {
@@ -48,8 +76,17 @@ const Tabs: React.FC<TabsProps> = ({ children, className }) => {
                         onClick={() => setActiveTab(index)}
                         onKeyDown={(e) => handleKeyDown(e, index)}
                     >
-                        {tab.props.icon && <Image src={tab.props.icon} alt={tab.props.label || 'Tab icon'} width={20} height={20} />}
-                        {tab.props.label && !tab.props.icon && <span className="align-middle justify-center text-base md:text-lg">{tab.props.label}</span>}
+                        {tab.props.iconLight && tab.props.iconDark && (
+                            <Image
+                                src={theme === 'dark' ? tab.props.iconDark : tab.props.iconLight}
+                                alt={tab.props.label || 'Tab icon'}
+                                width={20}
+                                height={20}
+                            />
+                        )}
+                        {tab.props.label && !tab.props.iconLight && !tab.props.iconDark && (
+                            <span className="align-middle justify-center text-base md:text-lg">{tab.props.label}</span>
+                        )}
                     </button>
                 ))}
             </div>

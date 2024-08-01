@@ -106,7 +106,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isSidebarOpen, closeSidebar, classNam
                                     ))}
                                 </ul>
                             </Tab>
-                            <Tab icon="/icons/apple.webp">
+                            <Tab iconLight="/icons/apple-light.webp" iconDark="/icons/apple-dark.webp">
                                 <h2 id="sidebar-heading-ios" className="text-base md:text-lg lg:text-xl font-medium my-2 md:my-3 text-black dark:text-white px-2">iOS</h2>
                                 <ul aria-labelledby="sidebar-heading-ios">
                                     {filteredComponents.map((component) => (
@@ -118,7 +118,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isSidebarOpen, closeSidebar, classNam
                                     ))}
                                 </ul>
                             </Tab>
-                            <Tab icon="/icons/android.webp">
+                            <Tab iconLight="/icons/android-light.webp" iconDark="/icons/android-dark.webp">
                                 <h2 id="sidebar-heading-android" className="text-base md:text-lg lg:text-xl font-medium my-2 md:my-3 text-black dark:text-white px-2">Android</h2>
                                 <ul aria-labelledby="sidebar-heading-android">
                                     {filteredComponents.map((component) => (

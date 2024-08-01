@@ -51,7 +51,7 @@ const ThemeToggle: React.FC = () => {
                 ) : theme === 'dark' ? (
                     <MoonIcon className="h-5 w-5 text-gray-400" />
                 ) : (
-                    <ComputerDesktopIcon className="h-5 w-5 text-gray-600 dark:text-gray-100" />
+                    <ComputerDesktopIcon className="h-6 w-6 text-gray-600 dark:text-gray-400" />
                 )}
             </button>
             {dropdownOpen && (
