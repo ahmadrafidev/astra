@@ -13,7 +13,7 @@ const TabsPage: React.FC = () => {
             <Badge text="Components" />
             <h1 className="text-2xl md:text-3xl font-medium mb-4 text-gray-900 dark:text-gray-50">Tabs</h1>
             <p className="mb-4 text-gray-900 dark:text-gray-50 text-justify font-normal">
-                The Tabs component allows for organizing content into separate sections that can be navigated between. It is commonly used for settings, documentation, and other interfaces that require partitioning information.
+                A set of selectable items for navigating between related content sections.
             </p>   
             {/* Tabs Example Section */}
             <section className="mb-5">

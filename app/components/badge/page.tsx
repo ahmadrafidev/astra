@@ -28,9 +28,9 @@ const BadgePage: React.FC = () => {
             {/* Header Content */}
             <section className="mb-5">
                 <div className="flex flex-col">
-                    <h1 className="text-2xl md:text-4xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-3 md:mb-4">Badge</h1>
+                    <h1 className="text-2xl md:text-3xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-3 md:mb-4">Badge</h1>
                     <p className="ext-sm md:text-base font-normal font-sans text-gray-900 dark:text-gray-50">
-                        Badges are concise labels that quickly convey brief information, status indicators, or important warnings for immediate recognition.
+                        A small concise visual indicator displaying a status notification count or short label.
                     </p>
                 </div>
             </section>

@@ -16,7 +16,12 @@ const DropdownPageClient: React.FC = () => {
     return (
         <Layout>
             <Badge text="Components" />
-            <h1 className="text-2xl md:text-4xl font-medium mb-4 text-gray-900 dark:text-gray-50">Dropdown</h1>
+            <div className="flex flex-col mb-5">
+                <h1 className="text-2xl md:text-3xl font-medium mb-4 text-gray-900 dark:text-gray-50">Dropdown</h1>
+                <p className="text-sm md:text-base font-normal font-sans text-gray-900 dark:text-gray-50">
+                    A menu that expands to reveal a list of selectable options when activated.
+                </p>
+            </div>
             <Dropdown 
                 options={['Option 1', 'Option 2', 'Option 3']} 
                 onSelect={handleSelect} 

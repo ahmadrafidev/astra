@@ -18,7 +18,12 @@ const NotificationPageClient: React.FC = () => {
     return (
         <Layout>
             <Badge text="Components" />
-            <h1 className="text-2xl md:text-4xl font-medium mb-4 text-gray-900 dark:text-gray-50">Notification</h1>
+            <div className="flex flex-col mb-5">
+                <h1 className="text-2xl md:text-3xl font-medium mb-4 text-gray-900 dark:text-gray-50">Notification</h1>
+                <p className="text-sm md:text-base font-normal font-sans text-gray-900 dark:text-gray-50">
+                    A component for displaying brief messages or alerts to users.
+                </p>
+            </div>
             {visible && (
                 <Notification
                     message="This is a notification message."

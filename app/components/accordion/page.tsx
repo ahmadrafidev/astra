@@ -20,7 +20,7 @@ const AccordionPage: React.FC = () => {
                 <div className="flex flex-col">
                     <h1 className="text-2xl md:text-3xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-3 md:mb-4">Accordion</h1>
                     <p className="text-sm md:text-base font-normal font-sans text-gray-900 dark:text-gray-50">
-                        Accordions are used to toggle the visibility of sections of content. Below are various accordion styles with different use cases.
+                        A vertically stacked set of interactive headings that expand to reveal associated content.
                     </p>
                 </div>
             </section>

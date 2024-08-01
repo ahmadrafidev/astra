@@ -12,7 +12,10 @@ const CollapsePageClient: React.FC = () => {
     return (
         <Layout>
             <Badge text="Components" />
-            <h1 className="text-2xl md:text-4xl font-medium mb-4 text-gray-900 dark:text-gray-50">Collapse</h1>
+            <div className="flex flex-col mb-5">
+                <h1 className="text-2xl md:text-3xl font-medium mb-4 text-gray-900 dark:text-gray-50">Collapse</h1>
+                <p className="text-sm md:text-base font-normal font-sans text-gray-900 dark:text-gray-50">An expandable section that can be toggled to show or hide additional content.</p>
+            </div>
             <Collapse title="Collapse Section 1">
                 <p className="text-gray-700 dark:text-gray-300">
                     This is the content for the first collapse section. It can include any other components or HTML elements.

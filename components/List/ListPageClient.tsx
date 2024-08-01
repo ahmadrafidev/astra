@@ -13,7 +13,12 @@ const ListPageClient: React.FC = () => {
     return (
         <Layout>
             <Badge text="Components" />
-            <h1 className="text-2xl md:text-4xl font-medium mb-4 text-gray-900 dark:text-gray-50">List</h1>
+            <div className="flex flex-col mb-5">
+                <h1 className="text-2xl md:text-3xl font-medium mb-4 text-gray-900 dark:text-gray-50">List</h1>
+                <p className="text-sm md:text-base font-normal font-sans text-gray-900 dark:text-gray-50">
+                    A component for displaying multiple items in a vertical or horizontal arrangement.
+                </p>
+            </div>
             <List items={items} />
             <section className="mb-10">
                 <h2 className="text-2xl md:text-3xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Props</h2>

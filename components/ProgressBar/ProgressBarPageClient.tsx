@@ -14,7 +14,12 @@ const ProgressBarPageClient: React.FC = () => {
     return (
         <Layout>
             <Badge text="Components" />
-            <h1 className="text-2xl md:text-4xl font-medium mb-4 text-gray-900 dark:text-gray-50">ProgressBar</h1>
+            <div className="flex flex-col mb-5">
+                <h1 className="text-2xl md:text-3xl font-medium mb-4 text-gray-900 dark:text-gray-50">ProgressBar</h1>
+                <p className="text-sm md:text-base font-normal font-sans text-gray-900 dark:text-gray-50">
+                    A visual indicator showing the completion status of a task or process.
+                </p>
+            </div>
             <ProgressBar progress={progress} className="my-4" />
             <div className="flex space-x-2 mt-4">
                 <button

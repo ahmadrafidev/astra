@@ -14,7 +14,12 @@ const TextAreaPageClient: React.FC = () => {
     return (
         <Layout>
             <Badge text="Components" />
-            <h1 className="text-2xl md:text-4xl font-medium mb-4 text-gray-900 dark:text-gray-50">TextArea</h1>
+            <div className="flex flex-col mb-5">
+                <h1 className="text-2xl md:text-3xl font-medium mb-4 text-gray-900 dark:text-gray-50">TextArea</h1>
+                <p className="text-sm md:text-base font-normal font-sans text-gray-900 dark:text-gray-50">
+                    A multi-line text input field for longer form responses.
+                </p>
+            </div>
             <div className="space-y-6">
                 <TextArea
                     value={value}

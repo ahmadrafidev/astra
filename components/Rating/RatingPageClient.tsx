@@ -19,7 +19,12 @@ const RatingPageClient: React.FC = () => {
     return (
         <Layout>
             <Badge text="Components" />
-            <h1 className="text-2xl md:text-4xl font-medium mb-4 text-gray-900 dark:text-gray-50">Rating</h1>
+            <div className="flex flex-col mb-5">
+                <h1 className="text-2xl md:text-3xl font-medium mb-4 text-gray-900 dark:text-gray-50">Rating</h1>
+                <p className="text-sm md:text-base font-normal font-sans text-gray-900 dark:text-gray-50">
+                    A component for users to evaluate or score an item on a predefined scale.
+                </p>
+            </div>
             <Rating maxRating={5} onRate={handleRate} className="my-4" />
             <p className="mt-4 text-gray-900 dark:text-gray-50">Current rating: {currentRating}</p>
 

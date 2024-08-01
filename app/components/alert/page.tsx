@@ -18,9 +18,9 @@ const AlertPage: React.FC = () => {
             {/* Header Content */}
             <section className="mb-5">
                 <div className="flex flex-col">
-                    <h1 className="text-2xl md:text-4xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-3 md:mb-4">Alert</h1>
+                    <h1 className="text-2xl md:text-3xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-3 md:mb-4">Alert</h1>
                     <p className="text-sm md:text-base font-normal font-sans text-gray-900 dark:text-gray-50">
-                        Alerts are used to display important messages to the user. Below are various alert types with different use cases.
+                        A prominent message that informs users about important events or status changes.
                     </p>
                 </div>
             </section>

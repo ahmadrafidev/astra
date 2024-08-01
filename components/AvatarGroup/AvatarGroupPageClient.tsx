@@ -10,16 +10,20 @@ import AvatarGroup from './AvatarGroup';
 
 const AvatarGroupPageClient: React.FC = () => {
     const avatars = [
-        { src: '/icons/android.webp', alt: 'User Avatar 1', size: 40 },
-        { src: '/icons/android.webp', alt: 'User Avatar 2', size: 40 },
-        { src: '/icons/android.webp', alt: 'User Avatar 3', size: 40 },
-        { src: '/icons/android.webp', alt: 'User Avatar 4', size: 40 },
+        { src: '/icons/android-light.webp', alt: 'User Avatar 1', size: 40 },
+        { src: '/icons/android-light.webp', alt: 'User Avatar 2', size: 40 },
     ];
 
     return (
         <Layout>
             <Badge text="Components" />
-            <h1 className="text-2xl md:text-4xl font-medium mb-4 text-gray-900 dark:text-gray-50">Avatar Group</h1>
+            <div className="flex flex-col mb-5">
+                <h1 className="text-2xl md:text-3xl font-medium mb-4 text-gray-900 dark:text-gray-50">Avatar Group</h1>
+                <p className="text-sm md:text-base font-normal font-sans text-gray-900 dark:text-gray-50">
+                    A collection of multiple avatars displayed together to represent a group or team.
+                </p>
+            </div>
+            
             <div className="space-y-6">
                 <AvatarGroup avatars={avatars} max={3} size={40} />
             </div>
