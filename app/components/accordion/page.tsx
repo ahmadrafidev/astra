@@ -8,7 +8,7 @@ import { Accordion, AccordionItem } from '../../../components/Accordion/Accordio
 
 export const metadata: Metadata = {
     title: "Accordion",
-    description: "A component to display expandable and collapsible content sections.",
+    description: "A vertically stacked set of interactive headings that expand to reveal associated content.",
 };
 
 const AccordionPage: React.FC = () => {
@@ -27,22 +27,68 @@ const AccordionPage: React.FC = () => {
             {/* Accordion Variants Section */}
             <section className="mb-5">
                 <h2 className="text-lg md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Variants</h2>
-                <div className="space-y-4">
-                    <Accordion className="max-w-md mx-auto">
-                        <AccordionItem title="Section 1">
-                            <p className="text-gray-700 dark:text-gray-300">This is the content of section 1.</p>
-                        </AccordionItem>
-                        <AccordionItem title="Section 2">
-                            <p className="text-gray-700 dark:text-gray-300">This is the content of section 2.</p>
-                        </AccordionItem>
-                        <AccordionItem title="Section 3">
-                            <p className="text-gray-700 dark:text-gray-300">This is the content of section 3.</p>
-                        </AccordionItem>
-                    </Accordion>
+                <div className="space-y-4 flex flex-col justify-around">
+                    <div>
+                        <h3 className="text-base md:text-lg font-normal font-sans text-gray-900 dark:text-gray-50 mb-2 md:mb-3">
+                            Default Accordion
+                        </h3>
+                        <Accordion
+                            className="border-spacing-52 rounded-lg"
+                            border="border-gray-300"
+                            shadow="shadow-md"
+                            singleOpen={true}
+                            variant="default"
+                        >
+                            <AccordionItem title="Accordion 1">
+                                Content for accordion 1
+                            </AccordionItem>
+                            <AccordionItem title="Accordion 2">
+                                Content for accordion 2
+                            </AccordionItem>
+                        </Accordion>
+                    </div>
+                    <div>
+                        <h3 className="text-base md:text-lg font-normal font-sans text-gray-900 dark:text-gray-50 mb-2 md:mb-3">
+                            Default Accordion with Subtitle
+                        </h3>
+                        <Accordion
+                            className="custom-class"
+                            border="border-gray-300"
+                            shadow="shadow-md"
+                            singleOpen={true}
+                            variant="default"
+                        >
+                            <AccordionItem title="Accordion 1" subtitle="Accordion 1 Subtitle">
+                                Content for accordion 1
+                            </AccordionItem>
+                            <AccordionItem title="Accordion 2" subtitle="Accordion 1 Subtitle">
+                                Content for accordion 2
+                            </AccordionItem>
+                        </Accordion>
+                    </div>
+                    <div>
+                        <h3 className="text-base md:text-lg font-normal font-sans text-gray-900 dark:text-gray-50 mb-2 md:mb-3">
+                            Split Accordion
+                        </h3>
+                        <Accordion
+                            className="custom-class"
+                            border="border-gray-300"
+                            shadow="shadow-md"
+                            singleOpen={true}
+                            variant="split"
+                        >
+                            <AccordionItem title="Accordion 1">
+                                Content for accordion 1
+                            </AccordionItem>
+                            <AccordionItem title="Accordion 2">
+                                Content for accordion 2
+                            </AccordionItem>
+                        </Accordion>
+                    </div>
                 </div>
             </section>
             {/* Props Section */}
-            <section>
+            <section className="my-5">
                 <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Props</h2>
                 <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg shadow">
                     <table className="min-w-full table-auto">
