@@ -52,7 +52,9 @@ export const AccordionItem: React.FC<AccordionItemProps> = ({
           </button>
           {isOpen && (
               <div className="p-3 md:p-4 bg-white dark:bg-gray-900">
-                  <div className="text-sm md:text-base font-normal text-gray-900 dark:text-gray-100">{children}</div>
+                  <p className="text-sm md:text-base font-normal leading-loose text-gray-900 dark:text-gray-100">
+                    {children}
+                  </p>
               </div>
           )}
       </div>
