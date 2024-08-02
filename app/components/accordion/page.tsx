@@ -158,12 +158,6 @@ const AccordionPage: React.FC = () => {
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Border style for the accordion items.</td>
                             </tr>
                             <tr>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">shadow</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">string</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">empty</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Shadow style for the accordion.</td>
-                            </tr>
-                            <tr>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">selectionMode</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">single, multiple</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">single</td>
@@ -243,8 +237,7 @@ const AccordionPage: React.FC = () => {
                     <p className="text-gray-700 dark:text-gray-300">6. Provide visual feedback for hover and focus states to improve usability, especially for keyboard navigation.</p>
                     <p className="text-gray-700 dark:text-gray-300">7. Consider using animations for expanding and collapsing to provide a smooth user experience, but ensure they are not too slow or distracting.</p>
                     <p className="text-gray-700 dark:text-gray-300">8. Use the split variant when you want to visually separate accordion items, especially for longer lists.</p>
-                    <p className="text-gray-700 dark:text-gray-300">9. Test the accordion component with different content lengths to ensure it handles varying amounts of text gracefully.</p>
-                    <p className="text-gray-700 dark:text-gray-300">10. Consider adding icons or visual indicators alongside titles to provide additional context or categorization for each item.</p>
+                    <p className="text-gray-700 dark:text-gray-300">9. Consider adding icons or visual indicators alongside titles to provide additional context or categorization for each item.</p>
                 </div>
             </section>
         </Layout>
