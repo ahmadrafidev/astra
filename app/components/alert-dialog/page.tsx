@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     description: "A pop-up window that displays important information and requires user acknowledgment or action.",
 };
 
-const AlertDialogPageClient = dynamic(() => import('../../../components/AlertDialog/AlertDialogClient'), { ssr: false });
+const AlertDialogPageClient = dynamic(() => import('@/components/AlertDialog/AlertDialogClient'), { ssr: false });
 
 const AlertDialogPage: React.FC = () => {
     return <AlertDialogPageClient />;

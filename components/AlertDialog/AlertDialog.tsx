@@ -17,7 +17,7 @@ const AlertDialog: React.FC<AlertDialogProps> = ({
     children,
     confirmText = 'Continue',
     closeText = 'Cancel',
-    className = ''
+    className
 }) => {
     if (!open) return null;
 
