@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 
 import Layout from '@/components/Layout/Layout';
 import Badge from '@/components/Badge/Badge';
-import Alert from '@/components/Alert/Alert';
+import { Alert, AlertTitle, AlertContent} from '@/components/Alert/Alert';
 
 export const metadata: Metadata = {
     title: "Alert",
@@ -15,6 +15,7 @@ const AlertPage: React.FC = () => {
     return (
         <Layout>
             <Badge text="Components" />
+
             {/* Header Content */}
             <section className="mb-5">
                 <div className="flex flex-col">
@@ -24,26 +25,40 @@ const AlertPage: React.FC = () => {
                     </p>
                 </div>
             </section>
+
             {/* Alert Variants Section */}
             <section className="mb-5">
                 <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Variants</h2>
                 <div className="space-y-4">
-                    <Alert type="info" message="This is an info alert.">
-                        <p>Additional information can go here.</p>
-                    </Alert>
-                    <Alert type="success" message="This is a success alert.">
-                        <p>Additional information can go here.</p>
-                    </Alert>
-                    <Alert type="warning" message="This is a warning alert.">
-                        <p>Additional information can go here.</p>
-                    </Alert>
-                    <Alert type="error" message="This is an error alert.">
-                        <p>Additional information can go here.</p>
-                    </Alert>
+                    <div>
+                        <h3 className="text-base md:text-lg font-normal font-sans text-gray-900 dark:text-gray-50 mb-2 md:mb-3">Info Alert</h3>
+                        <Alert type="info" title="This is an information alert" isDismissible>
+                        </Alert>
+                    </div>
+                    <div>
+                        <h3 className="text-base md:text-lg font-normal font-sans text-gray-900 dark:text-gray-50 mb-2 md:mb-3">Success Alert</h3>
+                        <Alert type="success" isDismissible>
+                            <AlertTitle>This is a success alert</AlertTitle>
+                            <AlertContent>A little bit of a content here</AlertContent>
+                        </Alert>
+                    </div>
+                    <div>
+                        <h3 className="text-base md:text-lg font-normal font-sans text-gray-900 dark:text-gray-50 mb-2 md:mb-3">Warning Alert</h3>
+                        <Alert type="warning" isDismissible>
+                            <AlertTitle>This is a warning alert</AlertTitle>
+                        </Alert>
+                    </div>
+                    <div>
+                        <h3 className="text-base md:text-lg font-normal font-sans text-gray-900 dark:text-gray-50 mb-2 md:mb-3">Error Alert</h3>
+                        <Alert type="error" isDismissible>
+                            <AlertTitle>This is an error alert</AlertTitle>
+                        </Alert>
+                    </div>
                 </div>
             </section>
+
             {/* Props Section */}
-            <section>
+            <section className="my-5">
                 <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Props</h2>
                 <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg shadow">
                     <table className="min-w-full table-auto">
@@ -84,6 +99,7 @@ const AlertPage: React.FC = () => {
                     </table>
                 </div>
             </section>
+
             {/* Best Practices Section */}
             <section>
                 <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Best Practices</h2>
