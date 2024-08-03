@@ -16,20 +16,31 @@ const ErrorPageClient: React.FC = () => {
         setTimeout(() => setShowError(true), 1000);
     };
 
+    const handleCancel = () => {
+        setShowError(false);
+    };
+
     return (
         <Layout>
             <Badge text="Components" />
             <h1 className="text-2xl md:text-3xl font-medium mb-4 text-gray-900 dark:text-gray-50">Error</h1>
             {showError && (
-                <Error
-                    message="Something went wrong. Please try again."
-                    onRetry={handleRetry}
-                    className="my-4"
+                <Error 
+                    type="network"
+                    title="Network error"
+                    message="Please check your internet connection or try again"
+                    primaryAction={{
+                        label: "Retry",
+                        onClick: () => handleRetry()
+                    }}
+                    secondaryAction={{
+                        label: "Cancel",
+                        onClick: () => handleCancel()
+                    }}
                 />
             )}
-
             {/* Props Section */}
-            <section className="mb-10">
+            <section className="my-5">
                 <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Props</h2>
                 <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg shadow">
                     <table className="min-w-full table-auto">

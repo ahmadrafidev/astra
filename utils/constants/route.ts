@@ -61,7 +61,7 @@ export const componentsList = [
     { name: 'Collapse', path: '/components/collapse' },
     { name: 'Dialog', path: '/components/dialog' },
     { name: 'Dropdown', path: '/components/dropdown' },
-    { name: 'Error', path: '/components/error' },
+    { name: 'Error Message', path: '/components/error' },
     { name: 'File Uploader', path: '/components/file-uploader' },
     { name: 'Header', path: '/components/header' },
     { name: 'IconButton', path: '/components/icon-button'},
@@ -142,7 +142,7 @@ export const categorizedComponentsList = {
         { name: 'Spinner', path: '/components/spinner', description: 'Animated indicator for loading states.' },
         { name: 'SkeletonLoader', path: '/components/skeleton-loader', description: 'Placeholder UI while the actual content is loading.' },
         { name: 'Snackbar', path: '/components/snackbar', description: 'Brief messages that appear at the bottom of the screen.' },
-        { name: 'ErrorMessage', path: '/components/error', description: 'Displays error messages in a consistent manner.' },
+        { name: 'Error Message', path: '/components/error', description: 'Displays error messages in a consistent manner.' },
     ],
     navigation: [
         { name: 'Breadcrumbs', path: '/components/breadcrumbs', description: 'Navigational aid to show the user’s current location in a hierarchy.' },
