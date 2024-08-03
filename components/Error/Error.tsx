@@ -1,7 +1,16 @@
 import React from 'react';
-import { AlertCircle, Wifi, FileWarning, RefreshCw } from 'lucide-react';
+import { 
+  AlertCircle, 
+  Wifi, 
+  FileWarning, 
+  RefreshCw,
+  Lock,
+  Timer,
+  Clock,
+  Server
+} from 'lucide-react';
 
-export type AlertType = 'upload' | 'network' | 'filesize';
+export type AlertType = 'upload' | 'network' | 'filesize' | 'authentication'| 'limiter'| 'timeout'| 'server';
 
 export interface ErrorProps {
   type: AlertType;
@@ -22,6 +31,10 @@ const alertIcons: Record<AlertType, React.ReactNode> = {
   upload: <AlertCircle className="w-8 h-8 text-red-500" />,
   network: <Wifi className="w-9 h-9 text-red-500" />,
   filesize: <FileWarning className="w-8 h-8 text-red-500" />,
+  authentication: <Lock className="w-8 h-8 text-red-500" />,
+  limiter: <Timer className="w-8 h-8 text-red-500" />,
+  timeout: <Clock className="w-8 h-8 text-red-500" />,
+  server: <Server className="w-8 h-8 text-red-500" />,
 };
 
 const Error: React.FC<ErrorProps> = ({
