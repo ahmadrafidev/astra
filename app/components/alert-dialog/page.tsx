@@ -4,8 +4,8 @@ import dynamic from 'next/dynamic';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: "AlertDialog",
-    description: "Alert dialogs are used to prompt the user for a decision or action.",
+    title: "Alert Dialog",
+    description: "A pop-up window that displays important information and requires user acknowledgment or action.",
 };
 
 const AlertDialogPageClient = dynamic(() => import('../../../components/AlertDialog/AlertDialogClient'), { ssr: false });

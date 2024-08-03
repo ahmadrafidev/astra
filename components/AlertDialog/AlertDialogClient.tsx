@@ -26,8 +26,8 @@ const AlertDialogPageClient: React.FC = () => {
                 </div>
             </section>
             <div className="space-y-6">
-                <button className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700" onClick={handleOpen}>
-                    Open Alert Dialog
+                <button className="px-4 py-2 bg-black dark:bg-gray-100 text-white dark:text-black rounded-lg shadow-sm hover:bg-gray-700 dark:hover:bg-gray-200" onClick={handleOpen}>
+                    Show Dialog
                 </button>
                 <AlertDialog open={isOpen} onClose={handleClose}>
                     <h3 className="text-lg font-medium text-gray-900 dark:text-gray-50">This is an alert dialog</h3>
@@ -35,7 +35,7 @@ const AlertDialogPageClient: React.FC = () => {
                 </AlertDialog>
             </div>
             {/* Props Section */}
-            <section>
+            <section className="my-5">
                 <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Props</h2>
                 <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg shadow">
                     <table className="min-w-full table-auto">
@@ -77,7 +77,7 @@ const AlertDialogPageClient: React.FC = () => {
                 </div>
             </section>
             {/* Best Practices Section */}
-            <section>
+            <section className="my-5">
                 <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Best Practices</h2>
                 <div className="space-y-4">
                     <p className="text-gray-700 dark:text-gray-300">Use alert dialogs to prompt users for important decisions or actions.</p>
