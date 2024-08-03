@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     description: "A component for displaying error messages.",
 };
 
-const ErrorPageClient = dynamic(() => import('../../../components/Error/ErrorPageClient'), { ssr: false });
+const ErrorPageClient = dynamic(() => import('@/components/Error/ErrorPageClient'), { ssr: false });
 
 const ErrorPage: React.FC = () => {
     return <ErrorPageClient />;

@@ -8,7 +8,10 @@ export const metadata: Metadata = {
     description: "A component for selecting multiple options.",
 };
 
-const CheckboxPageClient = dynamic(() => import('../../../components/Checkbox/CheckboxPageClient'), { ssr: false });
+const CheckboxPageClient = dynamic(() => import(
+    '@/components/Checkbox/CheckboxPageClient'), 
+    { ssr: false }
+);
 
 const CheckboxPage: React.FC = () => {
     return <CheckboxPageClient />;

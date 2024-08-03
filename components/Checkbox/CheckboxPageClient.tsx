@@ -1,4 +1,3 @@
-// components/Checkbox/CheckboxPageClient.tsx
 'use client';
 
 import React, { useState } from 'react';
@@ -10,9 +9,16 @@ import Checkbox from './Checkbox';
 
 const CheckboxPageClient: React.FC = () => {
     const [isChecked, setIsChecked] = useState(false);
+    const [isAgree, setIsAgree] = useState(false);
+    const [error, setError] = useState<string | undefined>(undefined);
+
+    const handleCheck = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setIsChecked(e.target.checked);
+    };
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setIsChecked(e.target.checked);
+        setIsAgree(e.target.checked);
+        setError(e.target.checked ? undefined : "You must accept the terms and conditions.");
     };
 
     return (
@@ -24,13 +30,34 @@ const CheckboxPageClient: React.FC = () => {
                     A control allowing users to indicate agreement or consent for a single option.
                 </p>
             </div>
-            <Checkbox 
-                checked={isChecked} 
-                onChange={handleChange} 
-                label="Check me!" 
-                className="my-4"
-            />
-            <p className="mt-4 text-gray-900 dark:text-gray-50">Checkbox is {isChecked ? 'checked' : 'unchecked'}</p>
+            <section className="mb-5">
+                <h2 className="text-lg md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Variants</h2>
+                <div className="space-y-4 flex flex-col justify-around">
+                    <div className="mb-2">
+                        <h3 className="text-base md:text-lg font-medium font-sans text-gray-900 dark:text-gray-50 mb-2 md:mb-3">Basic Usage</h3>
+                        <Checkbox 
+                            checked={isChecked} 
+                            onChange={handleCheck} 
+                            label="Try check me!" 
+                            className="mb-2"
+                        />
+                        <p className="text-base font-normal font-sans text-gray-900 dark:text-gray-50">
+                            Checkbox is {isChecked ? 'checked' : 'unchecked'}
+                        </p>
+                    </div>
+                    <div>
+                        <h3 className="text-base md:text-lg font-medium font-sans text-gray-900 dark:text-gray-50 mb-2 md:mb-3">Checkbox with message</h3>
+                        <Checkbox 
+                            label="Accept this terms and conditions." 
+                            checked={isAgree} 
+                            onChange={handleChange} 
+                            error={error} 
+                            labelClassName="text-black"
+                        />
+                    </div>
+                </div>   
+            </section>
+
             {/* Props Section */}
             <section className="mb-10">
                 <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Props</h2>
@@ -53,36 +80,51 @@ const CheckboxPageClient: React.FC = () => {
                             </tr>
                             <tr>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">onChange</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">React.ChangeEventHandler&lt;HTMLInputElement&gt;</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">-</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">Event handler</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">void</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Function to call when the checkbox state changes.</td>
                             </tr>
                             <tr>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">label</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">string</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">-</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">empty</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Label text to display next to the checkbox.</td>
                             </tr>
                             <tr>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">className</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">string</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">-</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Additional classes for styling.</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">empty</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Additional classes for styling the checkbox container.</td>
+                            </tr>
+                            <tr>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">labelClassName</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">string</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">empty</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Additional classes for styling the label text.</td>
+                            </tr>
+                            <tr>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">error</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">string</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">empty</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Error message to display. When provided, applies error styling.</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
             </section>
+
             {/* Best Practices Section */}
             <section>
                 <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Best Practices</h2>
                 <div className="space-y-4">
-                    <p className="text-gray-700 dark:text-gray-300">Ensure the checkbox label is clear and concise.</p>
-                    <p className="text-gray-700 dark:text-gray-300">Provide adequate space between checkboxes for easier touch interaction.</p>
-                    <p className="text-gray-700 dark:text-gray-300">Use checkboxes for binary options where users can select multiple choices.</p>
-                    <p className="text-gray-700 dark:text-gray-300">Make sure checkboxes are easily accessible and usable via keyboard and screen readers.</p>
+                    <p className="text-gray-700 dark:text-gray-300">1. Use clear and concise labels that accurately describe the option.</p>
+                    <p className="text-gray-700 dark:text-gray-300">2. Provide sufficient spacing for touch interactions and visual clarity.</p>
+                    <p className="text-gray-700 dark:text-gray-300">3. Ensure accessibility via keyboard navigation and screen readers.</p>
+                    <p className="text-gray-700 dark:text-gray-300">4. Provide clear visual feedback for checkbox states (hover, focus, active).</p>
+                    <p className="text-gray-700 dark:text-gray-300">5. Use the error prop to display clear and actionable validation messages when necessary.</p>
+                    <p className="text-gray-700 dark:text-gray-300">6. Maintain consistent styling and behavior throughout the application.</p>
                 </div>
-            </section>
+            </section> 
         </Layout>
     );
 };

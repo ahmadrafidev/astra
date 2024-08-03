@@ -34,7 +34,7 @@ const AccordionPage: React.FC = () => {
                 <h2 className="text-lg md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Variants</h2>
                 <div className="space-y-4 flex flex-col justify-around">
                     <div>
-                        <h3 className="text-base md:text-lg font-normal font-sans text-gray-900 dark:text-gray-50 mb-2 md:mb-3">
+                        <h3 className="text-base md:text-lg font-medium font-sans text-gray-900 dark:text-gray-50 mb-2 md:mb-3">
                             Default Accordion
                         </h3>
                         <Accordion
@@ -55,7 +55,7 @@ const AccordionPage: React.FC = () => {
                         </Accordion>
                     </div>
                     <div>
-                        <h3 className="text-base md:text-lg font-normal font-sans text-gray-900 dark:text-gray-50 mb-2 md:mb-3">
+                        <h3 className="text-base md:text-lg font-medium font-sans text-gray-900 dark:text-gray-50 mb-2 md:mb-3">
                             Default Accordion with Subtitle
                         </h3>
                         <Accordion
@@ -76,7 +76,7 @@ const AccordionPage: React.FC = () => {
                         </Accordion>
                     </div>
                     <div>
-                        <h3 className="text-base md:text-lg font-normal font-sans text-gray-900 dark:text-gray-50 mb-2 md:mb-3">
+                        <h3 className="text-base md:text-lg font-medium font-sans text-gray-900 dark:text-gray-50 mb-2 md:mb-3">
                             Accordion with Multiple Open 
                         </h3>
                         <Accordion
@@ -97,7 +97,7 @@ const AccordionPage: React.FC = () => {
                         </Accordion>
                     </div>
                     <div>
-                        <h3 className="text-base md:text-lg font-normal font-sans text-gray-900 dark:text-gray-50 mb-2 md:mb-3">
+                        <h3 className="text-base md:text-lg font-medium font-sans text-gray-900 dark:text-gray-50 mb-2 md:mb-3">
                             Split Accordion
                         </h3>
                         <Accordion
