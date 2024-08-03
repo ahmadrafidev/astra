@@ -19,6 +19,7 @@ const ErrorPageClient: React.FC = () => {
 
     const handleCancel = () => {
         setShowError(false);
+        setTimeout(() => setShowError(true), 2000); // should be dismissed, timeout for display purpose only
     };
 
     return (

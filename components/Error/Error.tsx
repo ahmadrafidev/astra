@@ -7,15 +7,17 @@ import {
   Lock,
   Timer,
   Clock,
-  Server
+  Server,
+  CreditCard 
 } from 'lucide-react';
 
-export type AlertType = 'upload' | 'network' | 'filesize' | 'authentication'| 'limiter'| 'timeout'| 'server';
+export type ErrorType = 'upload' | 'network' | 'filesize' | 'authentication'| 'limiter'| 'timeout'| 'server' | 'payment';
 
 export interface ErrorProps {
-  type: AlertType;
+  type: ErrorType;
   title: string;
   message: string;
+  className?: string;
   primaryAction: {
     label: string;
     onClick: () => void;
@@ -24,26 +26,26 @@ export interface ErrorProps {
     label: string;
     onClick: () => void;
   };
-  className?: string;
 }
 
-const alertIcons: Record<AlertType, React.ReactNode> = {
-  upload: <AlertCircle className="w-8 h-8 text-red-500" />,
+const alertIcons: Record<ErrorType, React.ReactNode> = {
+  upload: <AlertCircle className="w-9 h-9 text-red-500" />,
   network: <Wifi className="w-9 h-9 text-red-500" />,
-  filesize: <FileWarning className="w-8 h-8 text-red-500" />,
-  authentication: <Lock className="w-8 h-8 text-red-500" />,
-  limiter: <Timer className="w-8 h-8 text-red-500" />,
-  timeout: <Clock className="w-8 h-8 text-red-500" />,
-  server: <Server className="w-8 h-8 text-red-500" />,
+  filesize: <FileWarning className="w-9 h-9 text-red-500" />,
+  authentication: <Lock className="w-9 h-9 text-red-500" />,
+  limiter: <Timer className="w-9 h-9 text-red-500" />,
+  timeout: <Clock className="w-9 h-9 text-red-500" />,
+  server: <Server className="w-9 h-9 text-red-500" />,
+  payment: <CreditCard className="w-9 h-9 text-red-500" />,
 };
 
 const Error: React.FC<ErrorProps> = ({
   type,
   title,
   message,
+  className,
   primaryAction,
   secondaryAction,
-  className,
 }) => {
   return (
     <div className={`bg-red-50 rounded-lg shadow-md w-64 p-4 flex flex-col items-center ${className}`} role="alert">

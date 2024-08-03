@@ -21,7 +21,7 @@ const ErrorDocumentation = () => {
             <tbody>
               <tr>
                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">type</td>
-                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">'upload' | 'network' | 'filesize'</td>
+                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">ErrorType</td>
                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">none</td>
                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Type of error to display.</td>
               </tr>
@@ -63,10 +63,10 @@ const ErrorDocumentation = () => {
       <section className="my-5">
         <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Best Practices</h2>
         <div className="space-y-4">
-          <p className="text-gray-700 dark:text-gray-300">Use clear and concise error messages.</p>
-          <p className="text-gray-700 dark:text-gray-300">Provide a retry button for recoverable errors.</p>
-          <p className="text-gray-700 dark:text-gray-300">Ensure the error message is accessible and noticeable.</p>
-          <p className="text-gray-700 dark:text-gray-300">Use appropriate colors to indicate error states.</p>
+          <p className="text-gray-700 dark:text-gray-300">1. Use clear and concise error messages.</p>
+          <p className="text-gray-700 dark:text-gray-300">2. Provide a retry button for recoverable errors.</p>
+          <p className="text-gray-700 dark:text-gray-300">3. Ensure the error message is accessible and noticeable.</p>
+          <p className="text-gray-700 dark:text-gray-300">4. Use appropriate colors to indicate error states.</p>
         </div>
       </section>
     </>
