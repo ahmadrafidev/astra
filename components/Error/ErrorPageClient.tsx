@@ -44,19 +44,19 @@ const ErrorPageClient: React.FC = () => {
                         <tbody>
                             <tr>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">message</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">string</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">string</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">-</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">The error message to display.</td>
                             </tr>
                             <tr>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">onRetry</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">{`() => void`}</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">{`() => void`}</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">-</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Function to call when the retry button is clicked.</td>
                             </tr>
                             <tr>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">className</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">string</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">string</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">-</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Additional classes for styling.</td>
                             </tr>

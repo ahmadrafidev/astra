@@ -38,19 +38,19 @@ const StepperPageClient: React.FC = () => {
                         <tbody>
                             <tr>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">steps</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">{'string[]'}</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">{'string[]'}</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">-</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">An array of step names.</td>
                             </tr>
                             <tr>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">currentStep</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">number</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">number</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">-</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">The index of the current step (0-based).</td>
                             </tr>
                             <tr>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">className</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">string</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">string</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">-</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Additional classes for styling the stepper.</td>
                             </tr>

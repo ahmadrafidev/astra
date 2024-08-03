@@ -50,37 +50,37 @@ const SliderPageClient: React.FC = () => {
                         <tbody>
                             <tr>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">value</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">number</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">number</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">-</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">The current value of the slider.</td>
                             </tr>
                             <tr>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">min</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">number</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">number</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">-</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">The minimum value of the slider.</td>
                             </tr>
                             <tr>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">max</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">number</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">number</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">-</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">The maximum value of the slider.</td>
                             </tr>
                             <tr>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">step</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">number</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">number</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">1</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">The step value of the slider.</td>
                             </tr>
                             <tr>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">onChange</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">{'function'}</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">{'function'}</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">-</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">The function to call when the slider value changes.</td>
                             </tr>
                             <tr>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">className</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">string</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">string</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">-</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Additional classes for styling the slider.</td>
                             </tr>

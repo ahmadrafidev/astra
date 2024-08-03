@@ -60,37 +60,37 @@ const RadioButtonPageClient: React.FC = () => {
                         <tbody>
                             <tr>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">checked</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">boolean</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">boolean</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">-</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Whether the radio button is checked.</td>
                             </tr>
                             <tr>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">onChange</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">{'(e: React.ChangeEvent<HTMLInputElement>) => void'}</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">{'(e: React.ChangeEvent<HTMLInputElement>) => void'}</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">-</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Callback function to handle change events.</td>
                             </tr>
                             <tr>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">label</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">string</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">string</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">-</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Label text for the radio button.</td>
                             </tr>
                             <tr>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">name</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">string</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">string</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">-</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Name attribute for the radio button group.</td>
                             </tr>
                             <tr>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">value</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">string</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">string</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">-</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Value attribute for the radio button.</td>
                             </tr>
                             <tr>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">className</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">string</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">string</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">-</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Additional classes for styling.</td>
                             </tr>

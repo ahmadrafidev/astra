@@ -50,25 +50,25 @@ const AlertDialogPageClient: React.FC = () => {
                         <tbody>
                             <tr>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">open</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">boolean</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">boolean</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">-</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Whether the alert dialog is open or closed.</td>
                             </tr>
                             <tr>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">onClose</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">() =&gt; void</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">function</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">-</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Function to call when the dialog should be closed.</td>
                             </tr>
                             <tr>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">children</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">ReactNode</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">ReactNode</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">-</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Content to display inside the alert dialog.</td>
                             </tr>
                             <tr>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">className</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">string</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">string</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">-</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Additional classes for styling.</td>
                             </tr>

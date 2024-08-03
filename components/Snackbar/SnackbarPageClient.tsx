@@ -50,31 +50,31 @@ const SnackbarPageClient: React.FC = () => {
                         <tbody>
                             <tr>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">message</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">string</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">string</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">-</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">The message to display in the snackbar.</td>
                             </tr>
                             <tr>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">open</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">boolean</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">boolean</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">-</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Whether the snackbar is open.</td>
                             </tr>
                             <tr>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">duration</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">number</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">number</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">3000</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">The duration the snackbar is displayed in milliseconds.</td>
                             </tr>
                             <tr>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">onClose</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">{'() => void'}</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">function</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">-</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Function to call when the snackbar should be closed.</td>
                             </tr>
                             <tr>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">className</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">string</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">string</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">-</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Additional classes for styling the snackbar.</td>
                             </tr>

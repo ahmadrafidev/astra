@@ -43,25 +43,25 @@ const AvatarGroupPageClient: React.FC = () => {
                         <tbody>
                             <tr>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">avatars</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">AvatarProps[]</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">AvatarProps[]</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">-</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Array of avatar properties.</td>
                             </tr>
                             <tr>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">max</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">number</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">number</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">3</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Maximum number of avatars to display.</td>
                             </tr>
                             <tr>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">size</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">number</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">number</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">40</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">The size (width and height) of the avatar images.</td>
                             </tr>
                             <tr>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">className</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">string</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">string</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">-</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Additional classes for styling the avatar group.</td>
                             </tr>

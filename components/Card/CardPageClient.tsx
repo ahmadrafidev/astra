@@ -60,43 +60,43 @@ const CardPageClient: React.FC = () => {
                             <tbody>
                                 <tr>
                                     <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">title</td>
-                                    <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">string</td>
+                                    <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">string</td>
                                     <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">none</td>
                                     <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">The title of the card.</td>
                                 </tr>
                                 <tr>
                                     <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">description</td>
-                                    <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">string</td>
+                                    <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">string</td>
                                     <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">none</td>
                                     <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">The description content of the card.</td>
                                 </tr>
                                 <tr>
                                     <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">imageSrc</td>
-                                    <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">string</td>
+                                    <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">string</td>
                                     <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">none</td>
                                     <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">The URL of the image to display in the card.</td>
                                 </tr>
                                 <tr>
                                     <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">imageWidth</td>
-                                    <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">number</td>
+                                    <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">number</td>
                                     <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">300</td>
                                     <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">The width of the image in the card.</td>
                                 </tr>
                                 <tr>
                                     <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">imageHeight</td>
-                                    <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">number</td>
+                                    <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">number</td>
                                     <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">200</td>
                                     <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">The height of the image in the card.</td>
                                 </tr>
                                 <tr>
                                     <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">className</td>
-                                    <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">string</td>
+                                    <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">string</td>
                                     <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">empty</td>
                                     <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Additional classes for styling.</td>
                                 </tr>
                                 <tr>
                                     <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">children</td>
-                                    <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">React.ReactNode</td>
+                                    <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">React.ReactNode</td>
                                     <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">none</td>
                                     <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Additional content to display inside the card.</td>
                                 </tr>

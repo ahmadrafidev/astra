@@ -45,19 +45,19 @@ const DropdownPageClient: React.FC = () => {
                         <tbody>
                             <tr>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">options</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">string[]</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">string[]</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">-</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Array of options to display in the dropdown.</td>
                             </tr>
                             <tr>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">onSelect</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">{`(option: string) => void`}</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">{`(option: string) => void`}</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">-</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Function to call when an option is selected.</td>
                             </tr>
                             <tr>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">className</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">string</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">string</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">-</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Additional classes for styling.</td>
                             </tr>

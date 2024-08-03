@@ -48,25 +48,25 @@ const NotificationPageClient: React.FC = () => {
                         <tbody>
                             <tr>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">message</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">string</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">string</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">-</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">The message to display in the notification.</td>
                             </tr>
                             <tr>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">type</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">&quot;success&quot; | &quot;error&quot; | &quot;info&quot; | &quot;warning&quot;</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">&quot;success&quot; | &quot;error&quot; | &quot;info&quot; | &quot;warning&quot;</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">-</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">The type of notification to display.</td>
                             </tr>
                             <tr>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">onClose</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">{`() => void`}</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">{`() => void`}</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">-</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Function to call when the notification is closed.</td>
                             </tr>
                             <tr>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">className</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">string</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">string</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">-</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Additional classes for styling.</td>
                             </tr>

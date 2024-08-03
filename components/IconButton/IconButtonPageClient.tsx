@@ -54,25 +54,25 @@ const IconButtonPageClient: React.FC = () => {
                             <tbody>
                                 <tr>
                                     <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">icon</td>
-                                    <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">RadixUI Icons</td>
+                                    <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">Icons</td>
                                     <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">none</td>
                                     <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">The icon to display inside the button.</td>
                                 </tr>
                                 <tr>
                                     <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">onClick</td>
-                                    <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">function</td>
+                                    <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">function</td>
                                     <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">none</td>
                                     <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">The function to call when the button is clicked.</td>
                                 </tr>
                                 <tr>
                                     <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">ariaLabel</td>
-                                    <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">string</td>
+                                    <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">string</td>
                                     <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">none</td>
                                     <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">The ARIA label for the button.</td>
                                 </tr>
                                 <tr>
                                     <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">className</td>
-                                    <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">string</td>
+                                    <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">string</td>
                                     <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">empty</td>
                                     <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Additional classes for styling.</td>
                                 </tr>

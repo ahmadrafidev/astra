@@ -51,31 +51,31 @@ const PaginationPageClient: React.FC = () => {
                             <tbody>
                                 <tr>
                                     <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">totalItems</td>
-                                    <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">number</td>
+                                    <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">number</td>
                                     <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">none</td>
                                     <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Total number of items to paginate.</td>
                                 </tr>
                                 <tr>
                                     <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">itemsPerPage</td>
-                                    <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">number</td>
+                                    <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">number</td>
                                     <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">10</td>
                                     <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Number of items to display per page.</td>
                                 </tr>
                                 <tr>
                                     <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">currentPage</td>
-                                    <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">number</td>
+                                    <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">number</td>
                                     <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">1</td>
                                     <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">The currently active page.</td>
                                 </tr>
                                 <tr>
                                     <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">onPageChange</td>
-                                    <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">function</td>
+                                    <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">function</td>
                                     <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">none</td>
                                     <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Function to call when the page changes.</td>
                                 </tr>
                                 <tr>
                                     <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">className</td>
-                                    <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">string</td>
+                                    <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">string</td>
                                     <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">empty</td>
                                     <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Additional classes for styling.</td>
                                 </tr>

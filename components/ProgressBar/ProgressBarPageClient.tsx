@@ -43,7 +43,7 @@ const ProgressBarPageClient: React.FC = () => {
                         <thead>
                             <tr>
                                 <th className="px-6 py-2 text-left text-gray-700 dark:text-gray-200">Name</th>
-                                <th className="px-6 py-2 text-left text-gray-700 dark:text-gray-200">Type</th>
+                                <th className="px-6 py-2 text-left text-gray-700 dark:text-gray-200 font-mono">Type</th>
                                 <th className="px-6 py-2 text-left text-gray-700 dark:text-gray-200">Default</th>
                                 <th className="px-6 py-2 text-left text-gray-700 dark:text-gray-200">Description</th>
                             </tr>
@@ -51,13 +51,13 @@ const ProgressBarPageClient: React.FC = () => {
                         <tbody>
                             <tr>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">progress</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">number</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">number</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">-</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">The current progress value.</td>
                             </tr>
                             <tr>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">className</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">string</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">string</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">-</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Additional classes for styling.</td>
                             </tr>
