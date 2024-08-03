@@ -13,6 +13,9 @@ const AlertDialogPageClient: React.FC = () => {
 
     const handleOpen = () => setIsOpen(true);
     const handleClose = () => setIsOpen(false);
+    const handleConfirm = () => {
+        console.log('Confirmed!');
+    };
 
     return (
         <Layout>
@@ -29,9 +32,15 @@ const AlertDialogPageClient: React.FC = () => {
                 <button className="px-4 py-2 bg-black dark:bg-gray-100 text-white dark:text-black rounded-lg shadow-sm hover:bg-gray-700 dark:hover:bg-gray-200" onClick={handleOpen}>
                     Show Dialog
                 </button>
-                <AlertDialog open={isOpen} onClose={handleClose}>
-                    <h3 className="text-lg font-medium text-gray-900 dark:text-gray-50">This is an alert dialog</h3>
-                    <p className="text-gray-700 dark:text-gray-300">This is the content of the alert dialog. It can be used to prompt the user for a decision or action.</p>
+                <AlertDialog 
+                    open={isOpen} 
+                    onClose={handleClose}
+                    onConfirm={handleConfirm}
+                    confirmText="Continue"
+                    closeText="Cancel"
+                >
+                    <h3 className="text-lg font-medium text-gray-900 dark:text-gray-50">Confirm Action</h3>
+                    <p className="text-gray-700 dark:text-gray-300">This action is irreversible. Are you sure you want to proceed?</p>
                 </AlertDialog>
             </div>
             {/* Props Section */}
