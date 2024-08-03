@@ -2,13 +2,13 @@
 import React from 'react';
 import type { Metadata } from "next";
 
-import Layout from '../../../components/Layout/Layout';
-import Badge from '../../../components/Badge/Badge';
-import Alert from '../../../components/Alert/Alert';
+import Layout from '@/components/Layout/Layout';
+import Badge from '@/components/Badge/Badge';
+import Alert from '@/components/Alert/Alert';
 
 export const metadata: Metadata = {
     title: "Alert",
-    description: "Alerts are used to display important messages to the user.",
+    description: "A prominent message that informs users about important events or status changes.",
 };
 
 const AlertPage: React.FC = () => {
