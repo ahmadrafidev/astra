@@ -30,7 +30,7 @@ const AlertDialogPageClient: React.FC = () => {
                 </div>
             </section>
             <div className="space-y-6">
-                <button className="px-4 py-2 bg-black dark:bg-gray-100 text-white dark:text-black rounded-lg shadow-sm hover:bg-gray-700 dark:hover:bg-gray-200" onClick={handleOpen}>
+                <button className="px-4 py-2 bg-gray-900 dark:bg-gray-100 text-white dark:text-black rounded-lg shadow-sm hover:bg-gray-800 dark:hover:bg-gray-200" onClick={handleOpen}>
                     Show Dialog
                 </button>
                 <AlertDialog 

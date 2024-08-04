@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     description: "Tooltips are used to provide additional information when hovering over an element.",
 };
 
-const TooltipPageClient = dynamic(() => import('../../../components/Tooltip/TooltipPageClient'), { ssr: false });
+const TooltipPageClient = dynamic(() => import('@/components/Tooltip/TooltipPageClient'), { ssr: false });
 
 const TooltipPage: React.FC = () => {
     return <TooltipPageClient />;

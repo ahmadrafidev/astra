@@ -1,4 +1,3 @@
-// components/Tooltip/TooltipPageClient.tsx
 'use client';
 
 import React from 'react';
@@ -17,13 +16,31 @@ const TooltipPageClient: React.FC = () => {
                     A small pop-up box that provides additional information about an element.
                 </p>
             </div>
-            <div className="space-y-6">
-                <Tooltip text="This is a tooltip">
-                    <button className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700">Hover over me</button>
-                </Tooltip>
-            </div>
+            <section className="mb-5">
+                <h2 className="text-lg md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Variants</h2>
+                <div className="space-y-3 flex flex-col justify-around">
+                    <div>
+                        <h3 className="text-base md:text-lg font-medium font-sans text-gray-900 dark:text-gray-50 mb-2 md:mb-3">
+                            Default Tooltip
+                        </h3>
+                        <Tooltip text="Default tooltip">
+                        <button className="px-4 py-2 bg-gray-900 dark:bg-gray-100 text-white dark:text-black rounded-lg shadow-sm hover:bg-gray-800 dark:hover:bg-gray-200">
+                            Default Tooltip
+                        </button>
+                    </Tooltip>
+                    </div>
+                    <div>
+                        <h3 className="text-base md:text-lg font-medium font-sans text-gray-900 dark:text-gray-50 mb-2 md:mb-3">Arrow Tooltip</h3>
+                        <Tooltip text="Arrow tooltip" variant="arrow">
+                        <button className="px-4 py-2 bg-gray-900 dark:bg-gray-100 text-white dark:text-black rounded-lg shadow-sm hover:bg-gray-800 dark:hover:bg-gray-200">
+                            Arrow Tooltip
+                        </button>
+                    </Tooltip>
+                    </div>
+                </div>
+            </section>
             {/* Props Section */}
-            <section className="mb-10">
+            <section className="my-5">
                 <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Props</h2>
                 <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg shadow">
                     <table className="min-w-full table-auto">
