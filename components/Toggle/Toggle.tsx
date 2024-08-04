@@ -2,12 +2,16 @@ import React, { ReactNode, useState, forwardRef, useImperativeHandle, useRef } f
 
 export interface ToggleProps {
     children?: ReactNode; 
-    className?: string;
-    ariaLabel?: string;
     onIcon?: ReactNode;
     offIcon?: ReactNode;
-    onChange?: (state: boolean) => void;
+    className?: string;
+    onClassName?: string;
+    offClassName?: string;
+    iconClassName?: string;
+    ariaLabel?: string;
     defaultOn?: boolean;
+    hideOffIcon?: boolean;
+    onChange?: (state: boolean) => void;
 }
 
 interface ToggleButtonHandle extends HTMLButtonElement {
@@ -15,7 +19,21 @@ interface ToggleButtonHandle extends HTMLButtonElement {
 }
 
 const Toggle = forwardRef<ToggleButtonHandle, ToggleProps>(
-    ({ children, className, ariaLabel, onIcon, offIcon, onChange, defaultOn = false }, ref) => {
+    (
+        {
+            children,
+            className,
+            ariaLabel,
+            onIcon,
+            offIcon,
+            onChange,
+            defaultOn = false,
+            onClassName,
+            offClassName,
+            iconClassName,
+            hideOffIcon = false
+        }, ref) => {
+
         const [on, setOn] = useState(defaultOn);
         const internalRef = useRef<HTMLButtonElement>(null);
 
@@ -34,11 +52,14 @@ const Toggle = forwardRef<ToggleButtonHandle, ToggleProps>(
             <button 
                 ref={internalRef}
                 onClick={handleClick} 
-                className={`px-4 py-2 border rounded-lg ${on ? 'bg-green-500' : 'bg-red-500'} text-white ${className}`}
+                className={`${on ? onClassName : offClassName} ${className}`}
                 aria-pressed={on}
                 aria-label={ariaLabel}
             >
-                {on ? onIcon : offIcon}
+                <span className={iconClassName}>
+                    {on ? onIcon : (hideOffIcon ? null : offIcon)}
+                </span>
+                {children}
             </button>
         );
     }
