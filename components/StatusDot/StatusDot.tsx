@@ -6,6 +6,7 @@ export interface StatusDotProps {
     type?: 'dot' | 'icon';
     icon?: React.ReactNode;
     label?: string;
+    showLabel?: boolean;
     className?: string;
     children?: React.ReactNode;
 }
@@ -27,6 +28,7 @@ const StatusDot: React.FC<StatusDotProps> = ({
     type = 'dot',
     icon,
     label,
+    showLabel = true,
     className,
     children,
 }) => {
@@ -34,17 +36,20 @@ const StatusDot: React.FC<StatusDotProps> = ({
     const isIcon = type === 'icon' && icon;
 
     return (
-        <span
-            className={cn(
-                'inline-flex items-center justify-center rounded-full text-white',
-                isIcon ? '' : statusColors[status],
-                className
-            )}
-            role="status"
-            aria-label={label || statusLabels[status]}
-        >
-            {isIcon ? icon : children}
-        </span>
+        <div className="flex items-center space-x-2">
+            <span
+                className={cn(
+                    'inline-flex items-center justify-center rounded-full text-white',
+                    isIcon ? '' : statusColors[status],
+                    className
+                )}
+                role="status"
+                aria-label={label || statusLabels[status]}
+            >
+                {isIcon ? icon : children}
+            </span>
+            {showLabel && <p className="text-gray-900 dark:text-gray-50 font-normal font-sans text-base">{label || statusLabels[status]}</p>}
+        </div>
     );
 };
 
