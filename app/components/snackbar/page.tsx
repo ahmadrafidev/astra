@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
     title: "Snackbar",
-    description: "Snackbars provide brief messages about app processes at the bottom of the screen.",
+    description: "A brief message that appears at the bottom of the screen.",
 };
 
 const SnackbarPageClient = dynamic(() => import('@/components/Snackbar/SnackbarPageClient'), { ssr: false });

@@ -1,4 +1,3 @@
-// components/Snackbar/SnackbarPageClient.tsx
 'use client';
 
 import React, { useState } from 'react';
@@ -29,10 +28,12 @@ const SnackbarPageClient: React.FC = () => {
             >
                 Show Snackbar
             </button>
-            <Snackbar 
-                message="This is a snackbar notification!" 
-                open={open} 
-                onClose={handleClose} 
+            <Snackbar
+                message="This is a success message!"
+                open={open}
+                onClose={() => setOpen(false)}
+                variant="success"
+                action={<button onClick={() => console.log('Action clicked')}>Undo</button>}
             />
             {/* Props Section */}
             <section className="mb-10">
