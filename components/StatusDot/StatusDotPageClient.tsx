@@ -1,7 +1,7 @@
-// components/StatusDot/StatusDotPageClient.tsx
 'use client';
 
 import React from 'react';
+import { Check, X, AlertTriangle } from 'lucide-react';
 
 import Layout from '../Layout/Layout';
 import Badge from '../Badge/Badge';
@@ -15,23 +15,49 @@ const StatusDotPageClient: React.FC = () => {
             <div className="flex flex-col mb-5">
                 <h1 className="text-2xl md:text-3xl font-medium mb-4 text-gray-900 dark:text-gray-50">Status Dot</h1>
                 <p className="text-sm md:text-base font-normal font-sans text-gray-900 dark:text-gray-50">
-                    A small colored circle indicating the current state of an item.
+                    A small colored circle or icon that visually represents the current status of an item.
                 </p>
             </div>
-            <div className="space-y-6">
-                <div className="flex items-center space-x-2">
-                    <StatusDot status="online" />
-                    <span>Online</span>
+
+            <section className="mb-5">
+                <h2 className="text-lg md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Variants</h2>
+                <div className="space-y-3 flex flex-col justify-around">
+                    <div className="flex flex-col space-y-3">
+                        <h3 className="text-base md:text-lg font-medium font-sans text-gray-900 dark:text-gray-50">
+                            Status Dot
+                        </h3>
+                        <div className="flex items-center space-x-2">
+                            <StatusDot status="online" type="dot" className="h-2 w-2"/>
+                            <span className="text-gray-900 dark:text-gray-50">Online</span>
+                        </div>
+                        <div className="flex items-center space-x-2">
+                            <StatusDot status="offline" type="dot" className="h-2 w-2"/>
+                            <span className="text-gray-900 dark:text-gray-50">Offline</span>
+                        </div>
+                        <div className="flex items-center space-x-2">
+                            <StatusDot status="busy" type="dot" className="h-2 w-2"/>
+                            <span className="text-gray-900 dark:text-gray-50">Busy</span>
+                        </div>
+                    </div>
+                    <div className="flex flex-col space-y-3">
+                        <h3 className="text-base md:text-lg font-medium font-sans text-gray-900 dark:text-gray-50">
+                            Icon Dot
+                        </h3>
+                        <div className="flex items-center space-x-2">
+                            <StatusDot status="online" type="icon" icon={<Check className="text-green-500" />} />
+                            <span className="text-gray-900 dark:text-gray-50">Online</span>
+                        </div>
+                        <div className="flex items-center space-x-2">
+                            <StatusDot status="offline" type="icon" icon={<X className="text-gray-400" />} />
+                            <span className="text-gray-900 dark:text-gray-50">Offline</span>
+                        </div>
+                        <div className="flex items-center space-x-2">
+                            <StatusDot status="busy" type="icon" icon={<AlertTriangle className="text-red-500" />} />
+                            <span className="text-gray-900 dark:text-gray-50">Busy</span>
+                        </div>
+                    </div>
                 </div>
-                <div className="flex items-center space-x-2">
-                    <StatusDot status="offline" />
-                    <span>Offline</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                    <StatusDot status="busy" />
-                    <span>Busy</span>
-                </div>
-            </div>
+            </section>
             {/* Props Section */}
             <section className="mb-10">
                 <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Props</h2>
