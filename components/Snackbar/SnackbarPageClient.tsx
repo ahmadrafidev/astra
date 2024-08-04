@@ -24,7 +24,7 @@ const SnackbarPageClient: React.FC = () => {
             </div>  
             <button 
                 onClick={handleOpen} 
-                className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700 transition"
+                className="px-4 py-2 bg-gray-900 dark:bg-gray-100 text-white dark:text-black rounded-lg shadow-sm hover:bg-gray-800 dark:hover:bg-gray-200"
             >
                 Show Snackbar
             </button>
