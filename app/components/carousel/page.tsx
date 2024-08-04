@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     description: "Carousel component for displaying a series of images or content in a slideshow format.",
 };
 
-const CarouselPageClient = dynamic(() => import('../../../components/Carousel/CarouselPageClient'), { ssr: false });
+const CarouselPageClient = dynamic(() => import('@/components/Carousel/CarouselPageClient'), { ssr: false });
 
 const CarouselPage: React.FC = () => {
     return <CarouselPageClient />;

@@ -1,4 +1,3 @@
-// pages/documentation/components/breadcrumbs.tsx
 import React from 'react';
 import dynamic from 'next/dynamic';
 import type { Metadata } from 'next';
@@ -8,7 +7,7 @@ export const metadata: Metadata = {
     description: "Breadcrumbs are used to display the current location within a hierarchical structure.",
 };
 
-const BreadcrumbsPageClient = dynamic(() => import('../../../components/Breadcrumbs/BreadcrumbsPageClient'), { ssr: false });
+const BreadcrumbsPageClient = dynamic(() => import('@/components/Breadcrumbs/BreadcrumbsPageClient'), { ssr: false });
 
 const BreadcrumbsPage: React.FC = () => {
     return <BreadcrumbsPageClient />;

@@ -1,4 +1,3 @@
-// pages/documentation/components/search-bar.tsx
 import React from 'react';
 import dynamic from 'next/dynamic';
 import type { Metadata } from 'next';
@@ -8,7 +7,7 @@ export const metadata: Metadata = {
     description: "A component for providing search functionality.",
 };
 
-const SearchBarPageClient = dynamic(() => import('../../../components/SearchBar/SearchBarPageClient'), { ssr: false });
+const SearchBarPageClient = dynamic(() => import('@/components/SearchBar/SearchBarPageClient'), { ssr: false });
 
 const SearchBarPage: React.FC = () => {
     return <SearchBarPageClient />;

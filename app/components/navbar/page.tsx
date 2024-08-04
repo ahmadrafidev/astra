@@ -2,10 +2,10 @@
 
 import React from 'react';
 
-import Layout from '../../../components/Layout/Layout';
-import Badge from '../../../components/Badge/Badge';
-import NavigationBar, { NavLink } from '../../../components/Navbar/Navbar';
-import ThemeToggle from '../../../components/ThemeToggle/ThemeToggle';
+import Layout from '@/components/Layout/Layout';
+import Badge from '@/components/Badge/Badge';
+import NavigationBar, { NavLink } from '@/components/Navbar/Navbar';
+import ThemeToggle from '@/components/ThemeToggle/ThemeToggle';
 
 const links: NavLink[] = [
     { label: 'About', href: '/about', ariaLabel: 'About' },

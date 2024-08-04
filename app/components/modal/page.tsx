@@ -1,4 +1,3 @@
-// pages/documentation/components/modal.tsx
 import React from 'react';
 import dynamic from 'next/dynamic';
 import type { Metadata } from 'next';
@@ -8,7 +7,7 @@ export const metadata: Metadata = {
     description: "A component for displaying modal dialogs.",
 };
 
-const ModalPageClient = dynamic(() => import('../../../components/Modal/ModalPageClient'), { ssr: false });
+const ModalPageClient = dynamic(() => import('@/components/Modal/ModalPageClient'), { ssr: false });
 
 const ModalPage: React.FC = () => {
     return <ModalPageClient />;

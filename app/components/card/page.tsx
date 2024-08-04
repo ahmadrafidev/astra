@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     description: 'The Card component is a versatile container for displaying content in a structured and visually appealing way.',
 };
 
-const CardPageClient = dynamic(() => import('../../../components/Card/CardPageClient'), { ssr: false });
+const CardPageClient = dynamic(() => import('@/components/Card/CardPageClient'), { ssr: false });
 
 const CardPage: React.FC = () => {
     return <CardPageClient />;

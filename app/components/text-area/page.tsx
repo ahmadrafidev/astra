@@ -1,4 +1,3 @@
-// app/components/textarea/page.tsx
 import React from 'react';
 import dynamic from 'next/dynamic';
 import type { Metadata } from 'next';
@@ -8,7 +7,7 @@ export const metadata: Metadata = {
     description: "Text areas are used for larger text inputs.",
 };
 
-const TextAreaPageClient = dynamic(() => import('../../../components/TextArea/TextAreaPageClient'), { ssr: false });
+const TextAreaPageClient = dynamic(() => import('@/components/TextArea/TextAreaPageClient'), { ssr: false });
 
 const TextAreaPage: React.FC = () => {
     return <TextAreaPageClient />;

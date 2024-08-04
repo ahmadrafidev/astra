@@ -1,11 +1,10 @@
-// pages/documentation/components/tabs.tsx
 'use client';
 
 import React from 'react';
 
-import Layout from '../../../components/Layout/Layout';
-import Badge from '../../../components/Badge/Badge';
-import { Tabs, Tab } from '../../../components/Tabs/Tabs';
+import Layout from '@/components/Layout/Layout';
+import Badge from '@/components/Badge/Badge';
+import { Tabs, Tab } from '@/components/Tabs/Tabs';
 
 const TabsPage: React.FC = () => {
     return (

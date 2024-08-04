@@ -1,4 +1,3 @@
-// pages/documentation/components/error.tsx
 import React from 'react';
 import dynamic from 'next/dynamic';
 import type { Metadata } from 'next';

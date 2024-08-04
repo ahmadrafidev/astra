@@ -1,11 +1,10 @@
-// pages/documentation/components/header.tsx
 'use client';
 
 import React from 'react';
 
-import Layout from '../../../components/Layout/Layout';
-import Badge from '../../../components/Badge/Badge';
-import Header from '../../../components/Header/Header';
+import Layout from '@/components/Layout/Layout';
+import Badge from '@/components/Badge/Badge';
+import Header from '@/components/Header/Header';
 
 const HeaderPage: React.FC = () => {
     return (

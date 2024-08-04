@@ -1,11 +1,11 @@
-// app/components/alert/page.tsx
 import React from 'react';
 import type { Metadata } from "next";
 
 import Layout from '@/components/Layout/Layout';
 import Badge from '@/components/Badge/Badge';
+
 import { Alert, AlertTitle, AlertContent} from '@/components/Alert/Alert';
-import AlertDocumentation from '../../../components/Alert/AlertDocumentation';
+import AlertDocumentation from '@/components/Alert/AlertDocumentation';
 
 export const metadata: Metadata = {
     title: "Alert",

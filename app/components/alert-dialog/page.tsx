@@ -1,4 +1,3 @@
-// app/components/alert-dialog/page.tsx
 import React from 'react';
 import dynamic from 'next/dynamic';
 import type { Metadata } from 'next';

@@ -1,4 +1,3 @@
-// app/components/pagination/page.tsx
 import React from 'react';
 import dynamic from 'next/dynamic';
 import type { Metadata } from 'next';
@@ -8,7 +7,7 @@ export const metadata: Metadata = {
     description: "Pagination allows users to navigate through large sets of data in a structured manner.",
 };
 
-const PaginationPageClient = dynamic(() => import('../../../components/Pagination/PaginationPageClient'), { ssr: false });
+const PaginationPageClient = dynamic(() => import('@/components/Pagination/PaginationPageClient'), { ssr: false });
 
 const PaginationPage: React.FC = () => {
     return <PaginationPageClient />;

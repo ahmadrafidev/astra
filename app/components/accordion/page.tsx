@@ -1,13 +1,12 @@
-// app/components/accordion/page.tsx
-
 import React from 'react';
 import type { Metadata } from "next";
 
-import Layout from '../../../components/Layout/Layout';
-import Badge from '../../../components/Badge/Badge';
-import { Accordion } from '../../../components/Accordion/Accordion';
-import { AccordionItem } from '../../../components/Accordion/AccordionItem';
-import AccordionDocumentation from '../../../components/Accordion/AccordionDocumentation';
+import Layout from '@/components/Layout/Layout';
+import Badge from '@/components/Badge/Badge';
+
+import { Accordion } from '@/components/Accordion/Accordion';
+import { AccordionItem } from '@/components/Accordion/AccordionItem';
+import AccordionDocumentation from '@/components/Accordion/AccordionDocumentation';
 
 export const metadata: Metadata = {
     title: "Accordion",
