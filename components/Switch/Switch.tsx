@@ -10,11 +10,19 @@ export interface SwitchProps {
     size?: 'small' | 'medium' | 'large';
 }
 
-const Switch: React.FC<SwitchProps> = ({ checked, onChange, className = '', ariaLabel, disabled = false, size = 'medium' }) => {
+const Switch: React.FC<SwitchProps> = ({ 
+    checked, 
+    onChange, 
+    className, 
+    ariaLabel, 
+    disabled = false, 
+    size = 'medium' 
+}) => {
+
     const sizeClasses = {
-        small: 'w-8 h-4',
-        medium: 'w-10 h-5',
-        large: 'w-12 h-6',
+        small: 'w-10 h-5',
+        medium: 'w-12 h-6',
+        large: 'w-14 h-7',
     };
 
     const knobSizeClasses = {
@@ -24,9 +32,15 @@ const Switch: React.FC<SwitchProps> = ({ checked, onChange, className = '', aria
     };
 
     const translateClasses = {
-        small: 'translate-x-4',
-        medium: 'translate-x-5',
-        large: 'translate-x-6',
+        small: 'translate-x-1',
+        medium: 'translate-x-1',
+        large: 'translate-x-1',
+    };
+
+    const checkedTranslateClasses = {
+        small: 'translate-x-6',
+        medium: 'translate-x-7',
+        large: 'translate-x-8',
     };
 
     return (
@@ -45,14 +59,14 @@ const Switch: React.FC<SwitchProps> = ({ checked, onChange, className = '', aria
                 className={cn(
                     "rounded-full peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-blue-500",
                     sizeClasses[size], 
-                    { 'bg-gray-300 dark:bg-gray-700': !checked, 'bg-green-700': checked }
+                    { 'bg-gray-300 dark:bg-gray-700': !checked, 'bg-blue-700 dark:bg-blue-600': checked }
                 )}
             ></span>
             <span 
                 className={cn(
                     "absolute bg-white rounded-full transition-transform",
                     knobSizeClasses[size],
-                    { [translateClasses[size]]: checked, 'translate-x-0': !checked, 'peer-focus:ring-2 peer-focus:ring-blue-500': !disabled }
+                    { [checked ? checkedTranslateClasses[size] : translateClasses[size]]: true, 'peer-focus:ring-2 peer-focus:ring-blue-500': !disabled }
                 )}
             ></span>
         </label>
