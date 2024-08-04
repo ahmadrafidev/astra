@@ -1,4 +1,3 @@
-// components/TextArea/TextArea.tsx
 import React from 'react';
 
 export interface TextAreaProps {

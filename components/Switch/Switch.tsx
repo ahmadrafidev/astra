@@ -1,16 +1,36 @@
-// components/Switch/Switch.tsx
 import React from 'react';
+import { cn } from 'lib/utils';
 
 export interface SwitchProps {
-    checked: boolean;
-    onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
     className?: string;
     ariaLabel?: string;
+    checked: boolean;
+    onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+    disabled?: boolean;
+    size?: 'small' | 'medium' | 'large';
 }
 
-const Switch: React.FC<SwitchProps> = ({ checked, onChange, className = '', ariaLabel }) => {
+const Switch: React.FC<SwitchProps> = ({ checked, onChange, className = '', ariaLabel, disabled = false, size = 'medium' }) => {
+    const sizeClasses = {
+        small: 'w-8 h-4',
+        medium: 'w-10 h-5',
+        large: 'w-12 h-6',
+    };
+
+    const knobSizeClasses = {
+        small: 'w-3 h-3',
+        medium: 'w-4 h-4',
+        large: 'w-5 h-5',
+    };
+
+    const translateClasses = {
+        small: 'translate-x-4',
+        medium: 'translate-x-5',
+        large: 'translate-x-6',
+    };
+
     return (
-        <label className={`relative inline-flex items-center cursor-pointer ${className}`}>
+        <label className={cn("relative inline-flex items-center cursor-pointer", className, { 'cursor-not-allowed opacity-50': disabled })}>
             <input 
                 type="checkbox" 
                 checked={checked} 
@@ -18,11 +38,22 @@ const Switch: React.FC<SwitchProps> = ({ checked, onChange, className = '', aria
                 className="sr-only" 
                 role="switch" 
                 aria-checked={checked} 
-                aria-label={ariaLabel}
+                aria-label={ariaLabel} 
+                disabled={disabled}
             />
-            <span className="w-10 h-4 bg-gray-300 rounded-full peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-blue-500 dark:bg-gray-700"></span>
             <span 
-                className={`absolute left-0.5 top-0.5 w-3.5 h-3.5 bg-white rounded-full transition-transform ${checked ? 'translate-x-6' : 'translate-x-0'} peer-focus:ring-2 peer-focus:ring-blue-500`}
+                className={cn(
+                    "rounded-full peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-blue-500",
+                    sizeClasses[size], 
+                    { 'bg-gray-300 dark:bg-gray-700': !checked, 'bg-green-700': checked }
+                )}
+            ></span>
+            <span 
+                className={cn(
+                    "absolute bg-white rounded-full transition-transform",
+                    knobSizeClasses[size],
+                    { [translateClasses[size]]: checked, 'translate-x-0': !checked, 'peer-focus:ring-2 peer-focus:ring-blue-500': !disabled }
+                )}
             ></span>
         </label>
     );

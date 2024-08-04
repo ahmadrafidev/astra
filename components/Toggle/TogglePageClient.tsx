@@ -5,6 +5,7 @@ import { Check, X, Wifi } from 'lucide-react';
 
 import Layout from '../Layout/Layout';
 import Badge from '../Badge/Badge';
+
 import Toggle from './Toggle';
 import ToggleDocumentation from './ToggleDocumentation';
 
