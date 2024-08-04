@@ -57,19 +57,25 @@ const TooltipPageClient: React.FC = () => {
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">children</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">ReactNode</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">-</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">The content that triggers the tooltip on hover.</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">The content that triggers the tooltip on hover or focus.</td>
                             </tr>
                             <tr>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">text</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">string</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">-</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">The text content of the tooltip.</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">empty</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">The text content of the tooltip. Keep it concise for better readability.</td>
                             </tr>
                             <tr>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">className</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">string</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">-</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">empty</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Additional classes for styling the tooltip wrapper.</td>
+                            </tr>
+                            <tr>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">variant</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">default, arrow</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">default</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Specifies the visual style of the tooltip.</td>
                             </tr>
                         </tbody>
                     </table>
@@ -79,9 +85,14 @@ const TooltipPageClient: React.FC = () => {
             <section>
                 <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Best Practices</h2>
                 <div className="space-y-4">
-                    <p className="text-gray-700 dark:text-gray-300">Use tooltips to provide additional information about an element when the user hovers over it.</p>
-                    <p className="text-gray-700 dark:text-gray-300">Ensure the tooltip content is concise and informative.</p>
-                    <p className="text-gray-700 dark:text-gray-300">Make sure tooltips are accessible and usable with keyboard navigation.</p>
+                    <p className="text-gray-700 dark:text-gray-300">1. Use tooltips to provide additional information about an element when the user hovers over it or focuses on it with keyboard navigation.</p>
+                    <p className="text-gray-700 dark:text-gray-300">2. Ensure the tooltip content is concise and informative. Aim for 1-2 short sentences or phrases.</p>
+                    <p className="text-gray-700 dark:text-gray-300">3. Make tooltips accessible by ensuring they work with keyboard navigation and are compatible with screen readers (use aria-describedby attribute).</p>
+                    <p className="text-gray-700 dark:text-gray-300">4. Position tooltips consistently throughout your application and ensure they do not obscure important content.</p>
+                    <p className="text-gray-700 dark:text-gray-300">5. Add a small delay (200-300ms) before showing the tooltip to prevent accidental triggers during rapid mouse movements.</p>
+                    <p className="text-gray-700 dark:text-gray-300">6. Use the arrow variant when you need to clearly indicate which element the tooltip refers to.</p>
+                    <p className="text-gray-700 dark:text-gray-300">7. Avoid using tooltips for critical information that users need to complete a task. Consider inline help text or expandable sections for more complex explanations.</p>
+                    <p className="text-gray-700 dark:text-gray-300">8. Test tooltips across different browsers and devices to ensure consistent behavior and visibility.</p>
                 </div>
             </section>
         </Layout>
