@@ -31,7 +31,7 @@ const StatusDotPageClient: React.FC = () => {
                     </div>
                     <div className="flex flex-col space-y-3">
                         <h3 className="text-base md:text-lg font-medium font-sans text-gray-900 dark:text-gray-50">
-                            Icon Dot
+                            Status Icon
                         </h3>
                         <StatusDot status="online" type="icon" icon={<Check className="text-green-500" />} label="Online" />
                         <StatusDot status="offline" type="icon" icon={<X className="text-gray-500" />} label="Offline" />
