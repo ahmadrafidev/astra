@@ -77,7 +77,7 @@ export const componentsList = [
     { name: 'PIN Code', path: '/components/pin-code'},
     { name: 'ProgressBar', path: '/components/progress-bar' },
     { name: 'Progress Tracker', path: '/components/progress-tracker' },
-    { name: 'RadioButton', path: '/components/radio-button' },
+    { name: 'Radio', path: '/components/radio' },
     { name: 'Rating', path: '/components/rating' },
     { name: 'SearchBar', path: '/components/search-bar' },
     { name: 'Select', path: '/components/select' },
@@ -115,7 +115,7 @@ export const categorizedComponentsList = {
     ],
     selectionAndInput: [
         { name: 'Checkbox', path: '/components/checkbox', description: 'Allows the user to select one or more options from a set.' },
-        { name: 'RadioButton', path: '/components/radio-button', description: 'Allows the user to select one option from a set.' },
+        { name: 'RadioButton', path: '/components/radio', description: 'Allows the user to select one option from a set.' },
         { name: 'Input', path: '/components/input', description: 'A field for user input, such as text, numbers, or passwords.' },
         { name: 'Select', path: '/components/select', description: 'A dropdown menu for selecting options.' },
         { name: 'Rating', path: '/components/rating', description: 'Interface for users to provide ratings or feedback' },
