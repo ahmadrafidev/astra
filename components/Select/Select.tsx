@@ -13,7 +13,7 @@ export interface SelectProps extends React.SelectHTMLAttributes<HTMLSelectElemen
   error?: string;
   helpText?: string;
   fullWidth?: boolean;
-  size?: 'small' | 'medium' | 'large';
+  variant?: 'small' | 'medium' | 'large';
   isClearable?: boolean;
   onClear?: () => void;
   placeholder?: string;
@@ -27,7 +27,7 @@ const Select = forwardRef<HTMLSelectElement, SelectProps>(
       error,
       helpText,
       fullWidth = false,
-      size = 'medium',
+      variant = 'medium',
       className,
       id,
       isClearable = false,
@@ -41,7 +41,7 @@ const Select = forwardRef<HTMLSelectElement, SelectProps>(
   ) => {
     const selectId = id || `select-${Math.random().toString(36).substr(2, 9)}`;
     
-    const sizeClasses = {
+    const variantClasses = {
       small: 'py-1 pl-2 pr-8 text-sm',
       medium: 'py-2 pl-3 pr-10',
       large: 'py-3 pl-4 pr-12 text-lg',
@@ -70,19 +70,19 @@ const Select = forwardRef<HTMLSelectElement, SelectProps>(
     return (
       <div className={`flex flex-col ${fullWidth ? 'w-full' : 'inline-flex'}`}>
         {label && (
-          <label htmlFor={selectId} className="mb-1 text-sm font-medium text-gray-700">
+          <label htmlFor={selectId} className="mb-1 text-sm font-medium text-gray-800 dark:text-gray-50">
             {label}
           </label>
         )}
-        <div className={`relative ${fullWidth ? 'w-full' : fixedWidths[size]}`}>
+        <div className={`relative ${fullWidth ? 'w-full' : fixedWidths[variant]}`}>
           <select
             ref={ref}
             id={selectId}
             className={`
-              appearance-none border rounded-md bg-white text-gray-900
+              appearance-none border rounded-md bg-white text-gray-700
               disabled:bg-gray-100 disabled:text-gray-500 disabled:cursor-not-allowed
-              ${sizeClasses[size]}
-              ${fullWidth ? 'w-full' : 'w-full'} // Always full width within its container
+              ${variantClasses[variant]}
+              ${fullWidth ? 'w-full' : 'w-full'}
               ${error ? 'border-red-500' : 'border-gray-300'}
               ${className}
             `}
@@ -104,14 +104,14 @@ const Select = forwardRef<HTMLSelectElement, SelectProps>(
               </option>
             ))}
           </select>
-          <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2 text-gray-700">
+          <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2 text-gray-700 hover:text-gray-500">
             <ChevronDown size={18} />
           </div>
           {isClearable && value && (
             <button
               type="button"
               onClick={handleClearClick}
-              className="absolute inset-y-0 right-0 flex items-center pr-8 text-gray-400 hover:text-gray-600"
+              className="absolute inset-y-0 right-0 flex items-center pr-8 text-gray-700 hover:text-gray-500"
               aria-label="Clear selection"
             >
               <XCircle size={18} />
@@ -119,12 +119,12 @@ const Select = forwardRef<HTMLSelectElement, SelectProps>(
           )}
         </div>
         {error && (
-          <p id={`${selectId}-error`} className="mt-1 text-sm text-red-600">
+          <p id={`${selectId}-error`} className="mt-1 text-sm text-red-600 dark:text-red-500">
             {error}
           </p>
         )}
         {helpText && (
-          <p id={`${selectId}-help`} className="mt-1 text-sm text-gray-500">
+          <p id={`${selectId}-help`} className="mt-1 text-sm text-gray-600 dark:text-gray-100">
             {helpText}
           </p>
         )}
@@ -134,5 +134,4 @@ const Select = forwardRef<HTMLSelectElement, SelectProps>(
 );
 
 Select.displayName = 'Select';
-
 export default Select;
