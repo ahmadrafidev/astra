@@ -41,7 +41,6 @@ const SelectPageClient: React.FC = () => {
                     options={options}
                     helpText="Select one of the available options"
                     size="medium"
-                    fullWidth
                     isClearable={true}
                     onClear={handleClear}
                     placeholder="Choose one!"

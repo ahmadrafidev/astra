@@ -40,11 +40,17 @@ const Select = forwardRef<HTMLSelectElement, SelectProps>(
     ref
   ) => {
     const selectId = id || `select-${Math.random().toString(36).substr(2, 9)}`;
-
+    
     const sizeClasses = {
       small: 'py-1 pl-2 pr-8 text-sm',
       medium: 'py-2 pl-3 pr-10',
       large: 'py-3 pl-4 pr-12 text-lg',
+    };
+
+    const fixedWidths = {
+      small: 'w-40',
+      medium: 'w-48',
+      large: 'w-56',
     };
 
     const handleKeyDown = useCallback((e: KeyboardEvent<HTMLSelectElement>) => {
@@ -68,7 +74,7 @@ const Select = forwardRef<HTMLSelectElement, SelectProps>(
             {label}
           </label>
         )}
-        <div className={`relative ${fullWidth ? 'w-full' : 'inline-block'}`}>
+        <div className={`relative ${fullWidth ? 'w-full' : fixedWidths[size]}`}>
           <select
             ref={ref}
             id={selectId}
@@ -76,7 +82,7 @@ const Select = forwardRef<HTMLSelectElement, SelectProps>(
               appearance-none border rounded-md bg-white text-gray-900
               disabled:bg-gray-100 disabled:text-gray-500 disabled:cursor-not-allowed
               ${sizeClasses[size]}
-              ${fullWidth ? 'w-full' : 'w-auto'}
+              ${fullWidth ? 'w-full' : 'w-full'} // Always full width within its container
               ${error ? 'border-red-500' : 'border-gray-300'}
               ${className}
             `}
@@ -128,4 +134,5 @@ const Select = forwardRef<HTMLSelectElement, SelectProps>(
 );
 
 Select.displayName = 'Select';
+
 export default Select;
