@@ -1,5 +1,4 @@
-// components/Modal/ModalPageClient.tsx
-'use client';
+"use client"
 
 import React, { useState } from 'react';
 
@@ -7,12 +6,64 @@ import Layout from '../Layout/Layout';
 import Badge from '../Badge/Badge';
 
 import Modal from './Modal';
+import ModalDocumentation from './ModalDocumentation';
 
 const ModalPageClient: React.FC = () => {
-    const [isOpen, setIsOpen] = useState(false);
 
-    const handleOpen = () => setIsOpen(true);
+    const [isOpen, setIsOpen] = useState(false);
+    const [modalType, setModalType] = useState<'default' | 'form' | 'custom'>('default');
+
+    const handleOpen = (type: 'default' | 'form' | 'custom') => {
+        setModalType(type);
+        setIsOpen(true);
+    };
+
     const handleClose = () => setIsOpen(false);
+
+    const renderModalContent = () => {
+        switch (modalType) {
+            case 'default':
+                return (
+                    <>
+                        <h2 id="modal-title" className="text-xl font-semibold text-gray-900 dark:text-gray-700">Default Modal</h2>
+                        <p id="modal-description" className="mt-4 text-gray-700 dark:text-gray-600">
+                            This is a simple modal with a title and some content.
+                        </p>
+                    </>
+                );
+            case 'form':
+                return (
+                    <>
+                        <h2 id="modal-title" className="text-xl font-semibold text-gray-900 dark:text-gray-700">Form Modal</h2>
+                        <form className="mt-4 space-y-4">
+                            <div>
+                                <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-600">Name</label>
+                                <input type="text" id="name" name="name" className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" />
+                            </div>
+                            <div>
+                                <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-600">Email</label>
+                                <input type="email" id="email" name="email" className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" />
+                            </div>
+                            <button type="submit" className="w-full px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                                Submit
+                            </button>
+                        </form>
+                    </>
+                );
+            case 'custom':
+                return (
+                    <div className="text-center">
+                        <h2 id="modal-title" className="text-xl font-semibold text-gray-900 dark:text-gray-700">Custom Modal</h2>
+                        <div className="mt-4 p-4 bg-green-100 rounded-lg">
+                            <p className="text-green-700">This is a custom styled modal with a green background. XOXO.</p>
+                        </div>
+                        <button onClick={handleClose} className="mt-4 px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500">
+                            Close Modal
+                        </button>
+                    </div>
+                );
+        }
+    };
 
     return (
         <Layout>
@@ -23,72 +74,49 @@ const ModalPageClient: React.FC = () => {
                     An overlay window that appears on top of the main content.
                 </p>
             </div>
-            <button 
-                onClick={handleOpen} 
-                className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700"
+            <section className="mb-5">
+                <h2 className="text-lg md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Variants</h2>
+                <div className="space-y-4 flex flex-col justify-around">
+                    <div>
+                        <h3 className="text-base md:text-lg font-medium font-sans text-gray-900 dark:text-gray-50 mb-2 md:mb-3">
+                            Base Modal
+                        </h3>
+                        <button 
+                            className="px-4 py-2 bg-gray-900 dark:bg-gray-100 text-white dark:text-black rounded-lg shadow-sm hover:bg-gray-800 dark:hover:bg-gray-200" 
+                            onClick={() => handleOpen('default')}>
+                            Open Default Modal
+                        </button>
+                    </div>
+                    <div>
+                        <h3 className="text-base md:text-lg font-medium font-sans text-gray-900 dark:text-gray-50 mb-2 md:mb-3">
+                            Form Modal
+                        </h3>  
+                        <button 
+                            className="px-4 py-2 bg-blue-700 dark:bg-blue-600 text-white dark:text-black rounded-lg shadow-sm hover:bg-blue-600 dark:hover:bg-blue-500" 
+                            onClick={() => handleOpen('form')}>
+                            Open Form Modal
+                        </button>
+                    </div>
+                    <div>
+                        <h3 className="text-base md:text-lg font-medium font-sans text-gray-900 dark:text-gray-50 mb-2 md:mb-3">
+                            Custom Modal
+                        </h3>
+                        <button 
+                            className="px-4 py-2 bg-green-600 dark:bg-green-500 text-black rounded-lg shadow-sm hover:bg-green-600 dark:hover:bg-green-400" 
+                            onClick={() => handleOpen('custom')}>
+                            Open Custom Modal
+                        </button>
+                    </div>
+                </div>
+            </section>
+            <Modal 
+                isOpen={isOpen} 
+                onClose={handleClose} 
+                className="max-w-lg"
             >
-                Open Modal
-            </button>
-            <Modal isOpen={isOpen} onClose={handleClose} className="max-w-lg">
-                <h2 id="modal-title" className="text-xl font-semibold text-gray-900">Modal Title</h2>
-                <p id="modal-description" className="mt-4 text-gray-700">
-                    This is the content of the modal. It can include any other components or HTML elements.
-                </p>
+                {renderModalContent()}
             </Modal>
-            {/* Props Section */}
-            <section className="mb-10">
-                <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Props</h2>
-                <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg shadow">
-                    <table className="min-w-full table-auto">
-                        <thead>
-                            <tr>
-                                <th className="px-6 py-2 text-left text-gray-700 dark:text-gray-200">Name</th>
-                                <th className="px-6 py-2 text-left text-gray-700 dark:text-gray-200">Type</th>
-                                <th className="px-6 py-2 text-left text-gray-700 dark:text-gray-200">Default</th>
-                                <th className="px-6 py-2 text-left text-gray-700 dark:text-gray-200">Description</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">isOpen</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">boolean</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">-</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Controls the visibility of the modal.</td>
-                            </tr>
-                            <tr>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">onClose</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">function</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">-</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Function to call when the modal is requested to be closed.</td>
-                            </tr>
-                            <tr>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">children</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">ReactNode</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">-</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Content to be rendered inside the modal.</td>
-                            </tr>
-                            <tr>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">className</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">string</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">empty</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Additional classes for styling the modal.</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </section>
-            {/* Best Practices Section */}
-            <section>
-                <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Best Practices</h2>
-                <div className="space-y-4">
-                    <ul className="list-decimal list-inside text-gray-700 dark:text-gray-300 space-y-3">
-                        <li>Use modals for urgent and important information that requires user action.</li>
-                        <li>Ensure modals are accessible and can be closed using keyboard navigation.</li>
-                        <li>Provide clear and concise information within the modal.</li>
-                        <li>Avoid overusing modals, as they can be disruptive to the user experience.</li>
-                    </ul>
-                </div>
-            </section>
+            <ModalDocumentation />
         </Layout>
     );
 };

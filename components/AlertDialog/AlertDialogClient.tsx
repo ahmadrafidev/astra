@@ -39,7 +39,7 @@ const AlertDialogPageClient: React.FC = () => {
                     confirmText="Continue"
                     closeText="Cancel"
                 >
-                    <h3 className="text-lg font-medium text-gray-900 dark:text-gray-50">Confirm Action</h3>
+                    <h3 className="text-xl font-medium text-gray-900 dark:text-gray-50">Confirm Action</h3>
                     <p className="text-gray-700 dark:text-gray-300">This action is irreversible. Are you sure you want to proceed?</p>
                 </AlertDialog>
             </div>
