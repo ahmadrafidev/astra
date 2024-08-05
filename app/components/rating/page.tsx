@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
     title: "Rating",
-    description: "A component for rating items.",
+    description: "A component for users to evaluate or score an item on a predefined scale.",
 };
 
 const RatingPageClient = dynamic(() => import('@/components/Rating/RatingPageClient'), { ssr: false });
