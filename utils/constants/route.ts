@@ -115,7 +115,7 @@ export const categorizedComponentsList = {
     ],
     selectionAndInput: [
         { name: 'Checkbox', path: '/components/checkbox', description: 'Allows the user to select one or more options from a set.' },
-        { name: 'RadioButton', path: '/components/radio', description: 'Allows the user to select one option from a set.' },
+        { name: 'Radio', path: '/components/radio', description: 'Allows the user to select one option from a set.' },
         { name: 'Input', path: '/components/input', description: 'A field for user input, such as text, numbers, or passwords.' },
         { name: 'Select', path: '/components/select', description: 'A dropdown menu for selecting options.' },
         { name: 'Rating', path: '/components/rating', description: 'Interface for users to provide ratings or feedback' },
