@@ -55,20 +55,20 @@ const SnackbarPageClient: React.FC = () => {
                             <tr>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">message</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">string</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">-</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">empty</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">The message to display in the snackbar.</td>
                             </tr>
                             <tr>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">open</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">boolean</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">-</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Whether the snackbar is open.</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">false</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">State whether the snackbar is open.</td>
                             </tr>
                             <tr>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">duration</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">number</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">3000</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">The duration the snackbar is displayed in milliseconds.</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">3s</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Duration of snackbar displayed on  screens.</td>
                             </tr>
                             <tr>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">onClose</td>
@@ -79,8 +79,32 @@ const SnackbarPageClient: React.FC = () => {
                             <tr>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">className</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">string</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">-</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">empty</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Additional classes for styling the snackbar.</td>
+                            </tr>
+                            <tr>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">variant</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">{`"info" | "success" | "warning" | "error"`}</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">{`"info"`}</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">The variant of the snackbar to define its color scheme.</td>
+                            </tr>
+                            <tr>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">action</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">React.ReactNode</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">none</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">An optional action element to display alongside the message.</td>
+                            </tr>
+                            <tr>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">showCloseButton</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">boolean</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">false</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Whether to show a close button on the snackbar.</td>
+                            </tr>
+                            <tr>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">icon</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">React.ReactNode</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">empty</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">An optional icon to display on the left side of the message.</td>
                             </tr>
                         </tbody>
                     </table>
@@ -90,9 +114,12 @@ const SnackbarPageClient: React.FC = () => {
             <section>
                 <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Best Practices</h2>
                 <div className="space-y-4">
-                    <p className="text-gray-700 dark:text-gray-300">Use snackbars to provide brief messages about app processes at the bottom of the screen.</p>
-                    <p className="text-gray-700 dark:text-gray-300">Ensure the snackbar is clearly visible and distinguishable.</p>
-                    <p className="text-gray-700 dark:text-gray-300">Provide accessible labels to describe the snackbar message.</p>
+                    <p className="text-gray-700 dark:text-gray-300">1. Use snackbars to provide brief messages about app processes.</p>
+                    <p className="text-gray-700 dark:text-gray-300">2. Ensure the snackbar is clearly visible and distinguishable.</p>
+                    <p className="text-gray-700 dark:text-gray-300">3. Provide accessible labels to describe the snackbar message.</p>
+                    <p className="text-gray-700 dark:text-gray-300">4. Avoid using snackbars for critical messages that require immediate user action; use dialogs instead.</p>
+                    <p className="text-gray-700 dark:text-gray-300">5. Limit the duration to a reasonable amount of time so that users have enough time to read the message.</p>
+                    <p className="text-gray-700 dark:text-gray-300">6. Snackbar should not interrup user`s experience and main content</p>
                 </div>
             </section>
         </Layout>
