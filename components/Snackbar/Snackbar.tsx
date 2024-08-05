@@ -63,7 +63,7 @@ const Snackbar: React.FC<SnackbarProps> = ({
   const variantClasses = {
     info: 'bg-blue-600',
     success: 'bg-green-600',
-    warning: 'bg-yellow-300',
+    warning: 'bg-yellow-400',
     error: 'bg-red-500',
   };
 

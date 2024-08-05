@@ -1,18 +1,33 @@
 'use client';
 
 import React, { useState } from 'react';
+import { Check, Info, AlertTriangle, XCircle } from 'lucide-react';
 
 import Layout from '../Layout/Layout';
 import Badge from '../Badge/Badge';
 
 import Snackbar from './Snackbar';
-import { Check } from 'lucide-react';
+
 
 const SnackbarPageClient: React.FC = () => {
     const [open, setOpen] = useState(false);
+    const [message, setMessage] = useState('');
+    const [variant, setVariant] = useState<'info' | 'success' | 'warning' | 'error'>('info');
 
-    const handleOpen = () => setOpen(true);
+    const handleOpen = (variant: 'info' | 'success' | 'warning' | 'error', message: string) => {
+        setVariant(variant);
+        setMessage(message);
+        setOpen(true);
+    };
+
     const handleClose = () => setOpen(false);
+
+    const icon = {
+        info: <Info />,
+        success: <Check />,
+        warning: <AlertTriangle />,
+        error: <XCircle />
+    };
 
     return (
         <Layout>
@@ -23,21 +38,64 @@ const SnackbarPageClient: React.FC = () => {
                     A brief message that appears at the bottom of the screen.
                 </p>
             </div>  
-            <div className="space-y-6">
-                <button 
-                    className="px-4 py-2 bg-gray-900 dark:bg-gray-100 text-white dark:text-black rounded-lg shadow-sm hover:bg-gray-800 dark:hover:bg-gray-200" 
-                    onClick={handleOpen}>
-                    Show Snackbar
-                </button>
+            <section className="mb-5">
+                <h2 className="text-lg md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Variants</h2>
+                <div className="space-y-4 flex flex-col justify-around">
+                    <div>
+                        <h3 className="text-base md:text-lg font-medium font-sans text-gray-900 dark:text-gray-50 mb-2 md:mb-3">
+                            Info Snackbar Model
+                        </h3>
+                        <button
+                            className="px-4 py-2 bg-blue-600 text-white rounded-lg shadow-sm hover:bg-blue-500"
+                            onClick={() => handleOpen('info', 'This is an info message!')}
+                        >
+                            Show Info Snackbar
+                        </button>
+                    </div>
+                    <div>
+                        <h3 className="text-base md:text-lg font-medium font-sans text-gray-900 dark:text-gray-50 mb-2 md:mb-3">
+                            Success Snackbar Model
+                        </h3>
+                        <button
+                            className="px-4 py-2 bg-green-600 text-white rounded-lg shadow-sm hover:bg-green-500"
+                            onClick={() => handleOpen('success', 'This is a success message!')}
+                        >
+                            Show Success Snackbar
+                        </button>
+                    </div>
+                    <div>
+                        <h3 className="text-base md:text-lg font-medium font-sans text-gray-900 dark:text-gray-50 mb-2 md:mb-3">
+                            Warning Snackbar Model
+                        </h3>
+                        <button
+                            className="px-4 py-2 bg-yellow-500 text-white rounded-lg shadow-sm hover:bg-yellow-400"
+                            onClick={() => handleOpen('warning', 'This is a warning message!')}
+                        >
+                            Show Warning Snackbar
+                        </button>
+                    </div>
+                    <div>
+                        <h3 className="text-base md:text-lg font-medium font-sans text-gray-900 dark:text-gray-50 mb-2 md:mb-3">
+                            Error Snackbar Model
+                        </h3>
+                        <button
+                            className="px-4 py-2 bg-red-600 text-white rounded-lg shadow-sm hover:bg-red-500"
+                            onClick={() => handleOpen('error', 'This is an error message!')}
+                        >
+                            Show Error Snackbar
+                        </button>
+                    </div>
+                </div>
                 <Snackbar
-                    message="This is a success message!"
+                    message={message}
                     open={open}
                     showCloseButton={true}
-                    onClose={() => setOpen(false)}
-                    variant="success"
+                    onClose={handleClose}
+                    variant={variant}
+                    icon={icon[variant]}
                     action={<button onClick={() => console.log('Action clicked')}>Undo</button>}
                 />
-            </div>
+            </section>
             {/* Props Section */}
             <section className="my-5">
                 <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Props</h2>

@@ -68,7 +68,7 @@ const Radio = forwardRef<HTMLInputElement, RadioProps>(
               htmlFor={inputId}
               className={cn(
                 "font-medium text-gray-900 dark:text-gray-50",
-                error && "text-red-500",
+                error && "text-red-600 dark:text-red-500",
                 disabled && "opacity-50 cursor-not-allowed",
                 labelClassName
               )}
