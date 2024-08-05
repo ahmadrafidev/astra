@@ -1,4 +1,3 @@
-// components/RadioButton/RadioButtonPageClient.tsx
 'use client';
 
 import React, { useState } from 'react';
@@ -100,12 +99,14 @@ const RadioButtonPageClient: React.FC = () => {
             </section>
             {/* Best Practices Section */}
             <section>
-                <h2 className="text-xl md:text-xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Best Practices</h2>
+                <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Best Practices</h2>
                 <div className="space-y-4">
-                    <p className="text-gray-700 dark:text-gray-300">Use radio buttons when the user needs to select one option from a group.</p>
-                    <p className="text-gray-700 dark:text-gray-300">Ensure that radio buttons are clearly labeled and grouped logically.</p>
-                    <p className="text-gray-700 dark:text-gray-300">Provide a default selection whenever possible.</p>
-                    <p className="text-gray-700 dark:text-gray-300">Make sure radio buttons are accessible and usable via keyboard navigation.</p>
+                    <ul className="list-decimal list-inside text-gray-700 dark:text-gray-300 space-y-3">
+                        <li>Use radio buttons when the user needs to select one option from a group.</li>
+                        <li>Ensure that radio buttons are clearly labeled and grouped logically.</li>
+                        <li>Provide a default selection whenever possible.</li>
+                        <li>Make sure radio buttons are accessible and usable via keyboard navigation.</li>
+                    </ul>
                 </div>
             </section>
         </Layout>

@@ -92,9 +92,11 @@ const SliderPageClient: React.FC = () => {
             <section>
                 <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Best Practices</h2>
                 <div className="space-y-4">
-                    <p className="text-gray-700 dark:text-gray-300">Use sliders to allow users to select a value from a continuous or discrete range.</p>
-                    <p className="text-gray-700 dark:text-gray-300">Ensure each step is clearly labeled and distinguishable.</p>
-                    <p className="text-gray-700 dark:text-gray-300">Provide accessible labels and descriptions for the slider.</p>
+                    <ul className="list-decimal list-inside text-gray-700 dark:text-gray-300 space-y-3">
+                        <li>Use sliders to allow users to select a value from a continuous or discrete range.</li>
+                        <li>Ensure each step is clearly labeled and distinguishable.</li>
+                        <li>Provide accessible labels and descriptions for the slider.</li>
+                    </ul>
                 </div>
             </section>
         </Layout>

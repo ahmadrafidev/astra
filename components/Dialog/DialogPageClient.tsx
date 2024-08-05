@@ -81,10 +81,12 @@ const DialogPageClient: React.FC = () => {
             <section>
                 <h2 className="text-2xl md:text-3xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Best Practices</h2>
                 <div className="space-y-4">
-                    <p className="text-gray-700 dark:text-gray-300">Use dialog components to display critical information or to prompt the user for action.</p>
-                    <p className="text-gray-700 dark:text-gray-300">Ensure that the dialog is accessible and can be navigated using the keyboard.</p>
-                    <p className="text-gray-700 dark:text-gray-300">Provide a clear way to close the dialog, such as a close button.</p>
-                    <p className="text-gray-700 dark:text-gray-300">Avoid overloading the dialog with too much content to keep it concise and focused.</p>
+                    <ul className="list-decimal list-inside text-gray-700 dark:text-gray-300 space-y-3">
+                        <li>Use dialog components to display critical information or to prompt the user for action.</li>
+                        <li>Ensure that the dialog is accessible and can be navigated using the keyboard.</li>
+                        <li>Provide a clear way to close the dialog, such as a close button.</li>
+                        <li>Avoid overloading the dialog with too much content to keep it concise and focused.</li>
+                    </ul>
                 </div>
             </section>
         </Layout>

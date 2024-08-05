@@ -112,19 +112,20 @@ const CheckboxPageClient: React.FC = () => {
                     </table>
                 </div>
             </section>
-
             {/* Best Practices Section */}
             <section>
                 <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Best Practices</h2>
                 <div className="space-y-4">
-                    <p className="text-gray-700 dark:text-gray-300">1. Use clear and concise labels that accurately describe the option.</p>
-                    <p className="text-gray-700 dark:text-gray-300">2. Provide sufficient spacing for touch interactions and visual clarity.</p>
-                    <p className="text-gray-700 dark:text-gray-300">3. Ensure accessibility via keyboard navigation and screen readers.</p>
-                    <p className="text-gray-700 dark:text-gray-300">4. Provide clear visual feedback for checkbox states (hover, focus, active).</p>
-                    <p className="text-gray-700 dark:text-gray-300">5. Use the error prop to display clear and actionable validation messages when necessary.</p>
-                    <p className="text-gray-700 dark:text-gray-300">6. Maintain consistent styling and behavior throughout the application.</p>
+                    <ul className="list-decimal list-inside text-gray-700 dark:text-gray-300 space-y-3">
+                        <li>Use clear and concise labels that accurately describe the option.</li>
+                        <li>Provide sufficient spacing for touch interactions and visual clarity.</li>
+                        <li>Ensure accessibility via keyboard navigation and screen readers.</li>
+                        <li>Provide clear visual feedback for checkbox states (hover, focus, active).</li>
+                        <li>Use the error prop to display clear and actionable validation messages when necessary.</li>
+                        <li>Maintain consistent styling and behavior throughout the application.</li>
+                    </ul>
                 </div>
-            </section> 
+            </section>
         </Layout>
     );
 };

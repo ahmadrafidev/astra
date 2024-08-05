@@ -81,10 +81,12 @@ const ModalPageClient: React.FC = () => {
             <section>
                 <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Best Practices</h2>
                 <div className="space-y-4">
-                    <p className="text-gray-700 dark:text-gray-300">Use modals for urgent and important information that requires user action.</p>
-                    <p className="text-gray-700 dark:text-gray-300">Ensure modals are accessible and can be closed using keyboard navigation.</p>
-                    <p className="text-gray-700 dark:text-gray-300">Provide clear and concise information within the modal.</p>
-                    <p className="text-gray-700 dark:text-gray-300">Avoid overusing modals, as they can be disruptive to the user experience.</p>
+                    <ul className="list-decimal list-inside text-gray-700 dark:text-gray-300 space-y-3">
+                        <li>Use modals for urgent and important information that requires user action.</li>
+                        <li>Ensure modals are accessible and can be closed using keyboard navigation.</li>
+                        <li>Provide clear and concise information within the modal.</li>
+                        <li>Avoid overusing modals, as they can be disruptive to the user experience.</li>
+                    </ul>
                 </div>
             </section>
         </Layout>

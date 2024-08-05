@@ -53,23 +53,26 @@ const AlertDocumentation = () => {
               </table>
           </div>
       </section>
-
       {/* Best Practices Section */}
       <section>
           <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Best Practices</h2>
           <div className="space-y-4">
-              <p className="text-gray-700 dark:text-gray-300">1. <strong>Use appropriate alert types:</strong> Choose the correct type based on the message's importance and context.</p>
-              <ul className="list-disc pl-8 text-gray-700 dark:text-gray-300">
-                  <li><strong>Info:</strong> For general information or updates</li>
-                  <li><strong>Success:</strong> To confirm a task has been completed successfully</li>
-                  <li><strong>Warning:</strong> For potential issues or important notices</li>
-                  <li><strong>Error:</strong> For critical problems or failures</li>
+              <ul className="list-decimal list-inside text-gray-700 dark:text-gray-300 space-y-3">
+                  <li>
+                      <strong>Use appropriate alert types:</strong> Choose the correct type based on the message's importance and context.
+                      <ul className="list-disc pl-8 text-gray-700 dark:text-gray-300">
+                          <li><strong>Info:</strong> For general information or updates</li>
+                          <li><strong>Success:</strong> To confirm a task has been completed successfully</li>
+                          <li><strong>Warning:</strong> For potential issues or important notices</li>
+                          <li><strong>Error:</strong> For critical problems or failures</li>
+                      </ul>
+                  </li>
+                  <li><strong>Keep content concise and actionable.</strong> Write clear, brief messages that users can quickly understand and act upon. Avoid unnecessary details.</li>
+                  <li><strong>Use dismissible alerts judiciously.</strong> Make alerts dismissible when the information is not critical and users might want to remove it from view.</li>
+                  <li><strong>Provide context and next steps.</strong> When appropriate, include guidance on what the user should do next or how to resolve an issue.</li>
+                  <li><strong>Ensure accessibility.</strong> Use proper ARIA roles and ensure color is not the only means of conveying the alert type.</li>
+                  <li><strong>Placement matters.</strong> Position alerts where they are easily noticeable but don't obstruct important content or actions.</li>
               </ul>
-              <p className="text-gray-700 dark:text-gray-300">2. <strong>Keep content concise and actionable.</strong> Write clear, brief messages that users can quickly understand and act upon. Avoid unnecessary details.</p>
-              <p className="text-gray-700 dark:text-gray-300">3. <strong>Use dismissible alerts judiciously.</strong> Make alerts dismissible when the information is not critical and users might want to remove it from view.</p>
-              <p className="text-gray-700 dark:text-gray-300">4. <strong>Provide context and next steps.</strong> When appropriate, include guidance on what the user should do next or how to resolve an issue.</p>
-              <p className="text-gray-700 dark:text-gray-300">5. <strong>Ensure accessibility.</strong> Use proper ARIA roles and ensure color is not the only means of conveying the alert type.</p>
-              <p className="text-gray-700 dark:text-gray-300">6. <strong>Placement matters.</strong> Position alerts where they are easily noticeable but don't obstruct important content or actions.</p>
           </div>
       </section>
     </>

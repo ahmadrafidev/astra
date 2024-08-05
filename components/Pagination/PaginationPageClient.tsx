@@ -1,4 +1,3 @@
-// components/Pagination/PaginationPageClient.tsx
 'use client';
 
 import React, { useState } from 'react';
@@ -88,13 +87,12 @@ const PaginationPageClient: React.FC = () => {
             <section>
                 <div className="flex flex-col mb-4">
                     <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Best Practices</h2>
-                    <ul className="list-disc pl-5 space-y-2 text-gray-900 dark:text-gray-50">
+                    <ul className="list-decimal list-inside pl-5 space-y-2 text-gray-900 dark:text-gray-50">
                         <li>Use pagination for large data sets to improve loading times and user experience.</li>
                         <li>Clearly indicate the current page and total number of pages.</li>
                         <li>Provide controls to navigate to the next, previous, first, and last pages.</li>
                         <li>Ensure pagination controls are easily tappable on mobile devices.</li>
                         <li>Keep the number of pagination links to a manageable number to avoid overwhelming users.</li>
-                        <li>Provide feedback when a page is loading to inform users of the progress.</li>
                     </ul>
                 </div>
             </section>

@@ -1,4 +1,3 @@
-// components/ProgressBar/ProgressBarPageClient.tsx
 'use client';
 
 import React, { useState } from 'react';
@@ -69,9 +68,11 @@ const ProgressBarPageClient: React.FC = () => {
             <section>
                 <h2 className="text-2xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Best Practices</h2>
                 <div className="space-y-4">
-                    <p className="text-gray-700 dark:text-gray-300">Ensure the progress bar is clearly visible and indicates progress accurately.</p>
-                    <p className="text-gray-700 dark:text-gray-300">Use distinguishable colors to indicate progress.</p>
-                    <p className="text-gray-700 dark:text-gray-300">Make sure the progress bar is accessible and usable via screen readers.</p>
+                    <ul className="list-decimal list-inside text-gray-700 dark:text-gray-300 space-y-3">
+                        <li>Ensure the progress bar is clearly visible and indicates progress accurately.</li>
+                        <li>Use distinguishable colors to indicate progress.</li>
+                        <li>Make sure the progress bar is accessible and usable via screen readers.</li>
+                    </ul>
                 </div>
             </section>
         </Layout>

@@ -109,11 +109,11 @@ const CardPageClient: React.FC = () => {
             <section>
                 <div className="flex flex-col mb-4">
                     <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Best Practices</h2>
-                    <ul className="list-disc pl-5 text-gray-700 dark:text-gray-300">
-                        <li className="mb-2">Use descriptive titles and concise descriptions to provide clear information.</li>
-                        <li className="mb-2">Ensure images are of high quality and relevant to the card content.</li>
-                        <li className="mb-2">Group related information and actions within a card to maintain a cohesive structure.</li>
-                        <li className="mb-2">Maintain consistent spacing and alignment for a clean and organized layout.</li>
+                    <ul className="list-disc pl-5 text-gray-700 dark:text-gray-300 space-y-3">
+                        <li>Use descriptive titles and concise descriptions to provide clear information.</li>
+                        <li>Ensure images are of high quality and relevant to the card content.</li>
+                        <li>Group related information and actions within a card to maintain a cohesive structure.</li>
+                        <li>Maintain consistent spacing and alignment for a clean and organized layout.</li>
                     </ul>
                 </div>
             </section>

@@ -1,4 +1,3 @@
-// components/Breadcrumbs/BreadcrumbsPageClient.tsx
 'use client';
 
 import React from 'react';
@@ -60,9 +59,11 @@ const BreadcrumbsPageClient: React.FC = () => {
             <section className="my-4">
                 <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Best Practices</h2>
                 <div className="space-y-4">
-                    <p className="text-gray-700 dark:text-gray-300">Use breadcrumbs to provide users with a navigational aid that indicates their current location in the application.</p>
-                    <p className="text-gray-700 dark:text-gray-300">Ensure that breadcrumb items are ordered correctly from highest to lowest hierarchy.</p>
-                    <p className="text-gray-700 dark:text-gray-300">Provide meaningful names for each breadcrumb item.</p>
+                    <ul className="list-decimal list-inside text-gray-700 dark:text-gray-300 space-y-3">
+                        <li>Use breadcrumbs to provide users with a navigational aid that indicates their current location in the application.</li>
+                        <li>Ensure that breadcrumb items are ordered correctly from highest to lowest hierarchy.</li>
+                        <li>Provide meaningful names for each breadcrumb item.</li>
+                    </ul>
                 </div>
             </section>
         </Layout>

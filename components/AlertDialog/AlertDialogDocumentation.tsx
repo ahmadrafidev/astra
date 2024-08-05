@@ -65,17 +65,17 @@ const AlertDialogDocumentation: React.FC = () => {
       </section>
       {/* Best Practices Section */}
       <section className="my-5">
-        <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Best Practices</h2>
-        <div className="space-y-4">
-            <p className="text-gray-700 dark:text-gray-300">1. Use alert dialogs sparingly for critical actions or important decisions that require user confirmation.</p>
-            <p className="text-gray-700 dark:text-gray-300">2. Keep the dialog content concise and focused on the specific action or decision at hand.</p>
-            <p className="text-gray-700 dark:text-gray-300">3. Use clear and action-oriented language for button labels (e.g., "Delete" instead of "OK").</p>
-            <p className="text-gray-700 dark:text-gray-300">4. Ensure that the confirm button stands out visually as the primary action.</p>
-            <p className="text-gray-700 dark:text-gray-300">5. Provide a clear way to dismiss the dialog without taking action (e.g., a "Cancel" button or clicking outside the dialog).</p>
-            <p className="text-gray-700 dark:text-gray-300">6. Consider using different colors or styles for destructive actions to draw attention to potential consequences.</p>
-            <p className="text-gray-700 dark:text-gray-300">7. Ensure the dialog is accessible, including proper focus management and keyboard navigation.</p>
-            <p className="text-gray-700 dark:text-gray-300">8. Test the dialog on different screen sizes to ensure it remains usable on mobile devices.</p>
-        </div>
+          <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Best Practices</h2>
+          <div className="space-y-4">
+              <ul className="list-decimal list-inside text-gray-700 dark:text-gray-300 space-y-3">
+                  <li>Use alert dialogs sparingly for critical actions or important decisions that require user confirmation.</li>
+                  <li>Keep the dialog content concise and focused on the specific action or decision at hand.</li>
+                  <li>Use clear and action-oriented language for button labels (e.g., "Delete" instead of "OK").</li>
+                  <li>Ensure that the confirm button stands out visually as the primary action.</li>
+                  <li>Provide a clear way to dismiss the dialog without taking action (e.g., a "Cancel" button or clicking outside the dialog).</li>
+                  <li>Consider using different colors or styles for destructive actions to draw attention to potential consequences.</li>
+              </ul>
+          </div>
       </section>
     </>
   );

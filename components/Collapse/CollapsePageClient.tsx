@@ -66,10 +66,12 @@ const CollapsePageClient: React.FC = () => {
             <section>
                 <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Best Practices</h2>
                 <div className="space-y-4">
-                    <p className="text-gray-700 dark:text-gray-300">Use collapse components to hide or show content sections dynamically.</p>
-                    <p className="text-gray-700 dark:text-gray-300">Ensure the collapse button is accessible and keyboard-navigable.</p>
-                    <p className="text-gray-700 dark:text-gray-300">Provide clear titles for each collapse section to improve usability.</p>
-                    <p className="text-gray-700 dark:text-gray-300">Avoid overloading collapse sections with too much content to maintain readability.</p>
+                    <ul className="list-decimal list-inside text-gray-700 dark:text-gray-300 space-y-3">
+                        <li>Use collapse components to hide or show content sections dynamically.</li>
+                        <li>Ensure the collapse button is accessible and keyboard-navigable.</li>
+                        <li>Provide clear titles for each collapse section to improve usability.</li>
+                        <li>Avoid overloading collapse sections with too much content to maintain readability.</li>
+                    </ul>
                 </div>
             </section>
         </Layout>

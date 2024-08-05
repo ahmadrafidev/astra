@@ -1,4 +1,3 @@
-// components/SearchBar/SearchBarPageClient.tsx
 'use client';
 
 import React, { useState } from 'react';
@@ -61,10 +60,11 @@ const SearchBarPageClient: React.FC = () => {
             <section>
                 <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Best Practices</h2>
                 <div className="space-y-4">
-                    <p className="text-gray-700 dark:text-gray-300">Ensure the search bar is easily accessible and prominently displayed on the page.</p>
-                    <p className="text-gray-700 dark:text-gray-300">Provide meaningful placeholder text to guide users on what they can search for.</p>
-                    <p className="text-gray-700 dark:text-gray-300">Use ARIA attributes to make the search bar accessible to screen readers.</p>
-                    <p className="text-gray-700 dark:text-gray-300">Debounce the search input to prevent excessive queries being sent on every keystroke.</p>
+                    <ul className="list-decimal list-inside text-gray-700 dark:text-gray-300 space-y-3">
+                        <li>Ensure the search bar is easily accessible and prominently displayed on the page.</li>
+                        <li>Provide meaningful placeholder text to guide users on what they can search for.</li>
+                        <li>Debounce the search input to prevent excessive queries being sent on every keystroke.</li>
+                    </ul>
                 </div>
             </section>
         </Layout>

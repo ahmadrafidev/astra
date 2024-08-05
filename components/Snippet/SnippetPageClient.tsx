@@ -63,9 +63,11 @@ const SnippetPageClient: React.FC = () => {
             <section>
                 <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Best Practices</h2>
                 <div className="space-y-4">
-                    <p className="text-gray-700 dark:text-gray-300">Use snippets to display code examples with syntax highlighting.</p>
-                    <p className="text-gray-700 dark:text-gray-300">Ensure the language is correctly specified for accurate highlighting.</p>
-                    <p className="text-gray-700 dark:text-gray-300">Provide accessible labels to describe the code snippet.</p>
+                    <ul className="list-decimal list-inside text-gray-700 dark:text-gray-300 space-y-3">
+                        <li>Use snippets to display code examples with syntax highlighting.</li>
+                        <li>Ensure the language is correctly specified for accurate highlighting.</li>
+                        <li>Provide accessible labels to describe the code snippet.</li>
+                    </ul>
                 </div>
             </section>
         </Layout>

@@ -102,7 +102,7 @@ const NavigationBarPage: React.FC = () => {
             <section>
                 <div className="flex flex-col mb-4">
                     <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Best Practices</h2>
-                    <ul className="list-disc pl-5 text-gray-700 dark:text-gray-300">
+                    <ul className="list-decimal list-inside pl-5 text-gray-700 dark:text-gray-300">
                         <li className="mb-2">Ensure navigation links are descriptive and provide clear indications of their destination.</li>
                         <li className="mb-2">Use ARIA labels for better accessibility.</li>
                         <li className="mb-2">Maintain consistency in the design of the navigation bar across different pages.</li>

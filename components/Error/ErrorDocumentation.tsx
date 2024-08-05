@@ -61,13 +61,15 @@ const ErrorDocumentation = () => {
       </section>
       {/* Best Practices Section */}
       <section className="my-5">
-        <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Best Practices</h2>
-        <div className="space-y-4">
-          <p className="text-gray-700 dark:text-gray-300">1. Use clear and concise error messages.</p>
-          <p className="text-gray-700 dark:text-gray-300">2. Provide a retry button for recoverable errors.</p>
-          <p className="text-gray-700 dark:text-gray-300">3. Ensure the error message is accessible and noticeable.</p>
-          <p className="text-gray-700 dark:text-gray-300">4. Use appropriate colors to indicate error states.</p>
-        </div>
+          <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Best Practices</h2>
+          <div className="space-y-4">
+              <ul className="list-decimal list-inside text-gray-700 dark:text-gray-300 space-y-3">
+                  <li>Use clear and concise error messages.</li>
+                  <li>Provide a retry button for recoverable errors.</li>
+                  <li>Ensure the error message is accessible and noticeable.</li>
+                  <li>Use appropriate colors to indicate error states.</li>
+              </ul>
+          </div>
       </section>
     </>
   );

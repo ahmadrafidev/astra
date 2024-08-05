@@ -80,9 +80,11 @@ const TextAreaPageClient: React.FC = () => {
             <section>
                 <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Best Practices</h2>
                 <div className="space-y-4">
-                    <p className="text-gray-700 dark:text-gray-300">Use text areas for larger text inputs.</p>
-                    <p className="text-gray-700 dark:text-gray-300">Ensure the text area is resizable for user convenience.</p>
-                    <p className="text-gray-700 dark:text-gray-300">Provide clear and concise placeholder text to guide users.</p>
+                    <ul className="list-decimal list-inside text-gray-700 dark:text-gray-300 space-y-3">
+                        <li>Use text areas for larger text inputs.</li>
+                        <li>Ensure the text area is resizable for user convenience.</li>
+                        <li>Provide clear and concise placeholder text to guide users.</li>
+                    </ul>
                 </div>
             </section>
         </Layout>

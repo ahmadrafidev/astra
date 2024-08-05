@@ -49,13 +49,15 @@ const ListPageClient: React.FC = () => {
                     </table>
                 </div>
             </section>
+            {/* Best Practices Section */}
             <section>
                 <h2 className="text-2xl md:text-3xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Best Practices</h2>
                 <div className="space-y-4">
-                    <p className="text-gray-700 dark:text-gray-300">Use lists to group related items and improve readability.</p>
-                    <p className="text-gray-700 dark:text-gray-300">Ensure list items are clearly distinguishable and visually separated.</p>
-                    <p className="text-gray-700 dark:text-gray-300">Use appropriate ARIA roles to enhance accessibility.</p>
-                    <p className="text-gray-700 dark:text-gray-300">Avoid overloading lists with too many items; break them into smaller groups if necessary.</p>
+                    <ul className="list-decimal list-inside text-gray-700 dark:text-gray-300 space-y-3">
+                        <li>Use lists to group related items and improve readability.</li>
+                        <li>Ensure list items are clearly distinguishable and visually separated.</li>
+                        <li>Avoid overloading lists with too many items; break them into smaller groups if necessary.</li>
+                    </ul>
                 </div>
             </section>
         </Layout>

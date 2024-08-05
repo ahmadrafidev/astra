@@ -114,12 +114,14 @@ const SnackbarPageClient: React.FC = () => {
             <section>
                 <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Best Practices</h2>
                 <div className="space-y-4">
-                    <p className="text-gray-700 dark:text-gray-300">1. Use snackbars to provide brief messages about app processes.</p>
-                    <p className="text-gray-700 dark:text-gray-300">2. Ensure the snackbar is clearly visible and distinguishable.</p>
-                    <p className="text-gray-700 dark:text-gray-300">3. Provide accessible labels to describe the snackbar message.</p>
-                    <p className="text-gray-700 dark:text-gray-300">4. Avoid using snackbars for critical messages that require immediate user action; use dialogs instead.</p>
-                    <p className="text-gray-700 dark:text-gray-300">5. Limit the duration to a reasonable amount of time so that users have enough time to read the message.</p>
-                    <p className="text-gray-700 dark:text-gray-300">6. Snackbar should not interrup user`s experience and main content</p>
+                    <ul className="list-decimal list-inside text-gray-700 dark:text-gray-300 space-y-3">
+                        <li>Use snackbars to provide brief messages about app processes.</li>
+                        <li>Ensure the snackbar is clearly visible and distinguishable.</li>
+                        <li>Provide accessible labels to describe the snackbar message.</li>
+                        <li>Avoid using snackbars for critical messages that require immediate user action; use dialogs instead.</li>
+                        <li>Limit the duration to a reasonable amount of time so that users have enough time to read the message.</li>
+                        <li>Snackbars should not interrupt the user’s experience and main content.</li>
+                    </ul>
                 </div>
             </section>
         </Layout>

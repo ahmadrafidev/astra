@@ -77,7 +77,7 @@ const TabsPage: React.FC = () => {
             <section>
                 <div className="flex flex-col mb-4">
                     <h2 className="text-xl md:text-2xl font-medium mb-5 text-gray-900 dark:text-gray-50">Best Practices</h2>
-                    <ul className="list-disc pl-5 text-gray-700 dark:text-gray-300">
+                    <ul className="list-decimal list-inside pl-5 text-gray-700 dark:text-gray-300">
                         <li className="mb-2">Use descriptive labels for tabs to clearly convey their content.</li>
                         <li className="mb-2">Consider using icons alongside labels for better visual representation.</li>
                         <li className="mb-2">Ensure the tabs are accessible by using appropriate ARIA attributes.</li>

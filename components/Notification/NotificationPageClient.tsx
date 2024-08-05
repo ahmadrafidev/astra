@@ -78,10 +78,12 @@ const NotificationPageClient: React.FC = () => {
             <section>
                 <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Best Practices</h2>
                 <div className="space-y-4">
-                    <p className="text-gray-700 dark:text-gray-300">Use notifications to inform users about important events or actions.</p>
-                    <p className="text-gray-700 dark:text-gray-300">Ensure notifications are easily dismissible.</p>
-                    <p className="text-gray-700 dark:text-gray-300">Use different colors to distinguish between different types of notifications (e.g., success, error, info, warning).</p>
-                    <p className="text-gray-700 dark:text-gray-300">Make sure notifications are accessible and provide meaningful messages.</p>
+                    <ul className="list-decimal list-inside text-gray-700 dark:text-gray-300 space-y-3">
+                        <li>Use notifications to inform users about important events or actions.</li>
+                        <li>Ensure notifications are easily dismissible.</li>
+                        <li>Use different colors to distinguish between different types of notifications (e.g., success, error, info, warning).</li>
+                        <li>Make sure notifications are accessible and provide meaningful messages.</li>
+                    </ul>
                 </div>
             </section>
         </Layout>

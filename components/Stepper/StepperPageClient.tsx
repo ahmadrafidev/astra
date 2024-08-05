@@ -62,9 +62,11 @@ const StepperPageClient: React.FC = () => {
             <section>
                 <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Best Practices</h2>
                 <div className="space-y-4">
-                    <p className="text-gray-700 dark:text-gray-300">Use steppers to guide users through a series of steps in a sequential manner.</p>
-                    <p className="text-gray-700 dark:text-gray-300">Ensure each step is clearly labeled and distinguishable.</p>
-                    <p className="text-gray-700 dark:text-gray-300">Provide feedback to users on their current step and the steps they have completed.</p>
+                    <ul className="list-decimal list-inside text-gray-700 dark:text-gray-300 space-y-3">
+                        <li>Use steppers to guide users through a series of steps in a sequential manner.</li>
+                        <li>Ensure each step is clearly labeled and distinguishable.</li>
+                        <li>Provide feedback to users on their current step and the steps they have completed.</li>
+                    </ul>
                 </div>
             </section>
         </Layout>

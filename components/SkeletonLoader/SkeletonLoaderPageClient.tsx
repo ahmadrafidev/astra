@@ -63,9 +63,11 @@ const SkeletonLoaderPageClient: React.FC = () => {
             <section>
                 <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Best Practices</h2>
                 <div className="space-y-4">
-                    <p className="text-gray-700 dark:text-gray-300">Use skeleton loaders to provide a visual indication of loading content.</p>
-                    <p className="text-gray-700 dark:text-gray-300">Ensure the skeleton loader reflects the shape and size of the content it represents.</p>
-                    <p className="text-gray-700 dark:text-gray-300">Provide accessible labels to describe the loading state.</p>
+                    <ul className="list-decimal list-inside text-gray-700 dark:text-gray-300 space-y-3">
+                        <li>Use skeleton loaders to provide a visual indication of loading content.</li>
+                        <li>Ensure the skeleton loader reflects the shape and size of the content it represents.</li>
+                        <li>Provide accessible labels to describe the loading state.</li>
+                    </ul>
                 </div>
             </section>
         </Layout>

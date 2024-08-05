@@ -51,7 +51,7 @@ const HeaderPage: React.FC = () => {
             <section>
                 <div className="flex flex-col mb-4">
                     <h2 className="text-xl md:text-2xl font-medium mb-5 text-gray-900 dark:text-gray-50">Best Practices</h2>
-                    <ul className="list-disc pl-5 text-gray-700 dark:text-gray-300">
+                    <ul className="list-decimal list-inside pl-5 text-gray-700 dark:text-gray-300">
                         <li className="mb-2">Ensure the navigation links are accessible and clearly labeled.</li>
                         <li className="mb-2">Use aria-labels to improve accessibility for screen reader users.</li>
                     </ul>

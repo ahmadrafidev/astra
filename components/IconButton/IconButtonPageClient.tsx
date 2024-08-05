@@ -85,7 +85,7 @@ const IconButtonPageClient: React.FC = () => {
             <section>
                 <div className="flex flex-col mb-4">
                     <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Best Practices</h2>
-                    <ul className="list-disc pl-5 space-y-2 text-gray-900 dark:text-gray-50">
+                    <ul className="list-decimal list-inside pl-5 space-y-2 text-gray-900 dark:text-gray-50">
                         <li>Use clear and intuitive icons that represent the action they perform.</li>
                         <li>Provide an `ariaLabel` to ensure accessibility for screen readers.</li>
                         <li>Ensure sufficient color contrast between the icon and its background for readability.</li>

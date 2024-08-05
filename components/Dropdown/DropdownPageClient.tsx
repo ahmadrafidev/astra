@@ -69,10 +69,12 @@ const DropdownPageClient: React.FC = () => {
             <section>
                 <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Best Practices</h2>
                 <div className="space-y-4">
-                    <p className="text-gray-700 dark:text-gray-300">Ensure the dropdown is accessible via keyboard navigation.</p>
-                    <p className="text-gray-700 dark:text-gray-300">Use clear and concise labels for each option.</p>
-                    <p className="text-gray-700 dark:text-gray-300">Provide visual feedback when the dropdown is open.</p>
-                    <p className="text-gray-700 dark:text-gray-300">Make sure the dropdown is easily tappable on mobile devices.</p>
+                    <ul className="list-decimal list-inside text-gray-700 dark:text-gray-300 space-y-3">
+                        <li>Ensure the dropdown is accessible via keyboard navigation.</li>
+                        <li>Use clear and concise labels for each option.</li>
+                        <li>Provide visual feedback when the dropdown is open.</li>
+                        <li>Make sure the dropdown is easily tappable on mobile devices.</li>
+                    </ul>
                 </div>
             </section>
         </Layout>

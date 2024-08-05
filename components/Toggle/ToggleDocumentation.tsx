@@ -89,14 +89,15 @@ const ToggleDocumentation = () => {
       </section>
       {/* Best Practices Section */}
       <section>
-        <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Best Practices</h2>
-        <div className="space-y-4">
-          <p className="text-gray-700 dark:text-gray-300">1. Use toggle buttons to switch between two states.</p>
-          <p className="text-gray-700 dark:text-gray-300">2. Ensure the button clearly indicates its current state.</p>
-          <p className="text-gray-700 dark:text-gray-300">3. Provide feedback to users when the state changes.</p>
-          <p className="text-gray-700 dark:text-gray-300">4. Use accessible labels and ARIA attributes for better accessibility.</p>
-          <p className="text-gray-700 dark:text-gray-300">5. Customize the styles and icons to match your application design.</p>
-        </div>
+          <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Best Practices</h2>
+          <div className="space-y-4">
+              <ul className="list-decimal list-inside text-gray-700 dark:text-gray-300 space-y-3">
+                  <li>Use toggle buttons to switch between two states.</li>
+                  <li>Ensure the button clearly indicates its current state.</li>
+                  <li>Provide feedback to users when the state changes.</li>
+                  <li>Customize the styles and icons to match your application design.</li>
+              </ul>
+          </div>
       </section>
     </>
   );

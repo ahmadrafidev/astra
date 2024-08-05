@@ -97,9 +97,11 @@ const StatusDotPageClient: React.FC = () => {
             <section>
                 <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Best Practices</h2>
                 <div className="space-y-4">
-                    <p className="text-gray-700 dark:text-gray-300">1. Use status dots to indicate the current status of an item or user.</p>
-                    <p className="text-gray-700 dark:text-gray-300">2. Ensure each status is visually distinguishable and has a clear meaning.</p>
-                    <p className="text-gray-700 dark:text-gray-300">3. Provide accessible labels for each status dot to improve accessibility.</p>
+                    <ul className="list-decimal list-inside text-gray-700 dark:text-gray-300 space-y-3">
+                        <li>Use status dots to indicate the current status of an item or user.</li>
+                        <li>Ensure each status is visually distinguishable and has a clear meaning.</li>
+                        <li>Provide accessible labels for each status dot to improve accessibility.</li>
+                    </ul>
                 </div>
             </section>
         </Layout>

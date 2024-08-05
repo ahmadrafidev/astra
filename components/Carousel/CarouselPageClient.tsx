@@ -66,7 +66,7 @@ const CarouselPageClient: React.FC = () => {
             <section>
                 <div className="flex flex-col mb-4">
                     <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Best Practices</h2>
-                    <ul className="list-disc pl-5 text-gray-700 dark:text-gray-300">
+                    <ul className="list-decimal list-inside pl-5 text-gray-700 dark:text-gray-300">
                         <li className="mb-2">Use high-quality images to ensure clarity and visual appeal.</li>
                         <li className="mb-2">Limit the number of images to avoid overwhelming the user.</li>
                         <li className="mb-2">Provide clear navigation controls for users to move between slides.</li>

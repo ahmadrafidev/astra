@@ -61,12 +61,14 @@ const SwitchDocumentation = () => {
       <section className="mb-10">
           <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Best Practices</h2>
           <div className="space-y-4">
-              <p className="text-gray-700 dark:text-gray-300">1. Use switches to toggle between two states.</p>
-              <p className="text-gray-700 dark:text-gray-300">2. Ensure the switch clearly indicates its current state.</p>
-              <p className="text-gray-700 dark:text-gray-300">3. Provide feedback to users when the state changes.</p>
-              <p className="text-gray-700 dark:text-gray-300">4. Label the switch clearly, especially for accessibility.</p>
-              <p className="text-gray-700 dark:text-gray-300">5. Ensure the switch is large enough to be easily tapped or clicked.</p>
-              <p className="text-gray-700 dark:text-gray-300">6. Consider using different colors to indicate different states.</p>
+              <ul className="list-decimal list-inside text-gray-700 dark:text-gray-300 space-y-3">
+                  <li>Use switches to toggle between two states.</li>
+                  <li>Ensure the switch clearly indicates its current state.</li>
+                  <li>Provide feedback to users when the state changes.</li>
+                  <li>Label the switch clearly, especially for accessibility.</li>
+                  <li>Ensure the switch is large enough to be easily tapped or clicked.</li>
+                  <li>Consider using different colors to indicate different states.</li>
+              </ul>
           </div>
       </section>
     </>

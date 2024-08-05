@@ -1,4 +1,3 @@
-// components/AvatarGroup/AvatarGroupPageClient.tsx
 'use client';
 
 import React from 'react';
@@ -23,12 +22,11 @@ const AvatarGroupPageClient: React.FC = () => {
                     A collection of multiple avatars displayed together to represent a group or team.
                 </p>
             </div>
-            
             <div className="space-y-6">
                 <AvatarGroup avatars={avatars} max={3} size={40} />
             </div>
             {/* Props Section */}
-            <section>
+            <section className="my-5">
                 <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Props</h2>
                 <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg shadow">
                     <table className="min-w-full table-auto">
@@ -73,9 +71,11 @@ const AvatarGroupPageClient: React.FC = () => {
             <section>
                 <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Best Practices</h2>
                 <div className="space-y-4">
-                    <p className="text-gray-700 dark:text-gray-300">Use avatar groups to display multiple user avatars in a compact form.</p>
-                    <p className="text-gray-700 dark:text-gray-300">Ensure the image source URLs are valid and accessible.</p>
-                    <p className="text-gray-700 dark:text-gray-300">Provide meaningful alternative text for accessibility.</p>
+                    <ul className="list-decimal list-inside text-gray-700 dark:text-gray-300 space-y-3">
+                        <li>Use avatar groups to display multiple user avatars in a compact form.</li>
+                        <li>Ensure the image source URLs are valid and accessible.</li>
+                        <li>Provide meaningful alternative text for accessibility.</li>
+                    </ul>
                 </div>
             </section>
         </Layout>

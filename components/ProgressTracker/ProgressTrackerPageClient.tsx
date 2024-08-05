@@ -1,4 +1,3 @@
-// components/ProgressTracker/ProgressTrackerPageClient.tsx
 'use client';
 
 import React, { useState } from 'react';
@@ -76,10 +75,12 @@ const ProgressTrackerPageClient: React.FC = () => {
             <section>
                 <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Best Practices</h2>
                 <div className="space-y-4">
-                    <p className="text-gray-700 dark:text-gray-300">Ensure the progress tracker clearly indicates the current step.</p>
-                    <p className="text-gray-700 dark:text-gray-300">Use distinguishable colors to indicate completed, current, and upcoming steps.</p>
-                    <p className="text-gray-700 dark:text-gray-300">Provide meaningful labels for each step to help users understand the process.</p>
-                    <p className="text-gray-700 dark:text-gray-300">Ensure the progress tracker is accessible and usable via keyboard navigation.</p>
+                    <ul className="list-decimal list-inside text-gray-700 dark:text-gray-300 space-y-3">
+                        <li>Ensure the progress tracker clearly indicates the current step.</li>
+                        <li>Use distinguishable colors to indicate completed, current, and upcoming steps.</li>
+                        <li>Provide meaningful labels for each step to help users understand the process.</li>
+                        <li>Ensure the progress tracker is accessible and usable via keyboard navigation.</li>
+                    </ul>
                 </div>
             </section>
         </Layout>

@@ -115,15 +115,15 @@ const AccordionDocumentation = () => {
       <section>
           <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Best Practices</h2>
           <div className="space-y-4">
-              <p className="text-gray-700 dark:text-gray-300">1. Use accordions to organize content in a compact way, allowing users to expand sections as needed.</p>
-              <p className="text-gray-700 dark:text-gray-300">2. Ensure that the titles of accordion items are descriptive and concise.</p>
-              <p className="text-gray-700 dark:text-gray-300">3. Consider the user experience on both desktop and mobile devices, ensuring that the accordion is easy to interact with on all screen sizes.</p>
-              <p className="text-gray-700 dark:text-gray-300">4. Implement proper color contrast for both light and dark modes to ensure readability and accessibility.</p>
-              <p className="text-gray-700 dark:text-gray-300">5. Use the multiple selection mode when users might need to compare information across different sections.</p>
-              <p className="text-gray-700 dark:text-gray-300">6. Provide visual feedback for hover and focus states to improve usability, especially for keyboard navigation.</p>
-              <p className="text-gray-700 dark:text-gray-300">7. Consider using animations for expanding and collapsing to provide a smooth user experience, but ensure they are not too slow or distracting.</p>
-              <p className="text-gray-700 dark:text-gray-300">8. Use the split variant when you want to visually separate accordion items, especially for longer lists.</p>
-              <p className="text-gray-700 dark:text-gray-300">9. Consider adding icons or visual indicators alongside titles to provide additional context or categorization for each item.</p>
+              <ul className="list-decimal list-inside text-gray-700 dark:text-gray-300 space-y-3">
+                  <li>Use accordions to organize content in a compact way, allowing users to expand sections as needed.</li>
+                  <li>Ensure that the titles of accordion items are descriptive and concise.</li>
+                  <li>Consider the user experience on both desktop and mobile devices, ensuring that the accordion is easy to interact with on all screen sizes.</li>
+                  <li>Use the multiple selection mode when users might need to compare information across different sections.</li>
+                  <li>Provide visual feedback for hover and focus states to improve usability, especially for keyboard navigation.</li>
+                  <li>Consider using animations for expanding and collapsing to provide a smooth user experience, but ensure they are not too slow or distracting.</li>
+                  <li>Use the split variant when you want to visually separate accordion items, especially for longer lists.</li>
+              </ul>
           </div>
       </section>
     </>

@@ -1,4 +1,3 @@
-// components/Rating/RatingPageClient.tsx
 'use client';
 
 import React, { useState } from 'react';
@@ -64,15 +63,16 @@ const RatingPageClient: React.FC = () => {
                     </table>
                 </div>
             </section>
-
             {/* Best Practices Section */}
             <section>
                 <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Best Practices</h2>
                 <div className="space-y-4">
-                    <p className="text-gray-700 dark:text-gray-300">Ensure the rating component is easy to use and accessible to all users.</p>
-                    <p className="text-gray-700 dark:text-gray-300">Use clear and distinguishable icons for ratings.</p>
-                    <p className="text-gray-700 dark:text-gray-300">Provide feedback to users after they rate.</p>
-                    <p className="text-gray-700 dark:text-gray-300">Handle the rating value appropriately in the parent component.</p>
+                    <ul className="list-decimal list-inside text-gray-700 dark:text-gray-300 space-y-3">
+                        <li>Ensure the rating component is easy to use and accessible to all users.</li>
+                        <li>Use clear and distinguishable icons for ratings.</li>
+                        <li>Provide feedback to users after they rate.</li>
+                        <li>Handle the rating value appropriately in the parent component.</li>
+                    </ul>
                 </div>
             </section>
         </Layout>
