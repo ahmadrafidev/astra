@@ -1,4 +1,3 @@
-// components/Select/SelectPageClient.tsx
 'use client';
 
 import React, { useState } from 'react';
@@ -9,10 +8,14 @@ import Badge from '../Badge/Badge';
 import Select from './Select';
 
 const SelectPageClient: React.FC = () => {
-    const [value, setValue] = useState('option1');
+    const [value, setValue] = useState('');
 
     const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
         setValue(e.target.value);
+    };
+    
+    const handleClear = () => {
+        setValue('');
     };
 
     const options = [
@@ -31,7 +34,18 @@ const SelectPageClient: React.FC = () => {
                 </p>
             </div>
             <div className="space-y-6">
-                <Select value={value} onChange={handleChange} options={options} className="max-w-md" />
+                <Select
+                    label="Choose an option"
+                    value={value}
+                    onChange={handleChange}
+                    options={options}
+                    helpText="Select one of the available options"
+                    size="medium"
+                    fullWidth
+                    isClearable={true}
+                    onClear={handleClear}
+                    placeholder="Choose one!"
+                />
             </div>
             {/* Props Section */}
             <section className="mb-10">
