@@ -50,7 +50,7 @@ const Radio = forwardRef<HTMLInputElement, RadioProps>(
             ref={ref}
             disabled={disabled}
             checked={checked}
-            onChange={() => {}}  // We're handling changes in onClick
+            onChange={() => {}}  
             onClick={handleClick}
             value={value}
             className={cn(
@@ -67,7 +67,7 @@ const Radio = forwardRef<HTMLInputElement, RadioProps>(
             <label
               htmlFor={inputId}
               className={cn(
-                "font-medium text-gray-900",
+                "font-medium text-gray-900 dark:text-gray-50",
                 error && "text-red-500",
                 disabled && "opacity-50 cursor-not-allowed",
                 labelClassName
@@ -77,12 +77,12 @@ const Radio = forwardRef<HTMLInputElement, RadioProps>(
             </label>
           )}
           {description && (
-            <p className={cn("text-gray-500", descriptionClassName)}>
+            <p className={cn("text-gray-600 dark:text-gray-100", descriptionClassName)}>
               {description}
             </p>
           )}
           {error && (
-            <p className={cn("mt-1 text-sm text-red-600", errorClassName)}>
+            <p className={cn("mt-1 text-sm text-red-600 dark:text-red-500", errorClassName)}>
               {error}
             </p>
           )}

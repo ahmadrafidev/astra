@@ -52,7 +52,7 @@ const RadioPageClient: React.FC = () => {
                             checked={selectedValue === 'Option2'}
                             onChange={handleChange}
                             label="Option 2"
-                            description="This is a description for Option 2"
+                            description="This is a description"
                             className="my-4"
                         />   
                     </div>
