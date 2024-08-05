@@ -6,6 +6,7 @@ import Layout from '../Layout/Layout';
 import Badge from '../Badge/Badge';
 
 import Snackbar from './Snackbar';
+import { Check } from 'lucide-react';
 
 const SnackbarPageClient: React.FC = () => {
     const [open, setOpen] = useState(false);
@@ -22,21 +23,23 @@ const SnackbarPageClient: React.FC = () => {
                     A brief message that appears at the bottom of the screen.
                 </p>
             </div>  
-            <button 
-                onClick={handleOpen} 
-                className="px-4 py-2 bg-gray-900 dark:bg-gray-100 text-white dark:text-black rounded-lg shadow-sm hover:bg-gray-800 dark:hover:bg-gray-200"
-            >
-                Show Snackbar
-            </button>
-            <Snackbar
-                message="This is a success message!"
-                open={open}
-                onClose={() => setOpen(false)}
-                variant="success"
-                action={<button onClick={() => console.log('Action clicked')}>Undo</button>}
-            />
+            <div className="space-y-6">
+                <button 
+                    className="px-4 py-2 bg-gray-900 dark:bg-gray-100 text-white dark:text-black rounded-lg shadow-sm hover:bg-gray-800 dark:hover:bg-gray-200" 
+                    onClick={handleOpen}>
+                    Show Snackbar
+                </button>
+                <Snackbar
+                    message="This is a success message!"
+                    open={open}
+                    showCloseButton={true}
+                    onClose={() => setOpen(false)}
+                    variant="success"
+                    action={<button onClick={() => console.log('Action clicked')}>Undo</button>}
+                />
+            </div>
             {/* Props Section */}
-            <section className="mb-10">
+            <section className="my-5">
                 <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Props</h2>
                 <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg shadow">
                     <table className="min-w-full table-auto">

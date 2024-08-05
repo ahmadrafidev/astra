@@ -1,26 +1,28 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { ReactNode, useEffect, useRef, useState } from 'react';
 import { XIcon } from 'lucide-react';
 
 export interface SnackbarProps {
   message: string;
+  className?: string;
   open: boolean;
   duration?: number;
   onClose: () => void;
-  className?: string;
   variant?: 'info' | 'success' | 'warning' | 'error';
   action?: React.ReactNode;
   showCloseButton?: boolean;
+  icon?: React.ReactNode
 }
 
 const Snackbar: React.FC<SnackbarProps> = ({
   message,
   open,
-  duration = 5000,
+  duration = 3000,
   onClose,
   className = '',
   variant = 'info',
   action,
-  showCloseButton = true,
+  showCloseButton = false,
+  icon
 }) => {
   const [isVisible, setIsVisible] = useState(open);
   const timerRef = useRef<NodeJS.Timeout>();
@@ -61,8 +63,8 @@ const Snackbar: React.FC<SnackbarProps> = ({
   const variantClasses = {
     info: 'bg-blue-600',
     success: 'bg-green-600',
-    warning: 'bg-yellow-600',
-    error: 'bg-red-600',
+    warning: 'bg-yellow-300',
+    error: 'bg-red-500',
   };
 
   return (
@@ -73,6 +75,7 @@ const Snackbar: React.FC<SnackbarProps> = ({
       role="alert"
       aria-live="assertive"
     >
+      {icon && <div className="mr-1">{icon}</div>}
       <div className="mr-2 flex-grow">{message}</div>
       {action && <div className="mr-2">{action}</div>}
       {showCloseButton && (
