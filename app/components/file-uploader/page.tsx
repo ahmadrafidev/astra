@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
     title: "File Uploader",
-    description: "",
+    description: "An interface for selecting and uploading files.",
 };
 
 const FileUploaderPage: React.FC = () => {
