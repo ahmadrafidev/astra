@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import { UserIcon } from '@heroicons/react/24/outline';
 
 import Layout from '../Layout/Layout';
 import Badge from '../Badge/Badge';
@@ -17,9 +18,14 @@ const AvatarPageClient: React.FC = () => {
                     A visual representation of a user or entity typically displayed as a profile picture or icon.
                 </p>
             </div>
-            <div className="space-y-6">
-                <Avatar className="bg-white" src="/icons/android-light.webp" alt="User Avatar 1" size={40}/>
-            </div>
+            <Avatar 
+                src="/icons/twitter.webp" 
+                alt="User Avatar" 
+                size="md" 
+                shape="square" 
+                fallback={<UserIcon />} 
+                onClick={() => console.log('Avatar clicked')} 
+            />
             {/* Props Section */}
             <section className="my-5">
                 <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Props</h2>
@@ -37,26 +43,44 @@ const AvatarPageClient: React.FC = () => {
                             <tr>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">src</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">string</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">-</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">empty</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">The source URL of the avatar image.</td>
                             </tr>
                             <tr>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">alt</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">string</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">&quot;Avatar&quot;</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">{`'Avatar'`}</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Alternative text for the avatar image.</td>
                             </tr>
                             <tr>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">size</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">number</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">40</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">The size (width and height) of the avatar image.</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">{`'sm' | 'md' | 'lg' | number`}</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">{`'md'`}</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">The size of the avatar. Can be a predefined size or a custom number.</td>
+                            </tr>
+                            <tr>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">shape</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">{`'circle' | 'square'`}</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">{`'circle'`}</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">The shape of the avatar.</td>
+                            </tr>
+                            <tr>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">fallback</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">React.ReactNode</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">none</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Content to display when the image fails to load.</td>
                             </tr>
                             <tr>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">className</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">string</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">-</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">empty</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Additional classes for styling the avatar.</td>
+                            </tr>
+                            <tr>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">onClick</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">{`() => void`}</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">-</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Function to call when the avatar is clicked.</td>
                             </tr>
                         </tbody>
                     </table>
@@ -68,8 +92,8 @@ const AvatarPageClient: React.FC = () => {
                 <div className="space-y-4">
                     <ul className="list-decimal list-inside text-gray-700 dark:text-gray-300 space-y-3">
                         <li>Use avatars to visually represent users or objects.</li>
-                        <li>Ensure the image source URL is valid and accessible.</li>
                         <li>Provide meaningful alternative text for accessibility.</li>
+                        <li>Use the fallback prop to handle cases where the image fails to load.</li>
                     </ul>
                 </div>
             </section>
