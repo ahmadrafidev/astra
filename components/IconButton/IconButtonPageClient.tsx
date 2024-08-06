@@ -28,10 +28,10 @@ const IconButtonPageClient: React.FC = () => {
             <section className="mb-5">
                 <h2 className="text-lg md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Variants</h2>
                 <div className="space-y-4 flex flex-col justify-around">
-                    {['default', 'primary', 'secondary', 'danger'].map(variant => (
+                    {['contained', 'outlinedBorder', 'outlinedNoBorder'].map(variant => (
                         <div key={variant}>
                             <h3 className="text-base md:text-lg font-medium font-sans text-gray-900 dark:text-gray-50 mb-2 md:mb-3 capitalize">
-                                {variant.charAt(0).toUpperCase() + variant.slice(1)} Icon Button
+                                {variant.charAt(0).toUpperCase() + variant.slice(1).replace(/([A-Z])/g, ' $1')} Variant
                             </h3>
                             <div className="flex space-x-4">
                                 {icons.map((icon, index) => (
@@ -40,7 +40,8 @@ const IconButtonPageClient: React.FC = () => {
                                         icon={icon.icon}
                                         onClick={() => alert(`${icon.label} button clicked`)}
                                         aria-label={icon.ariaLabel}
-                                        variant={variant as 'default' | 'primary' | 'secondary' | 'danger'}
+                                        variant={variant as Variant}
+                                        color="blue"
                                     />
                                 ))}
                             </div>
@@ -63,7 +64,8 @@ const IconButtonPageClient: React.FC = () => {
                                         icon={icon.icon}
                                         onClick={() => alert(`${icon.label} button clicked`)}
                                         aria-label={icon.ariaLabel}
-                                        size={size as 'sm' | 'md' | 'lg'}
+                                        size={size as Size}
+                                        color="green"
                                     />
                                 ))}
                             </div>

@@ -50,7 +50,7 @@ const IconButtonDocumentation = () => {
                 </tr>
                 <tr>
                   <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">variant</td>
-                  <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">{`"default" | "primary" | "secondary" | "danger"`}</td>
+                  <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">{`"default" | "primary" | "secondary" | "danger" | "outline" | "contained"`}</td>
                   <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">{`"default"`}</td>
                   <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">The variant of the button, determining its color scheme.</td>
                 </tr>
