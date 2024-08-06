@@ -1,6 +1,15 @@
 import React, { forwardRef } from 'react';
 import { cn } from "@/lib/utils";
 
+/**
+ * Props for the Checkbox component.
+ * 
+ * @typedef {Object} CheckboxProps
+ * @property {string} [label] - The label for the checkbox.
+ * @property {string} [labelClassName] - Additional class names for the label.
+ * @property {string} [error] - Error message to be displayed.
+ * @property {string} [className] - Additional class names for the checkbox container.
+ */
 export interface CheckboxProps extends React.InputHTMLAttributes<HTMLInputElement> {
   label?: string;
   labelClassName?: string;
@@ -8,6 +17,14 @@ export interface CheckboxProps extends React.InputHTMLAttributes<HTMLInputElemen
   className?: string;
 }
 
+/**
+ * Checkbox component for rendering a checkbox with label and error message.
+ * 
+ * @component
+ * @param {CheckboxProps} props - Props for the Checkbox component.
+ * @param {React.Ref<HTMLInputElement>} ref - Ref for the checkbox input element.
+ * @returns {JSX.Element} The rendered Checkbox component.
+ */
 const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
   ({ label, error, className, labelClassName, ...props }, ref) => {
     const id = React.useId();

@@ -21,12 +21,10 @@ const TextAreaPageClient: React.FC = () => {
             </div>
             <div className="space-y-6">
                 <TextArea
-                    value={value}
-                    onChange={(e) => setValue(e.target.value)}
-                    placeholder="Enter your text here"
-                    ariaLabel="Text Area"
-                    className="max-w-md"
-                />
+                    label="Description"
+                    placeholder="Enter your description here"
+                    helperText="Maximum 500 characters"
+                    />
             </div>
             {/* Props Section */}
             <section className="mb-10">
