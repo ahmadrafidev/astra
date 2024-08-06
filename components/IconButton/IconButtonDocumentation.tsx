@@ -50,15 +50,21 @@ const IconButtonDocumentation = () => {
                 </tr>
                 <tr>
                   <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">variant</td>
-                  <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">{`"default" | "primary" | "secondary" | "danger" | "outline" | "contained"`}</td>
-                  <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">{`"default"`}</td>
-                  <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">The variant of the button, determining its color scheme.</td>
+                  <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">{`"contained" | "outlinedBorder" | "outlinedNoBorder"`}</td>
+                  <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">{`"contained"`}</td>
+                  <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">The variant of the button, determining its style.</td>
                 </tr>
                 <tr>
                   <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">size</td>
                   <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">{`"sm" | "md" | "lg"`}</td>
                   <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">{`"md"`}</td>
                   <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">The size of the button.</td>
+                </tr>
+                <tr>
+                  <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">color</td>
+                  <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">string</td>
+                  <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">none</td>
+                  <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Custom color for the button.</td>
                 </tr>
               </tbody>
             </table>
@@ -74,7 +80,6 @@ const IconButtonDocumentation = () => {
             <li>Ensure sufficient color contrast between the icon and its background for readability.</li>
             <li>Icon buttons must use a system icon with a clear meaning.</li>
             <li>On hover, display a tooltip describing the button’s action (not the name of the icon).</li>
-            <li>Use outline-style icons to indicate an unselected state, and filled-style icons for selected state.</li>
           </ul>
         </div>
       </section>

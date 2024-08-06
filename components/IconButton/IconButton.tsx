@@ -1,36 +1,26 @@
 import React, { forwardRef, ElementType } from 'react';
-import { cn } from '@/lib/utils'; 
+import { cn } from '@/lib/utils';
 
-const iconButtonVariants = {
-  base: "inline-flex items-center justify-center rounded-full focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 transition-colors",
-  variants: {
-    variant: {
-      contained: "bg-green-500 text-white hover:bg-green-600 focus-visible:ring-green-500",
-      outlinedBorder: "bg-transparent border border-gray-500 text-gray-500 hover:bg-gray-100 focus-visible:ring-gray-500",
-      outlinedNoBorder: "bg-transparent text-current hover:bg-gray-100 focus-visible:ring-gray-500",
-    },
-    size: {
-      sm: "p-1",
-      md: "p-2",
-      lg: "p-3",
-    },
-  },
-  defaultVariants: {
-    variant: "contained",
-    size: "md",
-  },
+const baseStyles = "inline-flex items-center justify-center focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 transition-colors rounded-full";
+
+const variantStyles = {
+  contained: "text-white",
+  outlinedBorder: "border text-blue-500",
+  outlinedNoBorder: "text-blue-500",
 };
 
-type Variant = keyof typeof iconButtonVariants.variants.variant;
-type Size = keyof typeof iconButtonVariants.variants.size;
+const sizeStyles = {
+  sm: "p-1",
+  md: "p-2",
+  lg: "p-3",
+};
 
-export interface IconButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+export interface IconButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   icon: ElementType;
   iconClassName?: string;
-  variant?: Variant;
-  size?: Size;
-  color?: string; 
+  variant?: 'contained' | 'outlinedBorder' | 'outlinedNoBorder';
+  size?: 'sm' | 'md' | 'lg';
+  color?: string;
 }
 
 /**
@@ -40,34 +30,34 @@ export interface IconButtonProps
  *
  * @param {ElementType} icon - The icon component to be rendered inside the button.
  * @param {string} [iconClassName] - Additional class names for the icon.
- * @param {Variant} [variant="contained"] - The variant of the button, determining its style.
- * @param {Size} [size="md"] - The size of the button.
+ * @param {'contained' | 'outlinedBorder' | 'outlinedNoBorder'} [variant="contained"] - The variant of the button, determining its style.
+ * @param {'sm' | 'md' | 'lg'} [size="md"] - The size of the button.
  * @param {string} [color] - Custom color for the button.
  * @param {IconButtonProps} props - Additional props for the IconButton component.
  * @returns {JSX.Element} The rendered IconButton component.
  */
 const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(
   ({ icon: Icon, variant = "contained", size = "md", className, iconClassName, color, ...props }, ref) => {
-    const customColorStyles = color
-      ? {
-          contained: `bg-${color}-500 text-white hover:bg-${color}-600 focus-visible:ring-${color}-500`,
-          outlinedBorder: `border-${color}-500 text-${color}-500 hover:bg-${color}-100 focus-visible:ring-${color}-500`,
-          outlinedNoBorder: `text-${color}-500 hover:bg-${color}-100 focus-visible:ring-${color}-500`,
-        }
-      : {};
-    
+
+    const colorStyles = {
+      contained: `bg-${color}-600 hover:bg-${color}-500 focus-visible:ring-${color}-500`,
+      outlinedBorder: `border-${color}-600 hover:bg-${color}-200 dark:hover:bg-${color}-800 focus-visible:ring-${color}-600 text-${color}-600 dark:text-${color}-200`,
+      outlinedNoBorder: `hover:bg-${color}-200 dark:hover:bg-${color}-800 focus-visible:ring-${color}-600 text-${color}-600 dark:text-${color}-200`,
+    };
+
     return (
       <button
         ref={ref}
         className={cn(
-          iconButtonVariants.base,
-          customColorStyles[variant] || iconButtonVariants.variants.variant[variant],
-          iconButtonVariants.variants.size[size],
+          baseStyles,
+          variantStyles[variant],
+          sizeStyles[size],
+          colorStyles[variant],
           className
         )}
         {...props}
       >
-        <Icon className={cn("w-5 h-5", iconClassName)} aria-hidden="true" />
+        <Icon className={cn("w-6 h-6", iconClassName)} aria-hidden="true" />
       </button>
     );
   }
