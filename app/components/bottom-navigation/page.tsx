@@ -4,11 +4,13 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
     title: "Bottom Navigation",
-    description: "",
+    description: "A mobile-friendly navigation bar fixed at screen bottom.",
 };
 
+const BottomNavigationClient = dynamic(() => import("@/components/BottomNavigation/BottomNavigationClient"), { ssr: false });
+
 const BottomNavigationPage: React.FC = () => {
-    return <></>;
+    return <BottomNavigationClient />;
 };
 
 BottomNavigationPage.displayName="BottomNavigationPage"
