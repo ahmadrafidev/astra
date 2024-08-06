@@ -1,42 +1,50 @@
 import React, { forwardRef } from 'react';
 import { cn } from "@/lib/utils";
+import { LucideIcon } from 'lucide-react';
 
 export interface ListItemProps extends React.LiHTMLAttributes<HTMLLIElement> {
   children: React.ReactNode;
+  icon?: React.ReactNode;
 }
 
 export interface ListProps extends React.OlHTMLAttributes<HTMLOListElement> {
-  items?: React.ReactNode[];
+  items?: Array<{
+    content: React.ReactNode;
+    icon?: React.ReactNode;
+  }>;
   variant?: 'ordered' | 'unordered';
   className?: string;
+  iconClassName?: string;
 }
 
 /**
  * ListItem component for rendering individual items within a List.
  */
 export const ListItem = forwardRef<HTMLLIElement, ListItemProps>(
-  ({ children, className, ...props }, ref) => (
+  ({ children, className, icon: Icon, ...props }, ref) => (
     <li
       ref={ref}
-      className={cn("border-b p-2", className)}
+      className={cn("border-b p-2 flex items-center", className)}
       {...props}
     >
-      {children}
+      {Icon && <Icon className="mr-2 h-4 w-4 flex-shrink-0" />}
+      <span>{children}</span>
     </li>
   )
 );
+
 ListItem.displayName = "ListItem";
 
 /**
- * List component for displaying multiple items in a vertical or horizontal arrangement.
+ * List component for displaying multiple items with optional icons.
  * 
- * @param items - Optional array of items to render. If not provided, children will be rendered instead.
+ * @param items - Optional array of items to render, each with content and an optional icon.
  * @param variant - Determines whether the list is ordered or unordered. Defaults to 'unordered'.
- * @param direction - Specifies the layout direction of the list. Defaults to 'vertical'.
- * @param className - Additional CSS classes to apply to the list.
+ * @param className - Additional CSS styling classes to apply to the list.
+ * @param iconClassName - Additional CSS classes to apply to the icons.
  */
 export const List = forwardRef<HTMLOListElement, ListProps>(
-  ({ items, variant = 'unordered', className, children, ...props }, ref) => {
+  ({ items, variant = 'unordered', className, iconClassName, children, ...props }, ref) => {
     const Component = variant === 'ordered' ? 'ol' : 'ul';
     
     return (
@@ -51,7 +59,9 @@ export const List = forwardRef<HTMLOListElement, ListProps>(
       >
         {items
           ? items.map((item, index) => (
-              <ListItem key={index}>{item}</ListItem>
+              <ListItem key={index} icon={item.icon} className={iconClassName}>
+                {item.content}
+              </ListItem>
             ))
           : children}
       </Component>
@@ -60,5 +70,3 @@ export const List = forwardRef<HTMLOListElement, ListProps>(
 );
 
 List.displayName = "List";
-
-

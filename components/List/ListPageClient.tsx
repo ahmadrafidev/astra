@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import { ShoppingCart, Star, Heart } from 'lucide-react';
 
 import Layout from '../Layout/Layout';
 import Badge from '../Badge/Badge';
@@ -27,9 +28,27 @@ const ListPageClient: React.FC = () => {
                             Unordered List
                         </h3>
                         <List 
-                            items={['Apple', 'Banana', 'Cherry']} 
+                            items={[ 
+                                { content: 'Apple' }, 
+                                { content: 'Banana' }, 
+                                { content: 'Cherry' }
+                            ]} 
                             variant="unordered" 
                             className="fruit-list"
+                        />
+                    </div>
+                    <div>
+                        <h3 className="text-base md:text-lg font-medium font-sans text-gray-900 dark:text-gray-50 mb-2 md:mb-3">
+                            Unordered List with Icons
+                        </h3>
+                        <List
+                            items={[
+                            { content: 'Shopping List', icon: ShoppingCart },
+                            { content: 'Favorites', icon: Star },
+                            { content: 'Wishlist', icon: Heart },
+                            ]}
+                            variant="unordered" 
+                            iconClassName="text-blue-600"
                         />
                     </div>
                     <div>
@@ -40,6 +59,16 @@ const ListPageClient: React.FC = () => {
                             <ListItem>First item</ListItem>
                             <ListItem>Second item</ListItem>
                             <ListItem>Third item</ListItem>
+                        </List>
+                    </div>
+                    <div>
+                        <h3 className="text-base md:text-lg font-medium font-sans text-gray-900 dark:text-gray-50 mb-2 md:mb-3">
+                            Ordered List with Icons
+                        </h3>  
+                        <List variant="ordered" className="custom-list-class">
+                            <ListItem icon={ShoppingCart}>Shopping List</ListItem>
+                            <ListItem icon={Star}>Favorites</ListItem>
+                            <ListItem icon={Heart}>Wishlist</ListItem>
                         </List>
                     </div>
                 </div>
