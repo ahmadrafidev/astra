@@ -8,7 +8,7 @@ import Badge from '../Badge/Badge';
 import Breadcrumbs from './Breadcrumbs';
 
 const BreadcrumbsPageClient: React.FC = () => {
-    const items = [
+    const pageItems = [
         { name: 'Home', path: '/' },
         { name: 'Documentation', path: '/documentation' },
         { name: 'Components', path: '/documentation/components' },
@@ -24,9 +24,12 @@ const BreadcrumbsPageClient: React.FC = () => {
                     A navigation aid showing the user location within a website hierarchy.
                 </p>
             </div>      
-            <Breadcrumbs items={items} className="mb-6" />
+            <Breadcrumbs
+                items={pageItems}
+                className="my-4"
+                />
             {/* Props Section */}
-            <section className="my-4">
+            <section className="my-5">
                 <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Props</h2>
                 <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg shadow">
                     <table className="min-w-full table-auto">

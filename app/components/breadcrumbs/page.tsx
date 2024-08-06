@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
     title: "Breadcrumbs",
-    description: "Breadcrumbs are used to display the current location within a hierarchical structure.",
+    description: "A breadcrumbs are used to display the current location within a hierarchical structure.",
 };
 
 const BreadcrumbsPageClient = dynamic(() => import('@/components/Breadcrumbs/BreadcrumbsPageClient'), { ssr: false });
