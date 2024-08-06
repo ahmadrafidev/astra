@@ -27,7 +27,7 @@ const CardPageClient: React.FC = () => {
                     <Card
                         title="Card Title 1"
                         description="This is a description of the card content."
-                        imageSrc="/icons/apple.webp"
+                        imageSrc="/icons/twitter.webp"
                         imageWidth={300}
                         imageHeight={200}
                     />

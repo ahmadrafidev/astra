@@ -8,8 +8,8 @@ import Badge from '../Badge/Badge';
 import Carousel from './Carousel';
 
 const images = [
-    '/icons/apple.webp',
-    '/icons/android.webp',
+    '/icons/apple-light.webp',
+    '/icons/android-light.webp',
     '/icons/twitter.webp',
 ];
 
