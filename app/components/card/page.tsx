@@ -5,7 +5,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
     title: 'Card',
-    description: 'The Card component is a versatile container for displaying content in a structured and visually appealing way.',
+    description: 'A flexible container for displaying related content and actions in a single unit.',
 };
 
 const CardPageClient = dynamic(() => import('@/components/Card/CardPageClient'), { ssr: false });

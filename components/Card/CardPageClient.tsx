@@ -20,7 +20,7 @@ const CardPageClient: React.FC = () => {
                     </p>
                 </div>
             </section>
-            {/* Card Examples Section */}
+            {/* Card Variants Section */}
             <section className="mb-5">
                 <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Examples</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -38,8 +38,21 @@ const CardPageClient: React.FC = () => {
                     <Card
                         title="Card Title 3"
                         description="This card has additional content."
+                        variant="interactive"
+                        titleElement="h2"
                     >
                         <button className="mt-4 px-4 py-2 bg-blue-500 text-white rounded">Action</button>
+                    </Card>
+                    <Card
+                        title="My Card"
+                        description="This is a description of my card."
+                        imageSrc="/icons/twitter.webp"
+                        imageAlt="Descriptive alt text"
+                        variant="hover"
+                        titleElement="h2"
+                        onClick={() => alert(`button clicked`)}
+                    >
+                        <button className="mt-4 px-4 py-2 bg-blue-500 text-white rounded">Try Click Me</button>
                     </Card>
                 </div>
             </section>
