@@ -4,7 +4,7 @@ const IconButtonDocumentation = () => {
   return (
     <>
       {/* Props Table Section */}
-      <section>
+      <section className="my-5">
         <div className="flex flex-col mb-4">
           <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Props</h2>
           <div className="bg-white dark:bg-gray-800 rounded-lg shadow p-5">
@@ -72,8 +72,9 @@ const IconButtonDocumentation = () => {
           <ul className="list-decimal list-inside pl-5 space-y-2 text-gray-900 dark:text-gray-50">
             <li>Use clear and intuitive icons that represent the action they perform.</li>
             <li>Ensure sufficient color contrast between the icon and its background for readability.</li>
-            <li>Use consistent icon sizes and spacing to maintain visual harmony in your UI.</li>
-            <li>Group related icons together to help users understand their functionality.</li>
+            <li>Icon buttons must use a system icon with a clear meaning.</li>
+            <li>On hover, display a tooltip describing the button’s action (not the name of the icon).</li>
+            <li>Use outline-style icons to indicate an unselected state, and filled-style icons for selected state.</li>
           </ul>
         </div>
       </section>
