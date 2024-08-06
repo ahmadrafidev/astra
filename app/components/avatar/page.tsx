@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
     title: "Avatar",
-    description: "Avatars are used to display user profile images or icons.",
+    description: "A visual representation of a user or entity typically displayed as a profile picture or icon.",
 };
 
 const AvatarPageClient = dynamic(() => import('@/components/Avatar/AvatarPageClient'), { ssr: false });

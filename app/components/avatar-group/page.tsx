@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
     title: "AvatarGroup",
-    description: "Avatar groups are used to display a collection of user profile images or icons in a compact form.",
+    description: "A collection of multiple avatars displayed together to represent a group or team.",
 };
 
 const AvatarGroupPageClient = dynamic(() => import('@/components/AvatarGroup/AvatarGroupPageClient'), { ssr: false });
