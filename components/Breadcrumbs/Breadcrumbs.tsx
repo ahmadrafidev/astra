@@ -2,11 +2,29 @@ import React from 'react';
 import Link from 'next/link';
 import { ChevronRight } from 'lucide-react';
 
+/**
+ * Represents a single breadcrumb item.
+ * 
+ * @typedef {Object} BreadcrumbItem
+ * @property {string} name - The display name of the breadcrumb.
+ * @property {string} path - The URL path of the breadcrumb.
+ */
 export interface BreadcrumbItem {
   name: string;
   path: string;
 }
 
+/**
+ * Props for the Breadcrumbs component.
+ * 
+ * @typedef {Object} BreadcrumbsProps
+ * @property {BreadcrumbItem[]} items - Array of breadcrumb items to display.
+ * @property {string} [className] - Additional class names for custom styling of the breadcrumb container.
+ * @property {React.ReactNode} [separator] - Custom separator element between breadcrumb items.
+ * @property {number} [maxItems=0] - Maximum number of breadcrumb items to display.
+ * @property {string} [itemClassName='hover:underline text-blue-600 dark:text-blue-400'] - Class names for the breadcrumb items.
+ * @property {string} [activeItemClassName='font-semibold text-gray-900 dark:text-gray-100'] - Class names for the active breadcrumb item.
+ */
 export interface BreadcrumbsProps {
   items: BreadcrumbItem[];
   className?: string;
@@ -16,6 +34,13 @@ export interface BreadcrumbsProps {
   activeItemClassName?: string;
 }
 
+/**
+ * Breadcrumbs component for displaying navigation breadcrumbs.
+ * 
+ * @component
+ * @param {BreadcrumbsProps} props - Props for the Breadcrumbs component.
+ * @returns {JSX.Element} The rendered Breadcrumbs component.
+ */
 const Breadcrumbs: React.FC<BreadcrumbsProps> = ({
   items,
   className,
