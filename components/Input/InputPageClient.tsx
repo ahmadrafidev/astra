@@ -26,7 +26,6 @@ const InputPageClient: React.FC = () => {
           A field where users can enter data or information.
         </p>
       </div>
-
       {/* Variants Input */}
       <section className="mb-5">
         <h2 className="text-lg md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Variants</h2>
@@ -46,7 +45,6 @@ const InputPageClient: React.FC = () => {
               className="max-w-md"
             />
           </div>
-
           {/* Email Input with Icon */}
           <div>
             <h3 className="text-base md:text-lg font-medium font-sans text-gray-900 dark:text-gray-50 mb-2 md:mb-3">
@@ -63,7 +61,6 @@ const InputPageClient: React.FC = () => {
               className="max-w-md"
             />
           </div>
-
           {/* Email Input with Error */}
           <div>
             <h3 className="text-base md:text-lg font-medium font-sans text-gray-900 dark:text-gray-50 mb-2 md:mb-3">
@@ -79,7 +76,6 @@ const InputPageClient: React.FC = () => {
               className="max-w-md"
             />
           </div>
-
           {/* Password Input */}
           <div>
             <h3 className="text-base md:text-lg font-medium font-sans text-gray-900 dark:text-gray-50 mb-2 md:mb-3">
@@ -94,11 +90,10 @@ const InputPageClient: React.FC = () => {
               className="max-w-md"
             />
           </div>
-
           {/* Password Input with Icon */}
           <div>
             <h3 className="text-base md:text-lg font-medium font-sans text-gray-900 dark:text-gray-50 mb-2 md:mb-3">
-              Password Input with Icon
+              Password Input with Icon (Toggle Visibility)
             </h3>
             <Input
               type="password"
@@ -110,7 +105,6 @@ const InputPageClient: React.FC = () => {
               className="max-w-md"
             />
           </div>
-
           {/* Disabled Input */}
           <div>
             <h3 className="text-base md:text-lg font-medium font-sans text-gray-900 dark:text-gray-50 mb-2 md:mb-3">
@@ -123,7 +117,7 @@ const InputPageClient: React.FC = () => {
               label="Disabled"
               placeholder="This input is disabled"
               className="max-w-md"
-              disabled={true}
+              disabled
             />
           </div>
         </div>

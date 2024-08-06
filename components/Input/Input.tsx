@@ -1,4 +1,4 @@
-import React, { forwardRef } from 'react';
+import React, { forwardRef, useState } from 'react';
 import { cn } from '@/lib/utils'; 
 
 /**
@@ -18,6 +18,7 @@ import { cn } from '@/lib/utils';
  * @property {string} [labelClassName] - Additional class names for the label.
  * @property {string} [hintClassName] - Additional class names for the hint.
  * @property {string} [errorClassName] - Additional class names for the error message.
+ * @property {boolean} [disable] - Flag to disable the input.
  */
 export interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
   type?: 'text' | 'password' | 'email';
@@ -63,9 +64,17 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
     },
     ref
   ) => {
+    
+    const [showPassword, setShowPassword] = useState(false);
     const inputId = React.useId();
     const hintId = hint ? `${inputId}-hint` : undefined;
     const errorId = error ? `${inputId}-error` : undefined;
+
+    const handleIconClick = () => {
+      if (type === 'password') {
+        setShowPassword((prevShowPassword) => !prevShowPassword);
+      }
+    };
 
     return (
       <div className={cn('flex flex-col', className)}>
@@ -80,7 +89,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
         <div className="relative">
           <input
             id={inputId}
-            type={type}
+            type={showPassword ? 'text' : type}
             value={value}
             onChange={onChange}
             placeholder={placeholder}
@@ -88,14 +97,18 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
             aria-invalid={!!error}
             className={cn(
               'w-full px-4 py-2 border rounded',
-              disable ? 'cursor-not-allowed': 'cursor-auto',
+              disable ? 'cursor-not-allowed' : 'cursor-auto',
               error ? 'border-red-500' : 'border-gray-300',
               inputClassName
             )}
             ref={ref}
             {...props}
           />
-          {icon && <div className="absolute inset-y-0 right-0 pr-3 flex items-center">{icon}</div>}
+          {icon && (
+            <div className="absolute inset-y-0 right-0 pr-3 flex items-center" onClick={handleIconClick}>
+              {icon}
+            </div>
+          )}
         </div>
         {hint && !error && (
           <p id={hintId} className={cn('mt-1 text-sm text-gray-500', hintClassName)}>

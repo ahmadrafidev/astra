@@ -4,7 +4,7 @@ const ListDocumentation = () => {
   return (
     <>
       {/* Props Section */}
-      <section className="mb-10">
+      <section className="my-5">
         <h2 className="text-2xl md:text-3xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Props</h2>
         <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg shadow">
           <table className="min-w-full table-auto">
