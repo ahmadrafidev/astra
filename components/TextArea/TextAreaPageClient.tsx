@@ -10,6 +10,10 @@ import TextArea from './TextArea';
 const TextAreaPageClient: React.FC = () => {
     const [value, setValue] = useState('');
 
+    const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+        setValue(e.target.value);
+    };
+
     return (
         <Layout>
             <Badge text="Components" />
@@ -24,10 +28,12 @@ const TextAreaPageClient: React.FC = () => {
                     label="Description"
                     placeholder="Enter your description here"
                     helperText="Maximum 500 characters"
-                    />
+                    value={value}
+                    onChange={handleChange}
+                />
             </div>
             {/* Props Section */}
-            <section className="mb-10">
+            <section className="my-5">
                 <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Props</h2>
                 <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg shadow">
                     <table className="min-w-full table-auto">
@@ -41,34 +47,46 @@ const TextAreaPageClient: React.FC = () => {
                         </thead>
                         <tbody>
                             <tr>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">label</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">string</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">empty</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Label for the textarea.</td>
+                            </tr>
+                            <tr>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">error</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">string</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">empty</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Error message to display.</td>
+                            </tr>
+                            <tr>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">helperText</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">string</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">empty</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Helper text to display.</td>
+                            </tr>
+                            <tr>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">className</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">string</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">empty</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Additional classes for styling the textarea.</td>
+                            </tr>
+                            <tr>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">value</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">string</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">-</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">empty</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">The current value of the textarea.</td>
                             </tr>
                             <tr>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">onChange</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">{'(e: React.ChangeEvent<HTMLTextAreaElement>) => void'}</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">{'(e: React.ChangeEvent) => void'}</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">-</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Function to call when the textarea value changes.</td>
                             </tr>
                             <tr>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">placeholder</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">string</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">-</td>
+                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">empty</td>
                                 <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Placeholder text for the textarea.</td>
-                            </tr>
-                            <tr>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">className</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">string</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">-</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Additional classes for styling the textarea.</td>
-                            </tr>
-                            <tr>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">ariaLabel</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">string</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">-</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Accessible label for the textarea.</td>
                             </tr>
                         </tbody>
                     </table>
