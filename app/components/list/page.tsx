@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
     title: "List",
-    description: "A component for displaying a list of items.",
+    description: "A component for displaying multiple items in a vertical or horizontal arrangement.",
 };
 
 const ListPageClient = dynamic(() => import('@/components/List/ListPageClient'), { ssr: false });

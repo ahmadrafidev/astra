@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
     title: "Modal",
-    description: "A component for displaying modal dialogs.",
+    description: "An overlay window that appears on top of the main content.",
 };
 
 const ModalPageClient = dynamic(() => import('@/components/Modal/ModalPageClient'), { ssr: false });

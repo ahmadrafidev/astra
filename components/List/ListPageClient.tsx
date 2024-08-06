@@ -5,7 +5,7 @@ import React from 'react';
 import Layout from '../Layout/Layout';
 import Badge from '../Badge/Badge';
 
-import { List } from './List';
+import { List, ListItem } from './List';
 
 const ListPageClient: React.FC = () => {
     const items = ['Item 1', 'Item 2', 'Item 3'];
@@ -19,7 +19,31 @@ const ListPageClient: React.FC = () => {
                     A component for displaying multiple items in a vertical or horizontal arrangement.
                 </p>
             </div>
-            <List items={items} />
+            <section className="mb-5">
+                <h2 className="text-lg md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Variants</h2>
+                <div className="space-y-4 flex flex-col justify-around">
+                    <div>
+                        <h3 className="text-base md:text-lg font-medium font-sans text-gray-900 dark:text-gray-50 mb-2 md:mb-3">
+                            Unordered List
+                        </h3>
+                        <List 
+                            items={['Apple', 'Banana', 'Cherry']} 
+                            variant="unordered" 
+                            className="fruit-list"
+                        />
+                    </div>
+                    <div>
+                        <h3 className="text-base md:text-lg font-medium font-sans text-gray-900 dark:text-gray-50 mb-2 md:mb-3">
+                            Ordered List
+                        </h3>  
+                        <List variant="ordered" className="custom-list-class">
+                            <ListItem>First item</ListItem>
+                            <ListItem>Second item</ListItem>
+                            <ListItem>Third item</ListItem>
+                        </List>
+                    </div>
+                </div>
+            </section>
             <section className="mb-10">
                 <h2 className="text-2xl md:text-3xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Props</h2>
                 <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg shadow">
