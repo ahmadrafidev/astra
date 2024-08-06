@@ -1,17 +1,23 @@
-// stories/List.stories.tsx
 import React from 'react';
 import { Meta, StoryFn } from '@storybook/react';
-import { List, ListItem } from '../components/List/List';
+import { List, ListItem, ListProps } from '../components/List/List';
 
 export default {
     title: 'Components/List',
     component: List,
 } as Meta;
 
-const Template: StoryFn = (args) => (
-    <List {...args} items={['Item 1', 'Item 2', 'Item 3']} />
+const Template: StoryFn<ListProps> = (args) => (
+    <List {...args} />
 );
 
 export const Default = Template.bind({});
 
-Default.args = {};
+Default.args = {
+    items: [
+        { content: 'Item 1' },
+        { content: 'Item 2' },
+        { content: 'Item 3' }
+    ],
+    variant: 'unordered'
+};

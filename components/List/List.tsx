@@ -1,6 +1,5 @@
 import React, { forwardRef } from 'react';
 import { cn } from "@/lib/utils";
-import { LucideIcon } from 'lucide-react';
 
 export interface ListItemProps extends React.LiHTMLAttributes<HTMLLIElement> {
   children: React.ReactNode;
@@ -24,10 +23,18 @@ export const ListItem = forwardRef<HTMLLIElement, ListItemProps>(
   ({ children, className, icon: Icon, ...props }, ref) => (
     <li
       ref={ref}
-      className={cn("border-b p-2 flex items-center", className)}
+      className={cn(
+        "border-b p-2 flex items-center",
+        Icon ? "list-none pl-0" : "list-item", 
+        className
+      )}
       {...props}
     >
-      {Icon && <Icon className="mr-2 h-4 w-4 flex-shrink-0" />}
+      {Icon ? (
+        <span className="mr-2 h-5 w-5 flex items-center">{Icon}</span>
+      ) : (
+        <span className="h-4 w-4 flex-shrink-0" />
+      )}
       <span>{children}</span>
     </li>
   )
@@ -40,7 +47,7 @@ ListItem.displayName = "ListItem";
  * 
  * @param items - Optional array of items to render, each with content and an optional icon.
  * @param variant - Determines whether the list is ordered or unordered. Defaults to 'unordered'.
- * @param className - Additional CSS styling classes to apply to the list.
+ * @param className - Additional CSS classes to apply to the list.
  * @param iconClassName - Additional CSS classes to apply to the icons.
  */
 export const List = forwardRef<HTMLOListElement, ListProps>(
@@ -51,8 +58,9 @@ export const List = forwardRef<HTMLOListElement, ListProps>(
       <Component
         ref={ref}
         className={cn(
-          "list-none p-0",
-          variant === 'ordered' && "list-decimal",
+          variant === 'ordered' ? "list-decimal" : "list-disc",
+          "pl-4", 
+          "list-inside",
           className
         )}
         {...props}
