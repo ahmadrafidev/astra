@@ -10,96 +10,96 @@ const InputDocumentation = () => {
           <table className="min-w-full table-auto">
             <thead>
               <tr>
-                <th className="px-6 py-2 text-left text-gray-700 dark:text-gray-200">Name</th>
-                <th className="px-6 py-2 text-left text-gray-700 dark:text-gray-200">Type</th>
-                <th className="px-6 py-2 text-left text-gray-700 dark:text-gray-200">Default</th>
-                <th className="px-6 py-2 text-left text-gray-700 dark:text-gray-200">Description</th>
+                <th className="border px-6 py-2 text-left text-gray-700 dark:text-gray-200">Name</th>
+                <th className="border px-6 py-2 text-left text-gray-700 dark:text-gray-200">Type</th>
+                <th className="border px-6 py-2 text-left text-gray-700 dark:text-gray-200">Default</th>
+                <th className="border px-6 py-2 text-left text-gray-700 dark:text-gray-200">Description</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td className="px-6 py-4 text-gray-900 dark:text-gray-50">type</td>
-                <td className="px-6 py-4 text-gray-900 dark:text-gray-50">{`'text' | 'password' | 'email'`}</td>
-                <td className="px-6 py-4 text-gray-900 dark:text-gray-50">{`'text'`}</td>
-                <td className="px-6 py-4 text-gray-900 dark:text-gray-50">The type of input.</td>
+                <td className="border px-6 py-4 text-gray-900 dark:text-gray-50">type</td>
+                <td className="border px-6 py-4 text-gray-900 dark:text-gray-50">{`'text' | 'password' | 'email'`}</td>
+                <td className="border px-6 py-4 text-gray-900 dark:text-gray-50">{`'text'`}</td>
+                <td className="border px-6 py-4 text-gray-900 dark:text-gray-50">The type of input.</td>
               </tr>
               <tr>
-                <td className="px-6 py-4 text-gray-900 dark:text-gray-50">value</td>
-                <td className="px-6 py-4 text-gray-900 dark:text-gray-50">string</td>
-                <td className="px-6 py-4 text-gray-900 dark:text-gray-50">N/A</td>
-                <td className="px-6 py-4 text-gray-900 dark:text-gray-50">The value of the input.</td>
+                <td className="border px-6 py-4 text-gray-900 dark:text-gray-50">value</td>
+                <td className="border px-6 py-4 text-gray-900 dark:text-gray-50">string</td>
+                <td className="border px-6 py-4 text-gray-900 dark:text-gray-50">N/A</td>
+                <td className="border px-6 py-4 text-gray-900 dark:text-gray-50">The value of the input.</td>
               </tr>
               <tr>
-                <td className="px-6 py-4 text-gray-900 dark:text-gray-50">onChange</td>
-                <td className="px-6 py-4 text-gray-900 dark:text-gray-50">{`(e: React.ChangeEvent<HTMLInputElement>) => void`}</td>
-                <td className="px-6 py-4 text-gray-900 dark:text-gray-50">N/A</td>
-                <td className="px-6 py-4 text-gray-900 dark:text-gray-50">The function to call when the input value changes.</td>
+                <td className="border px-6 py-4 text-gray-900 dark:text-gray-50">onChange</td>
+                <td className="border px-6 py-4 text-gray-900 dark:text-gray-50">{`(e: React.ChangeEvent<HTMLInputElement>) => void`}</td>
+                <td className="border px-6 py-4 text-gray-900 dark:text-gray-50">N/A</td>
+                <td className="border px-6 py-4 text-gray-900 dark:text-gray-50">The function to call when the input value changes.</td>
               </tr>
               <tr>
-                <td className="px-6 py-4 text-gray-900 dark:text-gray-50">placeholder</td>
-                <td className="px-6 py-4 text-gray-900 dark:text-gray-50">string</td>
-                <td className="px-6 py-4 text-gray-900 dark:text-gray-50">N/A</td>
-                <td className="px-6 py-4 text-gray-900 dark:text-gray-50">The placeholder text for the input.</td>
+                <td className="border px-6 py-4 text-gray-900 dark:text-gray-50">placeholder</td>
+                <td className="border px-6 py-4 text-gray-900 dark:text-gray-50">string</td>
+                <td className="border px-6 py-4 text-gray-900 dark:text-gray-50">empty</td>
+                <td className="border px-6 py-4 text-gray-900 dark:text-gray-50">The placeholder text for the input.</td>
               </tr>
               <tr>
-                <td className="px-6 py-4 text-gray-900 dark:text-gray-50">label</td>
-                <td className="px-6 py-4 text-gray-900 dark:text-gray-50">string</td>
-                <td className="px-6 py-4 text-gray-900 dark:text-gray-50">N/A</td>
-                <td className="px-6 py-4 text-gray-900 dark:text-gray-50">The label for the input.</td>
+                <td className="border px-6 py-4 text-gray-900 dark:text-gray-50">label</td>
+                <td className="border px-6 py-4 text-gray-900 dark:text-gray-50">string</td>
+                <td className="border px-6 py-4 text-gray-900 dark:text-gray-50">empty</td>
+                <td className="border px-6 py-4 text-gray-900 dark:text-gray-50">The label for the input.</td>
               </tr>
               <tr>
-                <td className="px-6 py-4 text-gray-900 dark:text-gray-50">hint</td>
-                <td className="px-6 py-4 text-gray-900 dark:text-gray-50">string</td>
-                <td className="px-6 py-4 text-gray-900 dark:text-gray-50">N/A</td>
-                <td className="px-6 py-4 text-gray-900 dark:text-gray-50">A hint for the input.</td>
+                <td className="border px-6 py-4 text-gray-900 dark:text-gray-50">hint</td>
+                <td className="border px-6 py-4 text-gray-900 dark:text-gray-50">string</td>
+                <td className="border px-6 py-4 text-gray-900 dark:text-gray-50">empty</td>
+                <td className="border px-6 py-4 text-gray-900 dark:text-gray-50">A hint for the input.</td>
               </tr>
               <tr>
-                <td className="px-6 py-4 text-gray-900 dark:text-gray-50">error</td>
-                <td className="px-6 py-4 text-gray-900 dark:text-gray-50">string</td>
-                <td className="px-6 py-4 text-gray-900 dark:text-gray-50">N/A</td>
-                <td className="px-6 py-4 text-gray-900 dark:text-gray-50">An error message for the input.</td>
+                <td className="border px-6 py-4 text-gray-900 dark:text-gray-50">error</td>
+                <td className="border px-6 py-4 text-gray-900 dark:text-gray-50">string</td>
+                <td className="border px-6 py-4 text-gray-900 dark:text-gray-50">empty</td>
+                <td className="border px-6 py-4 text-gray-900 dark:text-gray-50">An error message for the input.</td>
               </tr>
               <tr>
-                <td className="px-6 py-4 text-gray-900 dark:text-gray-50">icon</td>
-                <td className="px-6 py-4 text-gray-900 dark:text-gray-50">React.ReactNode</td>
-                <td className="px-6 py-4 text-gray-900 dark:text-gray-50">N/A</td>
-                <td className="px-6 py-4 text-gray-900 dark:text-gray-50">An optional icon to display inside the input.</td>
+                <td className="border px-6 py-4 text-gray-900 dark:text-gray-50">icon</td>
+                <td className="border px-6 py-4 text-gray-900 dark:text-gray-50">React.ReactNode</td>
+                <td className="border px-6 py-4 text-gray-900 dark:text-gray-50">N/A</td>
+                <td className="border px-6 py-4 text-gray-900 dark:text-gray-50">An optional icon to display inside the input.</td>
               </tr>
               <tr>
-                <td className="px-6 py-4 text-gray-900 dark:text-gray-50">className</td>
-                <td className="px-6 py-4 text-gray-900 dark:text-gray-50">string</td>
-                <td className="px-6 py-4 text-gray-900 dark:text-gray-50">empty</td>
-                <td className="px-6 py-4 text-gray-900 dark:text-gray-50">Additional class names for the wrapper div.</td>
+                <td className="border px-6 py-4 text-gray-900 dark:text-gray-50">className</td>
+                <td className="border px-6 py-4 text-gray-900 dark:text-gray-50">string</td>
+                <td className="border px-6 py-4 text-gray-900 dark:text-gray-50">empty</td>
+                <td className="border px-6 py-4 text-gray-900 dark:text-gray-50">Additional class names for the wrapper div.</td>
               </tr>
               <tr>
-                <td className="px-6 py-4 text-gray-900 dark:text-gray-50">inputClassName</td>
-                <td className="px-6 py-4 text-gray-900 dark:text-gray-50">string</td>
-                <td className="px-6 py-4 text-gray-900 dark:text-gray-50">empty</td>
-                <td className="px-6 py-4 text-gray-900 dark:text-gray-50">Additional class names for the input element.</td>
+                <td className="border px-6 py-4 text-gray-900 dark:text-gray-50">inputClassName</td>
+                <td className="border px-6 py-4 text-gray-900 dark:text-gray-50">string</td>
+                <td className="border px-6 py-4 text-gray-900 dark:text-gray-50">empty</td>
+                <td className="border px-6 py-4 text-gray-900 dark:text-gray-50">Additional class names for the input element.</td>
               </tr>
               <tr>
-                <td className="px-6 py-4 text-gray-900 dark:text-gray-50">labelClassName</td>
-                <td className="px-6 py-4 text-gray-900 dark:text-gray-50">string</td>
-                <td className="px-6 py-4 text-gray-900 dark:text-gray-50">empty</td>
-                <td className="px-6 py-4 text-gray-900 dark:text-gray-50">Additional class names for the label.</td>
+                <td className="border px-6 py-4 text-gray-900 dark:text-gray-50">labelClassName</td>
+                <td className="border px-6 py-4 text-gray-900 dark:text-gray-50">string</td>
+                <td className="border px-6 py-4 text-gray-900 dark:text-gray-50">empty</td>
+                <td className="border px-6 py-4 text-gray-900 dark:text-gray-50">Additional class names for the label.</td>
               </tr>
               <tr>
-                <td className="px-6 py-4 text-gray-900 dark:text-gray-50">hintClassName</td>
-                <td className="px-6 py-4 text-gray-900 dark:text-gray-50">string</td>
-                <td className="px-6 py-4 text-gray-900 dark:text-gray-50">empty</td>
-                <td className="px-6 py-4 text-gray-900 dark:text-gray-50">Additional class names for the hint.</td>
+                <td className="border px-6 py-4 text-gray-900 dark:text-gray-50">hintClassName</td>
+                <td className="border px-6 py-4 text-gray-900 dark:text-gray-50">string</td>
+                <td className="border px-6 py-4 text-gray-900 dark:text-gray-50">empty</td>
+                <td className="border px-6 py-4 text-gray-900 dark:text-gray-50">Additional class names for the hint.</td>
               </tr>
               <tr>
-                <td className="px-6 py-4 text-gray-900 dark:text-gray-50">errorClassName</td>
-                <td className="px-6 py-4 text-gray-900 dark:text-gray-50">string</td>
-                <td className="px-6 py-4 text-gray-900 dark:text-gray-50">empty</td>
-                <td className="px-6 py-4 text-gray-900 dark:text-gray-50">Additional class names for the error message.</td>
+                <td className="border px-6 py-4 text-gray-900 dark:text-gray-50">errorClassName</td>
+                <td className="border px-6 py-4 text-gray-900 dark:text-gray-50">string</td>
+                <td className="border px-6 py-4 text-gray-900 dark:text-gray-50">empty</td>
+                <td className="border px-6 py-4 text-gray-900 dark:text-gray-50">Additional class names for the error message.</td>
               </tr>
               <tr>
-                <td className="px-6 py-4 text-gray-900 dark:text-gray-50">disable</td>
-                <td className="px-6 py-4 text-gray-900 dark:text-gray-50">boolean</td>
-                <td className="px-6 py-4 text-gray-900 dark:text-gray-50">false</td>
-                <td className="px-6 py-4 text-gray-900 dark:text-gray-50">Flag to disable the input.</td>
+                <td className="border px-6 py-4 text-gray-900 dark:text-gray-50">disable</td>
+                <td className="border px-6 py-4 text-gray-900 dark:text-gray-50">boolean</td>
+                <td className="border px-6 py-4 text-gray-900 dark:text-gray-50">false</td>
+                <td className="border px-6 py-4 text-gray-900 dark:text-gray-50">Flag to disable the input.</td>
               </tr>
             </tbody>
           </table>
