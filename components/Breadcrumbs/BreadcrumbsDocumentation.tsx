@@ -71,4 +71,5 @@ const BreadcrumbsDocumentation = () => (
   </>
 );
 
+BreadcrumbsDocumentation.displayName = "BreadcrumbsDocumentation";
 export default BreadcrumbsDocumentation;

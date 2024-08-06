@@ -6,6 +6,7 @@ import Layout from '../Layout/Layout';
 import Badge from '../Badge/Badge';
 
 import Card from './Card';
+import CardDocumentation from './CardDocumentation';
 
 const CardPageClient: React.FC = () => {
     return (
@@ -56,80 +57,7 @@ const CardPageClient: React.FC = () => {
                     </Card>
                 </div>
             </section>
-            {/* Props Table Section */}
-            <section>
-                <div className="flex flex-col mb-4">
-                    <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Props</h2>
-                    <div className="bg-white dark:bg-gray-800 rounded-lg shadow p-5">
-                        <table className="min-w-full">
-                            <thead>
-                                <tr>
-                                    <th className="px-6 py-2 text-left text-gray-700 dark:text-gray-200">Name</th>
-                                    <th className="px-6 py-2 text-left text-gray-700 dark:text-gray-200">Type</th>
-                                    <th className="px-6 py-2 text-left text-gray-700 dark:text-gray-200">Default</th>
-                                    <th className="px-6 py-2 text-left text-gray-700 dark:text-gray-200">Description</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">title</td>
-                                    <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">string</td>
-                                    <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">none</td>
-                                    <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">The title of the card.</td>
-                                </tr>
-                                <tr>
-                                    <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">description</td>
-                                    <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">string</td>
-                                    <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">none</td>
-                                    <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">The description content of the card.</td>
-                                </tr>
-                                <tr>
-                                    <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">imageSrc</td>
-                                    <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">string</td>
-                                    <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">none</td>
-                                    <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">The URL of the image to display in the card.</td>
-                                </tr>
-                                <tr>
-                                    <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">imageWidth</td>
-                                    <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">number</td>
-                                    <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">300</td>
-                                    <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">The width of the image in the card.</td>
-                                </tr>
-                                <tr>
-                                    <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">imageHeight</td>
-                                    <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">number</td>
-                                    <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">200</td>
-                                    <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">The height of the image in the card.</td>
-                                </tr>
-                                <tr>
-                                    <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">className</td>
-                                    <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">string</td>
-                                    <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">empty</td>
-                                    <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Additional classes for styling.</td>
-                                </tr>
-                                <tr>
-                                    <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">children</td>
-                                    <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">React.ReactNode</td>
-                                    <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">none</td>
-                                    <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Additional content to display inside the card.</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </section>
-            {/* Best Practices Section */}
-            <section>
-                <div className="flex flex-col mb-4">
-                    <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Best Practices</h2>
-                    <ul className="list-disc pl-5 text-gray-700 dark:text-gray-300 space-y-3">
-                        <li>Use descriptive titles and concise descriptions to provide clear information.</li>
-                        <li>Ensure images are of high quality and relevant to the card content.</li>
-                        <li>Group related information and actions within a card to maintain a cohesive structure.</li>
-                        <li>Maintain consistent spacing and alignment for a clean and organized layout.</li>
-                    </ul>
-                </div>
-            </section>
+            <CardDocumentation />
         </Layout>
     );
 };
