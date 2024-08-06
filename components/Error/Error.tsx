@@ -11,8 +11,24 @@ import {
   CreditCard 
 } from 'lucide-react';
 
+/**
+ * Type of errors that the Error component can display.
+ * 
+ * @typedef {'upload' | 'network' | 'filesize' | 'authentication' | 'limiter' | 'timeout' | 'server' | 'payment'} ErrorType
+ */
 export type ErrorType = 'upload' | 'network' | 'filesize' | 'authentication'| 'limiter'| 'timeout'| 'server' | 'payment';
 
+/**
+ * Props for the Error component.
+ * 
+ * @typedef {Object} ErrorProps
+ * @property {ErrorType} type - The type of error to display.
+ * @property {string} title - The title of the error message.
+ * @property {string} message - The detailed error message.
+ * @property {string} [className] - Additional class names for custom styling.
+ * @property {{ label: string; onClick: () => void }} primaryAction - Primary action for the error.
+ * @property {{ label: string; onClick: () => void }} [secondaryAction] - Secondary action for the error.
+ */
 export interface ErrorProps {
   type: ErrorType;
   title: string;
@@ -39,6 +55,13 @@ const alertIcons: Record<ErrorType, React.ReactNode> = {
   payment: <CreditCard className="w-9 h-9 text-red-500" />,
 };
 
+/**
+ * Error component for displaying error messages with actions.
+ * 
+ * @component
+ * @param {ErrorProps} props - Props for the Error component.
+ * @returns {JSX.Element} The rendered Error component.
+ */
 const Error: React.FC<ErrorProps> = ({
   type,
   title,

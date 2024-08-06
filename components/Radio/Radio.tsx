@@ -1,6 +1,19 @@
 import React, { forwardRef } from 'react';
 import { cn } from "@/lib/utils";
 
+/**
+ * Props for the Radio component.
+ * 
+ * @typedef {Object} RadioProps
+ * @property {string} [label] - The label for the radio button.
+ * @property {string} [description] - Additional description for the radio button.
+ * @property {string} [error] - Error message to be displayed.
+ * @property {string} [containerClassName] - Additional class names for the container.
+ * @property {string} [labelClassName] - Additional class names for the label.
+ * @property {string} [descriptionClassName] - Additional class names for the description.
+ * @property {string} [errorClassName] - Additional class names for the error message.
+ * @property {(value: string | null) => void} onChange - Function to call when the radio button value changes.
+ */
 export interface RadioProps extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'onChange'> {
   label?: string;
   description?: string;
@@ -12,6 +25,14 @@ export interface RadioProps extends Omit<React.InputHTMLAttributes<HTMLInputElem
   onChange: (value: string | null) => void;
 }
 
+/**
+ * Radio component for rendering a radio button with label, description, and error message.
+ * 
+ * @component
+ * @param {RadioProps} props - Props for the Radio component.
+ * @param {React.Ref<HTMLInputElement>} ref - Ref for the radio input element.
+ * @returns {JSX.Element} The rendered Radio component.
+ */
 const Radio = forwardRef<HTMLInputElement, RadioProps>(
   ({ 
     className,

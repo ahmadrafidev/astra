@@ -1,5 +1,14 @@
 import React, { useState } from 'react';
 
+/**
+ * Props for the Tooltip component.
+ * 
+ * @typedef {Object} TooltipProps
+ * @property {React.ReactNode} children - The content around which the tooltip will appear.
+ * @property {string} text - The text to be displayed inside the tooltip.
+ * @property {string} [className] - Additional class names for custom styling.
+ * @property {'default' | 'arrow'} [variant='default'] - The variant style of the tooltip.
+ */
 export interface TooltipProps {
   children: React.ReactNode;
   text: string;
@@ -7,6 +16,13 @@ export interface TooltipProps {
   variant?: 'default' | 'arrow';
 }
 
+/**
+ * Tooltip component for displaying a tooltip with text when hovering or focusing on an element.
+ * 
+ * @component
+ * @param {TooltipProps} props - Props for the Tooltip component.
+ * @returns {JSX.Element} The rendered Tooltip component.
+ */
 const Tooltip: React.FC<TooltipProps> = ({
   children,
   text,

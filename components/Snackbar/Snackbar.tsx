@@ -1,6 +1,20 @@
 import React, { ReactNode, useEffect, useRef, useState } from 'react';
 import { XIcon } from 'lucide-react';
 
+/**
+ * Props for the Snackbar component.
+ * 
+ * @typedef {Object} SnackbarProps
+ * @property {string} message - The message to be displayed in the snackbar.
+ * @property {string} [className] - Additional class names for custom styling.
+ * @property {boolean} open - Whether the snackbar is open.
+ * @property {number} [duration=3000] - Duration for which the snackbar is visible (in milliseconds).
+ * @property {() => void} onClose - Function to call when the snackbar closes.
+ * @property {'info' | 'success' | 'warning' | 'error'} [variant='info'] - The variant of the snackbar, determining its style.
+ * @property {React.ReactNode} [action] - Action button or element to be displayed in the snackbar.
+ * @property {boolean} [showCloseButton=false] - Whether to show a close button in the snackbar.
+ * @property {React.ReactNode} [icon] - Icon to be displayed in the snackbar.
+ */
 export interface SnackbarProps {
   message: string;
   className?: string;
@@ -10,9 +24,16 @@ export interface SnackbarProps {
   variant?: 'info' | 'success' | 'warning' | 'error';
   action?: React.ReactNode;
   showCloseButton?: boolean;
-  icon?: React.ReactNode
+  icon?: React.ReactNode;
 }
 
+/**
+ * Snackbar component for displaying brief messages.
+ * 
+ * @component
+ * @param {SnackbarProps} props - Props for the Snackbar component.
+ * @returns {JSX.Element} The rendered Snackbar component.
+ */
 const Snackbar: React.FC<SnackbarProps> = ({
   message,
   open,

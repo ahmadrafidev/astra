@@ -1,5 +1,17 @@
 import React, { ReactNode } from 'react';
 
+/**
+ * Props for the AlertDialog component.
+ * 
+ * @typedef {Object} AlertDialogProps
+ * @property {ReactNode} children - The content of the alert dialog.
+ * @property {boolean} open - Determines if the dialog is open.
+ * @property {() => void} onClose - Function to call when the dialog is closed.
+ * @property {() => void} onConfirm - Function to call when the confirm action is triggered.
+ * @property {string} [confirmText='Continue'] - Text for the confirm button.
+ * @property {string} [closeText='Cancel'] - Text for the close button.
+ * @property {string} [className] - Additional class names for custom styling.
+ */
 export interface AlertDialogProps {
     children: ReactNode; 
     open: boolean;
@@ -10,6 +22,13 @@ export interface AlertDialogProps {
     className?: string;
 }
 
+/**
+ * AlertDialog component for displaying a modal dialog with confirm and cancel actions.
+ * 
+ * @component
+ * @param {AlertDialogProps} props - Props for the AlertDialog component.
+ * @returns {JSX.Element} The rendered AlertDialog component.
+ */
 const AlertDialog: React.FC<AlertDialogProps> = ({ 
     open,
     onClose,

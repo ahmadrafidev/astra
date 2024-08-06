@@ -64,7 +64,7 @@ export const componentsList = [
     { name: 'Error Message', path: '/components/error' },
     { name: 'File Uploader', path: '/components/file-uploader' },
     { name: 'Header', path: '/components/header' },
-    { name: 'IconButton', path: '/components/icon-button'},
+    { name: 'Icon Button', path: '/components/icon-button'},
     { name: 'Input', path: '/components/input' },
     { name: 'Keyboard Shortcut', path: '/components/keyboard-shortcut' },
     { name: 'List', path: '/components/list' },
@@ -98,7 +98,7 @@ export const componentsList = [
 export const categorizedComponentsList = {
     actions: [
         { name: 'Button', path: '/components/button', description: 'Clickable element to trigger actions or events.' },
-        { name: 'IconButton', path: '/components/icon-button', description: 'Compact button displaying an icon for space-efficient actions.' },
+        { name: 'Icon Button', path: '/components/icon-button', description: 'Compact button displaying an icon for space-efficient actions.' },
     ],
     layout: [
         { name: 'Card', path: '/components/card', description: 'Container for grouping related content in a visually distinct way.' },

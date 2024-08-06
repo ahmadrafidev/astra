@@ -1,11 +1,27 @@
 import React, { forwardRef } from 'react';
 import { cn } from "@/lib/utils";
 
+/**
+ * Props for the ListItem component.
+ * 
+ * @typedef {Object} ListItemProps
+ * @property {React.ReactNode} children - The content of the list item.
+ * @property {React.ReactNode} [icon] - Optional icon to display next to the list item.
+ */
 export interface ListItemProps extends React.LiHTMLAttributes<HTMLLIElement> {
   children: React.ReactNode;
   icon?: React.ReactNode;
 }
 
+/**
+ * Props for the List component.
+ * 
+ * @typedef {Object} ListProps
+ * @property {Array<{ content: React.ReactNode; icon?: React.ReactNode; }>} [items] - Optional array of items to render, each with content and an optional icon.
+ * @property {'ordered' | 'unordered'} [variant='unordered'] - Determines whether the list is ordered or unordered.
+ * @property {string} [className] - Additional CSS classes to apply to the list.
+ * @property {string} [iconClassName] - Additional CSS classes to apply to the icons.
+ */
 export interface ListProps extends React.OlHTMLAttributes<HTMLOListElement> {
   items?: Array<{
     content: React.ReactNode;
@@ -18,6 +34,11 @@ export interface ListProps extends React.OlHTMLAttributes<HTMLOListElement> {
 
 /**
  * ListItem component for rendering individual items within a List.
+ * 
+ * @component
+ * @param {ListItemProps} props - Props for the ListItem component.
+ * @param {React.Ref<HTMLLIElement>} ref - Ref for the list item element.
+ * @returns {JSX.Element} The rendered ListItem component.
  */
 export const ListItem = forwardRef<HTMLLIElement, ListItemProps>(
   ({ children, className, icon: Icon, ...props }, ref) => (
@@ -45,10 +66,10 @@ ListItem.displayName = "ListItem";
 /**
  * List component for displaying multiple items with optional icons.
  * 
- * @param items - Optional array of items to render, each with content and an optional icon.
- * @param variant - Determines whether the list is ordered or unordered. Defaults to 'unordered'.
- * @param className - Additional CSS classes to apply to the list.
- * @param iconClassName - Additional CSS classes to apply to the icons.
+ * @component
+ * @param {ListProps} props - Props for the List component.
+ * @param {React.Ref<HTMLOListElement>} ref - Ref for the list element.
+ * @returns {JSX.Element} The rendered List component.
  */
 export const List = forwardRef<HTMLOListElement, ListProps>(
   ({ items, variant = 'unordered', className, iconClassName, children, ...props }, ref) => {

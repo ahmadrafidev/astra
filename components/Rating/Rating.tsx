@@ -1,6 +1,22 @@
 import React, { useState, useCallback, useMemo } from 'react';
 import { Star } from 'lucide-react';
 
+/**
+ * Props for the Rating component.
+ * 
+ * @typedef {Object} RatingProps
+ * @property {number} [maxRating=5] - The maximum rating value.
+ * @property {number} [defaultRating=0] - The default rating value.
+ * @property {(rating: number | null) => void} [onRate] - Function to call when the rating changes.
+ * @property {'sm' | 'md' | 'lg'} [size='md'] - The size of the rating icons.
+ * @property {boolean} [readOnly=false] - Whether the rating component is read-only.
+ * @property {React.ReactNode} [icon] - Custom icon for the rating.
+ * @property {string} [activeColor='text-yellow-400'] - Color of the active rating icons.
+ * @property {string} [inactiveColor='text-gray-300'] - Color of the inactive rating icons.
+ * @property {string} [className] - Additional class names for custom styling.
+ * @property {string} [label='Rating Component'] - Accessible label for the rating component.
+ * @property {boolean} [allowClear=false] - Whether the rating can be cleared.
+ */
 export interface RatingProps {
   maxRating?: number;
   defaultRating?: number;
@@ -15,6 +31,13 @@ export interface RatingProps {
   allowClear?: boolean;
 }
 
+/**
+ * Rating component for displaying a star rating system.
+ * 
+ * @component
+ * @param {RatingProps} props - Props for the Rating component.
+ * @returns {JSX.Element} The rendered Rating component.
+ */
 const Rating: React.FC<RatingProps> = ({
   maxRating = 5,
   defaultRating = 0,

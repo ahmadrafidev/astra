@@ -1,9 +1,19 @@
-// Accordion.tsx
 'use client'
 
 import React, { useState, ReactNode } from 'react';
 import { AccordionItemProps } from './AccordionItem';
 
+/**
+ * Props for the Accordion component.
+ * 
+ * @typedef {Object} AccordionProps
+ * @property {ReactNode} children - The content of the accordion, typically AccordionItem components.
+ * @property {string} [className] - Optional class name for custom styling.
+ * @property {string} [itemClassName] - Optional class name for custom styling of individual accordion items.
+ * @property {string} [border] - Optional border styling for accordion items.
+ * @property {'single'|'multiple'} [selectionMode='single'] - The selection mode of the accordion, either 'single' or 'multiple'.
+ * @property {'default'|'split'} [variant='default'] - The variant style of the accordion, either 'default' or 'split'.
+ */
 export interface AccordionProps {
     children: ReactNode;
     className?: string;
@@ -13,6 +23,13 @@ export interface AccordionProps {
     variant?: 'default' | 'split';
 }
 
+/**
+ * Accordion component for displaying collapsible content panels.
+ * 
+ * @component
+ * @param {AccordionProps} props - Props for the Accordion component.
+ * @returns {JSX.Element} The rendered Accordion component.
+ */
 export const Accordion: React.FC<AccordionProps> = ({
     children,
     className = '',
@@ -23,6 +40,11 @@ export const Accordion: React.FC<AccordionProps> = ({
 }) => {
     const [openIndices, setOpenIndices] = useState<number[]>([]);
 
+    /**
+     * Toggles the open state of an accordion item.
+     * 
+     * @param {number} index - The index of the accordion item to toggle.
+     */
     const handleToggle = (index: number) => {
         if (selectionMode === 'single') {
             setOpenIndices(openIndices.includes(index) ? [] : [index]);

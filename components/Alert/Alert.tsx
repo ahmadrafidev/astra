@@ -5,6 +5,16 @@ import { AlertCircle, CheckCircle, XCircle, AlertTriangle, X } from 'lucide-reac
 
 type AlertType = 'info' | 'success' | 'warning' | 'error';
 
+/**
+ * Props for the Alert component.
+ * 
+ * @typedef {Object} AlertProps
+ * @property {AlertType} type - The type of the alert, determines the styling.
+ * @property {string} [title] - Optional title for the alert.
+ * @property {ReactNode} [children] - The content of the alert.
+ * @property {boolean} [isDismissible=false] - Whether the alert is dismissible.
+ * @property {string} [className] - Additional class names for custom styling.
+ */
 interface AlertProps {
   type: AlertType;
   title?: string;
@@ -27,6 +37,13 @@ const alertIcons: Record<AlertType, React.ReactNode> = {
   error: <XCircle className="w-5 h-5" />,
 };
 
+/**
+ * Alert component for displaying contextual messages.
+ * 
+ * @component
+ * @param {AlertProps} props - Props for the Alert component.
+ * @returns {JSX.Element} The rendered Alert component.
+ */
 const Alert = React.forwardRef<HTMLDivElement, AlertProps>(
   ({ type, title, children, isDismissible = false, className }, ref) => {
 
@@ -63,10 +80,26 @@ const Alert = React.forwardRef<HTMLDivElement, AlertProps>(
 
 Alert.displayName = "Alert";
 
+/**
+ * AlertTitle component for displaying the title of an alert.
+ * 
+ * @component
+ * @param {Object} props - Props for the AlertTitle component.
+ * @param {ReactNode} props.children - The content of the alert title.
+ * @returns {JSX.Element} The rendered AlertTitle component.
+ */
 const AlertTitle: React.FC<{ children: ReactNode }> = ({ children }) => (
   <h3 className="text-base font-normal mb-1">{children}</h3>
 );
 
+/**
+ * AlertContent component for displaying the content of an alert.
+ * 
+ * @component
+ * @param {Object} props - Props for the AlertContent component.
+ * @param {ReactNode} props.children - The content of the alert.
+ * @returns {JSX.Element} The rendered AlertContent component.
+ */
 const AlertContent: React.FC<{ children: ReactNode }> = ({ children }) => (
   <div className="text-sm font-normal">{children}</div>
 );

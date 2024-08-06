@@ -1,6 +1,18 @@
 import React from 'react';
 import { cn } from 'lib/utils';
 
+/**
+ * Props for the StatusDot component.
+ * 
+ * @typedef {Object} StatusDotProps
+ * @property {'online' | 'offline' | 'busy'} status - The status to be represented.
+ * @property {'dot' | 'icon'} [type='dot'] - The type of status indicator, either a dot or an icon.
+ * @property {React.ReactNode} [icon] - The icon to be displayed if type is 'icon'.
+ * @property {string} [label] - Custom label for the status.
+ * @property {boolean} [showLabel=true] - Whether to show the label next to the status indicator.
+ * @property {string} [className] - Additional class names for custom styling.
+ * @property {React.ReactNode} [children] - Content to be displayed inside the status indicator.
+ */
 export interface StatusDotProps {
     status: 'online' | 'offline' | 'busy';
     type?: 'dot' | 'icon';
@@ -23,6 +35,13 @@ const statusLabels = {
     busy: 'Busy',
 };
 
+/**
+ * StatusDot component for displaying a status indicator.
+ * 
+ * @component
+ * @param {StatusDotProps} props - Props for the StatusDot component.
+ * @returns {JSX.Element} The rendered StatusDot component.
+ */
 const StatusDot: React.FC<StatusDotProps> = ({
     status,
     type = 'dot',

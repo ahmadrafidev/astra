@@ -1,12 +1,34 @@
 import React, { forwardRef, useCallback, KeyboardEvent } from 'react';
 import { XCircle, ChevronDown } from 'lucide-react';
 
+/**
+ * Represents an option in the Select component.
+ * 
+ * @typedef {Object} SelectOption
+ * @property {string} value - The value of the option.
+ * @property {string} label - The label of the option.
+ * @property {boolean} [disabled] - Whether the option is disabled.
+ */
 export interface SelectOption {
   value: string;
   label: string;
   disabled?: boolean;
 }
 
+/**
+ * Props for the Select component.
+ * 
+ * @typedef {Object} SelectProps
+ * @property {SelectOption[]} options - The options to be displayed in the select.
+ * @property {string} [label] - The label for the select component.
+ * @property {string} [error] - Error message to be displayed.
+ * @property {string} [helpText] - Help text to be displayed.
+ * @property {boolean} [fullWidth=false] - Whether the select should take the full width of its container.
+ * @property {'small' | 'medium' | 'large'} [variant='medium'] - The size variant of the select.
+ * @property {boolean} [isClearable=false] - Whether the select is clearable.
+ * @property {() => void} [onClear] - Function to call when the clear button is clicked.
+ * @property {string} [placeholder] - Placeholder text for the select.
+ */
 export interface SelectProps extends React.SelectHTMLAttributes<HTMLSelectElement> {
   options: SelectOption[];
   label?: string;
@@ -19,6 +41,14 @@ export interface SelectProps extends React.SelectHTMLAttributes<HTMLSelectElemen
   placeholder?: string;
 }
 
+/**
+ * Select component for rendering a dropdown menu with options.
+ * 
+ * @component
+ * @param {SelectProps} props - Props for the Select component.
+ * @param {React.Ref<HTMLSelectElement>} ref - Ref for the select element.
+ * @returns {JSX.Element} The rendered Select component.
+ */
 const Select = forwardRef<HTMLSelectElement, SelectProps>(
   (
     {

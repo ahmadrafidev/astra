@@ -1,6 +1,18 @@
 import React, { useEffect, useRef, useState, useCallback } from 'react';
 import { X } from 'lucide-react';
 
+/**
+ * Props for the Modal component.
+ * 
+ * @typedef {Object} ModalProps
+ * @property {boolean} isOpen - Whether the modal is open.
+ * @property {boolean} [closeOnOutsideClick=true] - Whether to close the modal on outside click.
+ * @property {string} [title] - The title of the modal.
+ * @property {string} [className] - Additional class names for custom styling.
+ * @property {React.ReactNode} children - The content of the modal.
+ * @property {React.ReactNode} [closeButton] - Custom close button element.
+ * @property {() => void} onClose - Function to call when the modal is closed.
+ */
 export interface ModalProps {
   isOpen: boolean;
   closeOnOutsideClick?: boolean;
@@ -11,6 +23,13 @@ export interface ModalProps {
   onClose: () => void;
 }
 
+/**
+ * Modal component for displaying content in a modal dialog.
+ * 
+ * @component
+ * @param {ModalProps} props - Props for the Modal component.
+ * @returns {JSX.Element} The rendered Modal component.
+ */
 const Modal: React.FC<ModalProps> = ({
   isOpen,
   onClose,
