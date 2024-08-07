@@ -5,9 +5,22 @@ import { Copy } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 /**
- * Link to theme documentaion: https://react-syntax-highlighter.github.io/react-syntax-highlighter/demo/prism-async-light.html
+ * Link to theme documentation: https://react-syntax-highlighter.github.io/react-syntax-highlighter/demo/prism-async-light.html
  */
 
+/**
+ * Props for the Snippet component.
+ * 
+ * @typedef {Object} SnippetProps
+ * @property {string} language - The programming language of the code snippet.
+ * @property {string} code - The code to be displayed.
+ * @property {string} [className] - Additional class names for custom styling.
+ * @property {boolean} [showLineNumbers=false] - Whether to show line numbers.
+ * @property {boolean} [wrapLongLines=false] - Whether to wrap long lines.
+ * @property {string} [maxHeight='400px'] - Maximum height of the code container.
+ * @property {boolean} [copyable=true] - Whether the code snippet is copyable.
+ * @property {'light' | 'dark'} [theme='light'] - Theme of the code snippet.
+ */
 export interface SnippetProps {
   language: string;
   code: string;
@@ -19,6 +32,13 @@ export interface SnippetProps {
   theme?: 'light' | 'dark';
 }
 
+/**
+ * Snippet component for displaying and optionally copying code snippets.
+ * 
+ * @component
+ * @param {SnippetProps} props - Props for the Snippet component.
+ * @returns {JSX.Element} The rendered Snippet component.
+ */
 const Snippet: React.FC<SnippetProps> = ({
   language,
   code,
@@ -58,8 +78,8 @@ const Snippet: React.FC<SnippetProps> = ({
             className
           )}
         >
-            {language}
-          </span>
+          {language}
+        </span>
         {copyable && (
           <button
             onClick={handleCopy}
