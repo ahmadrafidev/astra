@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
     title: "SearchBar",
-    description: "A component for providing search functionality.",
+    description: "An input field for entering search queries to find specific content.",
 };
 
 const SearchBarPageClient = dynamic(() => import('@/components/SearchBar/SearchBarPageClient'), { ssr: false });
