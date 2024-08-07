@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
     title: "Stepper",
-    description: "Steppers guide users through a series of steps in a sequential manner.",
+    description: "A progress indicator for multi-step processes or forms.",
 };
 
 const StepperPageClient = dynamic(() => import('@/components/Stepper/StepperPageClient'), { ssr: false });
