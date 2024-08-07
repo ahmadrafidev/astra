@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
     title: "Snippet",
-    description: "Snippets display code examples with syntax highlighting.",
+    description: "A reusable block of code or text for syntax highlighting.",
 };
 
 const SnippetPageClient = dynamic(() => import('@/components/Snippet/SnippetPageClient'), { ssr: false });
