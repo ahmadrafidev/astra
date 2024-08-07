@@ -1,6 +1,19 @@
 import React, { useState, useCallback, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
+/**
+ * Props for the Carousel component.
+ * 
+ * @typedef {Object} CarouselProps
+ * @property {string[]} images - Array of image URLs to display in the carousel.
+ * @property {string} [className] - Additional class names for custom styling.
+ * @property {number} [width=500] - Width of the carousel.
+ * @property {number} [height=500] - Height of the carousel.
+ * @property {boolean} [autoPlay=false] - Whether the carousel should autoplay.
+ * @property {number} [autoPlayInterval=3000] - Interval for autoplay in milliseconds.
+ * @property {boolean} [showDots=true] - Whether to show navigation dots.
+ * @property {boolean} [showArrows=true] - Whether to show navigation arrows.
+ */
 export interface CarouselProps {
   images: string[];
   className?: string;
@@ -12,10 +25,17 @@ export interface CarouselProps {
   showArrows?: boolean;
 }
 
+/**
+ * Carousel component for displaying a set of images with navigation controls.
+ * 
+ * @component
+ * @param {CarouselProps} props - Props for the Carousel component.
+ * @returns {JSX.Element} The rendered Carousel component.
+ */
 const Carousel: React.FC<CarouselProps> = ({
   images,
   width = 500,
-  height = 300,
+  height = 500,
   className,
   autoPlay = false,
   autoPlayInterval = 3000,
