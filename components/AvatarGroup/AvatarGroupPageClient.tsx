@@ -38,53 +38,53 @@ const AvatarGroupPageClient: React.FC = () => {
             </div>
             {/* Props Section */}
             <section className="my-5">
-                <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Props</h2>
-                <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg shadow overflow-x-auto">
-                    <table className="min-w-full table-auto">
-                        <thead>
+                <h2 className="text-xl md:text-2xl font-semibold text-gray-900 dark:text-gray-50 mb-6">Props</h2>
+                <div className="bg-white dark:bg-gray-800 rounded-lg shadow overflow-hidden">
+                    <table className="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                        <thead className="bg-gray-50 dark:bg-gray-700">
                             <tr>
-                                <th className="px-6 py-2 text-left text-gray-700 dark:text-gray-200">Name</th>
-                                <th className="px-6 py-2 text-left text-gray-700 dark:text-gray-200">Type</th>
-                                <th className="px-6 py-2 text-left text-gray-700 dark:text-gray-200">Default</th>
-                                <th className="px-6 py-2 text-left text-gray-700 dark:text-gray-200">Description</th>
+                                <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Name</th>
+                                <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Type</th>
+                                <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Default</th>
+                                <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Description</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody className="bg-white dark:bg-gray-800 divide-y divide-gray-200 dark:divide-gray-700">
                             <tr>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">avatars</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">AvatarProps[]</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">-</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Array of avatar properties. Each object should contain props for the Avatar component.</td>
+                                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-100">avatars</td>
+                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 font-mono">AvatarProps[]</td>
+                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">-</td>
+                                <td className="px-6 py-4 text-sm text-gray-500 dark:text-gray-300">Array of avatar properties. Each object should contain props for the Avatar component.</td>
                             </tr>
                             <tr>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">max</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">number</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">3</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Maximum number of avatars to display before showing a count.</td>
+                                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-100">max</td>
+                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 font-mono">number</td>
+                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">3</td>
+                                <td className="px-6 py-4 text-sm text-gray-500 dark:text-gray-300">Maximum number of avatars to display before showing a count.</td>
                             </tr>
                             <tr>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">size</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">'sm' | 'md' | 'lg' | number</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">'md'</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Size of the avatars. Can be a preset size or a custom number.</td>
+                                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-100">size</td>
+                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 font-mono">'sm' | 'md' | 'lg' | number</td>
+                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">'md'</td>
+                                <td className="px-6 py-4 text-sm text-gray-500 dark:text-gray-300">Size of the avatars. Can be a preset size or a custom number.</td>
                             </tr>
                             <tr>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">shape</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">'circle' | 'square'</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">'circle'</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Shape of the avatars.</td>
+                                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-100">shape</td>
+                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 font-mono">'circle' | 'square'</td>
+                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">'circle'</td>
+                                <td className="px-6 py-4 text-sm text-gray-500 dark:text-gray-300">Shape of the avatars.</td>
                             </tr>
                             <tr>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">overlap</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">'sm' | 'md' | 'lg'</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">'md'</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Amount of overlap between avatars.</td>
+                                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-100">overlap</td>
+                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 font-mono">'sm' | 'md' | 'lg'</td>
+                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">'md'</td>
+                                <td className="px-6 py-4 text-sm text-gray-500 dark:text-gray-300">Amount of overlap between avatars.</td>
                             </tr>
                             <tr>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">className</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">string</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">empty</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Additional classes for styling the avatar group.</td>
+                                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-100">className</td>
+                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 font-mono">string</td>
+                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">empty</td>
+                                <td className="px-6 py-4 text-sm text-gray-500 dark:text-gray-300">Additional classes for styling the avatar group.</td>
                             </tr>
                         </tbody>
                     </table>

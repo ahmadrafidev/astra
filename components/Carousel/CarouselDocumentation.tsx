@@ -3,8 +3,8 @@ import React from 'react';
 const CarouselDocumentation = () => (
   <>
     {/* Props Table Section */}
-    <section className="mb-8">
-      <h2 className="text-2xl md:text-3xl font-semibold text-gray-900 dark:text-gray-50 mb-6">Props</h2>
+    <section className="my-5">
+      <h2 className="text-xl md:text-2xl font-semibold text-gray-900 dark:text-gray-50 mb-6">Props</h2>
       <div className="bg-white dark:bg-gray-800 rounded-lg shadow overflow-hidden">
         <table className="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
           <thead className="bg-gray-50 dark:bg-gray-700">
@@ -94,4 +94,5 @@ const CarouselDocumentation = () => (
   </>
 );
 
+CarouselDocumentation.displayName = 'CarouselDocumentation';
 export default CarouselDocumentation;

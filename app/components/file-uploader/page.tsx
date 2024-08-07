@@ -7,8 +7,10 @@ export const metadata: Metadata = {
     description: "An interface for selecting and uploading files.",
 };
 
+const FileUploaderClient = dynamic(() => import("@/components/FileUploader/FileUploaderClient"), { ssr: false });
+
 const FileUploaderPage: React.FC = () => {
-    return <></>;
+    return <FileUploaderClient />;
 };
 
 FileUploaderPage.displayName="FileUploaderPage"

@@ -28,7 +28,7 @@ const CarouselPageClient: React.FC = () => {
                 </div>
             </section>
             {/* Carousel Section */}
-            <section className="mb-5">
+            <section className="my-5">
                 <Carousel
                     className="max-w-md md:max-w-lg mx-auto"
                     images={images}

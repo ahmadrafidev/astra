@@ -4,53 +4,53 @@ const BreadcrumbsDocumentation = () => (
   <>
     {/* Props Section */}
     <section className="my-5">
-      <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Props</h2>
-      <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg shadow overflow-x-auto">
-        <table className="min-w-full table-auto border-collapse">
-          <thead>
-            <tr className="bg-gray-100 dark:bg-gray-700">
-              <th className="border px-6 py-3 text-left text-xs font-medium text-gray-700 dark:text-gray-200 uppercase tracking-wider">Name</th>
-              <th className="border px-6 py-3 text-left text-xs font-medium text-gray-700 dark:text-gray-200 uppercase tracking-wider">Type</th>
-              <th className="border px-6 py-3 text-left text-xs font-medium text-gray-700 dark:text-gray-200 uppercase tracking-wider">Default</th>
-              <th className="border px-6 py-3 text-left text-xs font-medium text-gray-700 dark:text-gray-200 uppercase tracking-wider">Description</th>
+      <h2 className="text-xl md:text-2xl font-semibold text-gray-900 dark:text-gray-50 mb-6">Props</h2>
+      <div className="bg-white dark:bg-gray-800 rounded-lg shadow overflow-hidden">
+        <table className="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+          <thead className="bg-gray-50 dark:bg-gray-700">
+            <tr>
+              <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Name</th>
+              <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Type</th>
+              <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Default</th>
+              <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Description</th>
             </tr>
           </thead>
           <tbody className="bg-white dark:bg-gray-800 divide-y divide-gray-200 dark:divide-gray-700">
             <tr>
-              <td className="border px-6 py-4 text-sm text-gray-700 dark:text-gray-200">items</td>
-              <td className="border px-6 py-4 text-sm text-gray-700 dark:text-gray-200 font-mono">{'BreadcrumbItem[]'}</td>
-              <td className="border px-6 py-4 text-sm text-gray-700 dark:text-gray-200">-</td>
-              <td className="border px-6 py-4 text-sm text-gray-700 dark:text-gray-200">Array of breadcrumb items to display.</td>
+              <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-100">items</td>
+              <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 font-mono">{'BreadcrumbItem[]'}</td>
+              <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">-</td>
+              <td className="px-6 py-4 text-sm text-gray-500 dark:text-gray-300">Array of breadcrumb items to display.</td>
             </tr>
             <tr>
-              <td className="border px-6 py-4 text-sm text-gray-700 dark:text-gray-200">className</td>
-              <td className="border px-6 py-4 text-sm text-gray-700 dark:text-gray-200 font-mono">string</td>
-              <td className="border px-6 py-4 text-sm text-gray-700 dark:text-gray-200">empty</td>
-              <td className="border px-6 py-4 text-sm text-gray-700 dark:text-gray-200">Additional classes for styling the breadcrumbs container.</td>
+              <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-100">className</td>
+              <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 font-mono">string</td>
+              <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">empty</td>
+              <td className="px-6 py-4 text-sm text-gray-500 dark:text-gray-300">Additional classes for styling the breadcrumbs container.</td>
             </tr>
             <tr>
-              <td className="border px-6 py-4 text-sm text-gray-700 dark:text-gray-200">separator</td>
-              <td className="border px-6 py-4 text-sm text-gray-700 dark:text-gray-200 font-mono">React.ReactNode</td>
-              <td className="border px-6 py-4 text-sm text-gray-700 dark:text-gray-200">{'<ChevronRight />'}</td>
-              <td className="border px-6 py-4 text-sm text-gray-700 dark:text-gray-200">Custom separator between breadcrumb items.</td>
+              <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-100">separator</td>
+              <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 font-mono">React.ReactNode</td>
+              <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">{`React Icon`}</td>
+              <td className="px-6 py-4 text-sm text-gray-500 dark:text-gray-300">Custom separator between breadcrumb items.</td>
             </tr>
             <tr>
-              <td className="border px-6 py-4 text-sm text-gray-700 dark:text-gray-200">maxItems</td>
-              <td className="border px-6 py-4 text-sm text-gray-700 dark:text-gray-200 font-mono">number</td>
-              <td className="border px-6 py-4 text-sm text-gray-700 dark:text-gray-200">0</td>
-              <td className="border px-6 py-4 text-sm text-gray-700 dark:text-gray-200">Maximum number of items to display. 0 means no limit.</td>
+              <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-100">maxItems</td>
+              <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 font-mono">number</td>
+              <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">0</td>
+              <td className="px-6 py-4 text-sm text-gray-500 dark:text-gray-300">Maximum number of items to display. 0 means no limit.</td>
             </tr>
             <tr>
-              <td className="border px-6 py-4 text-sm text-gray-700 dark:text-gray-200">itemClassName</td>
-              <td className="border px-6 py-4 text-sm text-gray-700 dark:text-gray-200 font-mono">string</td>
-              <td className="border px-6 py-4 text-sm text-gray-700 dark:text-gray-200">custom</td>
-              <td className="border px-6 py-4 text-sm text-gray-700 dark:text-gray-200">Classes for styling individual breadcrumb items.</td>
+              <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-100">itemClassName</td>
+              <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 font-mono">string</td>
+              <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">custom</td>
+              <td className="px-6 py-4 text-sm text-gray-500 dark:text-gray-300">Classes for styling individual breadcrumb items.</td>
             </tr>
             <tr>
-              <td className="border px-6 py-4 text-sm text-gray-700 dark:text-gray-200">activeItemClassName</td>
-              <td className="border px-6 py-4 text-sm text-gray-700 dark:text-gray-200 font-mono">string</td>
-              <td className="border px-6 py-4 text-sm text-gray-700 dark:text-gray-200">custom</td>
-              <td className="border px-6 py-4 text-sm text-gray-700 dark:text-gray-200">Classes for styling the active (last) breadcrumb item.</td>
+              <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-100">activeItemClassName</td>
+              <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 font-mono">string</td>
+              <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">custom</td>
+              <td className="px-6 py-4 text-sm text-gray-500 dark:text-gray-300">Classes for styling the active (last) breadcrumb item.</td>
             </tr>
           </tbody>
         </table>

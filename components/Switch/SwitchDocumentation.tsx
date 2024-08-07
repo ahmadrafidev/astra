@@ -4,61 +4,61 @@ const SwitchDocumentation = () => {
   return (
     <>
       {/* Props Section */}
-      <section className="mb-10">
-          <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Props</h2>
-          <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg shadow">
-              <table className="min-w-full table-auto">
-                  <thead>
+      <section className="my-5">
+          <h2 className="text-xl md:text-2xl font-semibold text-gray-900 dark:text-gray-50 mb-6">Props</h2>
+          <div className="bg-white dark:bg-gray-800 rounded-lg shadow overflow-hidden">
+              <table className="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                  <thead className="bg-gray-50 dark:bg-gray-700">
                       <tr>
-                          <th className="px-6 py-2 text-left text-gray-700 dark:text-gray-200">Name</th>
-                          <th className="px-6 py-2 text-left text-gray-700 dark:text-gray-200">Type</th>
-                          <th className="px-6 py-2 text-left text-gray-700 dark:text-gray-200">Default</th>
-                          <th className="px-6 py-2 text-left text-gray-700 dark:text-gray-200">Description</th>
+                          <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Name</th>
+                          <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Type</th>
+                          <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Default</th>
+                          <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Description</th>
                       </tr>
                   </thead>
-                  <tbody>
+                  <tbody className="bg-white dark:bg-gray-800 divide-y divide-gray-200 dark:divide-gray-700">
                       <tr>
-                          <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">checked</td>
-                          <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">boolean</td>
-                          <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">false</td>
-                          <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Status of the switch.</td>
+                          <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-100">checked</td>
+                          <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 font-mono">boolean</td>
+                          <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">false</td>
+                          <td className="px-6 py-4 text-sm text-gray-500 dark:text-gray-300">Status of the switch.</td>
                       </tr>
                       <tr>
-                          <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">onChange</td>
-                          <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">{'(state: boolean) => void'}</td>
-                          <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">-</td>
-                          <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Function to call when the switch value changes.</td>
+                          <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-100">onChange</td>
+                          <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 font-mono">{'(state: boolean) => void'}</td>
+                          <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">-</td>
+                          <td className="px-6 py-4 text-sm text-gray-500 dark:text-gray-300">Function to call when the switch value changes.</td>
                       </tr>
                       <tr>
-                          <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">className</td>
-                          <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">string</td>
-                          <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">empty</td>
-                          <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Additional classes for styling the switch.</td>
+                          <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-100">className</td>
+                          <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 font-mono">string</td>
+                          <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">empty</td>
+                          <td className="px-6 py-4 text-sm text-gray-500 dark:text-gray-300">Additional classes for styling the switch.</td>
                       </tr>
                       <tr>
-                          <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">ariaLabel</td>
-                          <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">string</td>
-                          <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">empty</td>
-                          <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Accessible label for the switch.</td>
+                          <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-100">ariaLabel</td>
+                          <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 font-mono">string</td>
+                          <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">empty</td>
+                          <td className="px-6 py-4 text-sm text-gray-500 dark:text-gray-300">Accessible label for the switch.</td>
                       </tr>
                       <tr>
-                          <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">disabled</td>
-                          <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">boolean</td>
-                          <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">false</td>
-                          <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Disables the switch if true.</td>
+                          <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-100">disabled</td>
+                          <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 font-mono">boolean</td>
+                          <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">false</td>
+                          <td className="px-6 py-4 text-sm text-gray-500 dark:text-gray-300">Disables the switch if true.</td>
                       </tr>
                       <tr>
-                          <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">size</td>
-                          <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">small, medium, large</td>
-                          <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">medium</td>
-                          <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Size of the switch.</td>
+                          <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-100">size</td>
+                          <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 font-mono">small, medium, large</td>
+                          <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">medium</td>
+                          <td className="px-6 py-4 text-sm text-gray-500 dark:text-gray-300">Size of the switch.</td>
                       </tr>
                   </tbody>
               </table>
           </div>
       </section>
       {/* Best Practices Section */}
-      <section className="mb-10">
+      <section className="my-5">
           <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Best Practices</h2>
           <div className="space-y-4">
               <ul className="list-decimal list-inside text-gray-700 dark:text-gray-300 space-y-3">

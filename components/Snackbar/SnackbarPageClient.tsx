@@ -98,71 +98,71 @@ const SnackbarPageClient: React.FC = () => {
             </section>
             {/* Props Section */}
             <section className="my-5">
-                <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Props</h2>
-                <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg shadow">
-                    <table className="min-w-full table-auto">
-                        <thead>
+                <h2 className="text-xl md:text-2xl font-semibold text-gray-900 dark:text-gray-50 mb-6">Props</h2>
+                <div className="bg-white dark:bg-gray-800 rounded-lg shadow overflow-hidden">
+                    <table className="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                        <thead className="bg-gray-50 dark:bg-gray-700">
                             <tr>
-                                <th className="px-6 py-2 text-left text-gray-700 dark:text-gray-200">Name</th>
-                                <th className="px-6 py-2 text-left text-gray-700 dark:text-gray-200">Type</th>
-                                <th className="px-6 py-2 text-left text-gray-700 dark:text-gray-200">Default</th>
-                                <th className="px-6 py-2 text-left text-gray-700 dark:text-gray-200">Description</th>
+                                <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Name</th>
+                                <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Type</th>
+                                <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Default</th>
+                                <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Description</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody className="bg-white dark:bg-gray-800 divide-y divide-gray-200 dark:divide-gray-700">
                             <tr>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">message</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">string</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">empty</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">The message to display in the snackbar.</td>
+                                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-100">message</td>
+                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 font-mono">string</td>
+                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">empty</td>
+                                <td className="px-6 py-4 text-sm text-gray-500 dark:text-gray-300">The message to display in the snackbar.</td>
                             </tr>
                             <tr>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">open</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">boolean</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">false</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">State whether the snackbar is open.</td>
+                                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-100">open</td>
+                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 font-mono">boolean</td>
+                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">false</td>
+                                <td className="px-6 py-4 text-sm text-gray-500 dark:text-gray-300">State whether the snackbar is open.</td>
                             </tr>
                             <tr>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">duration</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">number</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">3s</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Duration of snackbar displayed on  screens.</td>
+                                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-100">duration</td>
+                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 font-mono">number</td>
+                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">3s</td>
+                                <td className="px-6 py-4 text-sm text-gray-500 dark:text-gray-300">Duration of snackbar displayed on  screens.</td>
                             </tr>
                             <tr>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">onClose</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">function</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">-</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Function to call when the snackbar should be closed.</td>
+                                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-100">onClose</td>
+                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 font-mono">function</td>
+                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">-</td>
+                                <td className="px-6 py-4 text-sm text-gray-500 dark:text-gray-300">Function to call when the snackbar should be closed.</td>
                             </tr>
                             <tr>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">className</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">string</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">empty</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Additional classes for styling the snackbar.</td>
+                                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-100">className</td>
+                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 font-mono">string</td>
+                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">empty</td>
+                                <td className="px-6 py-4 text-sm text-gray-500 dark:text-gray-300">Additional classes for styling the snackbar.</td>
                             </tr>
                             <tr>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">variant</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">{`"info" | "success" | "warning" | "error"`}</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">{`"info"`}</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">The variant of the snackbar to define its color scheme.</td>
+                                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-100">variant</td>
+                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 font-mono">{`"info" | "success" | "warning" | "error"`}</td>
+                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">{`"info"`}</td>
+                                <td className="px-6 py-4 text-sm text-gray-500 dark:text-gray-300">The variant of the snackbar to define its color scheme.</td>
                             </tr>
                             <tr>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">action</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">React.ReactNode</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">none</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">An optional action element to display alongside the message.</td>
+                                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-100">action</td>
+                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 font-mono">React.ReactNode</td>
+                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">none</td>
+                                <td className="px-6 py-4 text-sm text-gray-500 dark:text-gray-300">An optional action element to display alongside the message.</td>
                             </tr>
                             <tr>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">showCloseButton</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">boolean</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">false</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Whether to show a close button on the snackbar.</td>
+                                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-100">showCloseButton</td>
+                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 font-mono">boolean</td>
+                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">false</td>
+                                <td className="px-6 py-4 text-sm text-gray-500 dark:text-gray-300">Whether to show a close button on the snackbar.</td>
                             </tr>
                             <tr>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">icon</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">React.ReactNode</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">empty</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">An optional icon to display on the left side of the message.</td>
+                                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-100">icon</td>
+                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 font-mono">React.ReactNode</td>
+                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">empty</td>
+                                <td className="px-6 py-4 text-sm text-gray-500 dark:text-gray-300">An optional icon to display on the left side of the message.</td>
                             </tr>
                         </tbody>
                     </table>

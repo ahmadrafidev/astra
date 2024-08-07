@@ -25,58 +25,58 @@ const TooltipPageClient: React.FC = () => {
                             Default Tooltip
                         </h3>
                         <Tooltip text="Default tooltip">
-                        <button className="px-4 py-2 bg-gray-900 dark:bg-gray-100 text-white dark:text-black rounded-lg shadow-sm hover:bg-gray-800 dark:hover:bg-gray-200">
-                            Default Tooltip
-                        </button>
-                    </Tooltip>
+                            <button className="px-4 py-2 bg-gray-900 dark:bg-gray-100 text-white dark:text-black rounded-lg shadow-sm hover:bg-gray-800 dark:hover:bg-gray-200">
+                                Default Tooltip
+                            </button>
+                        </Tooltip>
                     </div>
                     <div>
                         <h3 className="text-base md:text-lg font-medium font-sans text-gray-900 dark:text-gray-50 mb-2 md:mb-3">Arrow Tooltip</h3>
                         <Tooltip text="Arrow tooltip" variant="arrow">
-                        <button className="px-4 py-2 bg-gray-900 dark:bg-gray-100 text-white dark:text-black rounded-lg shadow-sm hover:bg-gray-800 dark:hover:bg-gray-200">
-                            Arrow Tooltip
-                        </button>
-                    </Tooltip>
+                            <button className="px-4 py-2 bg-gray-900 dark:bg-gray-100 text-white dark:text-black rounded-lg shadow-sm hover:bg-gray-800 dark:hover:bg-gray-200">
+                                Arrow Tooltip
+                            </button>
+                        </Tooltip>
                     </div>
                 </div>
             </section>
             {/* Props Section */}
             <section className="my-5">
-                <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Props</h2>
-                <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg shadow">
-                    <table className="min-w-full table-auto">
-                        <thead>
+                <h2 className="text-xl md:text-2xl font-semibold text-gray-900 dark:text-gray-50 mb-6">Props</h2>
+                <div className="bg-white dark:bg-gray-800 rounded-lg shadow overflow-hidden">
+                    <table className="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                        <thead className="bg-gray-50 dark:bg-gray-700">
                             <tr>
-                                <th className="px-6 py-2 text-left text-gray-700 dark:text-gray-200">Name</th>
-                                <th className="px-6 py-2 text-left text-gray-700 dark:text-gray-200">Type</th>
-                                <th className="px-6 py-2 text-left text-gray-700 dark:text-gray-200">Default</th>
-                                <th className="px-6 py-2 text-left text-gray-700 dark:text-gray-200">Description</th>
+                                <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Name</th>
+                                <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Type</th>
+                                <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Default</th>
+                                <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Description</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody className="bg-white dark:bg-gray-800 divide-y divide-gray-200 dark:divide-gray-700">
                             <tr>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">children</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">ReactNode</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">-</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">The content that triggers the tooltip on hover or focus.</td>
+                                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-100">children</td>
+                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 font-mono">ReactNode</td>
+                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">-</td>
+                                <td className="px-6 py-4 text-sm text-gray-500 dark:text-gray-300">The content that triggers the tooltip on hover or focus.</td>
                             </tr>
                             <tr>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">text</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">string</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">empty</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">The text content of the tooltip. Keep it concise for better readability.</td>
+                                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-100">text</td>
+                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 font-mono">string</td>
+                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">empty</td>
+                                <td className="px-6 py-4 text-sm text-gray-500 dark:text-gray-300">The text content of the tooltip. Keep it concise for better readability.</td>
                             </tr>
                             <tr>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">className</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">string</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">empty</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Additional classes for styling the tooltip wrapper.</td>
+                                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-100">className</td>
+                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 font-mono">string</td>
+                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">empty</td>
+                                <td className="px-6 py-4 text-sm text-gray-500 dark:text-gray-300">Additional classes for styling the tooltip wrapper.</td>
                             </tr>
                             <tr>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">variant</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">default, arrow</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">default</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Specifies the visual style of the tooltip.</td>
+                                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-100">variant</td>
+                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 font-mono">default, arrow</td>
+                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">default</td>
+                                <td className="px-6 py-4 text-sm text-gray-500 dark:text-gray-300">Specifies the visual style of the tooltip.</td>
                             </tr>
                         </tbody>
                     </table>

@@ -4,91 +4,91 @@ const ToggleDocumentation = () => {
   return (
     <>
       {/* Props Section */}
-      <section className="mb-10">
-        <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Props</h2>
-        <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg shadow">
-          <table className="min-w-full table-auto">
-            <thead>
+      <section className="my-5">
+        <h2 className="text-xl md:text-2xl font-semibold text-gray-900 dark:text-gray-50 mb-6">Props</h2>
+        <div className="bg-white dark:bg-gray-800 rounded-lg shadow overflow-hidden">
+          <table className="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+            <thead className="bg-gray-50 dark:bg-gray-700">
               <tr>
-                <th className="px-6 py-2 text-left text-gray-700 dark:text-gray-200">Name</th>
-                <th className="px-6 py-2 text-left text-gray-700 dark:text-gray-200">Type</th>
-                <th className="px-6 py-2 text-left text-gray-700 dark:text-gray-200">Default</th>
-                <th className="px-6 py-2 text-left text-gray-700 dark:text-gray-200">Description</th>
+                <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Name</th>
+                <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Type</th>
+                <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Default</th>
+                <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Description</th>
               </tr>
             </thead>
-            <tbody>
+            <tbody className="bg-white dark:bg-gray-800 divide-y divide-gray-200 dark:divide-gray-700">
               <tr>
-                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">children</td>
-                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">ReactNode</td>
-                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">-</td>
-                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">The content inside the toggle button.</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-100">children</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 font-mono">ReactNode</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">-</td>
+                <td className="px-6 py-4 text-sm text-gray-500 dark:text-gray-300">The content inside the toggle button.</td>
               </tr>
               <tr>
-                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">className</td>
-                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">string</td>
-                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">empty</td>
-                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Additional classes for styling the toggle button.</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-100">className</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 font-mono">string</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">empty</td>
+                <td className="px-6 py-4 text-sm text-gray-500 dark:text-gray-300">Additional classes for styling the toggle button.</td>
               </tr>
               <tr>
-                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">ariaLabel</td>
-                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">string</td>
-                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">empty</td>
-                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Accessible label for the toggle button.</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-100">ariaLabel</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 font-mono">string</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">empty</td>
+                <td className="px-6 py-4 text-sm text-gray-500 dark:text-gray-300">Accessible label for the toggle button.</td>
               </tr>
               <tr>
-                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">onIcon</td>
-                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">ReactNode</td>
-                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">-</td>
-                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Icon to display when the toggle is on.</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-100">onIcon</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 font-mono">ReactNode</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">-</td>
+                <td className="px-6 py-4 text-sm text-gray-500 dark:text-gray-300">Icon to display when the toggle is on.</td>
               </tr>
               <tr>
-                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">offIcon</td>
-                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">ReactNode</td>
-                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">-</td>
-                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Icon to display when the toggle is off.</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-100">offIcon</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 font-mono">ReactNode</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">-</td>
+                <td className="px-6 py-4 text-sm text-gray-500 dark:text-gray-300">Icon to display when the toggle is off.</td>
               </tr>
               <tr>
-                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">onChange</td>
-                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">(state: boolean) =&gt; void</td>
-                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">none</td>
-                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Callback function called when the toggle state changes.</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-100">onChange</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 font-mono">(state: boolean) =&gt; void</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">none</td>
+                <td className="px-6 py-4 text-sm text-gray-500 dark:text-gray-300">Callback function called when the toggle state changes.</td>
               </tr>
               <tr>
-                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">defaultOn</td>
-                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">boolean</td>
-                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">false</td>
-                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Initial state of the toggle button.</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-100">defaultOn</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 font-mono">boolean</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">false</td>
+                <td className="px-6 py-4 text-sm text-gray-500 dark:text-gray-300">Initial state of the toggle button.</td>
               </tr>
               <tr>
-                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">onClassName</td>
-                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">string</td>
-                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">empty</td>
-                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Classes to apply when the toggle is on.</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-100">onClassName</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 font-mono">string</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">empty</td>
+                <td className="px-6 py-4 text-sm text-gray-500 dark:text-gray-300">Classes to apply when the toggle is on.</td>
               </tr>
               <tr>
-                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">offClassName</td>
-                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">string</td>
-                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">empty</td>
-                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Classes to apply when the toggle is off.</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-100">offClassName</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 font-mono">string</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">empty</td>
+                <td className="px-6 py-4 text-sm text-gray-500 dark:text-gray-300">Classes to apply when the toggle is off.</td>
               </tr>
               <tr>
-                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">iconClassName</td>
-                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">string</td>
-                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">empty</td>
-                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Classes to apply to the icon.</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-100">iconClassName</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 font-mono">string</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">empty</td>
+                <td className="px-6 py-4 text-sm text-gray-500 dark:text-gray-300">Classes to apply to the icon.</td>
               </tr>
               <tr>
-                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">hideOffIcon</td>
-                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">boolean</td>
-                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">false</td>
-                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Hide the icon when the toggle is off.</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-100">hideOffIcon</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 font-mono">boolean</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">false</td>
+                <td className="px-6 py-4 text-sm text-gray-500 dark:text-gray-300">Hide the icon when the toggle is off.</td>
               </tr>
             </tbody>
           </table>
         </div>
       </section>
       {/* Best Practices Section */}
-      <section>
+      <section className="my-5">
           <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Best Practices</h2>
           <div className="space-y-4">
               <ul className="list-decimal list-inside text-gray-700 dark:text-gray-300 space-y-3">

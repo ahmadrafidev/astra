@@ -1,4 +1,5 @@
 import React, { useState, useCallback, useEffect } from 'react';
+import Image from 'next/image';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 /**
@@ -82,12 +83,13 @@ const Carousel: React.FC<CarouselProps> = ({
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}
         >
           {images.map((src, index) => (
-            <img
+            <Image
+              width={width}
+              height={height}
               key={index}
               src={src}
               alt={`Slide ${index + 1}`}
               className="w-full h-full object-cover flex-shrink-0"
-              style={{ width: `${width}px`, height: `${height}px` }}
             />
           ))}
         </div>

@@ -5,89 +5,89 @@ const RadioDocumentation = () => {
     <>
       {/* Props Section */}
       <section className="my-5">
-        <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Props</h2>
-        <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg shadow">
-          <table className="min-w-full table-auto">
-            <thead>
+        <h2 className="text-xl md:text-2xl font-semibold text-gray-900 dark:text-gray-50 mb-6">Props</h2>
+        <div className="bg-white dark:bg-gray-800 rounded-lg shadow overflow-hidden">
+          <table className="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+            <thead className="bg-gray-50 dark:bg-gray-700">
               <tr>
-                <th className="px-6 py-2 text-left text-gray-700 dark:text-gray-200">Name</th>
-                <th className="px-6 py-2 text-left text-gray-700 dark:text-gray-200">Type</th>
-                <th className="px-6 py-2 text-left text-gray-700 dark:text-gray-200">Default</th>
-                <th className="px-6 py-2 text-left text-gray-700 dark:text-gray-200">Description</th>
+                <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Name</th>
+                <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Type</th>
+                <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Default</th>
+                <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Description</th>
               </tr>
             </thead>
-            <tbody>
+            <tbody className="bg-white dark:bg-gray-800 divide-y divide-gray-200 dark:divide-gray-700">
               <tr>
-                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">checked</td>
-                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">boolean</td>
-                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">empty</td>
-                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Whether the radio button is checked.</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-100">checked</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 font-mono">boolean</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">false</td>
+                <td className="px-6 py-4 text-sm text-gray-500 dark:text-gray-300">Whether the radio button is checked.</td>
               </tr>
               <tr>
-                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">onChange</td>
-                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">{`(value: string | null) => void `}</td>
-                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">-</td>
-                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Callback function to handle change events.</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-100">onChange</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 font-mono">{`(value: string | null) => void `}</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">-</td>
+                <td className="px-6 py-4 text-sm text-gray-500 dark:text-gray-300">Callback function to handle change events.</td>
               </tr>
               <tr>
-                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">label</td>
-                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">string</td>
-                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">empty</td>
-                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Label text for the radio button.</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-100">label</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 font-mono">string</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">empty</td>
+                <td className="px-6 py-4 text-sm text-gray-500 dark:text-gray-300">Label text for the radio button.</td>
               </tr>
               <tr>
-                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">description</td>
-                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">string</td>
-                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">empty</td>
-                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Description text for the radio button.</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-100">description</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 font-mono">string</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">empty</td>
+                <td className="px-6 py-4 text-sm text-gray-500 dark:text-gray-300">Description text for the radio button.</td>
               </tr>
               <tr>
-                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">error</td>
-                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">string</td>
-                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">empty</td>
-                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Error message to be displayed.</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-100">error</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 font-mono">string</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">empty</td>
+                <td className="px-6 py-4 text-sm text-gray-500 dark:text-gray-300">Error message to be displayed.</td>
               </tr>
               <tr>
-                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">name</td>
-                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">string</td>
-                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">empty</td>
-                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Name attribute for the radio button group.</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-100">name</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 font-mono">string</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">empty</td>
+                <td className="px-6 py-4 text-sm text-gray-500 dark:text-gray-300">Name attribute for the radio button group.</td>
               </tr>
               <tr>
-                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">value</td>
-                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">string</td>
-                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">empty</td>
-                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Value attribute for the radio button.</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-100">value</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 font-mono">string</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">empty</td>
+                <td className="px-6 py-4 text-sm text-gray-500 dark:text-gray-300">Value attribute for the radio button.</td>
               </tr>
               <tr>
-                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">className</td>
-                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">string</td>
-                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">empty</td>
-                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Additional classes for styling the input element.</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-100">className</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 font-mono">string</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">empty</td>
+                <td className="px-6 py-4 text-sm text-gray-500 dark:text-gray-300">Additional classes for styling the input element.</td>
               </tr>
               <tr>
-                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">containerClassName</td>
-                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">string</td>
-                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">empty</td>
-                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Additional classes for styling the container element.</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-100">containerClassName</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 font-mono">string</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">empty</td>
+                <td className="px-6 py-4 text-sm text-gray-500 dark:text-gray-300">Additional classes for styling the container element.</td>
               </tr>
               <tr>
-                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">labelClassName</td>
-                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">string</td>
-                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">empty</td>
-                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Additional classes for styling the label element.</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-100">labelClassName</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 font-mono">string</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">empty</td>
+                <td className="px-6 py-4 text-sm text-gray-500 dark:text-gray-300">Additional classes for styling the label element.</td>
               </tr>
               <tr>
-                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">descriptionClassName</td>
-                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">string</td>
-                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">empty</td>
-                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Additional classes for styling the description element.</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-100">descriptionClassName</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 font-mono">string</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">empty</td>
+                <td className="px-6 py-4 text-sm text-gray-500 dark:text-gray-300">Additional classes for styling the description element.</td>
               </tr>
               <tr>
-                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">errorClassName</td>
-                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">string</td>
-                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">empty</td>
-                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Additional classes for styling the error element.</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-100">errorClassName</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 font-mono">string</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">empty</td>
+                <td className="px-6 py-4 text-sm text-gray-500 dark:text-gray-300">Additional classes for styling the error element.</td>
               </tr>
             </tbody>
           </table>
@@ -95,7 +95,7 @@ const RadioDocumentation = () => {
       </section>
       {/* Best Practices Section */}
       <section>
-        <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Best Practices</h2>
+        <h2 className="text-xl md:text-2xl font-semibold text-gray-900 dark:text-gray-50 mb-6">Best Practices</h2>
         <div className="space-y-4">
           <ul className="list-decimal list-inside text-gray-700 dark:text-gray-300 space-y-3">
             <li>Use radio buttons when the user needs to select one option from a group.</li>
