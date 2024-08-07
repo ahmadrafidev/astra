@@ -6,6 +6,7 @@ import Layout from '../Layout/Layout';
 import Badge from '../Badge/Badge';
 
 import ProgressBar from './ProgressBar';
+import ProgressBarDocumentation from './ProgressBarDocumentation';
 
 const ProgressBarPageClient: React.FC = () => {
     const [progress, setProgress] = useState(50);
@@ -19,7 +20,30 @@ const ProgressBarPageClient: React.FC = () => {
                     A visual indicator showing the completion status of a task or process.
                 </p>
             </div>
-            <ProgressBar progress={progress} className="my-4" />
+            <section className="my-5">
+                <h2 className="text-lg md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Variants</h2>
+                <div className="flex flex-col space-y-4">
+                    <div>
+                        <h3 className="text-lg md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Default</h3>
+                        <ProgressBar size="md"  progress={progress} className="my-4" />
+                    </div>
+                    <div>   
+                        <h3 className="text-lg md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">With Stripes</h3>
+                        <ProgressBar size="md" hasStripe progress={progress} className="my-4" />
+                    </div>
+                    <div>
+                        <h3 className="text-lg md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Custom Progress Bar</h3>
+                        <ProgressBar 
+                            progress={progress} 
+                            size="md" 
+                            progressVariant="success" 
+                            showLabel 
+                            labelPosition="outside"
+                            progressClassName="font-bold" 
+                        />
+                    </div>
+                </div>
+            </section>
             <div className="flex space-x-2 mt-4">
                 <button
                     onClick={() => setProgress((prev) => Math.max(prev - 10, 0))}
@@ -34,47 +58,7 @@ const ProgressBarPageClient: React.FC = () => {
                     Increase
                 </button>
             </div>
-            {/* Props Section */}
-            <section className="mb-10">
-                <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Props</h2>
-                <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg shadow">
-                    <table className="min-w-full table-auto">
-                        <thead>
-                            <tr>
-                                <th className="px-6 py-2 text-left text-gray-700 dark:text-gray-200">Name</th>
-                                <th className="px-6 py-2 text-left text-gray-700 dark:text-gray-200 font-mono">Type</th>
-                                <th className="px-6 py-2 text-left text-gray-700 dark:text-gray-200">Default</th>
-                                <th className="px-6 py-2 text-left text-gray-700 dark:text-gray-200">Description</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">progress</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">number</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">-</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">The current progress value.</td>
-                            </tr>
-                            <tr>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">className</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200 font-mono">string</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">-</td>
-                                <td className="border px-6 py-4 text-gray-700 dark:text-gray-200">Additional classes for styling.</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </section>
-            {/* Best Practices Section */}
-            <section>
-                <h2 className="text-2xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Best Practices</h2>
-                <div className="space-y-4">
-                    <ul className="list-decimal list-inside text-gray-700 dark:text-gray-300 space-y-3">
-                        <li>Ensure the progress bar is clearly visible and indicates progress accurately.</li>
-                        <li>Use distinguishable colors to indicate progress.</li>
-                        <li>Make sure the progress bar is accessible and usable via screen readers.</li>
-                    </ul>
-                </div>
-            </section>
+            <ProgressBarDocumentation />
         </Layout>
     );
 };
