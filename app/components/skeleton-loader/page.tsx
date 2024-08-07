@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
     title: "SkeletonLoader",
-    description: "Skeleton loaders provide a visual indication of loading content.",
+    description: "A visual indication of loading content.",
 };
 
 const SkeletonLoaderPageClient = dynamic(() => import('@/components/SkeletonLoader/SkeletonLoaderPageClient'), { ssr: false });

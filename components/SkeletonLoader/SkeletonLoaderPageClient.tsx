@@ -20,9 +20,9 @@ const SkeletonLoaderPageClient: React.FC = () => {
                 </p>
             </div>
             <div className="space-y-6">
-                <SkeletonLoader width="100%" height="2rem" className="my-2" />
-                <SkeletonLoader width="75%" height="1.5rem" className="my-2" />
-                <SkeletonLoader width="50%" height="1rem" className="my-2" />
+                <SkeletonLoader width="100%" shape="circle" height="2rem" className="my-2" animation="pulse"/>
+                <SkeletonLoader width="75%" shape="rectangle" height="1.5rem" className="my-2" animation="wave" />
+                <SkeletonLoader width="50%" height="1rem" className="my-2" animation="pulse"/>
                 <SkeletonLoader width={200} height={20} gap={10} animation="wave" shape="text" />
             </div>
             <SkeletonLoaderDocumentation />
