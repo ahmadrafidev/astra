@@ -1,22 +1,52 @@
-// components/Spinner/Spinner.tsx
 import React from 'react';
 
 export interface SpinnerProps {
-    size?: number;
-    className?: string;
+  size?: 'sm' | 'md' | 'lg' | number;
+  color?: string;
+  thickness?: number;
+  speed?: 'slow' | 'normal' | 'fast';
+  className?: string;
+  'aria-label'?: string;
 }
 
-const Spinner: React.FC<SpinnerProps> = ({ size = 24, className = '' }) => {
-    return (
-        <div
-            className={`inline-block border-4 border-t-transparent border-gray-400 rounded-full ${className}`}
-            style={{ width: size, height: size }}
-            role="status"
-            aria-label="Loading"
-        >
-            <span className="sr-only">Loading...</span>
-        </div>
-    );
+const Spinner: React.FC<SpinnerProps> = ({
+  size = 'md',
+  color,
+  thickness = 4,
+  speed = 'normal',
+  className,
+  'aria-label': ariaLabel = 'Spinner',
+}) => {
+  const sizeMap = {
+    sm: 16,
+    md: 24,
+    lg: 32,
+  };
+
+  const speedMap = {
+    slow: 'animate-spin-slow',
+    normal: 'animate-spin',
+    fast: 'animate-spin-fast',
+  };
+
+  const spinnerSize = typeof size === 'number' ? size : sizeMap[size];
+  const spinnerSpeed = speedMap[speed];
+
+  return (
+    <div
+      className={`inline-block rounded-full ${spinnerSpeed} ${color} ${className}`}
+      style={{
+        width: spinnerSize,
+        height: spinnerSize,
+        borderWidth: thickness,
+        borderTopColor: 'transparent',
+      }}
+      role="status"
+      aria-label={ariaLabel}
+    >
+      <span className="sr-only">{ariaLabel}</span>
+    </div>
+  );
 };
 
 Spinner.displayName = "Spinner";
