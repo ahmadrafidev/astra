@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
     title: "ProgressBar",
-    description: "A component for displaying progress.",
+    description: "A visual indicator showing the completion status of a task or process.",
 };
 
 const ProgressBarPageClient = dynamic(() => import('@/components/ProgressBar/ProgressBarPageClient'), { ssr: false });

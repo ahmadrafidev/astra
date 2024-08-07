@@ -7,7 +7,7 @@ const progressBarVariants = cva(
   {
     variants: {
       size: {
-        sm: "h-2",
+        sm: "h-3",
         md: "h-4",
         lg: "h-6",
       },
@@ -41,6 +41,22 @@ const progressVariants = cva(
   }
 );
 
+/**
+ * Props for the ProgressBar component.
+ * 
+ * @typedef {Object} ProgressBarProps
+ * @property {number} progress - The progress percentage (0-100).
+ * @property {string} [className] - Additional class names for the progress bar container.
+ * @property {string} [progressClassName] - Additional class names for the progress element.
+ * @property {boolean} [showLabel=true] - Whether to show the progress label.
+ * @property {'inside' | 'outside'} [labelPosition='inside'] - The position of the progress label.
+ * @property {React.ReactNode} [customLabel] - Custom label for the progress bar.
+ * @property {boolean} [animate=true] - Whether to animate the progress bar.
+ * @property {'sm' | 'md' | 'lg'} [size='md'] - The size of the progress bar.
+ * @property {'default' | 'custom'} [progressBarVariant='default'] - The variant of the progress bar container.
+ * @property {'default' | 'custom' | 'success' | 'warning' | 'danger'} [progressVariant='default'] - The variant of the progress element.
+ * @property {boolean} [hasStripe=false] - Whether to show a stripe pattern on the progress element.
+ */
 export interface ProgressBarProps {
   progress: number;
   className?: string;
@@ -55,6 +71,13 @@ export interface ProgressBarProps {
   hasStripe?: boolean;
 }
 
+/**
+ * ProgressBar component for displaying a progress bar with optional label and animation.
+ * 
+ * @component
+ * @param {ProgressBarProps} props - Props for the ProgressBar component.
+ * @returns {JSX.Element} The rendered ProgressBar component.
+ */
 const ProgressBar: React.FC<ProgressBarProps> = ({
   progress,
   size = 'md',
@@ -69,7 +92,6 @@ const ProgressBar: React.FC<ProgressBarProps> = ({
   hasStripe = false,
   ...props
 }) => {
-
   const sanitizedProgress = Math.min(Math.max(progress, 0), 100);
   const progressText = `${Math.round(sanitizedProgress)}%`;
 
@@ -106,7 +128,7 @@ const ProgressBar: React.FC<ProgressBarProps> = ({
         </div>
       </div>
       {showLabel && labelPosition === 'outside' && (
-        <div className="mt-1 text-base font-sans font-medium text-gray-600 dark:text-gray-50">{renderLabel()}</div>
+        <div className="mt-1 text-base font-sans font-normal text-gray-600 dark:text-gray-50">{renderLabel()}</div>
       )}
     </div>
   );

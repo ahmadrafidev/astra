@@ -25,20 +25,36 @@ const ProgressBarPageClient: React.FC = () => {
                 <div className="flex flex-col space-y-4">
                     <div>
                         <h3 className="text-lg md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Default</h3>
-                        <ProgressBar size="md"  progress={progress} className="my-4" />
+                        <ProgressBar showLabel size="md" progress={progress} className="my-4" />
                     </div>
                     <div>   
                         <h3 className="text-lg md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">With Stripes</h3>
                         <ProgressBar size="md" hasStripe progress={progress} className="my-4" />
                     </div>
-                    <div>
-                        <h3 className="text-lg md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Custom Progress Bar</h3>
+                    <div className="flex flex-col space-y-4">
+                        <h3 className="text-lg md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50">Custom Progress Bar</h3>
                         <ProgressBar 
                             progress={progress} 
                             size="md" 
                             progressVariant="success" 
                             showLabel 
                             labelPosition="outside"
+                            progressClassName="font-bold" 
+                        />
+                        <ProgressBar 
+                            progress={progress} 
+                            size="sm" 
+                            progressVariant="warning" 
+                            showLabel 
+                            labelPosition="inside"
+                            progressClassName="font-bold" 
+                        />
+                        <ProgressBar 
+                            progress={progress} 
+                            size="lg" 
+                            progressVariant="danger" 
+                            showLabel 
+                            labelPosition="inside"
                             progressClassName="font-bold" 
                         />
                     </div>
