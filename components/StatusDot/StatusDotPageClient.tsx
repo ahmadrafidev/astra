@@ -18,7 +18,7 @@ const StatusDotPageClient: React.FC = () => {
                     A small colored circle or icon that visually represents the current status of an item.
                 </p>
             </div>
-            <section className="mb-5">
+            <section className="my-5">
                 <h2 className="text-lg md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Variants</h2>
                 <div className="space-y-3 flex flex-col justify-around">
                     <div className="flex flex-col space-y-3">
@@ -41,7 +41,7 @@ const StatusDotPageClient: React.FC = () => {
             </section>
             {/* Props Section */}
             <section className="my-5">
-                <h2 className="text-2xl md:text-3xl font-semibold text-gray-900 dark:text-gray-50 mb-6">Props</h2>
+                <h2 className="text-xl md:text-2xl font-semibold text-gray-900 dark:text-gray-50 mb-6">Props</h2>
                 <div className="bg-white dark:bg-gray-800 rounded-lg shadow overflow-hidden">
                     <table className="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
                         <thead className="bg-gray-50 dark:bg-gray-700">

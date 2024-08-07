@@ -65,7 +65,7 @@ const SpinnerPageClient: React.FC = () => {
                     </button>
                 </div>
                 <div>
-                    <h2 className="text-xl font-semibold mb-4 text-gray-900 dark:text-gray-50">With Custom className</h2>
+                    <h2 className="text-xl font-semibold mb-4 text-gray-900 dark:text-gray-50">With Custom Styling</h2>
                     <Spinner className="shadow-lg border-red-500 shadow-red-500" />
                 </div>
             </section>
