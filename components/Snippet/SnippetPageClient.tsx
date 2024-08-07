@@ -20,8 +20,27 @@ const SnippetPageClient: React.FC = () => {
                     A reusable block of code or text that can be easily inserted.
                 </p>
             </div>
-            <section className="space-y-6">
-                <Snippet language="javascript" code={codeString} />
+            <section className="space-y-4 flex flex-col gap-4">
+                <div>
+                    <h2 className="text-lg md:text-xl font-medium mb-4 text-gray-900 dark:text-gray-50">Light Mode</h2>
+                    <Snippet 
+                        maxHeight="400px" 
+                        language="javascript" 
+                        code={codeString} 
+                        theme="light"
+                    />
+                </div>  
+                <div>
+                    <h2 className="text-lg md:text-xl font-medium mb-4 text-gray-900 dark:text-gray-50">Dark Mode</h2>
+                    <Snippet
+                        language="javascript"
+                        code={codeString}
+                        showLineNumbers
+                        wrapLongLines
+                        maxHeight="200px"
+                        theme="dark"
+                    />
+                </div>        
             </section>
             <SnippetDocumentation />
         </Layout>
