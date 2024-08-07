@@ -28,7 +28,16 @@ const CarouselPageClient: React.FC = () => {
             </section>
             {/* Carousel Section */}
             <section className="mb-5">
-                <Carousel images={images} className="max-w-md md:max-w-lg mx-auto" />
+                <Carousel
+                    className="max-w-md md:max-w-lg mx-auto"
+                    images={images}
+                    width={400}
+                    height={200}
+                    autoPlay={true}
+                    autoPlayInterval={5000}
+                    showDots={true}
+                    showArrows={true}
+                />
             </section>
             {/* Props Table Section */}
             <section>

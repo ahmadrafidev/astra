@@ -1,57 +1,115 @@
-import React, { useState } from 'react';
-
-import Image from 'next/image';
+import React, { useState, useCallback, useEffect } from 'react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 export interface CarouselProps {
-    images: string[];
-    className?: string;
-    width?: string;
-    height?: string;
+  images: string[];
+  className?: string;
+  width?: number;
+  height?: number;
+  autoPlay?: boolean;
+  autoPlayInterval?: number;
+  showDots?: boolean;
+  showArrows?: boolean;
 }
 
-const Carousel: React.FC<CarouselProps> = ({ images, width, height, className }) => {
-    const [currentIndex, setCurrentIndex] = useState(0);
+const Carousel: React.FC<CarouselProps> = ({
+  images,
+  width = 500,
+  height = 300,
+  className,
+  autoPlay = false,
+  autoPlayInterval = 3000,
+  showDots = true,
+  showArrows = true,
+  ...props
+}) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-    const goToPrevious = () => {
-        const isFirstSlide = currentIndex === 0;
-        const newIndex = isFirstSlide ? images.length - 1 : currentIndex - 1;
-        setCurrentIndex(newIndex);
-    };
-
-    const goToNext = () => {
-        const isLastSlide = currentIndex === images.length - 1;
-        const newIndex = isLastSlide ? 0 : currentIndex + 1;
-        setCurrentIndex(newIndex);
-    };
-
-    return (
-        <div className={`relative ${className}`}>
-            <div className="flex justify-center items-center">
-                <button onClick={goToPrevious} className="absolute left-0 bg-white p-2 rounded-full shadow">
-                    &lt;
-                </button>
-                <Image 
-                    src={images[currentIndex]} 
-                    alt={`Slide ${currentIndex + 1}`} 
-                    className="w-full rounded-lg" 
-                    width={100} 
-                    height={100}
-                />
-                <button onClick={goToNext} className="absolute right-0 bg-white p-2 rounded-full shadow">
-                    &gt;
-                </button>
-            </div>
-            <div className="flex justify-center mt-2">
-                {images.map((_, index) => (
-                    <span
-                        key={index}
-                        className={`h-2 w-2 bg-gray-400 rounded-full mx-1 ${index === currentIndex ? 'bg-blue-500' : ''}`}
-                    ></span>
-                ))}
-            </div>
-        </div>
+  const goToPrevious = useCallback(() => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? images.length - 1 : prevIndex - 1
     );
+  }, [images.length]);
+
+  const goToNext = useCallback(() => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === images.length - 1 ? 0 : prevIndex + 1
+    );
+  }, [images.length]);
+
+  const goToSlide = (index: number) => {
+    setCurrentIndex(index);
+  };
+
+  useEffect(() => {
+    if (autoPlay) {
+      const interval = setInterval(goToNext, autoPlayInterval);
+      return () => clearInterval(interval);
+    }
+  }, [autoPlay, autoPlayInterval, goToNext]);
+
+  return (
+    <div
+      className={`relative ${className}`}
+      style={{ width: `${width}px`, height: `${height}px` }}
+      role="region"
+      aria-roledescription="carousel"
+      aria-label="Image carousel"
+    >
+      <div className="h-full overflow-hidden">
+        <div
+          className="flex transition-transform duration-300 ease-in-out h-full"
+          style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+        >
+          {images.map((src, index) => (
+            <img
+              key={index}
+              src={src}
+              alt={`Slide ${index + 1}`}
+              className="w-full h-full object-cover flex-shrink-0"
+              style={{ width: `${width}px`, height: `${height}px` }}
+            />
+          ))}
+        </div>
+      </div>
+
+      {showArrows && (
+        <>
+          <button
+            onClick={goToPrevious}
+            className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white/50 p-2 rounded-full shadow hover:bg-white/75 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            aria-label="Previous slide"
+          >
+            <ChevronLeft className="w-6 h-6" />
+          </button>
+          <button
+            onClick={goToNext}
+            className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white/50 p-2 rounded-full shadow hover:bg-white/75 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            aria-label="Next slide"
+          >
+            <ChevronRight className="w-6 h-6" />
+          </button>
+        </>
+      )}
+
+      {showDots && (
+        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+          {images.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => goToSlide(index)}
+              className={`w-3 h-3 rounded-full ${
+                index === currentIndex ? 'bg-blue-500' : 'bg-gray-300'
+              } focus:outline-none focus:ring-2 focus:ring-blue-500`}
+              aria-label={`Go to slide ${index + 1}`}
+              aria-current={index === currentIndex ? 'true' : 'false'}
+            />
+          ))}
+        </div>
+      )}
+    </div>
+  );
 };
 
-Carousel.displayName = "Carousel";
+Carousel.displayName = 'Carousel';
 export default Carousel;
