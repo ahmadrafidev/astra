@@ -1,5 +1,16 @@
 import React from 'react';
 
+/**
+ * Props for the Spinner component.
+ * 
+ * @typedef {Object} SpinnerProps
+ * @property {'sm' | 'md' | 'lg' | number} [size='md'] - The size of the spinner.
+ * @property {string} [color] - The color of the spinner.
+ * @property {number} [thickness=4] - The thickness of the spinner border.
+ * @property {'slow' | 'normal' | 'fast'} [speed='normal'] - The speed of the spinner animation.
+ * @property {string} [className] - Additional class names for custom styling.
+ * @property {string} ['aria-label'] - ARIA label for accessibility.
+ */
 export interface SpinnerProps {
   size?: 'sm' | 'md' | 'lg' | number;
   color?: string;
@@ -9,6 +20,13 @@ export interface SpinnerProps {
   'aria-label'?: string;
 }
 
+/**
+ * Spinner component for displaying a loading spinner.
+ * 
+ * @component
+ * @param {SpinnerProps} props - Props for the Spinner component.
+ * @returns {JSX.Element} The rendered Spinner component.
+ */
 const Spinner: React.FC<SpinnerProps> = ({
   size = 'md',
   color,
