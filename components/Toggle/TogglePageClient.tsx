@@ -36,6 +36,8 @@ const TogglePageClient: React.FC = () => {
                             className="max-w-md px-4 py-2 border rounded-lg"
                             onIcon={<Check />}
                             offIcon={<X />}
+                            onClassName="bg-gray-100 text-gray-900"
+                            offClassName="bg-gray-100 text-gray-900"
                             onChange={handleToggleChange}
                             defaultOn={false}
                         />
