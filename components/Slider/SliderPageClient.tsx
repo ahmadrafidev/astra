@@ -1,4 +1,3 @@
-// components/Slider/SliderPageClient.tsx
 'use client';
 
 import React, { useState } from 'react';
@@ -13,7 +12,7 @@ const SliderPageClient: React.FC = () => {
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setValue(Number(e.target.value));
-    };
+    }
 
     return (
         <Layout>
@@ -35,7 +34,7 @@ const SliderPageClient: React.FC = () => {
                 <p className="text-gray-900 dark:text-gray-50">Current value: {value}</p>
             </div>
             {/* Props Section */}
-            <section className="mb-10">
+            <section className="my-5">
                 <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Props</h2>
                 <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg shadow">
                     <table className="min-w-full table-auto">

@@ -1,5 +1,17 @@
 import React from 'react';
 
+/**
+ * Props for the Stepper component.
+ * 
+ * @typedef {Object} StepperProps
+ * @property {Array<{label: string, description?: string}>} steps - The steps to display in the stepper.
+ * @property {number} currentStep - The current active step.
+ * @property {(stepIndex: number) => void} [onStepClick] - Callback when a step is clicked.
+ * @property {string} [className] - Additional class names for custom styling.
+ * @property {string} [activeColor] - Color for the active step.
+ * @property {string} [inactiveColor] - Color for the inactive steps.
+ * @property {'horizontal' | 'vertical'} [orientation='horizontal'] - Orientation of the stepper.
+ */
 export interface StepperProps {
   steps: Array<{
     label: string;
@@ -13,6 +25,13 @@ export interface StepperProps {
   orientation?: 'horizontal' | 'vertical';
 }
 
+/**
+ * Stepper component for displaying progress through a series of steps.
+ * 
+ * @component
+ * @param {StepperProps} props - Props for the Stepper component.
+ * @returns {JSX.Element} The rendered Stepper component.
+ */
 const Stepper: React.FC<StepperProps> = ({
   steps,
   currentStep,
@@ -23,18 +42,18 @@ const Stepper: React.FC<StepperProps> = ({
   orientation = 'horizontal',
 }) => {
   const isVertical = orientation === 'vertical';
-  
+
   return (
-    <nav 
+    <nav
       className={`${className} ${isVertical ? 'flex-col' : 'flex-row'} flex`}
       aria-label="Progress"
     >
       {steps.map((step, index) => {
         const isActive = index <= currentStep;
         const isCurrent = index === currentStep;
-        
+
         return (
-          <div 
+          <div
             key={index}
             className={`${isVertical ? 'mb-4' : 'mr-4'} flex ${isVertical ? 'flex-col' : 'items-center'}`}
           >
@@ -58,8 +77,8 @@ const Stepper: React.FC<StepperProps> = ({
               </div>
             </div>
             {index < steps.length - 1 && (
-              <div 
-                className={`${isVertical ? 'w-0.5 h-full ml-5 mt-2' : 'w-full h-0.5 mt-5'} ${inactiveColor}`} 
+              <div
+                className={`${isVertical ? 'w-0.5 h-full ml-5 mt-2' : 'w-full h-0.5 mt-5'} ${inactiveColor}`}
                 aria-hidden="true"
               />
             )}
