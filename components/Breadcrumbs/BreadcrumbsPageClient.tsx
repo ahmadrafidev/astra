@@ -25,10 +25,15 @@ const BreadcrumbsPageClient: React.FC = () => {
                     A navigation aid showing the user location within a website hierarchy.
                 </p>
             </div>      
-            <Breadcrumbs
-                items={pageItems}
-                className="my-4"
-                />
+            <div className="my-5">
+                <h2 className="text-xl font-semibold text-gray-900 dark:text-gray-50  mb-4">Example</h2>
+                <div className="max-w-md">
+                    <Breadcrumbs
+                        items={pageItems}
+                        className="my-4"
+                    />
+                </div>
+            </div>
             <BreadcrumbsDocumentation />
         </Layout>
     );

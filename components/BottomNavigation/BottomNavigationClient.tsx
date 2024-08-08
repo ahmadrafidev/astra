@@ -28,7 +28,7 @@ const BottomNavigationClient: React.FC = () => {
                 </p>
             </div>
             <div className="my-5">
-                <h2 className="text-xl font-semibold mb-4">Example</h2>
+                <h2 className="text-xl font-semibold text-gray-900 dark:text-gray-50  mb-4">Example</h2>
                 <div className="max-w-md">
                     <BottomNavigation
                         items={navItems}
