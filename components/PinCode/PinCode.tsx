@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 /**
  * Props for the PinCode component.
@@ -39,6 +39,7 @@ const PinCode: React.FC<PinCodeProps> = ({
   onComplete,
 }) => {
   const [error, setError] = useState<string | null>(null);
+  const inputRefs = useRef<(HTMLInputElement | null)[]>([]);
 
   useEffect(() => {
     if (pin.length === 0) {
@@ -47,33 +48,42 @@ const PinCode: React.FC<PinCodeProps> = ({
   }, [length, pin.length, onPinChange]);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>, index: number) => {
-    // there is a bug here
-    const { value } = e.target;
-    if (/^[0-9]?$/.test(value)) {
+    const value = e.target.value;
+    const newPin = [...pin];
+  
+    if (value === '') {
       setError(null);
-      const newPin = [...pin];
-      newPin[index] = value;
+      newPin[index] = '';
       onPinChange?.(newPin);
-
-      if (value && index < length - 1) {
-        const nextInput = document.getElementById(`pin-${index + 1}`);
-        nextInput?.focus();
-      }
-
-      if (value && index === length - 1 && onComplete) {
-        onComplete(newPin.join(''));
-      }
     } else {
-      setError('Only numeric values are allowed');
+      const lastChar = value[value.length - 1] || '';
+      if (/^[0-9]$/.test(lastChar)) {
+        setError(null);
+        newPin[index] = lastChar;
+        onPinChange?.(newPin);
+  
+        if (lastChar && index < length - 1) {
+          inputRefs.current[index + 1]?.focus();
+        }
+
+        if (lastChar && index === length - 1 && onComplete) {
+          onComplete(newPin.join(''));
+        }
+      } else {
+        setError('Only numeric values are allowed');
+      }
     }
-  };
+  };  
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>, index: number) => {
     if (e.key === 'Backspace' && !pin[index] && index > 0) {
-      const prevInput = document.getElementById(`pin-${index - 1}`);
-      prevInput?.focus();
+      inputRefs.current[index - 1]?.focus();
     }
   };
+
+  useEffect(() => {
+    inputRefs.current = inputRefs.current.slice(0, length);
+  }, [length]);
 
   return (
     <div className={`flex flex-col space-y-1 ${className}`}>
@@ -81,7 +91,7 @@ const PinCode: React.FC<PinCodeProps> = ({
         {pin.map((value, index) => (
           <input
             key={index}
-            id={`pin-${index}`}
+            ref={el => inputRefs.current[index] = el}
             type={isMask ? 'password' : 'text'}
             maxLength={1}
             value={value}
