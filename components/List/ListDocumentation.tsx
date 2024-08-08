@@ -19,7 +19,7 @@ const ListDocumentation = () => {
             <tbody className="bg-white dark:bg-gray-800 divide-y divide-gray-200 dark:divide-gray-700">
               <tr>
                 <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-100">items</td>
-                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 font-mono">Array&lt;{`{ content: React.ReactNode, icon?: React.ReactNode }`}&gt;</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 font-mono text-wrap">Array&lt;{`{ content: React.ReactNode, icon?: React.ReactNode }`}&gt;</td>
                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">-</td>
                 <td className="px-6 py-4 text-sm text-gray-500 dark:text-gray-300">Array of items to be displayed in the list. Each item can have content and an optional icon.</td>
               </tr>
