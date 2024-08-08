@@ -119,7 +119,7 @@ const PaymentCard: React.FC<PaymentCardProps> = ({
             {errors.cvv && <p id="cvvError" className="text-red-500 text-xs mt-1">{errors.cvv}</p>}
           </div>
         </div>
-        <button type="submit" className="w-full p-3 bg-gray-800 dark:bg-gray-100 text-white dark:text-gray-800 rounded hover:bg-gray-700 dark:hover:bg-gray-200">
+        <button type="submit" className="w-full p-3 bg-gray-800 dark:bg-gray-100 text-white dark:text-gray-800 rounded-lg hover:bg-gray-700 dark:hover:bg-gray-200">
           {amount ? `Pay $${amount.toFixed(2)}` : 'Submit Payment'}
         </button>
       </form>
