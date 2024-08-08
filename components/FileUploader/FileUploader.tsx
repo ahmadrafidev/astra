@@ -3,6 +3,27 @@ import { Upload } from 'lucide-react';
 import { Alert, AlertContent } from '../Alert/Alert';
 import ProgressBar from '../ProgressBar/ProgressBar';
 
+/**
+ * Props for the FileUploader component.
+ * 
+ * @typedef {Object} FileUploaderProps
+ * @property {string} [className] - Additional class names for custom styling.
+ * @property {(file: File) => void} onFileSelect - Callback when a file is selected.
+ * @property {(progress: number) => void} [onUploadProgress] - Callback for upload progress.
+ * @property {number} [maxSizeMB=5] - Maximum file size in megabytes.
+ * @property {string[]} [allowedTypes=['image/*', 'application/pdf']] - Allowed file types.
+ * @property {string} [label] - Label for the file uploader.
+ * @property {string} [dropzoneText='Drop files here to upload'] - Text displayed in the dropzone area.
+ * @property {string} [browseText='Browse files'] - Text displayed on the browse button.
+ * @property {Object} [styles] - Custom styles for different parts of the component.
+ * @property {string} [styles.container] - Custom styles for the container.
+ * @property {string} [styles.dropzone] - Custom styles for the dropzone.
+ * @property {string} [styles.dropzoneActive] - Custom styles for the active dropzone.
+ * @property {string} [styles.uploadIcon] - Custom styles for the upload icon.
+ * @property {string} [styles.dropzoneText] - Custom styles for the dropzone text.
+ * @property {string} [styles.browseButton] - Custom styles for the browse button.
+ * @property {Partial<React.ComponentProps<typeof ProgressBar>>} [progressBarProps] - Additional props for the progress bar.
+ */
 export interface FileUploaderProps {
   className?: string;
   onFileSelect: (file: File) => void;
@@ -23,15 +44,22 @@ export interface FileUploaderProps {
   progressBarProps?: Partial<React.ComponentProps<typeof ProgressBar>>;
 }
 
+/**
+ * FileUploader component for selecting and uploading files with progress indication.
+ * 
+ * @component
+ * @param {FileUploaderProps} props - Props for the FileUploader component.
+ * @returns {JSX.Element} The rendered FileUploader component.
+ */
 const FileUploader: React.FC<FileUploaderProps> = ({
-  className = '',
+  className,
   onFileSelect,
   onUploadProgress,
   maxSizeMB = 5,
   allowedTypes = ['image/*', 'application/pdf'],
   label,
-  dropzoneText = 'Drop files here to upload',
-  browseText = 'Browse files',
+  dropzoneText,
+  browseText,
   styles = {},
   progressBarProps = {},
 }) => {
@@ -123,10 +151,10 @@ const FileUploader: React.FC<FileUploaderProps> = ({
           accept={allowedTypes.join(',')}
         />
         <Upload className={`mx-auto h-8 w-8 text-gray-50 dark:text-gray-900 ${styles.uploadIcon || ''}`} />
-        <p className={`my-3 text-sm text-gray-50 dark:text-gray-900 ${styles.dropzoneText || ''}`}>{dropzoneText}</p>
+        <p className={`my-2 text-base font-sans font-medium text-gray-50 dark:text-gray-900 ${styles.dropzoneText || ''}`}>{dropzoneText}</p>
         <button className={`
           my-2 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-full shadow-sm
-          text-black bg-gray-100 dark:bg-gray-900 dark:text-gray-100 hover:bg-gray-50 dark:hover:bg-gray-200  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500
+          text-black bg-gray-100 dark:bg-gray-900 dark:text-gray-100 hover:bg-gray-200 dark:hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500
           ${styles.browseButton || ''}
         `}>
           {browseText}
