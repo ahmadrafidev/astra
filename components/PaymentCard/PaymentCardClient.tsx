@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 
 import Layout from '../Layout/Layout';
 import Badge from '../Badge/Badge';
+import PaymentCard from './PaymentCard';
 
 const PaymentCardClient: React.FC = () => {
 
@@ -16,8 +17,15 @@ const PaymentCardClient: React.FC = () => {
                     A form component for capturing and validating payment card details.
                 </p>
             </div>
+            <section className="my-5 space-y-4">
+                <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Variants</h2>
+                <div>
+                    <h3 className="text-lg font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Default Card</h3>
+                    <PaymentCard className="max-w-md"/>
+                </div>
+            </section>
             {/* Props Section */}
-            <section className="mb-10">
+            <section className="my-5">
                 <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Props</h2>
                 <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg shadow">
                     <table className="min-w-full table-auto">
@@ -36,10 +44,9 @@ const PaymentCardClient: React.FC = () => {
             </section>
             {/* Best Practices Section */}
             <section>
-                <h2 className="text-2xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Best Practices</h2>
+                <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Best Practices</h2>
                 <div className="space-y-4">
                     <ul className="list-decimal list-inside text-gray-700 dark:text-gray-300 space-y-3">
-                      
                     </ul>
                 </div>
             </section>
