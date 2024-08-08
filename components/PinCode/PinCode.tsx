@@ -41,6 +41,10 @@ const PinCode: React.FC<PinCodeProps> = ({
   const [error, setError] = useState<string | null>(null);
   const inputRefs = useRef<(HTMLInputElement | null)[]>([]);
 
+  const setRef = (element: HTMLInputElement | null, index: number) => {
+    inputRefs.current[index] = element;
+  };
+
   useEffect(() => {
     if (pin.length === 0) {
       onPinChange?.(new Array(length).fill(''));
@@ -77,8 +81,9 @@ const PinCode: React.FC<PinCodeProps> = ({
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>, index: number) => {
     if (e.key === 'Backspace' && !pin[index] && index > 0) {
+      e.preventDefault();
       inputRefs.current[index - 1]?.focus();
-    }
+    } 
   };
 
   useEffect(() => {
@@ -91,13 +96,13 @@ const PinCode: React.FC<PinCodeProps> = ({
         {pin.map((value, index) => (
           <input
             key={index}
-            ref={el => inputRefs.current[index] = el}
+            ref={el => setRef(el, index)}
             type={isMask ? 'password' : 'text'}
             maxLength={1}
             value={value}
             onChange={(e) => handleChange(e, index)}
             onKeyDown={(e) => handleKeyDown(e, index)}
-            className={`w-12 h-12 text-center text-lg bg-gray-300 dark:bg-gray-800 text-gray-800 dark:text-gray-50 border border-gray-400 dark:border-gray-600 rounded ${inputClassName}`}
+            className={`w-12 h-12 text-center text-lg bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-50 border-none rounded focus:outline-1 focus:outline-gray-950 focus:bg-gray-50 dark:focus:outline-gray-50 dark:focus:bg-black ${inputClassName}`}
             aria-label={`Digit ${index + 1}`}
           />
         ))}

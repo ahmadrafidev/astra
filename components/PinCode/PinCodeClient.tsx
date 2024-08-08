@@ -42,7 +42,6 @@ const PinCodeClient: React.FC = () => {
                     <h3 className="text-lg md:text-xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Default PIN Code</h3>
                     <PinCode
                         className="flex justify-center" 
-                        inputClassName="custom-input-class" 
                         isMask={false} 
                         onComplete={handleDefaultPinComplete} 
                         pin={defaultPin}
@@ -53,7 +52,6 @@ const PinCodeClient: React.FC = () => {
                     <h3 className="text-lg md:text-xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Masked PIN Code</h3>
                     <PinCode
                         className="flex justify-center" 
-                        inputClassName="custom-input-class" 
                         isMask={true} 
                         onComplete={handleMaskedPinComplete} 
                         pin={maskedPin}
@@ -84,13 +82,13 @@ const PinCodeClient: React.FC = () => {
                     <tr>
                         <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-100">className</td>
                         <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 font-mono">string</td>
-                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">-</td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">empty</td>
                         <td className="px-6 py-4 text-sm text-gray-500 dark:text-gray-300">Custom class for the container.</td>
                     </tr>
                     <tr>
                         <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-100">inputClassName</td>
                         <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 font-mono">string</td>
-                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">-</td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">empty</td>
                         <td className="px-6 py-4 text-sm text-gray-500 dark:text-gray-300">Custom class for each input box.</td>
                     </tr>
                     <tr>
@@ -108,7 +106,7 @@ const PinCodeClient: React.FC = () => {
                     <tr>
                         <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-100">pin</td>
                         <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 font-mono">string[]</td>
-                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">[]</td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">Empty array</td>
                         <td className="px-6 py-4 text-sm text-gray-500 dark:text-gray-300">The current value of the PIN code as an array of strings.</td>
                     </tr>
                     <tr>
@@ -129,8 +127,8 @@ const PinCodeClient: React.FC = () => {
                         <li>Provide clear feedback to the user when the PIN is on progress and complete.</li>
                         <li>Ensure the input fields are clearly visible and accessible on both light and dark themes.</li>
                         <li>Validate the PIN input to ensure it meets the expected format and length.</li>
-                        <li>Handle focus and blur events to enhance the user experience, especially on mobile devices.</li>
-                        <li>Use masking for security, especially for sensitive PIN codes.</li>
+                        <li>Handle focus and blur events to enhance the user experience.</li>
+                        <li>Use masking for security, especially for use cases where sensitive PIN codes are involved.</li>
                     </ul>
                 </div>
             </section>
