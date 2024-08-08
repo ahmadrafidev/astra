@@ -34,7 +34,8 @@ const BottomNavItem: React.FC<BottomNavItemProps> = ({ icon: Icon, label, isActi
 
 const BottomNavigation: React.FC<BottomNavigationProps> = ({ items, activeItem, onItemClick }) => {
   return (
-    <nav className="fixed bottom-0 left-0 right-0 bg-background border-t border-border">
+    // Note: Should have: fixed bottom-0 left-0 right-0 
+    <nav className="bg-background border-t border-border">  
       <div className="flex justify-around">
         {items.map((item) => (
           <BottomNavItem
