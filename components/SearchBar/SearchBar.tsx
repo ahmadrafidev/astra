@@ -3,6 +3,18 @@
 import React, { useState } from 'react';
 import { MagnifyingGlassIcon } from '@heroicons/react/24/outline';
 
+/**
+ * Props for the SearchBar component.
+ * 
+ * @typedef {Object} SearchBarProps
+ * @property {(query: string) => void} onSearch - Callback function when the search query changes.
+ * @property {string} [className] - Additional class names for custom styling.
+ * @property {React.ReactNode} [icon] - Icon to display inside the search bar.
+ * @property {string} [placeholder='Search AstraUI'] - Placeholder text for the search input.
+ * @property {number} [debounceTime=300] - Time in milliseconds to debounce the search input.
+ * @property {React.InputHTMLAttributes<HTMLInputElement>} [inputProps] - Additional props for the input element.
+ * @property {'small' | 'medium' | 'large'} [size='medium'] - Size of the search bar.
+ */
 export interface SearchBarProps {
     onSearch: (query: string) => void;
     className?: string;
@@ -13,6 +25,13 @@ export interface SearchBarProps {
     size?: 'small' | 'medium' | 'large';
 }
 
+/**
+ * Debounce function to delay the execution of the given function.
+ * 
+ * @param {Function} func - The function to debounce.
+ * @param {number} delay - The delay in milliseconds.
+ * @returns {Function} The debounced function.
+ */
 const debounce = (func: Function, delay: number) => {
     let timeoutId: ReturnType<typeof setTimeout>;
     return (...args: any[]) => {
@@ -27,6 +46,13 @@ const sizeClasses = {
     large: 'p-4 pl-13 text-lg',
 };
 
+/**
+ * SearchBar component for entering search queries.
+ * 
+ * @component
+ * @param {SearchBarProps} props - Props for the SearchBar component.
+ * @returns {JSX.Element} The rendered SearchBar component.
+ */
 const SearchBar: React.FC<SearchBarProps> = ({
     onSearch,
     className,
