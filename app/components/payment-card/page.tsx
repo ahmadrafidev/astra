@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
     title: "Payment Card",
-    description: "A form component for capturing and validating payment card details.",
+    description: "A form component for securely capturing and validating payment card details.",
 };
 
 const PaymentCardPageClient = dynamic(() => import('@/components/PaymentCard/PaymentCardClient'), { ssr: false });

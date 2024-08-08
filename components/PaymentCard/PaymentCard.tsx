@@ -25,7 +25,7 @@ export interface PaymentCardProps {
  * @returns {JSX.Element} The rendered PaymentCard component.
  */
 const PaymentCard: React.FC<PaymentCardProps> = ({
-  className = '',
+  className,
   onPaymentSuccess,
   onPaymentError,
   amount
