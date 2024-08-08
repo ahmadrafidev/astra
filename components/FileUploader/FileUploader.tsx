@@ -78,21 +78,19 @@ const FileUploader: React.FC<FileUploaderProps> = ({
     }
   }, []);
 
-  const handleDrop = useCallback((e: React.DragEvent) => {
-    e.preventDefault();
-    e.stopPropagation();
-    setDragActive(false);
-    if (e.dataTransfer.files && e.dataTransfer.files[0]) {
-      handleFiles(e.dataTransfer.files);
-    }
-  }, []);
-
-  const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
-    e.preventDefault();
-    if (e.target.files && e.target.files[0]) {
-      handleFiles(e.target.files);
-    }
-  }, []);
+  const simulateUpload = useCallback((file: File) => {
+    let progress = 0;
+    const interval = setInterval(() => {
+      progress += 10;
+      setUploadProgress(progress);
+      if (onUploadProgress) {
+        onUploadProgress(progress);
+      }
+      if (progress >= 100) {
+        clearInterval(interval);
+      }
+    }, 500);
+  }, [onUploadProgress]);
 
   const handleFiles = useCallback((files: FileList) => {
     const file = files[0];
@@ -107,21 +105,24 @@ const FileUploader: React.FC<FileUploaderProps> = ({
     setError(null);
     onFileSelect(file);
     simulateUpload(file);
-  }, [maxSizeMB, allowedTypes, onFileSelect]);
+  }, [maxSizeMB, allowedTypes, onFileSelect, simulateUpload]);
 
-  const simulateUpload = useCallback((file: File) => {
-    let progress = 0;
-    const interval = setInterval(() => {
-      progress += 10;
-      setUploadProgress(progress);
-      if (onUploadProgress) {
-        onUploadProgress(progress);
-      }
-      if (progress >= 100) {
-        clearInterval(interval);
-      }
-    }, 500);
-  }, [onUploadProgress]);
+
+  const handleDrop = useCallback((e: React.DragEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setDragActive(false);
+    if (e.dataTransfer.files && e.dataTransfer.files[0]) {
+      handleFiles(e.dataTransfer.files);
+    }
+  }, [handleFiles]);
+
+  const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
+    e.preventDefault();
+    if (e.target.files && e.target.files[0]) {
+      handleFiles(e.target.files);
+    }
+  }, [handleFiles]);
 
   const onButtonClick = useCallback(() => {
     inputRef.current?.click();
