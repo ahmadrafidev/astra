@@ -1,11 +1,22 @@
 'use client';
 
 import React, { useState } from 'react';
+import { Home, Search, Bell, User } from 'lucide-react';
 
 import Layout from '../Layout/Layout';
 import Badge from '../Badge/Badge';
 
+import BottomNavigation from './BottomNavigation';
+
 const BottomNavigationClient: React.FC = () => {
+    const [activeItem, setActiveItem] = React.useState<string>('Home');
+
+    const navItems: NavItem[] = [
+        { icon: Home, label: 'Home' },
+        { icon: Search, label: 'Search' },
+        { icon: Bell, label: 'Notifications' },
+        { icon: User, label: 'Profile' },
+    ];
 
     return (
         <Layout>
@@ -13,8 +24,17 @@ const BottomNavigationClient: React.FC = () => {
             <div className="flex flex-col mb-5">
                 <h1 className="text-2xl md:text-3xl font-medium mb-4 text-gray-900 dark:text-gray-50">Bottom Navigation</h1>
                 <p className="texta-sm md:text-base font-normal font-sans text-gray-900 dark:text-gray-50">
-                  A mobile-friendly navigation bar fixed at screen bottom.
+                    A mobile-friendly navigation bar fixed at screen bottom.
                 </p>
+            </div>
+            <div className="h-screen pb-16"> {/* Add padding to the bottom to account for the navigation bar */}
+                <h1 className="text-2xl font-bold m-4">App Content</h1>
+                <p className="m-4">Active item: {activeItem}</p>
+                <BottomNavigation
+                    items={navItems}
+                    activeItem={activeItem}
+                    onItemClick={setActiveItem}
+                />
             </div>
             {/* Props Section */}
             <section className="mb-10">
