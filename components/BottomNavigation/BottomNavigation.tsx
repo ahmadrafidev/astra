@@ -5,11 +5,11 @@ import { cn } from "@/lib/utils";
  * Represents a navigation item.
  * 
  * @typedef {Object} NavItem
- * @property {React.ReactNode} icon - The icon for the navigation item.
+ * @property {React.ElementType} icon - The icon for the navigation item.
  * @property {string} [label] - The label for the navigation item.
  */
-interface NavItem {
-  icon: React.ReactNode;
+export interface NavItem {
+  icon: React.ElementType;
   label?: string;
 }
 
@@ -17,14 +17,14 @@ interface NavItem {
  * Props for the BottomNavItem component.
  * 
  * @typedef {Object} BottomNavItemProps
- * @property {React.ReactNode} icon - The icon for the navigation item.
+ * @property {React.ElementType} icon - The icon for the navigation item.
  * @property {string} [label] - The label for the navigation item.
  * @property {boolean} isActive - Whether the navigation item is active.
  * @property {() => void} onClick - The click event handler for the navigation item.
  * @property {string} [className] - Additional class names for custom styling.
  */
-interface BottomNavItemProps {
-  icon: React.ReactNode;
+export interface BottomNavItemProps {
+  icon: React.ElementType;
   label?: string;
   isActive: boolean;
   onClick: () => void;
@@ -39,7 +39,7 @@ interface BottomNavItemProps {
  * @property {string} activeItem - The label of the active navigation item.
  * @property {(label: string) => void} onItemClick - The click event handler for navigation items.
  */
-interface BottomNavigationProps {
+export interface BottomNavigationProps {
   items: NavItem[];
   activeItem: string;
   onItemClick: (label: string) => void;
@@ -61,13 +61,8 @@ const BottomNavItem: React.FC<BottomNavItemProps> = ({ icon: Icon, label, isActi
       className
     )}
   >
-    <Icon className={
-      cn("mb-1 transition-transform duration-300", 
-      isActive ? "w-7 h-7" : "w-6 h-6",
-      className
-    )}
-      />
-    <span className="text-gray-900 dark:text-gray-50 font-medium text-sm">{label}</span>
+    <Icon className={cn("mb-1 transition-transform duration-300", isActive ? "w-7 h-7" : "w-6 h-6")} />
+    {label && <span className="text-gray-900 dark:text-gray-50 font-medium text-sm">{label}</span>}
   </button>
 );
 
@@ -84,11 +79,11 @@ const BottomNavigation: React.FC<BottomNavigationProps> = ({ items, activeItem, 
       <div className="flex justify-around items-center">
         {items.map((item) => (
           <BottomNavItem
-            key={item.label}
+            key={item.label} 
             icon={item.icon}
             label={item.label}
             isActive={activeItem === item.label}
-            onClick={() => onItemClick(item.label)}
+            onClick={() => item.label && onItemClick(item.label)} 
           />
         ))}
       </div>

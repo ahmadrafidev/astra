@@ -6,7 +6,7 @@ import { Home, Search, Bell, User } from 'lucide-react';
 import Layout from '../Layout/Layout';
 import Badge from '../Badge/Badge';
 
-import BottomNavigation from './BottomNavigation';
+import BottomNavigation, { NavItem } from './BottomNavigation';
 
 const BottomNavigationClient: React.FC = () => {
     const [activeItem, setActiveItem] = React.useState<string>('Home');
