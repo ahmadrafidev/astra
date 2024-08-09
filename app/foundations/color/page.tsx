@@ -1,4 +1,3 @@
-// app/foundations/color/page.tsx
 import React from 'react';
 import { Metadata } from 'next';
 

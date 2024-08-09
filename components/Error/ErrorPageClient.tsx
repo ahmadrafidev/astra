@@ -1,4 +1,3 @@
-// components/Error/ErrorPageClient.tsx
 'use client';
 
 import React, { useState } from 'react';

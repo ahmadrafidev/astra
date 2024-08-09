@@ -1,5 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
-
 import React from 'react';
 
 const CardDocumentation = () => (
@@ -56,14 +54,14 @@ const CardDocumentation = () => (
             </tr>
             <tr>
               <td className="border px-6 py-4 text-sm text-gray-700 dark:text-gray-200">variant</td>
-              <td className="border px-6 py-4 text-sm text-gray-700 dark:text-gray-200 font-mono">"default" | "hover" | "interactive"</td>
-              <td className="border px-6 py-4 text-sm text-gray-700 dark:text-gray-200">"default"</td>
+              <td className="border px-6 py-4 text-sm text-gray-700 dark:text-gray-200 font-mono">{`"default" | "hover" | "interactive"`}</td>
+              <td className="border px-6 py-4 text-sm text-gray-700 dark:text-gray-200">{`"default"`}</td>
               <td className="border px-6 py-4 text-sm text-gray-700 dark:text-gray-200">The style variant of the card.</td>
             </tr>
             <tr>
               <td className="border px-6 py-4 text-sm text-gray-700 dark:text-gray-200">titleElement</td>
-              <td className="border px-6 py-4 text-sm text-gray-700 dark:text-gray-200 font-mono">"h2" | "h3" | "h4" | "h5" | "h6"</td>
-              <td className="border px-6 py-4 text-sm text-gray-700 dark:text-gray-200">"h3"</td>
+              <td className="border px-6 py-4 text-sm text-gray-700 dark:text-gray-200 font-mono">{`"h2" | "h3" | "h4" | "h5" | "h6"`}</td>
+              <td className="border px-6 py-4 text-sm text-gray-700 dark:text-gray-200">{`"h3"`}</td>
               <td className="border px-6 py-4 text-sm text-gray-700 dark:text-gray-200">The HTML element to use for the title.</td>
             </tr>
             <tr>

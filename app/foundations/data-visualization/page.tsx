@@ -1,4 +1,3 @@
-// app/foundations/data-visualization/page.tsx
 import React from 'react';
 import { Metadata } from 'next';
 

@@ -1,4 +1,3 @@
-// components/SkeletonLoader/SkeletonLoaderPageClient.tsx
 'use client';
 
 import React from 'react';

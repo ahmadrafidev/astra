@@ -1,6 +1,18 @@
 import React, { ReactNode, ButtonHTMLAttributes } from 'react';
 import { cn } from '@/lib/utils';
 
+/**
+ * Props for the Button component.
+ * 
+ * @typedef {Object} ButtonProps
+ * @property {ReactNode} children - The content of the button.
+ * @property {'default' | 'destructive' | 'outline' | 'secondary' | 'ghost' | 'link'} [variant='default'] - The variant of the button.
+ * @property {string} [className] - Additional class names for the button.
+ * @property {ReactNode} [icon] - Optional icon to display in the button.
+ * @property {'left' | 'right'} [iconPosition='left'] - The position of the icon relative to the button content.
+ * @property {'xs' | 'sm' | 'md' | 'lg'} [size='md'] - The size of the button.
+ * @property {boolean} [disabled] - Whether the button is disabled.
+ */
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
   variant?: 'default' | 'destructive' | 'outline' | 'secondary' | 'ghost' | 'link';
@@ -33,6 +45,13 @@ const buttonVariants = {
     'bg-transparent underline hover:no-underline focus:ring-0 text-blue-500',
 };
 
+/**
+ * Button component for rendering a button with various styles, sizes, and optional icons.
+ * 
+ * @component
+ * @param {ButtonProps} props - Props for the Button component.
+ * @returns {JSX.Element} The rendered Button component.
+ */
 const Button: React.FC<ButtonProps> = ({
   variant = 'default',
   size = 'md',

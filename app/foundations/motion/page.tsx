@@ -1,4 +1,3 @@
-// app/foundations/motion/page.tsx
 import React from 'react';
 import { Metadata } from 'next';
 

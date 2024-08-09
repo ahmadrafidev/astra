@@ -1,5 +1,3 @@
-// app/foundations/screen-sizes/page.tsx
-
 import React from 'react';
 import { Metadata } from 'next';
 

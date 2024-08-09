@@ -1,5 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
-
 import React from 'react';
 import { Metadata } from 'next';
 
@@ -29,14 +27,14 @@ const AstraContentStandardPage: React.FC = () => {
                 <section>
                     <h2 className="text-xl md:text-2xl font-medium mb-4 text-gray-900 dark:text-gray-50">Principles</h2>
                     <p className="mb-4 text-gray-900 dark:text-gray-50 text-justify font-normal">
-                        The principles of content standards in AstraUI are designed to ensure that all written materials are effective and align with the brand's communication goals.
+                        The principles of content standards in AstraUI are designed to ensure that all written materials are effective and align with the brand‘s communication goals.
                     </p>
                     <ul className="list-disc pl-5 mb-4 text-gray-900 dark:text-gray-50 space-y-3 md:space-y-4">
                         <li>
                             <strong>Clarity:</strong> Ensure that all content is easy to understand and free of ambiguity.
                         </li>
                         <li>
-                            <strong>Consistency:</strong> Maintain a uniform style and tone across all content to reinforce the brand's identity.
+                            <strong>Consistency:</strong> Maintain a uniform style and tone across all content to reinforce the brand‘s identity.
                         </li>
                         <li>
                             <strong>Conciseness:</strong> Convey messages in a succinct manner without unnecessary words or jargon.
@@ -72,7 +70,7 @@ const AstraContentStandardPage: React.FC = () => {
                 <section>
                     <h2 className="text-xl md:text-2xl font-medium mb-4 text-gray-900 dark:text-gray-50">Practical Examples</h2>
                     <p className="mb-4 text-gray-900 dark:text-gray-50 text-justify font-normal">
-                        Here are some practical examples of how AstraUI's content standards can be applied in different contexts:
+                        Here are some practical examples of how AstraUI‘s content standards can be applied in different contexts:
                     </p>
                     <ul className="list-disc pl-5 mb-4 text-gray-900 dark:text-gray-50 space-y-3 md:space-y-4">
                         <li>
@@ -82,7 +80,7 @@ const AstraContentStandardPage: React.FC = () => {
                             <strong>User Interface Text:</strong> Use straightforward language for buttons, labels, and tooltips to enhance user experience.
                         </li>
                         <li>
-                            <strong>Marketing Materials:</strong> Craft compelling copy that resonates with the target audience while staying true to the brand's voice.
+                            <strong>Marketing Materials:</strong> Craft compelling copy that resonates with the target audience while staying true to the brand‘s voice.
                         </li>
                         <li>
                             <strong>Support Articles:</strong> Provide detailed yet easy-to-understand instructions and troubleshooting steps to help users solve their issues.
