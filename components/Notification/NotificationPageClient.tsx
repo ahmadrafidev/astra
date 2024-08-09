@@ -1,12 +1,12 @@
 'use client';
 
 import React from 'react';
+import { Bell, CheckCircle, AlertCircle, Info, AlertTriangle } from 'lucide-react';
 
 import Layout from '../Layout/Layout';
 import Badge from '../Badge/Badge';
-import Notification from './Notification';
 
-import { Bell, CheckCircle, AlertCircle, Info, AlertTriangle } from 'lucide-react';
+import Notification from './Notification';
 
 const NotificationPageClient: React.FC = () => {
     return (
@@ -70,7 +70,7 @@ const NotificationPageClient: React.FC = () => {
                             <tr>
                                 <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-100">message</td>
                                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 font-mono">string</td>
-                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">-</td>
+                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">Empty</td>
                                 <td className="px-6 py-4 text-sm text-gray-500 dark:text-gray-300">The message to display in the notification.</td>
                             </tr>
                             <tr>
@@ -82,13 +82,13 @@ const NotificationPageClient: React.FC = () => {
                             <tr>
                                 <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-100">className</td>
                                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 font-mono">string</td>
-                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">-</td>
+                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">Empty</td>
                                 <td className="px-6 py-4 text-sm text-gray-500 dark:text-gray-300">Additional classes for styling.</td>
                             </tr>
                             <tr>
                                 <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-100">icon</td>
                                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 font-mono">React.ReactNode</td>
-                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">-</td>
+                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">None</td>
                                 <td className="px-6 py-4 text-sm text-gray-500 dark:text-gray-300">Custom icon to display in the notification.</td>
                             </tr>
                         </tbody>
@@ -102,7 +102,7 @@ const NotificationPageClient: React.FC = () => {
                     <ul className="list-decimal list-inside text-gray-700 dark:text-gray-300 space-y-3">
                         <li>Use notifications to inform users about important events or actions.</li>
                         <li>Ensure notifications are easily dismissible.</li>
-                        <li>Use different colors to distinguish between different types of notifications (e.g., success, error, info, warning).</li>
+                        <li>Use different colors to distinguish between different types of notifications.</li>
                         <li>Make sure notifications provide meaningful messages.</li>
                     </ul>
                 </div>
