@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { X } from 'lucide-react';
 
 /**
  * Props for the Notification component.
@@ -18,7 +17,7 @@ export interface NotificationProps {
 }
 
 /**
- * Notification component for displaying a dismissible notification with optional undo functionality.
+ * Notification component for displaying a dismissible notification with swipe-to-dismiss functionality.
  * 
  * @component
  * @param {NotificationProps} props - Props for the Notification component.
@@ -59,13 +58,6 @@ const Notification: React.FC<NotificationProps> = ({
         {icon && <span className="mr-3">{icon}</span>}
         <span className="text-sm font-medium">{message}</span>
       </div>
-      <button
-        onClick={handleDelete}
-        className="ml-4 p-1 rounded-full text-gray-500 hover:text-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
-        aria-label="Close notification"
-      >
-        <X className="w-5 h-5" />
-      </button>
       {isDeleted && (
         <button
           onClick={handleUndo}

@@ -1,19 +1,14 @@
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
 
 import Layout from '../Layout/Layout';
 import Badge from '../Badge/Badge';
 import Notification from './Notification';
 
-import { CheckCircle, AlertCircle, Info, AlertTriangle } from 'lucide-react';
+import { Bell, CheckCircle, AlertCircle, Info, AlertTriangle } from 'lucide-react';
 
 const NotificationPageClient: React.FC = () => {
-    const [isSuccessVisible, setIsSuccessVisible] = useState(true);
-    const [isErrorVisible, setIsErrorVisible] = useState(true);
-    const [isInfoVisible, setIsInfoVisible] = useState(true);
-    const [isWarningVisible, setIsWarningVisible] = useState(true);
-
     return (
         <Layout>
             <Badge text="Components" />
@@ -24,40 +19,38 @@ const NotificationPageClient: React.FC = () => {
                 </p>
             </div>
             <section>
-                <h2>Variants</h2>
-                <div className="flex flex-col space-y-4 max-w-md">
-                    {isSuccessVisible && (
-                        <Notification
-                            message="Custom notification with a success message."
-                            onClose={() => setIsSuccessVisible(false)}
-                            className="my-4 bg-green-100 text-green-900 border border-green-200"
-                            icon={<CheckCircle className="w-6 h-6 text-green-900" />}
-                        />
-                    )}
-                    {isErrorVisible && (
-                        <Notification
-                            message="Custom error notification."
-                            onClose={() => setIsErrorVisible(false)}
-                            className="my-4 bg-red-100 text-red-900 border border-red-200"
-                            icon={<AlertCircle className="w-6 h-6 text-red-900" />}
-                        />
-                    )}
-                    {isInfoVisible && (
-                        <Notification
-                            message="Info notification with a custom icon."
-                            onClose={() => setIsInfoVisible(false)}
-                            className="my-4 bg-blue-100 text-blue-900 border border-blue-200"
-                            icon={<Info className="w-6 h-6 text-blue-900" />}
-                        />
-                    )}
-                    {isWarningVisible && (
-                        <Notification
-                            message="Custom warning notification."
-                            onClose={() => setIsWarningVisible(false)}
-                            className="my-4 bg-yellow-100 text-yellow-900 border border-yellow-200"
-                            icon={<AlertTriangle className="w-6 h-6 text-yellow-900" />}
-                        />
-                    )}
+                <h2 className="text-xl md:text-2xl font-semibold text-gray-900 dark:text-gray-50 mb-2">Variants</h2>
+                <div className="flex flex-col max-w-md">
+                    <Notification
+                        message="Default notification."
+                        onClose={() => console.log('Default notification closed')}
+                        className="my-4 bg-gray-100 text-gray-900 border border-gray-200"
+                        icon={<Bell className="w-6 h-6 text-gray-900" />}
+                    />
+                    <Notification
+                        message="Custom notification with a success message."
+                        onClose={() => console.log('Success notification closed')}
+                        className="my-4 bg-green-100 text-green-900 border border-green-200"
+                        icon={<CheckCircle className="w-6 h-6 text-green-900" />}
+                    />
+                    <Notification
+                        message="Custom error notification."
+                        onClose={() => console.log('Error notification closed')}
+                        className="my-4 bg-red-100 text-red-900 border border-red-200"
+                        icon={<AlertCircle className="w-6 h-6 text-red-900" />}
+                    />
+                    <Notification
+                        message="Info notification with a custom icon."
+                        onClose={() => console.log('Info notification closed')}
+                        className="my-4 bg-blue-100 text-blue-900 border border-blue-200"
+                        icon={<Info className="w-6 h-6 text-blue-900" />}
+                    />
+                    <Notification
+                        message="Custom warning notification."
+                        onClose={() => console.log('Warning notification closed')}
+                        className="my-4 bg-yellow-100 text-yellow-900 border border-yellow-200"
+                        icon={<AlertTriangle className="w-6 h-6 text-yellow-900" />}
+                    />
                 </div>
             </section>
             {/* Props Section */}
