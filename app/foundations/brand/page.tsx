@@ -1,7 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next';
 
-import Layout from '../../../components/Layout/Layout';
+import Layout from '@/components/Layout/Layout';
 import Badge from '../../../components/Badge/Badge';
 
 export async function generateMetadata(): Promise<Metadata> {
