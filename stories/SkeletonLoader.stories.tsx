@@ -1,6 +1,7 @@
 import React from 'react';
 import { Meta, StoryFn } from '@storybook/react';
-import SkeletonLoader, { SkeletonLoaderProps } from '../components/SkeletonLoader/SkeletonLoader';
+
+import SkeletonLoader, { SkeletonLoaderProps } from '@/components/SkeletonLoader/SkeletonLoader';
 
 export default {
   title: 'Components/SkeletonLoader',

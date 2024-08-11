@@ -1,7 +1,8 @@
 import React from 'react';
 import { Meta, StoryFn } from '@storybook/react';
-import AvatarGroup, { AvatarGroupProps } from '../components/AvatarGroup/AvatarGroup';
-import Avatar from '../components/Avatar/Avatar';
+
+import AvatarGroup, { AvatarGroupProps } from '@/components/AvatarGroup/AvatarGroup';
+import Avatar from '@/components/Avatar/Avatar';
 
 export default {
     title: 'Components/AvatarGroup',

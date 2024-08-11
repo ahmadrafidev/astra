@@ -1,8 +1,9 @@
 // stories/Dropdown.stories.tsx
 import React from 'react';
 import { Meta, StoryFn } from '@storybook/react';
-import Dropdown from '../components/Dropdown/Dropdown';
-import { DropdownProps } from '../components/Dropdown/Dropdown';
+
+import Dropdown from '@/components/Dropdown/Dropdown';
+import { DropdownProps } from '@/components/Dropdown/Dropdown';
 
 export default {
     title: 'Components/Dropdown',

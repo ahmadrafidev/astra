@@ -1,7 +1,8 @@
 import React from 'react';
 import { Meta, StoryFn } from '@storybook/react';
-import { Sun, Moon } from 'lucide-react'; // Example icons
-import Toggle, { ToggleProps } from '../components/Toggle/Toggle'; 
+import { Sun, Moon } from 'lucide-react'; 
+
+import Toggle, { ToggleProps } from '@/components/Toggle/Toggle'; 
 
 export default {
   title: 'Components/Toggle',

@@ -1,7 +1,8 @@
 import React from 'react';
 import { Meta, StoryFn } from '@storybook/react';
-import Snackbar, { SnackbarProps } from '../components/Snackbar/Snackbar';
 import { XIcon } from 'lucide-react';
+
+import Snackbar, { SnackbarProps } from '@/components/Snackbar/Snackbar';
 
 export default {
   title: 'Components/Snackbar',

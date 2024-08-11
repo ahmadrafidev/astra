@@ -1,6 +1,7 @@
 import React from 'react';
 import { Meta, StoryFn } from '@storybook/react';
-import Carousel from '../components/Carousel/Carousel';
+
+import Carousel from '@/components/Carousel/Carousel';
 
 export default {
     title: 'Components/Carousel',

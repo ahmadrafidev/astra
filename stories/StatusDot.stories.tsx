@@ -1,6 +1,7 @@
 import React from 'react';
 import { Meta, StoryFn } from '@storybook/react';
-import StatusDot, { StatusDotProps } from '../components/StatusDot/StatusDot';
+
+import StatusDot, { StatusDotProps } from '@/components/StatusDot/StatusDot';
 
 export default {
   title: 'Components/StatusDot',

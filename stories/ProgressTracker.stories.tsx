@@ -1,6 +1,7 @@
 import React from 'react';
 import { Meta, StoryFn } from '@storybook/react';
-import ProgressTracker, { ProgressTrackerProps } from '../components/ProgressTracker/ProgressTracker'; 
+
+import ProgressTracker, { ProgressTrackerProps } from '@/components/ProgressTracker/ProgressTracker'; 
 
 export default {
     title: 'Components/ProgressTracker',

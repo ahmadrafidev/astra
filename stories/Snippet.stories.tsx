@@ -1,6 +1,7 @@
 import React from 'react';
 import { Meta, StoryFn } from '@storybook/react';
-import Snippet, { SnippetProps } from '../components/Snippet/Snippet';
+
+import Snippet, { SnippetProps } from '@/components/Snippet/Snippet';
 
 export default {
   title: 'Components/Snippet',

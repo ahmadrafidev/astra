@@ -1,6 +1,7 @@
 import React from 'react';
 import { Meta, StoryFn } from '@storybook/react';
-import { Tab, Tabs, TabProps, TabsProps } from '../components/Tabs/Tabs';
+
+import { Tab, Tabs, TabProps, TabsProps } from '@/components/Tabs/Tabs';
 
 export default {
   title: 'Components/Tabs',

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Meta, StoryFn } from '@storybook/react';
-import Slider, { SliderProps } from '../components/Slider/Slider';
+
+import Slider, { SliderProps } from '@/components/Slider/Slider';
 
 export default {
   title: 'Components/Slider',

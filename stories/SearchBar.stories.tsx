@@ -1,7 +1,8 @@
 import React from 'react';
 import { Meta, StoryFn } from '@storybook/react';
-import SearchBar, { SearchBarProps } from '../components/SearchBar/SearchBar';
 import { MagnifyingGlassIcon } from '@heroicons/react/24/outline';
+
+import SearchBar, { SearchBarProps } from '@/components/SearchBar/SearchBar';
 
 export default {
   title: 'Components/SearchBar',

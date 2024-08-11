@@ -1,6 +1,7 @@
 import React from 'react';
 import { Meta, StoryFn } from '@storybook/react';
-import Error, { ErrorProps, ErrorType } from '../components/Error/Error'; 
+
+import Error, { ErrorProps, ErrorType } from '@/components/Error/Error'; 
 
 export default {
     title: 'Components/Error',

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Meta, StoryFn } from '@storybook/react';
-import Radio, { RadioProps } from '../components/Radio/Radio'; 
+
+import Radio, { RadioProps } from '@/components/Radio/Radio'; 
 
 export default {
     title: 'Components/Radio',

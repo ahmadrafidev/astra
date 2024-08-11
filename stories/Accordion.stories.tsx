@@ -1,7 +1,8 @@
 import React from 'react';
 import { Meta, StoryFn } from '@storybook/react';
-import { Accordion, AccordionProps } from '../components/Accordion/Accordion';
-import { AccordionItem } from '../components/Accordion/AccordionItem';
+
+import { Accordion, AccordionProps } from '@/components/Accordion/Accordion';
+import { AccordionItem } from '@/components/Accordion/AccordionItem';
 
 export default {
     title: 'Components/Accordion',
