@@ -177,13 +177,13 @@ export function HomePage() {
                 <p className="text-gray-700 dark:text-gray-300">Enhance readability and impact with typography that stands out.</p>
               </Card>
             </div>
-            <div className="flex flex-row justify-center items-center my-auto">
+            <div className="flex flex-row justify-center items-center">
               <div role="button" className="space-x-4">
                 <Link
                   className="h-10 items-center justify-center rounded-lg bg-gray-900 dark:bg-white dark:border-gray-300 px-6 py-2 md:py-3 text-sm font-medium text-gray-50 dark:text-gray-900 shadow transition-all duration-200 hover:bg-gray-800 hover:ring hover:ring-gray-400 dark:hover:ring-gray-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-300 disabled:pointer-events-none disabled:opacity-50"
                   href="/foundations"
                 >
-                  Learn More
+                  Foundations Overview
                 </Link>
               </div>
             </div>
