@@ -6,15 +6,15 @@ import { useState } from "react";
 import { ArrowRight } from 'lucide-react';
 
 import Card from '../Card/Card';
-
 import ThemeToggle from '../ThemeToggle/ThemeToggle';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
+import Badge from '../Badge/Badge';
+
 import PaletteIcon from '../Icons/PaletteIcon';
 import PuzzleIcon from '../Icons/PuzzleIcon';
 import AlignCenterHorizontalIcon from '../Icons/AlignCenterHorizontalIcon';
 import WandIcon from '../Icons/WandIcon';
-import Badge from '../Badge/Badge';
 
 export function HomePage() {
   const [activeSection, setActiveSection] = useState('about');
@@ -106,7 +106,7 @@ export function HomePage() {
         </section>
 
         {/* Foundations Section */}
-        <section className="flex flex-col justify-start items-center min-h-screen w-full px-4 md:px-12">
+        <section className="flex flex-col justify-start items-center w-full px-4 md:px-12 my-12 md:my-28">
           <div className="container px-4 md:px-6 mx-auto">
             <div className="flex flex-col justify-center items-center space-y-4">
               <div className="space-y-2 text-center">
@@ -114,10 +114,70 @@ export function HomePage() {
                   The Foundations
                 </h2>
                 <p className="max-w-[600px] text-gray-700 dark:text-gray-100 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Learn about the fundamental principles that drive AstraUI.
+                  The core principles guiding AstraUI design philosophy.
                 </p>
               </div>
             </div>
+            {/* Grid of Cards */}
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mt-10">
+              <Card
+                title="Accessibility"
+                variant="interactive"
+                className="p-2"
+              >
+                <p className="text-gray-700 dark:text-gray-300">Strategies for inclusive access and usability for all users.</p>
+              </Card>
+              <Card
+                title="Brand Expression"
+                variant="interactive"
+                className="p-2"
+              >
+                <p className="text-gray-700 dark:text-gray-300">Ensuring consistent brand identity across all designs.</p>
+              </Card>
+              <Card
+                title="Color"
+                variant="interactive"
+                className="p-2"
+              >
+                <p className="text-gray-700 dark:text-gray-300">Color palette and methods for creating a harmonious look.</p>
+              </Card>
+              <Card
+                title="Content Standard"
+                variant="interactive"
+                className="p-2"
+              >
+                <p className="text-gray-700 dark:text-gray-300">Guidelines for creating clear and engaging content.</p>
+              </Card>
+              <Card
+                title="Data Visualization"
+                variant="interactive"
+                className="p-2"
+              >
+                <p className="text-gray-700 dark:text-gray-300">Techniques for presenting data in a clear and impactful way.</p>
+              </Card>
+              <Card
+                title="Motion"
+                variant="interactive"
+                className="p-2"
+              >
+                <p className="text-gray-700 dark:text-gray-300">Principles for creating smooth and responsive animations.</p>
+              </Card>
+              <Card
+                title="Screen Sizes"
+                variant="interactive"
+                className="p-2"
+              >
+                <p className="text-gray-700 dark:text-gray-300">Designing responsive interfaces for all devices.</p>
+              </Card>
+              <Card
+                title="Typography"
+                variant="interactive"
+                className="p-2"
+              >
+                <p className="text-gray-700 dark:text-gray-300">Typography styles that enhance readability and accessibility.</p>
+              </Card>
+            </div>
+
           </div>
         </section>
 
