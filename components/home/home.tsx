@@ -30,7 +30,10 @@ export function HomePage() {
             <div className="flex flex-col items-center space-y-6 md:space-y-8 text-center">
               <div className="space-y-6 md:space-y-8">
                 <h1 className="text-4xl md:text-7xl font-semibold tracking-tighter text-gray-900 dark:text-gray-50">
-                  Building Blocks of Modern UI
+                  Building Blocks of Modern&nbsp;
+                    <span className="bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-transparent">
+                      UI
+                    </span>
                 </h1>
                 <p className="mx-auto max-w-[600px] text-gray-600 dark:text-gray-200 text-sm md:text-xl font-normal">
                   AstraUI is a simple, comprehensive component for building beautiful, consistent, and scalable user interfaces.
@@ -73,7 +76,12 @@ export function HomePage() {
               <div className="flex flex-col justify-center space-y-4">
                 <div className="space-y-2">
                   <Badge text="Key Principles" />
-                  <h2 className="text-2xl md:text-5xl font-bold tracking-tighter text-gray-900 dark:text-gray-50">AstraUI</h2>
+                  <h2 className="text-2xl md:text-5xl font-bold tracking-tighter text-gray-900 dark:text-gray-50">
+                    Astra
+                    <span className="bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-transparent">
+                      UI
+                    </span>
+                  </h2>
                   <p className="max-w-[600px] text-gray-600 dark:text-gray-200 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed ">
                     AstraUI provides a complete set of components and utilities carefully crafted to simplify the design and development flow.
                   </p>
