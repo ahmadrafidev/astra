@@ -56,7 +56,7 @@ export function HomePage() {
               </div>
             </div>
           </div>
-          <div className="container mx-auto">
+          <div className="container px-5 md:mx-auto">
             <div className="flex flex-col md:flex-row justify-center items-center md:items-baseline gap-x-2 text-center space-y-4">
               <h2 className="text-2xl md:text-3xl font-semibold font-sans text-gray-900 dark:text-gray-50">Inside AstraUI.</h2>
               <p className="text-base md:text-xl text-gray-600 dark:text-gray-100">
