@@ -125,7 +125,7 @@ export function HomePage() {
                     title="Web Components"
                     imageSrc="/images/web-image.png"
                     variant="interactive"
-                    className="text-start p-4"
+                    className="text-start p-4 transition-all duration-200 hover:ring hover:ring-sky-500/30 dark:hover:ring-sky-200"
                     imageWidth={100}
                     imageHeight={100}
                     imagePosition="left"
@@ -138,7 +138,7 @@ export function HomePage() {
                     title="Android"
                     imageSrc="/images/android-image.png"
                     variant="interactive"
-                    className="text-start p-4"
+                    className="text-start p-4 transition-all duration-200 hover:ring hover:ring-sky-500/30 dark:hover:ring-sky-200"
                     imageWidth={100}
                     imageHeight={100}
                     imagePosition="left"
@@ -151,7 +151,7 @@ export function HomePage() {
                     title="iOS"
                     imageSrc="/images/apple-image.png"
                     variant="interactive"
-                    className="text-start p-4"
+                    className="text-start p-4 transition-all duration-200 hover:ring hover:ring-sky-500/30 dark:hover:ring-sky-200"
                     imageWidth={100}
                     imageHeight={100}
                     imagePosition="left"
