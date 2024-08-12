@@ -105,6 +105,22 @@ export function HomePage() {
           </div>
         </section>
 
+        {/* Foundations Section */}
+        <section className="flex flex-col justify-start items-center min-h-screen w-full px-4 md:px-12">
+          <div className="container px-4 md:px-6 mx-auto">
+            <div className="flex flex-col justify-center items-center space-y-4">
+              <div className="space-y-2 text-center">
+                <h2 className="text-2xl md:text-5xl font-bold tracking-tighter text-gray-900 dark:text-gray-50">
+                  The Foundations
+                </h2>
+                <p className="max-w-[600px] text-gray-700 dark:text-gray-100 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                  Learn about the fundamental principles that drive AstraUI.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Components Section */}
         <section className="flex flex-col justify-around min-h-screen w-full px-4 md:px-12">
           <div className="container px-4 md:px-6 mx-auto">
