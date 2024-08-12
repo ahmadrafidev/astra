@@ -3,9 +3,9 @@
 import Link from "next/link"
 import Image from 'next/image';
 import { useState } from "react";
+import { ArrowRight } from 'lucide-react';
 
-import { AvatarImage, AvatarFallback, Avatar } from "@/components/ui/avatar"
-import { Card } from "@/components/ui/card"
+import Card from '../Card/Card';
 
 import ThemeToggle from '../ThemeToggle/ThemeToggle';
 import Header from '../Header/Header';
@@ -23,6 +23,8 @@ export function HomePage() {
     <div className="flex flex-col min-h-[100dvh]">
       <Header setActiveSection={setActiveSection} />
       <main className="flex-1 bg-gray-50 dark:bg-black">
+
+        {/* Landing Page Section */}
         <section className="flex flex-col justify-around min-h-screen overflow-hidden w-full mt-8 md:mt-14">
           <div className="container px-4 md:px-6 mx-auto">
             <div className="flex flex-col items-center space-y-6 md:space-y-8 text-center">
@@ -63,6 +65,8 @@ export function HomePage() {
             </div>
           </div>
         </section>
+
+        {/* Key Principles */}
         <section className="flex flex-col justify-around min-h-screen w-full px-4 md:px-12">
           <div className="container px-4 md:px-6 mx-auto">
             <div className="grid items-center gap-6 lg:grid-cols-2 lg:gap-12">
@@ -100,6 +104,68 @@ export function HomePage() {
             </div>
           </div>
         </section>
+
+        {/* Components Section */}
+        <section className="flex flex-col justify-around min-h-screen w-full px-4 md:px-12">
+          <div className="container px-4 md:px-6 mx-auto">
+            <div className="grid items-center gap-6 lg:grid-cols-2 lg:gap-12">
+              <div className="flex flex-col justify-center space-y-4">
+                <div className="space-y-2">
+                  <h2 className="text-2xl md:text-5xl font-bold tracking-tighter text-gray-900 dark:text-gray-50">
+                    The Components
+                  </h2>
+                  <p className="max-w-[600px] text-gray-700 dark:text-gray-100 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                    Explore The Components Inside AstraUI
+                  </p>
+                </div>
+              </div>
+              <div className="flex flex-col justify-center space-y-4">
+                <div className="grid grid-cols-1 gap-6">
+                  <Card
+                    title="Web Components"
+                    imageSrc="/images/web-image.png"
+                    variant="interactive"
+                    className="text-start p-4"
+                    imageWidth={100}
+                    imageHeight={100}
+                    imagePosition="left"
+                  >
+                    <Link href="/components/" className="text-gray-800 dark:text-gray-200 hover:underline text-start flex flex-row gap-2">
+                      Get started <span className="text-gray-800 dark:text-gray-200"><ArrowRight /></span>
+                    </Link>
+                  </Card>
+                  <Card
+                    title="Android"
+                    imageSrc="/images/android-image.png"
+                    variant="interactive"
+                    className="text-start p-4"
+                    imageWidth={100}
+                    imageHeight={100}
+                    imagePosition="left"
+                  >
+                    <Link href="/components/" className="text-gray-800 dark:text-gray-200 hover:underline text-start flex flex-row gap-2">
+                      Get started <span className="text-gray-800 dark:text-gray-200"><ArrowRight /></span>
+                    </Link>
+                  </Card>
+                  <Card
+                    title="iOS"
+                    imageSrc="/images/apple-image.png"
+                    variant="interactive"
+                    className="text-start p-4"
+                    imageWidth={100}
+                    imageHeight={100}
+                    imagePosition="left"
+                  >
+                    <Link href="/components/" className="text-gray-800 dark:text-gray-200 hover:underline text-start flex flex-row gap-2">
+                      Get started <span className="text-gray-800 dark:text-gray-200"><ArrowRight /></span>
+                    </Link>
+                  </Card>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
       </main>
       <Footer />
     </div>
