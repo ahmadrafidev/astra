@@ -55,7 +55,7 @@ const Alert = React.forwardRef<HTMLDivElement, AlertProps>(
       <div
         ref={ref}
         role="alert"
-        className={`flex p-4 rounded-lg ${alertStyles[type]} ${className}`}
+        className={`flex rounded-lg ${alertStyles[type]} ${className}`}
       >
         <div className="flex-shrink-0 mr-3 mt-0.5">
           {alertIcons[type]}

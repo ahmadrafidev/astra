@@ -31,25 +31,25 @@ const AlertPage: React.FC = () => {
                 <div className="space-y-4">
                     <div>
                         <h3 className="text-base md:text-lg font-medium font-sans text-gray-900 dark:text-gray-50 mb-2 md:mb-3">Info Alert</h3>
-                        <Alert type="info" title="This is an information alert" isDismissible>
+                        <Alert className="p-4" type="info" title="This is an information alert" isDismissible>
                         </Alert>
                     </div>
                     <div>
                         <h3 className="text-base md:text-lg font-medium font-sans text-gray-900 dark:text-gray-50 mb-2 md:mb-3">Success Alert</h3>
-                        <Alert type="success" isDismissible>
+                        <Alert className="p-4" type="success" isDismissible>
                             <AlertTitle>This is a success alert</AlertTitle>
                             <AlertContent>A little bit of a content here</AlertContent>
                         </Alert>
                     </div>
                     <div>
                         <h3 className="text-base md:text-lg font-medium font-sans text-gray-900 dark:text-gray-50 mb-2 md:mb-3">Warning Alert</h3>
-                        <Alert type="warning" isDismissible>
+                        <Alert className="p-4" type="warning" isDismissible>
                             <AlertTitle>This is a warning alert</AlertTitle>
                         </Alert>
                     </div>
                     <div>
                         <h3 className="text-base md:text-lg font-medium font-sans text-gray-900 dark:text-gray-50 mb-2 md:mb-3">Error Alert</h3>
-                        <Alert type="error" isDismissible>
+                        <Alert className="p-4" type="error" isDismissible>
                             <AlertTitle>This is an error alert</AlertTitle>
                         </Alert>
                     </div>

@@ -2,7 +2,8 @@ import React from 'react';
 import { Metadata } from 'next';
 
 import Layout from '@/components/Layout/Layout';
-import Badge from '../../../components/Badge/Badge';
+import Badge from '@/components/Badge/Badge';
+import { Alert, AlertTitle, AlertContent } from '@/components/Alert/Alert';
 
 export async function generateMetadata(): Promise<Metadata> {
     return {
@@ -16,6 +17,16 @@ const AstraBrandPage: React.FC = () => {
         <Layout>
             <Badge text="Foundations" />
             <main>
+                <Alert 
+                    type="info" 
+                    isDismissible={false} 
+                    className="my-4 p-4"
+                >
+                    <AlertTitle>Under Development</AlertTitle>
+                    <AlertContent>
+                        This page is currently being updated. Some information may be incomplete or subject to change.
+                    </AlertContent>
+                </Alert>
                 <section className="mb-3 md:mb-4">
                     <h1 className="text-2xl md:text-3xl font-medium mb-4 text-gray-900 dark:text-gray-50">Brand Expression</h1>
                     <p className="mb-4 text-gray-900 dark:text-gray-50 text-justify font-normal">
