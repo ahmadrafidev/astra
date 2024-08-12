@@ -19,7 +19,7 @@ import { cn } from "@/lib/utils";
  */
 export interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
   title: string;
-  description: string;
+  description?: string;
   imageSrc?: string;
   imageWidth?: number;
   imageHeight?: number;
