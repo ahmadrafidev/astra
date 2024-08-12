@@ -113,74 +113,74 @@ export function HomePage() {
                 <h2 className="text-2xl md:text-5xl font-bold tracking-tighter text-gray-900 dark:text-gray-50">
                   The Foundations
                 </h2>
-                <p className="max-w-[600px] text-gray-700 dark:text-gray-100 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  The core principles guiding AstraUI design philosophy.
+                <p className="max-w-[600px] text-gray-700 dark:text-gray-100  text-lg/relaxed md:text-xl/relaxed">
+                  Core principles that guide the AstraUI design philosophy.
                 </p>
               </div>
             </div>
             {/* Grid of Cards */}
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 my-10">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-6 my-10">
               <Card
                 title="Accessibility"
                 variant="interactive"
                 className="p-2"
               >
-                <p className="text-gray-700 dark:text-gray-300">Strategies for inclusive access and usability for all users.</p>
+                <p className="text-gray-700 dark:text-gray-300">Unlock seamless access for everyone, ensuring your designs reach every user.</p>
               </Card>
               <Card
                 title="Brand Expression"
                 variant="interactive"
                 className="p-2"
               >
-                <p className="text-gray-700 dark:text-gray-300">Ensuring consistent brand identity across all designs.</p>
+                <p className="text-gray-700 dark:text-gray-300">Craft a unified and memorable brand experience across all platforms.</p>
               </Card>
               <Card
                 title="Color"
                 variant="interactive"
                 className="p-2"
               >
-                <p className="text-gray-700 dark:text-gray-300">Color palette and methods for creating a harmonious look.</p>
+                <p className="text-gray-700 dark:text-gray-300">Master the art of color harmony to create visually stunning designs.</p>
               </Card>
               <Card
                 title="Content Standard"
                 variant="interactive"
                 className="p-2"
               >
-                <p className="text-gray-700 dark:text-gray-300">Guidelines for creating clear and engaging content.</p>
+                <p className="text-gray-700 dark:text-gray-300">Elevate your message with clear, engaging content that resonates with your audience.</p>
               </Card>
               <Card
                 title="Data Visualization"
                 variant="interactive"
                 className="p-2"
               >
-                <p className="text-gray-700 dark:text-gray-300">Techniques for presenting data in a clear and impactful way.</p>
+                <p className="text-gray-700 dark:text-gray-300">Transform data into powerful insights with clear, impactful visuals.</p>
               </Card>
               <Card
                 title="Motion"
                 variant="interactive"
                 className="p-2"
               >
-                <p className="text-gray-700 dark:text-gray-300">Principles for creating smooth and responsive animations.</p>
+                <p className="text-gray-700 dark:text-gray-300">Bring your designs to life with smooth, responsive animations.</p>
               </Card>
               <Card
                 title="Screen Sizes"
                 variant="interactive"
                 className="p-2"
               >
-                <p className="text-gray-700 dark:text-gray-300">Designing responsive interfaces for all devices.</p>
+                <p className="text-gray-700 dark:text-gray-300">Design with confidence for any screen size, from mobile to desktop.</p>
               </Card>
               <Card
                 title="Typography"
                 variant="interactive"
                 className="p-2"
               >
-                <p className="text-gray-700 dark:text-gray-300">Typography styles that enhance readability and accessibility.</p>
+                <p className="text-gray-700 dark:text-gray-300">Enhance readability and impact with typography that stands out.</p>
               </Card>
             </div>
             <div className="flex flex-row justify-center items-center my-auto">
               <div role="button" className="space-x-4">
                 <Link
-                  className="h-10 items-center justify-center rounded-lg bg-gray-900 dark:bg-white dark:border-gray-300 px-4 py-2 md:py-2.5 text-sm font-medium text-gray-50 dark:text-gray-900 shadow transition-all duration-200 hover:bg-gray-800 hover:ring hover:ring-gray-400 dark:hover:ring-gray-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-300 disabled:pointer-events-none disabled:opacity-50"
+                  className="h-10 items-center justify-center rounded-lg bg-gray-900 dark:bg-white dark:border-gray-300 px-6 py-2 md:py-3 text-sm font-medium text-gray-50 dark:text-gray-900 shadow transition-all duration-200 hover:bg-gray-800 hover:ring hover:ring-gray-400 dark:hover:ring-gray-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-300 disabled:pointer-events-none disabled:opacity-50"
                   href="/foundations"
                 >
                   Learn More
@@ -194,15 +194,13 @@ export function HomePage() {
         <section className="flex flex-col justify-around min-h-screen w-full px-4 md:px-12">
           <div className="container px-4 md:px-6 mx-auto">
             <div className="grid items-center gap-6 lg:grid-cols-2 lg:gap-12">
-              <div className="flex flex-col justify-center space-y-4">
-                <div className="space-y-2">
-                  <h2 className="text-2xl md:text-5xl font-bold tracking-tighter text-gray-900 dark:text-gray-50">
-                    The Components
-                  </h2>
-                  <p className="max-w-[600px] text-gray-700 dark:text-gray-100 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                    Explore The Components Inside AstraUI
-                  </p>
-                </div>
+              <div className="flex flex-col justify-start items-start space-y-2">
+                <h2 className="text-2xl md:text-5xl font-bold tracking-tighter text-gray-900 dark:text-gray-50">
+                  The Components
+                </h2>
+                <p className="text-gray-700 dark:text-gray-100 text-lg/relaxed md:text-xl/relaxed">
+                  Uncover AstraUI‘s Components
+                </p>
               </div>
               <div className="flex flex-col justify-center space-y-4">
                 <div className="grid grid-cols-1 gap-6">
