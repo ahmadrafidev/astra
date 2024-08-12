@@ -60,6 +60,7 @@ export const componentsList = [
     { name: 'Checkbox', path: '/components/checkbox' },
     { name: 'Collapse', path: '/components/collapse' },
     { name: 'Dialog', path: '/components/dialog' },
+    { name: 'Dock', path: '/components/dock' },
     { name: 'Dropdown', path: '/components/dropdown' },
     { name: 'Error Message', path: '/components/error' },
     { name: 'File Uploader', path: '/components/file-uploader' },
@@ -112,6 +113,7 @@ export const categorizedComponentsList = {
         { name: 'Progress Tracker', path: '/components/progress-tracker', description: 'Visual guide showing steps and progress through a multi-step process.' },
         { name: 'Stepper', path: '/components/stepper', description: 'Step-by-step interface for guiding users through processes.' },
         { name: 'Bottom Navigation', path: '/components/bottom-navigation', description: 'Mobile-friendly navigation bar fixed at screen bottom.' },
+        { name: 'Dock', path: '/components/dock', description: 'Customizable navigation bar with icons for quick access to different sections or actions.' }
     ],
     selectionAndInput: [
         { name: 'Checkbox', path: '/components/checkbox', description: 'Allows the user to select one or more options from a set.' },
