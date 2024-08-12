@@ -106,7 +106,7 @@ export function HomePage() {
         </section>
 
         {/* Foundations Section */}
-        <section className="flex flex-col justify-start items-center w-full px-4 md:px-12 my-12 md:my-28">
+        <section className="flex flex-col justify-start items-center w-full px-4 md:px-12 my-12">
           <div className="container px-4 md:px-6 mx-auto">
             <div className="flex flex-col justify-center items-center space-y-4">
               <div className="space-y-2 text-center">
@@ -119,7 +119,7 @@ export function HomePage() {
               </div>
             </div>
             {/* Grid of Cards */}
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mt-10">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 my-10">
               <Card
                 title="Accessibility"
                 variant="interactive"
@@ -177,7 +177,16 @@ export function HomePage() {
                 <p className="text-gray-700 dark:text-gray-300">Typography styles that enhance readability and accessibility.</p>
               </Card>
             </div>
-
+            <div className="flex flex-row justify-center items-center my-auto">
+              <div role="button" className="space-x-4">
+                <Link
+                  className="h-10 items-center justify-center rounded-lg bg-gray-900 dark:bg-white dark:border-gray-300 px-4 py-2 md:py-2.5 text-sm font-medium text-gray-50 dark:text-gray-900 shadow transition-all duration-200 hover:bg-gray-800 hover:ring hover:ring-gray-400 dark:hover:ring-gray-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-300 disabled:pointer-events-none disabled:opacity-50"
+                  href="/foundations"
+                >
+                  Learn More
+                </Link>
+              </div>
+            </div>
           </div>
         </section>
 
