@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
     title: "Dock",
-    description: "A component for displaying modal dialogs.",
+    description: "A dynamic hub for effortless access and intuitive navigation.",
 };
 
 const DockPageClient = dynamic(() => import('@/components/Dock/DockClient'), { ssr: false });

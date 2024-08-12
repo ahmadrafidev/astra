@@ -14,7 +14,7 @@ const DockClient: React.FC = () => {
             <div className="flex flex-col mb-5">
                 <h1 className="text-2xl md:text-3xl font-medium mb-4 text-gray-900 dark:text-gray-50">Dock</h1>
                 <p className="texta-sm md:text-base font-normal font-sans text-gray-900 dark:text-gray-50">
-                    A component for displaying Dock.
+                    A dynamic hub for effortless access and intuitive navigation.
                 </p>
             </div>
             <Dock />
