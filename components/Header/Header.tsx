@@ -44,8 +44,11 @@ const Header: React.FC<HeaderProps> = ({ setActiveSection, toggleSidebar, isSide
             )}
             <Link className="flex items-center justify-center ml-2" href="/" aria-label="Home">
                 <div className="flex flex-row align-center gap-1 justify-start">
-                    <p className="text-gray-900 dark:text-white text-2xl md:text-4xl font-semibold font-sans ">
-                        AstraUI
+                    <p className="text-gray-900 dark:text-white text-2xl md:text-4xl font-semibold font-sans">
+                        Astra
+                        <span className="bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-transparent">
+                            UI
+                        </span>
                     </p>
                 </div>
             </Link>
