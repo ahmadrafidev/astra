@@ -20,7 +20,7 @@ const AstraA11yPage: React.FC = () => {
                 <Alert 
                     type="info" 
                     isDismissible={false} 
-                    className="my-4 p-4"
+                    className="my-2 p-4"
                 >
                     <AlertTitle>Under Development</AlertTitle>
                     <AlertContent>

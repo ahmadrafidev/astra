@@ -117,10 +117,8 @@ const AccordionDocumentation = () => {
           <div className="space-y-4">
               <ul className="list-decimal list-inside text-gray-700 dark:text-gray-300 space-y-3">
                   <li>Use accordions to organize content in a compact way, allowing users to expand sections as needed.</li>
-                  <li>Ensure that the titles of accordion items are descriptive and concise.</li>
-                  <li>Consider the user experience on both desktop and mobile devices, ensuring that the accordion is easy to interact with on all screen sizes.</li>
+                  <li>Ensure that the content of accordion items are descriptive and concise.</li>
                   <li>Use the multiple selection mode when users might need to compare information across different sections.</li>
-                  <li>Provide visual feedback for hover and focus states to improve usability, especially for keyboard navigation.</li>
                   <li>Consider using animations for expanding and collapsing to provide a smooth user experience, but ensure they are not too slow or distracting.</li>
                   <li>Use the split variant when you want to visually separate accordion items, especially for longer lists.</li>
               </ul>

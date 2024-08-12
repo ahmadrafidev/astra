@@ -6,42 +6,42 @@ export const foundationList = [
     { 
         name: 'Accessibility', 
         path: '/foundations/accessibility',
-        description: 'Learn about our strategies for inclusive access and usability for everyone.' 
+        description: 'Strategies for inclusive access and usability for all users.' 
     },
     { 
         name: 'Brand Expression', 
         path: '/foundations/brand',
-        description: 'Discover how we ensure a consistent brand identity across all designs.' 
+        description: 'Ensuring consistent brand identity across all designs.' 
     },
     { 
         name: 'Color', 
         path: '/foundations/color',
-        description: 'Explore our color palette and learn how to create a harmonious look.' 
+        description: 'Color palette and methods for creating a harmonious look.' 
     },
     { 
         name: 'Content Standard', 
         path: '/foundations/content',
-        description: 'Uncover our guidelines for creating clear and engaging content.' 
+        description: 'Guidelines for creating clear and engaging content.' 
     },
     { 
         name: 'Data Visualization', 
         path: '/foundations/data-visualization',
-        description: 'Explore techniques for presenting data in a clear and impactful way.' 
+        description: 'Techniques for presenting data in a clear and impactful way.' 
     },
     { 
         name: 'Motion', 
         path: '/foundations/motion',
-        description: 'Understand principles for creating smooth and responsive animations.' 
+        description: 'Principles for creating smooth and responsive animations.' 
     },
     { 
         name: 'Screen Sizes', 
         path: '/foundations/screen-sizes',
-        description: 'See how we design responsive interfaces for all devices.'
+        description: 'Designing responsive interfaces for all devices.'
     },
     { 
         name: 'Typography', 
         path: '/foundations/typography',
-        description: 'Discover typography styles that enhance readability and accessibility.' 
+        description: 'Typography styles that enhance readability and accessibility.' 
     },
 ];
 
