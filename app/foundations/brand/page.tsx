@@ -25,7 +25,7 @@ const AstraBrandPage: React.FC = () => {
         <Layout>
             <main>
                 <div className="flex">
-                    <div className="w-4/5 pr-2"> 
+                    <div className="w-full md:w-4/5 pr-2"> 
                         <Badge text="Foundations" />
                         <Alert 
                             type="info" 
@@ -105,7 +105,7 @@ const AstraBrandPage: React.FC = () => {
                             </ul>
                         </section>
                     </div>
-                    <TOC items={tocItems} />
+                    <TOC className="hidden md:block" items={tocItems} />
                 </div>
             </main>
         </Layout>
