@@ -11,7 +11,7 @@ const PhoneNumberClient: React.FC = () => {
         <Layout>
             <Badge text="Components" />
             <div className="flex flex-col mb-5">
-                <h1 className="text-2xl md:text-3xl font-medium mb-4 text-gray-900 dark:text-gray-50">Phone Number</h1>
+                <h1 className="text-2xl md:text-3xl font-semibold mb-4 text-gray-900 dark:text-gray-50">Phone Number</h1>
                 <p className="texta-sm md:text-base font-normal font-sans text-gray-900 dark:text-gray-50">
                     A specialized input for entering and validating phone numbers.
                 </p>
@@ -39,7 +39,6 @@ const PhoneNumberClient: React.FC = () => {
                 <h2 className="text-2xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Best Practices</h2>
                 <div className="space-y-4">
                     <ul className="list-decimal list-inside text-gray-700 dark:text-gray-300 space-y-3">
-                      
                     </ul>
                 </div>
             </section>

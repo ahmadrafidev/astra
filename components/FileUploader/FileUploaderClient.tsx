@@ -15,7 +15,7 @@ const FileUploaderClient: React.FC = () => {
     <Layout>
       <Badge text="Components" />
       <div className="flex flex-col mb-5">
-        <h1 className="text-xl md:text-2xl font-medium mb-4 text-gray-900 dark:text-gray-50">File Uploader</h1>
+        <h1 className="text-xl md:text-2xl font-semibold mb-4 text-gray-900 dark:text-gray-50">File Uploader</h1>
         <p className="text-sm md:text-base font-normal font-sans text-gray-900 dark:text-gray-50">
           A form component for capturing and validating file uploads.
         </p>
@@ -32,7 +32,7 @@ const FileUploaderClient: React.FC = () => {
       </div>
       {/* Props Section */}
       <section className="my-5">
-        <h2 className="text-xl md:text-2xl font-semibold text-gray-900 dark:text-gray-50 mb-6">Props</h2>
+        <h2 className="text-xl md:text-2xl font-medium text-gray-900 dark:text-gray-50 mb-6">Props</h2>
         <div className="bg-white dark:bg-gray-800 rounded-lg shadow overflow-hidden">
           <table className="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
             <thead className="bg-gray-50 dark:bg-gray-700">
@@ -110,7 +110,7 @@ const FileUploaderClient: React.FC = () => {
       </section>
       {/* Best Practices Section */}
       <section>
-        <h2 className="text-2xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Best Practices</h2>
+        <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Best Practices</h2>
         <div className="space-y-4">
           <ul className="list-decimal list-inside text-gray-700 dark:text-gray-300 space-y-3">
             <li>Ensure the file size limit is appropriate for your application.</li>

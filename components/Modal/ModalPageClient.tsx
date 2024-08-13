@@ -69,7 +69,7 @@ const ModalPageClient: React.FC = () => {
         <Layout>
             <Badge text="Components" />
             <div className="flex flex-col mb-5">
-                <h1 className="text-2xl md:text-3xl font-medium mb-4 text-gray-900 dark:text-gray-50">Modal</h1>
+                <h1 className="text-2xl md:text-3xl font-semibold mb-4 text-gray-900 dark:text-gray-50">Modal</h1>
                 <p className="text-sm md:text-base font-normal font-sans text-gray-900 dark:text-gray-50">
                     An overlay window that appears on top of the main content.
                 </p>

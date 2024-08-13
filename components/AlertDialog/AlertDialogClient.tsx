@@ -22,7 +22,7 @@ const AlertDialogPageClient: React.FC = () => {
             <Badge text="Components" />
             <section className="mb-5">
                 <div className="flex flex-col">
-                    <h1 className="text-2xl md:text-3xl font-medium text-gray-900 dark:text-gray-50 mb-3 md:mb-4">Alert Dialog</h1>
+                    <h1 className="text-2xl md:text-3xl font-semibold text-gray-900 dark:text-gray-50 mb-3 md:mb-4">Alert Dialog</h1>
                     <p className="text-sm md:text-base font-normal font-sans text-gray-900 dark:text-gray-50">
                         A pop-up window that displays important information and requires user acknowledgment or action.
                     </p>

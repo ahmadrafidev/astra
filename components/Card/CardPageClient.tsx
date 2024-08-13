@@ -15,7 +15,7 @@ const CardPageClient: React.FC = () => {
             {/* Header Content */}
             <section className="mb-5">
                 <div className="flex flex-col">
-                    <h1 className="text-2xl md:text-3xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-3 md:mb-4">Card</h1>
+                    <h1 className="text-2xl md:text-3xl font-semibold font-sans text-gray-900 dark:text-gray-50 mb-3 md:mb-4">Card</h1>
                     <p className="text-sm md:text-base font-normal font-sans text-gray-900 dark:text-gray-50">
                         A flexible container for displaying related content and actions in a single unit.
                     </p>

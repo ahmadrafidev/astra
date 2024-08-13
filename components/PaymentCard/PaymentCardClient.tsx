@@ -13,7 +13,7 @@ const PaymentCardClient: React.FC = () => {
         <Layout>
             <Badge text="Components" />
             <div className="flex flex-col mb-5">
-                <h1 className="text-2xl md:text-3xl font-medium mb-4 text-gray-900 dark:text-gray-50">Payment Card</h1>
+                <h1 className="text-2xl md:text-3xl font-semibold mb-4 text-gray-900 dark:text-gray-50">Payment Card</h1>
                 <p className="texta-sm md:text-base font-normal font-sans text-gray-900 dark:text-gray-50">
                     A form component for securely capturing and validating payment card details.
                 </p>
@@ -27,7 +27,7 @@ const PaymentCardClient: React.FC = () => {
             </section>
             {/* Props Section */}
             <section className="my-5">
-                <h2 className="text-xl md:text-2xl font-semibold text-gray-900 dark:text-gray-50 mb-6">Props</h2>
+                <h2 className="text-xl md:text-2xl font-medium text-gray-900 dark:text-gray-50 mb-6">Props</h2>
                 <div className="bg-white dark:bg-gray-800 rounded-lg shadow overflow-hidden">
                     <table className="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
                         <thead className="bg-gray-50 dark:bg-gray-700">
@@ -69,7 +69,7 @@ const PaymentCardClient: React.FC = () => {
             </section>
             {/* Best Practices Section */}
             <section className="my-5">
-                <h2 className="text-xl md:text-2xl font-semibold text-gray-900 dark:text-gray-50 mb-6">Best Practices</h2>
+                <h2 className="text-xl md:text-2xl font-medium text-gray-900 dark:text-gray-50 mb-6">Best Practices</h2>
                 <div className="space-y-4 text-gray-700 dark:text-gray-300">
                     <ul className="list-decimal list-inside space-y-2">
                         <li>Ensure all sensitive data fields are secure and not exposed in the client-side code.</li>

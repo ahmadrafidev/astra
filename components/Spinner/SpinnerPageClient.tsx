@@ -14,7 +14,7 @@ const SpinnerPageClient: React.FC = () => {
     const handleLoadingToggle = () => {
         setIsLoading(!isLoading);
         if (!isLoading) {
-            setTimeout(() => setIsLoading(false), 3000); // Simulate a 3-second loading process
+            setTimeout(() => setIsLoading(false), 3000); 
         }
     };
 
@@ -22,7 +22,7 @@ const SpinnerPageClient: React.FC = () => {
         <Layout>
             <Badge text="Components" />
             <div className="flex flex-col mb-5">
-                <h1 className="text-2xl md:text-3xl font-medium mb-4 text-gray-900 dark:text-gray-50">Spinner</h1>
+                <h1 className="text-2xl md:text-3xl font-semibold mb-4 text-gray-900 dark:text-gray-50">Spinner</h1>
                 <p className="text-sm md:text-base font-normal font-sans text-gray-900 dark:text-gray-50">
                     An animated indicator showing that content is loading or processing. Highly customizable and accessible.
                 </p>

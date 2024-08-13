@@ -25,7 +25,7 @@ const CheckboxPageClient: React.FC = () => {
         <Layout>
             <Badge text="Components" />
             <div className="flex flex-col mb-5">
-                <h1 className="text-2xl md:text-3xl font-medium mb-4 text-gray-900 dark:text-gray-50">Checkbox</h1>
+                <h1 className="text-2xl md:text-3xl font-semibold mb-4 text-gray-900 dark:text-gray-50">Checkbox</h1>
                 <p className="text-sm md:text-base font-normal font-sans text-gray-900 dark:text-gray-50">
                     A control allowing users to indicate agreement or consent for a single option.
                 </p>
@@ -60,7 +60,7 @@ const CheckboxPageClient: React.FC = () => {
 
             {/* Props Section */}
             <section className="mb-10">
-                <h2 className="text-xl md:text-2xl font-semibold text-gray-900 dark:text-gray-50 mb-6">Props</h2>
+                <h2 className="text-xl md:text-2xl font-medium text-gray-900 dark:text-gray-50 mb-6">Props</h2>
                 <div className="bg-white dark:bg-gray-800 rounded-lg shadow overflow-hidden">
                     <table className="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
                         <thead className="bg-gray-50 dark:bg-gray-700">

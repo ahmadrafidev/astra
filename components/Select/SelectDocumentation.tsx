@@ -7,7 +7,7 @@ const SelectDocumentation = () => {
     <>
       {/* Props Section */}
       <section className="my-5">
-        <h2 className="text-xl md:text-2xl font-semibold text-gray-900 dark:text-gray-50 mb-6">Props</h2>
+        <h2 className="text-xl md:text-2xl font-medium text-gray-900 dark:text-gray-50 mb-6">Props</h2>
         <div className="bg-white dark:bg-gray-800 rounded-lg shadow overflow-hidden">
           <table className="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
             <thead className="bg-gray-50 dark:bg-gray-700">
@@ -97,7 +97,7 @@ const SelectDocumentation = () => {
       </section>
       {/* Best Practices Section */}
       <section className="my-5">
-        <h2 className="text-xl md:text-2xl font-semibold text-gray-900 dark:text-gray-50 mb-6">Best Practices</h2>
+        <h2 className="text-xl md:text-2xl font-medium text-gray-900 dark:text-gray-50 mb-6">Best Practices</h2>
         <div className="space-y-4">
           <ul className="list-decimal list-inside text-gray-700 dark:text-gray-300 space-y-3">
             <li>Use the select component to allow users to choose from a list of options.</li>
