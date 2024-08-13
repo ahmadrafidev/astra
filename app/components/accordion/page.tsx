@@ -167,24 +167,24 @@ const AccordionPage: React.FC = () => {
                     </Tab>
                     <Tab label="Code">
                         <div
-                            className="relative rounded-lg border bg-gray-800 border-gray-700 mt-4"
+                            className="relative rounded-lg bg-gray-900 dark:bg-gray-800/90 mt-4"
                             role="region"
                             aria-label="Code Snippet in tsx"
                         >
-                            <div className="flex justify-between items-center px-4 py-2 border-b border-gray-700">
+                            <div className="flex justify-between items-center px-4 py-2 border-b border-gray-800">
                                 <span className="text-sm font-medium text-gray-100">
                                     tsx
                                 </span>
                             </div>
-                            <div style={{ maxHeight: '500px' }} className="overflow-auto">
+                            <div className="overflow-auto rounded-lg border border-gray-800">
                                 <SyntaxHighlighter
                                     language="tsx"
                                     style={materialLight}
                                     showLineNumbers={false}
                                     wrapLongLines={true}
-                                    customStyle={{ 
-                                        margin: 0, 
-                                        borderRadius: '0 0 0.5rem 0.5rem',
+                                    customStyle={{
+                                        margin: 1.5, 
+                                        borderRadius: '0.5rem 0.5rem 0.5rem 0.5rem',
                                         fontSize: '14px',       
                                         lineHeight: '1.25',      
                                         padding: '10px',        
