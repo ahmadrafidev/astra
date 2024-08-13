@@ -1,7 +1,18 @@
 import React from 'react';
 import Link from 'next/link';
+
 import Tooltip from '../Tooltip/Tooltip';
 
+/**
+ * Props for each item in the Dock component.
+ * 
+ * @typedef {Object} DockItemProps
+ * @property {string} [href] - The URL to navigate to when the dock item is clicked.
+ * @property {React.ElementType} icon - The icon to be displayed in the dock item.
+ * @property {string} label - The label text to be shown in the tooltip.
+ * @property {() => void} [onClick] - The function to call when the dock item is clicked.
+ * @property {'default' | 'floating'} [hoverEffect='floating'] - The hover effect to apply to the dock item.
+ */
 export interface DockItemProps {
   href?: string;
   icon: React.ElementType;
@@ -10,6 +21,17 @@ export interface DockItemProps {
   hoverEffect?: 'default' | 'floating';
 }
 
+/**
+ * Props for the Dock component.
+ * 
+ * @typedef {Object} DockProps
+ * @property {string} [className] - Additional class names for the dock container.
+ * @property {DockItemProps[]} items - The list of items to display in the dock.
+ * @property {number} [iconSize=24] - The size of the icons in the dock items.
+ * @property {string | number} [dockWidth='auto'] - The width of the dock container.
+ * @property {string | number} [dockHeight='auto'] - The height of the dock container.
+ * @property {'default' | 'glassmorphism'} [variant='default'] - The visual variant of the dock.
+ */
 export interface DockProps {
   className?: string;
   items: DockItemProps[];
@@ -19,6 +41,13 @@ export interface DockProps {
   variant?: 'default' | 'glassmorphism';
 }
 
+/**
+ * DockItem component represents an individual item within the Dock.
+ * 
+ * @component
+ * @param {DockItemProps & { iconSize: number }} props - Props for the DockItem component.
+ * @returns {JSX.Element} The rendered DockItem component.
+ */
 const DockItem: React.FC<DockItemProps & { iconSize: number }> = ({
   href,
   icon: Icon,
@@ -55,6 +84,13 @@ const DockItem: React.FC<DockItemProps & { iconSize: number }> = ({
   );
 };
 
+/**
+ * Dock component for displaying a navigation bar with items that can be clicked or navigated to.
+ * 
+ * @component
+ * @param {DockProps} props - Props for the Dock component.
+ * @returns {JSX.Element} The rendered Dock component.
+ */
 const Dock: React.FC<DockProps> = ({
   className = '', 
   items, 
@@ -64,15 +100,15 @@ const Dock: React.FC<DockProps> = ({
   variant = 'default', 
 }) => {
   const glassClasses = variant === 'glassmorphism'
-    ? 'bg-white/10 backdrop-blur-sm border border-white/20 shadow-lg bg-gradient-to-br from-white/30 to-white/10'
-    : 'bg-white border border-gray-300';
+    ? 'bg-white/10 backdrop-blur-sm border border-white/20 shadow-lg bg-gradient-to-br from-white/30 to-white/10 rounded-lg'
+    : 'bg-white border border-gray-300 shadow rounded-lg';
 
   return (
     <nav
-      className={`flex items-center justify-around rounded-lg ${glassClasses} ${className}`}
+      className={`flex items-center justify-around ${glassClasses} ${className}`}
       style={{ width: dockWidth, height: dockHeight }}
       role="navigation"
-      aria-label="Main"
+      aria-label="Dock Component"
     >
       {items.map((item, index) => (
         <DockItem key={index} {...item} iconSize={iconSize} />
