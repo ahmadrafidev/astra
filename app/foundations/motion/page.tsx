@@ -24,7 +24,7 @@ const AstraMotionPage: React.FC = () => {
         <Layout>
             <main>
                 <div className="flex">
-                    <div className="w-full md:w-4/5 pr-2">
+                    <div className="w-full md:w-4/5 pr-4">
                         <Badge text="Foundations" />
                         <Alert 
                             type="info" 
