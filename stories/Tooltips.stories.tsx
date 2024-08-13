@@ -47,10 +47,16 @@ Default.args = {
     variant: 'default',
 };
 
-export const ArrowVariant = Template.bind({});
-ArrowVariant.args = {
-    text: 'This tooltip has an arrow',
-    variant: 'arrow',
+export const ArrowBottomVariant = Template.bind({});
+ArrowBottomVariant.args = {
+    text: 'This tooltip has a bottom arrow',
+    variant: 'arrow-bottom',
+};
+
+export const ArrowTopVariant = Template.bind({});
+ArrowTopVariant.args = {
+    text: 'This tooltip has a top arrow',
+    variant: 'arrow-top',
 };
 
 export const CustomClass = Template.bind({});
