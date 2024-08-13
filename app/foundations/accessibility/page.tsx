@@ -6,13 +6,6 @@ import Badge from '@/components/Badge/Badge';
 import { Alert, AlertTitle, AlertContent } from '@/components/Alert/Alert';
 import TOC from '@/components/TOC/TOC';
 
-const tocItems = [
-    { id: 'accessibility', label: 'Accessibility' },
-    { id: 'principles', label: 'Principles' },
-    { id: 'approach', label: 'Approach' },
-    { id: 'engineering-considerations', label: 'Engineering Considerations' },
-];
-
 export async function generateMetadata(): Promise<Metadata> {
     return {
         title: 'Accessibility',
@@ -20,6 +13,12 @@ export async function generateMetadata(): Promise<Metadata> {
     };
 }
 
+const tocItems = [
+    { id: 'overview', label: 'Overview' },
+    { id: 'principles', label: 'Principles' },
+    { id: 'approach', label: 'Approach' },
+    { id: 'engineering-considerations', label: 'Engineering Considerations' },
+];
 
 const AstraA11yPage: React.FC = () => {
     return (
@@ -38,7 +37,7 @@ const AstraA11yPage: React.FC = () => {
                                 This page is currently being updated. Some information may be incomplete or subject to change.
                             </AlertContent>
                         </Alert>
-                        <section id="accessibility" className="mb-3 md:mb-4 scroll-mt-20">
+                        <section id="overview" className="mb-3 md:mb-4 scroll-mt-20">
                             <h1 className="text-2xl md:text-3xl font-semibold font-sans mb-4 text-gray-900 dark:text-gray-50">Accessibility (A11y)</h1>
                             <p className="mb-4 text-gray-900 dark:text-gray-50 text-justify font-normal">
                                 AstraUI is committed to creating an inclusive experience for all users, including people with disabilities. 
