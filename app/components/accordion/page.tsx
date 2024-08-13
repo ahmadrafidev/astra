@@ -86,13 +86,13 @@ const AccordionPage: React.FC = () => {
                     </section>
 
                     {/* Accordion Variants Section */}
-                    <section id="variants" className="mb-5">
+                    <section id="variants" className="mb-5 scroll-mt-20">
                         <h2 className="text-lg md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Variants</h2>
                         <Tabs>
                             <Tab label="Preview">
-                                <div className="relative w-full overflow-hidden rounded-lg mt-4 bg-gradient-to-r from-zinc-700 to-gray-800 dark:from-zinc-400 dark:to-gray-600">
+                                <div className="relative w-full overflow-hidden rounded-lg mt-4 bg-gradient-to-r from-zinc-700/90 to-gray-800 dark:from-zinc-400/90 dark:to-gray-600">
                                     <div className="space-y-4 justify-around p-6">
-                                        <div id="default-accordion">
+                                        <div id="default-accordion" className="scroll-mt-20">
                                             <h3 className="text-base md:text-lg font-medium font-sans text-gray-50 dark:text-gray-900 mb-2 md:mb-3">
                                                 Default Accordion
                                             </h3>
@@ -113,7 +113,7 @@ const AccordionPage: React.FC = () => {
                                                 </>
                                             </Accordion>
                                         </div>
-                                        <div id="default-accordion-subtitle">
+                                        <div id="default-accordion-subtitle" className="scroll-mt-20">
                                             <h3 className="text-base md:text-lg font-medium font-sans text-gray-50 dark:text-gray-900 mb-2 md:mb-3">
                                                 Default Accordion with Subtitle
                                             </h3>
@@ -134,7 +134,7 @@ const AccordionPage: React.FC = () => {
                                                 </>
                                             </Accordion>
                                         </div>
-                                        <div id="accordion-multiple">
+                                        <div id="accordion-multiple" className="scroll-mt-20">
                                             <h3 className="text-base md:text-lg font-medium font-sans text-gray-50 dark:text-gray-900 mb-2 md:mb-3">
                                                 Accordion with Multiple Open 
                                             </h3>
@@ -155,7 +155,7 @@ const AccordionPage: React.FC = () => {
                                                 </>
                                             </Accordion>
                                         </div>
-                                        <div id="split-accordion">
+                                        <div id="split-accordion" className="scroll-mt-20">
                                             <h3 className="text-base md:text-lg font-medium font-sans text-gray-50 dark:text-gray-900 mb-2 md:mb-3">
                                                 Split Accordion
                                             </h3>
