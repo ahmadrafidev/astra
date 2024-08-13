@@ -1,10 +1,21 @@
 'use client';
 
 import React, { useState } from 'react';
+import { Home, Pen, Github, Linkedin, Twitter, Mail, Sun, Moon } from 'lucide-react';
 
 import Layout from '../Layout/Layout';
 import Badge from '../Badge/Badge';
+
 import Dock from './Dock';
+
+const items = [
+    { href: '/', icon: Home, label: 'Home' },
+    { href: '/edit', icon: Pen, label: 'Edit' },
+    { href: 'https://github.com', icon: Github, label: 'GitHub' },
+    { href: 'https://linkedin.com', icon: Linkedin, label: 'LinkedIn' },
+    { href: 'https://twitter.com', icon: Twitter, label: 'Twitter' },
+    { href: '/contact', icon: Mail, label: 'Contact' },
+];
 
 const DockClient: React.FC = () => {
 
@@ -17,7 +28,16 @@ const DockClient: React.FC = () => {
                     A dynamic hub for effortless access and intuitive navigation.
                 </p>
             </div>
-            <Dock />
+            <div className="relative w-full h-64 mb-8 overflow-hidden rounded-lg bg-gradient-to-r from-cyan-400 via-sky-500 to-blue-600">
+                <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
+                    <Dock 
+                        items={items}
+                        dockWidth="400px"
+                        dockHeight="60px"
+                        variant="glassmorphism"
+                    />
+                </div>
+            </div>
             {/* Props Section */}
             <section className="my-5">
                 <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Props</h2>

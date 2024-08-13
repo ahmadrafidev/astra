@@ -32,9 +32,17 @@ const TooltipPageClient: React.FC = () => {
                     </div>
                     <div>
                         <h3 className="text-base md:text-lg font-medium font-sans text-gray-900 dark:text-gray-50 mb-2 md:mb-3">Arrow Tooltip</h3>
-                        <Tooltip text="Arrow tooltip" variant="arrow">
+                        <Tooltip text="Arrow Bottom Tooltip" variant="arrow-bottom">
                             <button className="px-4 py-2 bg-gray-900 dark:bg-gray-100 text-white dark:text-black rounded-lg shadow-sm hover:bg-gray-800 dark:hover:bg-gray-200">
-                                Arrow Tooltip
+                                Arrow Bottom Tooltip
+                            </button>
+                        </Tooltip>
+                    </div>
+                    <div>
+                        <h3 className="text-base md:text-lg font-medium font-sans text-gray-900 dark:text-gray-50 mb-2 md:mb-3">Arrow Tooltip</h3>
+                        <Tooltip text="Arrow Top Tooltip" variant="arrow-top">
+                            <button className="px-4 py-2 bg-gray-900 dark:bg-gray-100 text-white dark:text-black rounded-lg shadow-sm hover:bg-gray-800 dark:hover:bg-gray-200">
+                                Arrow Top Tooltip
                             </button>
                         </Tooltip>
                     </div>
@@ -74,7 +82,7 @@ const TooltipPageClient: React.FC = () => {
                             </tr>
                             <tr>
                                 <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-100">variant</td>
-                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 font-mono">default, arrow</td>
+                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 font-mono">default, arrow-top, arrow-bottom</td>
                                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">default</td>
                                 <td className="px-6 py-4 text-sm text-gray-500 dark:text-gray-300">Specifies the visual style of the tooltip.</td>
                             </tr>
@@ -89,7 +97,6 @@ const TooltipPageClient: React.FC = () => {
                     <ul className="list-decimal list-inside text-gray-700 dark:text-gray-300 space-y-3">
                         <li>Use tooltips to provide additional information about an element when the user hovers over it or focuses on it with keyboard navigation.</li>
                         <li>Ensure the tooltip content is concise and informative. Aim for 1-2 short sentences or phrases.</li>
-                        <li>Make tooltips accessible by ensuring they work with keyboard navigation and are compatible with screen readers (use aria-describedby attribute).</li>
                         <li>Position tooltips consistently throughout your application and ensure they do not obscure important content.</li>
                         <li>Add a small delay (200-300ms) before showing the tooltip to prevent accidental triggers during rapid mouse movements.</li>
                         <li>Use the arrow variant when you need to clearly indicate which element the tooltip refers to.</li>

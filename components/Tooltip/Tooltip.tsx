@@ -6,14 +6,14 @@ import React, { useState } from 'react';
  * @typedef {Object} TooltipProps
  * @property {React.ReactNode} children - The content around which the tooltip will appear.
  * @property {string} text - The text to be displayed inside the tooltip.
- * @property {string} [className] - Additional class names for custom styling.
- * @property {'default' | 'arrow'} [variant='default'] - The variant style of the tooltip.
+ * @property {string} [className] - Additional class names for custom styling of the tooltip container.
+* @property {'default' | 'arrow-bottom' | 'arrow-top'} [variant='default'] - The variant style of the tooltip, such as with or without an arrow.
  */
 export interface TooltipProps {
   children: React.ReactNode;
   text: string;
   className?: string;
-  variant?: 'default' | 'arrow';
+  variant?: 'default' | 'arrow-bottom' | 'arrow-top';
 }
 
 /**
@@ -40,11 +40,17 @@ const Tooltip: React.FC<TooltipProps> = ({
 
   const variantClasses = {
     default: 'bottom-full mb-2',
-    arrow: `
+    'arrow-bottom': `
       top-full mt-2
       before:content-[''] before:absolute before:left-1/2 before:-translate-x-1/2
       before:bottom-full before:border-8 before:border-x-transparent
       before:border-t-transparent before:border-b-gray-700
+    `,
+    'arrow-top': `
+      bottom-full mb-2
+      after:content-[''] after:absolute after:left-1/2 after:-translate-x-1/2
+      after:top-full after:border-8 after:border-x-transparent
+      after:border-b-transparent after:border-t-gray-800
     `
   };
 
