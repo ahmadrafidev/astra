@@ -30,9 +30,9 @@ export function HomePage() {
             <div className="flex flex-col items-center space-y-6 md:space-y-8 text-center">
               <div className="space-y-6 md:space-y-8">
                 <h1 className="text-4xl md:text-7xl font-semibold tracking-tighter text-gray-900 dark:text-gray-50">
-                  Building Blocks of Modern&nbsp;
-                    <span className="bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-transparent">
-                      UI
+                  Building Blocks of&nbsp; 
+                    <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-blue-600 bg-clip-text text-transparent">
+                      Modern UI
                     </span>
                 </h1>
                 <p className="mx-auto max-w-[600px] text-gray-600 dark:text-gray-200 text-sm md:text-xl font-normal">
@@ -131,56 +131,56 @@ export function HomePage() {
               <Card
                 title="Accessibility"
                 variant="interactive"
-                className="p-2"
+                className="p-2 dark:bg-gray-800/90"
               >
                 <p className="text-gray-700 dark:text-gray-300">Unlock seamless access for everyone, ensuring your designs reach every user.</p>
               </Card>
               <Card
                 title="Brand Expression"
                 variant="interactive"
-                className="p-2"
+                className="p-2 dark:bg-gray-800/90"
               >
                 <p className="text-gray-700 dark:text-gray-300">Craft a unified and memorable brand experience across all platforms.</p>
               </Card>
               <Card
                 title="Color"
                 variant="interactive"
-                className="p-2"
+                className="p-2 dark:bg-gray-800/90"
               >
                 <p className="text-gray-700 dark:text-gray-300">Master the art of color harmony to create visually stunning designs.</p>
               </Card>
               <Card
                 title="Content Standard"
                 variant="interactive"
-                className="p-2"
+                className="p-2 dark:bg-gray-800/90"
               >
                 <p className="text-gray-700 dark:text-gray-300">Elevate your message with clear, engaging content that resonates with your audience.</p>
               </Card>
               <Card
                 title="Data Visualization"
                 variant="interactive"
-                className="p-2"
+                className="p-2 dark:bg-gray-800/90"
               >
                 <p className="text-gray-700 dark:text-gray-300">Transform data into powerful insights with clear, impactful visuals.</p>
               </Card>
               <Card
                 title="Motion"
                 variant="interactive"
-                className="p-2"
+                className="p-2 dark:bg-gray-800/90"
               >
                 <p className="text-gray-700 dark:text-gray-300">Bring your designs to life with smooth, responsive animations.</p>
               </Card>
               <Card
                 title="Screen Sizes"
                 variant="interactive"
-                className="p-2"
+                className="p-2 dark:bg-gray-800/90"
               >
                 <p className="text-gray-700 dark:text-gray-300">Design with confidence for any screen size, from mobile to desktop.</p>
               </Card>
               <Card
                 title="Typography"
                 variant="interactive"
-                className="p-2"
+                className="p-2 dark:bg-gray-800/90"
               >
                 <p className="text-gray-700 dark:text-gray-300">Enhance readability and impact with typography that stands out.</p>
               </Card>
@@ -216,7 +216,7 @@ export function HomePage() {
                     title="Web Components"
                     imageSrc="/images/web-image.png"
                     variant="interactive"
-                    className="text-start p-4 transition-all duration-200 hover:ring hover:ring-sky-500/30 dark:hover:ring-sky-200"
+                    className="text-start p-4 transition-all duration-200 dark:bg-gray-800/90 hover:ring hover:ring-sky-500/30 dark:hover:ring-sky-200"
                     imageWidth={100}
                     imageHeight={100}
                     imagePosition="left"
@@ -229,7 +229,7 @@ export function HomePage() {
                     title="Android"
                     imageSrc="/images/android-image.png"
                     variant="interactive"
-                    className="text-start p-4 transition-all duration-200 hover:ring hover:ring-sky-500/30 dark:hover:ring-sky-200"
+                    className="text-start p-4 transition-all duration-200 dark:bg-gray-800/90 hover:ring hover:ring-sky-500/30 dark:hover:ring-sky-200"
                     imageWidth={100}
                     imageHeight={100}
                     imagePosition="left"
@@ -242,7 +242,7 @@ export function HomePage() {
                     title="iOS"
                     imageSrc="/images/apple-image.png"
                     variant="interactive"
-                    className="text-start p-4 transition-all duration-200 hover:ring hover:ring-sky-500/30 dark:hover:ring-sky-200"
+                    className="text-start p-4 transition-all duration-200 dark:bg-gray-800/90 hover:ring hover:ring-sky-500/30 dark:hover:ring-sky-200"
                     imageWidth={100}
                     imageHeight={100}
                     imagePosition="left"
@@ -273,8 +273,8 @@ interface IconCardProps {
 
 const IconCard: React.FC<IconCardProps> = ({ Icon, title, description }) => (
   <div className="flex flex-col items-start gap-2">
-    <div className="bg-gray-100 rounded-md flex items-center justify-center aspect-square w-12 dark:bg-gray-500">
-      <Icon className="w-6 h-6 text-gray-500 dark:text-gray-300" />
+    <div className="bg-gray-100 dark:bg-gray-800/90 rounded-md flex items-center justify-center aspect-square w-12">
+      <Icon className="w-6 h-6" />
     </div>
     <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-50">{title}</h3>
     <p className="text-gray-500 dark:text-gray-300 text-sm">{description}</p>

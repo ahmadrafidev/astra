@@ -13,6 +13,7 @@ export default function WandIcon(props: React.SVGProps<SVGSVGElement>) {
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
+            className="stroke-emerald-500"
         >
             <path d="M15 4V2" />
             <path d="M15 16v-2" />
