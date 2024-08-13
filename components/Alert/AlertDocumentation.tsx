@@ -1,5 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
-
 import React from 'react';
 
 const AlertDocumentation = () => {
@@ -23,7 +21,7 @@ const AlertDocumentation = () => {
                 <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-100">type</td>
                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 font-mono">AlertType</td>
                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">Required</td>
-                <td className="px-6 py-4 text-sm text-gray-500 dark:text-gray-300">The type of alert to display. One of: 'info', 'success', 'warning', 'error'.</td>
+                <td className="px-6 py-4 text-sm text-gray-500 dark:text-gray-300">{`The type of alert to display. One of: 'info', 'success', 'warning', 'error'`}</td>
               </tr>
               <tr>
                 <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-100">title</td>
@@ -59,7 +57,7 @@ const AlertDocumentation = () => {
         <div className="space-y-4">
           <ul className="list-decimal list-inside text-gray-700 dark:text-gray-300 space-y-3">
             <li>
-              <strong>Use appropriate alert types:</strong> Choose the correct type based on the message's importance and context.
+              <strong>Use appropriate alert types:</strong> Choose the correct type based on the message importance and context.
               <ul className="list-disc pl-8 text-gray-700 dark:text-gray-300">
                 <li><strong>Info:</strong> For general information or updates</li>
                 <li><strong>Success:</strong> To confirm a task has been completed successfully</li>
@@ -71,7 +69,7 @@ const AlertDocumentation = () => {
             <li><strong>Use dismissible alerts judiciously.</strong> Make alerts dismissible when the information is not critical and users might want to remove it from view.</li>
             <li><strong>Provide context and next steps.</strong> When appropriate, include guidance on what the user should do next or how to resolve an issue.</li>
             <li><strong>Ensure accessibility.</strong> Use proper ARIA roles and ensure color is not the only means of conveying the alert type.</li>
-            <li><strong>Placement matters.</strong> Position alerts where they are easily noticeable but don't obstruct important content or actions.</li>
+            <li><strong>Placement matters.</strong> Position alerts where they are easily noticeable but don‘t obstruct important content or actions.</li>
           </ul>
         </div>
       </section>

@@ -36,7 +36,7 @@ const Header: React.FC<HeaderProps> = ({ setActiveSection, toggleSidebar, isSide
     
 
     return (
-        <header className={`sticky top-0 px-6 md:px-16 h-14 py-4 md:py-8 flex items-center transition-all duration-300 z-50 ${isScrolled ? 'bg-transparent backdrop-blur-sm' : 'bg-gray-50 dark:bg-black'}`} aria-label="Main Navigation">
+        <header className={`sticky top-0 px-6 md:px-16 h-14 py-4 md:py-8 flex items-center transition-all duration-300 z-50 ${isScrolled ? 'bg-transparent backdrop-blur' : 'bg-gray-50 dark:bg-black'}`} aria-label="Main Navigation">
             {!isSidebarOpen && toggleSidebar && (
                 <button className="md:hidden p-2 focus:outline-none" onClick={toggleSidebar} aria-label="Toggle Sidebar">
                     <Bars3Icon className="h-6 w-6 text-black dark:text-white" />
