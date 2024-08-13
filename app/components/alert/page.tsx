@@ -64,7 +64,7 @@ const AlertPage: React.FC = () => {
                         <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Variants</h2>
                         <Tabs>
                             <Tab label="Preview">
-                                <div className="relative w-full overflow-hidden rounded-lg mt-4 bg-gradient-to-r from-zinc-700/90 to-gray-800 dark:from-zinc-400/90 dark:to-gray-600">
+                                <div className="relative w-full overflow-hidden rounded-lg mt-4 bg-gray-900 dark:bg-zinc-50">
                                     <div className="space-y-4 justify-around p-6">
                                         <div id="info-alert" className="scroll-mt-20">
                                             <h3 className="text-base md:text-lg font-medium font-sans text-gray-50 dark:text-gray-900 mb-2 md:mb-3">
