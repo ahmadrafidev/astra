@@ -30,7 +30,7 @@ export interface AccordionProps {
  * @param {AccordionProps} props - Props for the Accordion component.
  * @returns {JSX.Element} The rendered Accordion component.
  */
-export const Accordion: React.FC<AccordionProps> = ({
+const Accordion: React.FC<AccordionProps> = ({
     children,
     className = '',
     itemClassName = '',
@@ -75,3 +75,4 @@ export const Accordion: React.FC<AccordionProps> = ({
 };
 
 Accordion.displayName = "Accordion";
+export default Accordion;

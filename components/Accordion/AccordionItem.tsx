@@ -1,9 +1,22 @@
-// AccordionItem.tsx
 'use client'
 
 import React, { ReactNode } from 'react';
 import { ChevronDownIcon, ChevronUpIcon } from '@heroicons/react/20/solid';
 
+/**
+ * Props for the AccordionItem component.
+ * 
+ * @typedef {Object} AccordionItemProps
+ * @property {string} title - The title of the accordion item.
+ * @property {string} [subtitle] - The subtitle of the accordion item.
+ * @property {ReactNode} children - The content to display when the accordion item is open.
+ * @property {boolean} [isOpen=false] - Whether the accordion item is open.
+ * @property {() => void} [onToggle] - Function to call when the accordion item is toggled.
+ * @property {string} [border] - Custom border styles for the accordion item.
+ * @property {string} [shadow] - Custom shadow styles for the accordion item.
+ * @property {string} [className] - Additional class names for the accordion item container.
+ * @property {'default' | 'split'} [variant='default'] - The variant style of the accordion item.
+ */
 export interface AccordionItemProps {
   title: string;
   subtitle?: string;
@@ -16,7 +29,14 @@ export interface AccordionItemProps {
   variant?: 'default' | 'split';
 }
 
-export const AccordionItem: React.FC<AccordionItemProps> = ({
+/**
+ * AccordionItem component for rendering an individual item within an accordion.
+ * 
+ * @component
+ * @param {AccordionItemProps} props - Props for the AccordionItem component.
+ * @returns {JSX.Element} The rendered AccordionItem component.
+ */
+const AccordionItem: React.FC<AccordionItemProps> = ({
   title,
   subtitle,
   children,
@@ -62,3 +82,4 @@ export const AccordionItem: React.FC<AccordionItemProps> = ({
 };
 
 AccordionItem.displayName = "AccordionItem";
+export default AccordionItem;
