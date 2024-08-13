@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState, ReactNode } from 'react';
+
 import { AccordionItemProps } from './AccordionItem';
 
 /**
@@ -30,7 +31,7 @@ export interface AccordionProps {
  * @param {AccordionProps} props - Props for the Accordion component.
  * @returns {JSX.Element} The rendered Accordion component.
  */
-const Accordion: React.FC<AccordionProps> = ({
+export const Accordion: React.FC<AccordionProps> = ({
     children,
     className = '',
     itemClassName = '',
@@ -75,4 +76,3 @@ const Accordion: React.FC<AccordionProps> = ({
 };
 
 Accordion.displayName = "Accordion";
-export default Accordion;

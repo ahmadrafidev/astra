@@ -36,7 +36,7 @@ export interface AccordionItemProps {
  * @param {AccordionItemProps} props - Props for the AccordionItem component.
  * @returns {JSX.Element} The rendered AccordionItem component.
  */
-const AccordionItem: React.FC<AccordionItemProps> = ({
+export const AccordionItem: React.FC<AccordionItemProps> = ({
   title,
   subtitle,
   children,
@@ -82,4 +82,3 @@ const AccordionItem: React.FC<AccordionItemProps> = ({
 };
 
 AccordionItem.displayName = "AccordionItem";
-export default AccordionItem;
