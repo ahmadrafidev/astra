@@ -98,7 +98,7 @@ const Card = forwardRef<HTMLDivElement, CardProps>(({
         isHorizontal && imagePosition === 'right' ? 'pr-4' : '',
         isHorizontal ? 'justify-center' : ''
       )}>
-        <TitleElement className="text-lg md:text-2xl font-semibold text-gray-900 dark:text-gray-50">
+        <TitleElement className="text-lg md:text-2xl font-medium text-gray-900 dark:text-gray-50">
           {title}
         </TitleElement>
         <p className="mt-2 text-gray-700 dark:text-gray-300">{description}</p>

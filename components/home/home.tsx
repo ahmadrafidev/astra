@@ -76,13 +76,13 @@ export function HomePage() {
               <div className="flex flex-col justify-center space-y-4">
                 <div className="space-y-2">
                   <Badge text="Key Principles" />
-                  <h2 className="text-2xl md:text-5xl font-bold tracking-tighter text-gray-900 dark:text-gray-50">
+                  <h2 className="text-2xl md:text-5xl font-bold tracking-tight text-gray-900 dark:text-gray-50">
                     Astra
                     <span className="bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-transparent">
                       UI
                     </span>
                   </h2>
-                  <p className="max-w-[600px] text-gray-600 dark:text-gray-200 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed ">
+                  <p className="max-w-[600px] text-gray-600 dark:text-gray-200 text-base/relaxed md:text-lg/relaxed">
                     AstraUI provides a complete set of components and utilities carefully crafted to simplify the design and development flow.
                   </p>
                 </div>
@@ -118,11 +118,11 @@ export function HomePage() {
           <div className="container px-4 md:px-6 mx-auto">
             <div className="flex flex-col justify-center items-center space-y-4">
               <div className="space-y-2 text-center">
-                <h2 className="text-2xl md:text-5xl font-bold tracking-tighter text-gray-900 dark:text-gray-50">
+                <h2 className="text-2xl md:text-5xl font-bold tracking-tight text-gray-900 dark:text-gray-50">
                   The Foundations
                 </h2>
                 <p className="max-w-[600px] text-gray-700 dark:text-gray-100  text-lg/relaxed md:text-xl/relaxed">
-                  Core principles that guide the AstraUI design philosophy.
+                  Core principles that guide the AstraUI design philosophy
                 </p>
               </div>
             </div>
@@ -202,12 +202,12 @@ export function HomePage() {
         <section className="flex flex-col justify-around min-h-screen w-full px-4 md:px-12">
           <div className="container px-4 md:px-6 mx-auto">
             <div className="grid items-center gap-6 lg:grid-cols-2 lg:gap-12">
-              <div className="flex flex-col justify-start items-start space-y-2">
-                <h2 className="text-2xl md:text-5xl font-bold tracking-tighter text-gray-900 dark:text-gray-50">
+              <div className="space-y-2">
+                <h2 className="text-2xl md:text-5xl font-bold tracking-tight text-gray-900 dark:text-gray-50">
                   The Components
                 </h2>
-                <p className="text-gray-700 dark:text-gray-100 text-lg/relaxed md:text-xl/relaxed">
-                  Uncover AstraUI‘s Components
+                <p className="text-gray-700 dark:text-gray-100 text-lg/relaxed md:text-xl/relaxed ml-1 md:ml-2">
+                  Discover AstraUI Components
                 </p>
               </div>
               <div className="flex flex-col justify-center space-y-4">
