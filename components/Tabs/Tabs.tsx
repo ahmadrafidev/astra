@@ -99,7 +99,7 @@ const Tabs: React.FC<TabsProps> = ({ theme, children, className, tabClassName })
               />
             )}
             {tab.props.label && !tab.props.iconLight && !tab.props.iconDark && (
-              <span className={cn('align-middle justify-center', tab.props.labelClassName)}>
+              <span className={cn('align-middle justify-center text-base md:text-lg', tab.props.labelClassName)}>
                 {tab.props.label}
               </span>
             )}
