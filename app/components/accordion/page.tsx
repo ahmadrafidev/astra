@@ -58,7 +58,7 @@ const AccordionPage: React.FC = () => {
 
     const tocItems = [
         { id: 'overview', label: 'Overview' },
-        { id: 'variants', label: 'Variants' },
+        { id: 'usage', label: 'Usage' },
         { id: 'default-accordion', label: 'Default Accordion' },
         { id: 'default-accordion-subtitle', label: 'Default Accordion with Subtitle' },
         { id: 'accordion-multiple', label: 'Accordion with Multiple Open' },
@@ -84,15 +84,14 @@ const AccordionPage: React.FC = () => {
                         </div>
                     </section>
 
-                    {/* Accordion Variants Section */}
-                    <section id="variants" className="mb-5 scroll-mt-20">
-                        <h2 className="text-lg md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Variants</h2>
+                    {/* Accordion Usage Section */}
+                    <section id="usage" className="my-5 scroll-mt-20">
                         <Tabs>
                             <Tab label="Preview">
-                                <div className="relative w-full overflow-hidden rounded-lg mt-4 bg-gray-900 dark:bg-zinc-50">
+                                <div className="relative w-full overflow-hidden rounded-lg mt-4 bg-zinc-100 dark:bg-zinc-950 shadow border border-slate-300 dark:border-slate-800">
                                     <div className="space-y-4 justify-around p-6">
                                         <div id="default-accordion" className="scroll-mt-20">
-                                            <h3 className="text-base md:text-lg font-medium font-sans text-gray-50 dark:text-gray-900 mb-2 md:mb-3">
+                                            <h3 className="text-base md:text-lg font-medium font-sans text-gray-900 dark:text-gray-50 mb-2 md:mb-3">
                                                 Default Accordion
                                             </h3>
                                             <Accordion
@@ -113,7 +112,7 @@ const AccordionPage: React.FC = () => {
                                             </Accordion>
                                         </div>
                                         <div id="default-accordion-subtitle" className="scroll-mt-20">
-                                            <h3 className="text-base md:text-lg font-medium font-sans text-gray-50 dark:text-gray-900 mb-2 md:mb-3">
+                                            <h3 className="text-base md:text-lg font-medium font-sans text-gray-900 dark:text-gray-50 mb-2 md:mb-3">
                                                 Default Accordion with Subtitle
                                             </h3>
                                             <Accordion
@@ -134,7 +133,7 @@ const AccordionPage: React.FC = () => {
                                             </Accordion>
                                         </div>
                                         <div id="accordion-multiple" className="scroll-mt-20">
-                                            <h3 className="text-base md:text-lg font-medium font-sans text-gray-50 dark:text-gray-900 mb-2 md:mb-3">
+                                            <h3 className="text-base md:text-lg font-medium font-sans text-gray-900 dark:text-gray-50 mb-2 md:mb-3">
                                                 Accordion with Multiple Open 
                                             </h3>
                                             <Accordion
@@ -155,7 +154,7 @@ const AccordionPage: React.FC = () => {
                                             </Accordion>
                                         </div>
                                         <div id="split-accordion" className="scroll-mt-20">
-                                            <h3 className="text-base md:text-lg font-medium font-sans text-gray-50 dark:text-gray-900 mb-2 md:mb-3">
+                                            <h3 className="text-base md:text-lg font-medium font-sans text-gray-900 dark:text-gray-50 mb-2 md:mb-3">
                                                 Split Accordion
                                             </h3>
                                             <Accordion

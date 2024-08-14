@@ -57,7 +57,7 @@ export const AccordionItem: React.FC<AccordionItemProps> = ({
   return (
       <div className={itemClasses}>
           <button
-              className="w-full text-left py-3 md:py-4 px-3 md:px-4 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 focus:outline-none flex justify-between items-center transition-colors duration-200"
+              className="w-full text-left py-3 md:py-4 px-3 md:px-4 bg-gray-200/90 dark:bg-gray-800 hover:bg-gray-300 dark:hover:bg-gray-700 focus:outline-none flex justify-between items-center transition-colors duration-200"
               onClick={onToggle}
           >
               <div className="flex flex-col justify-start">

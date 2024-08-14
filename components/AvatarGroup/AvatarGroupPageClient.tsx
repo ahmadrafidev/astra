@@ -16,13 +16,13 @@ import AvatarGroup from './AvatarGroup';
 const AvatarGroupPageClient: React.FC = () => {
     const tocItems = [
         { id: 'overview', label: 'Overview' },
+        { id: 'usage', label: 'Usage' },
         { id: 'properties', label: 'Properties' },
         { id: 'best-practices', label: 'Best Practices' },
     ];
     
     const codeExample = `
         <AvatarGroup 
-            className="bg-white dark:bg-zinc-500 p-2 rounded-lg"
             avatars={avatars} 
             max={3} 
             size="md" 
@@ -52,12 +52,11 @@ const AvatarGroupPageClient: React.FC = () => {
                     </div>
 
                     {/* Usage Section */}
-                    <section id="usage">
+                    <section id="usage" className="my-5 scroll-mt-20">
                         <Tabs>
                             <Tab label="Preview">
-                                <div className="relative w-full h-64 overflow-hidden mt-4 rounded-lg bg-zinc-900 dark:bg-zinc-50 flex justify-center items-center">
+                                <div className="relative w-full h-64 overflow-hidden mt-4 rounded-lg flex justify-center items-center bg-zinc-100 dark:bg-zinc-950 shadow border border-slate-300 dark:border-slate-800">
                                     <AvatarGroup 
-                                        className="bg-white dark:bg-zinc-500 p-2 rounded-lg"
                                         avatars={avatars} 
                                         max={3} 
                                         size="md" 

@@ -48,11 +48,11 @@ const BreadcrumbsPageClient: React.FC = () => {
                     </div>      
                     
                     {/* Usage Section */}
-                    <section id="usage">
+                    <section id="usage" className="scroll-mt-20 my-5">
                         <Tabs>
                             <Tab label="Preview">
-                                <div className="relative w-full h-64 overflow-hidden mt-4 rounded-lg bg-zinc-900 dark:bg-zinc-50 flex justify-center items-center">
-                                    <div className="w-10/12 rounded-lg bg-gray-50 dark:bg-gray-900 p-2">
+                                <div className="relative w-full h-64 overflow-hidden mt-4 rounded-lg flex justify-center items-center bg-zinc-100 dark:bg-zinc-950 shadow border border-slate-300 dark:border-slate-800">
+                                    <div className="w-7/12">
                                         <Breadcrumbs
                                             items={pageItems}
                                             className="m-4"

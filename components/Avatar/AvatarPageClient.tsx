@@ -17,6 +17,7 @@ import Avatar from './Avatar';
 const AvatarPageClient: React.FC = () => {
     const tocItems = [
         { id: 'overview', label: 'Overview' },
+        { id: 'usage', label: 'Usage' },
         { id: 'properties', label: 'Properties' },
         { id: 'best-practices', label: 'Best Practices' },
     ];
@@ -46,10 +47,10 @@ const AvatarPageClient: React.FC = () => {
                     </div>
 
                     {/* Usage Section */}
-                    <section id="usage">
+                    <section id="usage" className="my-5 scroll-mt-20">
                         <Tabs>
                             <Tab label="Preview">
-                                <div className="relative w-full h-64 overflow-hidden mt-4 rounded-lg bg-zinc-900 dark:bg-zinc-50 flex justify-center items-center">
+                                <div className="relative w-full h-64 overflow-hidden mt-4 rounded-lg flex justify-center items-center bg-zinc-100 dark:bg-zinc-950 shadow border border-slate-300 dark:border-slate-800">
                                     <Avatar 
                                         src="/icons/twitter.webp" 
                                         alt="User Avatar" 
@@ -57,7 +58,7 @@ const AvatarPageClient: React.FC = () => {
                                         shape="square" 
                                         fallback={<UserIcon />} 
                                         onClick={() => console.log('Avatar clicked')} 
-                                        className="bg-white dark:bg-zinc-500 p-2 h-10 w-10"
+                                        className="bg-white dark:bg-zinc-300 p-2 h-10 w-10"
                                     /> 
                                 </div>
                             </Tab>

@@ -38,6 +38,7 @@ const AlertDialogPageClient: React.FC = () => {
 
     const tocItems = [
         { id: 'overview', label: 'Overview' },
+        { id: 'usage', label: 'Usage' },
         { id: 'properties', label: 'Properties' },
         { id: 'best-practices', label: 'Best Practices' },
     ];
@@ -57,11 +58,11 @@ const AlertDialogPageClient: React.FC = () => {
                     </section>
 
                     {/* Usage Section */}
-                    <section id="usage" className="mb-5 scroll-mt-20">
+                    <section id="usage" className="my-5 scroll-mt-20">
                         <Tabs>
                             <Tab label="Preview">
-                                <div className="relative w-full h-64 overflow-hidden mt-4 rounded-lg bg-zinc-900 dark:bg-zinc-50 flex justify-center items-center">
-                                    <button className="px-4 py-2 bg-gray-100 dark:bg-gray-900 text-black dark:text-white rounded-lg shadow-sm hover:bg-gray-200 dark:hover:bg-gray-800" onClick={handleOpen}>
+                                <div className="relative w-full h-64 overflow-hidden mt-4 rounded-lg flex justify-center items-center bg-zinc-100 dark:bg-zinc-950 shadow border border-slate-300 dark:border-slate-800">
+                                    <button className="px-4 py-2 bg-gray-900 dark:bg-gray-100 text-white dark:text-black rounded-lg shadow-sm hover:bg-gray-800 dark:hover:bg-gray-200" onClick={handleOpen}>
                                         Show Dialog
                                     </button>
                                     <AlertDialog 

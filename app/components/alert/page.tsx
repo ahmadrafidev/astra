@@ -40,7 +40,7 @@ const AlertPage: React.FC = () => {
 
     const tocItems = [
         { id: 'overview', label: 'Overview' },
-        { id: 'variants', label: 'Variants' },
+        { id: 'usage', label: 'Usage' },
         { id: 'info-alert', label: 'Info Alert' },
         { id: 'success-alert', label: 'Success Alert' },
         { id: 'warning-alert', label: 'Warning Alert' },
@@ -64,35 +64,34 @@ const AlertPage: React.FC = () => {
                         </div>
                     </section>
 
-                    {/* Alert Variants Section */}
-                    <section id="variants" className="mb-5 scroll-mt-20">
-                        <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Variants</h2>
+                    {/* Alert Usage Section */}
+                    <section id="usage" className="mb-5 scroll-mt-20">
                         <Tabs>
                             <Tab label="Preview">
-                                <div className="relative w-full overflow-hidden rounded-lg mt-4 bg-gray-900 dark:bg-zinc-50">
+                                <div className="relative w-full overflow-hidden rounded-lg mt-4 bg-zinc-100 dark:bg-zinc-950 shadow border border-slate-300 dark:border-slate-800">
                                     <div className="space-y-4 justify-around p-6">
                                         <div id="info-alert" className="scroll-mt-20">
-                                            <h3 className="text-base md:text-lg font-medium font-sans text-gray-50 dark:text-gray-900 mb-2 md:mb-3">
+                                            <h3 className="text-base md:text-lg font-medium font-sans text-gray-900 dark:text-gray-50 mb-2 md:mb-3">
                                                 Info Alert
                                             </h3>
                                             <Alert className="p-4" type="info" title="This is an information alert" isDismissible>
                                             </Alert>
                                         </div>
                                         <div id="success-alert" className="scroll-mt-20">
-                                            <h3 className="text-base md:text-lg font-medium font-sans text-gray-50 dark:text-gray-900 mb-2 md:mb-3">Success Alert</h3>
+                                            <h3 className="text-base md:text-lg font-medium font-sans text-gray-900 dark:text-gray-50 mb-2 md:mb-3">Success Alert</h3>
                                             <Alert className="p-4" type="success" isDismissible>
                                                 <AlertTitle>This is a success alert</AlertTitle>
                                                 <AlertContent>A little bit of a content here</AlertContent>
                                             </Alert>
                                         </div>
                                         <div id="warning-alert" className="scroll-mt-20">
-                                            <h3 className="text-base md:text-lg font-medium font-sans text-gray-50 dark:text-gray-900 mb-2 md:mb-3">Warning Alert</h3>
+                                            <h3 className="text-base md:text-lg font-medium font-sans text-gray-900 dark:text-gray-50 mb-2 md:mb-3">Warning Alert</h3>
                                             <Alert className="p-4" type="warning" isDismissible>
                                                 <AlertTitle>This is a warning alert</AlertTitle>
                                             </Alert>
                                         </div>
                                         <div id="error-alert" className="scroll-mt-20">
-                                            <h3 className="text-base md:text-lg font-medium font-sans text-gray-50 dark:text-gray-900 mb-2 md:mb-3">Error Alert</h3>
+                                            <h3 className="text-base md:text-lg font-medium font-sans text-gray-900 dark:text-gray-50 mb-2 md:mb-3">Error Alert</h3>
                                             <Alert className="p-4" type="error" isDismissible>
                                                 <AlertTitle>This is an error alert</AlertTitle>
                                             </Alert>
