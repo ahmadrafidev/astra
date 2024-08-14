@@ -45,8 +45,8 @@ const ButtonClient: React.FC = () => {
                     <section id="usage" className="my-5 scroll-mt-20">
                         <Tabs>
                             <Tab label="Preview">
-                              <div className="flex flex-col relative w-full overflow-hidden mt-4 rounded-lg justify-center items-center bg-zinc-100 dark:bg-zinc-950 shadow border border-slate-300 dark:border-slate-800">
-                                <div className="space-y-4 justify-around p-6">
+                              <div className="flex relative w-full overflow-hidden mt-4 rounded-lg justify-center items-center bg-zinc-100 dark:bg-zinc-950 shadow border border-slate-300 dark:border-slate-800">
+                                <div className="flex-col space-y-10 justify-around p-6">
                                   <div>
                                       <Button variant="default">Default Button</Button>
                                   </div>
