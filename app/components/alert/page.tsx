@@ -21,11 +21,20 @@ const AlertPage: React.FC = () => {
     const codeExample = `
 
         {/* Basic Alert */}
-        <Alert className="p-4" type="info" title="This is an information alert" isDismissible>
+        <Alert 
+            className="p-4" 
+            type="info" 
+            title="This is an information alert" 
+            isDismissible
+        >
         </Alert>
 
         {/* Alert with Title and Content */}
-        <Alert className="p-4" type="success" isDismissible>
+        <Alert 
+            className="p-4" 
+            type="success" 
+            isDismissible
+        >
             <AlertTitle>This is a success alert</AlertTitle>
             <AlertContent>A little bit of a content here</AlertContent>
         </Alert>
