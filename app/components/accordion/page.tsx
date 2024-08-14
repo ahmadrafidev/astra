@@ -55,7 +55,6 @@ const AccordionPage: React.FC = () => {
                 </AccordionItem>
             </>
         </Accordion>
-        
     `;
 
     const tocItems = [

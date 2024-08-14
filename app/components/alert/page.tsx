@@ -19,7 +19,6 @@ export const metadata: Metadata = {
 const AlertPage: React.FC = () => {
 
     const codeExample = `
-
         {/* Basic Alert */}
         <Alert 
             className="p-4" 
@@ -38,9 +37,6 @@ const AlertPage: React.FC = () => {
             <AlertTitle>This is a success alert</AlertTitle>
             <AlertContent>A little bit of a content here</AlertContent>
         </Alert>
-
-
-        
     `;
 
     const tocItems = [

@@ -53,7 +53,7 @@ const Avatar: React.FC<AvatarProps> = ({
 
   const dimensionSize = typeof size === 'number' ? size : sizeMap[size];
 
-  const shapeClass = shape === 'circle' ? 'rounded-full' : 'rounded-md';
+  const shapeClass = shape === 'circle' ? 'rounded-full' : 'rounded-lg';
 
   if (error && fallback) {
     return (

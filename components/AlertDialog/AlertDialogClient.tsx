@@ -5,16 +5,16 @@ import React, { useState } from 'react';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { materialLight } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 
+import TOC from '@/components/TOC/TOC';
+import { Tabs, Tab } from '@/components/Tabs/Tabs';
+
 import Layout from '../Layout/Layout';
 import Badge from '../Badge/Badge';
 
 import AlertDialog from './AlertDialog';
 import AlertDialogDocumentation from './AlertDialogDocumentation';
-import TOC from '@/components/TOC/TOC';
-import { Tabs, Tab } from '@/components/Tabs/Tabs';
 
 const codeExample = `
-
         <AlertDialog 
             open={isOpen} 
             onClose={handleClose}
@@ -25,7 +25,6 @@ const codeExample = `
             <h3>Confirm Action</h3>
             <p>This action is irreversible. Are you sure you want to proceed?</p>
         </AlertDialog>
-        
     `;
 
 const tocItems = [
@@ -52,11 +51,11 @@ const AlertDialogPageClient: React.FC = () => {
                         <div className="flex flex-col">
                             <h1 className="text-2xl md:text-3xl font-semibold text-gray-900 dark:text-gray-50 mb-3 md:mb-4">Alert Dialog</h1>
                             <p className="text-sm md:text-base font-normal font-sans text-gray-900 dark:text-gray-50">
-                                A pop-up window that displays important information and requires user acknowledgment or action.
+                                A pop-up window that displays important information and requires user action.
                             </p>
                         </div>
                     </section>
-                    <section id="variants" className="mb-5 scroll-mt-20">
+                    <section id="usage" className="mb-5 scroll-mt-20">
                         <Tabs>
                             <Tab label="Preview">
                                 <div className="relative w-full h-64 overflow-hidden mt-4 rounded-lg bg-zinc-900 dark:bg-zinc-50 flex justify-center items-center">
