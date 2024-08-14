@@ -31,6 +31,7 @@ export interface DockItemProps {
  * @property {string | number} [dockWidth='auto'] - The width of the dock container.
  * @property {string | number} [dockHeight='auto'] - The height of the dock container.
  * @property {'default' | 'glassmorphism'} [variant='default'] - The visual variant of the dock.
+ * @property {'default' | 'floating'} [hoverEffect='floating'] - The hover effect to apply to all dock items.
  */
 export interface DockProps {
   className?: string;
@@ -39,6 +40,7 @@ export interface DockProps {
   dockWidth?: string | number;
   dockHeight?: string | number;
   variant?: 'default' | 'glassmorphism';
+  hoverEffect?: 'default' | 'floating';
 }
 
 /**
@@ -56,9 +58,9 @@ const DockItem: React.FC<DockItemProps & { iconSize: number }> = ({
   iconSize,
   hoverEffect = 'floating',
 }) => {
-  const hoverClass = hoverEffect === 'floating' ? 'hover:scale-110' : '';
+  const hoverClass = hoverEffect === 'floating' ? 'transition-transform hover:scale-110' : '';
   const content = (
-    <span className={`p-2 rounded-full transition-all duration-200 ease-in-out ${hoverClass}`}>
+    <span className={`p-2 rounded-full ${hoverClass}`}>
       <Icon size={iconSize} className="outline-none focus:outline-none" />
     </span>
   );
@@ -71,14 +73,14 @@ const DockItem: React.FC<DockItemProps & { iconSize: number }> = ({
 
   if (href) {
     return (
-      <Link href={href} aria-label={label} className="outline-none focus:outline-none">
+      <Link href={href} aria-label={label} className={`outline-none focus:outline-none ${hoverClass}`}>
         {wrappedContent}
       </Link>
     );
   }
 
   return (
-    <button onClick={onClick} aria-label={label} className="outline-none focus:outline-none">
+    <button onClick={onClick} aria-label={label} className={`outline-none focus:outline-none ${hoverClass}`}>
       {wrappedContent}
     </button>
   );
@@ -98,6 +100,7 @@ const Dock: React.FC<DockProps> = ({
   dockWidth = 'auto',
   dockHeight = 'auto',
   variant = 'default', 
+  hoverEffect = 'default',
 }) => {
   const glassClasses = variant === 'glassmorphism'
     ? 'bg-white/10 backdrop-blur-sm border border-white/20 shadow-lg bg-gradient-to-br from-white/30 to-white/10 rounded-lg'
@@ -111,7 +114,7 @@ const Dock: React.FC<DockProps> = ({
       aria-label="Dock Component"
     >
       {items.map((item, index) => (
-        <DockItem key={index} {...item} iconSize={iconSize} />
+        <DockItem key={index} {...item} iconSize={iconSize} hoverEffect={hoverEffect} />
       ))}
     </nav>
   );

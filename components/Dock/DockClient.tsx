@@ -50,6 +50,7 @@ const DockClient: React.FC = () => {
                                         dockWidth="500px"
                                         dockHeight="60px"
                                         variant="default"
+                                        hoverEffect="default"
                                     />
                                 </div>
                             </div>
@@ -63,6 +64,7 @@ const DockClient: React.FC = () => {
                                         dockWidth="500px"
                                         dockHeight="60px"
                                         variant="glassmorphism"
+                                        hoverEffect="floating"
                                     />
                                 </div>
                             </div>
@@ -117,6 +119,12 @@ const DockClient: React.FC = () => {
                                         <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 font-mono">{`'default' | 'glassmorphism'`}</td>
                                         <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">{`'default'`}</td>
                                         <td className="px-6 py-4 text-sm text-gray-500 dark:text-gray-300">The visual variant of the dock (e.g., default or glassmorphism).</td>
+                                    </tr>
+                                    <tr>
+                                        <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-100">hoverEffect</td>
+                                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 font-mono">{`'default' | 'floating'`}</td>
+                                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">{`'default'`}</td>
+                                        <td className="px-6 py-4 text-sm text-gray-500 dark:text-gray-300">The hover effect to apply to all dock items.</td>
                                     </tr>
                                 </tbody>
                             </table>
