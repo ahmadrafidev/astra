@@ -4,8 +4,8 @@ const AlertDialogDocumentation: React.FC = () => {
     return (
       <>
         {/* Props Section */}
-        <section className="my-5">
-          <h2 className="text-xl md:text-2xl font-semibold text-gray-900 dark:text-gray-50 mb-6">Props</h2>
+        <section id="properties" className="my-5 scroll-mt-20">
+          <h2 className="text-xl md:text-2xl font-medium text-gray-900 dark:text-gray-50 mb-6">Props</h2>
           <div className="bg-white dark:bg-gray-800 rounded-lg shadow overflow-hidden">
             <table className="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
               <thead className="bg-gray-50 dark:bg-gray-700">
@@ -64,7 +64,7 @@ const AlertDialogDocumentation: React.FC = () => {
           </div>
         </section>
         {/* Best Practices Section */}
-        <section className="my-5">
+        <section id="best-practices" className="my-5 scroll-mt-20">
           <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Best Practices</h2>
           <div className="space-y-4">
             <ul className="list-decimal list-inside text-gray-700 dark:text-gray-300 space-y-3">
