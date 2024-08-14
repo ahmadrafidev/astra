@@ -17,7 +17,6 @@ export const metadata: Metadata = {
 };
 
 const AlertPage: React.FC = () => {
-
     const codeExample = `
         {/* Basic Alert */}
         <Alert 
@@ -40,6 +39,7 @@ const AlertPage: React.FC = () => {
     `;
 
     const tocItems = [
+        { id: 'overview', label: 'Overview' },
         { id: 'variants', label: 'Variants' },
         { id: 'info-alert', label: 'Info Alert' },
         { id: 'success-alert', label: 'Success Alert' },
@@ -55,7 +55,7 @@ const AlertPage: React.FC = () => {
                 <div className="w-4/5 pr-2">
                     <Badge text="Components" />
                     {/* Header Content */}
-                    <section className="mb-5">
+                    <section id="overview" className="mb-5 scroll-mt-16">
                         <div className="flex flex-col">
                             <h1 className="text-2xl md:text-3xl font-semibold font-sans text-gray-900 dark:text-gray-50 mb-3 md:mb-4">Alert</h1>
                             <p className="text-sm md:text-base font-normal font-sans text-gray-900 dark:text-gray-50">

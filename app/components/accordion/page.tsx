@@ -18,7 +18,6 @@ export const metadata: Metadata = {
 };
 
 const AccordionPage: React.FC = () => {
-
     const codeExample = `
         {/* Default Accordion */}
         <Accordion
@@ -38,7 +37,7 @@ const AccordionPage: React.FC = () => {
             </>
         </Accordion>
 
-         {/* Multiple Default Accordion */}
+            {/* Multiple Default Accordion */}
         <Accordion
             className="overflow-hidden rounded-lg"
             itemClassName="first:rounded-t-lg last:rounded-b-lg"
@@ -58,6 +57,7 @@ const AccordionPage: React.FC = () => {
     `;
 
     const tocItems = [
+        { id: 'overview', label: 'Overview' },
         { id: 'variants', label: 'Variants' },
         { id: 'default-accordion', label: 'Default Accordion' },
         { id: 'default-accordion-subtitle', label: 'Default Accordion with Subtitle' },
@@ -75,7 +75,7 @@ const AccordionPage: React.FC = () => {
                     <Badge text="Components" />
 
                     {/* Header Content */}
-                    <section className="mb-5">
+                    <section id="overview" className="mb-5 scroll-mt-16">
                         <div className="flex flex-col">
                             <h1 className="text-2xl md:text-3xl font-semibold font-sans text-gray-900 dark:text-gray-50 mb-3 md:mb-4">Accordion</h1>
                             <p className="text-sm md:text-base font-normal font-sans text-gray-900 dark:text-gray-50">

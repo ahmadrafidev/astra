@@ -14,7 +14,16 @@ import Badge from '../Badge/Badge';
 import AlertDialog from './AlertDialog';
 import AlertDialogDocumentation from './AlertDialogDocumentation';
 
-const codeExample = `
+const AlertDialogPageClient: React.FC = () => {
+    const [isOpen, setIsOpen] = useState(false);
+
+    const handleOpen = () => setIsOpen(true);
+    const handleClose = () => setIsOpen(false);
+    const handleConfirm = () => {
+        console.log('Confirmed!');
+    };
+
+    const codeExample = `
         <AlertDialog 
             open={isOpen} 
             onClose={handleClose}
@@ -27,20 +36,11 @@ const codeExample = `
         </AlertDialog>
     `;
 
-const tocItems = [
-    { id: 'overview', label: 'Overview' },
-    { id: 'properties', label: 'Properties' },
-    { id: 'best-practices', label: 'Best Practices' },
-];
-
-const AlertDialogPageClient: React.FC = () => {
-    const [isOpen, setIsOpen] = useState(false);
-
-    const handleOpen = () => setIsOpen(true);
-    const handleClose = () => setIsOpen(false);
-    const handleConfirm = () => {
-        console.log('Confirmed!');
-    };
+    const tocItems = [
+        { id: 'overview', label: 'Overview' },
+        { id: 'properties', label: 'Properties' },
+        { id: 'best-practices', label: 'Best Practices' },
+    ];
 
     return (
         <Layout>
@@ -55,6 +55,8 @@ const AlertDialogPageClient: React.FC = () => {
                             </p>
                         </div>
                     </section>
+
+                    {/* Usage Section */}
                     <section id="usage" className="mb-5 scroll-mt-20">
                         <Tabs>
                             <Tab label="Preview">

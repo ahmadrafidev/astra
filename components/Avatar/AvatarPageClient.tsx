@@ -14,13 +14,14 @@ import Badge from '../Badge/Badge';
 
 import Avatar from './Avatar';
 
-const tocItems = [
-    { id: 'overview', label: 'Overview' },
-    { id: 'properties', label: 'Properties' },
-    { id: 'best-practices', label: 'Best Practices' },
-];
-
-const codeExample = `
+const AvatarPageClient: React.FC = () => {
+    const tocItems = [
+        { id: 'overview', label: 'Overview' },
+        { id: 'properties', label: 'Properties' },
+        { id: 'best-practices', label: 'Best Practices' },
+    ];
+    
+    const codeExample = `
         <Avatar 
             src="/icons/twitter.webp" 
             alt="User Avatar" 
@@ -31,8 +32,7 @@ const codeExample = `
             className="bg-white dark:bg-zinc-500 p-2 h-10 w-10"
         /> 
     `;
-
-const AvatarPageClient: React.FC = () => {
+    
     return (
         <Layout>
             <div className="flex">
@@ -92,7 +92,6 @@ const AvatarPageClient: React.FC = () => {
                                 </div>
                             </Tab>
                         </Tabs>
-                        
                     </section>
 
                     {/* Props Section */}

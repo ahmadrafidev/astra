@@ -13,13 +13,14 @@ import Badge from '../Badge/Badge';
 
 import AvatarGroup from './AvatarGroup';
 
-const tocItems = [
-    { id: 'overview', label: 'Overview' },
-    { id: 'properties', label: 'Properties' },
-    { id: 'best-practices', label: 'Best Practices' },
-];
-
-const codeExample = `
+const AvatarGroupPageClient: React.FC = () => {
+    const tocItems = [
+        { id: 'overview', label: 'Overview' },
+        { id: 'properties', label: 'Properties' },
+        { id: 'best-practices', label: 'Best Practices' },
+    ];
+    
+    const codeExample = `
         <AvatarGroup 
             className="bg-white dark:bg-zinc-500 p-2 rounded-lg"
             avatars={avatars} 
@@ -29,16 +30,15 @@ const codeExample = `
             overlap="md"
         />
     `;
+    
+    const avatars = [
+        { src: '/icons/android-light.webp', alt: 'User Avatar 1', size: 40 },
+        { src: '/icons/android-light.webp', alt: 'User Avatar 2', size: 40 },
+        { src: '/icons/android-light.webp', alt: 'User Avatar 2', size: 40 },
+        { src: '/icons/android-light.webp', alt: 'User Avatar 2', size: 40 },
+        { src: '/icons/android-light.webp', alt: 'User Avatar 2', size: 40 },
+    ];
 
-const avatars = [
-    { src: '/icons/android-light.webp', alt: 'User Avatar 1', size: 40 },
-    { src: '/icons/android-light.webp', alt: 'User Avatar 2', size: 40 },
-    { src: '/icons/android-light.webp', alt: 'User Avatar 2', size: 40 },
-    { src: '/icons/android-light.webp', alt: 'User Avatar 2', size: 40 },
-    { src: '/icons/android-light.webp', alt: 'User Avatar 2', size: 40 },
-];
-
-const AvatarGroupPageClient: React.FC = () => {
     return (
         <Layout>
             <div className="flex">
