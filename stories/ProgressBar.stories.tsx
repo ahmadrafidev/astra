@@ -124,25 +124,3 @@ CustomLabel.args = {
     labelPosition: 'outside',
     customLabel: '75% Completed',
 };
-
-export const WithStripe = Template.bind({});
-WithStripe.args = {
-    progress: 30,
-    size: 'md',
-    progressBarVariant: 'default',
-    progressVariant: 'warning',
-    showLabel: true,
-    labelPosition: 'inside',
-    hasStripe: true,
-};
-
-export const DangerVariant = Template.bind({});
-DangerVariant.args = {
-    progress: 90,
-    size: 'lg',
-    progressBarVariant: 'default',
-    progressVariant: 'danger',
-    showLabel: true,
-    labelPosition: 'inside',
-    animate: true,
-};
