@@ -70,7 +70,7 @@ const TogglePageClient: React.FC = () => {
                         <Tabs>
                             <Tab label="Preview">
                                 <div className="flex relative w-full overflow-hidden mt-4 rounded-lg justify-center items-center bg-zinc-100 dark:bg-zinc-950 shadow border border-slate-300 dark:border-slate-800">
-                                    <div className="space-y-6 flex flex-col justify-around p-10">
+                                    <div className="space-y-8 flex flex-col justify-around p-10 text-center">
                                         <div className="items-center flex flex-col">
                                             <h3 className="text-base md:text-lg font-medium font-sans text-gray-900 dark:text-gray-50 mb-2 md:mb-3">
                                                 Default Toggle

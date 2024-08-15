@@ -70,7 +70,7 @@ const SnackbarPageClient: React.FC = () => {
                         <Tabs>
                             <Tab label="Preview">
                                 <div className="relative w-full overflow-hidden rounded-lg mt-4 bg-zinc-100 dark:bg-zinc-950 shadow border border-slate-300 dark:border-slate-800">
-                                    <div className="flex flex-col justify-around p-6 space-y-8">
+                                    <div className="flex flex-col justify-around p-6 space-y-8 text-center">
                                         <div>
                                             <h3 className="text-base md:text-lg font-medium font-sans text-gray-900 dark:text-gray-50 mb-2 md:mb-3">
                                                 Info Snackbar Model
