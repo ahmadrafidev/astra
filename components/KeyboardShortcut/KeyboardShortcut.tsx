@@ -85,7 +85,7 @@ const KeyboardShortcut: React.FC<KeyboardShortcutProps> = ({
     // TODO: Fix overlay
     <div className={`z-50 keyboard-shortcut ${className}`}> 
       <button 
-        className="shortcut-button flex items-center justify-center bg-gray-900 dark:bg-gray-100 hover:bg-gray-700 dark:hover:bg-gray-200 text-gray-100 dark:text-gray-900 font-semibold py-2 px-4 rounded-lg transition-colors duration-200"
+        className="shortcut-button flex items-center justify-center bg-gray-200 dark:bg-zinc-800 hover:bg-gray-200/70 dark:hover:bg-zinc-700/40 text-gray-900 dark:text-gray-100 font-semibold py-2 px-4 rounded-lg transition-colors duration-200"
         onClick={() => setShowShortcuts(prev => !prev)}
         aria-label="Show keyboard shortcuts"
       >
@@ -100,14 +100,14 @@ const KeyboardShortcut: React.FC<KeyboardShortcutProps> = ({
           onClick={() => setShowShortcuts(false)}
         >
           <div 
-            className="shortcut-modal bg-white rounded-lg p-6 max-w-md w-full"
+            className="shortcut-modal bg-gray-100 dark:bg-zinc-800 rounded-lg p-6 max-w-md w-full"
             onClick={e => e.stopPropagation()}
           >
-            <h2 className="text-xl font-semibold mb-4">Keyboard Shortcuts</h2>
+            <h2 className="text-xl font-semibold mb-4 text-gray-950 dark:text-gray-50">Keyboard Shortcuts</h2>
             <ul className="space-y-2">
               {shortcuts.map((shortcut, index) => (
                 <li key={index} className="flex justify-between items-center">
-                  <span className="text-base font-normal">{shortcut.description}</span>
+                  <span className="text-base font-normal text-gray-950 dark:text-gray-50">{shortcut.description}</span>
                   <kbd className="bg-gray-100 px-2 py-1 rounded text-sm font-mono">
                     {renderShortcutKey(shortcut)}
                   </kbd>

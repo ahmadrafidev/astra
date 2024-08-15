@@ -131,11 +131,11 @@ const FileUploader: React.FC<FileUploaderProps> = ({
 
   return (
     <div className={`w-full max-w-sm mx-auto ${className} ${styles.container || ''}`}>
-      <label className="block text-base font-medium text-gray-900 dark:text-gray-100 mb-2">{label}</label>
+      <label className="block text-base font-medium text-gray-100 dark:text-gray-900 mb-2">{label}</label>
       <div
         className={`
-          border-2 rounded-2xl p-4 text-center cursor-pointer transition-colors bg-gray-900 dark:bg-gray-100
-          ${dragActive ? 'border-blue-400 bg-blue-50' : 'border-gray-300 hover:border-gray-400'}
+          border-2 rounded-2xl p-4 text-center cursor-pointer transition-colors bg-gray-100 dark:bg-gray-900
+          ${dragActive ? 'border-blue-400 bg-blue-50' : 'border-gray-300 hover:border-gray-400 dark:border-gray-800 dark:hover:border-gray-700'}
           ${styles.dropzone || ''}
           ${dragActive ? styles.dropzoneActive || '' : ''}
         `}
@@ -152,11 +152,11 @@ const FileUploader: React.FC<FileUploaderProps> = ({
           onChange={handleChange}
           accept={allowedTypes.join(',')}
         />
-        <Upload className={`mx-auto h-8 w-8 text-gray-50 dark:text-gray-900 ${styles.uploadIcon || ''}`} />
-        <p className={`my-2 text-base font-sans font-medium text-gray-50 dark:text-gray-900 ${styles.dropzoneText || ''}`}>{dropzoneText}</p>
+        <Upload className={`mx-auto h-8 w-8 text-gray-900 dark:text-gray-50 ${styles.uploadIcon || ''}`} />
+        <p className={`my-2 text-base font-sans font-medium text-gray-900 dark:text-gray-50 ${styles.dropzoneText || ''}`}>{dropzoneText}</p>
         <button className={`
           my-2 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-full shadow-sm
-          text-black bg-gray-100 dark:bg-gray-900 dark:text-gray-100 hover:bg-gray-200 dark:hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500
+          text-gray-100 bg-gray-900 dark:bg-gray-100 dark:text-gray-950 hover:bg-gray-800 dark:hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500
           ${styles.browseButton || ''}
         `}>
           {browseText}
