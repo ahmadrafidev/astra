@@ -86,6 +86,7 @@ const ErrorPageClient: React.FC = () => {
                                                 type="network"
                                                 title="Network error"
                                                 message="Please check your internet connection or try again"
+                                                className="bg-red-50"
                                                 primaryAction={{
                                                     label: "Retry",
                                                     onClick: () => handleRetry()
@@ -97,8 +98,9 @@ const ErrorPageClient: React.FC = () => {
                                             />
                                             <Error 
                                                 type="payment"
-                                                title="Payment error"
+                                                title="Your card was declined!"
                                                 message="Please check your payment information or try again"
+                                                className="bg-sky-50"
                                                 primaryAction={{
                                                     label: "Retry",
                                                     onClick: () => handleRetry()
@@ -110,8 +112,9 @@ const ErrorPageClient: React.FC = () => {
                                             />
                                             <Error 
                                                 type="authentication"
-                                                title="Authentication error"
-                                                message="Please check your authentication information or try again"
+                                                title="Wrong credentials"
+                                                message="Please check your email and password or try again"
+                                                className="bg-gray-50"
                                                 primaryAction={{
                                                     label: "Retry",
                                                     onClick: () => handleRetry()

@@ -71,11 +71,11 @@ const Error: React.FC<ErrorProps> = ({
   secondaryAction,
 }) => {
   return (
-    <div className={`bg-red-50 rounded-lg shadow-md w-64 p-4 flex flex-col items-center ${className}`} role="alert">
+    <div className={`rounded-lg shadow-md w-64 p-4 flex flex-col items-center ${className}`} role="alert">
       <div className="mb-4">
         {alertIcons[type]}
       </div>
-      <h3 className="text-lg font-semibold text-gray-900 mb-1">{title}</h3>
+      <h3 className="text-lg font-semibold text-gray-900 mb-1 text-center">{title}</h3>
       <p className="text-sm text-gray-700 text-center mb-4">{message}</p>
       <div className="flex justify-center space-x-2 w-full">
         {secondaryAction && (
