@@ -3,13 +3,18 @@
 import React from 'react';
 import { Home, User, Github, Linkedin, Twitter, Globe } from 'lucide-react';
 
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { materialLight } from 'react-syntax-highlighter/dist/cjs/styles/prism';
+
+import TOC from '@/components/TOC/TOC';
+import { Tabs, Tab } from '@/components/Tabs/Tabs';
+
 import Layout from '../Layout/Layout';
 import Badge from '../Badge/Badge';
 
 import Dock from './Dock';
-import TOC from '@/components/TOC/TOC';
 
-const items = [
+const dockItems = [
     { href: '/', icon: Home, label: 'Home' },
     { href: '/about', icon: User, label: 'About' },
     { href: 'https://github.com/ahmadrafidev', icon: Github, label: 'GitHub' },
@@ -29,6 +34,16 @@ const tocItems = [
 
 const DockClient: React.FC = () => {
 
+    const codeExample = `
+        <Dock 
+            items={${JSON.stringify(dockItems, null, 4)}}
+            dockWidth="500px"
+            dockHeight="60px"
+            variant="glassmorphism"
+            hoverEffect="floating"
+        />
+    `;
+
     return (
         <Layout>
             <div className="flex">
@@ -41,39 +56,75 @@ const DockClient: React.FC = () => {
                         </p>
                     </div>
                     <section id="variants" className="flex flex-col space-y-4 scroll-mt-20">
-                        <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50">Variants</h2>
-                        <div id="default-dock" className="space-y-2 scroll-mt-20">
-                            <h3 className="text-lg md:text-xl font-medium font-sans text-gray-900 dark:text-gray-50">Default Dock</h3>
-                            <div className="relative w-full h-64 overflow-hidden rounded-lg bg-gradient-to-r from-cyan-400 via-sky-500 to-blue-600">
-                                <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
-                                    <Dock 
-                                        items={items}
-                                        dockWidth="500px"
-                                        dockHeight="60px"
-                                        variant="default"
-                                        hoverEffect="default"
-                                    />
+                        <Tabs>
+                            <Tab label="Preview">
+                                <div className="flex flex-col space-y-6">
+                                    <div id="default-dock" className="space-y-2 scroll-mt-20">
+                                        <h3 className="text-lg md:text-xl font-medium font-sans text-gray-900 dark:text-gray-50">Default Dock</h3>
+                                        <div className="relative w-full h-64 overflow-hidden rounded-lg bg-gradient-to-r from-cyan-400 via-sky-500 to-blue-600">
+                                            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
+                                                <Dock 
+                                                    items={dockItems}
+                                                    dockWidth="500px"
+                                                    dockHeight="60px"
+                                                    variant="default"
+                                                    hoverEffect="default"
+                                                />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="glassmorphism-dock" className="space-y-2 scroll-mt-20">
+                                        <h3 className="text-lg md:text-xl font-medium font-sans text-gray-900 dark:text-gray-50">Glassmorphism Dock</h3>
+                                        <div className="relative w-full h-64 overflow-hidden rounded-lg bg-gradient-to-r from-cyan-400 via-sky-500 to-blue-600">
+                                            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
+                                                <Dock 
+                                                    items={dockItems}
+                                                    dockWidth="500px"
+                                                    dockHeight="60px"
+                                                    variant="glassmorphism"
+                                                    hoverEffect="floating"
+                                                />
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div id="glassmorphism-dock" className="space-y-2 scroll-mt-20">
-                            <h3 className="text-lg md:text-xl font-medium font-sans text-gray-900 dark:text-gray-50">Glassmorphism Dock</h3>
-                            <div className="relative w-full h-64 overflow-hidden rounded-lg bg-gradient-to-r from-cyan-400 via-sky-500 to-blue-600">
-                                <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
-                                    <Dock 
-                                        items={items}
-                                        dockWidth="500px"
-                                        dockHeight="60px"
-                                        variant="glassmorphism"
-                                        hoverEffect="floating"
-                                    />
+                            </Tab>
+                            <Tab label="Code">
+                                <div
+                                    className="relative rounded-lg bg-gray-900 dark:bg-gray-800/90 mt-4"
+                                    role="region"
+                                    aria-label="Code Snippet in tsx"
+                                >
+                                    <div className="flex justify-between items-center px-4 py-2 border-b border-gray-800">
+                                        <span className="text-sm font-medium text-gray-100">
+                                            tsx
+                                        </span>
+                                    </div>
+                                    <div className="overflow-auto rounded-lg border border-gray-800">
+                                        <SyntaxHighlighter
+                                            language="tsx"
+                                            style={materialLight}
+                                            showLineNumbers={false}
+                                            wrapLongLines={true}
+                                            customStyle={{
+                                                margin: 1.5,
+                                                borderRadius: '0.5rem 0.5rem 0.5rem 0.5rem',
+                                                fontSize: '14px',
+                                                lineHeight: '1.25',
+                                                padding: '10px',
+                                            }}
+                                        >
+                                            {codeExample}
+                                        </SyntaxHighlighter>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
+                            </Tab>
+                        </Tabs>
                     </section>
+
                     {/* Props Section */}
                     <section id="properties" className="my-5 scroll-mt-20">
-                        <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-6">Props</h2>
+                        <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Props</h2>
                         <div className="bg-white dark:bg-gray-800 rounded-lg shadow overflow-hidden">
                             <table className="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
                                 <thead className="bg-gray-50 dark:bg-gray-700">
@@ -131,6 +182,7 @@ const DockClient: React.FC = () => {
                             </table>
                         </div>
                     </section>
+
                     {/* Best Practices Section */}
                     <section id="best-practices" className="scroll-mt-20">
                         <h2 className="text-2xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Best Practices</h2>
