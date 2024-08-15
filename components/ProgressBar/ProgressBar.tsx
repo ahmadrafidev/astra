@@ -30,8 +30,6 @@ const progressVariants = cva(
       variant: {
         default: "bg-blue-500",
         success: "bg-green-500",
-        warning: "bg-yellow-500",
-        danger: "bg-red-500",
         custom: "",
       },
     },
@@ -67,7 +65,7 @@ export interface ProgressBarProps {
   animate?: boolean;
   size?: 'sm' | 'md' | 'lg';
   progressBarVariant?: 'default' | 'custom';
-  progressVariant?: 'default' | 'custom' | 'success' | 'warning' | 'danger';
+  progressVariant?: 'default' | 'custom' | 'success';
   hasStripe?: boolean;
 }
 
