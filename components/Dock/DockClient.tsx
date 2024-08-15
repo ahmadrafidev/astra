@@ -19,6 +19,7 @@ const items = [
 ];
 
 const tocItems = [
+    { id: 'overview', label: 'Overview' },
     { id: 'variants', label: 'Variants' },
     { id: 'default-dock', label: 'Default Dock' },
     { id: 'glassmorphism-dock', label: 'Glassmorphism Dock' },
@@ -33,7 +34,7 @@ const DockClient: React.FC = () => {
             <div className="flex">
                 <div className="w-4/5 pr-2">
                     <Badge text="Components" />
-                    <div className="flex flex-col mb-5">
+                    <div id="overview" className="flex flex-col mb-5 scroll-mt-16">
                         <h1 className="text-2xl md:text-3xl font-semibold mb-4 text-gray-900 dark:text-gray-50">Dock</h1>
                         <p className="texta-sm md:text-base font-normal font-sans text-gray-900 dark:text-gray-50">
                             A dynamic hub for effortless access and intuitive navigation.
