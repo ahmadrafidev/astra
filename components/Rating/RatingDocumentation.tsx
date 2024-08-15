@@ -4,8 +4,8 @@ const RatingDocumentation = () => {
   return (
     <>
       {/* Props Section */}
-      <section className="my-5">
-        <h2 className="text-xl md:text-2xl font-medium text-gray-900 dark:text-gray-50 mb-6">Props</h2>
+      <section id="properties" className="my-5 scroll-mt-20">
+        <h2 className="text-xl md:text-2xl font-medium text-gray-900 dark:text-gray-50 mb-5">Props</h2>
         <div className="bg-white dark:bg-gray-800 rounded-lg shadow overflow-hidden">
           <table className="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
             <thead className="bg-gray-50 dark:bg-gray-700">
@@ -31,7 +31,7 @@ const RatingDocumentation = () => {
               </tr>
               <tr>
                 <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-100">onRate</td>
-                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 font-mono">{'(rating: number | null) => void'}</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 font-mono text-wrap">{'(rating: number | null) => void'}</td>
                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">-</td>
                 <td className="px-6 py-4 text-sm text-gray-500 dark:text-gray-300">Callback function to handle rating changes.</td>
               </tr>
@@ -49,7 +49,7 @@ const RatingDocumentation = () => {
               </tr>
               <tr>
                 <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-100">icon</td>
-                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 font-mono">React.ReactNode</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 font-mono">ReactNode</td>
                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">{'Star Icon'}</td>
                 <td className="px-6 py-4 text-sm text-gray-500 dark:text-gray-300">Custom icon for rating stars.</td>
               </tr>
@@ -68,7 +68,7 @@ const RatingDocumentation = () => {
               <tr>
                 <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-100">className</td>
                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 font-mono">string</td>
-                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">empty</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">-</td>
                 <td className="px-6 py-4 text-sm text-gray-500 dark:text-gray-300">Additional classes for styling.</td>
               </tr>
               <tr>
@@ -87,12 +87,13 @@ const RatingDocumentation = () => {
           </table>
         </div>
       </section>
+
       {/* Best Practices Section */}
-      <section>
-        <h2 className="text-xl md:text-2xl font-medium text-gray-900 dark:text-gray-50 mb-6">Best Practices</h2>
+      <section id="best-practices" className="scroll-mt-20">
+        <h2 className="text-xl md:text-2xl font-medium text-gray-900 dark:text-gray-50 mb-5">Best Practices</h2>
         <div className="space-y-4">
           <ul className="list-decimal list-inside text-gray-700 dark:text-gray-300 space-y-3">
-            <li>Ensure the rating component is easy to use and accessible to all users, including keyboard navigation.</li>
+            <li>Ensure the rating component is easy to use and accessible to all users.</li>
             <li>Provide immediate visual feedback to users as they interact with the rating component.</li>
             <li>Keep the interface intuitive and easy to use.</li>
             <li>Maintain consistency with overall design system.</li>
