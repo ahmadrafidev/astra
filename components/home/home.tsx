@@ -17,8 +17,14 @@ import AlignCenterHorizontalIcon from '../Icons/AlignCenterHorizontalIcon';
 import WandIcon from '../Icons/WandIcon';
 import InteractiveShowcase from '../InteractiveShowcase/InteractiveShowcase';
 
+import { foundationList } from '@/utils/constants/route';
+
 export function HomePage() {
   const [activeSection, setActiveSection] = useState('about');
+
+  const sortedFoundationList = [...foundationList].sort((a, b) =>
+    a.name.localeCompare(b.name)
+  );
 
   return (
     <div className="flex flex-col min-h-[100dvh]">
@@ -127,65 +133,23 @@ export function HomePage() {
                 </p>
               </div>
             </div>
+            
             {/* Grid of Cards */}
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-6 my-10">
-              <Card
-                title="Accessibility"
-                variant="interactive"
-                className="p-2 bg-zinc-50 dark:bg-zinc-800/90 hover:ring hover:ring-sky-500/30 dark:hover:ring-sky-200"
-              >
-                <p className="text-gray-700 dark:text-gray-300">Unlock seamless access for everyone, ensuring your designs reach every user.</p>
-              </Card>
-              <Card
-                title="Brand Expression"
-                variant="interactive"
-                className="p-2 bg-zinc-50 dark:bg-zinc-800/90 hover:ring hover:ring-sky-500/30 dark:hover:ring-sky-200"
-              >
-                <p className="text-gray-700 dark:text-gray-300">Craft a unified and memorable brand experience across all platforms.</p>
-              </Card>
-              <Card
-                title="Color"
-                variant="interactive"
-                className="p-2 bg-zinc-50 dark:bg-zinc-800/90 hover:ring hover:ring-sky-500/30 dark:hover:ring-sky-200"
-              >
-                <p className="text-gray-700 dark:text-gray-300">Master the art of color harmony to create visually stunning designs.</p>
-              </Card>
-              <Card
-                title="Content Standard"
-                variant="interactive"
-                className="p-2  bg-zinc-50 dark:bg-zinc-800/90 hover:ring hover:ring-sky-500/30 dark:hover:ring-sky-200"
-              >
-                <p className="text-gray-700 dark:text-gray-300">Elevate your message with clear, engaging content that resonates with your audience.</p>
-              </Card>
-              <Card
-                title="Data Visualization"
-                variant="interactive"
-                className="p-2  bg-zinc-50 dark:bg-zinc-800/90 hover:ring hover:ring-sky-500/30 dark:hover:ring-sky-200"
-              >
-                <p className="text-gray-700 dark:text-gray-300">Transform data into powerful insights with clear, impactful visuals.</p>
-              </Card>
-              <Card
-                title="Motion"
-                variant="interactive"
-                className="p-2  bg-zinc-50 dark:bg-zinc-800/90 hover:ring hover:ring-sky-500/30 dark:hover:ring-sky-200"
-              >
-                <p className="text-gray-700 dark:text-gray-300">Bring your designs to life with smooth, responsive animations.</p>
-              </Card>
-              <Card
-                title="Screen Sizes"
-                variant="interactive"
-                className="p-2  bg-zinc-50 dark:bg-zinc-800/90 hover:ring hover:ring-sky-500/30 dark:hover:ring-sky-200"
-              >
-                <p className="text-gray-700 dark:text-gray-300">Design with confidence for any screen size, from mobile to desktop.</p>
-              </Card>
-              <Card
-                title="Typography"
-                variant="interactive"
-                className="p-2  bg-zinc-50 dark:bg-zinc-800/90 hover:ring hover:ring-sky-500/30 dark:hover:ring-sky-200"
-              >
-                <p className="text-gray-700 dark:text-gray-300">Enhance readability and impact with typography that stands out.</p>
-              </Card>
+            <div className="grid grid-cols-1 md:grid-cols-4 xl:grid-cols-2 gap-6 my-10">
+              {sortedFoundationList.map((item) => (
+                <Link key={item.name} href={item.path} className="block border dark:border-gray-800 p-4 rounded-lg transition-all duration-300 bg-zinc-50 dark:bg-zinc-800/90 hover:ring hover:ring-sky-500/30 dark:hover:ring-sky-200">
+                  <div>
+                    <h2 className="text-gray-900 dark:text-white text-lg md:text-xl font-normal">
+                      {item.name}
+                    </h2>
+                    <p className="text-sm text-gray-700 dark:text-gray-100 mt-2 leading-loose font-normal">
+                      {item.description}
+                    </p>
+                  </div>
+                </Link>
+              ))}
             </div>
+            
             <div className="flex flex-row justify-center items-center">
               <div role="button" className="space-x-4">
                 <Link

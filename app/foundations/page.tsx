@@ -30,7 +30,7 @@ const AstraFoundationPage: React.FC = () => {
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
                     {sortedFoundationList.map((item) => (
-                        <Link key={item.name} href={item.path} className="block border p-4 rounded-lg transition-all duration-300 hover:shadow-lg hover:bg-gray-100 dark:hover:bg-gray-800 dark:border-gray-700">
+                        <Link key={item.name} href={item.path} className="block border p-4 rounded-lg transition-all duration-300 bg-zinc-50 dark:dark:bg-zinc-800/90 hover:shadow-lg hover:bg-zinc-100 dark:hover:bg-zinc-900 dark:border-gray-700">
                             <div>
                                 <h2 className="text-gray-900 dark:text-white text-lg md:text-xl font-normal">
                                     {item.name}

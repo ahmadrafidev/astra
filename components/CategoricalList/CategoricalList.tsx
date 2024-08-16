@@ -16,7 +16,7 @@ const CategoricalList: React.FC = () => {
                             <Link
                                 key={item.name}
                                 href={item.path}
-                                className="block border p-4 rounded-lg transition-all duration-300 hover:shadow-lg hover:bg-gray-100 dark:hover:bg-gray-800 dark:border-gray-700"
+                                className="block border p-4 rounded-lg transition-all duration-300 hover:shadow-lg bg-zinc-50 dark:dark:bg-zinc-800/90 hover:bg-zinc-100 dark:hover:bg-zinc-900 dark:border-gray-700"
                             >
                                 <div>
                                     <h2 className="text-gray-900 dark:text-white text-lg md:text-xl font-normal">
