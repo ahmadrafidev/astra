@@ -3,15 +3,15 @@ import dynamic from 'next/dynamic';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: "Collapse",
-    description: "A component for displaying collapsible sections.",
+    title: "Collapsible",
+    description: "An expandable section that can be toggled to show or hide additional content.",
 };
 
-const CollapsePageClient = dynamic(() => import('@/components/Collapse/CollapsePageClient'), { ssr: false });
+const CollapsibleClient = dynamic(() => import('@/components/Collapse/CollapsibleClient'), { ssr: false });
 
-const CollapsePage: React.FC = () => {
-    return <CollapsePageClient />;
+const CollapsiblePage: React.FC = () => {
+    return <CollapsibleClient />;
 };
 
-CollapsePage.displayName="CollapsePage"
-export default CollapsePage;
+CollapsiblePage.displayName="CollapsiblePage"
+export default CollapsiblePage;
