@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Meta, StoryFn } from '@storybook/react';
 import Modal, { ModalProps } from '../components/Modal/Modal'; 
 import Button from '../components/Button/Button'; 
+import { X } from 'lucide-react';
 
 export default {
     title: 'Components/Modal',
@@ -30,6 +31,13 @@ export default {
                 type: { summary: 'string' },
             },
         },
+        description: {
+            control: 'text',
+            description: 'The description of the modal.',
+            table: {
+                type: { summary: 'string' },
+            },
+        },
         className: {
             control: 'text',
             description: 'Additional class names for custom styling.',
@@ -44,11 +52,26 @@ export default {
                 type: { summary: 'React.ReactNode' },
             },
         },
+        footerContent: {
+            control: 'text',
+            description: 'Content to be displayed in the modal footer.',
+            table: {
+                type: { summary: 'React.ReactNode' },
+            },
+        },
         onClose: {
             action: 'closed',
             description: 'Function to call when the modal is closed.',
             table: {
                 type: { summary: '() => void' },
+            },
+        },
+        size: {
+            control: { type: 'select', options: ['sm', 'md', 'lg', 'full'] },
+            description: 'Size of the modal.',
+            table: {
+                type: { summary: "'sm' | 'md' | 'lg' | 'full'" },
+                defaultValue: { summary: "'md'" },
             },
         },
     },
@@ -71,7 +94,7 @@ const Template: StoryFn<ModalProps> = (args) => {
         <>
             <Button onClick={handleOpen}>Open Modal</Button>
             <Modal {...args} isOpen={isOpen} onClose={handleClose}>
-                <p>This is a modal. You can put any content here.</p>
+                {args.children || <p>This is a modal. You can put any content here.</p>}
             </Modal>
         </>
     );
@@ -81,14 +104,16 @@ export const Default = Template.bind({});
 Default.args = {
     isOpen: false,
     title: 'Default Modal',
+    size: 'md',
 };
 
 export const WithoutTitle = Template.bind({});
 WithoutTitle.args = {
     isOpen: false,
+    size: 'md',
     children: (
         <p>
-            This modal doesn`t have a title. It`s just a plain modal with content inside.
+            This modal doesn’t have a title. It’s just a plain modal with content inside.
         </p>
     ),
 };
