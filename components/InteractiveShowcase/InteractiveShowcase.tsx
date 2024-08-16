@@ -4,11 +4,15 @@ import PaymentCard from '../PaymentCard/PaymentCard';
 import PinCode from '../PinCode/PinCode';
 import Radio from '../Radio/Radio';
 import Rating from '../Rating/Rating';
+import Slider from '../Slider/Slider';
+import Snackbar from '../Snackbar/Snackbar';
 import { Home, CreditCard, Lock, Star } from 'lucide-react';
 
 const InteractiveShowcase = () => {
   const [pin, setPin] = React.useState<string[]>(new Array(6).fill(''));
   const [radioValue, setRadioValue] = React.useState<string | null>('option1');
+  const [sliderValue, setSliderValue] = React.useState<number>(50);
+  const [snackbarOpen, setSnackbarOpen] = React.useState<boolean>(true);
 
   const handlePaymentSuccess = () => {
     alert('Payment was successful!');
@@ -24,6 +28,14 @@ const InteractiveShowcase = () => {
 
   const handleRadioChange = (value: string | null) => {
     setRadioValue(value);
+  };
+
+  const handleSliderChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSliderValue(Number(e.target.value));
+  };
+
+  const handleSnackbarClose = () => {
+    setSnackbarOpen(false);
   };
 
   return (
@@ -127,6 +139,40 @@ const InteractiveShowcase = () => {
             inactiveColor="text-gray-300"
           />
         </div>
+
+        {/* Slider Component */}
+        <div className="p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md">
+          <h3 className="text-lg font-semibold mb-2 text-gray-900 dark:text-gray-50">Slider</h3>
+          <Slider
+            value={sliderValue}
+            min={0}
+            max={100}
+            onChange={handleSliderChange}
+            className="w-full mt-4"
+            aria-label="Slider"
+          />
+        </div>
+
+        {/* Snackbar Component */}
+        <div className="p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md">
+          <h3 className="text-lg font-semibold mb-2 text-gray-900 dark:text-gray-50">Snackbar</h3>
+          <button
+            onClick={() => setSnackbarOpen(true)}
+            className="px-4 py-2 bg-blue-600 text-white rounded-lg"
+          >
+            Show Snackbar
+          </button>
+          <Snackbar
+            message="This is a snackbar notification!"
+            open={snackbarOpen}
+            onClose={handleSnackbarClose}
+            variant="info"
+            showCloseButton
+            icon={<Star size={20} />}
+            className="mt-4"
+          />
+        </div>
+
       </div>
     </div>
   );
