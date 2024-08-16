@@ -35,19 +35,19 @@ const CheckboxPageClient: React.FC = () => {
     };
 
     const codeExample = `
-        <Checkbox 
-            checked={isChecked} 
-            onChange={handleCheck} 
-            label="Try check me!" 
-            className="mb-2"
-        />
-        <Checkbox 
-            label="Accept this terms and conditions." 
-            checked={isAgree} 
-            onChange={handleChange} 
-            error={error} 
-            labelClassName="text-black"
-        />
+    <Checkbox 
+        checked={isChecked} 
+        onChange={handleCheck} 
+        label="Try check me!" 
+        className="mb-2"
+    />
+    <Checkbox 
+        label="Accept this terms and conditions." 
+        checked={isAgree} 
+        onChange={handleChange} 
+        error={error} 
+        labelClassName="text-black"
+    />
     `;
 
     return (

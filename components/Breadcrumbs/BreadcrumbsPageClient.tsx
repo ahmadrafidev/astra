@@ -29,10 +29,10 @@ const BreadcrumbsPageClient: React.FC = () => {
     ];
 
     const codeExample = `
-        <Breadcrumbs
-            items={${JSON.stringify(pageItems, null, 2)}}
-            className="m-4"
-        />
+    <Breadcrumbs
+        items={${JSON.stringify(pageItems, null, 2)}}
+        className="m-4"
+    />
     `;
 
     return (

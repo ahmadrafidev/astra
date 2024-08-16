@@ -24,16 +24,16 @@ const AlertDialogPageClient: React.FC = () => {
     };
 
     const codeExample = `
-        <AlertDialog 
-            open={isOpen} 
-            onClose={handleClose}
-            onConfirm={handleConfirm}
-            confirmText="Continue"
-            closeText="Cancel"
-        >
-            <h3>Confirm Action</h3>
-            <p>This action is irreversible. Are you sure you want to proceed?</p>
-        </AlertDialog>
+    <AlertDialog 
+        open={isOpen} 
+        onClose={handleClose}
+        onConfirm={handleConfirm}
+        confirmText="Continue"
+        closeText="Cancel"
+    >
+        <h3>Confirm Action</h3>
+        <p>This action is irreversible. Are you sure you want to proceed?</p>
+    </AlertDialog>
     `;
 
     const tocItems = [

@@ -22,13 +22,13 @@ const AvatarGroupPageClient: React.FC = () => {
     ];
     
     const codeExample = `
-        <AvatarGroup 
-            avatars={avatars} 
-            max={3} 
-            size="md" 
-            shape="circle" 
-            overlap="md"
-        />
+    <AvatarGroup 
+        avatars={avatars} 
+        max={3} 
+        size="md" 
+        shape="circle" 
+        overlap="md"
+    />
     `;
     
     const avatars = [

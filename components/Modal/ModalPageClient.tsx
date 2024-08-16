@@ -79,24 +79,24 @@ const ModalPageClient: React.FC = () => {
     ];
 
     const codeExample = `
-const [modalState, setModalState] = useState({
-    isOpen: false,
-    type: 'default' as 'default' | 'form' | 'custom'
-});
+    const [modalState, setModalState] = useState({
+        isOpen: false,
+        type: 'default' as 'default' | 'form' | 'custom'
+    });
 
-const handleOpen = (type: 'default' | 'form' | 'custom') => {
-    setModalState({ isOpen: true, type });
-};
+    const handleOpen = (type: 'default' | 'form' | 'custom') => {
+        setModalState({ isOpen: true, type });
+    };
 
-const handleClose = () => setModalState(prev => ({ ...prev, isOpen: false }));
+    const handleClose = () => setModalState(prev => ({ ...prev, isOpen: false }));
 
-<Modal 
-    isOpen={modalState.isOpen} 
-    onClose={handleClose} 
-    className="max-w-lg"
->
-    {renderModalContent()}
-</Modal>
+    <Modal 
+        isOpen={modalState.isOpen} 
+        onClose={handleClose} 
+        className="max-w-lg"
+    >
+        {renderModalContent()}
+    </Modal>
     `;
 
     return (

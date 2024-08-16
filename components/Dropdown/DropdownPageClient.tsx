@@ -28,12 +28,12 @@ const DropdownPageClient: React.FC = () => {
     ];
 
     const codeExample = `
-        <Dropdown 
-            options={['Option 1', 'Option 2', 'Option 3']} 
-            onSelect={handleSelect} 
-            className="my-6"
-            placeholder="Select an option"
-        />
+    <Dropdown 
+        options={['Option 1', 'Option 2', 'Option 3']} 
+        onSelect={handleSelect} 
+        className="my-6"
+        placeholder="Select an option"
+    />
     `;
 
     return (

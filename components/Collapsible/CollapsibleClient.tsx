@@ -23,22 +23,22 @@ const CollapsibleClient: React.FC = () => {
     ];
 
     const codeExample = `
-        <Collapsible title="Default Collapsible">
-            <p>This is the content for the default collapsible section.</p>
-        </Collapsible>
-        <Collapsible title="Initially Open Collapsible" defaultOpen={true}>
-            <p>This collapsible section is open by default.</p>
-        </Collapsible>
-        <Collapsible 
-            title="Customized Collapsible" 
-            icon={<AlertCircle size={20} className="text-yellow-500" />}
-            contentClassName="bg-yellow-50 dark:bg-yellow-900"
-        >
-            <p>This collapsible section has a custom icon and content background color.</p>
-        </Collapsible>
-        <Collapsible title="Disabled Collapsible" disabled>
-            <p>This collapsible section is disabled and cannot be toggled.</p>
-        </Collapsible>
+    <Collapsible title="Default Collapsible">
+        <p>This is the content for the default collapsible section.</p>
+    </Collapsible>
+    <Collapsible title="Initially Open Collapsible" defaultOpen={true}>
+        <p>This collapsible section is open by default.</p>
+    </Collapsible>
+    <Collapsible 
+        title="Customized Collapsible" 
+        icon={<AlertCircle size={20} className="text-yellow-500" />}
+        contentClassName="bg-yellow-50 dark:bg-yellow-900"
+    >
+        <p>This collapsible section has a custom icon and content background color.</p>
+    </Collapsible>
+    <Collapsible title="Disabled Collapsible" disabled>
+        <p>This collapsible section is disabled and cannot be toggled.</p>
+    </Collapsible>
     `;
 
     return (

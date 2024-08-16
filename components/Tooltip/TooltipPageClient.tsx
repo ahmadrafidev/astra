@@ -22,23 +22,23 @@ const TooltipPageClient: React.FC = () => {
     ];
 
     const codeExample = `
-        <Tooltip text="Default tooltip">
-            <button>
-                Default Tooltip
-            </button>
-        </Tooltip>
+    <Tooltip text="Default tooltip">
+        <button>
+            Default Tooltip
+        </button>
+    </Tooltip>
 
-        <Tooltip text="Arrow Bottom Tooltip" variant="arrow-bottom">
-            <button>
-                Arrow Bottom Tooltip
-            </button>
-        </Tooltip>
+    <Tooltip text="Arrow Bottom Tooltip" variant="arrow-bottom">
+        <button>
+            Arrow Bottom Tooltip
+        </button>
+    </Tooltip>
 
-        <Tooltip text="Arrow Top Tooltip" variant="arrow-top">
-            <button>
-                Arrow Top Tooltip
-            </button>
-        </Tooltip>
+    <Tooltip text="Arrow Top Tooltip" variant="arrow-top">
+        <button>
+            Arrow Top Tooltip
+        </button>
+    </Tooltip>
     `;
 
     return (

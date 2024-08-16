@@ -35,32 +35,32 @@ const ErrorPageClient: React.FC = () => {
     ];
 
     const codeExample = `
-        <Error 
-            type="network"
-            title="Network error"
-            message="Please check your internet connection or try again"
-            primaryAction={{
-                label: "Retry",
-                onClick: () => handleRetry()
-            }}
-            secondaryAction={{
-                label: "Cancel",
-                onClick: () => handleCancel()
-            }}
-        />
-        <Error 
-            type="payment"
-            title="Payment error"
-            message="Please check your payment information or try again"
-            primaryAction={{
-                label: "Retry",
-                onClick: () => handleRetry()
-            }}
-            secondaryAction={{
-                label: "Cancel",
-                onClick: () => handleCancel()
-            }}
-        />
+    <Error 
+        type="network"
+        title="Network error"
+        message="Please check your internet connection or try again"
+        primaryAction={{
+            label: "Retry",
+            onClick: () => handleRetry()
+        }}
+        secondaryAction={{
+            label: "Cancel",
+            onClick: () => handleCancel()
+        }}
+    />
+    <Error 
+        type="payment"
+        title="Payment error"
+        message="Please check your payment information or try again"
+        primaryAction={{
+            label: "Retry",
+            onClick: () => handleRetry()
+        }}
+        secondaryAction={{
+            label: "Cancel",
+            onClick: () => handleCancel()
+        }}
+    />
     `;
 
     return (

@@ -21,12 +21,12 @@ const NotificationPageClient: React.FC = () => {
     ];
 
     const codeExample = `
-        <Notification
-            message="Message notification."
-            onClose={() => {}}
-            icon={<Bell />}
-            className="my-4 bg-gray-100 text-gray-900 border border-gray-200"
-        />
+    <Notification
+        message="Message notification."
+        onClose={() => {}}
+        icon={<Bell />}
+        className="my-4 bg-gray-100 text-gray-900 border border-gray-200"
+    />
     `;
 
     return (

@@ -19,41 +19,41 @@ export const metadata: Metadata = {
 
 const AccordionPage: React.FC = () => {
     const codeExample = `
-        {/* Default Accordion */}
-        <Accordion
-            className="overflow-hidden rounded-lg"
-            itemClassName="first:rounded-t-lg last:rounded-b-lg"
-            border="border-gray-300 dark:border-gray-700"
-            selectionMode="single"
-            variant="default"
-        >
-            <>
-                <AccordionItem title="Accordion 1">
-                    Content for accordion 1
-                </AccordionItem>
-                <AccordionItem title="Accordion 2">
-                    Content for accordion 2
-                </AccordionItem>
-            </>
-        </Accordion>
+    {/* Default Accordion */}
+    <Accordion
+        className="overflow-hidden rounded-lg"
+        itemClassName="first:rounded-t-lg last:rounded-b-lg"
+        border="border-gray-300 dark:border-gray-700"
+        selectionMode="single"
+        variant="default"
+    >
+        <>
+            <AccordionItem title="Accordion 1">
+                Content for accordion 1
+            </AccordionItem>
+            <AccordionItem title="Accordion 2">
+                Content for accordion 2
+            </AccordionItem>
+        </>
+    </Accordion>
 
-            {/* Multiple Default Accordion */}
-        <Accordion
-            className="overflow-hidden rounded-lg"
-            itemClassName="first:rounded-t-lg last:rounded-b-lg"
-            border="border-gray-300 dark:border-gray-700"
-            selectionMode="multiple"
-            variant="default"
-        >
-            <>
-                <AccordionItem title="Accordion 1">
-                    Content for accordion 1
-                </AccordionItem>
-                <AccordionItem title="Accordion 2">
-                    Content for accordion 2
-                </AccordionItem>
-            </>
-        </Accordion>
+        {/* Multiple Default Accordion */}
+    <Accordion
+        className="overflow-hidden rounded-lg"
+        itemClassName="first:rounded-t-lg last:rounded-b-lg"
+        border="border-gray-300 dark:border-gray-700"
+        selectionMode="multiple"
+        variant="default"
+    >
+        <>
+            <AccordionItem title="Accordion 1">
+                Content for accordion 1
+            </AccordionItem>
+            <AccordionItem title="Accordion 2">
+                Content for accordion 2
+            </AccordionItem>
+        </>
+    </Accordion>
     `;
 
     const tocItems = [

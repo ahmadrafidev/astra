@@ -30,15 +30,15 @@ const RadioPageClient: React.FC = () => {
     ];
 
     const codeExample = `
-        <Radio
-            name="example"
-            value="Option1"
-            description="This is a description"
-            checked={selectedValue === 'Option1'}
-            onChange={handleChange}
-            label="Option 1"
-            className="my-4"
-        />
+    <Radio
+        name="example"
+        value="Option1"
+        description="This is a description"
+        checked={selectedValue === 'Option1'}
+        onChange={handleChange}
+        label="Option 1"
+        className="my-4"
+    />
     `;
 
     return (

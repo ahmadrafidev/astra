@@ -35,13 +35,13 @@ const tocItems = [
 const DockClient: React.FC = () => {
 
     const codeExample = `
-        <Dock 
-            items={${JSON.stringify(dockItems, null, 4)}}
-            dockWidth="500px"
-            dockHeight="60px"
-            variant="glassmorphism"
-            hoverEffect="floating"
-        />
+    <Dock 
+        items={${JSON.stringify(dockItems, null, 4)}}
+        dockWidth="500px"
+        dockHeight="60px"
+        variant="glassmorphism"
+        hoverEffect="floating"
+    />
     `;
 
     return (

@@ -42,15 +42,15 @@ const SnackbarPageClient: React.FC = () => {
     ];
 
     const codeExample = `
-        <Snackbar
-            message={message}
-            open={open}
-            showCloseButton={true}
-            onClose={handleClose}
-            variant={variant}
-            icon={icon[variant]}
-            action={<button onClick={() => console.log('Action clicked')}>Undo</button>}
-        />
+    <Snackbar
+        message={message}
+        open={open}
+        showCloseButton={true}
+        onClose={handleClose}
+        variant={variant}
+        icon={icon[variant]}
+        action={<button onClick={() => console.log('Action clicked')}>Undo</button>}
+    />
     `;
 
     return (

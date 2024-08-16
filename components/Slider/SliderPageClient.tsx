@@ -28,13 +28,13 @@ const SliderPageClient: React.FC = () => {
     ];
 
     const codeExample = `
-        <Slider 
-            value={value} 
-            min={0} 
-            max={100} 
-            onChange={handleChange} 
-            className="w-full" 
-        />
+    <Slider 
+        value={value} 
+        min={0} 
+        max={100} 
+        onChange={handleChange} 
+        className="w-full" 
+    />
     `;
 
     return (

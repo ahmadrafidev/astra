@@ -30,26 +30,26 @@ const RatingPageClient: React.FC = () => {
     ];
 
     const codeExample = `
-        {/* Base Model */}
-        <Rating 
-            onRate={handleRate}
-            maxRating={5} 
-            defaultRating={3}
-            size="lg"
-            allowClear={true}
-        />
+    {/* Base Model */}
+    <Rating 
+        onRate={handleRate}
+        maxRating={5} 
+        defaultRating={3}
+        size="lg"
+        allowClear={true}
+    />
 
-        {/* Custom Icon Model */}
-        <Rating 
-            onRate={handleRate}
-            maxRating={5} 
-            defaultRating={3}
-            size="lg"
-            activeColor="text-red-500"
-            inactiveColor="text-gray-200"
-            allowClear={true}
-            icon={<X />}
-        />
+    {/* Custom Icon Model */}
+    <Rating 
+        onRate={handleRate}
+        maxRating={5} 
+        defaultRating={3}
+        size="lg"
+        activeColor="text-red-500"
+        inactiveColor="text-gray-200"
+        allowClear={true}
+        icon={<X />}
+    />
     `;
 
     return (

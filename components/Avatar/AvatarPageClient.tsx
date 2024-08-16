@@ -23,15 +23,15 @@ const AvatarPageClient: React.FC = () => {
     ];
     
     const codeExample = `
-        <Avatar 
-            src="/icons/twitter.webp" 
-            alt="User Avatar" 
-            size="md" 
-            shape="square" 
-            fallback={<UserIcon />} 
-            onClick={() => console.log('Avatar clicked')} 
-            className="bg-white dark:bg-zinc-500 p-2 h-10 w-10"
-        /> 
+    <Avatar 
+        src="/icons/twitter.webp" 
+        alt="User Avatar" 
+        size="md" 
+        shape="square" 
+        fallback={<UserIcon />} 
+        onClick={() => console.log('Avatar clicked')} 
+        className="bg-white dark:bg-zinc-500 p-2 h-10 w-10"
+    /> 
     `;
     
     return (

@@ -25,31 +25,31 @@ const ProgressBarPageClient: React.FC = () => {
     ];
 
     const codeExample = `
-        {/* Default Progress Bar */}
-        <ProgressBar
-            showLabel
-            size="md"
-            progress={progress}
-            className="my-4"
-        />
+    {/* Default Progress Bar */}
+    <ProgressBar
+        showLabel
+        size="md"
+        progress={progress}
+        className="my-4"
+    />
 
-        {/* Progress Bar with Stripes */}
-        <ProgressBar
-            hasStripe
-            size="md"
-            progress={progress}
-            className="my-4"
-        />
+    {/* Progress Bar with Stripes */}
+    <ProgressBar
+        hasStripe
+        size="md"
+        progress={progress}
+        className="my-4"
+    />
 
-        {/* Custom Progress Bar */}
-        <ProgressBar
-            progress={progress}
-            size="md"
-            progressVariant="success"
-            showLabel
-            labelPosition="outside"
-            progressClassName="font-bold"
-        />
+    {/* Custom Progress Bar */}
+    <ProgressBar
+        progress={progress}
+        size="md"
+        progressVariant="success"
+        showLabel
+        labelPosition="outside"
+        progressClassName="font-bold"
+    />
     `;
 
     return (

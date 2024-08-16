@@ -33,11 +33,11 @@ const BottomNavigationClient: React.FC = () => {
     ];
     
     const codeExample = `
-        <BottomNavigation
-            items={${JSON.stringify(navItems, null, 4)}}
-            activeItem={activeItem}
-            onItemClick={setActiveItem}
-        />
+    <BottomNavigation
+        items={${JSON.stringify(navItems, null, 4)}}
+        activeItem={activeItem}
+        onItemClick={setActiveItem}
+    />
     `;
 
     return (

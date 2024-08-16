@@ -28,29 +28,29 @@ const TogglePageClient: React.FC = () => {
     ];
 
     const codeExample = `
-        <Toggle 
-            ariaLabel="Toggle switch"
-            className="max-w-md px-4 py-2 border rounded-lg"
-            onIcon={<Check />}
-            offIcon={<X />}
-            onClassName="bg-gray-100 text-gray-900"
-            offClassName="bg-gray-100 text-gray-900"
-            onChange={handleToggleChange}
-            defaultOn={false}
-        />
+    <Toggle 
+        ariaLabel="Toggle switch"
+        className="max-w-md px-4 py-2 border rounded-lg"
+        onIcon={<Check />}
+        offIcon={<X />}
+        onClassName="bg-gray-100 text-gray-900"
+        offClassName="bg-gray-100 text-gray-900"
+        onChange={handleToggleChange}
+        defaultOn={false}
+    />
 
-        <Toggle 
-            ariaLabel="Toggle switch"
-            className="max-w-md px-4 py-2 border rounded-lg"
-            onIcon={<Wifi />}
-            offIcon={<Wifi />}
-            onChange={handleToggleChange}
-            defaultOn={false}
-            onClassName="bg-blue-500 text-white"
-            offClassName="bg-gray-100 text-gray-900"
-            iconClassName="h-6 w-6"
-            hideOffIcon={false}
-        />
+    <Toggle 
+        ariaLabel="Toggle switch"
+        className="max-w-md px-4 py-2 border rounded-lg"
+        onIcon={<Wifi />}
+        offIcon={<Wifi />}
+        onChange={handleToggleChange}
+        defaultOn={false}
+        onClassName="bg-blue-500 text-white"
+        offClassName="bg-gray-100 text-gray-900"
+        iconClassName="h-6 w-6"
+        hideOffIcon={false}
+    />
     `;
 
     return (

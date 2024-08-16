@@ -41,13 +41,13 @@ const PinCodeClient: React.FC = () => {
     ];
 
     const codeExample = `
-        <PinCode
-            className="flex justify-center" 
-            isMask={false} 
-            onComplete={handleDefaultPinComplete} 
-            pin={defaultPin}
-            onPinChange={handleDefaultPinChange}
-        />
+    <PinCode
+        className="flex justify-center" 
+        isMask={false} 
+        onComplete={handleDefaultPinComplete} 
+        pin={defaultPin}
+        onPinChange={handleDefaultPinChange}
+    />
     `;
 
     return (

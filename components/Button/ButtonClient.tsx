@@ -21,12 +21,12 @@ const ButtonClient: React.FC = () => {
     ];
 
     const codeExample = `
-        <Button variant="default">Default Button</Button>
-        <Button variant="destructive">Destructive Button</Button>
-        <Button variant="outline">Outline Button</Button>
-        <Button variant="secondary">Secondary Button</Button>
-        <Button variant="ghost">Ghost Button</Button>
-        <Button variant="link">Link Button</Button>
+    <Button variant="default">Default Button</Button>
+    <Button variant="destructive">Destructive Button</Button>
+    <Button variant="outline">Outline Button</Button>
+    <Button variant="secondary">Secondary Button</Button>
+    <Button variant="ghost">Ghost Button</Button>
+    <Button variant="link">Link Button</Button>
     `;
 
     return (

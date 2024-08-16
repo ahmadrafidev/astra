@@ -28,12 +28,12 @@ const KeyboardShortcutClient: React.FC = () => {
     ];
 
     const codeExample = `
-        <KeyboardShortcut 
-            icon={<Command size={16} className="mr-2" />}
-            keyLabel="K"
-            shortcuts={${JSON.stringify(shortcuts, null, 4)}}
-            className="relative" 
-        />
+    <KeyboardShortcut 
+        icon={<Command size={16} className="mr-2" />}
+        keyLabel="K"
+        shortcuts={${JSON.stringify(shortcuts, null, 4)}}
+        className="relative" 
+    />
     `;
 
     return (

@@ -27,13 +27,13 @@ const FileUploaderClient: React.FC = () => {
   ];
 
   const codeExample = `
-    <FileUploader
-      onFileSelect={handleFileSelect}
-      maxSizeMB={10}
-      allowedTypes={['image/*', 'application/pdf']}
-      dropzoneText="Drag and drop your file here"
-      browseText="Browse files"
-    />
+  <FileUploader
+    onFileSelect={handleFileSelect}
+    maxSizeMB={10}
+    allowedTypes={['image/*', 'application/pdf']}
+    dropzoneText="Drag and drop your file here"
+    browseText="Browse files"
+  />
   `;
 
   return (
