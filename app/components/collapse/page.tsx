@@ -7,10 +7,10 @@ export const metadata: Metadata = {
     description: "An expandable section that can be toggled to show or hide additional content.",
 };
 
-const CollapsibleClient = dynamic(() => import('@/components/Collapse/CollapsibleClient'), { ssr: false });
+const CollapsibleClientPage = dynamic(() => import('@/components/Collapsible/CollapsibleClient'), { ssr: false });
 
 const CollapsiblePage: React.FC = () => {
-    return <CollapsibleClient />;
+    return <CollapsibleClientPage />;
 };
 
 CollapsiblePage.displayName="CollapsiblePage"
