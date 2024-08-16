@@ -59,7 +59,6 @@ export const componentsList = [
     { name: 'Carousel', path: '/components/carousel' },
     { name: 'Checkbox', path: '/components/checkbox' },
     { name: 'Collapse', path: '/components/collapse' },
-    { name: 'Dialog', path: '/components/dialog' },
     { name: 'Dock', path: '/components/dock' },
     { name: 'Dropdown', path: '/components/dropdown' },
     { name: 'Error Message', path: '/components/error' },
@@ -152,7 +151,6 @@ export const categorizedComponentsList = {
         { name: 'Pagination', path: '/components/pagination', description: 'Navigation for breaking content into multiple pages.' },
     ],
     overlays: [
-        { name: 'Dialog', path: '/components/dialog', description: 'Pop-up window for additional content or user input.' },
         { name: 'Tooltip', path: '/components/tooltip', description: 'Contextual information appearing on hover.' },
         { name: 'Dropdown', path: '/components/dropdown', description: 'Expandable menu revealing a list of options.' },
     ],
