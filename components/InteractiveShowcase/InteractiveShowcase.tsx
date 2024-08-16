@@ -66,7 +66,7 @@ const InteractiveShowcase = () => {
         {/* PinCode Variants */}
         <div className="p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md space-y-4">
           <PinCode
-            length={4}
+            length={6}
             pin={pin}
             onPinChange={setPin}
             onComplete={handlePinComplete}
@@ -74,6 +74,7 @@ const InteractiveShowcase = () => {
             inputClassName="bg-red-50 dark:bg-red-900"
           />
           <PinCode
+            isMask={false}
             length={6}
             pin={pin}
             onPinChange={setPin}
