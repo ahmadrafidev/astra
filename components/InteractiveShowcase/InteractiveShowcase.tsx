@@ -1,4 +1,7 @@
 import React from 'react';
+
+import { Home, CreditCard, Lock, Star, ChevronRight } from 'lucide-react';
+
 import Dock from '../Dock/Dock';
 import PaymentCard from '../PaymentCard/PaymentCard';
 import PinCode from '../PinCode/PinCode';
@@ -6,13 +9,22 @@ import Radio from '../Radio/Radio';
 import Rating from '../Rating/Rating';
 import Slider from '../Slider/Slider';
 import Snackbar from '../Snackbar/Snackbar';
-import { Home, CreditCard, Lock, Star } from 'lucide-react';
+import StatusDot from '../StatusDot/StatusDot';
+import Breadcrumbs from '../Breadcrumbs/Breadcrumbs';
+import AlertDialog from '../AlertDialog/AlertDialog';
 
 const InteractiveShowcase = () => {
   const [pin, setPin] = React.useState<string[]>(new Array(6).fill(''));
   const [radioValue, setRadioValue] = React.useState<string | null>('option1');
   const [sliderValue, setSliderValue] = React.useState<number>(50);
-  const [snackbarOpen, setSnackbarOpen] = React.useState<boolean>(true);
+  const [snackbarOpen, setSnackbarOpen] = React.useState<boolean>(false);
+  const [alertOpen, setAlertOpen] = React.useState<boolean>(false);
+
+  const breadcrumbs = [
+    { name: 'Home', path: '/' },
+    { name: 'Components', path: '/components' },
+    { name: 'Showcase', path: '/#interactive-showcase' },
+  ];
 
   const handlePaymentSuccess = () => {
     alert('Payment was successful!');
@@ -41,7 +53,8 @@ const InteractiveShowcase = () => {
   return (
     <div className="bg-zinc-100 dark:bg-zinc-800/90 p-6 rounded-lg shadow-lg min-h-screen">
       <div className="grid grid-cols-4 grid-rows-3 gap-4 auto-rows-fr">
-        {/* Dock Variants - Spans 2 columns */}
+
+        {/* Dock Variants  */}
         <div className="col-span-2 p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md space-y-4">
           <h3 className="text-lg font-semibold mb-2 text-gray-900 dark:text-gray-50">Dock</h3>
           <Dock
@@ -59,18 +72,27 @@ const InteractiveShowcase = () => {
           />
         </div>
 
-        {/* PaymentCard - Spans 2 columns and 2 rows */}
-        <div className="col-span-2 row-span-2 p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md">
+        {/* PaymentCard */}
+        <div className="col-span-2 row-span-2 p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md flex flex-col space-y-4">
           <h3 className="text-lg font-semibold mb-2 text-gray-900 dark:text-gray-50">PaymentCard</h3>
-          <PaymentCard
-            amount={199.99}
-            onPaymentSuccess={handlePaymentSuccess}
-            onPaymentError={handlePaymentError}
-            className="bg-blue-50 dark:bg-blue-900 max-w-sm"
-          />
+          <div className="flex flex-row space-x-4">
+            <PaymentCard
+              amount={199.99}
+              onPaymentSuccess={handlePaymentSuccess}
+              onPaymentError={handlePaymentError}
+              className="bg-blue-100 dark:bg-blue-900 max-w-md"
+            />
+            <PaymentCard
+              amount={199.99}
+              onPaymentSuccess={handlePaymentSuccess}
+              onPaymentError={handlePaymentError}
+              className="bg-lime-200 dark:bg-lime-500 max-w-md"
+            />     
+          </div>
+  
         </div>
 
-        {/* PinCode Variants - Spans 2 columns */}
+        {/* PinCode Variants */}
         <div className="col-span-2 p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md space-y-4">
           <h3 className="text-lg font-semibold mb-2 text-gray-900 dark:text-gray-50">PIN Code</h3>
           <PinCode
@@ -113,6 +135,19 @@ const InteractiveShowcase = () => {
           />
         </div>
 
+        {/* Slider Component */}
+        <div className="col-span-2 p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md">
+          <h3 className="text-lg font-semibold mb-2 text-gray-900 dark:text-gray-50">Slider</h3>
+          <Slider
+            value={sliderValue}
+            min={0}
+            max={100}
+            onChange={handleSliderChange}
+            className="w-full mt-4"
+            aria-label="Slider"
+          />
+        </div>
+
         {/* Rating Variants */}
         <div className="p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md flex flex-col space-y-4">
           <h3 className="text-lg font-semibold mb-2 text-gray-900 dark:text-gray-50">Rating</h3>
@@ -129,27 +164,16 @@ const InteractiveShowcase = () => {
             size="lg"
             activeColor="text-blue-500"
             inactiveColor="text-gray-300"
+            allowClear={false}
           />
           <Rating
             maxRating={5}
-            defaultRating={2}
+            defaultRating={3}
             onRate={(rating) => alert(`Rated ${rating} stars`)}
             size="md"
             activeColor="text-red-500"
             inactiveColor="text-gray-300"
-          />
-        </div>
-
-        {/* Slider Component */}
-        <div className="p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md">
-          <h3 className="text-lg font-semibold mb-2 text-gray-900 dark:text-gray-50">Slider</h3>
-          <Slider
-            value={sliderValue}
-            min={0}
-            max={100}
-            onChange={handleSliderChange}
-            className="w-full mt-4"
-            aria-label="Slider"
+            allowClear={true}
           />
         </div>
 
@@ -173,9 +197,68 @@ const InteractiveShowcase = () => {
           />
         </div>
 
+        {/* StatusDot Component */}
+        <div className="p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md flex flex-col space-y-2">
+          <h3 className="text-lg font-semibold mb-2 text-gray-900 dark:text-gray-50">StatusDot</h3>
+          <StatusDot
+            status="online"
+            type="dot"
+            label="Online"
+            className="w-4 h-4"
+          />
+          <StatusDot
+            status="offline"
+            type="icon"
+            icon={<Lock size={12} />}
+            label="Offline"
+            className="w-4 h-4"
+          />
+          <StatusDot
+            status="busy"
+            type="dot"
+            label="Busy"
+            className="w-4 h-4"
+          />
+        </div>
+
+        {/* Breadcrumbs Component */}
+        <div className="col-span-1 p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md">
+          <h3 className="text-lg font-semibold mb-2 text-gray-900 dark:text-gray-50">Breadcrumbs</h3>
+          <Breadcrumbs
+            items={breadcrumbs}
+            className="text-lg overflow-x-auto whitespace-nowrap"
+            separator={<ChevronRight className="h-5 w-5 mx-2 text-gray-800 dark:text-gray-200" />}
+            itemClassName="hover:underline text-blue-600 dark:text-blue-400"
+            activeItemClassName="font-semibold text-gray-900 dark:text-gray-100"
+          />
+        </div>
+
+        {/* AlertDialog Component */}
+        <div className="col-span-1 p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md">
+          <h3 className="text-lg font-semibold mb-2 text-gray-900 dark:text-gray-50">AlertDialog</h3>
+          <button
+            onClick={() => setAlertOpen(true)}
+            className="px-4 py-2 bg-red-600 text-white rounded-lg"
+          >
+            Open Alert Dialog
+          </button>
+          <AlertDialog
+            open={alertOpen}
+            onClose={() => setAlertOpen(false)}
+            onConfirm={() => alert('Confirmed!')}
+            confirmText="Confirm"
+            closeText="Cancel"
+          >
+            <p className="text-gray-800 dark:text-gray-200">
+              Are you sure you want to proceed?
+            </p>
+          </AlertDialog>
+        </div>
+
       </div>
     </div>
   );
 };
 
+InteractiveShowcase.displayName = 'InteractiveShowcase';
 export default InteractiveShowcase;
