@@ -83,7 +83,7 @@ export function HomePage() {
                     </span>
                   </h2>
                   <p className="max-w-[600px] text-gray-600 dark:text-gray-200 text-base/relaxed md:text-lg/relaxed">
-                    AstraUI provides a complete set of components and utilities carefully crafted to simplify the design and development flow.
+                    AstraUI offers simply built components and tools to speed up your design and development process.
                   </p>
                 </div>
                 <div className="grid grid-cols-2 gap-6">
@@ -122,7 +122,7 @@ export function HomePage() {
                   The Foundations
                 </h2>
                 <p className="max-w-[600px] text-gray-700 dark:text-gray-100  text-lg/relaxed md:text-xl/relaxed">
-                  Core principles that guide the AstraUI design philosophy
+                  Core principles that shape the AstraUI design philosophy
                 </p>
               </div>
             </div>
@@ -131,56 +131,56 @@ export function HomePage() {
               <Card
                 title="Accessibility"
                 variant="interactive"
-                className="p-2 dark:bg-gray-800/90"
+                className="p-2 dark:bg-gray-800/90 hover:ring hover:ring-sky-500/30 dark:hover:ring-sky-200"
               >
                 <p className="text-gray-700 dark:text-gray-300">Unlock seamless access for everyone, ensuring your designs reach every user.</p>
               </Card>
               <Card
                 title="Brand Expression"
                 variant="interactive"
-                className="p-2 dark:bg-gray-800/90"
+                className="p-2 dark:bg-gray-800/90 hover:ring hover:ring-sky-500/30 dark:hover:ring-sky-200"
               >
                 <p className="text-gray-700 dark:text-gray-300">Craft a unified and memorable brand experience across all platforms.</p>
               </Card>
               <Card
                 title="Color"
                 variant="interactive"
-                className="p-2 dark:bg-gray-800/90"
+                className="p-2 dark:bg-gray-800/90 hover:ring hover:ring-sky-500/30 dark:hover:ring-sky-200"
               >
                 <p className="text-gray-700 dark:text-gray-300">Master the art of color harmony to create visually stunning designs.</p>
               </Card>
               <Card
                 title="Content Standard"
                 variant="interactive"
-                className="p-2 dark:bg-gray-800/90"
+                className="p-2 dark:bg-gray-800/90 hover:ring hover:ring-sky-500/30 dark:hover:ring-sky-200"
               >
                 <p className="text-gray-700 dark:text-gray-300">Elevate your message with clear, engaging content that resonates with your audience.</p>
               </Card>
               <Card
                 title="Data Visualization"
                 variant="interactive"
-                className="p-2 dark:bg-gray-800/90"
+                className="p-2 dark:bg-gray-800/90 hover:ring hover:ring-sky-500/30 dark:hover:ring-sky-200"
               >
                 <p className="text-gray-700 dark:text-gray-300">Transform data into powerful insights with clear, impactful visuals.</p>
               </Card>
               <Card
                 title="Motion"
                 variant="interactive"
-                className="p-2 dark:bg-gray-800/90"
+                className="p-2 dark:bg-gray-800/90 hover:ring hover:ring-sky-500/30 dark:hover:ring-sky-200"
               >
                 <p className="text-gray-700 dark:text-gray-300">Bring your designs to life with smooth, responsive animations.</p>
               </Card>
               <Card
                 title="Screen Sizes"
                 variant="interactive"
-                className="p-2 dark:bg-gray-800/90"
+                className="p-2 dark:bg-gray-800/90 hover:ring hover:ring-sky-500/30 dark:hover:ring-sky-200"
               >
                 <p className="text-gray-700 dark:text-gray-300">Design with confidence for any screen size, from mobile to desktop.</p>
               </Card>
               <Card
                 title="Typography"
                 variant="interactive"
-                className="p-2 dark:bg-gray-800/90"
+                className="p-2 dark:bg-gray-800/90 hover:ring hover:ring-sky-500/30 dark:hover:ring-sky-200"
               >
                 <p className="text-gray-700 dark:text-gray-300">Enhance readability and impact with typography that stands out.</p>
               </Card>
