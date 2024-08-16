@@ -1,15 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Dock from '../Dock/Dock';
 import PaymentCard from '../PaymentCard/PaymentCard';
 import PinCode from '../PinCode/PinCode';
 import Radio from '../Radio/Radio';
 import Rating from '../Rating/Rating';
-import { Home, CreditCard, Lock, Radio as RadioIcon, Star } from 'lucide-react';
+import { Home, CreditCard, Lock, Star } from 'lucide-react';
 
 const InteractiveShowcase = () => {
-  const [activeComponent, setActiveComponent] = useState('Dock');
-  const [pin, setPin] = useState<string[]>(new Array(6).fill(''));
-  const [radioValue, setRadioValue] = useState<string | null>('option1');
+  const [pin, setPin] = React.useState<string[]>(new Array(6).fill(''));
+  const [radioValue, setRadioValue] = React.useState<string | null>('option1');
 
   const handlePaymentSuccess = () => {
     alert('Payment was successful!');
@@ -27,178 +26,101 @@ const InteractiveShowcase = () => {
     setRadioValue(value);
   };
 
-  const renderDockVariants = () => {
-    return (
-      <>
-        <Dock
-          items={[
-            { icon: Home, label: 'Home', onClick: () => alert('Home clicked!') },
-            { icon: CreditCard, label: 'Payment', onClick: () => alert('Payment clicked!') },
-          ]}
-          dockWidth="100%"
-          dockHeight="60px"
-          variant="glassmorphism"
-          hoverEffect="floating"
-          className="mb-6"
-        />
-        <Dock
-          items={[
-            { icon: Lock, label: 'Security', onClick: () => alert('Security clicked!') },
-            { icon: Star, label: 'Rating', onClick: () => alert('Rating clicked!') },
-          ]}
-          dockWidth="100%"
-          dockHeight="50px"
-          variant="default"
-          hoverEffect="default"
-          className="mb-6"
-        />
-      </>
-    );
-  };
-
-  const renderPaymentCardVariants = () => {
-    return (
-      <>
-        <PaymentCard
-          amount={49.99}
-          onPaymentSuccess={handlePaymentSuccess}
-          onPaymentError={handlePaymentError}
-          className="mb-6 max-w-sm"
-        />
-        <PaymentCard
-          amount={199.99}
-          onPaymentSuccess={handlePaymentSuccess}
-          onPaymentError={handlePaymentError}
-          className="mb-6 bg-blue-50 dark:bg-blue-900 max-w-sm"
-        />
-      </>
-    );
-  };
-
-  const renderPinCodeVariants = () => {
-    return (
-      <>
-        <PinCode
-          length={4}
-          pin={pin}
-          onPinChange={setPin}
-          onComplete={handlePinComplete}
-          className="mb-6"
-          inputClassName="bg-red-50 dark:bg-red-900"
-        />
-        <PinCode
-          length={6}
-          pin={pin}
-          onPinChange={setPin}
-          onComplete={handlePinComplete}
-          className="mb-6"
-          inputClassName="bg-green-50 dark:bg-green-900"
-        />
-      </>
-    );
-  };
-
-  const renderRadioVariants = () => {
-    return (
-      <>
-        <Radio
-          label="Option 1"
-          value="option1"
-          checked={radioValue === 'option1'}
-          onChange={handleRadioChange}
-          description="This is the first option."
-          className="mb-4"
-        />
-        <Radio
-          label="Option 2"
-          value="option2"
-          checked={radioValue === 'option2'}
-          onChange={handleRadioChange}
-          description="This is the second option."
-          error="This option is currently unavailable."
-          disabled
-          className="mb-4"
-        />
-      </>
-    );
-  };
-
-  const renderRatingVariants = () => {
-    return (
-      <>
-        <Rating
-          maxRating={5}
-          defaultRating={3}
-          onRate={(rating) => alert(`Rated ${rating} stars`)}
-          size="md"
-          className="mb-6"
-        />
-        <Rating
-          maxRating={10}
-          defaultRating={8}
-          onRate={(rating) => alert(`Rated ${rating} stars`)}
-          size="lg"
-          activeColor="text-blue-500"
-          inactiveColor="text-gray-300"
-          className="mb-6"
-        />
-      </>
-    );
-  };
-
-  const renderActiveComponent = () => {
-    switch (activeComponent) {
-      case 'Dock':
-        return renderDockVariants();
-      case 'PaymentCard':
-        return renderPaymentCardVariants();
-      case 'PinCode':
-        return renderPinCodeVariants();
-      case 'Radio':
-        return renderRadioVariants();
-      case 'Rating':
-        return renderRatingVariants();
-      default:
-        return null;
-    }
-  };
-
   return (
     <div className="bg-zinc-100 dark:bg-zinc-800/90 p-6 rounded-lg shadow-lg min-h-screen">
-      <div className="flex space-x-4 mb-6">
-        <button
-          className={`px-4 py-2 rounded ${activeComponent === 'Dock' ? 'bg-gray-800 text-white' : 'bg-gray-200 text-gray-800'}`}
-          onClick={() => setActiveComponent('Dock')}
-        >
-          Dock
-        </button>
-        <button
-          className={`px-4 py-2 rounded ${activeComponent === 'PaymentCard' ? 'bg-gray-800 text-white' : 'bg-gray-200 text-gray-800'}`}
-          onClick={() => setActiveComponent('PaymentCard')}
-        >
-          Payment
-        </button>
-        <button
-          className={`px-4 py-2 rounded ${activeComponent === 'PinCode' ? 'bg-gray-800 text-white' : 'bg-gray-200 text-gray-800'}`}
-          onClick={() => setActiveComponent('PinCode')}
-        >
-          Pin
-        </button>
-        <button
-          className={`px-4 py-2 rounded ${activeComponent === 'Radio' ? 'bg-gray-800 text-white' : 'bg-gray-200 text-gray-800'}`}
-          onClick={() => setActiveComponent('Radio')}
-        >
-          Radio
-        </button>
-        <button
-          className={`px-4 py-2 rounded ${activeComponent === 'Rating' ? 'bg-gray-800 text-white' : 'bg-gray-200 text-gray-800'}`}
-          onClick={() => setActiveComponent('Rating')}
-        >
-          Rating
-        </button>
-      </div>
-      <div className="mt-6">
-        {renderActiveComponent()}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Dock Variants */}
+        <div className="p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md space-y-4">
+          <Dock
+            items={[
+              { icon: Home, label: 'Home', onClick: () => alert('Home clicked!') },
+              { icon: CreditCard, label: 'Payment', onClick: () => alert('Payment clicked!') },
+            ]}
+            dockWidth="100%"
+            dockHeight="60px"
+            variant="glassmorphism"
+            hoverEffect="floating"
+          />
+          <Dock
+            items={[
+              { icon: Lock, label: 'Security', onClick: () => alert('Security clicked!') },
+              { icon: Star, label: 'Rating', onClick: () => alert('Rating clicked!') },
+            ]}
+            dockWidth="100%"
+            dockHeight="50px"
+            variant="default"
+            hoverEffect="default"
+          />
+        </div>
+
+        {/* PaymentCard Variants */}
+        <div className="p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md">
+          <PaymentCard
+            amount={199.99}
+            onPaymentSuccess={handlePaymentSuccess}
+            onPaymentError={handlePaymentError}
+            className="bg-blue-50 dark:bg-blue-900 max-w-sm"
+          />
+        </div>
+
+        {/* PinCode Variants */}
+        <div className="p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md space-y-4">
+          <PinCode
+            length={4}
+            pin={pin}
+            onPinChange={setPin}
+            onComplete={handlePinComplete}
+            className=""
+            inputClassName="bg-red-50 dark:bg-red-900"
+          />
+          <PinCode
+            length={6}
+            pin={pin}
+            onPinChange={setPin}
+            onComplete={handlePinComplete}
+            className=""
+            inputClassName="bg-green-50 dark:bg-green-900"
+          />
+        </div>
+
+        {/* Radio Variants */}
+        <div className="p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md">
+          <Radio
+            label="Option 1"
+            value="option1"
+            checked={radioValue === 'option1'}
+            onChange={handleRadioChange}
+            description="This is the first option."
+          />
+          <Radio
+            label="Option 2"
+            value="option2"
+            checked={radioValue === 'option2'}
+            onChange={handleRadioChange}
+            description="This is the second option."
+            error="This option is currently unavailable."
+            disabled
+          />
+        </div>
+
+        {/* Rating Variants */}
+        <div className="p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md flex flex-col gap-4">
+          <Rating
+            maxRating={5}
+            defaultRating={3}
+            onRate={(rating) => alert(`Rated ${rating} stars`)}
+            size="md"
+          />
+          <Rating
+            maxRating={10}
+            defaultRating={8}
+            onRate={(rating) => alert(`Rated ${rating} stars`)}
+            size="lg"
+            activeColor="text-blue-500"
+            inactiveColor="text-gray-300"
+          />
+        </div>
+
       </div>
     </div>
   );
