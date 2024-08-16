@@ -12,6 +12,7 @@ import Snackbar from '../Snackbar/Snackbar';
 import StatusDot from '../StatusDot/StatusDot';
 import Breadcrumbs from '../Breadcrumbs/Breadcrumbs';
 import AlertDialog from '../AlertDialog/AlertDialog';
+import FileUploader from '../FileUploader/FileUploader';
 
 const InteractiveShowcase = () => {
   const [pin, setPin] = React.useState<string[]>(new Array(6).fill(''));
@@ -50,6 +51,10 @@ const InteractiveShowcase = () => {
     setSnackbarOpen(false);
   };
 
+  const handleFileSelect = (file: File) => {
+    alert(`Selected file: ${file.name}`);
+  };
+
   return (
     <div className="bg-zinc-100 dark:bg-zinc-800/90 p-6 rounded-lg shadow-lg min-h-screen">
       <div className="grid grid-cols-4 grid-rows-3 gap-4 auto-rows-fr">
@@ -74,7 +79,7 @@ const InteractiveShowcase = () => {
 
          {/* StatusDot Component */}
         <div className="p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md flex flex-col space-y-2">
-          <h3 className="text-lg font-semibold mb-2 text-gray-900 dark:text-gray-50">StatusDot</h3>
+          <h3 className="text-lg font-semibold mb-2 text-gray-900 dark:text-gray-50">Status Dot</h3>
           <StatusDot
             status="online"
             type="dot"
@@ -98,7 +103,7 @@ const InteractiveShowcase = () => {
 
         {/* PaymentCard */}
         <div className="col-span-1 row-span-2 p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md flex flex-col space-y-4">
-          <h3 className="text-lg font-semibold mb-2 text-gray-900 dark:text-gray-50">PaymentCard</h3>
+          <h3 className="text-lg font-semibold mb-2 text-gray-900 dark:text-gray-50">Payment Card</h3>
             <PaymentCard
               amount={199.99}
               onPaymentSuccess={handlePaymentSuccess}
@@ -212,6 +217,16 @@ const InteractiveShowcase = () => {
           />
         </div>
 
+        {/* FileUploader Component */}
+        <div className="col-span-2 p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md">
+          <h3 className="text-lg font-semibold mb-2 text-gray-900 dark:text-gray-50">File Uploader</h3>
+          <FileUploader
+            onFileSelect={handleFileSelect}
+            dropzoneText="Drop your files here"
+            browseText="Browse"
+          />
+        </div>
+
         {/* Breadcrumbs Component */}
         <div className="col-span-1 p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md">
           <h3 className="text-lg font-semibold mb-2 text-gray-900 dark:text-gray-50">Breadcrumbs</h3>
@@ -226,7 +241,7 @@ const InteractiveShowcase = () => {
 
         {/* AlertDialog Component */}
         <div className="col-span-1 p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md">
-          <h3 className="text-lg font-semibold mb-2 text-gray-900 dark:text-gray-50">AlertDialog</h3>
+          <h3 className="text-lg font-semibold mb-2 text-gray-900 dark:text-gray-50">Alert Dialog</h3>
           <button
             onClick={() => setAlertOpen(true)}
             className="px-4 py-2 bg-red-600 text-white rounded-lg"
