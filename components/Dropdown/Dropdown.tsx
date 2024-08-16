@@ -1,5 +1,14 @@
 import React, { useState, useRef, useEffect } from 'react';
 
+/**
+ * Props for the Dropdown component.
+ * 
+ * @typedef {Object} DropdownProps
+ * @property {string[]} options - The array of options to display in the dropdown.
+ * @property {(option: string) => void} onSelect - The callback function to call when an option is selected.
+ * @property {string} [className] - Additional class names for the dropdown container.
+ * @property {string} [placeholder='Select an option'] - The placeholder text to display when no option is selected.
+ */
 export interface DropdownProps {
   options: string[];
   onSelect: (option: string) => void;
@@ -7,6 +16,13 @@ export interface DropdownProps {
   placeholder?: string;
 }
 
+/**
+ * Dropdown component for selecting an option from a list.
+ * 
+ * @component
+ * @param {DropdownProps} props - Props for the Dropdown component.
+ * @returns {JSX.Element} The rendered Dropdown component.
+ */
 const Dropdown: React.FC<DropdownProps> = ({ 
   options, 
   onSelect, 
