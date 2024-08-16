@@ -8,19 +8,25 @@ import { X } from 'lucide-react';
  * @property {boolean} isOpen - Whether the modal is open.
  * @property {boolean} [closeOnOutsideClick=true] - Whether to close the modal on outside click.
  * @property {string} [title] - The title of the modal.
+ * @property {string} [description] - The description of the modal.
  * @property {string} [className] - Additional class names for custom styling.
  * @property {React.ReactNode} children - The content of the modal.
  * @property {React.ReactNode} [closeButton] - Custom close button element.
+ * @property {React.ReactNode} [footerContent] - Content to be displayed in the modal footer.
  * @property {() => void} onClose - Function to call when the modal is closed.
+ * @property {'sm' | 'md' | 'lg' | 'full'} [size='md'] - Size of the modal.
  */
 export interface ModalProps {
   isOpen: boolean;
   closeOnOutsideClick?: boolean;
   title?: string;
+  description?: string;
   className?: string;
   children: React.ReactNode;
   closeButton?: React.ReactNode;
+  footerContent?: React.ReactNode;
   onClose: () => void;
+  size?: 'sm' | 'md' | 'lg' | 'full';
 }
 
 /**
@@ -35,9 +41,12 @@ const Modal: React.FC<ModalProps> = ({
   onClose,
   children,
   title,
+  description,
   className,
   closeOnOutsideClick = true,
-  closeButton
+  closeButton,
+  footerContent,
+  size = 'md'
 }) => {
   const [isClosing, setIsClosing] = useState(false);
   const contentRef = useRef<HTMLDivElement>(null);
@@ -56,12 +65,10 @@ const Modal: React.FC<ModalProps> = ({
         handleClose();
       }
     };
-
     if (isOpen) {
       document.body.style.overflow = 'hidden';
       window.addEventListener('keydown', handleKeyDown);
     }
-
     return () => {
       document.body.style.overflow = 'unset';
       window.removeEventListener('keydown', handleKeyDown);
@@ -76,6 +83,13 @@ const Modal: React.FC<ModalProps> = ({
 
   if (!isOpen && !isClosing) return null;
 
+  const sizeClasses = {
+    sm: 'max-w-sm',
+    md: 'max-w-md',
+    lg: 'max-w-lg',
+    full: 'max-w-full mx-4'
+  };
+
   return (
     <div 
       className={`fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 ${
@@ -85,17 +99,23 @@ const Modal: React.FC<ModalProps> = ({
       role="dialog"
       aria-modal="true"
       aria-labelledby={title ? 'modal-title' : undefined}
+      aria-describedby={description ? 'modal-description' : undefined}
     >
       <div
         ref={contentRef}
-        className={`bg-white p-6 rounded-lg shadow-xl relative max-w-md w-full max-h-[90vh] overflow-y-auto ${
+        className={`bg-white p-6 rounded-lg shadow-xl relative w-full max-h-[90vh] overflow-y-auto ${
           isClosing ? 'animate-zoomOut' : 'animate-zoomIn'
-        } ${className}`}
+        } ${sizeClasses[size]} ${className}`}
       >
         {title && (
           <h2 id="modal-title" className="text-xl font-semibold mb-4">
             {title}
           </h2>
+        )}
+        {description && (
+          <p id="modal-description" className="text-gray-600 mb-4">
+            {description}
+          </p>
         )}
         <button 
           onClick={handleClose} 
@@ -105,6 +125,11 @@ const Modal: React.FC<ModalProps> = ({
           {closeButton || <X />}
         </button>
         {children}
+        {footerContent && (
+          <div className="mt-6 flex justify-end space-x-2">
+            {footerContent}
+          </div>
+        )}
       </div>
     </div>
   );
