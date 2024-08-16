@@ -135,7 +135,7 @@ export function HomePage() {
             </div>
             
             {/* Grid of Cards */}
-            <div className="grid grid-cols-1 md:grid-cols-4 xl:grid-cols-2 gap-6 my-10">
+            <div className="grid grid-cols-1 lg:grid-cols-4 2xl:grid-cols-2 gap-6 my-10">
               {sortedFoundationList.map((item) => (
                 <Link key={item.name} href={item.path} className="block border dark:border-gray-800 p-4 rounded-lg transition-all duration-300 bg-zinc-50 dark:bg-zinc-800/90 hover:ring hover:ring-sky-500/30 dark:hover:ring-sky-200">
                   <div>
