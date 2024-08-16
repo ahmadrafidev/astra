@@ -15,6 +15,7 @@ import PaletteIcon from '../Icons/PaletteIcon';
 import PuzzleIcon from '../Icons/PuzzleIcon';
 import AlignCenterHorizontalIcon from '../Icons/AlignCenterHorizontalIcon';
 import WandIcon from '../Icons/WandIcon';
+import InteractiveShowcase from '../InteractiveShowcase/InteractiveShowcase';
 
 export function HomePage() {
   const [activeSection, setActiveSection] = useState('about');
@@ -114,7 +115,7 @@ export function HomePage() {
         </section>
 
         {/* Foundations Section */}
-        <section className="flex flex-col justify-start items-center w-full px-4 md:px-12 my-12">
+        <section className="flex flex-col justify-start min-h-screen items-center w-full px-4 md:px-12 my-12">
           <div className="container px-4 md:px-6 mx-auto">
             <div className="flex flex-col justify-center items-center space-y-4">
               <div className="space-y-2 text-center">
@@ -131,56 +132,56 @@ export function HomePage() {
               <Card
                 title="Accessibility"
                 variant="interactive"
-                className="p-2 dark:bg-gray-800/90 hover:ring hover:ring-sky-500/30 dark:hover:ring-sky-200"
+                className="p-2 bg-zinc-50 dark:bg-zinc-800/90 hover:ring hover:ring-sky-500/30 dark:hover:ring-sky-200"
               >
                 <p className="text-gray-700 dark:text-gray-300">Unlock seamless access for everyone, ensuring your designs reach every user.</p>
               </Card>
               <Card
                 title="Brand Expression"
                 variant="interactive"
-                className="p-2 dark:bg-gray-800/90 hover:ring hover:ring-sky-500/30 dark:hover:ring-sky-200"
+                className="p-2 bg-zinc-50 dark:bg-zinc-800/90 hover:ring hover:ring-sky-500/30 dark:hover:ring-sky-200"
               >
                 <p className="text-gray-700 dark:text-gray-300">Craft a unified and memorable brand experience across all platforms.</p>
               </Card>
               <Card
                 title="Color"
                 variant="interactive"
-                className="p-2 dark:bg-gray-800/90 hover:ring hover:ring-sky-500/30 dark:hover:ring-sky-200"
+                className="p-2 bg-zinc-50 dark:bg-zinc-800/90 hover:ring hover:ring-sky-500/30 dark:hover:ring-sky-200"
               >
                 <p className="text-gray-700 dark:text-gray-300">Master the art of color harmony to create visually stunning designs.</p>
               </Card>
               <Card
                 title="Content Standard"
                 variant="interactive"
-                className="p-2 dark:bg-gray-800/90 hover:ring hover:ring-sky-500/30 dark:hover:ring-sky-200"
+                className="p-2  bg-zinc-50 dark:bg-zinc-800/90 hover:ring hover:ring-sky-500/30 dark:hover:ring-sky-200"
               >
                 <p className="text-gray-700 dark:text-gray-300">Elevate your message with clear, engaging content that resonates with your audience.</p>
               </Card>
               <Card
                 title="Data Visualization"
                 variant="interactive"
-                className="p-2 dark:bg-gray-800/90 hover:ring hover:ring-sky-500/30 dark:hover:ring-sky-200"
+                className="p-2  bg-zinc-50 dark:bg-zinc-800/90 hover:ring hover:ring-sky-500/30 dark:hover:ring-sky-200"
               >
                 <p className="text-gray-700 dark:text-gray-300">Transform data into powerful insights with clear, impactful visuals.</p>
               </Card>
               <Card
                 title="Motion"
                 variant="interactive"
-                className="p-2 dark:bg-gray-800/90 hover:ring hover:ring-sky-500/30 dark:hover:ring-sky-200"
+                className="p-2  bg-zinc-50 dark:bg-zinc-800/90 hover:ring hover:ring-sky-500/30 dark:hover:ring-sky-200"
               >
                 <p className="text-gray-700 dark:text-gray-300">Bring your designs to life with smooth, responsive animations.</p>
               </Card>
               <Card
                 title="Screen Sizes"
                 variant="interactive"
-                className="p-2 dark:bg-gray-800/90 hover:ring hover:ring-sky-500/30 dark:hover:ring-sky-200"
+                className="p-2  bg-zinc-50 dark:bg-zinc-800/90 hover:ring hover:ring-sky-500/30 dark:hover:ring-sky-200"
               >
                 <p className="text-gray-700 dark:text-gray-300">Design with confidence for any screen size, from mobile to desktop.</p>
               </Card>
               <Card
                 title="Typography"
                 variant="interactive"
-                className="p-2 dark:bg-gray-800/90 hover:ring hover:ring-sky-500/30 dark:hover:ring-sky-200"
+                className="p-2  bg-zinc-50 dark:bg-zinc-800/90 hover:ring hover:ring-sky-500/30 dark:hover:ring-sky-200"
               >
                 <p className="text-gray-700 dark:text-gray-300">Enhance readability and impact with typography that stands out.</p>
               </Card>
@@ -198,6 +199,21 @@ export function HomePage() {
           </div>
         </section>
 
+        {/* Interactive Component Showcase */}
+        <section className="flex flex-col justify-around w-full px-4 md:px-12">
+          <div className="container px-4 md:px-6 mx-auto">
+            <div className="text-center mb-10">
+              <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-gray-900 dark:text-gray-50 mb-4">
+                Experience AstraUI
+              </h2>
+              <p className="text-xl text-gray-600 dark:text-gray-300">
+                Interact with our components right here on the page
+              </p>
+            </div>
+            <InteractiveShowcase />
+          </div>
+        </section>
+
         {/* Components Section */}
         <section className="flex flex-col justify-around min-h-screen w-full px-4 md:px-12">
           <div className="container px-4 md:px-6 mx-auto">
@@ -207,7 +223,7 @@ export function HomePage() {
                   The Components
                 </h2>
                 <p className="text-gray-700 dark:text-gray-100 text-lg/relaxed md:text-xl/relaxed ml-1 md:ml-2">
-                  Discover AstraUI Components
+                  Explore more abot AstraUI Components
                 </p>
               </div>
               <div className="flex flex-col justify-center space-y-4">
@@ -216,7 +232,7 @@ export function HomePage() {
                     title="Web Components"
                     imageSrc="/images/web-image.png"
                     variant="interactive"
-                    className="text-start p-4 transition-all duration-200 dark:bg-gray-800/90 hover:ring hover:ring-sky-500/30 dark:hover:ring-sky-200"
+                    className="text-start p-4 transition-all duration-200 bg-zinc-100 dark:bg-zinc-800/90 hover:ring hover:ring-sky-500/30 dark:hover:ring-sky-200"
                     imageWidth={100}
                     imageHeight={100}
                     imagePosition="left"
@@ -229,7 +245,7 @@ export function HomePage() {
                     title="Android"
                     imageSrc="/images/android-image.png"
                     variant="interactive"
-                    className="text-start p-4 transition-all duration-200 dark:bg-gray-800/90 hover:ring hover:ring-sky-500/30 dark:hover:ring-sky-200"
+                    className="text-start p-4 transition-all duration-200 bg-zinc-100 dark:bg-zinc-800/90 hover:ring hover:ring-sky-500/30 dark:hover:ring-sky-200"
                     imageWidth={100}
                     imageHeight={100}
                     imagePosition="left"
@@ -242,7 +258,7 @@ export function HomePage() {
                     title="iOS"
                     imageSrc="/images/apple-image.png"
                     variant="interactive"
-                    className="text-start p-4 transition-all duration-200 dark:bg-gray-800/90 hover:ring hover:ring-sky-500/30 dark:hover:ring-sky-200"
+                    className="text-start p-4 transition-all duration-200 bg-zinc-100 dark:bg-zinc-800/90 hover:ring hover:ring-sky-500/30 dark:hover:ring-sky-200"
                     imageWidth={100}
                     imageHeight={100}
                     imagePosition="left"
@@ -273,7 +289,7 @@ interface IconCardProps {
 
 const IconCard: React.FC<IconCardProps> = ({ Icon, title, description }) => (
   <div className="flex flex-col items-start gap-2">
-    <div className="bg-gray-100 dark:bg-gray-800/90 rounded-md flex items-center justify-center aspect-square w-12">
+    <div className="bg-zinc-100 dark:bg-gray-800/90 rounded-md flex items-center justify-center aspect-square w-12">
       <Icon className="w-6 h-6" />
     </div>
     <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-50">{title}</h3>
