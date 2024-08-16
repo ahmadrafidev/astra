@@ -60,7 +60,7 @@ const InteractiveShowcase = () => {
       <div className="grid grid-cols-4 grid-rows-3 gap-4 auto-rows-fr">
 
         {/* Dock Variants  */}
-        <div className="col-span-2 p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md space-y-4">
+        <div className="col-span-2 p-4 bg-sky-200 dark:bg-sky-400 rounded-lg shadow-md space-y-4">
           <h3 className="text-lg font-semibold mb-2 text-gray-900 dark:text-gray-50">Dock</h3>
           <Dock
             items={[
@@ -73,12 +73,23 @@ const InteractiveShowcase = () => {
             dockHeight="60px"
             variant="glassmorphism"
             hoverEffect="floating"
-            className="bg-sky-100 dark:bg-sky-400"
+          />
+          <Dock
+            items={[
+              { icon: Home, label: 'Home', onClick: () => alert('Home clicked!') },
+              { icon: CreditCard, label: 'Payment', onClick: () => alert('Payment clicked!') },
+              { icon: Lock, label: 'Security', onClick: () => alert('Security clicked!') },
+            ]}
+            dockWidth="100%"
+            dockHeight="60px"
+            variant="default"
+            hoverEffect="default"
+            className="bg-teal-100 dark:bg-teal-300"
           />
         </div>
 
          {/* StatusDot Component */}
-        <div className="p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md flex flex-col space-y-2">
+        <div className="p-4 bg-teal-200 dark:bg-teal-400 rounded-lg shadow-md flex flex-col space-y-2">
           <h3 className="text-lg font-semibold mb-2 text-gray-900 dark:text-gray-50">Status Dot</h3>
           <StatusDot
             status="online"
@@ -102,7 +113,7 @@ const InteractiveShowcase = () => {
         </div>
 
         {/* PaymentCard */}
-        <div className="col-span-1 row-span-2 p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md flex flex-col space-y-4">
+        <div className="col-span-1 row-span-2 p-4 bg-cyan-200 dark:bg-cyan-400 rounded-lg shadow-md flex flex-col space-y-4">
           <h3 className="text-lg font-semibold mb-2 text-gray-900 dark:text-gray-50">Payment Card</h3>
             <PaymentCard
               amount={199.99}
@@ -113,7 +124,7 @@ const InteractiveShowcase = () => {
         </div>
 
         {/* Radio Variants */}
-        <div className="p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md">
+        <div className="p-4 bg-blue-200 dark:bg-blue-400 rounded-lg shadow-md">
           <h3 className="text-lg font-semibold mb-2 text-gray-900 dark:text-gray-50">Radio</h3>
           <Radio
             label="Option 1"
@@ -134,7 +145,7 @@ const InteractiveShowcase = () => {
         </div>
 
         {/* PinCode Variants */}
-        <div className="col-span-2 p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md space-y-4">
+        <div className="col-span-2 p-4 bg-emerald-100 dark:bg-emerald-300 rounded-lg shadow-md space-y-4">
           <h3 className="text-lg font-semibold mb-2 text-gray-900 dark:text-gray-50">PIN Code</h3>
           <PinCode
             length={6}
@@ -156,7 +167,7 @@ const InteractiveShowcase = () => {
         </div>
 
         {/* Rating Variants */}
-        <div className="p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md flex flex-col space-y-4">
+        <div className="p-4 bg-teal-200 dark:bg-teal-400 rounded-lg shadow-md flex flex-col space-y-4">
           <h3 className="text-lg font-semibold mb-2 text-gray-900 dark:text-gray-50">Rating</h3>
           <Rating
             maxRating={5}
@@ -185,7 +196,7 @@ const InteractiveShowcase = () => {
         </div>
 
         {/* Snackbar Component */}
-        <div className="p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md">
+        <div className="p-4 bg-sky-200 dark:bg-sky-400 rounded-lg shadow-md">
           <h3 className="text-lg font-semibold mb-2 text-gray-900 dark:text-gray-50">Snackbar</h3>
           <button
             onClick={() => setSnackbarOpen(true)}
@@ -205,7 +216,7 @@ const InteractiveShowcase = () => {
         </div>
 
         {/* Slider Component */}
-        <div className="col-span-2 p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md">
+        <div className="col-span-2 p-4 bg-blue-200 dark:bg-blue-400 rounded-lg shadow-md">
           <h3 className="text-lg font-semibold mb-2 text-gray-900 dark:text-gray-50">Slider</h3>
           <Slider
             value={sliderValue}
@@ -218,7 +229,7 @@ const InteractiveShowcase = () => {
         </div>
 
         {/* FileUploader Component */}
-        <div className="col-span-2 p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md">
+        <div className="col-span-2 p-4 bg-cyan-200 dark:bg-cyan-400 rounded-lg shadow-md">
           <h3 className="text-lg font-semibold mb-2 text-gray-900 dark:text-gray-50">File Uploader</h3>
           <FileUploader
             onFileSelect={handleFileSelect}
@@ -228,7 +239,7 @@ const InteractiveShowcase = () => {
         </div>
 
         {/* Breadcrumbs Component */}
-        <div className="col-span-1 p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md">
+        <div className="col-span-1 p-4 bg-emerald-100 dark:bg-emerald-300 rounded-lg shadow-md">
           <h3 className="text-lg font-semibold mb-2 text-gray-900 dark:text-gray-50">Breadcrumbs</h3>
           <Breadcrumbs
             items={breadcrumbs}
@@ -240,7 +251,7 @@ const InteractiveShowcase = () => {
         </div>
 
         {/* AlertDialog Component */}
-        <div className="col-span-1 p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md">
+        <div className="col-span-1 p-4 bg-teal-200 dark:bg-teal-400 rounded-lg shadow-md">
           <h3 className="text-lg font-semibold mb-2 text-gray-900 dark:text-gray-50">Alert Dialog</h3>
           <button
             onClick={() => setAlertOpen(true)}
