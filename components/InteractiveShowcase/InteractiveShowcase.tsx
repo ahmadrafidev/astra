@@ -28,33 +28,28 @@ const InteractiveShowcase = () => {
 
   return (
     <div className="bg-zinc-100 dark:bg-zinc-800/90 p-6 rounded-lg shadow-lg min-h-screen">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {/* Dock Variants */}
-        <div className="p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md space-y-4">
+      <div className="grid grid-cols-4 grid-rows-3 gap-4 auto-rows-fr">
+        {/* Dock Variants - Spans 2 columns */}
+        <div className="col-span-2 p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md space-y-4">
+          <h3 className="text-lg font-semibold mb-2 text-gray-900 dark:text-gray-50">Dock</h3>
           <Dock
             items={[
               { icon: Home, label: 'Home', onClick: () => alert('Home clicked!') },
               { icon: CreditCard, label: 'Payment', onClick: () => alert('Payment clicked!') },
+              { icon: Lock, label: 'Security', onClick: () => alert('Security clicked!') },
+              { icon: Star, label: 'Rating', onClick: () => alert('Rating clicked!') },
             ]}
             dockWidth="100%"
             dockHeight="60px"
             variant="glassmorphism"
             hoverEffect="floating"
-          />
-          <Dock
-            items={[
-              { icon: Lock, label: 'Security', onClick: () => alert('Security clicked!') },
-              { icon: Star, label: 'Rating', onClick: () => alert('Rating clicked!') },
-            ]}
-            dockWidth="100%"
-            dockHeight="50px"
-            variant="default"
-            hoverEffect="default"
+            className="bg-sky-100 dark:bg-sky-400"
           />
         </div>
 
-        {/* PaymentCard Variants */}
-        <div className="p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md">
+        {/* PaymentCard - Spans 2 columns and 2 rows */}
+        <div className="col-span-2 row-span-2 p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md">
+          <h3 className="text-lg font-semibold mb-2 text-gray-900 dark:text-gray-50">PaymentCard</h3>
           <PaymentCard
             amount={199.99}
             onPaymentSuccess={handlePaymentSuccess}
@@ -63,15 +58,16 @@ const InteractiveShowcase = () => {
           />
         </div>
 
-        {/* PinCode Variants */}
-        <div className="p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md space-y-4">
+        {/* PinCode Variants - Spans 2 columns */}
+        <div className="col-span-2 p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md space-y-4">
+          <h3 className="text-lg font-semibold mb-2 text-gray-900 dark:text-gray-50">PIN Code</h3>
           <PinCode
             length={6}
             pin={pin}
             onPinChange={setPin}
             onComplete={handlePinComplete}
             className=""
-            inputClassName="bg-red-50 dark:bg-red-900"
+            inputClassName="bg-sky-400 dark:bg-sky-900"
           />
           <PinCode
             isMask={false}
@@ -80,12 +76,13 @@ const InteractiveShowcase = () => {
             onPinChange={setPin}
             onComplete={handlePinComplete}
             className=""
-            inputClassName="bg-green-50 dark:bg-green-900"
+            inputClassName="bg-indigo-400 dark:bg-indigo-900"
           />
         </div>
 
         {/* Radio Variants */}
         <div className="p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md">
+          <h3 className="text-lg font-semibold mb-2 text-gray-900 dark:text-gray-50">Radio</h3>
           <Radio
             label="Option 1"
             value="option1"
@@ -105,7 +102,8 @@ const InteractiveShowcase = () => {
         </div>
 
         {/* Rating Variants */}
-        <div className="p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md flex flex-col gap-4">
+        <div className="p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md flex flex-col space-y-4">
+          <h3 className="text-lg font-semibold mb-2 text-gray-900 dark:text-gray-50">Rating</h3>
           <Rating
             maxRating={5}
             defaultRating={3}
@@ -113,15 +111,22 @@ const InteractiveShowcase = () => {
             size="md"
           />
           <Rating
-            maxRating={10}
-            defaultRating={8}
+            maxRating={5}
+            defaultRating={2}
             onRate={(rating) => alert(`Rated ${rating} stars`)}
             size="lg"
             activeColor="text-blue-500"
             inactiveColor="text-gray-300"
           />
+          <Rating
+            maxRating={5}
+            defaultRating={2}
+            onRate={(rating) => alert(`Rated ${rating} stars`)}
+            size="md"
+            activeColor="text-red-500"
+            inactiveColor="text-gray-300"
+          />
         </div>
-
       </div>
     </div>
   );
