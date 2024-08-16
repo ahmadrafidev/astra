@@ -72,46 +72,39 @@ const InteractiveShowcase = () => {
           />
         </div>
 
-        {/* PaymentCard */}
-        <div className="col-span-2 row-span-2 p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md flex flex-col space-y-4">
-          <h3 className="text-lg font-semibold mb-2 text-gray-900 dark:text-gray-50">PaymentCard</h3>
-          <div className="flex flex-row space-x-4">
-            <PaymentCard
-              amount={199.99}
-              onPaymentSuccess={handlePaymentSuccess}
-              onPaymentError={handlePaymentError}
-              className="bg-blue-100 dark:bg-blue-900 max-w-md"
-            />
-            <PaymentCard
-              amount={199.99}
-              onPaymentSuccess={handlePaymentSuccess}
-              onPaymentError={handlePaymentError}
-              className="bg-lime-200 dark:bg-lime-500 max-w-md"
-            />     
-          </div>
-  
+         {/* StatusDot Component */}
+        <div className="p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md flex flex-col space-y-2">
+          <h3 className="text-lg font-semibold mb-2 text-gray-900 dark:text-gray-50">StatusDot</h3>
+          <StatusDot
+            status="online"
+            type="dot"
+            label="Online"
+            className="w-4 h-4"
+          />
+          <StatusDot
+            status="offline"
+            type="icon"
+            icon={<Lock size={12} />}
+            label="Offline"
+            className="w-4 h-4"
+          />
+          <StatusDot
+            status="busy"
+            type="dot"
+            label="Busy"
+            className="w-4 h-4"
+          />
         </div>
 
-        {/* PinCode Variants */}
-        <div className="col-span-2 p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md space-y-4">
-          <h3 className="text-lg font-semibold mb-2 text-gray-900 dark:text-gray-50">PIN Code</h3>
-          <PinCode
-            length={6}
-            pin={pin}
-            onPinChange={setPin}
-            onComplete={handlePinComplete}
-            className=""
-            inputClassName="bg-sky-400 dark:bg-sky-900"
-          />
-          <PinCode
-            isMask={false}
-            length={6}
-            pin={pin}
-            onPinChange={setPin}
-            onComplete={handlePinComplete}
-            className=""
-            inputClassName="bg-indigo-400 dark:bg-indigo-900"
-          />
+        {/* PaymentCard */}
+        <div className="col-span-1 row-span-2 p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md flex flex-col space-y-4">
+          <h3 className="text-lg font-semibold mb-2 text-gray-900 dark:text-gray-50">PaymentCard</h3>
+            <PaymentCard
+              amount={199.99}
+              onPaymentSuccess={handlePaymentSuccess}
+              onPaymentError={handlePaymentError}
+              className="bg-blue-100 dark:bg-blue-900"
+            />    
         </div>
 
         {/* Radio Variants */}
@@ -135,16 +128,25 @@ const InteractiveShowcase = () => {
           />
         </div>
 
-        {/* Slider Component */}
-        <div className="col-span-2 p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md">
-          <h3 className="text-lg font-semibold mb-2 text-gray-900 dark:text-gray-50">Slider</h3>
-          <Slider
-            value={sliderValue}
-            min={0}
-            max={100}
-            onChange={handleSliderChange}
-            className="w-full mt-4"
-            aria-label="Slider"
+        {/* PinCode Variants */}
+        <div className="col-span-2 p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md space-y-4">
+          <h3 className="text-lg font-semibold mb-2 text-gray-900 dark:text-gray-50">PIN Code</h3>
+          <PinCode
+            length={6}
+            pin={pin}
+            onPinChange={setPin}
+            onComplete={handlePinComplete}
+            className=""
+            inputClassName="bg-sky-400 dark:bg-sky-900"
+          />
+          <PinCode
+            isMask={false}
+            length={6}
+            pin={pin}
+            onPinChange={setPin}
+            onComplete={handlePinComplete}
+            className=""
+            inputClassName="bg-indigo-400 dark:bg-indigo-900"
           />
         </div>
 
@@ -197,27 +199,16 @@ const InteractiveShowcase = () => {
           />
         </div>
 
-        {/* StatusDot Component */}
-        <div className="p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md flex flex-col space-y-2">
-          <h3 className="text-lg font-semibold mb-2 text-gray-900 dark:text-gray-50">StatusDot</h3>
-          <StatusDot
-            status="online"
-            type="dot"
-            label="Online"
-            className="w-4 h-4"
-          />
-          <StatusDot
-            status="offline"
-            type="icon"
-            icon={<Lock size={12} />}
-            label="Offline"
-            className="w-4 h-4"
-          />
-          <StatusDot
-            status="busy"
-            type="dot"
-            label="Busy"
-            className="w-4 h-4"
+        {/* Slider Component */}
+        <div className="col-span-2 p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md">
+          <h3 className="text-lg font-semibold mb-2 text-gray-900 dark:text-gray-50">Slider</h3>
+          <Slider
+            value={sliderValue}
+            min={0}
+            max={100}
+            onChange={handleSliderChange}
+            className="w-full mt-4"
+            aria-label="Slider"
           />
         </div>
 

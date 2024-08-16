@@ -105,14 +105,14 @@ const PaymentCard: React.FC<PaymentCardProps> = ({
             {errors.expiry && <p id="expiryError" className="text-red-500 text-xs mt-1">{errors.expiry}</p>}
           </div>
           <div className="flex-1">
-            <label htmlFor="cvv" className="block text-gray-700 dark:text-gray-200">Security Code</label>
+            <label htmlFor="cvv" className="block text-gray-700 dark:text-gray-200 text-sm md:text-base">CVV</label>
             <input
               type="text"
               id="cvv"
               value={cvv}
               onChange={(e) => setCvv(e.target.value)}
               className="w-full p-2 border text-black dark:text-white dark:border-gray-700 focus:outline-black dark:focus:outline-white rounded bg-gray-50 dark:bg-gray-800"
-              placeholder="CVV"
+              placeholder="CVV Code"
               required
               aria-describedby="cvvError"
             />
