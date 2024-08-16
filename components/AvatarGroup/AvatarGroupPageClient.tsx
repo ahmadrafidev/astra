@@ -52,7 +52,7 @@ const AvatarGroupPageClient: React.FC = () => {
                     </div>
 
                     {/* Usage Section */}
-                    <section id="usage" className="my-5 scroll-mt-20">
+                    <section id="usage" className="scroll-mt-20">
                         <Tabs>
                             <Tab label="Preview">
                                 <div className="relative w-full h-64 overflow-hidden mt-4 rounded-lg flex justify-center items-center bg-zinc-100 dark:bg-zinc-950 shadow border border-slate-300 dark:border-slate-800">
@@ -101,7 +101,7 @@ const AvatarGroupPageClient: React.FC = () => {
 
                     {/* Props Section */}
                     <section id="properties" className="my-5 scroll-mt-20">
-                        <h2 className="text-xl md:text-2xl font-medium text-gray-900 dark:text-gray-50 mb-6">Props</h2>
+                        <h2 className="text-xl md:text-2xl font-medium text-gray-900 dark:text-gray-50 mb-5">Props</h2>
                         <div className="bg-white dark:bg-gray-800 rounded-lg shadow overflow-hidden">
                             <table className="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
                                 <thead className="bg-gray-50 dark:bg-gray-700">

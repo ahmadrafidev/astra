@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
     title: "Dropdown",
-    description: "A component for selecting an option from a list.",
+    description: "A menu that expands to reveal a list of selectable options when activated.",
 };
 
 const DropdownPageClient = dynamic(() => import('@/components/Dropdown/DropdownPageClient'), { ssr: false });
