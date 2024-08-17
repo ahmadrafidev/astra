@@ -49,7 +49,7 @@ export function HomePage() {
               <div className="flex flex-row gap-6 p-4">
                 <div role="button" className="space-x-4">
                   <Link
-                    className="h-10 items-center justify-center rounded-lg bg-gray-900 dark:bg-white dark:border-gray-300 px-4 py-2 md:py-2.5 text-sm font-medium text-gray-50 dark:text-gray-900 shadow transition-all duration-200 hover:bg-gray-800 hover:ring hover:ring-gray-400 dark:hover:ring-gray-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-300 disabled:pointer-events-none disabled:opacity-50"
+                    className="h-10 items-center justify-center rounded-lg bg-black dark:bg-white dark:border-gray-300 px-4 py-2 md:py-2.5 text-sm font-medium text-gray-50 dark:text-gray-900 shadow transition-all duration-200 hover:bg-zinc-800 hover:ring hover:ring-gray-400 dark:hover:ring-gray-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-300 disabled:pointer-events-none disabled:opacity-50"
                     href="/components"
                   >
                     Browse Components
@@ -57,7 +57,7 @@ export function HomePage() {
                 </div>
                 <div role="button" className="space-x-4">
                   <Link
-                    className="h-10 items-center justify-center rounded-lg border border-gray-300 dark:border-none bg-white dark:bg-gray-800 px-4 py-2 md:py-2.5 text-sm font-medium text-gray-900 dark:text-gray-50 shadow transition-all duration-200 hover:bg-gray-50 hover:ring hover:ring-gray-400 dark:hover:ring-gray-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-300 disabled:pointer-events-none disabled:opacity-50"
+                    className="h-10 items-center justify-center rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-black px-4 py-2 md:py-2.5 text-sm font-medium text-gray-900 dark:text-gray-50 shadow transition-all duration-200 hover:bg-gray-50 hover:ring hover:ring-gray-400 dark:hover:ring-gray-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-300 disabled:pointer-events-none disabled:opacity-50"
                     href="/about"
                   >
                     Get Started
@@ -137,7 +137,7 @@ export function HomePage() {
             {/* Grid of Cards */}
             <div className="grid grid-cols-1 lg:grid-cols-4 2xl:grid-cols-2 gap-6 my-10">
               {sortedFoundationList.map((item) => (
-                <Link key={item.name} href={item.path} className="block border dark:border-gray-800 p-4 rounded-lg transition-all duration-300 bg-zinc-50 dark:bg-zinc-800/90 hover:ring hover:ring-sky-500/30 dark:hover:ring-sky-200">
+                <Link key={item.name} href={item.path} className="block border dark:border-gray-700 p-4 rounded-lg transition-all duration-300 bg-zinc-50 dark:bg-zinc-950 hover:ring hover:ring-sky-500/30 dark:hover:ring-sky-200">
                   <div>
                     <h2 className="text-gray-900 dark:text-white text-lg md:text-xl font-normal">
                       {item.name}
@@ -153,7 +153,7 @@ export function HomePage() {
             <div className="flex flex-row justify-center items-center">
               <div role="button" className="space-x-4">
                 <Link
-                  className="h-10 items-center justify-center rounded-lg bg-gray-900 dark:bg-white dark:border-gray-300 px-6 py-2 md:py-3 text-sm font-medium text-gray-50 dark:text-gray-900 shadow transition-all duration-200 hover:bg-gray-800 hover:ring hover:ring-gray-400 dark:hover:ring-gray-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-300 disabled:pointer-events-none disabled:opacity-50"
+                  className="h-10 items-center justify-center rounded-lg bg-black dark:bg-white dark:border-gray-300 px-6 py-2 md:py-3 text-sm font-medium text-gray-50 dark:text-gray-900 shadow transition-all duration-200 hover:bg-gray-800 hover:ring hover:ring-gray-400 dark:hover:ring-gray-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-300 disabled:pointer-events-none disabled:opacity-50"
                   href="/foundations"
                 >
                   Foundations Overview
@@ -196,7 +196,7 @@ export function HomePage() {
                     title="Web Components"
                     imageSrc="/images/web-image.png"
                     variant="interactive"
-                    className="text-start p-4 transition-all duration-200 bg-zinc-100 dark:bg-zinc-800/90 hover:ring hover:ring-sky-500/30 dark:hover:ring-sky-200"
+                    className="text-start p-4 transition-all duration-200 bg-zinc-100 dark:bg-black border dark:border-gray-700 hover:ring hover:ring-sky-500/30 dark:hover:ring-sky-200"
                     imageWidth={100}
                     imageHeight={100}
                     imagePosition="left"
@@ -209,7 +209,7 @@ export function HomePage() {
                     title="Android"
                     imageSrc="/images/android-image.png"
                     variant="interactive"
-                    className="text-start p-4 transition-all duration-200 bg-zinc-100 dark:bg-zinc-800/90 hover:ring hover:ring-sky-500/30 dark:hover:ring-sky-200"
+                    className="text-start p-4 transition-all duration-200 bg-zinc-100 dark:bg-black border dark:border-gray-700 hover:ring hover:ring-sky-500/30 dark:hover:ring-sky-200"
                     imageWidth={100}
                     imageHeight={100}
                     imagePosition="left"
@@ -222,7 +222,7 @@ export function HomePage() {
                     title="iOS"
                     imageSrc="/images/apple-image.png"
                     variant="interactive"
-                    className="text-start p-4 transition-all duration-200 bg-zinc-100 dark:bg-zinc-800/90 hover:ring hover:ring-sky-500/30 dark:hover:ring-sky-200"
+                    className="text-start p-4 transition-all duration-200 bg-zinc-100 dark:bg-black border dark:border-gray-700 hover:ring hover:ring-sky-500/30 dark:hover:ring-sky-200"
                     imageWidth={100}
                     imageHeight={100}
                     imagePosition="left"

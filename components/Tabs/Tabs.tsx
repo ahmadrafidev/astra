@@ -71,7 +71,7 @@ const Tabs: React.FC<TabsProps> = ({ theme, children, className, tabClassName })
 
   return (
     <div className={cn('flex flex-col items-center', className)} role="tablist">
-      <div className="flex space-x-2 bg-gray-200 dark:bg-gray-700 p-1 rounded-lg">
+      <div className="flex space-x-2 bg-gray-200 dark:bg-gray-800 p-1 rounded-lg">
         {children.map((tab, index) => (
           <button
             key={index}
@@ -83,7 +83,7 @@ const Tabs: React.FC<TabsProps> = ({ theme, children, className, tabClassName })
             className={cn(
               'py-1 px-4 rounded-lg flex items-center content-center',
               index === activeTab
-                ? 'bg-white dark:bg-gray-900 text-black dark:text-white shadow-lg text-base md:text-lg font-normal'
+                ? 'bg-white dark:bg-black text-black dark:text-white shadow-lg text-base md:text-lg font-normal'
                 : 'text-gray-700 dark:text-gray-50 hover:bg-white dark:hover:bg-gray-900 hover:text-black dark:hover:text-white',
               tabClassName
             )}
