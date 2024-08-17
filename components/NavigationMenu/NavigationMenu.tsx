@@ -12,7 +12,7 @@ export interface NavLink {
     ariaLabel?: string;
 }
 
-export interface NavigationBarProps {
+export interface NavigationMenuProps {
     links: NavLink[];
     toggleSidebar?: () => void;
     isSidebarOpen?: boolean;
@@ -21,7 +21,7 @@ export interface NavigationBarProps {
     rightContent?: React.ReactNode;
 }
 
-const NavigationBar: React.FC<NavigationBarProps> = ({
+const NavigationMenu: React.FC<NavigationMenuProps> = ({
     links,
     toggleSidebar,
     isSidebarOpen,
@@ -61,5 +61,5 @@ const NavigationBar: React.FC<NavigationBarProps> = ({
     );
 };
 
-NavigationBar.displayName = 'NavigationBar';
-export default NavigationBar;
+NavigationMenu.displayName = 'NavigationMenu';
+export default NavigationMenu;

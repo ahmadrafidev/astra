@@ -4,7 +4,7 @@ import React from 'react';
 
 import Layout from '@/components/Layout/Layout';
 import Badge from '@/components/Badge/Badge';
-import NavigationBar, { NavLink } from '@/components/Navbar/Navbar';
+import NavigationMenu, { NavLink } from '@/components/NavigationMenu/NavigationMenu';
 import ThemeToggle from '@/components/ThemeToggle/ThemeToggle';
 
 const links: NavLink[] = [
@@ -13,14 +13,14 @@ const links: NavLink[] = [
     { label: 'Components', href: '/components', ariaLabel: 'Components' },
 ];
 
-const NavigationBarPage: React.FC = () => {
+const NavigationMenuPage: React.FC = () => {
     return (
         <Layout>
             <Badge text="Components" />
             {/* Header Content */}
             <section className="mb-5">
                 <div className="flex flex-col">
-                    <h1 className="text-2xl md:text-3xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-3 md:mb-4">Navigation Bar</h1>
+                    <h1 className="text-2xl md:text-3xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-3 md:mb-4">Navigation Menu</h1>
                     <p className="ext-sm md:text-base font-normal font-sans text-gray-900 dark:text-gray-50">
                         A navigation component typically displayed at the top of every website.
                     </p>
@@ -29,7 +29,7 @@ const NavigationBarPage: React.FC = () => {
             {/* Navigation Bar Examples Section */}
             <section className="mb-5">
                 <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Examples</h2>
-                <NavigationBar
+                <NavigationMenu
                     links={links}
                     hero={
                         <div className="flex items-center">
@@ -115,5 +115,5 @@ const NavigationBarPage: React.FC = () => {
     );
 };
 
-NavigationBarPage.displayName = "NavigationBarPage"
-export default NavigationBarPage;
+NavigationMenuPage.displayName = "NavigationMenuPage"
+export default NavigationMenuPage;

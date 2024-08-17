@@ -1,13 +1,13 @@
 import React from 'react';
 import { Meta, StoryFn } from '@storybook/react';
-import Navbar, { NavigationBarProps } from '../components/Navbar/Navbar';
+import NavigationMenu, { NavigationMenuProps } from '@/components/NavigationMenu/NavigationMenu';
 
 export default {
-    title: 'Components/Navbar',
-    component: Navbar,
+    title: 'Components/NavigationMenu',
+    component: NavigationMenu,
 } as Meta;
 
-const Template: StoryFn<NavigationBarProps> = (args) => <Navbar {...args} />;
+const Template: StoryFn<NavigationMenuProps> = (args) => <NavigationMenu {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
