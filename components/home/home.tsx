@@ -242,7 +242,7 @@ export function HomePage() {
           </div>
         </section>
 
-        <section className="flex flex-col justify-around overflow-hidden w-full min-h-screen">
+        <section className="flex flex-col justify-center overflow-hidden w-full min-h-[60vh]">
           <div className="container px-4 md:px-6 mx-auto">
             <div className="flex flex-col items-center space-y-6 md:space-y-8 text-center">
               <div className="space-y-6 md:space-y-8">
