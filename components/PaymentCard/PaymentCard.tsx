@@ -73,7 +73,7 @@ const PaymentCard: React.FC<PaymentCardProps> = ({
   };
 
   return (
-    <div className={cn("flex flex-col p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md", className)} aria-label="Payment Card Interface">
+    <div className={cn("flex flex-col p-4 bg-white dark:bg-gray-950 border dark:border-gray-700 rounded-lg shadow-md", className)} aria-label="Payment Card Interface">
       <form onSubmit={handleSubmit} aria-live="polite">
         <div className="mb-4">
           <label htmlFor="cardNumber" className="block text-gray-700 dark:text-gray-200">Card Number</label>
