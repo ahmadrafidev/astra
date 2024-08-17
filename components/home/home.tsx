@@ -4,7 +4,7 @@ import Link from "next/link"
 import Image from 'next/image';
 import dynamic from 'next/dynamic';
 import { useState } from "react";
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Github } from 'lucide-react';
 
 import Card from '../Card/Card';
 import ThemeToggle from '../ThemeToggle/ThemeToggle';
@@ -192,7 +192,7 @@ export function HomePage() {
                   The Components
                 </h2>
                 <p className="text-gray-700 dark:text-gray-100 text-lg/relaxed md:text-xl/relaxed ml-1 md:ml-2">
-                  Explore more abot AstraUI Components
+                  Explore more abot AstraUI components
                 </p>
               </div>
               <div className="flex flex-col justify-center space-y-4">
@@ -242,6 +242,38 @@ export function HomePage() {
           </div>
         </section>
 
+        <section className="flex flex-col justify-around overflow-hidden w-full min-h-screen">
+          <div className="container px-4 md:px-6 mx-auto">
+            <div className="flex flex-col items-center space-y-6 md:space-y-8 text-center">
+              <div className="space-y-6 md:space-y-8">
+                <h1 className="text-5xl md:text-6xl font-semibold tracking-tighter text-gray-900 dark:text-gray-50">
+                  Built a Beautiful Web,&nbsp; 
+                  <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-blue-600 bg-clip-text text-transparent">
+                    Effortlessly
+                  </span>
+                </h1>
+                <p className="mx-auto max-w-[600px] text-gray-700 dark:text-gray-100 text-sm md:text-xl font-normal">
+                  Experience it firsthand and show us your creations
+                </p>
+              </div>
+              <div className="flex flex-wrap gap-4 mb-12">
+                <Link
+                  href="https://github.com/ahmadrafidev/astra"
+                  className="bg-zinc-100 dark:bg-zinc-950 text-gray-900 dark:text-white px-6 py-3 rounded-lg font-semibold flex items-center transition duration-300 border border-gray-300 dark:border-gray-700 hover:bg-zinc-200 dark:hover:bg-zinc-900"
+                >
+                  <Github className="mr-2 w-5 h-5" /> Github
+                </Link>
+                <Link
+                  href="/about"
+                  className="bg-zinc-950 dark:bg-zinc-100 text-white dark:text-gray-900 px-6 py-3 rounded-lg font-semibold flex items-center transition duration-300 border border-gray-700 dark:border-gray-300 hover:bg-zinc-800 dark:hover:bg-zinc-200"
+                >
+                  Get Started <ArrowRight className="ml-2 w-5 h-5" />
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
       </main>
       <Footer />
     </div>
@@ -265,3 +297,4 @@ const IconCard: React.FC<IconCardProps> = ({ Icon, title, description }) => (
     <p className="text-gray-500 dark:text-gray-300 text-sm">{description}</p>
   </div>
 );
+
