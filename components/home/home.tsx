@@ -2,6 +2,7 @@
 
 import Link from "next/link"
 import Image from 'next/image';
+import dynamic from 'next/dynamic';
 import { useState } from "react";
 import { ArrowRight } from 'lucide-react';
 
@@ -15,7 +16,11 @@ import PaletteIcon from '../Icons/PaletteIcon';
 import PuzzleIcon from '../Icons/PuzzleIcon';
 import AlignCenterHorizontalIcon from '../Icons/AlignCenterHorizontalIcon';
 import WandIcon from '../Icons/WandIcon';
-import InteractiveShowcase from '../InteractiveShowcase/InteractiveShowcase';
+
+const InteractiveShowcase = dynamic(() => import('../InteractiveShowcase/InteractiveShowcase'), {
+  loading: () => <p>Loading...</p>,  
+  ssr: false,  
+});
 
 import { foundationList } from '@/utils/constants/route';
 
@@ -68,7 +73,7 @@ export function HomePage() {
           </div>
           <div className="container px-5 md:mx-auto">
             <div className="flex flex-col md:flex-row justify-center items-center md:items-baseline gap-x-2 text-center space-y-4">
-              <h2 className="text-2xl md:text-3xl font-semibold font-sans text-gray-900 dark:text-gray-50">Inside AstraUI.</h2>
+              <h2 className="text-2xl md:text-4xl font-semibold font-sans text-gray-900 dark:text-gray-50">Inside AstraUI.</h2>
               <p className="text-base md:text-xl text-gray-600 dark:text-gray-100">
                 Everything you need to build great user interface on many platforms.
               </p>
