@@ -100,7 +100,7 @@ const InteractiveShowcase = () => {
           <StatusDot
             status="offline"
             type="icon"
-            icon={<Lock size={12} />}
+            icon={<Lock size={12} className="text-black dark:text-white" />}
             label="Offline"
             className="w-4 h-4"
           />
