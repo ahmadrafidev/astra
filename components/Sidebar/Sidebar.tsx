@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+
 import { ArrowLeftIcon } from '@heroicons/react/24/outline';
 
 import { useMemoizedPathname } from '../../hooks/useMemoizedPathname.jsx';
@@ -11,6 +12,7 @@ import { Tabs, Tab } from '../Tabs/Tabs';
 import ThemeToggle from '../ThemeToggle/ThemeToggle';
 
 import { componentsList, foundationList, aboutList } from '../../utils/constants/route';
+import { Alert } from '@/components/Alert/Alert';
 
 export interface SidebarProps {
     isSidebarOpen: boolean;
@@ -136,28 +138,14 @@ const Sidebar: React.FC<SidebarProps> = ({ isSidebarOpen, closeSidebar, classNam
                                 </ul>
                             </Tab>
                             <Tab iconLight="/icons/apple-light.webp" iconDark="/icons/apple-dark.webp">
-                                <h2 id="sidebar-heading-ios" className="text-base md:text-lg lg:text-xl font-medium my-2 md:my-3 text-black dark:text-white px-2">iOS</h2>
-                                <ul aria-labelledby="sidebar-heading-ios">
-                                    {filteredComponents.map((component) => (
-                                        <li key={component.name} onClick={closeSidebar}>
-                                            <Link href={component.path} className={`block rounded-xl px-2 py-2.5 text-sm lg:text-base font-sans font-normal ${isActive(component.path) ? 'bg-black text-white dark:bg-gray-50 dark:text-black ' : 'hover:bg-gray-200 focus:bg-gray-300 dark:hover:bg-gray-700 dark:focus:bg-gray-600 text-black dark:text-white'}`}>
-                                                {component.name}
-                                            </Link>
-                                        </li>
-                                    ))}
-                                </ul>
+                                <Alert type="info" className="p-4 px-auto">
+                                    The iOS section is currently under development.
+                                </Alert>
                             </Tab>
                             <Tab iconLight="/icons/android-light.webp" iconDark="/icons/android-dark.webp">
-                                <h2 id="sidebar-heading-android" className="text-base md:text-lg lg:text-xl font-medium my-2 md:my-3 text-black dark:text-white px-2">Android</h2>
-                                <ul aria-labelledby="sidebar-heading-android">
-                                    {filteredComponents.map((component) => (
-                                        <li key={component.name} onClick={closeSidebar}>
-                                            <Link href={component.path} className={`block rounded-xl px-2 py-2.5 text-sm lg:text-base font-sans font-normal ${isActive(component.path) ? 'bg-black text-white dark:bg-gray-50 dark:text-black ' : 'hover:bg-gray-200 focus:bg-gray-300 dark:hover:bg-gray-700 dark:focus:bg-gray-600 text-black dark:text-white'}`}>
-                                                {component.name}
-                                            </Link>
-                                        </li>
-                                    ))}
-                                </ul>
+                                <Alert type="info" className="p-4 px-auto">
+                                    The Android section is currently under development.
+                                </Alert>
                             </Tab>
                         </Tabs>
                     </div>
