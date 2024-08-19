@@ -4,8 +4,8 @@ const StepperDocumentation = () => {
   return (
     <>
       {/* Props Section */}
-      <section className="my-5">
-        <h2 className="text-xl md:text-2xl font-medium text-gray-900 dark:text-gray-50 mb-6">Props</h2>
+      <section id="properties" className="my-5 scroll-mt-20">
+        <h2 className="text-xl md:text-2xl font-medium text-gray-900 dark:text-gray-50 mb-5">Props</h2>
         <div className="bg-white dark:bg-gray-800 rounded-lg shadow overflow-hidden">
           <table className="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
             <thead className="bg-gray-50 dark:bg-gray-700">
@@ -31,31 +31,31 @@ const StepperDocumentation = () => {
               </tr>
               <tr>
                 <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-100">onStepClick</td>
-                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 font-mono">(stepIndex: number) =&gt; void</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 font-mono text-wrap">(stepIndex: number) =&gt; void</td>
                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">undefined</td>
                 <td className="px-6 py-4 text-sm text-gray-500 dark:text-gray-300">Optional callback function called when a step is clicked.</td>
               </tr>
               <tr>
                 <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-100">className</td>
                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 font-mono">string</td>
-                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">empty</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">-</td>
                 <td className="px-6 py-4 text-sm text-gray-500 dark:text-gray-300">Additional classes for styling the stepper.</td>
               </tr>
               <tr>
                 <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-100">activeColor</td>
                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 font-mono">string</td>
-                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">empty</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">-</td>
                 <td className="px-6 py-4 text-sm text-gray-500 dark:text-gray-300">Tailwind CSS class for the active step color.</td>
               </tr>
               <tr>
                 <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-100">inactiveColor</td>
                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 font-mono">string</td>
-                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">empty</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">-</td>
                 <td className="px-6 py-4 text-sm text-gray-500 dark:text-gray-300">Tailwind CSS class for the inactive step color.</td>
               </tr>
               <tr>
                 <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-100">orientation</td>
-                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 font-mono">{`'horizontal' | 'vertical'`}</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 font-mono text-wrap">{`'horizontal' | 'vertical'`}</td>
                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">{`'horizontal'`}</td>
                 <td className="px-6 py-4 text-sm text-gray-500 dark:text-gray-300">The layout orientation of the stepper.</td>
               </tr>
@@ -63,9 +63,10 @@ const StepperDocumentation = () => {
           </table>
         </div>
       </section>
+
       {/* Best Practices Section */}
-      <section>
-        <h2 className="text-xl md:text-2xl font-medium text-gray-900 dark:text-gray-50 mb-6">Best Practices</h2>
+      <section id="best-practices" className="scroll-mt-20">
+        <h2 className="text-xl md:text-2xl font-medium text-gray-900 dark:text-gray-50 mb-5">Best Practices</h2>
         <div className="space-y-4 text-gray-700 dark:text-gray-300">
           <ul className="list-decimal list-inside space-y-2">
             <li>Use steppers to guide users through a series of steps in a sequential process.</li>
