@@ -50,13 +50,13 @@ const ThemeToggle: React.FC = () => {
         <div className="relative inline-block text-left">
             <button 
                 onClick={() => setDropdownOpen(!dropdownOpen)} 
-                className="rounded-full p-2 items-center hover:bg-gray-200 dark:hover:bg-white transition"
+                className="rounded-full p-2 items-center hover:bg-gray-200 dark:hover:bg-gray-700 transition"
                 aria-label="Toggle theme menu"
             >
                 {theme === 'light' ? (
                     <SunIcon className="h-6 w-6 text-yellow-500" />
                 ) : theme === 'dark' ? (
-                    <MoonIcon className="h-5 w-5 text-gray-400" />
+                    <MoonIcon className="h-5 w-5 text-gray-200" />
                 ) : (
                     <ComputerDesktopIcon className="h-6 w-5 text-gray-600 dark:text-gray-400" />
                 )}
