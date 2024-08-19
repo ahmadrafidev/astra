@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import Link from 'next/link';
 import { ArrowLeftIcon } from '@heroicons/react/24/outline';
 
@@ -23,8 +23,12 @@ const Sidebar: React.FC<SidebarProps> = ({ isSidebarOpen, closeSidebar, classNam
     const [filteredComponents, setFilteredComponents] = useState(componentsList);
     const [filteredFoundations, setFilteredFoundations] = useState(foundationList);
     const [theme, setTheme] = useState('light');
+    const [activeTab, setActiveTab] = useState('Web');
 
     useEffect(() => {
+        const savedTab = localStorage.getItem('sidebarActiveTab') || 'Web';
+        setActiveTab(savedTab);
+
         const savedTheme = localStorage.getItem('theme') || 'system';
         setTheme(savedTheme);
 
@@ -52,6 +56,11 @@ const Sidebar: React.FC<SidebarProps> = ({ isSidebarOpen, closeSidebar, classNam
             mediaQuery.removeEventListener('change', handleChange);
             window.removeEventListener('themeChange', handleThemeChange);
         };
+    }, []);
+
+    const handleTabChange = useCallback((label: string) => {
+        setActiveTab(label);
+        localStorage.setItem('sidebarActiveTab', label);
     }, []);
 
     const handleSearch = (query: string) => {
@@ -122,7 +131,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isSidebarOpen, closeSidebar, classNam
                 )}
                 {pathname.startsWith('/components') && (
                     <div className="my-3 md:my-4">
-                        <Tabs theme={theme}>
+                        <Tabs theme={theme} activeTab={activeTab} onTabChange={handleTabChange}>
                             <Tab label="Web">
                                 <h2 id="sidebar-heading-web" className="text-base md:text-lg lg:text-xl font-medium my-2 md:my-3 text-black dark:text-white px-2">Web</h2>
                                 <ul aria-labelledby="sidebar-heading-web">
@@ -135,7 +144,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isSidebarOpen, closeSidebar, classNam
                                     ))}
                                 </ul>
                             </Tab>
-                            <Tab iconLight="/icons/apple-light.webp" iconDark="/icons/apple-dark.webp">
+                            <Tab label="iOS" iconLight="/icons/apple-light.webp" iconDark="/icons/apple-dark.webp">
                                 <h2 id="sidebar-heading-ios" className="text-base md:text-lg lg:text-xl font-medium my-2 md:my-3 text-black dark:text-white px-2">iOS</h2>
                                 <ul aria-labelledby="sidebar-heading-ios">
                                     {filteredComponents.map((component) => (
@@ -147,7 +156,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isSidebarOpen, closeSidebar, classNam
                                     ))}
                                 </ul>
                             </Tab>
-                            <Tab iconLight="/icons/android-light.webp" iconDark="/icons/android-dark.webp">
+                            <Tab label="Android" iconLight="/icons/android-light.webp" iconDark="/icons/android-dark.webp">
                                 <h2 id="sidebar-heading-android" className="text-base md:text-lg lg:text-xl font-medium my-2 md:my-3 text-black dark:text-white px-2">Android</h2>
                                 <ul aria-labelledby="sidebar-heading-android">
                                     {filteredComponents.map((component) => (
