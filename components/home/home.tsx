@@ -18,11 +18,11 @@ import AlignCenterHorizontalIcon from '../Icons/AlignCenterHorizontalIcon';
 import WandIcon from '../Icons/WandIcon';
 
 const InteractiveShowcase = dynamic(() => import('../InteractiveShowcase/InteractiveShowcase'), {
-  loading: () => {
+  loading: () => (
     <div className="flex justify-center items-center">
       <Spinner color="border-blue-500" thickness={4} speed="fast" size="lg" />
     </div>
-  },  
+  ),  
   ssr: false,  
 });
 
