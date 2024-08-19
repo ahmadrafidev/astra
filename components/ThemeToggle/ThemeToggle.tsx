@@ -58,11 +58,11 @@ const ThemeToggle: React.FC = () => {
                 ) : theme === 'dark' ? (
                     <MoonIcon className="h-5 w-5 text-gray-200" />
                 ) : (
-                    <ComputerDesktopIcon className="h-6 w-5 text-gray-600 dark:text-gray-400" />
+                    <ComputerDesktopIcon className="h-6 w-5 text-gray-700 dark:text-gray-200" />
                 )}
             </button>
             {dropdownOpen && (
-                <div className="absolute right-0 mt-2 w-48 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-md shadow-lg z-10">
+                <div className="absolute right-0 mt-2 w-48 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-md shadow-lg z-10 overflow-hidden">
                     <button
                         onClick={() => handleThemeChange('light')}
                         className="block w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-900"
