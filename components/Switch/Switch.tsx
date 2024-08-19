@@ -77,7 +77,7 @@ const Switch: React.FC<SwitchProps> = ({
           className={cn(
             "rounded-full peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-blue-500",
             sizeClasses[size], 
-            { 'bg-gray-300 dark:bg-gray-700': !checked, 'bg-blue-700 dark:bg-blue-600': checked }
+            { 'bg-gray-300 dark:bg-zinc-700': !checked, 'bg-blue-800 dark:bg-blue-700': checked }
           )}
         ></span>
         <span 

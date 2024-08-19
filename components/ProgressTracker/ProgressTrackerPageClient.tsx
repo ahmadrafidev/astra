@@ -19,7 +19,7 @@ const ProgressTrackerPageClient: React.FC = () => {
     const tocItems = [
         { id: 'overview', label: 'Overview' },
         { id: 'usage', label: 'Usage' },
-        { id: 'props', label: 'Props' },
+        { id: 'properties', label: 'Properties' },
         { id: 'best-practices', label: 'Best Practices' },
     ];
 
@@ -113,7 +113,7 @@ const ProgressTrackerPageClient: React.FC = () => {
                     </section>
 
                     {/* Props Section */}
-                    <section id="props" className="my-5 scroll-mt-20">
+                    <section id="properties" className="my-5 scroll-mt-20">
                         <h2 className="text-xl md:text-2xl font-medium text-gray-900 dark:text-gray-50 mb-6">Props</h2>
                         <div className="bg-white dark:bg-gray-800 rounded-lg shadow overflow-hidden">
                             <table className="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
