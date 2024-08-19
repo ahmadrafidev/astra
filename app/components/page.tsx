@@ -6,14 +6,16 @@ import Badge from '@/components/Badge/Badge';
 import { Tabs, Tab } from '@/components/Tabs/Tabs';
 import AlphabeticalList from '@/components/AlphabeticalList/AlphabeticalList';
 import CategoricalList from '@/components/CategoricalList/CategoricalList';
-import AstraComponentClient from '@/components/AstraComponentClient/AstraComponentClient';
+import AstraComponent from '@/components/AstraComponent/AstraComponent';
 
 export const metadata: Metadata = {
     title: 'Component',
     description: 'A comprehensive collection of reusable UI components for building consistent and efficient user interfaces. Includes detailed documentation, usage guidelines, and customization options for each component.',
 };
 
-const AstraComponentPage: React.FC = () => {
+const AstraComponentPage: React.FC = async () => {
+    const initialActiveTab = 'Alphabetical';
+
     return (
         <Layout>
             <Badge ariaLabel="Components Title Badge" text="Components" />
@@ -24,7 +26,7 @@ const AstraComponentPage: React.FC = () => {
                     Engieered for customization, accessibility, and seamless use, these components are designed to elevate your projects across web, Android, and iOS platforms.
                     Explore the documentation for detailed insights on features, usage, and customization options.
                 </p>
-                <AstraComponentClient />
+                <AstraComponent initialActiveTab={initialActiveTab} />
             </div>
         </Layout>
     );
