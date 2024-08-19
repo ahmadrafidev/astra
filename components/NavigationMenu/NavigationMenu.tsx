@@ -5,33 +5,47 @@ import Link from 'next/link';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 
 /**
- * Interface representing a navigation link.
- *
+ * Represents a navigation link item.
+ * 
  * @typedef {Object} NavLink
- * @property {string} label - The text label of the navigation link.
- * @property {string} href - The URL that the navigation link points to.
- * @property {string} [ariaLabel] - Optional ARIA label for accessibility.
+ * @property {string} label - The text to display for the link.
+ * @property {string} href - The URL that the link navigates to.
+ * @property {string} [ariaLabel] - Optional aria-label for accessibility.
  */
+export interface NavLink {
+  label: string;
+  href: string;
+  ariaLabel?: string;
+}
 
 /**
  * Props for the NavigationMenu component.
- *
+ * 
  * @typedef {Object} NavigationMenuProps
- * @property {NavLink[]} links - Array of navigation links to display.
- * @property {() => void} [toggleSidebar] - Optional callback function to toggle the sidebar.
- * @property {boolean} [isSidebarOpen] - Indicates if the sidebar is currently open.
- * @property {React.ReactNode} [hero] - Optional hero content to display on the left side.
- * @property {string} [className] - Additional class names for custom styling.
- * @property {React.ReactNode} [rightContent] - Optional content to display on the right side.
- * @property {string} [mobileBreakpoint='md'] - The breakpoint at which the mobile menu becomes active.
- * @property {boolean} [debug=false] - Enables debug mode, logging props to the console.
+ * @property {NavLink[]} links - An array of navigation links to display.
+ * @property {() => void} [toggleSidebar] - Optional function to toggle the sidebar.
+ * @property {boolean} [isSidebarOpen] - Indicates whether the sidebar is currently open.
+ * @property {React.ReactNode} [hero] - Optional hero content, like a logo or title.
+ * @property {string} [className] - Additional class names for the navigation menu.
+ * @property {React.ReactNode} [rightContent] - Optional content to display on the right side of the menu.
+ * @property {string} [mobileBreakpoint='md'] - The breakpoint at which the mobile menu is activated.
+ * @property {boolean} [debug=false] - If true, logs the component's props for debugging purposes.
  */
+export interface NavigationMenuProps {
+  links: NavLink[];
+  toggleSidebar?: () => void;
+  isSidebarOpen?: boolean;
+  hero?: React.ReactNode;
+  className?: string;
+  rightContent?: React.ReactNode;
+  mobileBreakpoint?: string;
+  debug?: boolean;
+}
 
 /**
- * NavigationMenu component provides a responsive navigation bar with optional sidebar toggle and custom content.
- *
- * @component
- * @param {NavigationMenuProps} props - Props for the NavigationMenu component.
+ * A responsive navigation menu component that supports sidebar toggling, custom hero content, and additional right-aligned content.
+ * 
+ * @param {NavigationMenuProps} props - The props for the NavigationMenu component.
  * @returns {JSX.Element} The rendered NavigationMenu component.
  */
 const NavigationMenu: React.FC<NavigationMenuProps> = ({
@@ -93,7 +107,6 @@ const NavigationMenu: React.FC<NavigationMenuProps> = ({
           {rightContent}
         </div>
       </div>
-
     </nav>
   );
 };
