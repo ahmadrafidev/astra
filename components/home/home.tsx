@@ -18,11 +18,16 @@ import AlignCenterHorizontalIcon from '../Icons/AlignCenterHorizontalIcon';
 import WandIcon from '../Icons/WandIcon';
 
 const InteractiveShowcase = dynamic(() => import('../InteractiveShowcase/InteractiveShowcase'), {
-  loading: () => <p>Loading...</p>,  
+  loading: () => {
+    <div className="flex justify-center items-center">
+      <Spinner color="border-blue-500" thickness={4} speed="fast" size="lg" />
+    </div>
+  },  
   ssr: false,  
 });
 
 import { foundationList } from '@/utils/constants/route';
+import Spinner from '../Spinner/Spinner';
 
 export function HomePage() {
   const [activeSection, setActiveSection] = useState('about');
@@ -259,13 +264,13 @@ export function HomePage() {
               <div className="flex flex-wrap gap-4 mb-12">
                 <Link
                   href="https://github.com/ahmadrafidev/astra"
-                  className="bg-zinc-100 dark:bg-zinc-950 text-gray-900 dark:text-white px-6 py-3 rounded-lg font-semibold flex items-center transition duration-300 border border-gray-300 dark:border-gray-700 hover:bg-zinc-200 dark:hover:bg-zinc-900"
+                  className="bg-zinc-50 dark:bg-zinc-950 text-gray-900 dark:text-white px-6 py-3 rounded-lg font-semibold flex items-center transition duration-300 border border-gray-300 dark:border-gray-700 hover:bg-zinc-100 dark:hover:bg-zinc-900 hover:scale-105 hover:ring hover:ring-gray-400 dark:hover:ring-gray-200"
                 >
                   <Github className="mr-2 w-5 h-5" /> Github
                 </Link>
                 <Link
                   href="/about"
-                  className="bg-zinc-950 dark:bg-zinc-100 text-white dark:text-gray-900 px-6 py-3 rounded-lg font-semibold flex items-center transition duration-300 border border-gray-700 dark:border-gray-300 hover:bg-zinc-800 dark:hover:bg-zinc-200"
+                  className="bg-zinc-950 dark:bg-zinc-100 text-white dark:text-gray-900 px-6 py-3 rounded-lg font-semibold flex items-center transition duration-300 border border-gray-700 dark:border-gray-300 hover:bg-zinc-800 dark:hover:bg-zinc-200 hover:scale-105 hover:ring hover:ring-gray-400 dark:hover:ring-gray-500"
                 >
                   Get Started <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
