@@ -23,7 +23,7 @@ const AstraComponentPage: React.FC = async () => {
             <div className="mb-8">
                 <p className="text-sm md:text-base mb-4 text-gray-700 dark:text-gray-50 leading-loose text-justify">
                     The Components section provides an in-depth look at each user interface component in AstraUI. 
-                    Engieered for customization, accessibility, and seamless use, these components are designed to elevate your projects across web, Android, and iOS platforms.
+                    Engineered for customization, accessibility, and seamless use, these components are designed to elevate your projects across web, Android, and iOS platforms.
                     Explore the documentation for detailed insights on features, usage, and customization options.
                 </p>
                 <AstraComponent initialActiveTab={initialActiveTab} />

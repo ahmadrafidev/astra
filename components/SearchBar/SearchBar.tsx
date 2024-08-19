@@ -82,7 +82,7 @@ const SearchBar: React.FC<SearchBarProps> = ({
                 onChange={handleInputChange}
                 placeholder={placeholder}
                 aria-label={placeholder}
-                className={`${sizeClasses[size]} border dark:border-none p-2 pl-10 leading-6 rounded-lg w-full text-sm md:text-base text-gray-800 dark:text-gray-300 bg-white dark:bg-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-400 dark:focus:ring-gray-700 `}
+                className={`${sizeClasses[size]} border dark:border-none p-2 pl-10 leading-6 rounded-lg w-full text-sm md:text-base text-gray-800 dark:text-gray-300 bg-white dark:bg-zinc-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-400 dark:focus:ring-zinc-700 `}
                 {...inputProps}
             />
         </div>

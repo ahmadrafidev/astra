@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
+
 import { cn } from "@/lib/utils"; 
 
 /**
@@ -90,7 +91,7 @@ const Tabs: React.FC<TabsProps> = ({ theme, children, className, tabClassName, a
 
   return (
     <div className={cn('flex flex-col items-center', className)} role="tablist">
-      <div className="flex space-x-2 bg-gray-200 dark:bg-gray-800 p-1 rounded-lg">
+      <div className="flex space-x-2 bg-zinc-200 dark:bg-zinc-700 p-1 rounded-lg">
         {children.map((tab, index) => (
           <button
             key={index}
@@ -103,7 +104,7 @@ const Tabs: React.FC<TabsProps> = ({ theme, children, className, tabClassName, a
               'py-1 px-4 rounded-lg flex items-center content-center',
               index === activeTab
                 ? 'bg-white dark:bg-black text-black dark:text-white shadow-lg text-base md:text-lg font-normal'
-                : 'text-gray-700 dark:text-gray-50 hover:bg-white dark:hover:bg-gray-900 hover:text-black dark:hover:text-white',
+                : 'text-gray-700 dark:text-gray-50 hover:bg-white dark:hover:bg-zinc-950 hover:text-black dark:hover:text-white',
               tabClassName
             )}
             onClick={() => handleTabClick(index)}
