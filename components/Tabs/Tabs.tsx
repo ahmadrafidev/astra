@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { cn } from "@/lib/utils"; 
 
@@ -32,12 +32,16 @@ export interface TabProps {
  * @property {React.ReactElement<TabProps>[]} children - The tab components to render within the tabs.
  * @property {string} [className] - Additional class names for custom styling.
  * @property {string} [tabClassName] - Additional class names for styling individual tabs.
+ * @property {string} [activeTab] - The label of the currently active tab.
+ * @property {(label: string) => void} [onTabChange] - Callback function called when the active tab changes.
  */
 export interface TabsProps {
   theme?: string;
   children: React.ReactElement<TabProps>[];
   className?: string;
   tabClassName?: string;
+  activeTab?: string;
+  onTabChange?: (label: string) => void;
 }
 
 /**
@@ -58,14 +62,29 @@ const Tab: React.FC<TabProps> = ({ children, className, ...props }) => (
  * @param {TabsProps} props - Props for the Tabs component.
  * @returns {JSX.Element} The rendered Tabs component.
  */
-const Tabs: React.FC<TabsProps> = ({ theme, children, className, tabClassName }) => {
-  const [activeTab, setActiveTab] = useState(0);
+const Tabs: React.FC<TabsProps> = ({ theme, children, className, tabClassName, activeTab: controlledActiveTab, onTabChange }) => {
+  const [activeTab, setActiveTab] = useState(controlledActiveTab ? children.findIndex(child => child.props.label === controlledActiveTab) : 0);
+
+  useEffect(() => {
+    if (controlledActiveTab) {
+      setActiveTab(children.findIndex(child => child.props.label === controlledActiveTab));
+    }
+  }, [controlledActiveTab, children]);
+
+  const handleTabClick = (index: number) => {
+    setActiveTab(index);
+    if (onTabChange) {
+      onTabChange(children[index].props.label || '');
+    }
+  };
 
   const handleKeyDown = (event: React.KeyboardEvent, index: number) => {
     if (event.key === 'ArrowRight') {
-      setActiveTab((index + 1) % children.length);
+      const newIndex = (index + 1) % children.length;
+      handleTabClick(newIndex);
     } else if (event.key === 'ArrowLeft') {
-      setActiveTab((index - 1 + children.length) % children.length);
+      const newIndex = (index - 1 + children.length) % children.length;
+      handleTabClick(newIndex);
     }
   };
 
@@ -87,7 +106,7 @@ const Tabs: React.FC<TabsProps> = ({ theme, children, className, tabClassName })
                 : 'text-gray-700 dark:text-gray-50 hover:bg-white dark:hover:bg-gray-900 hover:text-black dark:hover:text-white',
               tabClassName
             )}
-            onClick={() => setActiveTab(index)}
+            onClick={() => handleTabClick(index)}
             onKeyDown={(e) => handleKeyDown(e, index)}
           >
             {tab.props.iconLight && tab.props.iconDark && (
