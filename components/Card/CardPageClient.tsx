@@ -91,7 +91,7 @@ const CardPageClient: React.FC = () => {
                                                 variant="interactive"
                                                 titleElement="h2"
                                             >
-                                                <button className="mt-4 px-4 py-2 bg-zinc-900 dark:bg-zinc-50 text-white dark:text-black rounded">Action</button>
+                                                <button className="mt-4 px-4 py-2 bg-zinc-900 dark:bg-zinc-50 text-white dark:text-black rounded-lg">Action</button>
                                             </Card>
                                             <Card
                                                 title="White Horse Again"
@@ -102,7 +102,7 @@ const CardPageClient: React.FC = () => {
                                                 titleElement="h2"
                                                 onClick={() => alert('neigh')}
                                             >
-                                                <button className="mt-4 px-4 py-2 bg-zinc-900 dark:bg-zinc-50 text-white dark:text-black rounded">Try Click Me</button>
+                                                <button className="mt-4 px-4 py-2 bg-zinc-900 dark:bg-zinc-50 text-white dark:text-black rounded-lg">Try Click Me</button>
                                             </Card>
                                         </div>
                                     </div>
