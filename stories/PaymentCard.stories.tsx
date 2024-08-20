@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { Meta, StoryFn } from '@storybook/react';
 
 import PaymentCard, { PaymentCardProps } from '@/components/PaymentCard/PaymentCard';

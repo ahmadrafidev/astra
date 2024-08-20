@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { Meta, StoryFn } from '@storybook/react';
 
 import Collapsible from '@/components/Collapsible/Collapsible';

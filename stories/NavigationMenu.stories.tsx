@@ -1,6 +1,8 @@
 import React from 'react';
+
 import { Meta, StoryFn } from '@storybook/react';
-import NavigationMenu, { NavigationMenuProps } from '../components/NavigationMenu/NavigationMenu';
+
+import NavigationMenu, { NavigationMenuProps } from '@/components/NavigationMenu/NavigationMenu';
 
 export default {
     title: 'Components/NavigationMenu',

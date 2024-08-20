@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
+
 import { Meta, StoryFn } from '@storybook/react';
-import Modal, { ModalProps } from '../components/Modal/Modal'; 
-import Button from '../components/Button/Button'; 
 import { X } from 'lucide-react';
+
+import Modal, { ModalProps } from '@/components/Modal/Modal'; 
+import Button from '@/components/Button/Button'; 
 
 export default {
     title: 'Components/Modal',

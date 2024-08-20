@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { Home, Search, User } from 'lucide-react';
+
 import { Meta, StoryFn } from '@storybook/react';
+import { Home, Search, User } from 'lucide-react';
 
 import BottomNavigation, { BottomNavigationProps } from '@/components/BottomNavigation/BottomNavigation';
 

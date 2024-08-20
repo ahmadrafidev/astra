@@ -1,7 +1,9 @@
 import React from 'react';
+
 import { Meta, StoryFn } from '@storybook/react';
-import { List, ListProps, ListItem } from '../components/List/List'; 
 import { Check, AlertCircle } from 'lucide-react';
+
+import { List, ListProps, ListItem } from '@/components/List/List'; 
 
 export default {
     title: 'Components/List',

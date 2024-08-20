@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+
 import { Meta, StoryFn } from '@storybook/react';
-import Notification, { NotificationProps } from '../components/Notification/Notification'; 
 import { Bell } from 'lucide-react';
+
+import Notification, { NotificationProps } from '@/components/Notification/Notification'; 
 
 export default {
     title: 'Components/Notification',

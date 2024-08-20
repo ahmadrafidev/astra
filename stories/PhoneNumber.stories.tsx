@@ -1,6 +1,8 @@
 import React from 'react';
+
 import { Meta, StoryFn } from '@storybook/react';
-import PhoneNumber from '../components/PhoneNumber/PhoneNumber';
+
+import PhoneNumber from '@/components/PhoneNumber/PhoneNumber';
 
 export default {
     title: 'Components/PhoneNumber',

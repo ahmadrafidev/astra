@@ -1,6 +1,7 @@
 import React from 'react';
-import { Plus } from 'lucide-react';
+
 import { Meta, StoryFn } from '@storybook/react';
+import { Plus } from 'lucide-react';
 
 import Button, { ButtonProps } from '@/components/Button/Button'; 
 

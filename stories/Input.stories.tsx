@@ -3,7 +3,7 @@ import React from 'react';
 import { Meta, StoryFn } from '@storybook/react';
 import { EyeIcon } from '@heroicons/react/24/outline'; 
 
-import Input, { InputProps } from '../components/Input/Input';
+import Input, { InputProps } from '@/components/Input/Input';
 
 export default {
     title: 'Components/Input',
