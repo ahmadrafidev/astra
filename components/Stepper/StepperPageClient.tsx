@@ -61,7 +61,7 @@ const StepperPageClient: React.FC = () => {
                     <section id="usage" className="scroll-mt-20">
                         <Tabs>
                             <Tab label="Preview">
-                                <div className="relative w-full overflow-hidden mt-4 rounded-lg bg-zinc-100 dark:bg-zinc-950 shadow border border-slate-300 dark:border-slate-800">
+                                <div className="relative w-full h-64 overflow-hidden mt-4 rounded-lg bg-zinc-100 dark:bg-zinc-950 shadow border border-slate-300 dark:border-slate-800">
                                     <div className="p-6 space-y-4 flex flex-col justify-center items-center">
                                         <Stepper
                                             steps={steps}
@@ -71,22 +71,24 @@ const StepperPageClient: React.FC = () => {
                                             activeColor="bg-blue-700"
                                             inactiveColor="bg-gray-200"
                                         />
-                                        <div className="mt-4">
+                                        <div className="mt-4 flex flex-col gap-4 items-center">
                                             <p>Current Step: {currentStep + 1}</p>
-                                            <button
-                                                onClick={() => setCurrentStep((prev) => Math.max(0, prev - 1))}
-                                                className="mr-2 px-4 py-1 bg-blue-500 text-white rounded"
-                                                disabled={currentStep === 0}
-                                            >
-                                                Previous
-                                            </button>
-                                            <button
-                                                onClick={() => setCurrentStep((prev) => Math.min(steps.length - 1, prev + 1))}
-                                                className="px-4 py-1 bg-blue-500 text-white rounded"
-                                                disabled={currentStep === steps.length - 1}
-                                            >
-                                                Next
-                                            </button>
+                                            <div className="flex flex-row space-x-2">
+                                                <button
+                                                    onClick={() => setCurrentStep((prev) => Math.max(0, prev - 1))}
+                                                    className="px-6 py-2 bg-zinc-900 dark:bg-zinc-100 text-white dark:text-black rounded-lg"
+                                                    disabled={currentStep === 0}
+                                                >
+                                                    Previous
+                                                </button>
+                                                <button
+                                                    onClick={() => setCurrentStep((prev) => Math.min(steps.length - 1, prev + 1))}
+                                                    className="px-6 py-2 bg-zinc-50 dark:bg-zinc-900 text-black dark:text-white rounded-lg border border-gray-400 dark:border-gray-700"
+                                                    disabled={currentStep === steps.length - 1}
+                                                >
+                                                    Next
+                                                </button>
+                                            </div>                
                                         </div>
                                     </div>
                                 </div>
