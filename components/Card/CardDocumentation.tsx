@@ -3,7 +3,7 @@ import React from 'react';
 const CardDocumentation = () => (
   <>
     {/* Props Section */}
-    <section className="my-5">
+    <section id="properties" className="my-5 scroll-mt-20">
       <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Props</h2>
       <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg shadow overflow-x-auto">
         <table className="min-w-full table-auto border-collapse">
@@ -86,8 +86,9 @@ const CardDocumentation = () => (
         </table>
       </div>
     </section>
+
     {/* Best Practices Section */}
-    <section className="my-8">
+    <section id="best-practices" className="scroll-mt-20">
       <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Best Practices</h2>
       <div className="space-y-4">
         <ul className="list-decimal list-inside text-gray-700 dark:text-gray-300 space-y-3">
