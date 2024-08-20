@@ -3,8 +3,8 @@ import React from 'react';
 const CarouselDocumentation = () => (
   <>
     {/* Props Table Section */}
-    <section className="my-5">
-      <h2 className="text-xl md:text-2xl font-medium text-gray-900 dark:text-gray-50 mb-6">Props</h2>
+    <section id="properties" className="my-5 scroll-mt-20">
+      <h2 className="text-xl md:text-2xl font-medium text-gray-900 dark:text-gray-50 mb-5">Props</h2>
       <div className="bg-white dark:bg-gray-800 rounded-lg shadow overflow-hidden">
         <table className="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
           <thead className="bg-gray-50 dark:bg-gray-700">
@@ -25,7 +25,7 @@ const CarouselDocumentation = () => (
             <tr>
               <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-100">className</td>
               <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 font-mono">string</td>
-              <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">empty</td>
+              <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">-</td>
               <td className="px-6 py-4 text-sm text-gray-500 dark:text-gray-300">Additional classes for custom styling.</td>
             </tr>
             <tr>
@@ -68,8 +68,9 @@ const CarouselDocumentation = () => (
         </table>
       </div>
     </section>
+
     {/* Best Practices Section */}
-    <section className="my-8">
+    <section id="best-practices" className="scroll-mt-20">
       <h2 className="text-xl md:text-2xl font-medium font-sans text-gray-900 dark:text-gray-50 mb-5">Best Practices</h2>
       <div className="space-y-4">
         <ul className="list-decimal list-inside text-gray-700 dark:text-gray-300 space-y-3">
@@ -81,9 +82,6 @@ const CarouselDocumentation = () => (
           </li>
           <li>
             <strong>Navigation:</strong> Provide clear navigation controls (arrows and dots) for users to move between slides. Ensure these controls are easily clickable on touch devices.
-          </li>
-          <li>
-            <strong>Accessibility:</strong> Ensure the carousel is keyboard-navigable and screen-reader friendly. Use appropriate ARIA labels and roles.
           </li>
           <li>
             <strong>Performance:</strong> If using autoPlay, consider pausing the rotation when the user interacts with the carousel to avoid frustration.
