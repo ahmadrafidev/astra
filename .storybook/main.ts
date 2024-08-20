@@ -7,14 +7,17 @@ const config: StorybookConfig = {
   ],
 
   addons: [
+    "@chromatic-com/storybook",
     "@storybook/addon-onboarding",
     "@storybook/addon-links",
     "@storybook/addon-essentials",
-    "@chromatic-com/storybook",
     "@storybook/addon-interactions",
-    "@storybook/addon-mdx-gfm",
     '@storybook/addon-a11y',
     '@storybook/addon-coverage',
+    "@storybook/addon-measure",
+    "@storybook/addon-outline",
+    "@storybook/addon-viewport",
+    "@storybook/addon-console"
   ],
 
   framework: {
