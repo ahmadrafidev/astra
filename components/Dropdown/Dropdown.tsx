@@ -69,7 +69,7 @@ const Dropdown: React.FC<DropdownProps> = ({
         aria-haspopup="listbox"
         aria-expanded={isOpen}
         aria-controls="dropdown-options"
-        className="px-4 py-2 border border-gray-300 rounded-lg shadow-sm bg-white dark:bg-gray-800 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+        className="px-4 py-2 border dark:border-gray-700 border-gray-300 rounded-lg shadow-sm bg-white dark:bg-gray-800 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500"
         onKeyDown={handleKeyDown}
       >
         {selectedOption || placeholder}
@@ -81,7 +81,7 @@ const Dropdown: React.FC<DropdownProps> = ({
           id="dropdown-options"
           role="listbox"
           aria-activedescendant={selectedOption || undefined}
-          className="absolute mt-2 w-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg shadow-lg z-10"
+          className="absolute mt-2 w-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg shadow-lg z-10 max-h-40 overflow-y-auto"
         >
           {options.map((option, index) => (
             <li
