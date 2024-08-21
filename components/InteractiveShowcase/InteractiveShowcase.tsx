@@ -56,11 +56,11 @@ const InteractiveShowcase = () => {
   };
 
   return (
-    <div className="bg-zinc-100 dark:bg-zinc-800/90 p-6 rounded-lg shadow-lg min-h-screen">
-      <div className="grid grid-cols-4 grid-rows-3 gap-4 auto-rows-fr">
+    <div className="bg-zinc-100 dark:bg-zinc-800/90 p-4 sm:p-6 rounded-lg shadow-lg min-h-screen">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 auto-rows-fr">
 
-        {/* Dock Variants  */}
-        <div className="col-span-2 p-4 bg-sky-200 dark:bg-sky-400 rounded-lg shadow-md space-y-4">
+        {/* Dock Variants */}
+        <div className="col-span-1 md:col-span-2 p-4 bg-sky-200 dark:bg-sky-400 rounded-lg shadow-md space-y-4">
           <h3 className="text-lg font-semibold mb-2 text-gray-900 dark:text-gray-50">Dock</h3>
           <Dock
             items={[
@@ -88,8 +88,8 @@ const InteractiveShowcase = () => {
           />
         </div>
 
-         {/* StatusDot Component */}
-        <div className="p-4 bg-teal-200 dark:bg-teal-400 rounded-lg shadow-md flex flex-col space-y-2">
+        {/* StatusDot Component */}
+        <div className="col-span-1 p-4 bg-teal-200 dark:bg-teal-400 rounded-lg shadow-md flex flex-col space-y-2">
           <h3 className="text-lg font-semibold mb-2 text-gray-900 dark:text-gray-50">Status Dot</h3>
           <StatusDot
             status="online"
@@ -113,7 +113,7 @@ const InteractiveShowcase = () => {
         </div>
 
         {/* PaymentCard */}
-        <div className="col-span-1 row-span-2 p-4 bg-cyan-200 dark:bg-cyan-400 rounded-lg shadow-md flex flex-col space-y-4">
+        <div className="col-span-1 sm:col-span-1 md:row-span-2 p-4 bg-cyan-200 dark:bg-cyan-400 rounded-lg shadow-md flex flex-col space-y-4">
           <h3 className="text-lg font-semibold mb-2 text-gray-900 dark:text-gray-50">Payment Card</h3>
             <PaymentCard
               amount={199.99}
@@ -124,7 +124,7 @@ const InteractiveShowcase = () => {
         </div>
 
         {/* Radio Variants */}
-        <div className="p-4 bg-blue-200 dark:bg-blue-400 rounded-lg shadow-md">
+        <div className="col-span-1 p-4 bg-blue-200 dark:bg-blue-400 rounded-lg shadow-md">
           <h3 className="text-lg font-semibold mb-2 text-gray-900 dark:text-gray-50">Radio</h3>
           <Radio
             label="Option 1"
@@ -145,7 +145,7 @@ const InteractiveShowcase = () => {
         </div>
 
         {/* PinCode Variants */}
-        <div className="col-span-2 p-4 bg-emerald-100 dark:bg-emerald-300 rounded-lg shadow-md space-y-4">
+        <div className="col-span-1 md:col-span-2 p-4 bg-emerald-100 dark:bg-emerald-300 rounded-lg shadow-md space-y-4">
           <h3 className="text-lg font-semibold mb-2 text-gray-900 dark:text-gray-50">PIN Code</h3>
           <PinCode
             length={6}
@@ -167,7 +167,7 @@ const InteractiveShowcase = () => {
         </div>
 
         {/* Rating Variants */}
-        <div className="p-4 bg-teal-200 dark:bg-teal-400 rounded-lg shadow-md flex flex-col space-y-4">
+        <div className="col-span-1 p-4 bg-teal-200 dark:bg-teal-400 rounded-lg shadow-md flex flex-col space-y-4">
           <h3 className="text-lg font-semibold mb-2 text-gray-900 dark:text-gray-50">Rating</h3>
           <Rating
             maxRating={5}
@@ -196,7 +196,7 @@ const InteractiveShowcase = () => {
         </div>
 
         {/* Snackbar Component */}
-        <div className="p-4 bg-sky-200 dark:bg-sky-400 rounded-lg shadow-md">
+        <div className="col-span-1 p-4 bg-sky-200 dark:bg-sky-400 rounded-lg shadow-md">
           <h3 className="text-lg font-semibold mb-2 text-gray-900 dark:text-gray-50">Snackbar</h3>
           <button
             onClick={() => setSnackbarOpen(true)}
@@ -216,7 +216,7 @@ const InteractiveShowcase = () => {
         </div>
 
         {/* Slider Component */}
-        <div className="col-span-2 p-4 bg-blue-200 dark:bg-blue-400 rounded-lg shadow-md">
+        <div className="col-span-1 md:col-span-2 p-4 bg-blue-200 dark:bg-blue-400 rounded-lg shadow-md">
           <h3 className="text-lg font-semibold mb-2 text-gray-900 dark:text-gray-50">Slider</h3>
           <Slider
             value={sliderValue}
@@ -229,7 +229,7 @@ const InteractiveShowcase = () => {
         </div>
 
         {/* FileUploader Component */}
-        <div className="col-span-2 p-4 bg-cyan-200 dark:bg-cyan-400 rounded-lg shadow-md">
+        <div className="col-span-1 md:col-span-2 p-4 bg-cyan-200 dark:bg-cyan-400 rounded-lg shadow-md">
           <h3 className="text-lg font-semibold mb-2 text-gray-900 dark:text-gray-50">File Uploader</h3>
           <FileUploader
             onFileSelect={handleFileSelect}
