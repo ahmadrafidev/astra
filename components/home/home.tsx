@@ -175,7 +175,7 @@ export function HomePage() {
 
         {/* Interactive Component Showcase */}
         <section id="interactive-showcase" className="flex flex-col justify-around w-full px-4 md:px-12">
-          <div className="container px-4 md:px-6 mx-auto">
+          <div className="container px-4 md:px-6 mx-auto mt-32 md:mt-20">
             <div className="text-center mb-10">
               <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-gray-900 dark:text-gray-50 mb-4">
                 Experience AstraUI
@@ -192,7 +192,7 @@ export function HomePage() {
         <section className="flex flex-col justify-around min-h-screen w-full px-4 md:px-12">
           <div className="container px-4 md:px-6 mx-auto">
             <div className="grid items-center gap-6 lg:grid-cols-2 lg:gap-12">
-              <div className="space-y-2">
+              <div className="space-y-2 text-center md:text-start">
                 <h2 className="text-2xl md:text-5xl font-bold tracking-tight text-gray-900 dark:text-gray-50">
                   The Components
                 </h2>
