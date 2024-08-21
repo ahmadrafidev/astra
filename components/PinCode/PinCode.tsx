@@ -77,7 +77,7 @@ const PinCode: React.FC<PinCodeProps> = ({
         setError('Only numeric values are allowed');
       }
     }
-  };  
+  };
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>, index: number) => {
     if (e.key === 'Backspace' && !pin[index] && index > 0) {
@@ -93,13 +93,13 @@ const PinCode: React.FC<PinCodeProps> = ({
   return (
     <div className={`flex flex-col space-y-1 ${className}`}>
       <div className="flex space-x-2" role="group" aria-label="PIN Code">
-        {pin.map((value, index) => (
+        {Array.from({ length }).map((_, index) => (
           <input
             key={index}
             ref={el => setRef(el, index)}
             type={isMask ? 'password' : 'text'}
             maxLength={1}
-            value={value}
+            value={pin[index] || ''}
             onChange={(e) => handleChange(e, index)}
             onKeyDown={(e) => handleKeyDown(e, index)}
             className={`w-12 h-12 text-center text-lg bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-50 border-none rounded focus:outline-1 focus:outline-gray-950 focus:bg-gray-50 dark:focus:outline-gray-50 dark:focus:bg-black ${inputClassName}`}

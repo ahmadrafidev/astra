@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import { Home, CreditCard, Lock, Star, ChevronRight } from 'lucide-react';
 
@@ -15,7 +15,8 @@ import AlertDialog from '../AlertDialog/AlertDialog';
 import FileUploader from '../FileUploader/FileUploader';
 
 const InteractiveShowcase = () => {
-  const [pin, setPin] = React.useState<string[]>(new Array(6).fill(''));
+  const [pin, setPin] = React.useState<string[]>(new Array(4).fill(''));
+  const [pinLength, setPinLength] = React.useState<number>(4);
   const [radioValue, setRadioValue] = React.useState<string | null>('option1');
   const [sliderValue, setSliderValue] = React.useState<number>(50);
   const [snackbarOpen, setSnackbarOpen] = React.useState<boolean>(false);
@@ -35,10 +36,6 @@ const InteractiveShowcase = () => {
     alert(`Payment failed: ${error.message}`);
   };
 
-  const handlePinComplete = (completedPin: string) => {
-    alert(`PIN entered: ${completedPin}`);
-  };
-
   const handleRadioChange = (value: string | null) => {
     setRadioValue(value);
   };
@@ -53,6 +50,24 @@ const InteractiveShowcase = () => {
 
   const handleFileSelect = (file: File) => {
     alert(`Selected file: ${file.name}`);
+  };
+
+  useEffect(() => {
+    const updatePinLength = () => {
+      const isMediumScreen = window.matchMedia('(min-width: 768px)').matches;
+      setPinLength(isMediumScreen ? 6 : 4);
+      setPin(new Array(isMediumScreen ? 6 : 4).fill(''));
+    };
+
+    updatePinLength();
+
+    window.addEventListener('resize', updatePinLength);
+
+    return () => window.removeEventListener('resize', updatePinLength);
+  }, []);
+
+  const handlePinComplete = (completedPin: string) => {
+    alert(`PIN entered: ${completedPin}`);
   };
 
   return (
@@ -148,7 +163,7 @@ const InteractiveShowcase = () => {
         <div className="col-span-1 md:col-span-2 p-4 bg-emerald-100 dark:bg-emerald-300 rounded-lg shadow-md space-y-4">
           <h3 className="text-lg font-semibold mb-2 text-gray-900 dark:text-gray-50">PIN Code</h3>
           <PinCode
-            length={6}
+            length={pinLength}
             pin={pin}
             onPinChange={setPin}
             onComplete={handlePinComplete}
@@ -157,7 +172,7 @@ const InteractiveShowcase = () => {
           />
           <PinCode
             isMask={false}
-            length={6}
+            length={pinLength}
             pin={pin}
             onPinChange={setPin}
             onComplete={handlePinComplete}

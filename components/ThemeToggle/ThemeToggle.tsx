@@ -1,11 +1,12 @@
-'use client'
+'use client';
 
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { SunIcon, MoonIcon, ComputerDesktopIcon } from '@heroicons/react/24/solid';
 
 const ThemeToggle: React.FC = () => {
     const [theme, setTheme] = useState('system');
     const [dropdownOpen, setDropdownOpen] = useState(false);
+    const dropdownRef = useRef<HTMLDivElement>(null);
 
     const applyTheme = useCallback((theme: string) => {
         if (theme === 'system') {
@@ -43,13 +44,36 @@ const ThemeToggle: React.FC = () => {
         setTheme(newTheme);
         localStorage.setItem('theme', newTheme);
         applyTheme(newTheme);
-        setDropdownOpen(false); 
+        setDropdownOpen(false);
+    };
+
+    const handleClickOutside = useCallback((event: MouseEvent) => {
+        if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+            setDropdownOpen(false);
+        }
+    }, []);
+
+    useEffect(() => {
+        if (dropdownOpen) {
+            document.addEventListener('mousedown', handleClickOutside);
+        } else {
+            document.removeEventListener('mousedown', handleClickOutside);
+        }
+
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, [dropdownOpen, handleClickOutside]);
+
+    const handleButtonClick = (e: React.MouseEvent) => {
+        e.stopPropagation();
+        setDropdownOpen(!dropdownOpen);
     };
 
     return (
-        <div className="relative inline-block text-left">
+        <div className="relative inline-block text-left" ref={dropdownRef}>
             <button 
-                onClick={() => setDropdownOpen(!dropdownOpen)} 
+                onClick={handleButtonClick} 
                 className="rounded-full p-2 items-center hover:bg-gray-200 dark:hover:bg-zinc-700 transition"
                 aria-label="Toggle theme menu"
             >
