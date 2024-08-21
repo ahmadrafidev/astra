@@ -101,7 +101,7 @@ const Tabs: React.FC<TabsProps> = ({ theme, children, className, tabClassName, a
             id={`tab-${index}`}
             tabIndex={index === activeTab ? 0 : -1}
             className={cn(
-              'py-1 px-4 rounded-lg flex items-center content-center',
+              'py-1 px-4 rounded-lg flex items-center content-center flex-1',
               index === activeTab
                 ? 'bg-white dark:bg-black text-black dark:text-white shadow-lg text-base md:text-lg font-normal'
                 : 'text-gray-700 dark:text-gray-50 hover:bg-white dark:hover:bg-zinc-950 hover:text-black dark:hover:text-white',

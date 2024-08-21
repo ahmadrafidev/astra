@@ -258,7 +258,7 @@ export function HomePage() {
                   </span>
                 </h1>
                 <p className="mx-auto max-w-[600px] text-gray-700 dark:text-gray-100 text-sm md:text-xl font-normal">
-                  Experience it firsthand and show us your creations
+                  Experience it firsthand and show us your creations!
                 </p>
               </div>
               <div className="flex flex-wrap gap-4 mb-12">

@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+
 import { Tabs, Tab } from '@/components/Tabs/Tabs';
 import AlphabeticalList from '@/components/AlphabeticalList/AlphabeticalList';
 import CategoricalList from '@/components/CategoricalList/CategoricalList';

@@ -8,7 +8,7 @@ const CategoricalList: React.FC = () => {
         <>
             {Object.entries(categorizedComponentsList).map(([category, components]) => (
                 <div key={category} className="mt-6">
-                    <h3 className="text-lg md:text-xl lg:text-2xl font-medium mb-2 text-gray-900 dark:text-gray-50 capitalize">
+                    <h3 className="text-lg md:text-xl lg:text-2xl font-medium mb-4 text-gray-900 dark:text-gray-50 capitalize">
                         {category.replace(/([A-Z])/g, ' $1')}
                     </h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-4">

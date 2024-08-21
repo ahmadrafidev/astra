@@ -92,7 +92,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isSidebarOpen, closeSidebar, classNam
             </div>
             <div className="w-full">
                 <div className="hidden md:block">
-                    <SearchBar className="ml-2" size="small" onSearch={handleSearch} />
+                    <SearchBar className="mx-2" size="small" onSearch={handleSearch} />
                 </div>
                 {pathname.startsWith('/about') && (
                     <>

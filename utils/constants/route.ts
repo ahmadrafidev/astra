@@ -106,7 +106,7 @@ export const categorizedComponentsList = {
         { name: 'Navigation Menu', path: '/components/navigation-menu', description: 'A navigation bar for providing links to different sections of the site.' },
         { name: 'Accordion', path: '/components/accordion', description: 'A collapsible section of content, useful for FAQs and more.' },
         { name: 'Carousel', path: '/components/carousel', description: 'Displays a series of content in a slideshow format.' },
-        { name: 'Collapse', path: '/components/collapse', description: 'Hides and shows content in a toggled manner.' },
+        { name: 'Collapsible', path: '/components/collapsible', description: 'Hides and shows content in a toggled manner.' },
         { name: 'Progress Tracker', path: '/components/progress-tracker', description: 'Visual guide showing steps and progress through a multi-step process.' },
         { name: 'Stepper', path: '/components/stepper', description: 'Step-by-step interface for guiding users through processes.' },
         { name: 'Bottom Navigation', path: '/components/bottom-navigation', description: 'Mobile-friendly navigation bar fixed at screen bottom.' },
