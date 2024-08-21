@@ -66,17 +66,24 @@ const Header: React.FC<HeaderProps> = ({ setActiveSection, toggleSidebar, isSide
         }
     }, []);
 
+    const handleResize = useCallback(() => {
+        closeMobileMenu();
+    }, []);
+
     useEffect(() => {
         if (isMobileMenuOpen) {
             document.addEventListener('mousedown', handleClickOutside);
+            window.addEventListener('resize', handleResize);
         } else {
             document.removeEventListener('mousedown', handleClickOutside);
+            window.removeEventListener('resize', handleResize);
         }
 
         return () => {
             document.removeEventListener('mousedown', handleClickOutside);
+            window.removeEventListener('resize', handleResize);
         };
-    }, [handleClickOutside, isMobileMenuOpen]);
+    }, [handleClickOutside, handleResize, isMobileMenuOpen]);
 
     const hideMobileMenu = pathname.startsWith('/about') || pathname.startsWith('/foundations') || pathname.startsWith('/components');
 
