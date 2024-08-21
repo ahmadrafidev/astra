@@ -170,7 +170,7 @@ const Header: React.FC<HeaderProps> = ({ setActiveSection, toggleSidebar, isSide
             </nav>
             {/* Mobile Popover Menu */}
             {isMobileMenuOpen && (
-                <div ref={popoverRef} className="fixed top-14 right-0 w-48 bg-gray-50 dark:bg-black shadow z-50 rounded-lg">
+                <div ref={popoverRef} className="fixed top-14 right-6 w-48 bg-gray-50 dark:bg-black shadow z-50 rounded-lg">
                     <nav className="flex flex-col gap-2 p-2" aria-label="Mobile Navigation">
                         {['about', 'foundations', 'components'].map((section) => (
                             <Link

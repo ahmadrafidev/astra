@@ -251,7 +251,7 @@ export function HomePage() {
           <div className="container px-4 md:px-6 mx-auto">
             <div className="flex flex-col items-center space-y-6 md:space-y-8 text-center">
               <div className="space-y-6 md:space-y-8">
-                <h1 className="text-5xl md:text-6xl font-semibold tracking-tighter text-gray-900 dark:text-gray-50">
+                <h1 className="text-4xl md:text-6xl font-semibold tracking-tighter text-gray-900 dark:text-gray-50">
                   Built a Beautiful Web,&nbsp; 
                   <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-blue-600 bg-clip-text text-transparent">
                     Effortlessly
@@ -264,13 +264,13 @@ export function HomePage() {
               <div className="flex flex-wrap gap-4 mb-12">
                 <Link
                   href="https://github.com/ahmadrafidev/astra"
-                  className="bg-zinc-50 dark:bg-zinc-950 text-gray-900 dark:text-white px-6 py-2 rounded-lg font-semibold flex items-center transition duration-300 border border-gray-300 dark:border-gray-700 hover:bg-zinc-100 dark:hover:bg-zinc-900 hover:ring hover:ring-gray-400 dark:hover:ring-gray-200"
+                  className="h-10 bg-zinc-50 dark:bg-zinc-950 text-gray-900 dark:text-white px-4 py-2 md:py-2.5 rounded-lg font-semibold flex items-center transition duration-300 border border-gray-300 dark:border-gray-700 hover:bg-zinc-100 dark:hover:bg-zinc-900 hover:ring hover:ring-gray-400 dark:hover:ring-gray-200"
                 >
                   <Github className="mr-2 w-5 h-5" /> Github
                 </Link>
                 <Link
                   href="/about"
-                  className="bg-zinc-950 dark:bg-zinc-100 text-white dark:text-gray-900 px-6 py-2 rounded-lg font-semibold flex items-center transition duration-300 border border-gray-700 dark:border-gray-300 hover:bg-zinc-800 dark:hover:bg-zinc-200 hover:ring hover:ring-gray-400 dark:hover:ring-gray-600"
+                  className="h-10 bg-zinc-950 dark:bg-zinc-100 text-white dark:text-gray-900 px-4 py-2 md:py-2.5 rounded-lg font-semibold flex items-center transition duration-300 border border-gray-700 dark:border-gray-300 hover:bg-zinc-800 dark:hover:bg-zinc-200 hover:ring hover:ring-gray-400 dark:hover:ring-gray-600"
                 >
                   Get Started <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
