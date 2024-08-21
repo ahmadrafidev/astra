@@ -114,7 +114,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isSidebarOpen, closeSidebar, classNam
                         <ul aria-labelledby="sidebar-heading-foundations">
                             {filteredFoundations.map((foundation) => (
                                 <li key={foundation.name} onClick={closeSidebar}>
-                                    <Link href={foundation.path} className={`block rounded-xl px-2 py-2.5 text-sm lg:text-base font-sans font-normal ${isActive(foundation.path) ? 'bg-black text-white dark:bg-gray-50 dark:text-black ' : 'hover:bg-gray-200 focus:bg-gray-300 dark:hover:bg-gray-700 dark:focus:bg-gray-600 text-black dark:text-white'}`}>
+                                    <Link href={foundation.path} className={`block rounded-xl px-3 py-2.5 text-sm lg:text-base font-sans font-normal ${isActive(foundation.path) ? 'bg-black text-white dark:bg-gray-50 dark:text-black ' : 'hover:bg-gray-200 focus:bg-gray-300 dark:hover:bg-gray-700 dark:focus:bg-gray-600 text-black dark:text-white'}`}>
                                         {foundation.name}
                                     </Link>
                                 </li>

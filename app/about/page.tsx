@@ -7,13 +7,12 @@ import Badge from '@/components/Badge/Badge';
 import TOC from '@/components/TOC/TOC';
 
 export const metadata: Metadata = {
-    title: "Overview",
+    title: "About",
     description: "The core principles of AstraUI, designed to facilitate the creation of accessible, consistent, and reusable user interfaces.",
 };
 
 const AboutAstraPage: React.FC = () => {
     const tocItems = [
-        { id: 'overview', label: 'Overview' },
         { id: 'vision', label: 'Vision: The Master Plan' },
         { id: 'principles', label: 'Design Principles' },
         { id: 'philosophy', label: 'Why AstraUI?' },
@@ -23,12 +22,8 @@ const AboutAstraPage: React.FC = () => {
         <Layout>
             <div className="flex">
                 <div className="w-4/5 pr-2">
-                    <Badge ariaLabel="About Title Badge" text="About" />
-                    <div id="overview" className="flex flex-col mb-5 scroll-mt-16">
-                        <h1 className="text-2xl md:text-3xl font-medium mb-4 text-gray-900 dark:text-white">Overview</h1>
-                        <p className="text-sm md:text-base font-normal font-sans text-gray-900 dark:text-gray-50">
-                            The core principles of AstraUI, designed to facilitate the creation of accessible, consistent, and reusable user interfaces.
-                        </p>
+                    <div id="about" className="flex flex-col mb-5 scroll-mt-16">
+                        <h1 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900 dark:text-white">About</h1>
                     </div>
 
                     <section id="vision" className="mb-8 text-justify scroll-mt-20">
