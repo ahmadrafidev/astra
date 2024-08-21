@@ -16,7 +16,7 @@ interface TOCProps {
 const TOC: React.FC<TOCProps> = ({
     items,
     title = "On This Page",
-    className = "w-1/5 pl-2",
+    className,
     itemClassName = "text-sm text-gray-700 dark:text-gray-100 hover:text-gray-800 dark:hover:text-gray-200",
     titleClassName = "text-lg font-medium text-gray-900 dark:text-gray-50 mb-2 tracking-tight",
 }) => {

@@ -21,7 +21,7 @@ const AboutAstraPage: React.FC = () => {
     return (
         <Layout>
             <div className="flex">
-                <div className="w-4/5 pr-2">
+                <div className="md:w-4/5 pr-2">
                     <div id="about" className="flex flex-col mb-5 scroll-mt-16">
                         <h1 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900 dark:text-white">About</h1>
                     </div>
@@ -89,7 +89,9 @@ const AboutAstraPage: React.FC = () => {
                         </p>
                     </section>
                 </div>
-                <TOC items={tocItems} />
+                <div className="hidden md:block w-1/5">
+                    <TOC items={tocItems} />
+                </div> 
             </div>
         </Layout>
     );
