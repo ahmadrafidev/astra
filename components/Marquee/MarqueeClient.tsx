@@ -9,6 +9,7 @@ import { Tabs, Tab } from '@/components/Tabs/Tabs';
 
 import Layout from '../Layout/Layout';
 import Badge from '../Badge/Badge';
+
 import Marquee from './Marquee';
 
 const MarqueePageClient: React.FC = () => {

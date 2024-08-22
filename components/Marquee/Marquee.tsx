@@ -1,9 +1,13 @@
 import React, { useEffect, useRef } from 'react';
 
-interface MarqueeProps {
+export interface MarqueeProps {
+  /** The text to display in the marquee */
   text: string;
-  speed?: number; // Speed in pixels per second
+  /** The speed of the scrolling text in pixels per second */
+  speed?: number;
+  /** The direction of the marquee scroll ('left' or 'right') */
   direction?: 'left' | 'right';
+  /** Additional class names for styling the marquee */
   className?: string;
 }
 
@@ -52,4 +56,5 @@ const Marquee: React.FC<MarqueeProps> = ({
   );
 };
 
+Marquee.displayName="Marquee"
 export default Marquee;

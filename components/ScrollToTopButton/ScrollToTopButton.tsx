@@ -1,10 +1,13 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { ArrowUp } from 'lucide-react';
 
-interface ScrollToTopButtonProps {
-  showAt?: number; // Scroll position at which to show the button
-  smooth?: boolean; // Whether to scroll smoothly or not
-  className?: string; // Additional class names for styling
+export interface ScrollToTopButtonProps {
+  /** Scroll position at which to show the button */
+  showAt?: number;
+  /** Whether to scroll smoothly or not */
+  smooth?: boolean;
+  /** Additional class names for styling */
+  className?: string;
 }
 
 /**
@@ -53,4 +56,5 @@ const ScrollToTopButton: React.FC<ScrollToTopButtonProps> = ({ showAt = 100, smo
   );
 };
 
+ScrollToTopButton.displayName="ScrollToTopButton"
 export default ScrollToTopButton;
