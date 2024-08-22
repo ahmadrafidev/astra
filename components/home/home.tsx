@@ -48,7 +48,7 @@ export function HomePage() {
               <div className="space-y-6 md:space-y-8">
                 <h1 className="text-4xl md:text-7xl font-semibold tracking-tighter text-gray-900 dark:text-gray-50">
                   Building Blocks of&nbsp; 
-                    <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-blue-600 bg-clip-text text-transparent">
+                    <span className="bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-transparent">
                       Modern UI
                     </span>
                 </h1>
@@ -251,14 +251,14 @@ export function HomePage() {
           <div className="container px-4 md:px-6 mx-auto">
             <div className="flex flex-col items-center space-y-6 md:space-y-8 text-center">
               <div className="space-y-6 md:space-y-8">
-                <h1 className="text-4xl md:text-6xl font-semibold tracking-tighter text-gray-900 dark:text-gray-50">
+                <h1 className="text-4xl md:text-7xl font-semibold tracking-tighter text-gray-900 dark:text-gray-50">
+                  Start Building
+                </h1>
+                <p className="mx-auto max-w-[600px] text-gray-700 dark:text-gray-100 text-lg md:text-2xl font-medium">
                   Built a Beautiful Web,&nbsp; 
-                  <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-blue-600 bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-transparent">
                     Effortlessly
                   </span>
-                </h1>
-                <p className="mx-auto max-w-[600px] text-gray-700 dark:text-gray-100 text-sm md:text-xl font-normal">
-                  Experience it firsthand and show us your creations!
                 </p>
               </div>
               <div className="flex flex-wrap gap-4 mb-12">
