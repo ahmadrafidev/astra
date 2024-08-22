@@ -68,6 +68,7 @@ export const componentsList = [
     { name: 'Input', path: '/components/input' },
     { name: 'Keyboard Shortcut', path: '/components/keyboard-shortcut' },
     { name: 'List', path: '/components/list' },
+    { name: 'Marquee', path: '/components/marquee' },
     { name: 'Modal', path: '/components/modal' },
     { name: 'Navigation Menu', path: '/components/navigation-menu' },
     { name: 'Notification', path: '/components/notification' },
@@ -114,6 +115,7 @@ export const categorizedComponentsList = {
         { name: 'Bottom Navigation', path: '/components/bottom-navigation', description: 'Mobile-friendly navigation bar fixed at screen bottom.' },
         { name: 'Dock', path: '/components/dock', description: 'Customizable navigation bar with icons for quick access to different sections or actions.' },
         { name: 'Divider', path: '/components/divider', description: 'A simple line to separate content sections.' },
+        { name: 'Marquee', path: '/components/marquee', description: 'Scrolling text component for displaying announcements or important information in a loop.' },
     ],
     selectionAndInput: [
         { name: 'Checkbox', path: '/components/checkbox', description: 'Allows the user to select one or more options from a set.' },
