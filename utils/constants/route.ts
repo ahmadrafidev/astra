@@ -81,6 +81,7 @@ export const componentsList = [
     { name: 'Progress Tracker', path: '/components/progress-tracker' },
     { name: 'Radio', path: '/components/radio' },
     { name: 'Rating', path: '/components/rating' },
+    { name: 'Scroll-to-Top Button', path: '/components/scroll-to-top-button' },
     { name: 'SearchBar', path: '/components/search-bar' },
     { name: 'Select', path: '/components/select' },
     { name: 'SkeletonLoader', path: '/components/skeleton-loader' },
@@ -162,5 +163,6 @@ export const categorizedComponentsList = {
         { name: 'Search Bar', path: '/components/search-bar', description: 'Input field for searching content within the application.' },
         { name: 'Snippet', path: '/components/snippet', description: 'Formatted display of code with syntax highlighting.' },
         { name: 'Keyboard Shortcut', path: '/components/keyboard-shortcut', description: 'Visual display of keyboard combinations for quick actions.' },
+        { name: 'Scroll-to-Top Button', path: '/components/scroll-to-top-button', description: 'A button that appears when the user scrolls down the page, allowing them to quickly return to the top.' }, 
     ],
 };
