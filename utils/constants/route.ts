@@ -59,6 +59,7 @@ export const componentsList = [
     { name: 'Carousel', path: '/components/carousel' },
     { name: 'Checkbox', path: '/components/checkbox' },
     { name: 'Collapsible', path: '/components/collapsible' },
+    { name: 'Divider', path: '/components/divider' },
     { name: 'Dock', path: '/components/dock' },
     { name: 'Dropdown', path: '/components/dropdown' },
     { name: 'Error Message', path: '/components/error' },
