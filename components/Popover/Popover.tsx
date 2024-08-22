@@ -14,7 +14,7 @@ import React, { useState, useRef, useEffect, ReactNode, useCallback } from 'reac
  * @property {string} [ariaLabel='Popover'] - Accessible label for the popover.
  * @property {boolean} [showArrow=true] - Whether to show an arrow pointing to the trigger.
  */
-interface PopoverProps {
+export interface PopoverProps {
   children: ReactNode;
   content: ReactNode;
   placement?: 'top' | 'bottom' | 'left' | 'right';

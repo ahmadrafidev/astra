@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { cva, type VariantProps } from 'class-variance-authority';
 import { cn } from '@/lib/utils';
 
@@ -80,7 +81,7 @@ export interface DividerProps
  * @returns {JSX.Element} The rendered Divider component.
  */
 const Divider = React.forwardRef<HTMLDivElement, DividerProps>(
-  ({ className, orientation, size, color, label, labelPosition = 'center', ...props }, ref) => {
+  ({ className, orientation = 'horizontal', size, color, label, labelPosition = 'center', ...props }, ref) => {
     const isHorizontal = orientation !== 'vertical';
     const labelPositionClass = isHorizontal
       ? {
@@ -106,7 +107,7 @@ const Divider = React.forwardRef<HTMLDivElement, DividerProps>(
           className
         )}
         role="separator"
-        aria-orientation={orientation}
+        aria-orientation={ orientation || undefined }
         {...props}
       >
         {label && (

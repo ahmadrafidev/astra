@@ -37,7 +37,7 @@ const DividerPageClient: React.FC = () => {
                     <div id="overview" className="flex flex-col mb-5 scroll-mt-16">
                         <h1 className="text-2xl md:text-3xl font-semibold mb-4 text-gray-900 dark:text-gray-50">Divider</h1>
                         <p className="text-sm md:text-base font-normal font-sans text-gray-900 dark:text-gray-50">
-                            A simple line divider used to separate content sections.
+                            A simple line used to separate content sections.
                         </p>
                     </div>
 

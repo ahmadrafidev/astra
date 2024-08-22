@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
     title: "Divider",
-    description: "A simple component to separate content sections",
+    description: "A simple line to separate content sections",
 };
 
 const DividerClient = dynamic(() => import('@/components/Divider/DividerClient'), { ssr: false });
