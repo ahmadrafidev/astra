@@ -83,6 +83,7 @@ export const componentsList = [
     { name: 'Rating', path: '/components/rating' },
     { name: 'Scroll-to-Top Button', path: '/components/scroll-to-top-button' },
     { name: 'SearchBar', path: '/components/search-bar' },
+    { name: 'Segmented Control', path: '/components/segmented-control' },
     { name: 'Select', path: '/components/select' },
     { name: 'SkeletonLoader', path: '/components/skeleton-loader' },
     { name: 'Slider', path: '/components/slider' },
@@ -132,6 +133,7 @@ export const categorizedComponentsList = {
         { name: 'Phone Number', path: '/components/phone-number', description: 'Specialized input for entering and validating phone numbers.' },
         { name: 'PIN Code', path: '/components/pin-code', description: 'Secure input for PIN codes or short numeric sequences.' },
         { name: 'Payment Card', path: '/components/payment-card', description: 'Form for capturing and validating payment card details.' },
+        { name: 'Segmented Control', path: '/components/segmented-control', description: 'A control that allows users to select one or multiple options from a set of segments.' },
     ],
     imagesAndIcons: [
         { name: 'Avatar', path: '/components/avatar', description: 'Displays circular image or icon representing a user.' },
