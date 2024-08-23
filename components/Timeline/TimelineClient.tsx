@@ -58,7 +58,7 @@ const TimelineClient: React.FC = () => {
                     <div id="overview" className="flex flex-col mb-5 scroll-mt-16">
                         <h1 className="text-2xl md:text-3xl font-semibold mb-4 text-gray-900 dark:text-gray-50">Timeline</h1>
                         <p className="text-sm md:text-base font-normal font-sans text-gray-900 dark:text-gray-50">
-                            The Timeline component is used to display events or milestones in chronological order. It supports both vertical and horizontal layouts.
+                          Timeline component is a visual representation to display events or milestones in chronological order.
                         </p>
                     </div>
 

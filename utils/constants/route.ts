@@ -119,6 +119,7 @@ export const categorizedComponentsList = {
         { name: 'Dock', path: '/components/dock', description: 'Customizable navigation bar with icons for quick access to different sections or actions.' },
         { name: 'Divider', path: '/components/divider', description: 'A simple line to separate content sections.' },
         { name: 'Marquee', path: '/components/marquee', description: 'Scrolling text component for displaying announcements or important information in a loop.' },
+        { name: 'Timeline', path: '/components/timeline', description: 'Visual representation of events or milestones along a timeline.' },
     ],
     selectionAndInput: [
         { name: 'Checkbox', path: '/components/checkbox', description: 'Allows the user to select one or more options from a set.' },

@@ -73,7 +73,7 @@ const timelineContentStyles = cva('mx-auto', {
  * @property {'vertical' | 'horizontal'} [variant='vertical'] - The layout orientation of the timeline.
  * @property {string} [className] - Additional classes for custom styling.
  */
-interface TimelineProps extends VariantProps<typeof timelineContainerStyles> {
+export interface TimelineProps extends VariantProps<typeof timelineContainerStyles> {
   events: TimelineEvent[];
   className?: string;
 }

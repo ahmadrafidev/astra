@@ -8,7 +8,7 @@ export default {
   component: Timeline,
   argTypes: {
     events: {
-      control: { type: 'object' }, // Control for array of events
+      control: { type: 'object' }, 
       description: 'The list of events to display in the timeline.',
       table: {
         type: { summary: 'TimelineEvent[]' },
