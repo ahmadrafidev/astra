@@ -92,7 +92,7 @@ export function HomePage() {
             <div className="grid items-center gap-6 lg:grid-cols-2 lg:gap-12">
               <div className="flex flex-col justify-center space-y-4">
                 <div className="space-y-2">
-                  <Badge text="Key Principles" />
+                  <Badge text="Key Principles" color="bg-zinc-100" darkColor="bg-gray-800/90" />
                   <h2 className="text-2xl md:text-5xl font-bold tracking-tight text-gray-900 dark:text-gray-50">
                     Astra
                     <span className="bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-transparent">
