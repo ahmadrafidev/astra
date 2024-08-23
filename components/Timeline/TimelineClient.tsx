@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { materialLight } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 import { Rocket, Star, Flag } from 'lucide-react';
@@ -10,6 +11,7 @@ import { Tabs, Tab } from '@/components/Tabs/Tabs';
 
 import Layout from '../Layout/Layout';
 import Badge from '../Badge/Badge';
+
 import Timeline from './Timeline';
 
 const TimelineClient: React.FC = () => {
@@ -27,26 +29,26 @@ const TimelineClient: React.FC = () => {
     ];
 
     const codeExampleVertical = `
-<Timeline
-    events={[
-        { date: '2021', title: 'Company Founded', description: 'We started our journey.', icon: <FaRocket /> },
-        { date: '2022', title: 'Major Update', description: 'Released version 2.0.', icon: <FaStar /> },
-        { date: '2023', title: 'New Product', description: 'Launched new product line.', icon: <FaFlag /> },
-    ]}
-    variant="vertical"
-/>
-`;
+  <Timeline
+      events={[
+          { date: '2021', title: 'Company Founded', description: 'We started our journey.', icon: <FaRocket /> },
+          { date: '2022', title: 'Major Update', description: 'Released version 2.0.', icon: <FaStar /> },
+          { date: '2023', title: 'New Product', description: 'Launched new product line.', icon: <FaFlag /> },
+      ]}
+      variant="vertical"
+  />
+  `;
 
     const codeExampleHorizontal = `
-<Timeline
-    events={[
-        { date: '2021', title: 'Company Founded', description: 'We started our journey.', icon: <FaRocket /> },
-        { date: '2022', title: 'Major Update', description: 'Released version 2.0.', icon: <FaStar /> },
-        { date: '2023', title: 'New Product', description: 'Launched new product line.', icon: <FaFlag /> },
-    ]}
-    variant="horizontal"
-/>
-`;
+  <Timeline
+      events={[
+          { date: '2021', title: 'Company Founded', description: 'We started our journey.', icon: <FaRocket /> },
+          { date: '2022', title: 'Major Update', description: 'Released version 2.0.', icon: <FaStar /> },
+          { date: '2023', title: 'New Product', description: 'Launched new product line.', icon: <FaFlag /> },
+      ]}
+      variant="horizontal"
+  />
+  `;
 
     return (
         <Layout>
@@ -191,5 +193,4 @@ const TimelineClient: React.FC = () => {
 };
 
 TimelineClient.displayName = "TimelineClient";
-
 export default TimelineClient;
