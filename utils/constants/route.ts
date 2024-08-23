@@ -95,6 +95,7 @@ export const componentsList = [
     { name: 'Switch', path: '/components/switch' },
     { name: 'Tabs', path: '/components/tabs' },
     { name: 'TextArea', path: '/components/text-area' },
+    { name: 'Timeline', path: '/components/timeline' },
     { name: 'Toggle', path: '/components/toggle' },
     { name: 'Tooltip', path: '/components/tooltip' },
 ];
