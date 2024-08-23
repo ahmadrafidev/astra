@@ -21,7 +21,7 @@ const timelineContainerStyles = cva('flex', {
   variants: {
     variant: {
       vertical: 'flex-col',
-      horizontal: 'flex-row justify-evenly w-full',
+      horizontal: 'flex-row relative justify-evenly w-full',
     },
   },
   defaultVariants: {
@@ -42,7 +42,7 @@ const timelineLineStyles = cva('absolute bg-gray-300', {
   variants: {
     variant: {
       vertical: 'left-4 w-1',
-      horizontal: 'w-full h-1 bg-gray-300 top-1/2 left-0 my-1',
+      horizontal: 'w-full h-1 top-0 left-0',
     },
   },
 });
@@ -51,7 +51,7 @@ const timelineIconStyles = cva('flex items-center justify-center rounded-full', 
   variants: {
     variant: {
       vertical: 'absolute left-0 top-0 bg-blue-600 text-white p-2 w-8 h-8',
-      horizontal: 'bg-blue-600 text-white p-2 w-8 h-8',
+      horizontal: 'bg-blue-600 text-white p-2 w-8 h-8 mt-4',
     },
   },
 });
@@ -92,6 +92,10 @@ const Timeline: React.FC<TimelineProps> = ({
 }) => {
   return (
     <div className={timelineContainerStyles({ variant, className })}>
+      {/* Render a single line for horizontal layout */}
+      {variant === 'horizontal' && (
+        <div className={timelineLineStyles({ variant })} />
+      )}
       {events.map((event, index) => (
         <div key={index} className={timelineEventStyles({ variant })}>
           {/* Line for vertical layout */}
@@ -100,14 +104,10 @@ const Timeline: React.FC<TimelineProps> = ({
               className={timelineLineStyles({ variant })}
               style={{
                 top: '50%',
-                height: 'calc(100% + 1.5rem)', 
+                height: 'calc(100% + 1.5rem)',
                 transform: 'translateY(-50%)',
               }}
             />
-          )}
-          {/* Line for horizontal layout */}
-          {variant === 'horizontal' && (
-            <div className={timelineLineStyles({ variant })} />
           )}
           {event.icon && (
             <div className={timelineIconStyles({ variant })}>{event.icon}</div>
