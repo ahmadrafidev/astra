@@ -23,6 +23,18 @@ const SegmentedControlClient: React.FC = () => {
         { id: 'best-practices', label: 'Best Practices' },
     ];
 
+    const handleSingleChoiceChange = (selectedSegment: string | string[]) => {
+      if (typeof selectedSegment === 'string') {
+          setSingleChoiceSegment(selectedSegment);
+      }
+  };
+
+  const handleMultipleChoiceChange = (selectedSegments: string | string[]) => {
+      if (Array.isArray(selectedSegments)) {
+          setMultipleChoiceSegments(selectedSegments);
+      }
+  };
+
     const codeExampleSingleChoice = `
     <SegmentedControl
         segments={['Daily', 'Weekly', 'Monthly']}
@@ -67,7 +79,7 @@ const SegmentedControlClient: React.FC = () => {
                                     <SegmentedControl
                                         segments={['Daily', 'Weekly', 'Monthly']}
                                         defaultIndex={1}
-                                        onSegmentChange={setSingleChoiceSegment}
+                                        onSegmentChange={handleSingleChoiceChange}
                                         className="mx-auto border dark:border-zinc-700"
                                         activeClassName="bg-zinc-900 text-gray-50"
                                         inactiveClassName="bg-zinc-200 text-gray-700"
@@ -109,7 +121,7 @@ const SegmentedControlClient: React.FC = () => {
                                     <SegmentedControl
                                         segments={['Option 1', 'Option 2', 'Option 3']}
                                         defaultIndex={[0, 2]}
-                                        onSegmentChange={setMultipleChoiceSegments}
+                                        onSegmentChange={handleMultipleChoiceChange}
                                         className="mx-auto"
                                         activeClassName="bg-blue-700 text-white"
                                         inactiveClassName="bg-gray-200 text-gray-600"
