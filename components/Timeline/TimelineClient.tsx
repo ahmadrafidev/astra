@@ -31,9 +31,9 @@ const TimelineClient: React.FC = () => {
     const codeExampleVertical = `
   <Timeline
       events={[
-          { date: '2021', title: 'Company Founded', description: 'We started our journey.', icon: <FaRocket /> },
-          { date: '2022', title: 'Major Update', description: 'Released version 2.0.', icon: <FaStar /> },
-          { date: '2023', title: 'New Product', description: 'Launched new product line.', icon: <FaFlag /> },
+          { date: '2021', title: 'Company Founded', description: 'We started our journey.', icon: <Rocket /> },
+          { date: '2022', title: 'Major Update', description: 'Released version 2.0.', icon: <Star /> },
+          { date: '2023', title: 'New Product', description: 'Launched new product line.', icon: <Flag /> },
       ]}
       variant="vertical"
   />
@@ -42,9 +42,9 @@ const TimelineClient: React.FC = () => {
     const codeExampleHorizontal = `
   <Timeline
       events={[
-          { date: '2021', title: 'Company Founded', description: 'We started our journey.', icon: <FaRocket /> },
-          { date: '2022', title: 'Major Update', description: 'Released version 2.0.', icon: <FaStar /> },
-          { date: '2023', title: 'New Product', description: 'Launched new product line.', icon: <FaFlag /> },
+          { date: '2021', title: 'Company Founded', description: 'We started our journey.', icon: <Rocket /> },
+          { date: '2022', title: 'Major Update', description: 'Released version 2.0.', icon: <Star /> },
+          { date: '2023', title: 'New Product', description: 'Launched new product line.', icon: <Flag /> },
       ]}
       variant="horizontal"
   />
