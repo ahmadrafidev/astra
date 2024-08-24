@@ -6,7 +6,7 @@ import { CheckCircleIcon } from '@heroicons/react/24/outline';
 import IconButton, { IconButtonProps } from '@/components/IconButton/IconButton';
 
 export default {
-  title: 'Components/IconButton',
+  title: 'Components/Icon Button',
   component: IconButton,
   argTypes: {
     icon: {

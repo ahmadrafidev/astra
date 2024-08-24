@@ -5,7 +5,7 @@ import { Meta, StoryFn } from '@storybook/react';
 import PhoneNumber from '@/components/PhoneNumber/PhoneNumber';
 
 export default {
-    title: 'Components/PhoneNumber',
+    title: 'Components/Phone Number',
     component: PhoneNumber,
     argTypes: {
         className: {

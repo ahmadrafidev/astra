@@ -5,7 +5,7 @@ import { Meta, StoryFn } from '@storybook/react';
 import AlertDialog, { AlertDialogProps } from '@/components/AlertDialog/AlertDialog';
 
 export default {
-    title: 'Components/AlertDialog',
+    title: 'Components/Alert Dialog',
     component: AlertDialog,
     argTypes: {
         open: {

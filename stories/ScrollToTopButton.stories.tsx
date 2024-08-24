@@ -5,7 +5,7 @@ import { Meta, StoryFn } from '@storybook/react';
 import ScrollToTopButton, { ScrollToTopButtonProps } from '@/components/ScrollToTopButton/ScrollToTopButton';
 
 export default {
-  title: 'Components/ScrollToTopButton',
+  title: 'Components/Scroll to Top Button',
   component: ScrollToTopButton,
   argTypes: {
     showAt: {

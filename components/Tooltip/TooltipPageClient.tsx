@@ -14,6 +14,7 @@ import Badge from '../Badge/Badge';
 import Tooltip from './Tooltip';
 
 const TooltipPageClient: React.FC = () => {
+
     const tocItems = [
         { id: 'overview', label: 'Overview' },
         { id: 'usage', label: 'Usage' },
@@ -155,7 +156,7 @@ const TooltipPageClient: React.FC = () => {
                                     </tr>
                                     <tr>
                                         <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-100">variant</td>
-                                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 font-mono">default, arrow-top, arrow-bottom</td>
+                                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 font-mono text-wrap">default, arrow-top, arrow-bottom</td>
                                         <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">default</td>
                                         <td className="px-6 py-4 text-sm text-gray-500 dark:text-gray-300">Specifies the visual style of the tooltip.</td>
                                     </tr>
@@ -172,7 +173,6 @@ const TooltipPageClient: React.FC = () => {
                                 <li>Use tooltips to provide additional information about an element when the user hovers over it or focuses on it with keyboard navigation.</li>
                                 <li>Ensure the tooltip content is concise and informative. Aim for 1-2 short sentences or phrases.</li>
                                 <li>Position tooltips consistently throughout your application and ensure they do not obscure important content.</li>
-                                <li>Add a small delay (200-300ms) before showing the tooltip to prevent accidental triggers during rapid mouse movements.</li>
                                 <li>Use the arrow variant when you need to clearly indicate which element the tooltip refers to.</li>
                             </ul>
                         </div>

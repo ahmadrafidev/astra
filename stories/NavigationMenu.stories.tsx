@@ -5,7 +5,7 @@ import { Meta, StoryFn } from '@storybook/react';
 import NavigationMenu, { NavigationMenuProps } from '@/components/NavigationMenu/NavigationMenu';
 
 export default {
-    title: 'Components/NavigationMenu',
+    title: 'Components/Navigation Menu',
     component: NavigationMenu,
     argTypes: {
         links: {

@@ -6,7 +6,7 @@ import { MagnifyingGlassIcon } from '@heroicons/react/24/outline';
 import SearchBar, { SearchBarProps } from '@/components/SearchBar/SearchBar';
 
 export default {
-  title: 'Components/SearchBar',
+  title: 'Components/Search Bar',
   component: SearchBar,
   argTypes: {
     onSearch: { action: 'searched', description: 'Callback function when the search query changes.' },

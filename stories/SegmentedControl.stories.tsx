@@ -5,7 +5,7 @@ import { Meta, StoryFn } from '@storybook/react';
 import SegmentedControl, { SegmentedControlProps } from '@/components/SegmentedControl/SegmentedControl';
 
 export default {
-  title: 'Components/SegmentedControl',
+  title: 'Components/Segmented Control',
   component: SegmentedControl,
   argTypes: {
     segments: {

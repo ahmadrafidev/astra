@@ -5,7 +5,7 @@ import { Meta, StoryFn } from '@storybook/react';
 import SkeletonLoader, { SkeletonLoaderProps } from '@/components/SkeletonLoader/SkeletonLoader';
 
 export default {
-  title: 'Components/SkeletonLoader',
+  title: 'Components/Skeleton Loader',
   component: SkeletonLoader,
   argTypes: {
     width: {

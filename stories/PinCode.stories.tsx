@@ -5,7 +5,7 @@ import { Meta, StoryFn } from '@storybook/react';
 import PinCode, { PinCodeProps } from '@/components/PinCode/PinCode';
 
 export default {
-  title: 'Components/PinCode',
+  title: 'Components/PIN Code',
   component: PinCode,
   argTypes: {
     length: {

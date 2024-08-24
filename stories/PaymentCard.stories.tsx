@@ -5,7 +5,7 @@ import { Meta, StoryFn } from '@storybook/react';
 import PaymentCard, { PaymentCardProps } from '@/components/PaymentCard/PaymentCard';
 
 export default {
-  title: 'Components/PaymentCard',
+  title: 'Components/Payment Card',
   component: PaymentCard,
   argTypes: {
     className: {

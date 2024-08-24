@@ -5,7 +5,7 @@ import { Meta, StoryFn } from '@storybook/react';
 import StatusDot, { StatusDotProps } from '@/components/StatusDot/StatusDot';
 
 export default {
-  title: 'Components/StatusDot',
+  title: 'Components/Status Dot',
   component: StatusDot,
   argTypes: {
     status: {

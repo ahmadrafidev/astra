@@ -6,7 +6,7 @@ import { Home, Search, User } from 'lucide-react';
 import BottomNavigation, { BottomNavigationProps } from '@/components/BottomNavigation/BottomNavigation';
 
 export default {
-    title: 'Components/BottomNavigation',
+    title: 'Components/Bottom Navigation',
     component: BottomNavigation,
 } as Meta<BottomNavigationProps>;
 

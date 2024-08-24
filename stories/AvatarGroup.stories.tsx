@@ -6,7 +6,7 @@ import AvatarGroup, { AvatarGroupProps } from '@/components/AvatarGroup/AvatarGr
 import Avatar from '@/components/Avatar/Avatar';
 
 export default {
-    title: 'Components/AvatarGroup',
+    title: 'Components/Avatar Group',
     component: AvatarGroup,
     argTypes: {
         avatars: {

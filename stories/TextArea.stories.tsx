@@ -5,7 +5,7 @@ import { Meta, StoryFn } from '@storybook/react';
 import TextArea, { TextAreaProps } from '@/components/TextArea/TextArea';
 
 export default {
-  title: 'Components/TextArea',
+  title: 'Components/Text Area',
   component: TextArea,
   argTypes: {
     label: {

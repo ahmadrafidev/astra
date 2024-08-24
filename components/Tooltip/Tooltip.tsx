@@ -34,7 +34,7 @@ const Tooltip: React.FC<TooltipProps> = ({
 
   const baseTooltipClasses = `
     absolute left-1/2 -translate-x-1/2 z-10 px-3 py-2 text-sm font-medium 
-    text-white bg-gray-800 rounded-lg shadow-sm whitespace-nowrap
+    text-white bg-gray-800 rounded-lg shadow whitespace-nowrap
     transition-opacity duration-300
   `;
 

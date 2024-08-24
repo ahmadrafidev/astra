@@ -26,13 +26,13 @@ const ToggleDocumentation = () => {
               <tr>
                 <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-100">className</td>
                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 font-mono">string</td>
-                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">empty</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">-</td>
                 <td className="px-6 py-4 text-sm text-gray-500 dark:text-gray-300">Additional classes for styling the toggle button.</td>
               </tr>
               <tr>
                 <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-100">ariaLabel</td>
                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 font-mono">string</td>
-                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">empty</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">-</td>
                 <td className="px-6 py-4 text-sm text-gray-500 dark:text-gray-300">Accessible label for the toggle button.</td>
               </tr>
               <tr>
@@ -50,7 +50,7 @@ const ToggleDocumentation = () => {
               <tr>
                 <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-100">onChange</td>
                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 font-mono">(state: boolean) =&gt; void</td>
-                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">none</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">-</td>
                 <td className="px-6 py-4 text-sm text-gray-500 dark:text-gray-300">Callback function called when the toggle state changes.</td>
               </tr>
               <tr>
@@ -62,19 +62,19 @@ const ToggleDocumentation = () => {
               <tr>
                 <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-100">onClassName</td>
                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 font-mono">string</td>
-                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">empty</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">-</td>
                 <td className="px-6 py-4 text-sm text-gray-500 dark:text-gray-300">Classes to apply when the toggle is on.</td>
               </tr>
               <tr>
                 <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-100">offClassName</td>
                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 font-mono">string</td>
-                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">empty</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">-</td>
                 <td className="px-6 py-4 text-sm text-gray-500 dark:text-gray-300">Classes to apply when the toggle is off.</td>
               </tr>
               <tr>
                 <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-100">iconClassName</td>
                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 font-mono">string</td>
-                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">empty</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">-</td>
                 <td className="px-6 py-4 text-sm text-gray-500 dark:text-gray-300">Classes to apply to the icon.</td>
               </tr>
               <tr>
@@ -96,7 +96,6 @@ const ToggleDocumentation = () => {
                   <li>Use toggle buttons to switch between two states.</li>
                   <li>Ensure the button clearly indicates its current state.</li>
                   <li>Provide feedback to users when the state changes.</li>
-                  <li>Customize the styles and icons to match your application design.</li>
               </ul>
           </div>
       </section>
