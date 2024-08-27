@@ -81,5 +81,4 @@ const Collapsible: React.FC<CollapsibleProps> = ({
 };
 
 Collapsible.displayName = "Collapsible";
-
 export default Collapsible;
