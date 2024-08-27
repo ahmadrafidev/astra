@@ -1,13 +1,9 @@
-/**
- * Jest Configuration File
- * For a detailed explanation regarding each configuration property, visit:
- * https://jestjs.io/docs/configuration
- */
+// jest.config.ts
 
 import type { Config } from 'jest';
 
 const config: Config = {
-  // Automatically clear mock calls, instances, contexts and results before every test
+  // Automatically clear mock calls, instances, contexts, and results before every test
   clearMocks: true,
 
   // Indicates whether the coverage information should be collected while executing the test
@@ -24,7 +20,7 @@ const config: Config = {
 
   // A map from regular expressions to paths to transformers
   transform: {
-    '^.+\\.(ts|tsx|js|jsx)$': 'babel-jest',
+    '^.+\\.(ts|tsx|js|jsx)$': ['@swc/jest', {}],  // Corrected format for transformer
   },
 
   // An array of file extensions your modules use
