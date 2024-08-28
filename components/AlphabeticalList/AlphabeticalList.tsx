@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 
-import { categorizedComponentsList } from '../../utils/constants/route';
+import { CATEGORIZED_COMPONENT_LIST } from '../../utils/constants/route';
 
 const getAlphabeticalList = (categorizedList: { [key: string]: any[] }) => {
     const allComponents = Object.values(categorizedList).flat();
@@ -10,7 +10,7 @@ const getAlphabeticalList = (categorizedList: { [key: string]: any[] }) => {
 
 const AlphabeticalList: React.FC = () => {
 
-    const sortedComponentList = getAlphabeticalList(categorizedComponentsList);
+    const sortedComponentList = getAlphabeticalList(CATEGORIZED_COMPONENT_LIST);
 
     return (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">

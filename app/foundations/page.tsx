@@ -5,7 +5,7 @@ import type { Metadata } from "next";
 import Layout from '@/components/Layout/Layout';
 import Badge from '@/components/Badge/Badge';
 
-import { foundationList } from '@/utils/constants/route';
+import { FOUNDATION_LIST } from '@/utils/constants/route';
 
 export const metadata: Metadata = {
     title: "Foundation",
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 
 const AstraFoundationPage: React.FC = () => {
 
-    const sortedFoundationList = [...foundationList].sort((a, b) =>
+    const sortedFoundationList = [...FOUNDATION_LIST].sort((a, b) =>
         a.name.localeCompare(b.name)
     );
 

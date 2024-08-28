@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 
-import { countryCodes } from '../../utils/constants/phone-code';
+import { COUNTRY_CODES } from '../../utils/constants/phone-code';
 import Dropdown from '../Dropdown/Dropdown';
 
 const PhoneNumber: React.FC<{ className?: string }> = ({ className }) => {
-    const [selectedCountry, setSelectedCountry] = useState(countryCodes[0]);
+    const [selectedCountry, setSelectedCountry] = useState(COUNTRY_CODES[0]);
     const [phoneNumber, setPhoneNumber] = useState('');
 
     const handleCountrySelect = (option: string) => {
         const dialCode = option.split(' ')[1]; 
-        const country = countryCodes.find(country => country.dial_code === dialCode);
+        const country = COUNTRY_CODES.find(country => country.dial_code === dialCode);
         if (country) {
             setSelectedCountry(country);
         }
@@ -18,7 +18,7 @@ const PhoneNumber: React.FC<{ className?: string }> = ({ className }) => {
     return (
         <div className={`flex flex-row items-center space-x-2 p-2 rounded-lg ${className}`} aria-label="PhoneNumber">
             <Dropdown
-                options={countryCodes.map(country => `${country.emoji} ${country.dial_code}`)}
+                options={COUNTRY_CODES.map(country => `${country.emoji} ${country.dial_code}`)}
                 onSelect={handleCountrySelect}
                 placeholder={`${selectedCountry.emoji} ${selectedCountry.dial_code}`}
                 className="w-28"

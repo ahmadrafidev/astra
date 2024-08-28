@@ -11,7 +11,7 @@ import SearchBar from '../SearchBar/SearchBar';
 import { Tabs, Tab } from '../Tabs/Tabs';
 import ThemeToggle from '../ThemeToggle/ThemeToggle';
 
-import { componentsList, foundationList, aboutList } from '../../utils/constants/route';
+import { COMPONENTS_LIST, FOUNDATION_LIST, ABOUT_LIST } from '../../utils/constants/route';
 import { Alert } from '@/components/Alert/Alert';
 
 export interface SidebarProps {
@@ -22,8 +22,8 @@ export interface SidebarProps {
 
 const Sidebar: React.FC<SidebarProps> = ({ isSidebarOpen, closeSidebar, className }) => {
     const pathname = useMemoizedPathname();
-    const [filteredComponents, setFilteredComponents] = useState(componentsList);
-    const [filteredFoundations, setFilteredFoundations] = useState(foundationList);
+    const [filteredComponents, setFilteredComponents] = useState(COMPONENTS_LIST);
+    const [filteredFoundations, setFilteredFoundations] = useState(FOUNDATION_LIST);
     const [theme, setTheme] = useState('light');
 
     useEffect(() => {
@@ -58,11 +58,11 @@ const Sidebar: React.FC<SidebarProps> = ({ isSidebarOpen, closeSidebar, classNam
 
     const handleSearch = (query: string) => {
         const lowerCaseQuery = query.toLowerCase();
-        const filteredComponents = componentsList.filter(component =>
+        const filteredComponents = COMPONENTS_LIST.filter(component =>
             component.name.toLowerCase().includes(lowerCaseQuery)
         );
 
-        const filteredFoundations = foundationList.filter(foundation =>
+        const filteredFoundations = FOUNDATION_LIST.filter(foundation =>
             foundation.name.toLowerCase().includes(lowerCaseQuery)
         );
 
@@ -98,7 +98,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isSidebarOpen, closeSidebar, classNam
                     <>
                         <h2 id="sidebar-heading-about" className="text-base md:text-lg lg:text-xl font-medium my-2 lg:my-4 text-black dark:text-white px-2">About AstraUI</h2>
                         <ul className="my-2 lg:my-4" aria-labelledby="sidebar-heading-about">
-                            {aboutList.map((about) => (
+                            {ABOUT_LIST.map((about) => (
                                 <li key={about.name} onClick={closeSidebar}>
                                     <Link href={about.path} className={`block rounded-lg px-2 py-2 text-sm lg:text-base font-sans font-normal ${isActive(about.path) ? 'bg-black text-white dark:bg-gray-50 dark:text-black' : 'hover:bg-gray-200 focus:bg-gray-300 dark:hover:bg-gray-700 dark:focus:bg-gray-600 text-black dark:text-white'}`} >
                                         {about.name}

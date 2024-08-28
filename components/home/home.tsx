@@ -26,13 +26,13 @@ const InteractiveShowcase = dynamic(() => import('../InteractiveShowcase/Interac
   ssr: false,  
 });
 
-import { foundationList } from '@/utils/constants/route';
+import { FOUNDATION_LIST } from '@/utils/constants/route';
 import Spinner from '../Spinner/Spinner';
 
 export function HomePage() {
   const [activeSection, setActiveSection] = useState('about');
 
-  const sortedFoundationList = [...foundationList].sort((a, b) =>
+  const sortedFoundationList = [...FOUNDATION_LIST].sort((a, b) =>
     a.name.localeCompare(b.name)
   );
 

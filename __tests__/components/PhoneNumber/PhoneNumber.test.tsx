@@ -4,18 +4,18 @@ import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
 
 import PhoneNumber from '../../../components/PhoneNumber/PhoneNumber';
-import { countryCodes } from '../../../utils/constants/phone-code';
+import { COUNTRY_CODES } from '../../../utils/constants/phone-code';
 
 describe('PhoneNumber Component', () => {
   test('renders correctly with default props', () => {
     render(<PhoneNumber className="custom-class" />);
 
     // Check if the dropdown is rendered with the correct placeholder
-    const dropdown = screen.getByRole('button', { name: `${countryCodes[0].emoji} ${countryCodes[0].dial_code}` });
+    const dropdown = screen.getByRole('button', { name: `${COUNTRY_CODES[0].emoji} ${COUNTRY_CODES[0].dial_code}` });
     expect(dropdown).toBeInTheDocument();
 
     // Check if the input field is rendered
-    const inputField = screen.getByPlaceholderText(countryCodes[0].dial_code);
+    const inputField = screen.getByPlaceholderText(COUNTRY_CODES[0].dial_code);
     expect(inputField).toBeInTheDocument();
   });
 
@@ -23,11 +23,11 @@ describe('PhoneNumber Component', () => {
     render(<PhoneNumber />);
 
     // Open the dropdown
-    const dropdown = screen.getByRole('button', { name: `${countryCodes[0].emoji} ${countryCodes[0].dial_code}` });
+    const dropdown = screen.getByRole('button', { name: `${COUNTRY_CODES[0].emoji} ${COUNTRY_CODES[0].dial_code}` });
     fireEvent.click(dropdown);
 
     // Select a new country from the dropdown
-    const newCountryOption = `${countryCodes[1].emoji} ${countryCodes[1].dial_code}`;
+    const newCountryOption = `${COUNTRY_CODES[1].emoji} ${COUNTRY_CODES[1].dial_code}`;
     const option = screen.getByText(newCountryOption);
     fireEvent.click(option);
 
@@ -35,13 +35,13 @@ describe('PhoneNumber Component', () => {
     expect(screen.getByRole('button', { name: newCountryOption })).toBeInTheDocument();
 
     // Verify the input placeholder is updated to the new country dial code
-    expect(screen.getByPlaceholderText(countryCodes[1].dial_code)).toBeInTheDocument();
+    expect(screen.getByPlaceholderText(COUNTRY_CODES[1].dial_code)).toBeInTheDocument();
   });
 
   test('updates the phone number input when user types', () => {
     render(<PhoneNumber />);
 
-    const phoneInput = screen.getByPlaceholderText(countryCodes[0].dial_code);
+    const phoneInput = screen.getByPlaceholderText(COUNTRY_CODES[0].dial_code);
 
     // Simulate typing a phone number
     fireEvent.change(phoneInput, { target: { value: '1234567890' } });

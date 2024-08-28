@@ -1,8 +1,8 @@
-export const aboutList = [
+export const ABOUT_LIST = [
     { name: 'Overview', path: '/about' },
 ];
 
-export const foundationList = [
+export const FOUNDATION_LIST = [
     { 
         name: 'Accessibility', 
         path: '/foundations/accessibility',
@@ -45,7 +45,7 @@ export const foundationList = [
     },
 ];
 
-export const componentsList = [
+export const COMPONENTS_LIST = [
     { name: 'Accordion', path: '/components/accordion' },
     { name: 'Alert', path: '/components/alert' },
     { name: 'Alert Dialog', path: '/components/alert-dialog' },
@@ -100,7 +100,7 @@ export const componentsList = [
     { name: 'Tooltip', path: '/components/tooltip' },
 ];
 
-export const categorizedComponentsList = {
+export const CATEGORIZED_COMPONENT_LIST = {
     actions: [
         { name: 'Button', path: '/components/button', description: 'Clickable element to trigger actions or events.' },
         { name: 'Icon Button', path: '/components/icon-button', description: 'Compact button displaying an icon for space-efficient actions.' },

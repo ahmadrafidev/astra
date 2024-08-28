@@ -1,12 +1,12 @@
 import React from 'react';
 import Link from 'next/link';
 
-import { categorizedComponentsList } from '../../utils/constants/route';
+import { CATEGORIZED_COMPONENT_LIST } from '../../utils/constants/route';
 
 const CategoricalList: React.FC = () => {
     return (
         <>
-            {Object.entries(categorizedComponentsList).map(([category, components]) => (
+            {Object.entries(CATEGORIZED_COMPONENT_LIST).map(([category, components]) => (
                 <div key={category} className="mt-6">
                     <h3 className="text-lg md:text-xl lg:text-2xl font-medium mb-4 text-gray-900 dark:text-gray-50 capitalize">
                         {category.replace(/([A-Z])/g, ' $1')}
