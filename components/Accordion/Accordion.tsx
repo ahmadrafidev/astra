@@ -33,8 +33,8 @@ export interface AccordionProps {
  */
 export const Accordion: React.FC<AccordionProps> = ({
     children,
-    className = '',
-    itemClassName = '',
+    className,
+    itemClassName,
     border,
     selectionMode = 'single',
     variant = 'default',

@@ -26,7 +26,7 @@ const AlertDocumentation = () => {
               <tr>
                 <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-100">title</td>
                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 font-mono">string</td>
-                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">empty</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">-</td>
                 <td className="px-6 py-4 text-sm text-gray-500 dark:text-gray-300">The title of the alert. If provided, it will be displayed prominently.</td>
               </tr>
               <tr>
@@ -44,7 +44,7 @@ const AlertDocumentation = () => {
               <tr>
                 <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-100">className</td>
                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 font-mono">string</td>
-                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">empty</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">-</td>
                 <td className="px-6 py-4 text-sm text-gray-500 dark:text-gray-300">Additional CSS classes to apply to the alert container.</td>
               </tr>
             </tbody>
@@ -68,7 +68,6 @@ const AlertDocumentation = () => {
             <li><strong>Keep content concise and actionable.</strong> Write clear, brief messages that users can quickly understand and act upon. Avoid unnecessary details.</li>
             <li><strong>Use dismissible alerts judiciously.</strong> Make alerts dismissible when the information is not critical and users might want to remove it from view.</li>
             <li><strong>Provide context and next steps.</strong> When appropriate, include guidance on what the user should do next or how to resolve an issue.</li>
-            <li><strong>Ensure accessibility.</strong> Use proper ARIA roles and ensure color is not the only means of conveying the alert type.</li>
             <li><strong>Placement matters.</strong> Position alerts where they are easily noticeable but don‘t obstruct important content or actions.</li>
           </ul>
         </div>

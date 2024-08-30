@@ -37,7 +37,7 @@ const AccordionPage: React.FC = () => {
         </>
     </Accordion>
 
-        {/* Multiple Default Accordion */}
+    {/* Multiple Default Accordion */}
     <Accordion
         className="overflow-hidden rounded-lg"
         itemClassName="first:rounded-t-lg last:rounded-b-lg"

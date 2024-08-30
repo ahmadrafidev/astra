@@ -45,7 +45,13 @@ const alertIcons: Record<AlertType, React.ReactNode> = {
  * @returns {JSX.Element} The rendered Alert component.
  */
 const Alert = React.forwardRef<HTMLDivElement, AlertProps>(
-  ({ type, title, children, isDismissible = false, className }, ref) => {
+  ({ 
+    type, 
+    title, 
+    children, 
+    isDismissible = false, 
+    className 
+  }, ref) => {
 
     const [isVisible, setIsVisible] = useState(true);
 

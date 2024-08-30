@@ -65,7 +65,6 @@ const AccordionDocumentation = () => {
                   <li>Use accordions to organize content in a compact way, allowing users to expand sections as needed.</li>
                   <li>Ensure that the content of accordion items are descriptive and concise.</li>
                   <li>Use the multiple selection mode when users might need to compare information across different sections.</li>
-                  <li>Consider using animations for expanding and collapsing to provide a smooth user experience, but ensure they are not too slow or distracting.</li>
                   <li>Use the split variant when you want to visually separate accordion items, especially for longer lists.</li>
               </ul>
           </div>
