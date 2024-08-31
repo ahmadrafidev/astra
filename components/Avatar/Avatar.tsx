@@ -38,7 +38,7 @@ const sizeMap = {
  */
 const Avatar: React.FC<AvatarProps> = ({
   src,
-  alt,
+  alt = '',
   size = 'md',
   shape = 'circle',
   fallback,
