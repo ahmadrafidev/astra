@@ -146,7 +146,7 @@ const AvatarGroupPageClient: React.FC = () => {
                                     <tr>
                                         <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-100">className</td>
                                         <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 font-mono">string</td>
-                                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">empty</td>
+                                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">-</td>
                                         <td className="px-6 py-4 text-sm text-gray-500 dark:text-gray-300">Additional classes for styling the avatar group.</td>
                                     </tr>
                                 </tbody>

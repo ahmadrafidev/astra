@@ -5,10 +5,11 @@ import React from 'react';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { materialLight } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 
-import Layout from '../Layout/Layout';
-import Badge from '../Badge/Badge';
 import TOC from '@/components/TOC/TOC';
 import { Tabs, Tab } from '@/components/Tabs/Tabs';
+
+import Layout from '../Layout/Layout';
+import Badge from '../Badge/Badge';
 
 import Breadcrumbs from './Breadcrumbs';
 import BreadcrumbsDocumentation from './BreadcrumbsDocumentation';
