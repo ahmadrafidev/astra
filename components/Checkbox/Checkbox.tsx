@@ -26,7 +26,14 @@ export interface CheckboxProps extends React.InputHTMLAttributes<HTMLInputElemen
  * @returns {JSX.Element} The rendered Checkbox component.
  */
 const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
-  ({ label, error, className, labelClassName, ...props }, ref) => {
+  ({ 
+    label, 
+    error, 
+    className, 
+    labelClassName, 
+    ...props 
+  }, 
+    ref) => {
     const id = React.useId();
 
     return (
