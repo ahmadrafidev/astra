@@ -1,9 +1,7 @@
-// e2e/tests/buttonClient.spec.ts
 import { test, expect } from '@playwright/test';
 
 test.describe('ButtonClient Component', () => {
   test.beforeEach(async ({ page }) => {
-    // Navigate to the ButtonClient page
     await page.goto('http://localhost:3000/components/button');
   });
 
