@@ -152,25 +152,25 @@ const CheckboxPageClient: React.FC = () => {
                                     <tr>
                                         <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-100">label</td>
                                         <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 font-mono">string</td>
-                                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">empty</td>
+                                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">-</td>
                                         <td className="px-6 py-4 text-sm text-gray-500 dark:text-gray-300">Label text to display next to the checkbox.</td>
                                     </tr>
                                     <tr>
                                         <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-100">className</td>
                                         <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 font-mono">string</td>
-                                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">empty</td>
+                                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">-</td>
                                         <td className="px-6 py-4 text-sm text-gray-500 dark:text-gray-300">Additional classes for styling the checkbox container.</td>
                                     </tr>
                                     <tr>
                                         <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-100">labelClassName</td>
                                         <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 font-mono">string</td>
-                                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">empty</td>
+                                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">-</td>
                                         <td className="px-6 py-4 text-sm text-gray-500 dark:text-gray-300">Additional classes for styling the label text.</td>
                                     </tr>
                                     <tr>
                                         <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-100">error</td>
                                         <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 font-mono">string</td>
-                                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">empty</td>
+                                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">-</td>
                                         <td className="px-6 py-4 text-sm text-gray-500 dark:text-gray-300">Error message to display. When provided, applies error styling.</td>
                                     </tr>
                                 </tbody>
@@ -188,7 +188,6 @@ const CheckboxPageClient: React.FC = () => {
                                 <li>Ensure accessibility via keyboard navigation and screen readers.</li>
                                 <li>Provide clear visual feedback for checkbox states (hover, focus, active).</li>
                                 <li>Use the error prop to display clear and actionable validation messages when necessary.</li>
-                                <li>Maintain consistent styling and behavior throughout the application.</li>
                             </ul>
                         </div>
                     </section>
