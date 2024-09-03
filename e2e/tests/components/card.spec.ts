@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 
 test.describe('CardPageClient Component', () => {
   test.beforeEach(async ({ page }) => {
-    await page.goto('http://localhost:3000/components/card');
+    await page.goto('/components/card');
   });
 
   test('should render all card variants correctly', async ({ page }) => {

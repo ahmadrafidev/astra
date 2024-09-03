@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 
 test.describe('ButtonClient Component', () => {
   test.beforeEach(async ({ page }) => {
-    await page.goto('http://localhost:3000/components/button');
+    await page.goto('/components/button');
   });
 
   test('should render all button variants correctly', async ({ page }) => {
