@@ -168,7 +168,7 @@ const ButtonClient: React.FC = () => {
                         <div className="space-y-4 text-gray-700 dark:text-gray-300">
                             <ul className="list-decimal list-inside space-y-2">
                                 <li>Use the appropriate <code>variant</code> to convey the button’s purpose and importance within the UI.</li>
-                                <li>Provide meaningful <code>children</code> text that clearly indicates the button’s action.</li>
+                                <li>Provide meaningful text inside th button that clearly indicates the button’s action.</li>
                                 <li>Use the <code>icon</code> prop to add relevant icons that enhance the button’s function without overwhelming the user.</li>
                                 <li>Avoid using too many button variants in a single view to maintain a clean and focused user interface.</li>
                             </ul>
