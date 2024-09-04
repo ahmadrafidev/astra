@@ -82,7 +82,9 @@ export interface DividerProps
  */
 const Divider = React.forwardRef<HTMLDivElement, DividerProps>(
   ({ className, orientation = 'horizontal', size, color, label, labelPosition = 'center', ...props }, ref) => {
+    
     const isHorizontal = orientation !== 'vertical';
+
     const labelPositionClass = isHorizontal
       ? {
           start: 'justify-start',
