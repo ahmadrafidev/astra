@@ -5,6 +5,10 @@ test.describe('ButtonClient Component', () => {
     await page.goto('/components/button');
   });
 
+  test('should button title correctly', async ({ page }) => {
+    await expect(page.locator('h1', { hasText: 'Button' })).toBeVisible();
+  });
+
   test('should render all button variants correctly', async ({ page }) => {
     await expect(page.locator('button', { hasText: 'Default Button' })).toBeVisible();
     await expect(page.locator('button', { hasText: 'Destructive Button' })).toBeVisible();
