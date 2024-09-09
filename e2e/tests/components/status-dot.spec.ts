@@ -1,12 +1,12 @@
 import { test, expect } from '@playwright/test';
 
-test.describe('ButtonClient Component', () => {
+test.describe('StatusDot Client', () => {
   test.beforeEach(async ({ page }) => {
-    await page.goto('/components/badge');
+    await page.goto('/components/status-dot');
   });
 
-  test('should badge title correctly', async ({ page }) => {
-    await expect(page.locator('h1', { hasText: 'Badge' })).toBeVisible();
+  test('should StatusDot title correctly', async ({ page }) => {
+    await expect(page.locator('h1', { hasText: 'Status Dot' })).toBeVisible();
   });
 
 });

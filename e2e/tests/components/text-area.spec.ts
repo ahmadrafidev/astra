@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-test.describe('ButtonClient Component', () => {
+test.describe('TextArea Component', () => {
   test.beforeEach(async ({ page }) => {
     await page.goto('/components/text-area');
   });
