@@ -1,4 +1,6 @@
-# AstraUI: The Building Blocks of Modern User Interface
+# AstraUI: Building Blocks of Modern User Interface
+
+![AstraUI Landing Pae](<public/images/astra-landing.png>)
 
 AstraUI is a dynamic and comprehensive component library engineered to build stunning, consistent, and scalable user interfaces. It simplifies user interface development process across Web, iOS, and Android platforms, ensuring a unified design language. Prioritizing accessibility and customization in mind, AstraUI helps create beautiful, inclusive, and sleek user experiences.
 
