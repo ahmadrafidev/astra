@@ -1,3 +1,5 @@
+export const BASE_URL = 'https://www.astraui.design/';
+
 export const ABOUT_LIST = [
     { name: 'Overview', path: '/about' },
 ];
@@ -42,6 +44,21 @@ export const FOUNDATION_LIST = [
         name: 'Typography', 
         path: '/foundations/typography',
         description: 'Typography styles that enhance readability and accessibility.' 
+    },
+    {
+        name: 'Colors',
+        path: '/foundations/colors',
+        description: 'Color system for cohesive visual design across platforms',
+    },
+    {
+        name: 'Spacing',
+        path: '/foundations/spacing',
+        description: 'Consistent spacing system for layouts and component design',
+    },
+    {
+        name: 'Icons',
+        path: '/foundations/icons',
+        description: 'Visual language for universal communication through iconography',
     },
 ];
 
@@ -154,7 +171,7 @@ export const CATEGORIZED_COMPONENT_LIST = {
         { name: 'Error Message', path: '/components/error', description: 'Displays error messages in a consistent manner.' },
     ],
     navigation: [
-        { name: 'Breadcrumbs', path: '/components/breadcrumbs', description: 'Navigational aid to show the user’s current location in a hierarchy.' },
+        { name: 'Breadcrumbs', path: '/components/breadcrumbs', description: 'Navigational aid to show the user`s current location in a hierarchy.' },
         { name: 'Tabs', path: '/components/tabs', description: 'Navigational elements organize and switch between related content sections.' },
         { name: 'Pagination', path: '/components/pagination', description: 'Navigation for breaking content into multiple pages.' },
     ],
