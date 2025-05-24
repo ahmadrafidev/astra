@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { SunIcon, MoonIcon, ComputerDesktopIcon } from '@heroicons/react/24/solid';
-import { useTheme } from '@/hooks/useTheme';
+import { useTheme, type Theme } from '@/hooks/useTheme';
 
 const ThemeToggle: React.FC = () => {
     const { theme, setTheme, mounted } = useTheme();
@@ -27,7 +27,7 @@ const ThemeToggle: React.FC = () => {
         };
     }, [dropdownOpen, handleClickOutside]);
 
-    const handleThemeChange = (newTheme: string) => {
+    const handleThemeChange = (newTheme: Theme) => {
         setTheme(newTheme);
         setDropdownOpen(false);
     };
