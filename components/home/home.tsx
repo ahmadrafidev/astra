@@ -69,7 +69,7 @@ export function HomePage() {
                 <h1 className="text-4xl md:text-7xl font-semibold tracking-tighter text-gray-900 dark:text-gray-50">
                   Building Blocks of&nbsp; 
                     <span className="inline-block relative">
-                      <div className="animate-fall-down">
+                      <div key={currentTextIndex} className="animate-fall-down">
                         <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent relative">
                           {uiTerms[currentTextIndex]}
                         </span>
