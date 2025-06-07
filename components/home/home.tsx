@@ -3,7 +3,7 @@
 import Link from "next/link"
 import Image from 'next/image';
 import dynamic from 'next/dynamic';
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { ArrowRight, Github } from 'lucide-react';
 
 import Card from '../Card/Card';
@@ -31,6 +31,26 @@ import Spinner from '../Spinner/Spinner';
 
 export function HomePage() {
   const [activeSection, setActiveSection] = useState('about');
+  const [currentTextIndex, setCurrentTextIndex] = useState(0);
+
+  const uiTerms = [
+    "Modern UI",
+    "Beautiful UI",
+    "Responsive UI",
+    "Interactive UI",
+    "Dynamic UI",
+    "Intuitive UI",
+    "Elegant UI",
+    "Smart UI"
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentTextIndex((prevIndex) => (prevIndex + 1) % uiTerms.length);
+    }, 2500); 
+
+    return () => clearInterval(interval);
+  }, [uiTerms.length]);
 
   const sortedFoundationList = [...FOUNDATION_LIST].sort((a, b) =>
     a.name.localeCompare(b.name)
@@ -48,8 +68,12 @@ export function HomePage() {
               <div className="space-y-6 md:space-y-8">
                 <h1 className="text-4xl md:text-7xl font-semibold tracking-tighter text-gray-900 dark:text-gray-50">
                   Building Blocks of&nbsp; 
-                    <span className="bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-transparent">
-                      Modern UI
+                    <span className="inline-block relative">
+                      <div className="animate-fall-down">
+                        <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent relative">
+                          {uiTerms[currentTextIndex]}
+                        </span>
+                      </div>
                     </span>
                 </h1>
                 <p className="mx-auto max-w-[600px] text-gray-600 dark:text-gray-200 text-sm md:text-xl font-normal">
